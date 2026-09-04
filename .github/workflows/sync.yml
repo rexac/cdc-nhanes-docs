@@ -1,0 +1,86 @@
+name: Sync CDC NHANES Docs
+
+on:
+  schedule:
+    - cron: "0 2 * * 1" # Monday 02:00 UTC
+  workflow_dispatch:
+    inputs:
+      allow_large_prune:
+        description: "Allow >100 deletions (only for a reviewed layout migration)"
+        required: false
+        default: false
+        type: boolean
+      skip_content_verify:
+        description: "Skip full content comparison and only fill missing files"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cdc-nhanes-docs-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Sync docs from CDC
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=(--target nhanes_docs --prune --max-prune 100)
+
+          if [[ "${{ inputs.allow_large_prune || 'false' }}" == "true" ]]; then
+            args+=(--allow-large-prune)
+          fi
+
+          if [[ "${{ inputs.skip_content_verify || 'false' }}" == "true" ]]; then
+            args+=(--no-verify-content)
+          fi
+
+          python sync_cdc_docs.py "${args[@]}"
+
+      - name: Report sync result
+        run: |
+          echo "--- changed files (first 50) ---"
+          git status --short | head -50 || true
+          echo "--- canonical document count ---"
+          find nhanes_docs -type f -name '*.htm' | wc -l
+
+      - name: Commit and push if changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -A -- nhanes_docs
+
+          if git diff --cached --quiet; then
+            echo "No CDC document changes"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync CDC NHANES docs $(date -u +%Y-%m-%d)"
+
+          # Rebase if the branch advanced while the mirror was being checked.
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
