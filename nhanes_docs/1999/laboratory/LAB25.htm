@@ -1,0 +1,1009 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>LAB25</title>
+    <meta name="title" content="NHANES 1999-2000: Complete Blood Count with 5-part Differential - Whole Blood Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#LBXWBCSI">LBXWBCSI - White blood cell count (SI)</a>
+              </li>
+              <li>
+                <a href="#LBXLYPCT">LBXLYPCT - Lymphocyte percent (%)</a>
+              </li>
+              <li>
+                <a href="#LBXMOPCT">LBXMOPCT - Monocyte percent (%)</a>
+              </li>
+              <li>
+                <a href="#LBXNEPCT">LBXNEPCT - Segmented neutrophils percent (%)</a>
+              </li>
+              <li>
+                <a href="#LBXEOPCT">LBXEOPCT - Eosinophils percent (%)</a>
+              </li>
+              <li>
+                <a href="#LBXBAPCT">LBXBAPCT - Basophils percent (%)</a>
+              </li>
+              <li>
+                <a href="#LBDLYMNO">LBDLYMNO - Lymphocyte number</a>
+              </li>
+              <li>
+                <a href="#LBDMONO">LBDMONO - Monocyte number</a>
+              </li>
+              <li>
+                <a href="#LBDNENO">LBDNENO - Segmented neutrophils number</a>
+              </li>
+              <li>
+                <a href="#LBDEONO">LBDEONO - Eosinophils number</a>
+              </li>
+              <li>
+                <a href="#LBDBANO">LBDBANO - Basophils number</a>
+              </li>
+              <li>
+                <a href="#LBXRBCSI">LBXRBCSI - Red cell count SI</a>
+              </li>
+              <li>
+                <a href="#LBXHGB">LBXHGB - Hemoglobin (g/dL)</a>
+              </li>
+              <li>
+                <a href="#LBXHCT">LBXHCT - Hematocrit (%)</a>
+              </li>
+              <li>
+                <a href="#LBXMCVSI">LBXMCVSI - Mean cell volume (fL)</a>
+              </li>
+              <li>
+                <a href="#LBXMCHSI">LBXMCHSI - Mean cell hemoglobin (pg)</a>
+              </li>
+              <li>
+                <a href="#LBXMC">LBXMC - MCHC (g/dL)</a>
+              </li>
+              <li>
+                <a href="#LBXRDW">LBXRDW - Red cell distribution width (%)</a>
+              </li>
+              <li>
+                <a href="#LBXPLTSI">LBXPLTSI - Platelet count (%) SI</a>
+              </li>
+              <li>
+                <a href="#LBXMPSI">LBXMPSI - Mean platelet volume (fL)</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>1999-2000 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Complete Blood Count with 5-part Differential - Whole Blood (LAB25)</h3>
+        <h4> Data File: LAB25.xpt</h4>
+        <h5 class="left">First Published: June 2002</h5>
+        <h5 class="right">Last Revised: April 2006</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p><strong>Instrument </strong></p>
+<p>The Beckman Coulter MAXM instrument in the Mobile Examination Center (MEC) produces a complete blood count on blood specimens and provides a distribution of blood cells for all participants. </p>
+<h2 id="Eligible_Sample">Eligible Sample</h2>Participants were 1+ years of age. 
+<h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p><strong>Examination Protocol</strong></p>
+<p>Detailed specimen collection and processing instructions are discussed in NHANES Laboratory/Medical Technologists Procedures Manual (LPM). The analytical method used by MEC medical technologists is in the Analytic Methodology section.</p>
+<p><strong>Analytic Methodology </strong></p>
+<p><strong>CBC Parameters</strong> </p>
+<p>The methods used to derive complete blood count (CBC) parameters are based on the Beckman Coulter method of counting and sizing, in combination with an automatic diluting and mixing device for sample processing, and a single-beam photometer for hemoglobinometry. The white blood count (WBC) differential uses VCS technology. See Chapter 7 of the NHANES Laboratory/Medical Technologists Procedures Manual for details. </p>
+<p>&nbsp;</p>
+<h2 id="Analytic_Notes">Analytic Notes</h2><p>Derived variables were created using the following calculation: </p>
+<p>LBDLYMNO = LBXWBCSI * LBXLYPCT/100 <br />
+LBDMONO = LBXWBCSI * LBXMOPCT/100 <br />
+LBDNENO = LBXWBCSI * LBXNEPCT/100 <br />
+LBDEONO = LBXWBCSI * LBXEOPCT/100 <br />
+LBDBANO = LBXWBCSI * LBXBAPCT/100 </p>
+<p>The five counts (variable names) were: </p>
+<ul>
+    <li>Segmented neutrophils number (LBDNENO) </li>
+    <li>Lymphocyte number (LBDLYMNO) </li>
+    <li>Monocyte number (LBDMONO) </li>
+    <li>Eosinophil number (LBDEONO) </li>
+    <li>Basophil number (LBDBANO) </li>
+</ul>
+</div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXWBCSI">LBXWBCSI - White blood cell count (SI)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXWBCSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>White blood cell count (SI)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">White blood cell count:  SI</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.4 to 20.7</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7981</td>
+                <td class="values" align="right">7981</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">851</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXLYPCT">LBXLYPCT - Lymphocyte percent (%)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXLYPCT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Lymphocyte percent (%)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Lymphocyte percent (%)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">4.5 to 78.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7949</td>
+                <td class="values" align="right">7949</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">883</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMOPCT">LBXMOPCT - Monocyte percent (%)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMOPCT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Monocyte percent (%)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Monocyte percent (%)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 31.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7949</td>
+                <td class="values" align="right">7949</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">883</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXNEPCT">LBXNEPCT - Segmented neutrophils percent (%)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXNEPCT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Segmented neutrophils percent (%)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Segmented neutrophils percent (%)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">5.3 to 91.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7949</td>
+                <td class="values" align="right">7949</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">883</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXEOPCT">LBXEOPCT - Eosinophils percent (%)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXEOPCT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Eosinophils percent (%)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Eosinophils percent (%)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.1 to 57.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7949</td>
+                <td class="values" align="right">7949</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">883</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXBAPCT">LBXBAPCT - Basophils percent (%)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXBAPCT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Basophils percent (%)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Basophils percent (%)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 35.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7949</td>
+                <td class="values" align="right">7949</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">883</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDLYMNO">LBDLYMNO - Lymphocyte number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDLYMNO</dd>
+            <dt>SAS Label: </dt>
+            <dd>Lymphocyte number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Lymphocyte number</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.3 to 16.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7948</td>
+                <td class="values" align="right">7948</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">884</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDMONO">LBDMONO - Monocyte number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDMONO</dd>
+            <dt>SAS Label: </dt>
+            <dd>Monocyte number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Monocyte number</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.1 to 2.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7948</td>
+                <td class="values" align="right">7948</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">884</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDNENO">LBDNENO - Segmented neutrophils number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDNENO</dd>
+            <dt>SAS Label: </dt>
+            <dd>Segmented neutrophils number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Segmented neutrophils number</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.3 to 15.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7948</td>
+                <td class="values" align="right">7948</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">884</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDEONO">LBDEONO - Eosinophils number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDEONO</dd>
+            <dt>SAS Label: </dt>
+            <dd>Eosinophils number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Eosinophils number</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7948</td>
+                <td class="values" align="right">7948</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">884</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBANO">LBDBANO - Basophils number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBANO</dd>
+            <dt>SAS Label: </dt>
+            <dd>Basophils number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Basophils number</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4.5</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7948</td>
+                <td class="values" align="right">7948</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">884</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXRBCSI">LBXRBCSI - Red cell count SI</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXRBCSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Red cell count SI</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Red cell count SI</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.28 to 6.89</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7982</td>
+                <td class="values" align="right">7982</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">850</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXHGB">LBXHGB - Hemoglobin (g/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXHGB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Hemoglobin (g/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Hemoglobin (g/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">7.4 to 19.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7982</td>
+                <td class="values" align="right">7982</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">850</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXHCT">LBXHCT - Hematocrit (%)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXHCT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Hematocrit (%)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Hematocrit (%)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">21.3 to 54.9</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7982</td>
+                <td class="values" align="right">7982</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">850</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMCVSI">LBXMCVSI - Mean cell volume (fL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMCVSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mean cell volume (fL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mean cell volume (fL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">51.1 to 120.6</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7982</td>
+                <td class="values" align="right">7982</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">850</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMCHSI">LBXMCHSI - Mean cell hemoglobin (pg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMCHSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mean cell hemoglobin (pg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mean cell hemoglobin (pg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">15 to 43.9</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7982</td>
+                <td class="values" align="right">7982</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">850</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMC">LBXMC - MCHC (g/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MCHC (g/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mean cell hemoglobin concentration (g/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">29.4 to 38.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7982</td>
+                <td class="values" align="right">7982</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">850</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXRDW">LBXRDW - Red cell distribution width (%)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXRDW</dd>
+            <dt>SAS Label: </dt>
+            <dd>Red cell distribution width (%)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Red cell distribution width (%)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">10.5 to 28.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7982</td>
+                <td class="values" align="right">7982</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">850</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXPLTSI">LBXPLTSI - Platelet count (%) SI</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXPLTSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Platelet count (%) SI</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Platelet count (%) SI</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11 to 708</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7982</td>
+                <td class="values" align="right">7982</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">850</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMPSI">LBXMPSI - Mean platelet volume (fL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMPSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mean platelet volume (fL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mean platelet volume (fL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">5.5 to 13.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7982</td>
+                <td class="values" align="right">7982</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">850</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

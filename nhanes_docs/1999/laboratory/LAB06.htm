@@ -1,0 +1,2040 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>LAB06</title>
+    <meta name="title" content="NHANES 1999-2000: Cadmium, Lead, Mercury, Cotinine &amp; Nutritional Biochemistries Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#LBXBPB">LBXBPB - Lead (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDBPBSI">LBDBPBSI - Lead (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXBCD">LBXBCD - Cadmium (ug/L)</a>
+              </li>
+              <li>
+                <a href="#LBDBCDSI">LBDBCDSI - Cadmium (nmol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXEPP">LBXEPP - Protoporphyrin (ug/dL RBC)</a>
+              </li>
+              <li>
+                <a href="#LBDEPPSI">LBDEPPSI - Protoporphyrin (umol/L RBC)</a>
+              </li>
+              <li>
+                <a href="#LBXIRN">LBXIRN - Iron (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDIRNSI">LBDIRNSI - Iron (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXTIB">LBXTIB - TIBC (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDTIBSI">LBDTIBSI - TIBC (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXPCT">LBXPCT - Transferrin saturation (%)</a>
+              </li>
+              <li>
+                <a href="#LBXFER">LBXFER - Ferritin (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDFERSI">LBDFERSI - Ferritin (ug/L)</a>
+              </li>
+              <li>
+                <a href="#LBXFOL">LBXFOL - Folate, serum (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDFOLSI">LBDFOLSI - Folate, serum (nmol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXB12">LBXB12 - Vitamin B12, serum (pg/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDB12SI">LBDB12SI - Vitamin B12, serum (pmol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXHCY">LBXHCY - Homocysteine (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXMMA">LBXMMA - Methylmalonic acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXTHG">LBXTHG - Mercury, total (ug/L)</a>
+              </li>
+              <li>
+                <a href="#LBDTHGSI">LBDTHGSI - Mercury, total (nmol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXIHG">LBXIHG - Mercury, Inorganic (ug/L)</a>
+              </li>
+              <li>
+                <a href="#LBDIHGSI">LBDIHGSI - Mercury, Inorganic (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXRBF">LBXRBF - Folate, RBC (ng/mL RBC)</a>
+              </li>
+              <li>
+                <a href="#LBDRBFSI">LBDRBFSI - Folate, RBC (nmol/L RBC)</a>
+              </li>
+              <li>
+                <a href="#LBXCOT">LBXCOT - Cotinine (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDCOTSI">LBDCOTSI - Cotinine (nmol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXSEL">LBXSEL - Selenium (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDSELSI">LBDSELSI - Selenium (nmol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXGTC">LBXGTC - Gamma tocopherol (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDGTCSI">LBDGTCSI - Gamma tocopherol (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXRPL">LBXRPL - Retinyl palmitate (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDRPLSI">LBDRPLSI - Retinyl palmitate (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXRST">LBXRST - Retinyl stearate (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDRSTSI">LBDRSTSI - Retinyl stearate(umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXVIA">LBXVIA - Vitamin A (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDVIASI">LBDVIASI - Vitamin A (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXVIE">LBXVIE - Vitamin E (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDVIESI">LBDVIESI - Vitamin E (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URXUHG">URXUHG - Mercury, urine (ng/mL)</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>1999-2000 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Cadmium, Lead, Mercury, Cotinine &amp; Nutritional Biochemistries (LAB06)</h3>
+        <h4> Data File: LAB06.xpt</h4>
+        <h5 class="left">First Published: June 2002</h5>
+        <h5 class="right">Last Revised: September 2007</h5>
+        <h5 class="specialnote">Note: This file was updated to correct the homocysteine crossover regression and to correct some analytes inadvertently left out of the original document.</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p><strong>Lead </strong></p>
+<p>Lead is a known environmental toxin that has been shown to deleteriously affect the nervous, hematopoietic, endocrine, renal and reproductive systems. In young children, lead exposure is a particular hazard because children more readily absorb lead than do adults, and children&#8217;s developing nervous systems also make them more susceptible to the effects of lead. The primary sources of exposure for children are lead-laden paint chips and dust as a result of deteriorating lead-based paint. The risk for lead exposure is disproportionately higher for children who are poor, non-Hispanic black, living in large metropolitan areas, or living in older housing. Among adults, the most common high exposure sources are occupational. Blood lead levels measured in previous NHANES programs have been the cornerstone of lead exposure surveillance in the U.S. The data have been used to document the burden of and dramatic decline of elevated blood lead levels; to promote the reduction of lead use; and to help to redefine national lead poisoning prevention guidelines, standards, and abatement activities. </p>
+<p><strong>Cadmium </strong></p>
+<p>Cadmium is performed to identify cases of cadmium toxicity. Occupational exposure is the most common cause of elevated cadmium levels. </p>
+<p><strong>Total Blood Mercury, Inorganic Mercury, and Urinary Mercury</strong> </p>
+<p>Uncertainties exist regarding levels of exposure to methyl mercury from fish consumption and potential health effects resulting from this exposure. Past estimates of exposure to methyl mercury has been obtained from results of food consumption surveys and measures of methyl mercury in fish. Measures of a biomarker of exposure are needed for improved exposure assessments. Blood mercury levels will be assessed in two subpopulations particularly vulnerable to the health effects from mercury exposure: children 1&#8211;5 years old and women of childbearing age. Women of childbearing age will also have a urine mercury test. </p>
+<p>Blood measures of total and inorganic mercury will be important for evaluation of exposure from exposure to mercury in interior latex paints.</p>
+<p><strong>RBC folate, Serum folate, Vitamin B12, Erythrocyte protoporphyrin, Ferritin, Homocysteine, and Methylmalonic Acid, Iron, TIBC, Transferrin saturation and Selenium</strong> </p>
+<p>The objectives of this component are: 1) to provide data for monitoring secular trends in measures of nutritional status in the U.S. population; 2) to evaluate the effect of people's habits and behaviors such as physical activity and the use of alcohol, tobacco, and dietary supplements on people's nutritional status; and 3) to evaluate the effect of changes in nutrition and public health policies including welfare reform legislation, food fortification policy, and child nutrition programs on the nutritional status of the U.S. population. These data will be used to estimate deficiencies and toxicities of specific nutrients in the population and subgroups, to provide population reference data, and to estimate the contribution of diet, supplements, and other factors to serum levels of nutrients. Data will be used for research to further define nutrient requirements as well as optimal levels for disease prevention and health promotion. </p>
+<p><strong>Cotinine</strong> </p>
+<p>The specific aims of the component are: 1) to measure the prevalence and extent of tobacco use; 2) to estimate the extent of exposure to environmental tobacco smoke (ETS), and determine trends in exposure to ETS; and 3) to describe the relationship between tobacco use (as well as exposure to ETS) and chronic health conditions, including respiratory and cardiovascular diseases. </p>
+<p>The tobacco component for NHANES will include questionnaire items on current and past use of cigarettes, pipes, cigars and smokeless tobacco. Exposure to ETS at home and at work and in-utero ETS exposure among children will also be obtained. ETS exposure will also be assessed for examinees 3 years of age and older through the measurement of serum cotinine, a metabolite of nicotine. In addition, use of nicotine replacement products (e.g., gum and patch) will be collected using questionnaires. </p>
+<p><strong>Urinary Mercury</strong> </p>
+<p>Uncertainties exist regarding levels of exposure to methyl mercury from fish consumption and potential health effects resulting from this exposure. Past estimates of exposure to methyl mercury has been obtained from results of food consumption surveys and measures of methyl mercury in fish. Measures of a biomarker of exposure are needed for improved exposure assessments. Urinary mercury levels will be assessed in one subpopulation particularly vulnerable to the health effects from mercury exposure.</p>
+<h2 id="Eligible_Sample">Eligible Sample</h2><p><strong>Blood lead and cadmium, Erythrocyte protoporphyrin, Iron, TIBC and Transferrin saturation</strong> </p>
+<p>Participants aged 1 year and older who do not meet any of the exclusion criteria are eligible. </p>
+<p><strong>RBC folate, Serum folate, Vitamin B12, Homocysteine, Methylmalonic Acid, and Cotinine </strong></p>
+<p>Participants aged 3 years and older who do not meet any of the exclusion criteria are eligible. </p>
+<p><strong>Total Blood Mercury and Inorganic Mercury</strong> </p>
+<p>Participants aged 1&#8211;5 years and females aged 16-49 years who do not meet any of the exclusion criteria are eligible. </p>
+<p><strong>Urinary Mercury</strong> </p>
+<p>Female participants aged 16&#8211;49 years are eligible. </p>
+<p>&nbsp;</p>
+<h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p><strong>Lead and Cadmium</strong> </p>
+<p>Cadmium and lead are simultaneously measured in whole blood using adaptations of the methods of Miller et al,<sup>1</sup> Parsons et al,<sup>2</sup> and Stoeppler et al.<sup>3</sup> Cadmium and lead quantification is based on the measurement of light absorbed at 228.8 nm and 283.3 nm, respectively, by ground-state atoms of cadmium and lead from either an electrodeless discharge lamp (EDL) or hollow cathode lamp (HCL) source. Human blood (patient or study) samples, bovine blood quality control pools, and aqueous standards are diluted with a matrix modifier (nitric acid, Triton X-100, and ammonium phosphate). The cadmium and lead contents are determined on a PerkinElmer Model SIMAA 6000 simultaneous multi-element atomic absorption spectrometer with Zeeman background correction. </p>
+<p><strong>Erythrocyte Protoporphyrin </strong></p>
+<p>Free erythrocyte protoporphyrin (FEP) is measured by a modification of the method of Sassa et al.<sup>4</sup> Protoporphyrin is extracted from EDTA-whole blood into a 2:1 (v/v) mixture of ethyl acetate-acetic acid, then back-extracted into diluted hydrochloric acid. The protoporphyrin in the aqueous phase is measured fluorometrically at excitation and emission wavelengths of 404 and 658 nm, respectively. Calculations are based on a processed protoporphyrin IX (free acid) standard curve. After a correction for the individual hematocrit is made, the final concentration of protoporphyrin in a specimen is expressed as micrograms per deciliter of packed red blood cells (&#956;g/dL RBC). </p>
+<p><strong>RBC Folate, Serum Folate, and Vitamin B12</strong> </p>
+<p>Both serum folate and vitamin B12 are measured by using the Bio-Rad Laboratories "Quantaphase II Folate/vitamin B12" radioassay kit.<sup>5</sup> The assay is performed by combining serum or a whole blood hemolysate sample with 1<sup>25</sup>I-folate and <sup>57</sup>Co-vitamin B12 in a solution containing dithiothreitol (DTT) and cyanide. The mixture is boiled to inactivate cyanocobalamin. The reduced folate and its analogs are stabilized by DTT during the heating. The mixture is cooled and then combined with immobilized affinity-purified porcine intrinsic factor and folate-binding proteins. The addition of these substances adjusts and buffers the pH of the reaction mixture to 9.2. The reaction mixture is then incubated for 1 hour at room temperature. </p>
+<p>During incubation, the endogenous and labeled folate and B12 compete for the limited number of binding sites on the basis of their relative concentrations. The reaction mixtures are then centrifuged and decanted. Labeled and unlabeled folate and vitamin B12, binding to immobilized binding proteins, are concentrated in the bottom of the tube in the form of a pellet. The unbound folate and B12 in the supernatant are discarded, and the radioactivity associated with the pellet is counted. Standard curves are prepared by using the pre-calibrated folate/B12 standards in a human serum albumin base. The concentration of the folate and vitamin B12 in the participant&#8217;s serum or folate in a participant's whole blood is calculated from the standard curve. </p>
+<p>In the erythrocyte folate procedure, the sample is first diluted 1:11 with a solution of 1 g/dL ascorbic acid in water and either incubated for 90 min prior to assay or frozen immediately for later assay. The 90-minute incubation or the freeze-thaw is necessary for hemolysis of the red blood cells; either allows the endogenous folate conjugates to hydrolyze the conjugated pterylpolyglutamates prior to assay. The sample is further diluted 1:2 with a protein diluent (human serum albumin), resulting in a matrix similar to that of the standards and serum samples. </p>
+<p><strong>Ferritin </strong></p>
+<p>Ferritin is measured by using the Bio-Rad Laboratories' "QuantImune Ferritin IRMA" kit,<sup>6</sup> which is a single-incubation two-site immunoradiometric assay (IRMA) based on the general principles of assays as described by Addison et al.<sup>7</sup> and Miles<sup>8</sup> and modified by Jeong et al.<sup>9</sup> In this IRMA, which measures the most basic isoferritin, the highly purified 1<sup>25</sup>I-labeled antibody to ferritin is the tracer, and the ferritin antibodies are immobilized on polyacrylamide beads as the solid phase. Serum or ferritin standards (made from human liver) are mixed with the combined tracer/solid-phase antibody reagent, and the mixture is incubated. During incubation, both the immobilized and the 1<sup>25</sup>I-labeled antibodies bind to the ferritin antigen in the serum or standards, thus creating a "sandwich." </p>
+<p>After incubation, the beads are diluted with saline, centrifuged, and decanted. The level of 1<sup>25</sup>I-labeled ferritin found in the pellets is measured by using a gamma counter. There is a direct relationship between the radioactive levels of the pellets and the amount of endogenous ferritin in the serum or standards, rather than the inverse relationship measured by most radioimmunoassays (RIAs). </p>
+<p><strong>Homocysteine </strong></p>
+<p>The method is a fluorescence polarization immunoassay (FPIA) from Abbott Diagnostics performed on the Abbott IMX analyzer.<sup>10</sup> Total homocysteine (tHcy) in plasma is measured by the Abbott Homocysteine assay, a fully automated FPIA method. DTT reduces homocysteine bound to albumin and to other small molecules, homocysteine, and mixed disulfides, to free thiol. S-adenosylhomocysteine (SAH) hydrolase catalyzes conversion of homocysteine to SAH in the presence of added adenosine. The specific monoclonal antibody and the fluoresceinated SAH analog tracer constitute the FPIA detection system.<sup>11</sup> Plasma total homocysteine concentrations are calculated by the Abbott IMx Immunoassay Analyzer using a machine-stored calibration curve. </p>
+<p>As part of ongoing methods comparisons studies, an international round robin<sup>12 </sup>was conducted in 1998. Results obtained using the FPIA method described earlier were compared to results obtained using high performance liquid chromatography (HPLC) with fluorometric detection at 385 nm excitation and 515 nm emission.<sup>13</sup> The international round robin demonstrated that the FPIA method was fully equivalent to other frequently used methods (i.e., HPLC-FD, HPLC-ED, and GC/MS). Thus, the Abbott Homocysteine assay was used as the primary method for determination of plasma total homocysteine in NHANES 1999&#8211;2000. The HPLC assay was used as a reference method and was performed on a subset of NHANES 1999&#8211;2000 specimens for continuing method comparison studies. </p>
+<p><strong>Methylmalonic Acid</strong> </p>
+<p>Methylmalonic acid (MMA) is extracted from plasma or serum along with an added internal standard using a commercially available strong anion exchange resin.<sup>14</sup> The extracted acid is then derivatized with cyclohexanol to form a dicyclohexyl ester. The derivatized samples are injected onto a gas chromatograph for separation from other constituents. The effluent from the gas chromatograph is monitored with a mass selective detector using selected ion monitoring. Results are quantitated by internal calibration using peak area ratios of MMA and the internal standard (d3MMA). </p>
+<p><strong>Cotinine </strong></p>
+<p>Cotinine is a major metabolite of nicotine that may be used as a marker for both active smoking, and as an index to Environmental Tobacco Smoke (ETS) exposure, or "passive smoking". Cotinine is generally preferred over nicotine for such assessments because of its substantially longer half-life. The half-life of cotinine in plasma has been estimated to be about 15&#8211;20 hrs;<sup>15&#8211;17</sup> by contrast, the half-life of nicotine is only 0.5&#8211;3 hrs.<sup>18&#8211;20</sup> Cotinine may be measured in serum, urine or saliva &#8211; the half-life of cotinine in all three fluids is essentially the same. Cotinine concentrations tend to be higher (3&#8211;8&#215;) in urine than in serum; however, for studies requiring a quantitative assessment of exposure, plasma or serum is regarded as the fluid of choice.<sup>15</sup> Therefore, serum was chosen for NHANES cotinine analyses. </p>
+<p>Serum cotinine is measured by an isotope dilution-high performance liquid chromatography / atmospheric pressure chemical ionization tandem mass spectrometry (ID HPLC-APCI MS/MS). Briefly, the serum sample is spiked with methyl-D3 cotinine as an internal standard, and after an equilibration period, the sample is applied to a basified solid-phase extraction column. Cotinine is extracted off the column with methylene chloride, the organic extract is concentrated, and the residue is injected onto a short, C18 HPLC column. The eluant from these injections is monitored by APCI-MS/MS, and the m/z 80 daughter ion from the m/z 177 quasi-molecular ion is quantitated, along with additional ions for the internal standard, external standard, and for confirmation. Cotinine concentrations are derived from the ratio of native to labeled cotinine in the sample by comparisons to a standard curve.&#160;</p>
+<p><strong>Total Blood Mercury and Inorganic Mercury</strong> </p>
+<p>Total mercury in whole blood is measured by flow injection cold vapor atomic absorption analysis with on-line microwave digestion, based on the method by T. Guo and J. Bassner.<sup>21</sup> Decomposition of organic mercury compounds in blood occurs mainly while the sample (mixed with bromate-bromide reagent and hydrochloric acid) flows through the digestion coil in the microwave. Further decomposition of organic mercury is achieved by on-line addition of potassium permanganate. The total (organic + inorganic) mercuric mercury released is reduced to mercury vapor by sodium tetrahydroborate. The mercury vapor is measured by the spectrometer at 253.7 nm. Inorganic mercury in whole blood is measured by using stannous chloride as reductant without employing microwave digestion system. Mercury vapor (reduced from inorganic mercury compounds) is measured via the same quartz cell at 253.7 nm. The difference in the total reduced mercury (by sodium tetrahydroborate) and inorganic reduced mercury (by stannous chloride) is taken to represent organic mercury in whole blood.<sup>22</sup> </p>
+<p>Mercury analysis is performed to identify cases of mercury toxicity. Urinary mercury (total) will also be analyzed on a subset of NHANES subjects using the PerkinElmer FIMS. <br />
+<strong>Urinary Mercury </strong></p>
+<p>Mercury in urine is measured by flow injection cold vapor atomic absorption analysis, which is based on the method that Guo and Bassner developed.<sup>21</sup> Because mercury in urine is found almost entirely in the inorganic form, Guo and Bassner&#8217;s method does not use microwave digestion, and decomposition of mercury compounds is achieved by manually adding mixed bromate-bromide reagent and concentrated hydrochloric acid (HCl). Further decomposition of mercury compounds is achieved by adding potassium permanganate online. The mercury vapor (reduced from inorganic mercury compounds by sodium tetrahydroborate) is measured by the spectrophotometer at 253.7 nm. <br />
+Mercury analysis is performed to identify cases of mercury exposure or toxicity. The brain and kidneys are the main organs affected by mercury. Psychic and emotional disturbances are the initial signs of chronic intoxication by elemental mercury vapor or salts. Paresthesias and neuralgia may develop. Renal disease, digestive disturbances, and ocular lesions can also develop. Kidney toxicity is an important consequence of exposure to mercury salts.<sup>22 </sup></p>
+<p><strong>Iron, TIBC and Transferrin saturation</strong> </p>
+<p>Serum iron and total iron-binding capacity (TIBC) are measured by a modification of the automated AAII-25 colorimetric method, which is based on the procedures of Giovaniello et al. (1) and of Ramsey (2). The method has been modified further to be performed on an Alpkem Flow Solutions IV (rapid-flow analysis) system. Iron is quantitated by measuring the intensity of the violet complex formed in the reaction between ferrozine and Fe<sup>++</sup> in acetate buffer at 562 nm. Thiourea is added to complex Cu<sup>++</sup>, which can also bind with ferrozine and yield falsely elevated iron values. In TIBC tests, serum is mixed with 400 &#956;g/dL iron solution to saturate the iron-binding sites of the serum transferrin molecules. Magnesium carbonate is used to remove excess iron. Centrifugation is used to precipitate the magnesium carbonate, and the supernatant is measured for iron content. </p>
+<p>Serum iron and TIBC assays can be used together with ferritin assays to aid in the diagnosis of iron deficiency or overload. In cases of iron deficiency, decreased serum iron levels and increased TIBC may be observed. Conversely, in cases of iron overload (which can be genetic as idiopathic hereditary hemochromatosis, or can be caused by hemolytic anemia, liver damage, excessive absorption of iron, and iron therapy) increased serum iron levels and decreased TIBC may be observed. In cases of infection, inflammation, and malignancy, both serum iron levels and TIBC may be decreased (3). </p>
+<p>The transferrin saturation value was calculated as (iron/TIBC) &#215; 100%. The iron variable name is LBXIRN, the TIBC variable name is LBXTIB, and the transferrin saturation is LBDPCT.</p>
+<p><strong>Selenium </strong></p>
+<p>Selenium is measured in serum by atomic absorption spectrometry in a procedure based on the methods described by Lewis et al. (1) and by Paschal and Kimberly (2). Quantification is based on the measurement of light absorbed at 196.0 nm by ground-state atoms of selenium from a selenium electrodeless discharge lamp (EDL) source. Serum samples, human serum quality control pools, and serum calibration standards are diluted with a matrix modifier (Triton X-100, nickel nitrate, and magnesium nitrate). The selenium content is determined by using a Perkin-Elmer model SIMAA 6000 transversely heated graphite furnace atomic absorption spectrophotometer with Zeeman background correction, or a Model 5100 GFAAS. The Zeeman system offers improved background correction over deuterium arc-corrected systems; use of the latter often results in over-correction caused by spectral interference from iron or phosphate in the serum (3,4). </p>
+<p>Low selenium levels have been linked to Keshan's disease. This is a cardiomyopathy that has been observed in young children who live in areas where the soil is low in selenium, particularly in some regions of China. Selenium has been shown to affect drug metabolism and toxicity. In addition, selenium may have a role in cancer prevention. </p>
+<h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>Automated data collection procedures for the survey were introduced in NHANES 1999. In the mobile examination centers (MECs) and analytical laboratories, data for the laboratory component is recorded directly onto a computerized data collection form. The system is centrally integrated and it allows for ongoing monitoring of much of the data. Although the complete blood count and pregnancy analyses are performed in the MEC laboratory, most analyses are conducted elsewhere by approximately 28 laboratories across the United States. </p>
+<p>Guidelines have been developed that provide standards for naming variables, filling missing values, and handling missing records. NCHS staff, assisted by contract staff, have developed data-editing specifications that check data sets for valid codes, ranges, and skip pattern consistencies and examine the consistency of values between interrelated variables. Comments have been reviewed and recoded. NCHS staff verifies extremely high and low values whenever possible, and numerous consistency checks are performed. Nonetheless, users should examine the range and frequency of values before analyzing data. </p>
+<p>For laboratory tests with a lower detection limit, results below the lower detection limit are replaced with a value equal to the detection limit divided by the square root of two. This value has been created to help the user distinguish a nondetectable laboratory test result from a measured laboratory test result.</p>
+<h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Serum and urine specimens are processed, stored, and shipped to the Division of Environmental Health Laboratory Sciences, National Center for Environmental Health, Centers for Disease Control and Prevention for analysis. </p>
+<p>Detailed specimen collection and processing instructions are discussed in the NHANES Laboratory/Medical Technologists Procedures Manual (LPM). Vials are stored under appropriate frozen (&#8211;20&#176;C) conditions until they are shipped to National Center for Environmental Health for testing. </p>
+<h2 id="Analytic_Notes">Analytic Notes</h2><p>The analysis of NHANES 1999&#8211;2000 laboratory data must be conducted with the key survey design and basic demographic variables. The NHANES 1999&#8211;2000 Household Questionnaire Data Files contain demographic data, health indicators, and other related information collected during household interviews. The Household Questionnaire Data Files also contain all survey design variables and sample weights required to analyze these data. The Phlebotomy Examination file includes auxiliary information on duration of fasting, the time of day of the venipuncture, and the conditions precluding venipuncture. The Household Questionnaire and Phlebotomy Exam files may be linked to the laboratory data file using the unique survey participant identifier SEQN. </p>
+<p>Homocysteine method change: </p>
+<p>The Homocysteine (uMol/L) method changed in 2002 from an Abbott IMX to an Abbott AxSym method. A crossover study was performed and revealed the following Deming regression (n=361, r**2 = 0.9817): </p>
+<p>AxSym = 10**(0.983*log10(IMX) + 0.0418) </p>
+</div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Abbott Homocysteine (HCY) assay package insert.</li>
+          <li>Addison G, Beamish M, Hales C, et al. An immunoradiometric assay for ferritin in the serum of normal patients and patients with iron deficiency and iron overload. J Clin Path. 1972;25:326.</li>
+          <li>Armitage AK, Dollery CT, George CF, Houseman TH, Lewis PJ, Turner DM. Absorption and metabolism of nicotine from cigarettes. Br Med J. 1975;4:313&#8211;316.</li>
+          <li>Benowitz NL, Kuyt F, Jacob P, Jones RT, Osman A-L. Cotinine disposition and effects. Clin Pharmacol Ther. 1983;34:604&#8211;611.</li>
+          <li>Carson BL, Ellis HV III, McCann JL. Toxicology and biological monitoring of metals in humans. Chelsea (MI): Lewis Publishers, Inc.; 1986, p.130.</li>
+          <li>Guo T, Baasner J. Determination of mercury by flow-injection cold vapor atomic absorption spectrometry. Analytica Chimica Acta. 1993;278:189&#8211;196.</li>
+          <li>Instruction Manual, Bio-Rad Quantaphase II Folate Radioassay Kit. Bio-Rad Laboratories, Hercules, CA: Bio-Rad Laboratories, 1993.</li>
+          <li>Instruction Manual, Bio-Rad QuantImune Ferritin IRMA. Hercules (CA): Bio-Rad Laboratories, 1986.</li>
+          <li>Jacob P, Yu L, Wilson M, Benowitz NL. Selected ion monitoring method for determination of nicotine, cotinine and deuterium-labeled analogs: Absence of an isotope effect in the clearance of (S)-nicotine-3',3'-d2 in humans. Biol Mass Spec. 1991;20:247&#8211;252.</li>
+          <li>Jarvis MJ, Russell MAH, Benowitz NL, Feyerabend C. Elimination of cotinine from body fluids: Implications for noninvasive measurement of tobacco smoke exposure. Am J Public Health. 1988;78:696&#8211;698.</li>
+          <li>Jeong H, Blackmore J, Lewin N. Ferritin immunoradiometric assay, U.S. Patent No. 4,244,940.</li>
+          <li>Kyerematen GA, Morgan ML, Chattopadhyay B, deBethizy JD, Vesell ES. Disposition of nicotine and eight metabolites in smokers and nonsmokers: Identification of two metabolites that are longer lived than cotinine. Clin Pharmacol Ther. 1990;48:641&#8211;651.</li>
+          <li>Miles L. Measurement of serum ferritin by a 2-site immunoradiometric assay. In: Handbook of Radioimmunoassay (Abraham, G, ed.). New York: Marcel Dekker, Inc., 1977, Chapter 4.</li>
+          <li>Miller DT, Paschal DC, Gunter EW, Stroud PE, D'Angelo J. Determination of blood lead with electrothermal atomic absorption using an L'vov platform and matrix modifier. Analyst. 1987;112:1701&#8211;1704.</li>
+          <li>Parsons PJ, Slavin W. A rapid Zeeman graphite furnace atomic absorption spectrometric method for the determination of lead in blood. Spectrochimica Acta. 1993;48B (No. 6/7):925&#8211;939.</li>
+          <li>Pfeiffer CM, Huff DL, Gunter EW. Rapid and accurate HPLC assay for total homocysteine and cysteine in a clinical laboratory setting. Clin Chem. 1999;45:290-292.</li>
+          <li>Pfeiffer CM, Huff DL, Smith SJ, Miller DT, Gunter EW. Comparison of plasma total homocysteine measurements in 14 laboratories: an international study. Clin Chem. 1999;45(8 Pt 1):1261&#8211;1268.</li>
+          <li>Rasmussen K. Solid-phase sample extraction for rapid determination of methylmalonic acid in serum and urine by a stable-isotope-dilution method. Clin Chem. 1989;35(2):260&#8211;264.</li>
+          <li>Sassa S, Granick JL, Granick S, Kappas A, Levere RD. Microanalyses of erythrocyte protoporphyrin levels by spectrophotometry in the detection of chronic lead intoxication in the subclinical range. Biochem Med. 1973;8:135&#8211;148.</li>
+          <li>Shipchandler, MT, Moore EG. Rapid, fully automated measurement of plasma homocysteine with the Abbott IMx&#174; analyzer. Clin Chem. 1995;41(7):991&#8211;994.</li>
+          <li>Stoeppler, M, Brandt, K. Determination of cadmium in whole blood and urine by electrothermal atomic-absorption spectrophotometry. Fresenius Z. Anal. Chem. 1980;300:372&#8211;380.</li>
+          <li>Watts RR, Langone JJ, Knight GJ, Lewtas J. Cotinine analytical workshop report: Consideration of analytical methods for determining cotinine in human body fluids as a measure of passive exposure to tobacco smoke. Env Health Perspec. 1990;84:173.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXBPB">LBXBPB - Lead (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXBPB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Lead (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Lead (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.2 to 57.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7970</td>
+                <td class="values" align="right">7970</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">862</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBPBSI">LBDBPBSI - Lead (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBPBSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Lead (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.01 to 2.758</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7970</td>
+                <td class="values" align="right">7970</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">862</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXBCD">LBXBCD - Cadmium (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXBCD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Cadmium (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Cadmium (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.2 to 8.5</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7970</td>
+                <td class="values" align="right">7970</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">862</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBCDSI">LBDBCDSI - Cadmium (nmol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBCDSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Cadmium (nmol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.78 to 75.62</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7970</td>
+                <td class="values" align="right">7970</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">862</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXEPP">LBXEPP - Protoporphyrin (ug/dL RBC)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXEPP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Protoporphyrin (ug/dL RBC)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Protoporphyrin (ug/dL RBC)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">18 to 884</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7985</td>
+                <td class="values" align="right">7985</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">847</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDEPPSI">LBDEPPSI - Protoporphyrin (umol/L RBC)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDEPPSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Protoporphyrin (umol/L RBC)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.32 to 15.65</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7985</td>
+                <td class="values" align="right">7985</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">847</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIRN">LBXIRN - Iron (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIRN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Iron (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Iron(ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">5 to 292</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7877</td>
+                <td class="values" align="right">7877</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">955</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIRNSI">LBDIRNSI - Iron (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIRNSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Iron (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.9 to 52.27</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7877</td>
+                <td class="values" align="right">7877</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">955</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXTIB">LBXTIB - TIBC (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXTIB</dd>
+            <dt>SAS Label: </dt>
+            <dd>TIBC (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total iron binding capacity (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">101 to 761</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7847</td>
+                <td class="values" align="right">7847</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">985</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDTIBSI">LBDTIBSI - TIBC (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDTIBSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>TIBC (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">18.08 to 136.22</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7847</td>
+                <td class="values" align="right">7847</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">985</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXPCT">LBXPCT - Transferrin saturation (%)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXPCT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Transferrin saturation (%)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Transferrin saturation(%)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.1 to 100.9</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7845</td>
+                <td class="values" align="right">7845</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">987</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXFER">LBXFER - Ferritin (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXFER</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ferritin (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Ferritin (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3 to 1822</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7849</td>
+                <td class="values" align="right">7849</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">983</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDFERSI">LBDFERSI - Ferritin (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDFERSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ferritin (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3 to 1822</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7849</td>
+                <td class="values" align="right">7849</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">983</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXFOL">LBXFOL - Folate, serum (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXFOL</dd>
+            <dt>SAS Label: </dt>
+            <dd>Folate, serum (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Folate, serum (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 220</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7526</td>
+                <td class="values" align="right">7526</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1306</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDFOLSI">LBDFOLSI - Folate, serum (nmol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDFOLSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Folate, serum (nmol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.3 to 498.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7526</td>
+                <td class="values" align="right">7526</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1306</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXB12">LBXB12 - Vitamin B12, serum (pg/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXB12</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin B12, serum (pg/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vitamin B12, serum (pg/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">47 to 201810</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7524</td>
+                <td class="values" align="right">7524</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1308</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDB12SI">LBDB12SI - Vitamin B12, serum (pmol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDB12SI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin B12, serum (pmol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">34.69 to 148935.78</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7524</td>
+                <td class="values" align="right">7524</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1308</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXHCY">LBXHCY - Homocysteine (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXHCY</dd>
+            <dt>SAS Label: </dt>
+            <dd>Homocysteine (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Homocysteine(umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.61 to 156.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7599</td>
+                <td class="values" align="right">7599</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1233</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMMA">LBXMMA - Methylmalonic acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMMA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Methylmalonic acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Methylmalonic acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.04 to 35.96</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7597</td>
+                <td class="values" align="right">7597</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1235</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXTHG">LBXTHG - Mercury, total (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXTHG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mercury, total (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mercury, total (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			5 YEARS</dd>
+            <dt>Target: </dt>
+            <dd> Females only 16 YEARS -
+			49 YEARS</dd>
+            <dt>Hard Edits: </dt>
+            <dd class="info">0 to 99.9</dd>
+            <dt>Hard Edits: </dt>
+            <dd class="info">0 to 99.9</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.1 to 38.9</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2414</td>
+                <td class="values" align="right">2414</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6418</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDTHGSI">LBDTHGSI - Mercury, total (nmol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDTHGSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mercury, total (nmol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mercury, total (nmol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			5 YEARS</dd>
+            <dt>Target: </dt>
+            <dd> Females only 16 YEARS -
+			49 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.5 to 194.11</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2414</td>
+                <td class="values" align="right">2414</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6418</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIHG">LBXIHG - Mercury, Inorganic (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIHG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mercury, Inorganic (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mercury, Inorganic (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			5 YEARS</dd>
+            <dt>Target: </dt>
+            <dd> Females only 16 YEARS -
+			49 YEARS</dd>
+            <dt>Hard Edits: </dt>
+            <dd class="info">0 to 99.9</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.3 to 11.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2391</td>
+                <td class="values" align="right">2391</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6441</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIHGSI">LBDIHGSI - Mercury, Inorganic (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIHGSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mercury, Inorganic (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mercury, Inorganic (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			5 YEARS</dd>
+            <dt>Target: </dt>
+            <dd> Females only 16 YEARS -
+			49 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.5 to 55.89</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2391</td>
+                <td class="values" align="right">2391</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6441</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXRBF">LBXRBF - Folate, RBC (ng/mL RBC)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXRBF</dd>
+            <dt>SAS Label: </dt>
+            <dd>Folate, RBC (ng/mL RBC)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Folate, RBC (ng/mL RBC)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">28 to 2352</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7614</td>
+                <td class="values" align="right">7614</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1218</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDRBFSI">LBDRBFSI - Folate, RBC (nmol/L RBC)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDRBFSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Folate, RBC (nmol/L RBC)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">63.4 to 5327.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7614</td>
+                <td class="values" align="right">7614</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1218</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXCOT">LBXCOT - Cotinine (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXCOT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Cotinine (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Cotinine (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.035 to 989</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7284</td>
+                <td class="values" align="right">7284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1548</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDCOTSI">LBDCOTSI - Cotinine (nmol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDCOTSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Cotinine (nmol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.199 to 5617.52</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7284</td>
+                <td class="values" align="right">7284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1548</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXSEL">LBXSEL - Selenium (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXSEL</dd>
+            <dt>SAS Label: </dt>
+            <dd>Selenium (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Selenium (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			11 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">33 to 180</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1186</td>
+                <td class="values" align="right">1186</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7646</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDSELSI">LBDSELSI - Selenium (nmol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDSELSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Selenium (nmol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			11 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.42 to 2.29</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1186</td>
+                <td class="values" align="right">1186</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7646</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXGTC">LBXGTC - Gamma tocopherol (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXGTC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Gamma tocopherol (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Gamma tocopherol (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">7.57 to 2277.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6430</td>
+                <td class="values" align="right">6430</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2402</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDGTCSI">LBDGTCSI - Gamma tocopherol (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDGTCSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Gamma tocopherol (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.18 to 54.66</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6430</td>
+                <td class="values" align="right">6430</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2402</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXRPL">LBXRPL - Retinyl palmitate (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXRPL</dd>
+            <dt>SAS Label: </dt>
+            <dd>Retinyl palmitate (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Retinyl palmitate (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.14 to 40</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5867</td>
+                <td class="values" align="right">5867</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2965</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDRPLSI">LBDRPLSI - Retinyl palmitate (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDRPLSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Retinyl palmitate (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.005 to 1.396</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5867</td>
+                <td class="values" align="right">5867</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2965</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXRST">LBXRST - Retinyl stearate (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXRST</dd>
+            <dt>SAS Label: </dt>
+            <dd>Retinyl stearate (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Retinyl stearate (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.35 to 15</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4360</td>
+                <td class="values" align="right">4360</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4472</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDRSTSI">LBDRSTSI - Retinyl stearate(umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDRSTSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Retinyl stearate(umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Retinyl stearate(umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.012 to 0.524</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4360</td>
+                <td class="values" align="right">4360</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4472</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVIA">LBXVIA - Vitamin A (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVIA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin A (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vitamin A (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">6.7 to 223.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7454</td>
+                <td class="values" align="right">7454</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1378</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVIASI">LBDVIASI - Vitamin A (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVIASI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin A (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.23 to 7.79</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7454</td>
+                <td class="values" align="right">7454</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1378</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVIE">LBXVIE - Vitamin E (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVIE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin E (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vitamin E (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">120 to 7230.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7401</td>
+                <td class="values" align="right">7401</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1431</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVIESI">LBDVIESI - Vitamin E (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVIESI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin E (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">
+            </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.79 to 167.89</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7401</td>
+                <td class="values" align="right">7401</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1431</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXUHG">URXUHG - Mercury, urine (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXUHG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mercury, urine (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mercury, urine (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Females only 16 YEARS -
+			49 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.1 to 68.51</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1748</td>
+                <td class="values" align="right">1748</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7084</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

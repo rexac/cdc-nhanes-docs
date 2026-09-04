@@ -1,0 +1,3717 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>LEXPN_B</title>
+    <meta name="title" content="NHANES 2001-2002: Lower Extremity Disease - Peripheral Neuropathy Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Protocol_and_Procedure">Protocol and Procedure</a>
+          </li>
+          <li>
+            <a href="#Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#LEDSCCT1">LEDSCCT1 - PN Section Comment</a>
+              </li>
+              <li>
+                <a href="#LEALAMP">LEALAMP - Left amputation</a>
+              </li>
+              <li>
+                <a href="#LEALBUN">LEALBUN - Left bunions</a>
+              </li>
+              <li>
+                <a href="#LEALLES">LEALLES - Left lesion</a>
+              </li>
+              <li>
+                <a href="#LEALLESS">LEALLESS - Left lesion site</a>
+              </li>
+              <li>
+                <a href="#LEARAMP">LEARAMP - Right amputation</a>
+              </li>
+              <li>
+                <a href="#LEARBUN">LEARBUN - Right bunions</a>
+              </li>
+              <li>
+                <a href="#LEARLES">LEARLES - Right lesion</a>
+              </li>
+              <li>
+                <a href="#LEARLESS">LEARLESS - Right lesion site</a>
+              </li>
+              <li>
+                <a href="#LEALPN">LEALPN - Left Foot - Number of insensate areas</a>
+              </li>
+              <li>
+                <a href="#LEARPN">LEARPN - Right Foot - Number of insensate areas</a>
+              </li>
+              <li>
+                <a href="#LEXLMH11">LEXLMH11 - Left metatarsal head 1, test 1</a>
+              </li>
+              <li>
+                <a href="#LEALM1C1">LEALM1C1 - Left metatarsal 1 comment, test 1</a>
+              </li>
+              <li>
+                <a href="#LEXLHAL1">LEXLHAL1 - Left halux, test 1</a>
+              </li>
+              <li>
+                <a href="#LEALHAC1">LEALHAC1 - Left halux comments, test 1</a>
+              </li>
+              <li>
+                <a href="#LEXLMH51">LEXLMH51 - Left metatarsal head 5, test 1</a>
+              </li>
+              <li>
+                <a href="#LEALM5C1">LEALM5C1 - Left metatarsal 5 comment, test 1</a>
+              </li>
+              <li>
+                <a href="#LEXLMH12">LEXLMH12 - Left metatarsal head 1, test 2</a>
+              </li>
+              <li>
+                <a href="#LEALM1C2">LEALM1C2 - Left metatarsal 1 comment, test 2</a>
+              </li>
+              <li>
+                <a href="#LEXLHAL2">LEXLHAL2 - Left halux, test 2</a>
+              </li>
+              <li>
+                <a href="#LEALHAC2">LEALHAC2 - Left halux comments, test 2</a>
+              </li>
+              <li>
+                <a href="#LEXLMH52">LEXLMH52 - Left metatarsal head 5, test 2</a>
+              </li>
+              <li>
+                <a href="#LEALM5C2">LEALM5C2 - Left metatarsal 5 comment, test 2</a>
+              </li>
+              <li>
+                <a href="#LEXLMH13">LEXLMH13 - Left metatarsal head 1, test 3</a>
+              </li>
+              <li>
+                <a href="#LEALM1C3">LEALM1C3 - Left metatarsal 1 comment, test 3</a>
+              </li>
+              <li>
+                <a href="#LEXLHAL3">LEXLHAL3 - Left halux, test 3</a>
+              </li>
+              <li>
+                <a href="#LEALHAC3">LEALHAC3 - Left halux comments, test 3</a>
+              </li>
+              <li>
+                <a href="#LEXLMH53">LEXLMH53 - Left metatarsal head 5, test 3</a>
+              </li>
+              <li>
+                <a href="#LEALM5C3">LEALM5C3 - Left metatarsal 5 comment, test 3</a>
+              </li>
+              <li>
+                <a href="#LEXRMH11">LEXRMH11 - Right metatarsal head 1, test 1</a>
+              </li>
+              <li>
+                <a href="#LEARM1C1">LEARM1C1 - Right metatarsal head 1 comment, test 1</a>
+              </li>
+              <li>
+                <a href="#LEXRHAL1">LEXRHAL1 - Right halux, test 1</a>
+              </li>
+              <li>
+                <a href="#LEARHAC1">LEARHAC1 - Right halux comment, test 1</a>
+              </li>
+              <li>
+                <a href="#LEXRMH51">LEXRMH51 - Right metatarsal head 5, test 1</a>
+              </li>
+              <li>
+                <a href="#LEARM5C1">LEARM5C1 - Right metatarsal head 5 comment, test 1</a>
+              </li>
+              <li>
+                <a href="#LEXRMH12">LEXRMH12 - Right metatarsal head 1, test 2</a>
+              </li>
+              <li>
+                <a href="#LEARM1C2">LEARM1C2 - Right metatarsal head 1 comment, test 2</a>
+              </li>
+              <li>
+                <a href="#LEXRHAL2">LEXRHAL2 - Right halux, test 2</a>
+              </li>
+              <li>
+                <a href="#LEARHAC2">LEARHAC2 - Right halux comment, test 2</a>
+              </li>
+              <li>
+                <a href="#LEXRMH52">LEXRMH52 - Right metatarsal head 5, test 2</a>
+              </li>
+              <li>
+                <a href="#LEARM5C2">LEARM5C2 - Right metatarsal head 5 comment, test 2</a>
+              </li>
+              <li>
+                <a href="#LEXRMH13">LEXRMH13 - Right metatarsal head 1, test 3</a>
+              </li>
+              <li>
+                <a href="#LEARM1C3">LEARM1C3 - Right metatarsal head 1 comment, test 3</a>
+              </li>
+              <li>
+                <a href="#LEXRHAL3">LEXRHAL3 - Right halux, test 3</a>
+              </li>
+              <li>
+                <a href="#LEXRMH53">LEXRMH53 - Right metatarsal head 5, test 3</a>
+              </li>
+              <li>
+                <a href="#LEARM5C3">LEARM5C3 - Right metatarsal head 5 comment, test 3</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2001-2002 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Lower Extremity Disease - Peripheral Neuropathy (LEXPN_B)</h3>
+        <h4> Data File: LEXPN_B.xpt</h4>
+        <h5 class="left">First Published: May 2004</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>The Lower Extremity Disease Examination data will be used to determine the prevalence of lower extremity disease in the U.S. population (diagnosed and undiagnosed), including those at high risk for the late complications of the disease (i.e., ulceration and amputation). The major manifestations of lower extremity disease are peripheral vascular disease and peripheral neuropathy. The Ankle Brachial Blood Pressure Index section of the Lower Extremity Disease component collects data on peripheral vascular disease and the Peripheral Neuropathy (PN) section of the Lower Extremity Disease component collects data on peripheral neuropathy. The following documentation provides information on the PN section. Please refer to the LEXAB_B data file, codebook, and documentation for information on the Ankle Brachial Blood Pressure Index section.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Participants 40 years of age and older are asked to participate in the PN Section of the Lower Extremity Disease examination. </p>
+<p>Persons are excluded from the exam if they have a bilateral amputation or weigh over 400 pounds (due to equipment limitations). Additionally, some persons who were eligible for the exam (40 years of age and older) might not have received the exam due to the following multiple reasons:</p>
+<ol>
+    <li>casts, ulcers, dressings, or other conditions of the participant interfered with testing, </li>
+    <li>participant could not understand the test instructions, </li>
+    <li>participant became ill and the test could not be performed, </li>
+    <li>there was an equipment failure, </li>
+    <li>participant refused, </li>
+    <li>participant came late or left early from the MEC and the LED exam could not be performed, or </li>
+    <li>some other reason. </li>
+</ol>
+<p>As a result, these eligible persons will have missing data for the ABPI variables. The variable LEDSCCT1 may be used to identify reasons for missing data (refer to Component-Specific Analytic Notes section of this documentation for further details on the LEDSCCT1 variable). Due to participant confidentiality and data disclosure concerns, this file does not identify persons with a bilateral amputation. However, information on right or left amputations of the feet and toes is recorded in variables LEALAMP and LEARAMP.</p><h2 id="Protocol_and_Procedure">Protocol and Procedure</h2><p>The PN exam was performed by trained health technicians in a specially equipped room in the mobile examination center (MEC). Participants lie supine on the exam table during the exam. Health technicians use a standard monofilament (5.07 Semmes-Weinstein nylon monofilament mounted on a plastic handle; Delivers approximately a 10-gram filament force) to apply slight pressure to the bottom of each of the participant&rsquo;s feet at the following 3 sites: </p>
+<ol>
+    <li>plantar-first metatarsal head, </li>
+    <li>plantar-fifth metatarsal head, and </li>
+    <li>plantar-hallux. </li>
+</ol>
+<p>The sites are tested in a nonsequential order to allow for better discrimination of sensation by the examinee. </p>
+<p>Health technicians read the following standard script (English version) to the participant prior to application of the monofilament: </p>
+<p><em>&ldquo;I want to test the sensation or sense of touch on the bottom of your feet. To do this test, I will use this small filament to apply pressure to different spots on your foot. It is not sharp and will not break the skin. &ldquo; </em></p>
+<p><em>&ldquo;As I apply the pressure I will be saying &lsquo;A, B&rsquo; and I will be applying the pressure either as I am saying &lsquo;A&rsquo; or as I am saying &lsquo;B&rsquo;. I want you to tell me whether you felt the pressure when I said &lsquo;A&rsquo; or when I said &lsquo;B&rsquo;. Let me demonstrate on your arm.&rdquo; </em></p>
+<p><em>&ldquo;Do you understand?&rdquo; </em></p>
+<p>This method presents the examinee with a choice between an interval of stimulus from the monofilament and a second interval of background with no stimulus. The choice is to identify in which interval the stimulus occurred, not whether or not it occurred. The computer randomly generates the interval in which the stimulus is applied. </p>
+<p>If the first response at any site is correct, the test is not repeated at that site. If the examinee cannot correctly identify the interval in which the stimulus was applied (incorrect or &lsquo;unable to determine&rsquo; response), the test is repeated at that site up to two times until a total of two similar responses are obtained (incorrect and &lsquo;unable to determine&rsquo; are considered similar responses). </p>
+<p>The feet are also examined for the presence of amputations, lesions, and bunions. </p>
+<p>Refer to Lower Extremity Disease Procedures Manual (National Center for Health Statistics, 2002) for further details.</p><h2 id="Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</h2><p>Health technicians were regularly monitored by MEC supervisory staff and evaluated by experienced trainers and NCHS staff two to four times per year in the field. Retraining sessions were conducted with the technicians periodically and annually to reinforce the proper protocols and technique. Data were also routinely examined by NCHS and contractor staff.</p>
+<p>Inspection, calibration, and maintenance of the equipment and supplies were performed on a regular basis. The NHANES Lower Extremity Disease Procedures Manual (National Center for Health Statistics, 2002) details the equipment quality control procedures.</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>The number of insensate areas on the left (LEALPN) and right (LEARPN) foot were automatically computed by the computer system and verified by NCHS before data release. </p>
+<p><strong>Calculation of number of insensate areas for variables LEALPN and LEARPN: </strong></p>
+<p>Nine variables go into the calculation of each variable (up to 3 tests at each of 3 sites). Each of the 3 sites is first defined as sensate or insensate. </p>
+<p><strong><em>Sensate</em></strong>: A site is defined as sensate if 1) the first response at a site by a participant is correct or 2) two out of three tests at a site yield a correct response. </p>
+<p><strong><em>Insensate</em></strong>: A site is considered insensate if there are 1) two incorrect responses, 2) two &lsquo;unable to determine&rsquo; responses, or 1) 1 incorrect and 1 &lsquo;unable to determine&rsquo; response for a site. </p>
+<p>After each of the 3 sites is defined as sensate or insensate, then the total number of insensate sites is computed for each foot (0-3 insensate areas). If all 3 sites on a foot are sensate then there are &lsquo;no insensate areas&rsquo; and a value of 0 (zero) is recorded. If all 3 sites have a "could not obtain (CNO)" then there is insufficient information to calculate the number of insensate areas and the recorded value for number of insensate areas will equal &ndash;1, not enough information collected. Additionally, even if 1 site gets a CNO and the other 2 are correct or incorrect/unable to determine, the overall value for number of insensate areas will still be -1. Missing data at all 3 sites can also yield a -1. </p>
+<p>Refer to the NHANES Lower Extremity Disease Procedures Manual (National Center for Health Statistics, 2002) for further details on how the values for these variables were computed. </p>
+<p><strong>Variable specific editing: </strong></p>
+<p>LEDSCCT1 &ndash; PN Section Comment Variable <br />
+This variable is a quality control variable that NCHS used to monitor the LED component and the reasons technicians provided for why an exam was not done or incomplete. Technicians were provided a defined list of reasons but could also select &ldquo;other, specify&rdquo; and provide the reason for a not done or incomplete exam in a separate text field. Several of these &ldquo;other&rdquo; reasons were re-coded to one of the specific reasons (1-104) for data release and the remaining were left as &ldquo;other&rdquo;.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>For the monofilament testing, the participant can give a correct, incorrect, or &lsquo;unable to determine&rsquo; response. &lsquo;Could not obtain&rsquo; can be entered by a health technician if they were unable to test the site either because of technician error or some physical limitation of the examinee (e.g., lesions, calluses, bandages, etc. on the test site). A response of &lsquo;Could not obtain&rsquo; at any of the 3 sites on a foot does not provide any information about the sensation at that site. </p>
+<p>LEDSCCT1 &ndash; PN Section Comment Variable <br />
+This variable is a quality control variable that allowed NCHS to monitor the component and the reasons technicians provided for why an exam was not done or incomplete. The data were not collected for analytic reasons but for quality control purposes. This variable is provided in the data release file to allow analysts to have some information on missing data and possible reasons for non-response.</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>National Center for Health Statistics. Lower Extremity Disease Procedures Manual. January 2002. <a href="http://www.cdc.gov/nchs/data/nhanes/le.pdf">http://www.cdc.gov/nchs/data/nhanes/le.pdf</a>
+          </li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEDSCCT1">LEDSCCT1 - PN Section Comment</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEDSCCT1</dd>
+            <dt>SAS Label: </dt>
+            <dd>PN Section Comment</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PN section comment</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">None</td>
+                <td class="values" align="right">2743</td>
+                <td class="values" align="right">2743</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">SP refusal</td>
+                <td class="values" align="right">70</td>
+                <td class="values" align="right">2813</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">No time</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">2829</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Physical limitation</td>
+                <td class="values" align="right">105</td>
+                <td class="values" align="right">2934</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Communication problem</td>
+                <td class="values" align="right">53</td>
+                <td class="values" align="right">2987</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">SP ill/emergency</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">3003</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">43</td>
+                <td class="values">Weight limitation on equipment</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">3006</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">56</td>
+                <td class="values">Came late/left early</td>
+                <td class="values" align="right">143</td>
+                <td class="values" align="right">3149</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">72</td>
+                <td class="values">Error (technician/software/supply)</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">3160</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">84</td>
+                <td class="values">SP with child</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">3175</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">101</td>
+                <td class="values">Bandage, stocking, or other obstruction</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">3176</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">102</td>
+                <td class="values">Feet extremely calloused</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">3181</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">103</td>
+                <td class="values">As per doctor's request</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">3182</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">999</td>
+                <td class="values">Other, specify</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEALAMP">LEALAMP - Left amputation</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEALAMP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left amputation</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left amputation</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">DESCRIBES LEVEL OF AMPUTATION ON LEFT FOOT</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">None</td>
+                <td class="values" align="right">2858</td>
+                <td class="values" align="right">2858</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Entire foot</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">2861</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Partial foot</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2861</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Great toe</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2863</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Other toe(s)</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2863</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Great toe and other toe(s)</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2863</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">2868</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">316</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEALBUN">LEALBUN - Left bunions</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEALBUN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left bunions</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left bunions</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">579</td>
+                <td class="values" align="right">579</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2281</td>
+                <td class="values" align="right">2860</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">2868</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">316</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEALLES">LEALLES - Left lesion</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEALLES</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left lesion</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left lesion</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">27</td>
+                <td class="values" align="right">27</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2834</td>
+                <td class="values" align="right">2861</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">2868</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">316</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEALLESS">LEALLESS - Left lesion site</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEALLESS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left lesion site</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left lesion site</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Side or bottom of foot</td>
+                <td class="values" align="right">13</td>
+                <td class="values" align="right">13</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Top of toe(s)</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">21</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">27</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3157</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEARAMP">LEARAMP - Right amputation</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEARAMP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right amputation</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right amputation</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">LEVEL OF AMPUTATION ON RIGHT FOOT</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">None</td>
+                <td class="values" align="right">2860</td>
+                <td class="values" align="right">2860</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Entire foot</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">2863</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Partial foot</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2863</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Great toe</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2863</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Other toe(s)</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2863</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Great toe and other toe(s)</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2863</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">2867</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">317</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEARBUN">LEARBUN - Right bunions</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEARBUN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right bunions</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right bunions</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">624</td>
+                <td class="values" align="right">624</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2239</td>
+                <td class="values" align="right">2863</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">2867</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">317</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEARLES">LEARLES - Right lesion</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEARLES</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right lesion</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right lesion</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">29</td>
+                <td class="values" align="right">29</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2833</td>
+                <td class="values" align="right">2862</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">2867</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">317</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEARLESS">LEARLESS - Right lesion site</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEARLESS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right lesion site</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right lesion site</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Side or bottom of foot</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">9</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Top of toe(s)</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">19</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">29</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3155</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEALPN">LEALPN - Left Foot - Number of insensate areas</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEALPN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left Foot - Number of insensate areas</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left Foot - Number of insensate areas</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">No insensate areas</td>
+                <td class="values" align="right">2465</td>
+                <td class="values" align="right">2465</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">1 insensate area</td>
+                <td class="values" align="right">191</td>
+                <td class="values" align="right">2656</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">2 insensate areas</td>
+                <td class="values" align="right">55</td>
+                <td class="values" align="right">2711</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">3 insensate areas</td>
+                <td class="values" align="right">45</td>
+                <td class="values" align="right">2756</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">-1</td>
+                <td class="values">Not enough information to collect</td>
+                <td class="values" align="right">109</td>
+                <td class="values" align="right">2865</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">319</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEARPN">LEARPN - Right Foot - Number of insensate areas</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEARPN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right Foot - Number of insensate areas</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right Foot - Number of insensate areas</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">No insensate areas</td>
+                <td class="values" align="right">2535</td>
+                <td class="values" align="right">2535</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">1 insensate area</td>
+                <td class="values" align="right">134</td>
+                <td class="values" align="right">2669</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">2 insensate areas</td>
+                <td class="values" align="right">54</td>
+                <td class="values" align="right">2723</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">3 insensate areas</td>
+                <td class="values" align="right">44</td>
+                <td class="values" align="right">2767</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">-1</td>
+                <td class="values">Not enough information to collect</td>
+                <td class="values" align="right">86</td>
+                <td class="values" align="right">2853</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">331</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXLMH11">LEXLMH11 - Left metatarsal head 1, test 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXLMH11</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left metatarsal head 1, test 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left metatarsal head 1, test 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">2409</td>
+                <td class="values" align="right">2409</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">83</td>
+                <td class="values" align="right">2492</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">274</td>
+                <td class="values" align="right">2766</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">89</td>
+                <td class="values" align="right">2855</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">329</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEALM1C1">LEALM1C1 - Left metatarsal 1 comment, test 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEALM1C1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left metatarsal 1 comment, test 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left metatarsal 1 comment, test 1</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">COMMENT REQUIRED IF "Could not obtain" SELECTED.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">9</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">13</td>
+                <td class="values" align="right">22</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">21</td>
+                <td class="values" align="right">43</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">46</td>
+                <td class="values" align="right">89</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3095</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXLHAL1">LEXLHAL1 - Left halux, test 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXLHAL1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left halux, test 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left halux, test 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">2507</td>
+                <td class="values" align="right">2507</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">59</td>
+                <td class="values" align="right">2566</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">210</td>
+                <td class="values" align="right">2776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">78</td>
+                <td class="values" align="right">2854</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">330</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEALHAC1">LEALHAC1 - Left halux comments, test 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEALHAC1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left halux comments, test 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left halux comments, test 1</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">COMMENT REQUIRED IF "Could not obtain" SELECTED.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">12</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">26</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">31</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">47</td>
+                <td class="values" align="right">78</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3106</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXLMH51">LEXLMH51 - Left metatarsal head 5, test 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXLMH51</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left metatarsal head 5, test 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left metatarsal head 5, test 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">2517</td>
+                <td class="values" align="right">2517</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">68</td>
+                <td class="values" align="right">2585</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">180</td>
+                <td class="values" align="right">2765</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">89</td>
+                <td class="values" align="right">2854</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">330</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEALM5C1">LEALM5C1 - Left metatarsal 5 comment, test 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEALM5C1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left metatarsal 5 comment, test 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left metatarsal 5 comment, test 1</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">COMMENT REQUIRED IF "Could not obtain" SELECTED.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">9</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">18</td>
+                <td class="values" align="right">27</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">43</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">46</td>
+                <td class="values" align="right">89</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3095</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXLMH12">LEXLMH12 - Left metatarsal head 1, test 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXLMH12</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left metatarsal head 1, test 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left metatarsal head 1, test 2</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">248</td>
+                <td class="values" align="right">248</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">38</td>
+                <td class="values" align="right">286</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">87</td>
+                <td class="values" align="right">373</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">377</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2807</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEALM1C2">LEALM1C2 - Left metatarsal 1 comment, test 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEALM1C2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left metatarsal 1 comment, test 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left metatarsal 1 comment, test 2</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">4</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3180</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXLHAL2">LEXLHAL2 - Left halux, test 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXLHAL2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left halux, test 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left halux, test 2</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">145</td>
+                <td class="values" align="right">145</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">26</td>
+                <td class="values" align="right">171</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">100</td>
+                <td class="values" align="right">271</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">274</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2910</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEALHAC2">LEALHAC2 - Left halux comments, test 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEALHAC2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left halux comments, test 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left halux comments, test 2</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3181</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXLMH52">LEXLMH52 - Left metatarsal head 5, test 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXLMH52</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left metatarsal head 5, test 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left metatarsal head 5, test 2</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">132</td>
+                <td class="values" align="right">132</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">32</td>
+                <td class="values" align="right">164</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">94</td>
+                <td class="values" align="right">258</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2920</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEALM5C2">LEALM5C2 - Left metatarsal 5 comment, test 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEALM5C2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left metatarsal 5 comment, test 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left metatarsal 5 comment, test 2</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">6</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3178</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXLMH13">LEXLMH13 - Left metatarsal head 1, test 3</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXLMH13</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left metatarsal head 1, test 3</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left metatarsal head 1, test 3</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">226</td>
+                <td class="values" align="right">226</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">240</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">13</td>
+                <td class="values" align="right">253</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">254</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2930</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEALM1C3">LEALM1C3 - Left metatarsal 1 comment, test 3</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEALM1C3</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left metatarsal 1 comment, test 3</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left metatarsal 1 comment, test 3</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3183</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXLHAL3">LEXLHAL3 - Left halux, test 3</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXLHAL3</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left halux, test 3</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left halux, test 3</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">119</td>
+                <td class="values" align="right">119</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">129</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">145</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">146</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3038</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEALHAC3">LEALHAC3 - Left halux comments, test 3</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEALHAC3</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left halux comments, test 3</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left halux comments, test 3</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3183</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXLMH53">LEXLMH53 - Left metatarsal head 5, test 3</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXLMH53</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left metatarsal head 5, test 3</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left metatarsal head 5, test 3</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">115</td>
+                <td class="values" align="right">115</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">126</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">138</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">140</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3044</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEALM5C3">LEALM5C3 - Left metatarsal 5 comment, test 3</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEALM5C3</dd>
+            <dt>SAS Label: </dt>
+            <dd>Left metatarsal 5 comment, test 3</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Left metatarsal 5 comment, test 3</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3182</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXRMH11">LEXRMH11 - Right metatarsal head 1, test 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXRMH11</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right metatarsal head 1, test 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right metatarsal head 1, test 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">2549</td>
+                <td class="values" align="right">2549</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">78</td>
+                <td class="values" align="right">2627</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">144</td>
+                <td class="values" align="right">2771</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">82</td>
+                <td class="values" align="right">2853</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">331</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEARM1C1">LEARM1C1 - Right metatarsal head 1 comment, test 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEARM1C1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right metatarsal head 1 comment, test 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right metatarsal head 1 comment, test 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">6</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">20</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">34</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">48</td>
+                <td class="values" align="right">82</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3102</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXRHAL1">LEXRHAL1 - Right halux, test 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXRHAL1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right halux, test 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right halux, test 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">2557</td>
+                <td class="values" align="right">2557</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">65</td>
+                <td class="values" align="right">2622</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">159</td>
+                <td class="values" align="right">2781</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">72</td>
+                <td class="values" align="right">2853</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">331</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEARHAC1">LEARHAC1 - Right halux comment, test 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEARHAC1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right halux comment, test 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right halux comment, test 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">5</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">6</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">17</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">23</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">49</td>
+                <td class="values" align="right">72</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3112</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXRMH51">LEXRMH51 - Right metatarsal head 5, test 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXRMH51</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right metatarsal head 5, test 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right metatarsal head 5, test 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">2554</td>
+                <td class="values" align="right">2554</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">58</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">154</td>
+                <td class="values" align="right">2766</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">87</td>
+                <td class="values" align="right">2853</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">331</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEARM5C1">LEARM5C1 - Right metatarsal head 5 comment, test 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEARM5C1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right metatarsal head 5 comment, test 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right metatarsal head 5 comment, test 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">5</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">18</td>
+                <td class="values" align="right">23</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">39</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">48</td>
+                <td class="values" align="right">87</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3097</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXRMH12">LEXRMH12 - Right metatarsal head 1, test 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXRMH12</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right metatarsal head 1, test 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right metatarsal head 1, test 2</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">131</td>
+                <td class="values" align="right">131</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">17</td>
+                <td class="values" align="right">148</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">83</td>
+                <td class="values" align="right">231</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">236</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2948</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEARM1C2">LEARM1C2 - Right metatarsal head 1 comment, test 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEARM1C2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right metatarsal head 1 comment, test 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right metatarsal head 1 comment, test 2</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">4</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">5</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3179</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXRHAL2">LEXRHAL2 - Right halux, test 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXRHAL2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right halux, test 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right halux, test 2</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">117</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">22</td>
+                <td class="values" align="right">139</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">87</td>
+                <td class="values" align="right">226</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">230</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2954</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEARHAC2">LEARHAC2 - Right halux comment, test 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEARHAC2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right halux comment, test 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right halux comment, test 2</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">4</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3180</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXRMH52">LEXRMH52 - Right metatarsal head 5, test 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXRMH52</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right metatarsal head 5, test 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right metatarsal head 5, test 2</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">117</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">25</td>
+                <td class="values" align="right">142</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">84</td>
+                <td class="values" align="right">226</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">228</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2956</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEARM5C2">LEARM5C2 - Right metatarsal head 5 comment, test 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEARM5C2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right metatarsal head 5 comment, test 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right metatarsal head 5 comment, test 2</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3182</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXRMH13">LEXRMH13 - Right metatarsal head 1, test 3</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXRMH13</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right metatarsal head 1, test 3</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right metatarsal head 1, test 3</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">113</td>
+                <td class="values" align="right">113</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">13</td>
+                <td class="values" align="right">134</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">136</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3048</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEARM1C3">LEARM1C3 - Right metatarsal head 1 comment, test 3</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEARM1C3</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right metatarsal head 1 comment, test 3</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right metatarsal head 1 comment, test 3</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3182</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXRHAL3">LEXRHAL3 - Right halux, test 3</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXRHAL3</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right halux, test 3</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right halux, test 3</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">91</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">100</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">18</td>
+                <td class="values" align="right">118</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">118</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3066</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEXRMH53">LEXRMH53 - Right metatarsal head 5, test 3</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEXRMH53</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right metatarsal head 5, test 3</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right metatarsal head 5, test 3</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Correct</td>
+                <td class="values" align="right">96</td>
+                <td class="values" align="right">96</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Incorrect</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">103</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Unable to determine</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">117</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Could not obtain</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">118</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3066</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LEARM5C3">LEARM5C3 - Right metatarsal head 5 comment, test 3</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LEARM5C3</dd>
+            <dt>SAS Label: </dt>
+            <dd>Right metatarsal head 5 comment, test 3</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Right metatarsal head 5 comment, test 3</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lesions, bandages, elastic stockings</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Casts</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Amputation</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Callus</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Technical problem</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3183</td>
+                <td class="values" align="right">3184</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

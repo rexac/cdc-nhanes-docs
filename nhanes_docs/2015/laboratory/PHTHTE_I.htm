@@ -1,0 +1,1870 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>PHTHTE_I</title>
+    <meta name="title" content="NHANES 2015-2016: Phthalates and Plasticizers Metabolites - Urine Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Method_Files">Laboratory Method Files</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#WTSB2YR">WTSB2YR - Environmental B 2-year weights</a>
+              </li>
+              <li>
+                <a href="#URXCNP">URXCNP - Mono(carboxynonyl) Phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDCNPLC">URDCNPLC - Mono(carboxynonyl) Phthalate cmt code</a>
+              </li>
+              <li>
+                <a href="#URXCOP">URXCOP - Mono(carboxyoctyl) Phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDCOPLC">URDCOPLC - Mono(carboxyoctyl) phthalate cmt code</a>
+              </li>
+              <li>
+                <a href="#URXECP">URXECP - MECP phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDECPLC">URDECPLC - MECP phthalate comment code</a>
+              </li>
+              <li>
+                <a href="#URXHIBP">URXHIBP - MHIBP phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDHIBLC">URDHIBLC - MHIBP phthalate Comment Code </a>
+              </li>
+              <li>
+                <a href="#URXMBP">URXMBP - Mono-n-butyl phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMBPLC">URDMBPLC - Mono-n-butyl phthalate comment code</a>
+              </li>
+              <li>
+                <a href="#URXMC1">URXMC1 - Mono-(3-carboxypropyl) phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMC1LC">URDMC1LC - Mono-(3-carboxypropyl) phthalate cmt</a>
+              </li>
+              <li>
+                <a href="#URXMCOH">URXMCOH - MCOCH phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMCOLC">URDMCOLC - MCOCH phthalate Comment Code</a>
+              </li>
+              <li>
+                <a href="#URXMEP">URXMEP - Mono-ethyl phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMEPLC">URDMEPLC - Mono-ethyl phthalate comment code</a>
+              </li>
+              <li>
+                <a href="#URXMHBP">URXMHBP - Mono-3-hydroxy-n-butyl phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMHBLC">URDMHBLC - MHBP phthalate Comment Code</a>
+              </li>
+              <li>
+                <a href="#URXMHH">URXMHH - MEHP phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMHHLC">URDMHHLC - MEHP phthalate comment code</a>
+              </li>
+              <li>
+                <a href="#URXMHNC">URXMHNC - MHNCH (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMCHLC">URDMCHLC - MHNCH comment code</a>
+              </li>
+              <li>
+                <a href="#URXMHP">URXMHP - Mono-(2-ethyl)-hexyl phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMHPLC">URDMHPLC - Mono-(2-ethyl)-hexyl phthalate cmt code</a>
+              </li>
+              <li>
+                <a href="#URXMIB">URXMIB - Mono-isobutyl phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMIBLC">URDMIBLC - Mono-isobutyl phthalate comment code</a>
+              </li>
+              <li>
+                <a href="#URXMNP">URXMNP - Mono-isononyl phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMNPLC">URDMNPLC - Mono-isononyl phthalate comment code</a>
+              </li>
+              <li>
+                <a href="#URXMOH">URXMOH - MEOH phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMOHLC">URDMOHLC - MEOH phthalate comment code</a>
+              </li>
+              <li>
+                <a href="#URXMZP">URXMZP - Mono-benzyl phthalate (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMZPLC">URDMZPLC - Mono-benzyl phthalate comment code</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2015-2016 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Phthalates and Plasticizers Metabolites - Urine (PHTHTE_I)</h3>
+        <h4> Data File: PHTHTE_I.xpt</h4>
+        <h5 class="left">First Published: October 2018</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Phthalates are a group of chemicals used to make plastics more flexible and harder to break. They are often called plasticizers. Some phthalates are used as solvents (dissolving agents) for other materials. They are used in many products, such as vinyl flooring, adhesives, detergents, lubricating oils, automotive plastics, plastic clothes (raincoats), and personal-care products (soaps, shampoos, hair sprays, and nail polishes). Phthalates are used widely in polyvinyl chloride plastics, which are used to make products such as plastic packaging film and sheets, garden hoses, inflatable toys, blood-storage containers, and medical tubing. 1,2-cyclohexane dicarboxylic acid, diisononyl ester (DINCH) is used as a replacement of some high molecular weight phthalates. Once phthalates or DINCH enter a person's body, they are converted into breakdown products (metabolites) that pass out quickly in urine. Biomeasures of phthalates and phthalates alternatives in humans are necessary to evaluate potential human health effects from exposure to these chemicals.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>All examined participants aged 3 to 5 years were eligible and participants aged 6 years and older from a one-third subsample were eligible.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>The test principle utilizes high performance liquid chromatography-electrospray ionization-tandem mass spectrometry (HPLC-ESI-MS/MS) for the quantitative detection in urine of the following metabolites: monoethyl phthalate (MEP), monobutyl phthalate (MBP), mono-isobutyl phthalate (MiBP), mono(3-carboxypropyl) phthalate (MCPP), mono(2-ethylhexyl) phthalate (MEHP), monobenzyl phthalate (MBzP), monoisononyl phthalate (MNP), mono(2-ethyl-5-oxohexyl) phthalate (MEOHP), mono(2-ethyl-5-hydroxyhexyl) phthalate (MEHHP), mono(2-ethyl-5-carboxypentyl) phthalate (MECPP), monocarboxyoctyl phthalate (MCOP), monocarboxynonyl phthalate (MCNP), and cyclohexane-1,2-dicarboxylic acid-mono (hydroxy-isononyl) ester (MHNCH) (Silva, et al., 2007). Urine samples are processed using enzymatic deconjugation of the glucuronidated metabolites followed by on-line solid phase extraction (SPE) coupled with reversed phase HPLC-ESI-MS/MS. Assay precision is improved by incorporating isotopically labeled internal standards of the phthalate metabolites and MHNCH. In addition, 4-methyl umbelliferyl glucuronide is used to monitor deconjugation efficiency. This selective method allows for rapid detection of metabolites of commonly used phthalates and DINCH in human urine with limits of detection in the low ng/mL range.</p>
+<p>Refer to the Laboratory Method Files section for a detailed description of the laboratory methods used.</p>
+<p>There were no changes to the lab method, lab equipment, or lab site for this component in the NHANES 2015-2016 cycle.
+</p><h2 id="Laboratory_Method_Files">Laboratory Method Files</h2>
+        <p>
+          <a target="_blank" href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2015/labmethods/PHTHTE_I_MET.pdf">Phthalates and Phthalate Alternative Metabolites</a>
+          <span> (October 2018)</span>
+        </p>
+        <h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Urine specimens are processed, stored, and shipped to the Division of Laboratory Sciences, National Center for Environmental Health, Centers for Disease Control and Prevention for analysis.
+</p>
+<p>Detailed specimen collection and processing instructions are discussed in the NHANES <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2015/manuals/2016_MEC_Laboratory_Procedures_Manual.pdf">Laboratory Procedures Manual (LPM)</a>. Specimen vials are stored under appropriate frozen (&ndash;20&deg;C) conditions until they are shipped to the National Center for Environmental Health for testing.</p>
+<p>The NHANES quality assurance and quality control (QA/QC) protocols meet the 1988 Clinical Laboratory Improvement Amendments mandates. Detailed QA/QC instructions are discussed in the NHANES <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2015/manuals/2016_MEC_Laboratory_Procedures_Manual.pdf">LPM</a>.</p>
+<p><strong>Mobile Examination Centers (MECs)</strong></p>
+<p>Laboratory team performance is monitored using several techniques. NCHS and contract consultants use a structured competency assessment evaluation during visits to evaluate both the quality of the laboratory work and the quality-control procedures. Each laboratory staff member is observed for equipment operation, specimen collection and preparation; testing procedures and constructive feedback are given to each staff member. Formal retraining sessions are conducted annually to ensure that required skill levels are maintained.</p>
+<p><strong>Analytical Laboratories
+</strong></p>
+<p>NHANES uses several methods to monitor the quality of the analyses performed by the contract laboratories. In the MEC, these methods include performing blind split samples collected on &ldquo;dry run&rdquo; sessions. In addition, contract laboratories randomly perform repeat testing on 2% of all specimens.</p>
+<p>NCHS developed and distributed a quality control protocol for all CDC and contract laboratories, which outlined the use of Westgard rules (Westgard, et al., 1981) when running NHANES specimens. Progress reports containing any problems encountered during shipping or receipt of specimens, summary statistics for each control pool, QC graphs, instrument calibration, reagents, and any special considerations are submitted to NCHS quarterly. The reports are reviewed by NCHS for trends or shifts in the data. The laboratories are required to explain any identified areas of concern.</p>
+<p>All QC procedures recommended by the manufacturers were followed. Reported results for all assays meet the Division of Laboratory Sciences&rsquo; quality control and quality assurance performance criteria for accuracy and precision, similar to the Westgard rules (Caudill, et al., 2008).</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>The data were reviewed. Incomplete data or improbable values were sent to the performing laboratory for confirmation.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Refer to the <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overviewlab.aspx?BeginYear=2015">2015-2016 Laboratory Data Overview</a>&nbsp;for general information on NHANES laboratory data.</p>
+<p><strong>Subsample Weights</strong></p>
+<p><strong>
+</strong>Urinary metals were measured in a full sample of participants ages 3-5 and&nbsp;a one third subsample of persons 6 years and older. Special sample weights are required to analyze these data properly. Specific sample weights for this subsample are included in this data file and should be used when analyzing these data.</p>
+<p><strong><strong>Demographic and Other Related Variables</strong></strong></p>
+<p><strong>
+</strong>The analysis of NHANES laboratory data must be conducted using the appropriate survey design and demographic variables. The NHANES <a href="https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Demographics&amp;CycleBeginYear=2015">2015-2016 Demographic Data</a> File contains demographic and sample design variables. The recommended procedure for variance estimation requires use of stratum and PSU variables (SDMVSTRA and SDMVPSU, respectively) in the demographic data file.</p>
+<p>Starting in the 2015-2016 NHANES cycle, the variable URXUCR (urine creatinine) will not be reported in this file.  URXUCR can be found in the data file titled Albumin &amp; Creatinine&nbsp;- Urine.</p>
+<p>This laboratory data file can be linked to the other NHANES data files using the unique survey participant identifier SEQN.</p>
+<p>Starting in the 2015-2016 NHANES cycle, the variable URXUCR (urine creatinine) will not be reported in this file. URXUCR can be found in the data file titled &ldquo;Albumin &amp; Creatinine &ndash; Urine&rdquo;.</p>
+<p><strong>Detection Limits</strong></p>
+<p><strong>
+</strong>The detection limits were constant for the analytes in the data set. Two variables are provided for each of these analytes. The variable named ending in &ldquo;LC&rdquo; (ex., URDCNPLC) indicates whether the result was below the limit of detection: the value &ldquo;0&rdquo; means that the result was at or above the limit of detection, &ldquo;1&rdquo; indicates that the result was below the limit of detection. For analytes with analytic results below the lower limit of detection (ex., URDCNPLC=1), an imputed fill value was placed in the analyte results field. This value is the lower limit of detection divided by the square root of 2 (LLOD/sqrt [2]). The other variable prefixed URX (ex., URXCNP) provides the analytic result for the analyte.</p>
+<p style="margin: 0in 0in 8pt; line-height: 15.95pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto;">The lower limit of detection (LLOD, in ng/mL) for
+the phthalates and plasticizers metabolites:</p>
+<table bordercolor="#000000" border="1">
+    <thead>
+        <tr>
+            <th>VARIABLE NAME</th>
+            <th>SAS LABEL</th>
+            <th>LLOD</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>URXCNP</td>
+            <td>Mono(carboxyisononyl) phthalate (ng/mL)</td>
+            <td>0.2</td>
+        </tr>
+        <tr>
+            <td>URXCOP</td>
+            <td>Mono(carboxyisoctyl) phthalate (ng/mL)</td>
+            <td>0.3</td>
+        </tr>
+        <tr>
+            <td>URXECP</td>
+            <td>Mono-2-ethyl-5-carboxypentyl phthalate (ng/mL)</td>
+            <td>0.4</td>
+        </tr>
+        <tr>
+            <td>URXHIBP</td>
+            <td>MHIBP phthalate (ng/mL)</td>
+            <td>0.4</td>
+        </tr>
+        <tr>
+            <td>URXMBP</td>
+            <td>Mono-n-butyl phthalate (ng/mL)</td>
+            <td>0.4</td>
+        </tr>
+        <tr>
+            <td>URXMC1</td>
+            <td>Mono-(3-carboxypropyl) phthalate (ng/mL)</td>
+            <td>0.4</td>
+        </tr>
+        <tr>
+            <td>URXMCOH</td>
+            <td>MCOCH phthalate (ng/mL)</td>
+            <td>0.5</td>
+        </tr>
+        <tr>
+            <td>URXMEP</td>
+            <td>Mono-ethyl phthalate (ng/mL)</td>
+            <td>1.2</td>
+        </tr>
+        <tr>
+            <td>URXMHBP</td>
+            <td>Mono-3-hydroxy-n-butyl phthalate (ng/mL)</td>
+            <td>0.4</td>
+        </tr>
+        <tr>
+            <td>URXMHH</td>
+            <td>Mono-(2-ethyl-5-hydroxyhexyl) phthalate (ng/mL)</td>
+            <td>0.4</td>
+        </tr>
+        <tr>
+            <td>URXMHNC</td>
+            <td>Cyclohexane 1,2-dicarboxylic acid monohydroxy isononyl ester (ng/mL)</td>
+            <td>0.4</td>
+        </tr>
+        <tr>
+            <td>URXMHP</td>
+            <td>Mono-(2-ethyl)-hexyl phthalate (ng/mL)</td>
+            <td>0.8</td>
+        </tr>
+        <tr>
+            <td>URXMIB</td>
+            <td>Mono-isobutyl phthalate (ng/mL)</td>
+            <td>0.8</td>
+        </tr>
+        <tr>
+            <td>URXMNP</td>
+            <td>Mono-isononyl phthalate (ng/mL)</td>
+            <td>0.9</td>
+        </tr>
+        <tr>
+            <td>URXMOH</td>
+            <td>Mono-(2-ethyl-5-oxohexyl) phthalate (ng/mL)</td>
+            <td>0.2</td>
+        </tr>
+        <tr>
+            <td>URXMZP</td>
+            <td>Mono-benzyl phthalate (ng/mL)</td>
+            <td>0.3</td>
+        </tr>
+    </tbody>
+</table>
+<p>Please refer to the NHANES <a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx" target="_blank">Analytic Guidelines</a>&nbsp;and the on-line NHANES&nbsp;<a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/" target="_blank">Tutorial</a>&nbsp;for further details on the use of sample weights and other analytic issues.</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Caudill, S.P., Schleicher, R.L., Pirkle, J.L. Multi-rule quality control for the age-related eye disease study. Statist. Med. (2008) 27(20):4094-40106.</li>
+          <li>Silva MJ, Samandar E, Preau JL Jr, Reidy JA, Needham LL,Calafat AM. Quantification of 22 phthalate metabolites in human urine. J Chromatogr B Analyt Technol Biomed Life Sci. 2007 Dec 1;860(1):106-12.</li>
+          <li>Westgard JO, Barry PL, Hunt MR, Groth T. A multi-rule Shewhart chart for quality control in clinical chemistry. Clin Chem. 1981 Mar;27(3):493-501.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTSB2YR">WTSB2YR - Environmental B 2-year weights</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTSB2YR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Environmental B 2-year weights</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Environmental B 2-year weights</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">6552.119284 to 874638.01159</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3149</td>
+                <td class="values" align="right">3149</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">Participants 6+ years with no lab specimen</td>
+                <td class="values" align="right">56</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXCNP">URXCNP - Mono(carboxynonyl) Phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXCNP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono(carboxynonyl) Phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono(carboxynonyl) Phthalate (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.14 to 246.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDCNPLC">URDCNPLC - Mono(carboxynonyl) Phthalate cmt code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDCNPLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono(carboxynonyl) Phthalate cmt code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono(carboxynonyl) phthalate comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2915</td>
+                <td class="values" align="right">2915</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">60</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXCOP">URXCOP - Mono(carboxyoctyl) Phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXCOP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono(carboxyoctyl) Phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono(carboxyoctyl) Phthalate (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.21 to 1096.7</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDCOPLC">URDCOPLC - Mono(carboxyoctyl) phthalate cmt code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDCOPLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono(carboxyoctyl) phthalate cmt code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono(carboxyoctyl) phthalate comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2959</td>
+                <td class="values" align="right">2959</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXECP">URXECP - MECP phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXECP</dd>
+            <dt>SAS Label: </dt>
+            <dd>MECP phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-2-ethyl-5-carboxypentyl phthalate (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.28 to 621.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDECPLC">URDECPLC - MECP phthalate comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDECPLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MECP phthalate comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-2-ethyl-5-carboxypentyl phthalate comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2969</td>
+                <td class="values" align="right">2969</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXHIBP">URXHIBP - MHIBP phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXHIBP</dd>
+            <dt>SAS Label: </dt>
+            <dd>MHIBP phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-2-hydroxy-iso-butyl phthalate (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+            <dt>Hard Edits: </dt>
+            <dd class="info">0.0000 to 99999.9900</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.28 to 533</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDHIBLC">URDHIBLC - MHIBP phthalate Comment Code </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDHIBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MHIBP phthalate Comment Code </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-2-hydroxy-iso-butyl phthalate Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2863</td>
+                <td class="values" align="right">2863</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">112</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMBP">URXMBP - Mono-n-butyl phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMBP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-n-butyl phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-n-butyl phthalate (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.28 to 1792.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMBPLC">URDMBPLC - Mono-n-butyl phthalate comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMBPLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-n-butyl phthalate comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-n-butyl phthalate comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2954</td>
+                <td class="values" align="right">2954</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">21</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMC1">URXMC1 - Mono-(3-carboxypropyl) phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMC1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-(3-carboxypropyl) phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-(3-carboxypropyl) phthalate (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.28 to 297.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMC1LC">URDMC1LC - Mono-(3-carboxypropyl) phthalate cmt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMC1LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-(3-carboxypropyl) phthalate cmt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-(3-carboxypropyl) phthalate comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2437</td>
+                <td class="values" align="right">2437</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">538</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMCOH">URXMCOH - MCOCH phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMCOH</dd>
+            <dt>SAS Label: </dt>
+            <dd>MCOCH phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Cyclohexane-1,2-dicarboxylic acid-mono(carboxyoctyl) ester phthalate (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+            <dt>Hard Edits: </dt>
+            <dd class="info">0.0000 to 99999.99000</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.35 to 285.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMCOLC">URDMCOLC - MCOCH phthalate Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMCOLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MCOCH phthalate Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Cyclohexane-1,2-dicarboxylic acid-mono(carboxyoctyl) ester phthalate Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">1783</td>
+                <td class="values" align="right">1783</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1192</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMEP">URXMEP - Mono-ethyl phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMEP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-ethyl phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-ethyl phthalate (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.85 to 15021</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMEPLC">URDMEPLC - Mono-ethyl phthalate comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMEPLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-ethyl phthalate comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-ethyl phthalate comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2963</td>
+                <td class="values" align="right">2963</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMHBP">URXMHBP - Mono-3-hydroxy-n-butyl phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMHBP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-3-hydroxy-n-butyl phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-3-hydroxy-n-butyl phthalate (ng/mL) </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+            <dt>Hard Edits: </dt>
+            <dd class="info">0.0000 to 99999.9900</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.28 to 240.6</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMHBLC">URDMHBLC - MHBP phthalate Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMHBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MHBP phthalate Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-3-hydroxy-n-butyl phthalate Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2327</td>
+                <td class="values" align="right">2327</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">648</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMHH">URXMHH - MEHP phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMHH</dd>
+            <dt>SAS Label: </dt>
+            <dd>MEHP phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-(2-ethyl-5-hydroxyhexyl) phthalate (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.28 to 559.9</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMHHLC">URDMHHLC - MEHP phthalate comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMHHLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MEHP phthalate comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-(2-ethyl-5-hydroxyhexyl) phthalate comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2961</td>
+                <td class="values" align="right">2961</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMHNC">URXMHNC - MHNCH (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMHNC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MHNCH (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Cyclohexane 1,2-dicarboxylic acid monohydroxy isononyl ester  (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.28 to 1051.9</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMCHLC">URDMCHLC - MHNCH comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMCHLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MHNCH comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Cyclohexane 1,2-dicarboxylic acid monohydroxy isononyl ester comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1977</td>
+                <td class="values" align="right">1977</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">998</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMHP">URXMHP - Mono-(2-ethyl)-hexyl phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMHP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-(2-ethyl)-hexyl phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-(2-ethyl)-hexyl phthalate (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.57 to 152.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMHPLC">URDMHPLC - Mono-(2-ethyl)-hexyl phthalate cmt code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMHPLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-(2-ethyl)-hexyl phthalate cmt code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-(2-ethyl)-hexyl phthalate comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1853</td>
+                <td class="values" align="right">1853</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1122</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMIB">URXMIB - Mono-isobutyl phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMIB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-isobutyl phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-isobutyl phthalate (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.57 to 1384.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMIBLC">URDMIBLC - Mono-isobutyl phthalate comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMIBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-isobutyl phthalate comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-isobutyl phthalate comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2929</td>
+                <td class="values" align="right">2929</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">46</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMNP">URXMNP - Mono-isononyl phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMNP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-isononyl phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-isononyl phthalate (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.64 to 875.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMNPLC">URDMNPLC - Mono-isononyl phthalate comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMNPLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-isononyl phthalate comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-isononyl phthalate comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">793</td>
+                <td class="values" align="right">793</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2182</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMOH">URXMOH - MEOH phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMOH</dd>
+            <dt>SAS Label: </dt>
+            <dd>MEOH phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-(2-ethyl-5-oxohexyl) phthalate (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.14 to 300.5</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMOHLC">URDMOHLC - MEOH phthalate comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMOHLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MEOH phthalate comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-(2-ethyl-5-oxohexyl) phthalate comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2959</td>
+                <td class="values" align="right">2959</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMZP">URXMZP - Mono-benzyl phthalate (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMZP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-benzyl phthalate (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-benzyl phthalate (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.21 to 1525.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2975</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMZPLC">URDMZPLC - Mono-benzyl phthalate comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMZPLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mono-benzyl phthalate comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mono-benzyl phthalate comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2913</td>
+                <td class="values" align="right">2913</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">62</td>
+                <td class="values" align="right">2975</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">230</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

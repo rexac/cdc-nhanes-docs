@@ -1,0 +1,973 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>PAQIAF</title>
+    <meta name="title" content="NHANES 1999-2000: Physical Activity - Individual Activities Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Interview_Setting_and_Mode_of_Administration">Interview Setting and Mode of Administration</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#PADACTIV">PADACTIV - Leisure time activity</a>
+              </li>
+              <li>
+                <a href="#PADLEVEL">PADLEVEL - Activity level</a>
+              </li>
+              <li>
+                <a href="#PADTIMES">PADTIMES - # of times did activity in past 30 days</a>
+              </li>
+              <li>
+                <a href="#PADDURAT">PADDURAT - Average duration of activity (minutes)</a>
+              </li>
+              <li>
+                <a href="#PADMETS">PADMETS - MET score for activity</a>
+              </li>
+              <li>
+                <a href="#PAAQUEX">PAAQUEX - Questionnaire source flag for weighting</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#Appendix_1:_Physical_Activity_Codes">Appendix 1: Physical Activity Codes</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>1999-2000 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Physical Activity - Individual Activities (PAQIAF)</h3>
+        <h4> Data File: PAQIAF.xpt</h4>
+        <h5 class="left">First Published: June 2002</h5>
+        <h5 class="right">Last Revised: September 2004</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>This Physical Activity Individual Activities File (PAQIAF) is the second of two files on physical activities and includes detailed information about specific moderate and vigorous leisure-time activities for respondents 12 or more years of age. (See also general Physical Activity file PAQ) </p>
+<h2 id="Eligible_Sample">Eligible Sample</h2><p>All survey participants 12 or more years of age were eligible. </p>
+<h2 id="Interview_Setting_and_Mode_of_Administration">Interview Setting and Mode of Administration</h2><p><strong>Interview Settings</strong> </p>
+<p>For respondents 12&#8211;15 years of age, information about specific leisure-time activities performed over the past 30 days was obtained in the Mobile Examination Center (MEC) as part of a larger questionnaire on physical activity. For respondents 16 or more years of age, the information was obtained in the household interview. </p>
+<p><strong>Mode of Administration</strong> </p>
+<p>In-person </p>
+<h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>For each reported leisure-time activity, one record was created in the individual activities file. If a respondent reported no leisure-time activities, there are no records in the file for that respondent. Due to the recoding of "other" leisure-time activities, it is possible for a respondent to have two records for the same activity with the same level of exertion. For example, a respondent may have reported vigorous bicycling and vigorous spinning, which was recoded as bicycling. </p>
+<p>PADACTIV: Numeric code for the reported activity (see Appendix 1). </p>
+<p>PADLEVEL: Level of exertion reported for the activity (PADACTIV). Activities reported as involving moderate exertion were coded 1; activities reported as involving vigorous exertion were coded 2. </p>
+<p>PADTIMES: Number of times the activity was done over the past 30 days. Originally reported as number of times per day, per week, or per month and converted to number of times over the past 30 days. </p>
+<p>PADDURAT: Average number of minutes the activity was done each time. The data was originally reported in hours or minutes; hours were converted to minutes. </p>
+<p>PADMETS: Metabolic equivalent (MET) score for the activity (see Appendix 1). They were obtained from the reference below and personal communication with the author. </p>
+<p>Activities for which the reported duration (PADDURAT) was less than 10 minutes were excluded. PADTIMES and PADDURAT were set to missing for activities in which the total time per day was 12 hours or more. For example, if bowling was reported an average of 3 times a day over the past 30 days for an average of 4 hours each time, PADTIMES and PADDURAT were set to missing for this activity. </p>
+<h2 id="Analytic_Notes">Analytic Notes</h2><p>Since the PAQIAF questions for respondents 16 or more years of age were asked in the household interview, the interview sample weights may be used in their analysis. However, if the data is joined with data from the MEC, the MEC sample weights should be used. Analysis of the PAQIAF questions for 12&#8211;15 year olds should use the MEC sample weights, as the questions were asked in the MEC. </p>
+<p>&nbsp;</p>
+</div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Ainsworth BE, Haskell WL, Whitt MC, et al. Compendium of physical activities: an update of activity codes and MET intensities. Med Sci Sports Exerc. 2000;32(9):S498&#8211;S516.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PADACTIV">PADACTIV - Leisure time activity</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PADACTIV</dd>
+            <dt>SAS Label: </dt>
+            <dd>Leisure time activity</dd>
+            <dt>English Text: </dt>
+            <dd class="info">[Over the past 30 days], what {vigorous/moderate} activities did {you/SP} do?</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">CODE ALL THAT APPLY.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">10</td>
+                <td class="values">AEROBICS</td>
+                <td class="values" align="right">333</td>
+                <td class="values" align="right">333</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">BASEBALL</td>
+                <td class="values" align="right">120</td>
+                <td class="values" align="right">453</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">12</td>
+                <td class="values">BASKETBALL</td>
+                <td class="values" align="right">718</td>
+                <td class="values" align="right">1171</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">13</td>
+                <td class="values">BICYCLING</td>
+                <td class="values" align="right">684</td>
+                <td class="values" align="right">1855</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">14</td>
+                <td class="values">BOWLING</td>
+                <td class="values" align="right">46</td>
+                <td class="values" align="right">1901</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">15</td>
+                <td class="values">DANCE</td>
+                <td class="values" align="right">659</td>
+                <td class="values" align="right">2560</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">16</td>
+                <td class="values">FISHING</td>
+                <td class="values" align="right">36</td>
+                <td class="values" align="right">2596</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">17</td>
+                <td class="values">FOOTBALL</td>
+                <td class="values" align="right">283</td>
+                <td class="values" align="right">2879</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">18</td>
+                <td class="values">GARDENING</td>
+                <td class="values" align="right">185</td>
+                <td class="values" align="right">3064</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">19</td>
+                <td class="values">GOLF</td>
+                <td class="values" align="right">218</td>
+                <td class="values" align="right">3282</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">20</td>
+                <td class="values">HIKING</td>
+                <td class="values" align="right">169</td>
+                <td class="values" align="right">3451</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">21</td>
+                <td class="values">HOCKEY</td>
+                <td class="values" align="right">30</td>
+                <td class="values" align="right">3481</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">22</td>
+                <td class="values">HUNTING</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">3495</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">23</td>
+                <td class="values">JOGGING</td>
+                <td class="values" align="right">220</td>
+                <td class="values" align="right">3715</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">24</td>
+                <td class="values">KAYAKING</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">3725</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">25</td>
+                <td class="values">PUSH-UPS</td>
+                <td class="values" align="right">133</td>
+                <td class="values" align="right">3858</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">26</td>
+                <td class="values">RACQUETBALL</td>
+                <td class="values" align="right">30</td>
+                <td class="values" align="right">3888</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">27</td>
+                <td class="values">ROLLERBLADING</td>
+                <td class="values" align="right">73</td>
+                <td class="values" align="right">3961</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">28</td>
+                <td class="values">ROWING</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">3972</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">29</td>
+                <td class="values">RUNNING</td>
+                <td class="values" align="right">935</td>
+                <td class="values" align="right">4907</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">30</td>
+                <td class="values">SIT-UPS</td>
+                <td class="values" align="right">178</td>
+                <td class="values" align="right">5085</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">31</td>
+                <td class="values">SKATING</td>
+                <td class="values" align="right">49</td>
+                <td class="values" align="right">5134</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">32</td>
+                <td class="values">SKIING - CROSS COUNTRY</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">5149</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">33</td>
+                <td class="values">SKIING - DOWNHILL</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">5158</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">34</td>
+                <td class="values">SOCCER</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">5422</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">35</td>
+                <td class="values">SOFTBALL</td>
+                <td class="values" align="right">98</td>
+                <td class="values" align="right">5520</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">36</td>
+                <td class="values">STAIR CLIMBING</td>
+                <td class="values" align="right">122</td>
+                <td class="values" align="right">5642</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">37</td>
+                <td class="values">STRETCHING</td>
+                <td class="values" align="right">182</td>
+                <td class="values" align="right">5824</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">38</td>
+                <td class="values">SWIMMING</td>
+                <td class="values" align="right">265</td>
+                <td class="values" align="right">6089</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">39</td>
+                <td class="values">TENNIS</td>
+                <td class="values" align="right">89</td>
+                <td class="values" align="right">6178</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">40</td>
+                <td class="values">TREADMILL</td>
+                <td class="values" align="right">183</td>
+                <td class="values" align="right">6361</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">41</td>
+                <td class="values">VOLLEYBALL</td>
+                <td class="values" align="right">106</td>
+                <td class="values" align="right">6467</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">42</td>
+                <td class="values">WALKING</td>
+                <td class="values" align="right">1687</td>
+                <td class="values" align="right">8154</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">43</td>
+                <td class="values">WEIGHT LIFTING</td>
+                <td class="values" align="right">421</td>
+                <td class="values" align="right">8575</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">44</td>
+                <td class="values">YARD WORK</td>
+                <td class="values" align="right">497</td>
+                <td class="values" align="right">9072</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">50</td>
+                <td class="values">BOXING</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">9083</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">51</td>
+                <td class="values">FRISBEE</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">9095</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">52</td>
+                <td class="values">HORSEBACK RIDING</td>
+                <td class="values" align="right">13</td>
+                <td class="values" align="right">9108</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">53</td>
+                <td class="values">MARTIAL ARTS</td>
+                <td class="values" align="right">22</td>
+                <td class="values" align="right">9130</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">54</td>
+                <td class="values">WRESTLING</td>
+                <td class="values" align="right">24</td>
+                <td class="values" align="right">9154</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">55</td>
+                <td class="values">YOGA</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">9161</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">56</td>
+                <td class="values">CHEERLEADING AND GYMNASTICS</td>
+                <td class="values" align="right">20</td>
+                <td class="values" align="right">9181</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">57</td>
+                <td class="values">CHILDREN'S GAMES (E.G. DODGEBALL, KICKBALL)</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">9193</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">58</td>
+                <td class="values">ROPE JUMPING</td>
+                <td class="values" align="right">21</td>
+                <td class="values" align="right">9214</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">59</td>
+                <td class="values">SKATEBOARDING</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">9220</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">60</td>
+                <td class="values">SURFING</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">9225</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">61</td>
+                <td class="values">TRAMPOLINE JUMPING</td>
+                <td class="values" align="right">13</td>
+                <td class="values" align="right">9238</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">71</td>
+                <td class="values">OTHER</td>
+                <td class="values" align="right">28</td>
+                <td class="values" align="right">9266</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">9266</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PADLEVEL">PADLEVEL - Activity level</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PADLEVEL</dd>
+            <dt>SAS Label: </dt>
+            <dd>Activity level</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Reported intensity level of activity</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">MODERATE</td>
+                <td class="values" align="right">4086</td>
+                <td class="values" align="right">4086</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">VIGOROUS</td>
+                <td class="values" align="right">5180</td>
+                <td class="values" align="right">9266</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">9266</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PADTIMES">PADTIMES - # of times did activity in past 30 days</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PADTIMES</dd>
+            <dt>SAS Label: </dt>
+            <dd># of times did activity in past 30 days</dd>
+            <dt>English Text: </dt>
+            <dd class="info">[Over the past 30 day], how often did {you/SP} do {activity}?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 300</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">9260</td>
+                <td class="values" align="right">9260</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">9266</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PADDURAT">PADDURAT - Average duration of activity (minutes)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PADDURAT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Average duration of activity (minutes)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">[Over the past 30 days], on average about how long did {you/SP} do {activity} each time?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">10 to 600</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">9260</td>
+                <td class="values" align="right">9260</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">9266</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PADMETS">PADMETS - MET score for activity</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PADMETS</dd>
+            <dt>SAS Label: </dt>
+            <dd>MET score for activity</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Metabolic equivalent(MET) intensity level for activity.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.5 to 10</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">9266</td>
+                <td class="values" align="right">9266</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">9266</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PAAQUEX">PAAQUEX - Questionnaire source flag for weighting</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PAAQUEX</dd>
+            <dt>SAS Label: </dt>
+            <dd>Questionnaire source flag for weighting</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Questionnaire source flag for weighting</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sample Person Interview Questionnaire Targets  (B(16-150))</td>
+                <td class="values" align="right">6986</td>
+                <td class="values" align="right">6986</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">MEC CAPI Questionnaire Targets (B(12-15))</td>
+                <td class="values" align="right">2280</td>
+                <td class="values" align="right">9266</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">9266</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="Appendices">
+        <div id="Appendix">
+          <h2 id="Appendix_1:_Physical_Activity_Codes">Appendix 1: Physical Activity Codes</h2><table>
+    <caption valign="top" align="center">Physical Activity Codes</caption>
+    <thead>
+        <tr>
+            <th id="ms__id3078_heading_0">Code</th>
+            <th id="ms__id3078_heading_1">Activity (Moderate MET Code, Vigorous MET code)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th id="ms__id3078_heading_2">10</th>
+            <td headers="ms__id3078_heading_1">Aerobics (5.0, 7.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_3">11</th>
+            <td headers="ms__id3078_heading_1">Baseball (5.0, 6.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_4">12</th>
+            <td headers="ms__id3078_heading_1">Basketball (6.0, 8.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_5">13</th>
+            <td headers="ms__id3078_heading_1">Bicycling (4.0, 8.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_6">14</th>
+            <td headers="ms__id3078_heading_1">Bowling (3.0, 3.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_7">15</th>
+            <td headers="ms__id3078_heading_1">Dance (4.5, 6.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_8">16</th>
+            <td headers="ms__id3078_heading_1">Fishing (3.5, 6.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_9">17</th>
+            <td headers="ms__id3078_heading_1">Football (5.0, 8.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_10">18</th>
+            <td headers="ms__id3078_heading_1">Gardening (4.0, 5.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_11">19</th>
+            <td headers="ms__id3078_heading_1">Golf (3.5, 4.5)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_12">20</th>
+            <td headers="ms__id3078_heading_1">Hiking (6.0, 7.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_13">21</th>
+            <td headers="ms__id3078_heading_1">Hockey (6.0, 8.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_14">22</th>
+            <td headers="ms__id3078_heading_1">Hunting (5.0, 6.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_15">23</th>
+            <td headers="ms__id3078_heading_1">Jogging (6.0, 7.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_16">24</th>
+            <td headers="ms__id3078_heading_1">Kayaking (3.5, 7.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_17">25</th>
+            <td headers="ms__id3078_heading_1">Push-ups (3.5, 8.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_18">26</th>
+            <td headers="ms__id3078_heading_1">Racquetball (7.0, 10.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_19">27</th>
+            <td headers="ms__id3078_heading_1">Rollerblading (6.0, 7.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_20">28</th>
+            <td headers="ms__id3078_heading_1">Rowing (3.5, 7.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_21">29</th>
+            <td headers="ms__id3078_heading_1">Running (7.0, 10.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_22">30</th>
+            <td headers="ms__id3078_heading_1">Sit-ups (3.5, 8.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_23">31</th>
+            <td headers="ms__id3078_heading_1">Skating (5.0, 7.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_24">32</th>
+            <td headers="ms__id3078_heading_1">Skiing &#8211; cross country (7.0, 9.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_25">33</th>
+            <td headers="ms__id3078_heading_1">Skiing &#8211; downhill (6.0, 8.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_26">34</th>
+            <td headers="ms__id3078_heading_1">Soccer (6.0, 10.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_27">35</th>
+            <td headers="ms__id3078_heading_1">Softball (5.0, 6.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_28">36</th>
+            <td headers="ms__id3078_heading_1">Stair Climbing (6.0, 8.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_29">37</th>
+            <td headers="ms__id3078_heading_1">Stretching (2.5, 2.5)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_30">38</th>
+            <td headers="ms__id3078_heading_1">Swimming (6.0, 8.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_31">39</th>
+            <td headers="ms__id3078_heading_1">Tennis (5.0, 7.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_32">40</th>
+            <td headers="ms__id3078_heading_1">Treadmill (4.5, 7.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_33">41</th>
+            <td headers="ms__id3078_heading_1">Volleyball (4.0, 8.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_34">42</th>
+            <td headers="ms__id3078_heading_1">Walking (3.5, 5.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_35">43</th>
+            <td headers="ms__id3078_heading_1">Weight Lifting (3.0, 6.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_36">44</th>
+            <td headers="ms__id3078_heading_1">Yard Work (4.0, 6.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_37">50</th>
+            <td headers="ms__id3078_heading_1">Boxing (6.0, 9.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_38">51</th>
+            <td headers="ms__id3078_heading_1">Frisbee (3.0, 8.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_39">52</th>
+            <td headers="ms__id3078_heading_1">Horseback Riding (4.0, 6.5)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_40">53</th>
+            <td headers="ms__id3078_heading_1">Martial Arts (4.0, 10.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_41">54</th>
+            <td headers="ms__id3078_heading_1">Wrestling (6.0, 8.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_42">55</th>
+            <td headers="ms__id3078_heading_1">Yoga (2.5, 4.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_43">56</th>
+            <td headers="ms__id3078_heading_1">Cheerleading and Gymnastics (4.0, 6.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_44">57</th>
+            <td headers="ms__id3078_heading_1">Children&#8217;s Games - Dodgeball, Kickball, etc. (5.0, 6.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_45">58</th>
+            <td headers="ms__id3078_heading_1">Rope Jumping (8.0, 10.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_46">59</th>
+            <td headers="ms__id3078_heading_1">Skateboarding (5.0, 6.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_47">60</th>
+            <td headers="ms__id3078_heading_1">Surfing (3.0, 5.0)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_48">61</th>
+            <td headers="ms__id3078_heading_1">Trampoline Jumping (3.5, 4.5)</td>
+        </tr>
+        <tr>
+            <th id="ms__id3078_heading_49">71</th>
+            <td headers="ms__id3078_heading_1">Other (4.5, 7.0)</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+      </div>
+    </div>
+  </body>
+</html>

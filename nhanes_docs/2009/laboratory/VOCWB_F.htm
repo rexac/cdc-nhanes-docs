@@ -1,0 +1,4148 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>VOCWB_F</title>
+    <meta name="title" content="NHANES 2009-2010: Volatile Organic Compounds (VOCs) - Blood Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Method_Files">Laboratory Method Files</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#WTSVOC2Y">WTSVOC2Y - VOC Subsample Weight</a>
+              </li>
+              <li>
+                <a href="#LBX2DF">LBX2DF - Blood 2,5-Dimethylfuran (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBD2DFLC">LBD2DFLC - Blood 2,5-Dimethylfuran Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBX4CE">LBX4CE - Blood 1,1,1,2-Tetrachloroethane (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBD4CELC">LBD4CELC - Blood 1,1,1,2-Tetrachloroethane Cmt Code</a>
+              </li>
+              <li>
+                <a href="#LBXV06">LBXV06 - Blood Hexane (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDV06LC">LBDV06LC - Blood Hexane Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXV1A">LBXV1A - Blood 1,1-Dichloroethane (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDV1ALC">LBDV1ALC - Blood 1,1-Dichloroethane Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXV1D">LBXV1D - Blood 1,2-Dichlorobenzene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDV1DLC">LBDV1DLC - Blood 1,2-Dichlorobenzene Comment Code </a>
+              </li>
+              <li>
+                <a href="#LBXV1E">LBXV1E - Blood 1,1-Dichloroethene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDV1ELC">LBDV1ELC - Blood 1,1-Dichloroethene Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXV2A">LBXV2A - Blood 1,2-Dichloroethane (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDV2ALC">LBDV2ALC - Blood 1,2-Dichloroethane Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXV2C">LBXV2C - Blood cis-1,2-Dichloroethene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDV2CLC">LBDV2CLC - Blood cis-1,2-Dichloroethene Comt Code</a>
+              </li>
+              <li>
+                <a href="#LBXV2E">LBXV2E - Blood 1,1,2-Trichloroethane (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDV2ELC">LBDV2ELC - Blood 1,1,2-Trichloroethane Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXV2P">LBXV2P - Blood 1,2-Dibromo-3-Chloropropane(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDV2PLC">LBDV2PLC - Blood 1,2-Dibromo-3-Chloropropane Comt</a>
+              </li>
+              <li>
+                <a href="#LBXV2T">LBXV2T - Blood trans-1,2-Dichloroethene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDV2TLC">LBDV2TLC - Blood trans-1,2-Dichloroethene Comt Code</a>
+              </li>
+              <li>
+                <a href="#LBXV3B">LBXV3B - Blood 1,3-Dichlorobenzene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDV3BLC">LBDV3BLC - Blood 1,3-Dichlorobenzene Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXV4C">LBXV4C - Blood Tetrachloroethene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDV4CLC">LBDV4CLC - Blood Tetrachloroethene Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXV4E">LBXV4E - Blood 1,1,2,2-Tetrachloroethane (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDV4ELC">LBDV4ELC - Blood 1,1,2,2-Tetrachloroethane Cmt Code</a>
+              </li>
+              <li>
+                <a href="#LBXVBZ">LBXVBZ - Blood Benzene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVBZLC">LBDVBZLC - Blood Benzene Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVCB">LBXVCB - Blood Chlorobenzene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVCBLC">LBDVCBLC - Blood Chlorobenzene Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVCT">LBXVCT - Blood Carbon Tetrachloride (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVCTLC">LBDVCTLC - Blood Carbon Tetrachloride Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVDB">LBXVDB - Blood 1,4-Dichlorobenzene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVDBLC">LBDVDBLC - Blood 1,4-Dichlorobenzene Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVDE">LBXVDE - Blood 1,2-Dibromoethane (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVDELC">LBDVDELC - Blood 1,2-Dibromoethane Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVDM">LBXVDM - Blood Dibromomethane (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVDMLC">LBDVDMLC - Blood Dibromomethane Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVDP">LBXVDP - Blood 1,2-Dichloropropane (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVDPLC">LBDVDPLC - Blood 1,2-Dichloropropane Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVDX">LBXVDX - Blood 1,4-Dioxane (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVDXLC">LBDVDXLC - Blood 1,4-Dioxane Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVEB">LBXVEB - Blood Ethylbenzene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVEBLC">LBDVEBLC - Blood Ethylbenzene Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVFN">LBXVFN - Blood Furan (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVFNLC">LBDVFNLC - Blood Furan Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVHE">LBXVHE - Blood Hexachloroethane (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVHELC">LBDVHELC - Blood Hexachloroethane Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVIPB">LBXVIPB - Blood Isopropylbenzene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVIPLC">LBDVIPLC - Blood Isopropylbenzene Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVMC">LBXVMC - Blood Methylene Chloride (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVMCLC">LBDVMCLC - Blood Methylene Chloride Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVNB">LBXVNB - Blood Nitrobenzene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVNBLC">LBDVNBLC - Blood Nitrobenzene Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVOX">LBXVOX - Blood o-Xylene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVOXLC">LBDVOXLC - Blood o-Xylene Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVST">LBXVST - Blood Styrene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVSTLC">LBDVSTLC - Blood Styrene Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVTC">LBXVTC - Blood Trichloroethene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVTCLC">LBDVTCLC - Blood Trichloroethene Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVTE">LBXVTE - Blood 1,1,1-Trichloroethane (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVTELC">LBDVTELC - Blood 1,1,1-Trichloroethane Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVTO">LBXVTO - Blood Toluene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVTOLC">LBDVTOLC - Blood Toluene Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXVTP">LBXVTP - Blood 1,2,3-Trichloropropane (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVTPLC">LBDVTPLC - Blood 1,2,3-Trichloropropane Comt Code</a>
+              </li>
+              <li>
+                <a href="#LBXVXY">LBXVXY - Blood m-/p-Xylene (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#LBDVXYLC">LBDVXYLC - Blood m-/p-Xylene Comment Code</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2009-2010 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Volatile Organic Compounds (VOCs) - Blood (VOCWB_F)</h3>
+        <h4> Data File: VOCWB_F.xpt</h4>
+        <h5 class="left">First Published: April 2017</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p><strong>Volatile Organic Compounds (Whole Blood)</strong></p>
+<p>Volatile organic compounds (VOCs) are a large group of chemicals that have been used as solvents, degreasers, and cleaning agents in industry and consumer products. Many of the VOCs were found to contaminate ground water and drinking water sources. Because of human health concerns, these VOCs have been banned or restricted from most uses.</p>
+<p>The halogenated solvents are VOCs consisting of a hydrocarbon chain or one hydrocarbon substituted with one or more chlorine or bromine atoms. Most of these chemicals are used as degreasers and solvents in various products such as paint. In the past, 1,1,1-trichloroethane was used as a dry cleaning agent, insect fumigant, and solvent in consumer products. Methylene chloride, perchloroethylene, and trichloroethene are other VOCs that were widely used in the past.<br />
+<br />
+Benzene, toluene, ethylbenzene, xylene, and styrene, collectively referred to as BTEXS, are components of tobacco smoke. Along with 2,5-dimethyl furan, these VOCs are usually detected in the blood of cigarette smokers at higher levels than in non-smokers. Chlorobenzene (monochlorobenzene) and the three dichlorobenzenes are halogenated aromatic hydrocarbons primarily used in industrial and chemical synthetic processes. Chlorobenzene has been used to produce DDT, phenol, and nitrobenzene. The dichlorobenzenes are also chemical intermediates in the synthesis of dyes, pesticides, and other industrial products. 1,4-Dichlorobenzene (para-dichlorobenzene) is used also as a moth repellent and as a deodorizer. Disinfection by-products (DBP), including bromodichloromethane, dibromochloromethane, bromoform, and chloroform are formed when chlorine interacts with natural organic materials found in water. Primary sources of DBPs are chlorinated drinking water and recreational water bodies, such as swimming pools.</p>
+<p>Inhalation is the most common VOC route of exposure in the general population, including indoor sources such as paints, adhesives, cleaning solutions, and aerosolized insecticide sprays; industries producing these solvents; and contaminated waste disposal sites. Drinking water may contribute to exposure when underground drinking water supplies are contaminated. After they are absorbed in the body, VOCs are rapidly eliminated in exhaled breath, or may be rapidly metabolized and eliminated in the urine.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Examined participants aged 12 years and older from a one-half sample were eligible.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>An automated analytical method was developed using capillary gas chromatography (GC) and mass spectrometry (MS) with selected-ion monitoring (SIM) detection and isotope-dilution. This method quantifies levels of individual VOCs in whole blood to low-parts-per-trillion range. Because non-occupationally exposed individuals have blood VOC concentrations within this range, this method is applicable for determining these quantities and investigating cases of sustained or recent low-level exposure.</p>
+<p>Refer to the Laboratory Method Files section for a detailed description of the laboratory methods used.</p>
+<p>There were no changes to the lab method, lab equipment, or lab site for this component in the NHANES 2009-2010 cycle.
+</p>
+<br /><h2 id="Laboratory_Method_Files">Laboratory Method Files</h2>
+        <p>
+          <a target="_blank" href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2009/labmethods/VOCWB_F_MET_Volatile_Organic_Compounds_(VOCs)_Blood.pd.pdf">VOCWB_F_MET_Volatile_Organic_Compounds_(VOCs)_Blood.pdf</a>
+          <span> (April 2017)</span>
+        </p>
+        <h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Whole blood samples were processed, stored, and shipped to the Division of Laboratory Sciences, National Center for Environmental Health, Centers for Disease Control and Prevention, Atlanta, GA for analysis. </p>
+<p>Detailed instructions on specimen collection and processing are discussed in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2009/manuals/lab.pdf">NHANES Laboratory Procedures Manual (LPM)</a>. Vials are stored under appropriate refrigerated (2-8&deg;C) conditions until they are shipped to the National Center for Environmental Health, for testing.</p>
+<p>The NHANES quality assurance and quality control (QA/QC) protocols meet the 1988 Clinical Laboratory Improvement Amendments mandates. Detailed QA/QC instructions are discussed in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2009/manuals/lab.pdf">NHANES LPM</a>.</p>
+<p><strong>Mobile Examination Centers (MECs)</strong><br />
+<br />
+Laboratory team performance is monitored using several techniques. NCHS and contract consultants use a structured&nbsp;competency assessment&nbsp;evaluation during&nbsp;visits to evaluate both the quality of the laboratory work and the quality-control procedures. Each laboratory staff member is observed for equipment operation, specimen collection and preparation; testing procedures and constructive feedback are given to each staff member. Formal retraining sessions are conducted annually to ensure that required skill levels were maintained.</p>
+<p><strong>Analytical Laboratories</strong></p>
+<p>NHANES uses several methods to monitor the quality of the analyses performed by the contract laboratories. In the MEC, these methods include performing blind split samples collected&nbsp;during &ldquo;dry run&rdquo; sessions. In addition, contract laboratories randomly perform repeat testing on 2% of all specimens.
+</p>
+<p>NCHS developed and distributed a quality control protocol for all CDC and&nbsp;contract laboratories, which outlined the use of Westgard rules (Westgard, et al., 1981) when running NHANES specimens. Progress reports containing any problems encountered during shipping or receipt of specimens, summary statistics for each control pool, QC graphs, instrument calibration, reagents, and any special considerations are submitted to NCHS quarterly. The reports are reviewed for trends or shifts in the data. The laboratories are required to explain any identified areas of concern.</p>
+<p>All QC procedures recommended by the manufacturers were followed. Reported results for all assays meet the CDC/NCEH Tobacco and Volatile Branch quality control and quality assurance performance criteria for accuracy and precision, similar to the Westgard rules (Caudill, et al., 2008).
+</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>The data were reviewed. Incomplete data or improbable values were sent to the performing laboratory for confirmation.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Refer to the <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overviewlab.aspx?BeginYear=2010">2009-2010 Laboratory Data Overview</a> for general information on NHANES laboratory data.</p>
+<p><strong>Volatile Toxicant Questionnaire</strong></p>
+<p>A volatile toxicant questionnaire (VTQ) was administered on the mobile examination center (MEC), by trained interviewers, using the Computer-Assisted Personal Interview (CAPI) system. The VTQ section includes data about the SP&rsquo;s home, activities, amount of time spent in various locations, and exposure to different chemicals over the past 48 hours. This questionnaire data can be used in conjunction with the VOC laboratory dataset and found in the Volatile Toxicant Data File in the <a href="https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Questionnaire&CycleBeginYear=2009">NHANES 2009-2010 Questionnaire Data</a> section.</p>
+<p><strong>Subsample Weights</strong></p>
+<p>Whole blood VOCs were measured in a one-half subsample of&nbsp;participants 12 years and older. Special sample weights are required to analyze these data properly. Specific sample weights for this subsample are included in this data file and should be used when analyzing these data.
+</p>
+<p><strong>
+</strong></p>
+<p><strong>Demographic and Other Related Variables</strong></p>
+<p>The analysis of NHANES laboratory data must be conducted using the appropriate survey design and demographic variables. The NHANES <a href="https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Demographics&amp;CycleBeginYear=2009">2009-2010 Demographics File</a> contains demographic data, health indicators, and other related information collected during household interviews as well as the sample design variables. The recommended procedure for variance estimation requires use of stratum and PSU variables (SDMVSTRA and SDMVPSU, respectively) in the demographic data file.</p>
+<p>The <a href="https://wwwn.cdc.gov/Nchs/Nhanes/Search/DataPage.aspx?Component=Laboratory&amp;CycleBeginYear=2009">Fasting Questionnaire File</a>&nbsp;includes auxiliary information such as fasting status, the length of fast, and&nbsp;the time of venipuncture.</p>
+<p>This laboratory data file can be linked to the other NHANES data files using the unique survey participant identifier (i.e., SEQN).
+</p>
+<p><strong>Detection limits</strong> </p>
+<p>The detection limits were constant for all of the analytes in the data set. Two variables are provided for each of these analytes. The variable name ending in &ldquo;LC&rdquo; (ex., LBD2DFLC) indicates whether the result was below the limit of detection: the value &ldquo;0&rdquo; means that the result was at or above the limit of detection, &ldquo;1&rdquo; indicates that the result was below the limit of detection. For analytes with analytic results below the lower limit of detection (ex., LBD2DFLC=1), an imputed fill value was placed in the analyte results field. This value is the lower limit of detection divided by square root of 2 (LLOD/sqrt [2]). The other variable prefixed LBX (ex., LBX2DF) provides the analytic result for that analyte.</p>
+<p>
+</p>
+<table bordercolor="#000000" border="1">
+    <caption valign="top">Lower Limit of Detection (LLOD, in ng/mL) for Whole Blood VOCs</caption>
+    <thead>
+        <tr>
+            <th>VARIABLE NAME</th>
+            <th>SAS LABEL</th>
+            <th>LLOD</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>LBX2DF</td>
+            <td>Blood 2,5-Dimethylfuran (ng/mL)</td>
+            <td>0.0110</td>
+        </tr>
+        <tr>
+            <td>LBX4CE</td>
+            <td>Blood 1,1,1,2-Tetrachloroethane (ng/mL)</td>
+            <td>0.0400</td>
+        </tr>
+        <tr>
+            <td>LBXV06</td>
+            <td>Blood Hexane (ng/mL)</td>
+            <td>0.1220</td>
+        </tr>
+        <tr>
+            <td>LBXV1A</td>
+            <td>Blood 1,1-Dichloroethane (ng/mL)</td>
+            <td>0.0100</td>
+        </tr>
+        <tr>
+            <td>LBXV1D</td>
+            <td>Blood 1,2-Dichlorobenzene (ng/mL)</td>
+            <td>0.0250</td>
+        </tr>
+        <tr>
+            <td>LBXV1E</td>
+            <td>Blood 1,1-Dichloroethylene (ng/mL)</td>
+            <td>0.0090</td>
+        </tr>
+        <tr>
+            <td>LBXV2A</td>
+            <td>Blood 1,2-Dichloroethane (ng/mL)</td>
+            <td>0.0100</td>
+        </tr>
+        <tr>
+            <td>LBXV2C</td>
+            <td>Blood cis-1,2-Dichloroethylene (ng/mL)</td>
+            <td>0.0100</td>
+        </tr>
+        <tr>
+            <td>LBXV2E</td>
+            <td>Blood 1,1,2-Trichloroethane (ng/mL)</td>
+            <td>0.0100</td>
+        </tr>
+        <tr>
+            <td>LBXV2P</td>
+            <td>Bld 1,2-Dibromo-3-Chloropropane (ng/mL)</td>
+            <td>0.1000</td>
+        </tr>
+        <tr>
+            <td>LBXV2T</td>
+            <td>Blood trans-1,2-Dichloroethylene (ng/mL)</td>
+            <td>0.0100</td>
+        </tr>
+        <tr>
+            <td>LBXV3B</td>
+            <td>Blood 1,3-Dichlorobenzene (ng/mL)</td>
+            <td>0.0250</td>
+        </tr>
+        <tr>
+            <td>LBXV4C</td>
+            <td>Blood Tetrachloroethene (ng/mL)</td>
+            <td>0.0480</td>
+        </tr>
+        <tr>
+            <td>LBXV4E</td>
+            <td>Blood 1,1,2,2-Tetrachloroethane (ng/mL)</td>
+            <td>0.0100</td>
+        </tr>
+        <tr>
+            <td>LBXVBZ</td>
+            <td>Blood Benzene (ng/mL)</td>
+            <td>0.0240</td>
+        </tr>
+        <tr>
+            <td>LBXVCB</td>
+            <td>Blood Chlorobenzene (ng/mL)</td>
+            <td>0.0110</td>
+        </tr>
+        <tr>
+            <td>LBXVCT</td>
+            <td>Blood Carbon Tetrachloride (ng/mL)</td>
+            <td>0.0050</td>
+        </tr>
+        <tr>
+            <td>LBXVDB</td>
+            <td>Blood 1,4-Dichlorobenzene (ng/mL)</td>
+            <td>0.0400</td>
+        </tr>
+        <tr>
+            <td>LBXVDE</td>
+            <td>Blood 1,2-Dibromoethane (ng/ml)</td>
+            <td>0.0150</td>
+        </tr>
+        <tr>
+            <td>LBXVDM</td>
+            <td>Blood Dibromomethane (ng/mL)</td>
+            <td>0.0300</td>
+        </tr>
+        <tr>
+            <td>LBXVDP</td>
+            <td>Blood 1,2-Dichloropropane (ng/mL)</td>
+            <td>0.0100</td>
+        </tr>
+        <tr>
+            <td>LBXVDX</td>
+            <td>Blood 1,4-Dioxane (ng/mL)</td>
+            <td>0.5000</td>
+        </tr>
+        <tr>
+            <td>LBXVEB</td>
+            <td>Blood Ethylbenzene (ng/mL)</td>
+            <td>0.0240</td>
+        </tr>
+        <tr>
+            <td>LBXVFN</td>
+            <td>Blood Furan (ng/ml)</td>
+            <td>0.0250</td>
+        </tr>
+        <tr>
+            <td>LBXVHE</td>
+            <td>Blood Hexachloroethane (ng/mL)</td>
+            <td>0.0110</td>
+        </tr>
+        <tr>
+            <td>LBXVIPB</td>
+            <td>Blood Isopropylbenzene (ng/ml)</td>
+            <td>0.0400</td>
+        </tr>
+        <tr>
+            <td>LBXVMC</td>
+            <td>Blood Methylene Chloride(ng/mL)</td>
+            <td>0.2500</td>
+        </tr>
+        <tr>
+            <td>LBXVNB</td>
+            <td>Blood Nitrobenzene (ng/mL)</td>
+            <td>0.3200</td>
+        </tr>
+        <tr>
+            <td>LBXVOX</td>
+            <td>Blood o-Xylene (ng/mL)</td>
+            <td>0.0240</td>
+        </tr>
+        <tr>
+            <td>LBXVST</td>
+            <td>Blood Styrene (ng/mL)</td>
+            <td>0.0300</td>
+        </tr>
+        <tr>
+            <td>LBXVTC</td>
+            <td>Blood Trichloroethene (ng/mL)</td>
+            <td>0.0120</td>
+        </tr>
+        <tr>
+            <td>LBXVTE</td>
+            <td>Blood 1,1,1-Trichloroethane (ng/mL)</td>
+            <td>0.0100</td>
+        </tr>
+        <tr>
+            <td>LBXVTO</td>
+            <td>Blood Toluene (ng/mL)</td>
+            <td>0.0250</td>
+        </tr>
+        <tr>
+            <td>LBXVTP</td>
+            <td>Blood 1,2,3-Trichloropropane (ng/ml)</td>
+            <td>0.0400</td>
+        </tr>
+        <tr>
+            <td>LBXVXY</td>
+            <td>Blood m-/p-Xylene (ng/mL)</td>
+            <td>0.0340</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Caudill, S.P., Schleicher, R.L., Pirkle, J.L. Multi-rule quality control for the age-related eye disease study. Statist. Med. (2008) 27(20):4094-40106.</li>
+          <li>Westgard J.O., Barry P.L., Hunt M.R., Groth T. A multi-rule Shewhart chart for quality control in clinical chemistry. Clin Chem (1981) 27:493-501.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTSVOC2Y">WTSVOC2Y - VOC Subsample Weight</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTSVOC2Y</dd>
+            <dt>SAS Label: </dt>
+            <dd>VOC Subsample Weight</dd>
+            <dt>English Text: </dt>
+            <dd class="info">VOC Subsample Weight</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">7930.7314837 to 335126.1522</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3736</td>
+                <td class="values" align="right">3736</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">No Lab Result</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBX2DF">LBX2DF - Blood 2,5-Dimethylfuran (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBX2DF</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 2,5-Dimethylfuran (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 2,5-Dimethylfuran (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0078 to 0.741</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3332</td>
+                <td class="values" align="right">3332</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">413</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBD2DFLC">LBD2DFLC - Blood 2,5-Dimethylfuran Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBD2DFLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 2,5-Dimethylfuran Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 2,5-Dimethylfuran Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">613</td>
+                <td class="values" align="right">613</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2719</td>
+                <td class="values" align="right">3332</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3332</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">413</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBX4CE">LBX4CE - Blood 1,1,1,2-Tetrachloroethane (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBX4CE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,1,1,2-Tetrachloroethane (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,1,1,2-Tetrachloroethane (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0283</td>
+                <td class="values">0.0283</td>
+                <td class="values" align="right">3280</td>
+                <td class="values" align="right">3280</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">465</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBD4CELC">LBD4CELC - Blood 1,1,1,2-Tetrachloroethane Cmt Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBD4CELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,1,1,2-Tetrachloroethane Cmt Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,1,1,2-Tetrachloroethane Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3280</td>
+                <td class="values" align="right">3280</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3280</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">465</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXV06">LBXV06 - Blood Hexane (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXV06</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Hexane (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Hexane (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0863 to 111</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3266</td>
+                <td class="values" align="right">3266</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">479</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDV06LC">LBDV06LC - Blood Hexane Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDV06LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Hexane Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Hexane Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">41</td>
+                <td class="values" align="right">41</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3225</td>
+                <td class="values" align="right">3266</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3266</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">479</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXV1A">LBXV1A - Blood 1,1-Dichloroethane (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXV1A</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,1-Dichloroethane (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,1-Dichloroethane (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0071 to 0.0071</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3330</td>
+                <td class="values" align="right">3330</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">415</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDV1ALC">LBDV1ALC - Blood 1,1-Dichloroethane Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDV1ALC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,1-Dichloroethane Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,1-Dichloroethane Comment Code </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3330</td>
+                <td class="values" align="right">3330</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3330</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">415</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXV1D">LBXV1D - Blood 1,2-Dichlorobenzene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXV1D</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,2-Dichlorobenzene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,2-Dichlorobenzene (ng/mL) </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0177 to 0.029</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3074</td>
+                <td class="values" align="right">3074</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">671</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDV1DLC">LBDV1DLC - Blood 1,2-Dichlorobenzene Comment Code </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDV1DLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,2-Dichlorobenzene Comment Code </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,2-Dichlorobenzene Comment Code </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3073</td>
+                <td class="values" align="right">3074</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3074</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">671</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXV1E">LBXV1E - Blood 1,1-Dichloroethene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXV1E</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,1-Dichloroethene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,1-Dichloroethene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0064 to 0.0064</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3133</td>
+                <td class="values" align="right">3133</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">612</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDV1ELC">LBDV1ELC - Blood 1,1-Dichloroethene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDV1ELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,1-Dichloroethene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,1-Dichloroethene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3133</td>
+                <td class="values" align="right">3133</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3133</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">612</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXV2A">LBXV2A - Blood 1,2-Dichloroethane (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXV2A</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,2-Dichloroethane (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,2-Dichloroethane (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0071 to 0.084</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3358</td>
+                <td class="values" align="right">3358</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">387</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDV2ALC">LBDV2ALC - Blood 1,2-Dichloroethane Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDV2ALC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,2-Dichloroethane Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,2-Dichloroethane Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">68</td>
+                <td class="values" align="right">68</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3290</td>
+                <td class="values" align="right">3358</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3358</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">387</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXV2C">LBXV2C - Blood cis-1,2-Dichloroethene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXV2C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood cis-1,2-Dichloroethene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood cis-1,2-Dichloroethene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0071 to 0.0071</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3313</td>
+                <td class="values" align="right">3313</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">432</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDV2CLC">LBDV2CLC - Blood cis-1,2-Dichloroethene Comt Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDV2CLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood cis-1,2-Dichloroethene Comt Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood cis-1,2-Dichloroethene Comment Code </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3313</td>
+                <td class="values" align="right">3313</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3313</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">432</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXV2E">LBXV2E - Blood 1,1,2-Trichloroethane (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXV2E</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,1,2-Trichloroethane (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,1,2-Trichloroethane(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0071 to 0.0071</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3240</td>
+                <td class="values" align="right">3240</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">505</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDV2ELC">LBDV2ELC - Blood 1,1,2-Trichloroethane Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDV2ELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,1,2-Trichloroethane Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,1,2-Trichloroethane Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3240</td>
+                <td class="values" align="right">3240</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3240</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">505</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXV2P">LBXV2P - Blood 1,2-Dibromo-3-Chloropropane(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXV2P</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,2-Dibromo-3-Chloropropane(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,2-Dibromo-3-Chloropropane (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0707</td>
+                <td class="values">0.0707</td>
+                <td class="values" align="right">3391</td>
+                <td class="values" align="right">3391</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">354</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDV2PLC">LBDV2PLC - Blood 1,2-Dibromo-3-Chloropropane Comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDV2PLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,2-Dibromo-3-Chloropropane Comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,2-Dibromo-3-Chloropropane Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3391</td>
+                <td class="values" align="right">3391</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3391</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">354</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXV2T">LBXV2T - Blood trans-1,2-Dichloroethene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXV2T</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood trans-1,2-Dichloroethene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood trans-1,2-Dichloroethene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0071 to 0.825</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3241</td>
+                <td class="values" align="right">3241</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">504</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDV2TLC">LBDV2TLC - Blood trans-1,2-Dichloroethene Comt Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDV2TLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood trans-1,2-Dichloroethene Comt Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood trans-1,2-Dichloroethene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">4</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3237</td>
+                <td class="values" align="right">3241</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3241</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">504</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXV3B">LBXV3B - Blood 1,3-Dichlorobenzene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXV3B</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,3-Dichlorobenzene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,3-Dichlorobenzene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0177 to 0.0177</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3294</td>
+                <td class="values" align="right">3294</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">451</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDV3BLC">LBDV3BLC - Blood 1,3-Dichlorobenzene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDV3BLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,3-Dichlorobenzene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,3-Dichlorobenzene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3294</td>
+                <td class="values" align="right">3294</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3294</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">451</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXV4C">LBXV4C - Blood Tetrachloroethene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXV4C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Tetrachloroethene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Tetrachloroethene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0339 to 6.94</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3302</td>
+                <td class="values" align="right">3302</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">443</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDV4CLC">LBDV4CLC - Blood Tetrachloroethene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDV4CLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Tetrachloroethene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Tetrachloroethene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">435</td>
+                <td class="values" align="right">435</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2867</td>
+                <td class="values" align="right">3302</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3302</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">443</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXV4E">LBXV4E - Blood 1,1,2,2-Tetrachloroethane (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXV4E</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,1,2,2-Tetrachloroethane (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,1,2,2-Tetrachloroethane (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0071 to 0.0071</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3371</td>
+                <td class="values" align="right">3371</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">374</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDV4ELC">LBDV4ELC - Blood 1,1,2,2-Tetrachloroethane Cmt Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDV4ELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,1,2,2-Tetrachloroethane Cmt Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,1,2,2-Tetrachloroethane Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3371</td>
+                <td class="values" align="right">3371</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3371</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">374</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVBZ">LBXVBZ - Blood Benzene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVBZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Benzene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Benzene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.017 to 1.43</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3236</td>
+                <td class="values" align="right">3236</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">509</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVBZLC">LBDVBZLC - Blood Benzene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVBZLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Benzene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Benzene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">900</td>
+                <td class="values" align="right">900</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2336</td>
+                <td class="values" align="right">3236</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3236</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">509</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVCB">LBXVCB - Blood Chlorobenzene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVCB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Chlorobenzene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Chlorobenzene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0078 to 0.172</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3236</td>
+                <td class="values" align="right">3236</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">509</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVCBLC">LBDVCBLC - Blood Chlorobenzene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVCBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Chlorobenzene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Chlorobenzene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">4</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3232</td>
+                <td class="values" align="right">3236</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3236</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">509</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVCT">LBXVCT - Blood Carbon Tetrachloride (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVCT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Carbon Tetrachloride (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Carbon Tetrachloride (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0035 to 0.049</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3240</td>
+                <td class="values" align="right">3240</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">505</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVCTLC">LBDVCTLC - Blood Carbon Tetrachloride Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVCTLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Carbon Tetrachloride Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Carbon Tetrachloride Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">4</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3236</td>
+                <td class="values" align="right">3240</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3240</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">505</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVDB">LBXVDB - Blood 1,4-Dichlorobenzene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVDB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,4-Dichlorobenzene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,4-Dichlorobenzene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0283 to 194</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3205</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">540</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVDBLC">LBDVDBLC - Blood 1,4-Dichlorobenzene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVDBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,4-Dichlorobenzene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,4-Dichlorobenzene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">1776</td>
+                <td class="values" align="right">1776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1429</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3205</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">540</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVDE">LBXVDE - Blood 1,2-Dibromoethane (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVDE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,2-Dibromoethane (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,2-Dibromoethane (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0106</td>
+                <td class="values">0.0106</td>
+                <td class="values" align="right">3212</td>
+                <td class="values" align="right">3212</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">533</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVDELC">LBDVDELC - Blood 1,2-Dibromoethane Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVDELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,2-Dibromoethane Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,2-Dibromoethane Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3212</td>
+                <td class="values" align="right">3212</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3212</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">533</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVDM">LBXVDM - Blood Dibromomethane (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVDM</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Dibromomethane (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Dibromomethane (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0212 to 0.288</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3243</td>
+                <td class="values" align="right">3243</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">502</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVDMLC">LBDVDMLC - Blood Dibromomethane Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVDMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Dibromomethane Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Dibromomethane Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">5</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3238</td>
+                <td class="values" align="right">3243</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3243</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">502</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVDP">LBXVDP - Blood 1,2-Dichloropropane (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVDP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,2-Dichloropropane (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,2-Dichloropropane (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0071 to 0.018</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3255</td>
+                <td class="values" align="right">3255</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">490</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVDPLC">LBDVDPLC - Blood 1,2-Dichloropropane Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVDPLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,2-Dichloropropane Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,2-Dichloropropane Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3254</td>
+                <td class="values" align="right">3255</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3255</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">490</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVDX">LBXVDX - Blood 1,4-Dioxane (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVDX</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,4-Dioxane (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,4-Dioxane (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.3536</td>
+                <td class="values">0.3536</td>
+                <td class="values" align="right">2474</td>
+                <td class="values" align="right">2474</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1271</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVDXLC">LBDVDXLC - Blood 1,4-Dioxane Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVDXLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,4-Dioxane Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,4-Dioxane Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2474</td>
+                <td class="values" align="right">2474</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2474</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1271</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVEB">LBXVEB - Blood Ethylbenzene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVEB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Ethylbenzene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Ethylbenzene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.017 to 8.49</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3209</td>
+                <td class="values" align="right">3209</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">536</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVEBLC">LBDVEBLC - Blood Ethylbenzene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVEBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Ethylbenzene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Ethylbenzene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">1392</td>
+                <td class="values" align="right">1392</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1817</td>
+                <td class="values" align="right">3209</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3209</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">536</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVFN">LBXVFN - Blood Furan (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVFN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Furan (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Furan (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0177 to 0.47</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3167</td>
+                <td class="values" align="right">3167</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">578</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVFNLC">LBDVFNLC - Blood Furan Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVFNLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Furan Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Furan Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">479</td>
+                <td class="values" align="right">479</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2688</td>
+                <td class="values" align="right">3167</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3167</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">578</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVHE">LBXVHE - Blood Hexachloroethane (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVHE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Hexachloroethane (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Hexachloroethane (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0078 to 0.025</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2652</td>
+                <td class="values" align="right">2652</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1093</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVHELC">LBDVHELC - Blood Hexachloroethane Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVHELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Hexachloroethane Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Hexachloroethane Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2651</td>
+                <td class="values" align="right">2652</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2652</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1093</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVIPB">LBXVIPB - Blood Isopropylbenzene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVIPB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Isopropylbenzene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Isopropylbenzene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0283 to 0.49</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3250</td>
+                <td class="values" align="right">3250</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">495</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVIPLC">LBDVIPLC - Blood Isopropylbenzene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVIPLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Isopropylbenzene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Isopropylbenzene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">33</td>
+                <td class="values" align="right">33</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3217</td>
+                <td class="values" align="right">3250</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3250</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">495</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVMC">LBXVMC - Blood Methylene Chloride (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVMC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Methylene Chloride (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Methylene Chloride (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.1768 to 1.79</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2878</td>
+                <td class="values" align="right">2878</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">867</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVMCLC">LBDVMCLC - Blood Methylene Chloride Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVMCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Methylene Chloride Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Methylene Chloride Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">11</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2867</td>
+                <td class="values" align="right">2878</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2878</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">867</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVNB">LBXVNB - Blood Nitrobenzene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVNB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Nitrobenzene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Nitrobenzene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.2263 to 0.2263</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3200</td>
+                <td class="values" align="right">3200</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">545</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVNBLC">LBDVNBLC - Blood Nitrobenzene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVNBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Nitrobenzene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Nitrobenzene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3200</td>
+                <td class="values" align="right">3200</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3200</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">545</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVOX">LBXVOX - Blood o-Xylene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVOX</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood o-Xylene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood o-Xylene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.017 to 7.91</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2944</td>
+                <td class="values" align="right">2944</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">801</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVOXLC">LBDVOXLC - Blood o-Xylene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVOXLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood o-Xylene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood o-Xylene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">1325</td>
+                <td class="values" align="right">1325</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1619</td>
+                <td class="values" align="right">2944</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2944</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">801</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVST">LBXVST - Blood Styrene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVST</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Styrene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Styrene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0212 to 146</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1320</td>
+                <td class="values" align="right">1320</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2425</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVSTLC">LBDVSTLC - Blood Styrene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVSTLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Styrene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Styrene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">574</td>
+                <td class="values" align="right">574</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">746</td>
+                <td class="values" align="right">1320</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1320</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2425</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVTC">LBXVTC - Blood Trichloroethene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVTC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Trichloroethene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Trichloroethene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0085 to 0.576</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3342</td>
+                <td class="values" align="right">3342</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">403</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVTCLC">LBDVTCLC - Blood Trichloroethene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVTCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Trichloroethene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Trichloroethene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">27</td>
+                <td class="values" align="right">27</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3315</td>
+                <td class="values" align="right">3342</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3342</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">403</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVTE">LBXVTE - Blood 1,1,1-Trichloroethane (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVTE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,1,1-Trichloroethane (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,1,1-Trichloroethane (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0071 to 0.197</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3333</td>
+                <td class="values" align="right">3333</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">412</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVTELC">LBDVTELC - Blood 1,1,1-Trichloroethane Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVTELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,1,1-Trichloroethane Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,1,1-Trichloroethane Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">35</td>
+                <td class="values" align="right">35</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3298</td>
+                <td class="values" align="right">3333</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3333</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">412</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVTO">LBXVTO - Blood Toluene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVTO</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Toluene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Toluene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0177 to 56.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2185</td>
+                <td class="values" align="right">2185</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1560</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVTOLC">LBDVTOLC - Blood Toluene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVTOLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood Toluene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood Toluene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">1905</td>
+                <td class="values" align="right">1905</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">280</td>
+                <td class="values" align="right">2185</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2185</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1560</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVTP">LBXVTP - Blood 1,2,3-Trichloropropane (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVTP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,2,3-Trichloropropane (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,2,3-Trichloropropane (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0283</td>
+                <td class="values">0.0283</td>
+                <td class="values" align="right">3260</td>
+                <td class="values" align="right">3260</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">485</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVTPLC">LBDVTPLC - Blood 1,2,3-Trichloropropane Comt Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVTPLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood 1,2,3-Trichloropropane Comt Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood 1,2,3-Trichloropropane Comment Code </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3260</td>
+                <td class="values" align="right">3260</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3260</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">485</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVXY">LBXVXY - Blood m-/p-Xylene (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVXY</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood m-/p-Xylene (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood m-/p-Xylene (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.024 to 21.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3138</td>
+                <td class="values" align="right">3138</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">607</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVXYLC">LBDVXYLC - Blood m-/p-Xylene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVXYLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Blood m-/p-Xylene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Blood m-/p-Xylene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2595</td>
+                <td class="values" align="right">2595</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">543</td>
+                <td class="values" align="right">3138</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Detectable result and exceeds the calibrated range of assay</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3138</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">607</td>
+                <td class="values" align="right">3745</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

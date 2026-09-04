@@ -1,0 +1,495 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>PAXRAW_C</title>
+    <meta name="title" content="NHANES 2003-2004: Physical Activity Monitor Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Protocol_and_Procedure">Protocol and Procedure</a>
+          </li>
+          <li>
+            <a href="#Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#PAXSTAT">PAXSTAT - Data Reliability Status Flag</a>
+              </li>
+              <li>
+                <a href="#PAXCAL">PAXCAL - Was the Monitor in Calibration?</a>
+              </li>
+              <li>
+                <a href="#PAXDAY">PAXDAY - Day of the Week</a>
+              </li>
+              <li>
+                <a href="#PAXN">PAXN - Sequential Observation Number</a>
+              </li>
+              <li>
+                <a href="#PAXHOUR">PAXHOUR - Hour of the Day</a>
+              </li>
+              <li>
+                <a href="#PAXMINUT">PAXMINUT - Minute of the Hour</a>
+              </li>
+              <li>
+                <a href="#PAXINTEN">PAXINTEN - Device Intensity Value</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2003-2004 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Physical Activity Monitor (PAXRAW_C)</h3>
+        <h4> Data File: PAXRAW_C.xpt</h4>
+        <h5 class="left">First Published: February 2006</h5>
+        <h5 class="right">Last Revised: December 2007</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>The physical activity monitor (PAM) component was added to NHANES in 2003. The primary objective of the component is to collect objective information on physical activity. Activity patterns are difficult to study in free-living populations. Self-reported interview data are of limited value because respondents&rsquo; perceptions of activity intensity vary and periods of physical activity are difficult for respondents to recall and quantify. NHANES interview data for children and adolescents less than 16 years of age are usually provided by a proxy respondent and may be incomplete. Children may spend large amounts of time away from home and engage in sporadic periods of activity that are difficult for a proxy respondent to recall and quantify. </p>
+<p>The physical activity monitors (PAMs) used in NHANES collected objective information on the intensity and duration of common locomotion activities such as walking and jogging. The device used in NHANES was the ActiGraph AM-7164 (formerly the CSA/MTI AM-7164), manufactured by ActiGraph of Ft. Walton Beach, FL. This device is powered by a small watch battery; a small electric signal is emitted during movement. The device is programmed to detect and record the magnitude of acceleration or &ldquo;intensity&rdquo; of movement; acceleration data are stored in memory according to a specified time interval. A one minute time interval or &ldquo;epoch&rdquo; was used in NHANES. Intensity readings were summed over each 1-minute epoch. </p>
+<p>The activity monitors were not waterproof. Therefore, activities such as swimming and water aerobics were not recorded. Additionally, the device records uniaxial movement; activity information recorded for persons who use stationary bikes, elliptical trainers, or equipment that primarily involved upper body movement, such as rowing, may not be recorded accurately. Walking and similar types of activity are thought to be the main source of physical activity for most individuals. The information about locomotor activities is believed to be more complete and objective than self-reported information. A detailed description of the monitors and studies that have used this device is posted on the ActiGraph website: <a href="http://www.theactigraph.com/studysearch2.asp">http://www.theactigraph.com/studysearch2.asp</a>.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>The NHANES examined sample 6 years of age and over received physical activity monitors to wear at home for 7 consecutive days. Subjects who used wheelchairs and subjects with other impairments that prevented them from walking or wearing the PAM device were not given a monitor.</p><h2 id="Protocol_and_Procedure">Protocol and Procedure</h2><p>Subjects were recruited for the component at the mobile examination center. A health technician or phlebotomist described the protocol to eligible subjects. The monitors were programmed to begin recording activity information for successive 1 minute intervals (epochs) beginning at 12:01 a.m. the day after the health examination. The device was placed on an elasticized fabric belt, custom-fitted for each subject, and worn on the right hip. Subjects were told to keep the device dry (i.e. remove before swimming or bathing) and to remove the device at bedtime. </p>
+<p>A toll-free telephone number and information materials describing the monitor were given to the subjects. Subjects were not asked to maintain activity logs, diaries, or records of their monitor wear. The activity monitors were returned by mail in postage-paid padded envelopes that were provided. Subjects received $40 remuneration after their monitors were returned. </p>
+<p>The PAXRAW file is a very large data file (&gt; 2 GB) and contains multiple records per subject. The intensity file records consist of sequential minute by minute records of activity intensity beginning from the time the device was initialized. Subjects have up to 10,080 intensity count records. The intensity data were released in are available in 2 formats: a DVD format (2 GB) and an online zipped file format. </p>
+<p>The PAM procedures manual is included on the NHANES 2003-2004 website with the NHANES 2003-2004 examination component manuals.</p><h2 id="Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</h2><p>Survey staff completed an examiner training program that covered the basic operating features of the PAM device, equipment operation, subject recruitment strategies, PAM device initialization, and troubleshooting. Field performance and response rates were monitored by NCHS and contractor staff.</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>Initial data reviews were performed by NCHS and survey collaborators from the National Cancer Institute (NCI), the agency that funded the PAM component. The intensity files were reviewed for outliers and unreasonable values. The criteria used for reasonable ranges of activity count data were based on published literature and expert judgment. Notes pertaining to the variables in this file are provided in the codebook file. Intensity data for 9 subjects were deleted because the data values were deemed to be unrealistic. No other intensity data values were changed. </p>
+<p>PAXSTAT: Component status code with PAXSTAT=1 for records with data that are deemed reliable. A PAXSTAT=2 was used to code records that had some questionable data; analysts may wish to examine these records more closely. </p>
+<p>PAXDAY: Day of the week; PAXDAY=1 for Sunday, 2 for Monday and so forth. </p>
+<p>PAXN: Sequential observation number in minutes as recorded by the monitor device. The range begins with minute 1 on Day 1 (PAXN=1) and ends with the last minute of day 7 of monitor wear (PAXN=10080). Each day of wear produces 1440 individual minute records. The PAXN values for Day 1 range from 1 to 1440; Day 2 PAXN range from 1441-2880, and so forth. </p>
+<p>PAXHOUR-hour of day the intensity data were recorded in military time or 24 hour clock. </p>
+<p>PAXMINUT- minute value associated with a particular hour (PAXHOUR). The minute value shown is the start of the minute. For example, for the time 1201 hours, the start of the minute occurs at 1200 hours and PAXMINUT would be 00. </p>
+<p>PAXINTEN is the intensity value recorded by the device. Each minute has an intensity value. </p>
+<p>PAXCAL- Denotes whether the monitor was in calibration when it was returned by the subject. The data for monitors that were out of calibration (PMACAL=2) may be less reliable.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>The NHANES examined sample weights should always be used for analyses with PAM data. Please refer to the NHANES Analytic Guidelines for further details on the use of the NHANES sample weights and other analytic issues. </p>
+<p>The National Cancer Institute developed SAS programs for analyzing the NHANES accelerometer data. A link to the NCI website is included on the NHANES 2003-2004 home page.</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Janz, KF (1994). Validation of the CSA Accelerometer for Assessing Children&rsquo;s Physical Activity. Medicine and Science in Sports and Exercise, 26, 369-75.</li>
+          <li>Trost SG, Ward DS, Moorehead SM, Watson PD, Riner W, Burke J (1998). Validity of the Computer Science and Application (CSA). Medicine and Science in Sports and Exercise, 30, 629-33.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PAXSTAT">PAXSTAT - Data Reliability Status Flag</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PAXSTAT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Data Reliability Status Flag</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Flag indicating whether or not the data is reliable.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Data is deemed reliable</td>
+                <td class="values" align="right">71836747</td>
+                <td class="values" align="right">71836747</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Data reliability is questionable</td>
+                <td class="values" align="right">413280</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PAXCAL">PAXCAL - Was the Monitor in Calibration?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PAXCAL</dd>
+            <dt>SAS Label: </dt>
+            <dd>Was the Monitor in Calibration?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Was the monitor in calibration?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">68779007</td>
+                <td class="values" align="right">68779007</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">3451379</td>
+                <td class="values" align="right">72230386</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">19641</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PAXDAY">PAXDAY - Day of the Week</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PAXDAY</dd>
+            <dt>SAS Label: </dt>
+            <dd>Day of the Week</dd>
+            <dt>English Text: </dt>
+            <dd class="info">The day of the week.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sunday</td>
+                <td class="values" align="right">10325817</td>
+                <td class="values" align="right">10325817</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Monday</td>
+                <td class="values" align="right">10323706</td>
+                <td class="values" align="right">20649523</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Tuesday</td>
+                <td class="values" align="right">10322803</td>
+                <td class="values" align="right">30972326</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Wednesday</td>
+                <td class="values" align="right">10323718</td>
+                <td class="values" align="right">41296044</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Thursday</td>
+                <td class="values" align="right">10319417</td>
+                <td class="values" align="right">51615461</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Friday</td>
+                <td class="values" align="right">10315526</td>
+                <td class="values" align="right">61930987</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Saturday</td>
+                <td class="values" align="right">10319040</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PAXN">PAXN - Sequential Observation Number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PAXN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Sequential Observation Number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">The person-level sequential observation number recorded in the device.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 10080</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PAXHOUR">PAXHOUR - Hour of the Day</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PAXHOUR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Hour of the Day</dd>
+            <dt>English Text: </dt>
+            <dd class="info">The hour of the day for which the intensity value was recorded.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+            <dt>Hard Edits: </dt>
+            <dd class="info">0 to 23</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 23</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PAXMINUT">PAXMINUT - Minute of the Hour</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PAXMINUT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Minute of the Hour</dd>
+            <dt>English Text: </dt>
+            <dd class="info">The minute of the hour for which the intensity value was recorded.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+            <dt>Hard Edits: </dt>
+            <dd class="info">0 to 59</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 59</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PAXINTEN">PAXINTEN - Device Intensity Value</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PAXINTEN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Device Intensity Value</dd>
+            <dt>English Text: </dt>
+            <dd class="info">The intensity value recorded by the physical activity monitor.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+            <dt>Hard Edits: </dt>
+            <dd class="info">0 to 32767</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 32767</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">72250027</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

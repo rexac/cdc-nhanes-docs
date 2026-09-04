@@ -1,0 +1,3117 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>SPX_E</title>
+    <meta name="title" content="NHANES 2007-2008: Spirometry - Pre and Post-Bronchodilator Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Protocol_and_Procedure">Protocol and Procedure</a>
+          </li>
+          <li>
+            <a href="#Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#ENQ010">ENQ010 - Breathing problem require oxygen?</a>
+              </li>
+              <li>
+                <a href="#ENQ020">ENQ020 - Problem taking deep breath?</a>
+              </li>
+              <li>
+                <a href="#SPQ010">SPQ010 - Have a current painful ear infection?</a>
+              </li>
+              <li>
+                <a href="#SPQ020">SPQ020 - Have you/Has SP ever had eye surgery?</a>
+              </li>
+              <li>
+                <a href="#SPQ030">SPQ030 - Eye surgery in the last 3 months?</a>
+              </li>
+              <li>
+                <a href="#SPQ040">SPQ040 - Ever had open chest/abdominal surgery?</a>
+              </li>
+              <li>
+                <a href="#SPQ050">SPQ050 - Chest/abdominal surgery last 3 months?</a>
+              </li>
+              <li>
+                <a href="#SPQ060">SPQ060 - Tuberculosis in last year?</a>
+              </li>
+              <li>
+                <a href="#SPQ070a">SPQ070a - Ever told had an aneurysm?</a>
+              </li>
+              <li>
+                <a href="#SPQ070b">SPQ070b - Ever told had a collapsed lung?</a>
+              </li>
+              <li>
+                <a href="#SPQ070c">SPQ070c - Ever told had a detached retina?</a>
+              </li>
+              <li>
+                <a href="#SPQ070d">SPQ070d - Ever told had a stroke?</a>
+              </li>
+              <li>
+                <a href="#SPQ070e">SPQ070e - Ever told had a heart attack?</a>
+              </li>
+              <li>
+                <a href="#SPQ080">SPQ080 - Stroke in the last 3 months?</a>
+              </li>
+              <li>
+                <a href="#SPQ090">SPQ090 - Heart attack in last 3 months?</a>
+              </li>
+              <li>
+                <a href="#SPQ100">SPQ100 - Coughed up blood past month?</a>
+              </li>
+              <li>
+                <a href="#SPAENA">SPAENA - Check item</a>
+              </li>
+              <li>
+                <a href="#ENQ100">ENQ100 - Had respiratory illness?</a>
+              </li>
+              <li>
+                <a href="#SPXNSTAT">SPXNSTAT - Spirometry First Test Status</a>
+              </li>
+              <li>
+                <a href="#SPXNCMT">SPXNCMT - Spirometry First Test Comment</a>
+              </li>
+              <li>
+                <a href="#SPXNFVC">SPXNFVC - Baseline FVC (mL)</a>
+              </li>
+              <li>
+                <a href="#SPXNEV">SPXNEV - Baseline Extrapolated Volume (mL)</a>
+              </li>
+              <li>
+                <a href="#SPXNFEV5">SPXNFEV5 - Baseline FEV 0.5 (mL)</a>
+              </li>
+              <li>
+                <a href="#SPXNFEV7">SPXNFEV7 - Baseline FEV 0.75 (mL)</a>
+              </li>
+              <li>
+                <a href="#SPXNFEV1">SPXNFEV1 - Baseline FEV 1 (mL)</a>
+              </li>
+              <li>
+                <a href="#SPXNFEV3">SPXNFEV3 - Baseline FEV 3 (mL)</a>
+              </li>
+              <li>
+                <a href="#SPXNFEV6">SPXNFEV6 - Baseline FEV 6 (mL)</a>
+              </li>
+              <li>
+                <a href="#SPXNPEF">SPXNPEF - Baseline PEF (mL/s)</a>
+              </li>
+              <li>
+                <a href="#SPXNF257">SPXNF257 - Baseline FEF 25-75% (mL/s)</a>
+              </li>
+              <li>
+                <a href="#SPXNFET">SPXNFET - Baseline Forced Expiratory Time (s)</a>
+              </li>
+              <li>
+                <a href="#SPXNQFVC">SPXNQFVC - Baseline FVC Quality Attribute</a>
+              </li>
+              <li>
+                <a href="#SPXNQFV1">SPXNQFV1 - Baseline FEV1 Quality Attribute</a>
+              </li>
+              <li>
+                <a href="#SPDNACC">SPDNACC - Baseline Number of Acceptable Curves</a>
+              </li>
+              <li>
+                <a href="#SPXNQEFF">SPXNQEFF - Baseline Effort Quality Attribute</a>
+              </li>
+              <li>
+                <a href="#SPDBRONC">SPDBRONC - Selected for Bronchodilator</a>
+              </li>
+              <li>
+                <a href="#SPXBSTAT">SPXBSTAT - Spirometry Second Test Status</a>
+              </li>
+              <li>
+                <a href="#SPXBCMT">SPXBCMT - Spirometry Second Test Comment</a>
+              </li>
+              <li>
+                <a href="#SPXBFVC">SPXBFVC - 2nd Test FVC (mL)</a>
+              </li>
+              <li>
+                <a href="#SPXBEV">SPXBEV - 2nd Test Extrapolated Volume (mL)</a>
+              </li>
+              <li>
+                <a href="#SPXBFEV5">SPXBFEV5 - 2nd Test FEV 0.5 (mL)</a>
+              </li>
+              <li>
+                <a href="#SPXBFEV7">SPXBFEV7 - 2nd Test FEV 0.75 (mL)</a>
+              </li>
+              <li>
+                <a href="#SPXBFEV1">SPXBFEV1 - 2nd Test FEV 1 (mL)</a>
+              </li>
+              <li>
+                <a href="#SPXBFEV3">SPXBFEV3 - 2nd Test FEV 3 (mL)</a>
+              </li>
+              <li>
+                <a href="#SPXBFEV6">SPXBFEV6 - 2nd Test FEV 6 (mL)</a>
+              </li>
+              <li>
+                <a href="#SPXBPEF">SPXBPEF - 2nd Test PEF (mL/s)</a>
+              </li>
+              <li>
+                <a href="#SPXBF257">SPXBF257 - 2nd Test FEF 25-75% (mL/s)</a>
+              </li>
+              <li>
+                <a href="#SPXBFET">SPXBFET - 2nd Test Forced Expiratory Time (s)</a>
+              </li>
+              <li>
+                <a href="#SPXBQFVC">SPXBQFVC - 2nd Test FVC Quality Attribute</a>
+              </li>
+              <li>
+                <a href="#SPXBQFV1">SPXBQFV1 - 2nd Test FEV1 Quality Attribute</a>
+              </li>
+              <li>
+                <a href="#SPDBACC">SPDBACC - 2nd Test Number of Acceptable Curves</a>
+              </li>
+              <li>
+                <a href="#SPXBQEFF">SPXBQEFF - 2nd Test Effort Quality Attribute</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2007-2008 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Spirometry - Pre and Post-Bronchodilator (SPX_E)</h3>
+        <h4> Data File: SPX_E.xpt</h4>
+        <h5 class="left">First Published: December 2011</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Spirometry, which means &ldquo;the measuring of breath,&rdquo; is a routinely used clinical pulmonary function test. It measures the amount and speed of air that a person can exhale after taking in the deepest possible breath. This allows estimates for lung volume and air flow rates to be made. Results from Spirometry testing are one key element (among others) needed to diagnose respiratory disorders such as asthma and chronic obstructive pulmonary disease (COPD). These diseases are typically characterized by a reduction in expiratory air flow rates. This is defined in spirometry as a reduction in the ratio of the expiratory volume measured in the 1st second of a forceful exhalation (FEV1) to the total volume of air exhaled in the forced expiration (FVC), the FVC being an estimate of the individual's effective lung volume. The "Spirometric Measurements Section" of the NHANES 2007-8 Respiratory Health Spirometry Procedures Manual contains a basic explanation of interpreting spirometry data. The manual is available at <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2007/manuals/spirometry.pdf">https://wwwn.cdc.gov/nchs/data/nhanes/public/2007/manuals/spirometry.pdf</a></p>
+<p>Spirometry is one of two NHANES 2007-8 components on respiratory health sponsored by the National Heart, Lung, and Blood Institute of the National Institute of Health, the Centers for Disease Control and Prevention, National Institute for Health Statistics and the National Institute for Occupational Safety and Health (NIOSH). Individual Exhaled Nitrous Oxide (ENO), a marker of airways inflammation, is also measured. The objective of the Spirometry data collection is to provide health examination data to estimate the current prevalence of asthma and COPD in the U.S. population. The data is also intended to help produce updated spirometric reference data for the U.S. National-level Spirometry data was collected in NHANES I (1971-1975), NHANES II (1976-1980) and most recently in NHANES III (1988-1994). Comparisons of the current data with that from previous studies will help to identify trends in respiratory conditions over time. </p>
+<p>Eligible participants performed an initial or "baseline" 1st test spirometry examination. Then a selected subsample of participants whose Baseline 1st Test Spirometry results showed a FEV1/FVC ratio below the lower limit of normal and/or below 70% were asked to repeat spirometry after inhaling a &beta;2-adrenergic bronchodilator medication to open up their airways. This helps differentiate asthma from COPD (Pellegrino, Viegi, Brusasco, et al. 2005). Asthma patients usually show improvements in post-bronchodilator spirometry testing, while patients with COPD exhibit little, if any, response to the medication. Spirometric testing using &beta;2-adrenergic bronchodilator is routinely employed by clinicians to diagnose asthma in both children and adults, and current clinical practice guidelines (NHLBI Expert Panel Report, 2007) consider post-bronchodilator spirometry testing&nbsp;essential for the initial diagnosis of asthma. Second test post bronchodilator spirometry studies had not been performed in previous NHANES surveys.</p>
+<p>&nbsp;</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Survey participants, ages 6 to 79 years of age, were eligible for the Spirometry Component. Specific exclusion criteria that were employed for Baseline Spirometry included criteria employed in earlier NHANES Spirometry surveys. Excluded from testing were examinees that had current chest pain or a physical problem with forceful expiration, were taking supplemental oxygen, had recent surgery of the eye, chest or the abdomen; had a recent heart attack, stroke, tuberculosis exposure or had recently coughed up blood. Adults with a personal history of detached retina or a collapsed lung and children with painful ear infections were also excluded. In the NHANES 2007-8, Baseline (1st test) Spirometry data was collected for 6,444 sample persons. </p>
+<p>Participants completing Baseline 1st test Spirometry were selected for follow-up Bronchodilator 2nd Test Spirometry only if their baseline spirometry values indicated possible airflow obstruction that might indicate the presence of asthma or COPD. The participant's baseline spirometry results were evaluated by a computerized algorithm and examinees with an FEV1/FVC% less than the Lower Limit of Normal (LLN) determined for his or her age, sex, weight, height, and race/ethnicity, or those who had a FEV1/FVC% less than 70% were considered eligible for bronchodilator testing. These two criteria were used so that NHANES data could be compared with previous epidemiology studies that used these two different criteria. For the first criterion the LLN for the FEV1/FEC was calculated based on the sample person's age, gender, height and race/ethnicity in three major groups (non-Hispanic white, non-Hispanic black, Mexican-American). For ages 8-79 the FEV1/FVC% LLN was as defined by NHANES III data (Hankinson, Odencrantz, Fedan, 1999) and for children ages 6-7 years it was as defined by Wang et al. (1993). The administrative variable SPDBRONC indicates whether the participant was considered eligible for Bronchodilator 2nd Test Spirometry. The variable SPXBSTAT provides the bronchodilator study exam status. </p>
+<p>Participants eligible for Bronchodilator 2nd Test Spirometry were referred to the Mobile Examination Center (MEC) Physician for further evaluation as documented in the Respiratory Health Bronchodilator Procedures Manual. The Bronchodilator testing protocol was explained and the participant was further screened for the presence of any exclusion criteria for bronchodilator administration. These included certain cardiovascular conditions (uncontrolled blood pressure, irregular pulse on examination, taking medication for major arrhythmia, having an implanted defibrillator, or history of congenital heart disease) or taking certain prescription medications (a monamine oxidase inhibitor, an anticonvulsant, a tricyclic antidepressant plus current treatment for cardiac disease, potassium lowering drugs). Examinees were also excluded from bronchodilator administration if they had already recently taken a &beta;2-adrenergic bronchodilator, or had a previous adverse reaction to albuterol. Women who were currently pregnant or breastfeeding were also excluded. </p>
+<p>Following eligibility screening, the MEC physician obtained written informed consent and administered two puffs of the &beta;2-adrenergic bronchodilator albuterol. The examinee was then required to wait a minimum of ten minutes before proceeding to the Spirometry exam room to obtain a repeat 2nd Test Bronchodilator spirometry study. A total of 611 sample persons performed Bronchodilator (2nd Test) Spirometry.</p>
+<p>&nbsp;</p><h2 id="Protocol_and_Procedure">Protocol and Procedure</h2><p>Testing procedures met the recommendations of the American Thoracic Society (ATS) (Miller, Hankinson, Brusasco el al. 2005). The protocol was similar to that used in NHANES III (1998-1994), with the minor change in the goal for the number of acceptable quality spirometry maneuvers, from five in NHANES III, to three in NHANES 2007-8. Also, to ensure data comparability between NHANES survey cycles, the same spirometers that were employed for the NHANES III spirometry examination (1988-1994) were used for NHANES 2007-8 data collection. These were Ohio 822/827 dry-rolling seal volume spirometers. The devices were reconditioned for use in the current survey and were maintained by the NIOSH laboratories. In NHANES 2007-8, unlike NHANES III, a new in-line biological filter (A-M Systems PFT Filter Kit B) was fitted to each spirometry hose to minimize infection risks to the participant. </p>
+<p>Spirometry was performed in the standing position unless the participant was physically impaired. The participant was asked to elevate the chin and extend the neck slightly and place a nose clip on his or her nose during testing, the latter to prevent air leaks. He/she was then instructed to perform a series of maximal forced expiratory maneuvers. In each maneuver, the participant took the deepest breath possible to fill the lungs with air, then put the mouthpiece into his/her mouth making a tight seal and then blew the air out as hard and fast as possible. Participants ages 6-10 years were asked to blow out the air for a minimum of 3 seconds of exhalation, whereas those ages 11-79 years were asked to blow out the air for a minimum of 6 seconds of exhalation. </p>
+<p>Spirometry testing for an individual continued until he/she was able to achieve a reproducible spirogram, or until a maximum of eight spirometry curves had been obtained, or until the participant could not continue. The overall goal was for the participant to achieve three acceptable exhalation maneuvers by ATS criteria in which the two highest values for the FVC and the FEV1 (each taken from an acceptable forced expiratory maneuver) showed minimal variability: i.e. the two largest FVC values taken from 2 acceptable curves should agree within 150 ml, and similarly for the two largest values for the FEV1. The procedure for the Bronchodilator (2nd Test) Spirometry, performed after the participant had taken the &beta;2-adrenergic bronchodilator albuterol, was identical to the procedure for the Baseline 1st test. Please refer to the NHANES 2007-8 Repiratory Health Spirometry Procedure manual for full details on the testing protocol, and for detailed criteria for a reproducible spirogram.</p>
+<p>&nbsp;</p><h2 id="Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</h2><p>The NIOSH Division of Respiratory Disease Studies served as the NHANES Spirometry training and quality control consultant. Each MEC Health Technician received formal training and satisfactorily completed the NIOSH-approved spirometry course. Additionally, all NHANES spirometry data were reviewed by expert reviewers at the NIOSH quality control center on an ongoing basis. MEC Technicians received continuous feedback on their performance throughout the survey.</p>
+<p>The Respiratory Health Spirometry Procedures Manual provides detailed descriptions of the quality assurance and quality control measures that were used for the NHANES 2007-8 Spirometry examination. The Chief Health Technician at each MEC monitored ongoing staff performance in the field. Health technician performance was also monitored using direct observation at periodic site visits by NIOSH consultants and project officers from Westat (the data collection contractor) and NHANES. Spirometry equipment was kept in calibration via regularly scheduled quality control checks by the Health Technicians and these were verified by supervisory staff.</p>
+<p>&nbsp;</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>All spirometry data collected were reviewed by expert consultants at the NIOSH quality control center where data processing and editing were performed to ensure internal data consistency.</p>
+<p>&nbsp;</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Summary results datasets are provided for both 1st and 2nd test Spirometry. These give the single best (highest) overall value for the following parameters taken from reproducible curves. Note that in this dataset, an individual best value for a specific variable could be taken from any of the individual acceptable curves that the participant performed. The summary data set format is similar to that previously released for the NHANES III data. The spirometry summary data release variables are:&nbsp;</p>
+<p>
+<table>
+    <tbody>
+        <tr>
+            <td>SPXNFVC&nbsp;</td>
+            <td>&nbsp;FVC: Forced Vital Capacity, ml (estimated lung volume)</td>
+        </tr>
+        <tr>
+            <td>SPXNEV</td>
+            <td>&nbsp;EV (ml): Extrapolated Volume, ml</td>
+        </tr>
+        <tr>
+            <td>SPXNFEV5</td>
+            <td>&nbsp;FEV0.5: Forced Expiratory Volume 1st 1/2 Second </td>
+        </tr>
+        <tr>
+            <td>SPXNFEV7</td>
+            <td>&nbsp;FEV0.75: Forced Expiratory Volume 1st 3/4 Second</td>
+        </tr>
+        <tr>
+            <td>SPXNFEV1</td>
+            <td>&nbsp;FEV1: Forced Expiratory Volume 1st Second</td>
+        </tr>
+        <tr>
+            <td>SPXNFEV3</td>
+            <td>&nbsp;FEV3: Forced Expiratory Volume 1st 3 Seconds</td>
+        </tr>
+        <tr>
+            <td>SPXNFEV6</td>
+            <td>&nbsp;FEV6 (ml): Forced Expiratory Volume 1st 6 Seconds</td>
+        </tr>
+        <tr>
+            <td>SPXNPEF</td>
+            <td>&nbsp;PEF: Peak Expiratory Flow Rate, ml/sec</td>
+        </tr>
+        <tr>
+            <td>SPXNF257</td>
+            <td>&nbsp;FEF25-75%: Forced Expiratory Flow Rate, Mid Exhalation, ml/sec</td>
+        </tr>
+        <tr>
+            <td>SPXNFET</td>
+            <td>&nbsp;FET: Forced Expiratory Time, sec</td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<p>In addition, each summary dataset contains the following administrative variables: </p>
+<p>The Number of Acceptable Curves <br />
+FVC Quality Rating <br />
+FEV1 Quality Rating <br />
+Examinee Effort Quality Rating </p>
+<p>The following administrative variables are provided to support analysis of the summary best-test spirometry datasets. </p>
+<p><span style="text-decoration: underline;">FEV1 and FVC Quality Codes:</span> These variables rate the quality of the summary best-test FEV1 and FVC values. The variables are SPXNQFVC and SPXNQFV1 for 1st Test Spirometry and SPXBQFVC and SPXBQFV1 for 2nd Test Spirometry. Quality of the FEV1 and FVC estimates was rated on a scale from A-F defined as follows: </p>
+<p>A= Exceeds ATS data collection standards: 3 acceptable curves present and 2 reproducible curves; 2 observed values within 100 ml. <br />
+B= Meets ATS data collection standards: 3 acceptable curves present and 2 reproducible curves; 2 observed values within 150 ml. <br />
+C= Potentially usable value, but does not meet all ATS standards. Estimates usually based on 2 curve results with values within 200 ml. of each other. <br />
+D= Questionable result, use with caution <br />
+F= Results not valid </p>
+<p>For those who want to perform analytic studies using data that excludes subjects that may not have perfect data, they should simply use data only with FEV1 and FVC quality grades A and B. Grade C indicates less than a perfect test, for example instances where there are only 2 acceptable curves achieved but where the data most likely represents a value where the subject made a maximal effort. Generally data with quality grades D and F are not used for data analysis. In the NHANES 2007-8 data collection 87% of summary best-test FVC estimates were of quality A or B, and 94% were of quality A, B, or C. For FEV1, 91% of summary best-test FVC estimates were of quality A or B, and 96% were of quality A, B, or C. When assessing data results, analysts may also want to take into consideration whether an examinee had a history of a recent respiratory illness such as a cold, which could potentially cause transient changes in spirometric values. The questionnaire variable ENQ100 captures a participant&rsquo;s history of a recent respiratory illness.</p>
+<p><span style="text-decoration: underline;">Additional Variables Relating to Data Quality: <br />
+</span>The summary spirometry datasets also provide a variable for the number of acceptable spirometry curves achieved by the participant judged by ATS criteria. These are the variables SPDNACC for Baseline 1st Test Spirometry and SPDBACC for Bronchodilator 2nd Test Spirometry. Also, data providing a summary rating of the overall spirometry curve quality for the participant are provided by the variables SPXNQEFF and SPXBQEFF. </p>
+<p><span style="text-decoration: underline;">Spirometry Exam Status Codes:</span> Baseline 1st Test Spirometry has an overall exam status code (SPXNSTAT) which provides analysts with a single variable to identify those survey participants with complete or partial spirometry exams, those who were excluded from spirometry, or those who were eligible for spirometry but for whom the exam was not done. A similar variable (SPXBSTAT) is provided for the subset of participants who were selected for Bronchodilator 2nd Test Spirometry. For these variables a complete exam was defined as one in which both the best-test FEV1 and FVC estimates had quality ratings of A, B, or C. Partial exams were exams with any other spirometry data collected that was of lesser quality. </p>
+<p><span style="text-decoration: underline;">Spirometry Exam Comment Codes:</span> Comment codes were added by the MEC Health Technicians, during data collection, to document the reasons why it was only possible to collect partial exam data for participants, and to document the reasons why Spirometry exams were not done if a participant was otherwise eligible. The comment code variable for Baseline 1st Test Spirometry is SPXNCMT, and for Bronchodilator 2nd test Spirometry it is SPXBCMT. Analysts may wish to review the comment code information for the Spirometry data prior to specific types of data analysis. </p>
+<p><span style="text-decoration: underline;">Sample Weights:</span> The NHANES examination sample weights, i.e. the full sample 2-Year MEC Exam Weight (WTMEC2YR) should be used to analyze the 2007-8 spirometry data. Please refer to the NHANES Analytic Guidelines (<a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx">https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx</a>) and the on-line NHANES Tutorial (<a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/">https://wwwn.cdc.gov/nchs/nhanes/tutorials/</a>) for further details on the use of sample weights and other analytic issues.</p>
+<p><span style="text-decoration: underline;">Additional 2007-8 NHANES Data on Respiratory Health:</span> <br />
+The raw data for the spirometry curves attempted by each participant in the NHANES 2007-8 Spirometry Component is released in a separate dataset (SPXRAW_E). The raw data permits users to graph a participant's spirometry test curves. It is also intended for the use of data analysts who may want to perform more advanced modeling studies with the raw data. The NHANES 2007-8 Respiratory Health Component also included testing for Exhaled Nitric Oxide (ENX_E), and Household Inteview Questionaire data on a prior diagnosis of asthma and COPD (MCQ_E), recent respiratory symptoms such as cough and wheezing (RDQ_E), data for the participant's current prescription medications (RXQ_RX_E; RXQ_DRUG), and data for occupational risk factors for COPD (OCQ_E).</p>
+<p>&nbsp;</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Hankinson JL, Odencrantz JR, Fedan KB. Spirometric reference values from a sample of the general US population. Am J Respir Crit Care Med. 1999; 159:179-187.</li>
+          <li>M.R. Miller, J. Hankinson, V. Brusasco, F. el al. Standardization of Spirometry. Eur Respir J. 2005; 26: 319&ndash;338.</li>
+          <li>NHLBI Expert Panel Report #3: Guidelines for the Diagnosis and Management of Asthma. "Measures of Assessment and Monitoring," p.40, 2007. <a href="http://www.nhlbi.nih.gov/guidelines/asthma/asthgdln.htm">http://www.nhlbi.nih.gov/guidelines/asthma/asthgdln.htm</a>
+          </li>
+          <li>Pellegrino R, Viegi G, Brusasco V, et al. Interpretative strategies for lung function tests. Eur Respir J Eur Respir J. 2005; 26 (5): 948&ndash;968.</li>
+          <li>Wang X, et al. Pulmonary function between 6 and 18 years of age. Pediatr Pulmonol. 1993; 15(2):75-88.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="ENQ010">ENQ010 - Breathing problem require oxygen?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">ENQ010</dd>
+            <dt>SAS Label: </dt>
+            <dd>Breathing problem require oxygen?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">{Do you/Does SP} currently have a breathing problem that requires {you/him/her} to use supplemental oxygen during the day? [This is air stored in a tank that you use to help you breathe. Do not include night treatments for sleep apnea.]</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">67</td>
+                <td class="values" align="right">67</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">7090</td>
+                <td class="values" align="right">7157</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">7157</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">7160</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">583</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="ENQ020">ENQ020 - Problem taking deep breath?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">ENQ020</dd>
+            <dt>SAS Label: </dt>
+            <dd>Problem taking deep breath?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">{Do you/Does SP} now have any pain or physical problem that may prevent {you/him/her} from taking a deep breath and exhaling forcefully?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">121</td>
+                <td class="values" align="right">121</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">6967</td>
+                <td class="values" align="right">7088</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">7088</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">7096</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">647</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPQ010">SPQ010 - Have a current painful ear infection?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPQ010</dd>
+            <dt>SAS Label: </dt>
+            <dd>Have a current painful ear infection?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">{Do you/Does SP} now have a painful ear infection?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			15 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">12</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">1790</td>
+                <td class="values" align="right">1802</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1802</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">1807</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5936</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPQ020">SPQ020 - Have you/Has SP ever had eye surgery?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPQ020</dd>
+            <dt>SAS Label: </dt>
+            <dd>Have you/Has SP ever had eye surgery?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">{Have you/Has SURVEY PARTICIPANT} ever had eye surgery? [Do not include cosmetic surgery on the eyelid or skin around the eye]</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">587</td>
+                <td class="values" align="right">587</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">6361</td>
+                <td class="values" align="right">6948</td>
+                <td class="values">SPQ040</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6948</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">6950</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">793</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPQ030">SPQ030 - Eye surgery in the last 3 months?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPQ030</dd>
+            <dt>SAS Label: </dt>
+            <dd>Eye surgery in the last 3 months?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Was the eye surgery in the last three months?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">36</td>
+                <td class="values" align="right">36</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">552</td>
+                <td class="values" align="right">588</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">588</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">589</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7154</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPQ040">SPQ040 - Ever had open chest/abdominal surgery?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPQ040</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ever had open chest/abdominal surgery?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">{Have you/Has SP} ever had open chest or abdominal surgery?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">1111</td>
+                <td class="values" align="right">1111</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">5802</td>
+                <td class="values" align="right">6913</td>
+                <td class="values">SPQ060</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6913</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">6914</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">829</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPQ050">SPQ050 - Chest/abdominal surgery last 3 months?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPQ050</dd>
+            <dt>SAS Label: </dt>
+            <dd>Chest/abdominal surgery last 3 months?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Was the open chest or abdominal surgery in the last three months?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">41</td>
+                <td class="values" align="right">41</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">1070</td>
+                <td class="values" align="right">1111</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1111</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1112</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6631</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPQ060">SPQ060 - Tuberculosis in last year?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPQ060</dd>
+            <dt>SAS Label: </dt>
+            <dd>Tuberculosis in last year?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Did {you/SP} or anyone in {your/his/her} household have tuberculosis in the past year?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">23</td>
+                <td class="values" align="right">23</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">6848</td>
+                <td class="values" align="right">6871</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6871</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">6876</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">867</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPQ070a">SPQ070a - Ever told had an aneurysm?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPQ070a</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ever told had an aneurysm?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Has a doctor or other health professional ever told {you/SP}that {you/he/she} had . . .</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">MARK ALL THAT APPLY</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">An aneurysm?</td>
+                <td class="values" align="right">33</td>
+                <td class="values" align="right">33</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">77</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">33</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">99</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">35</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7708</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPQ070b">SPQ070b - Ever told had a collapsed lung?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPQ070b</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ever told had a collapsed lung?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Has a doctor or other health professional ever told {you/SP}that {you/he/she} had . . .</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">MARK ALL THAT APPLY</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">a collapsed lung?</td>
+                <td class="values" align="right">68</td>
+                <td class="values" align="right">68</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7675</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPQ070c">SPQ070c - Ever told had a detached retina?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPQ070c</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ever told had a detached retina?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Has a doctor or other health professional ever told {you/SP}that {you/he/she} had . . .</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 16 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">a detached retina?</td>
+                <td class="values" align="right">44</td>
+                <td class="values" align="right">44</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7699</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPQ070d">SPQ070d - Ever told had a stroke?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPQ070d</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ever told had a stroke?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Has a doctor or other health professional ever told {you/SP}that {you/he/she} had . . .</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 16 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">a stroke?</td>
+                <td class="values" align="right">133</td>
+                <td class="values" align="right">133</td>
+                <td class="values">SPQ080</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7610</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPQ070e">SPQ070e - Ever told had a heart attack?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPQ070e</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ever told had a heart attack?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Has a doctor or other health professional ever told {you/SP}that {you/he/she} had . . .</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 16 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">a heart attack?</td>
+                <td class="values" align="right">140</td>
+                <td class="values" align="right">140</td>
+                <td class="values">SPQ090</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7603</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPQ080">SPQ080 - Stroke in the last 3 months?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPQ080</dd>
+            <dt>SAS Label: </dt>
+            <dd>Stroke in the last 3 months?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Did this stroke happen in the last three months?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 16 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">6</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">114</td>
+                <td class="values" align="right">120</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">120</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">120</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7623</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPQ090">SPQ090 - Heart attack in last 3 months?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPQ090</dd>
+            <dt>SAS Label: </dt>
+            <dd>Heart attack in last 3 months?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Was {your/SP's} heart attack in the last three months?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 16 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">3</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">120</td>
+                <td class="values" align="right">123</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">123</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">123</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7620</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPQ100">SPQ100 - Coughed up blood past month?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPQ100</dd>
+            <dt>SAS Label: </dt>
+            <dd>Coughed up blood past month?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">In the past month, {have you/has SP} coughed up blood?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">29</td>
+                <td class="values" align="right">29</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">6682</td>
+                <td class="values" align="right">6711</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6711</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">6712</td>
+                <td class="values">SPAENA</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1031</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPAENA">SPAENA - Check item</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPAENA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Check item</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Check item SPAENA</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">If answered No in SPQ010, SPQ030, SPQ050, SPQ060, SPQ080, SPQ090, SPQ100, ENQ010, ENQ020, and Missing in SPQ070a, SPQ070b, SPQ070c set Spirometry to eligible, Otherwise set Spirometry Not Done/Safety Exclusion.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="ENQ100">ENQ100 - Had respiratory illness?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">ENQ100</dd>
+            <dt>SAS Label: </dt>
+            <dd>Had respiratory illness?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">In the past 7 days, {have you/has SP} had a cough, cold, phlegm, runny nose or other respiratory illness? Do not count allergies or hay fever.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">1417</td>
+                <td class="values" align="right">1417</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">5230</td>
+                <td class="values" align="right">6647</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6647</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">6650</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1093</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNSTAT">SPXNSTAT - Spirometry First Test Status</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNSTAT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Spirometry First Test Status</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Spirometry First Test Status (Baseline Spirometry)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Complete Exam</td>
+                <td class="values" align="right">6032</td>
+                <td class="values" align="right">6032</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Partial Exam</td>
+                <td class="values" align="right">412</td>
+                <td class="values" align="right">6444</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Not Done</td>
+                <td class="values" align="right">810</td>
+                <td class="values" align="right">7254</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Safety Exclusion</td>
+                <td class="values" align="right">489</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNCMT">SPXNCMT - Spirometry First Test Comment</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNCMT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Spirometry First Test Comment</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Spirometry First Test Comment (Baseline Spirometry)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">SP refusal</td>
+                <td class="values" align="right">80</td>
+                <td class="values" align="right">80</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">No time</td>
+                <td class="values" align="right">32</td>
+                <td class="values" align="right">112</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Physical limitation</td>
+                <td class="values" align="right">67</td>
+                <td class="values" align="right">179</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Communication problem</td>
+                <td class="values" align="right">64</td>
+                <td class="values" align="right">243</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Equipment failure</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">252</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">SP ill/emergency</td>
+                <td class="values" align="right">26</td>
+                <td class="values" align="right">278</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">14</td>
+                <td class="values">Interrupted</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">282</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">27</td>
+                <td class="values">Proxy no information</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">293</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">56</td>
+                <td class="values">Came late/left early</td>
+                <td class="values" align="right">526</td>
+                <td class="values" align="right">819</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">84</td>
+                <td class="values">SP with child</td>
+                <td class="values" align="right">43</td>
+                <td class="values" align="right">862</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">99</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">71</td>
+                <td class="values" align="right">933</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6810</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNFVC">SPXNFVC - Baseline FVC (mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNFVC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Baseline FVC (mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Baseline 1st Test Spirometry, Forced Vital Capacity, in mL.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">614 to 8084</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6319</td>
+                <td class="values" align="right">6319</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1424</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNEV">SPXNEV - Baseline Extrapolated Volume (mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNEV</dd>
+            <dt>SAS Label: </dt>
+            <dd>Baseline Extrapolated Volume (mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Baseline 1st Test Spirometry, Extrapolated Volume, in mL.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 321</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6318</td>
+                <td class="values" align="right">6318</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1425</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNFEV5">SPXNFEV5 - Baseline FEV 0.5 (mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNFEV5</dd>
+            <dt>SAS Label: </dt>
+            <dd>Baseline FEV 0.5 (mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Baseline 1st Test Spirometry, Forced Expiratory Volume in the first 0.5 seconds, in mL.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">392 to 5520</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6319</td>
+                <td class="values" align="right">6319</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1424</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNFEV7">SPXNFEV7 - Baseline FEV 0.75 (mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNFEV7</dd>
+            <dt>SAS Label: </dt>
+            <dd>Baseline FEV 0.75 (mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Baseline 1st Test Spirometry, Forced Expiratory Volume in the first 0.75 seconds, in mL.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">432 to 6375</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6319</td>
+                <td class="values" align="right">6319</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1424</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNFEV1">SPXNFEV1 - Baseline FEV 1 (mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNFEV1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Baseline FEV 1 (mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Baseline 1st Test Spirometry, Forced Expiratory Volume in the first 1.0 second, in mL.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">459 to 6770</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6319</td>
+                <td class="values" align="right">6319</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1424</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNFEV3">SPXNFEV3 - Baseline FEV 3 (mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNFEV3</dd>
+            <dt>SAS Label: </dt>
+            <dd>Baseline FEV 3 (mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Baseline 1st Test Spirometry, Forced Expiratory Volume in the first 3.0 seconds, in mL.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">424 to 7583</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6319</td>
+                <td class="values" align="right">6319</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1424</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNFEV6">SPXNFEV6 - Baseline FEV 6 (mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNFEV6</dd>
+            <dt>SAS Label: </dt>
+            <dd>Baseline FEV 6 (mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Baseline 1st Test Spirometry, Forced Expiratory Volume in the first 6.0 seconds, in mL.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">614 to 7856</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6319</td>
+                <td class="values" align="right">6319</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1424</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNPEF">SPXNPEF - Baseline PEF (mL/s)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNPEF</dd>
+            <dt>SAS Label: </dt>
+            <dd>Baseline PEF (mL/s)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Baseline 1st Test Spirometry, Peak Expiratory Flow Rate, in mL/s.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">971 to 16723</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6319</td>
+                <td class="values" align="right">6319</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1424</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNF257">SPXNF257 - Baseline FEF 25-75% (mL/s)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNF257</dd>
+            <dt>SAS Label: </dt>
+            <dd>Baseline FEF 25-75% (mL/s)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Baseline 1st Test Spirometry, Forced Expiratory Flow Rate 25-75%, in mL/s.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">186 to 12776</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6319</td>
+                <td class="values" align="right">6319</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1424</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNFET">SPXNFET - Baseline Forced Expiratory Time (s)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNFET</dd>
+            <dt>SAS Label: </dt>
+            <dd>Baseline Forced Expiratory Time (s)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Baseline 1st Test Spirometry, Forced Expiratory Time, in seconds.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.1 to 32.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6318</td>
+                <td class="values" align="right">6318</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1425</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNQFVC">SPXNQFVC - Baseline FVC Quality Attribute</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNQFVC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Baseline FVC Quality Attribute</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Baseline 1st Test Spirometry, Forced Vital Capacity Quality Attribute.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">A</td>
+                <td class="values">Exceeds ATS data collection standards</td>
+                <td class="values" align="right">4435</td>
+                <td class="values" align="right">4435</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">B</td>
+                <td class="values">Meets ATS data collection standards</td>
+                <td class="values" align="right">1159</td>
+                <td class="values" align="right">5594</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">C</td>
+                <td class="values">Potentially usable value, but does not meet all ATS standards</td>
+                <td class="values" align="right">469</td>
+                <td class="values" align="right">6063</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">D</td>
+                <td class="values">Questionable result, use with caution</td>
+                <td class="values" align="right">211</td>
+                <td class="values" align="right">6274</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">F</td>
+                <td class="values">Results not valid</td>
+                <td class="values" align="right">170</td>
+                <td class="values" align="right">6444</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1299</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNQFV1">SPXNQFV1 - Baseline FEV1 Quality Attribute</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNQFV1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Baseline FEV1 Quality Attribute</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Baseline 1st Test Spirometry, Forced Expiratory Volume in the first 1.0 second Quality Attribute</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">A</td>
+                <td class="values">Exceeds ATS data collection standards</td>
+                <td class="values" align="right">4804</td>
+                <td class="values" align="right">4804</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">B</td>
+                <td class="values">Meets ATS data collection standards</td>
+                <td class="values" align="right">1039</td>
+                <td class="values" align="right">5843</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">C</td>
+                <td class="values">Potentially usable value, but does not meet all ATS standards</td>
+                <td class="values" align="right">323</td>
+                <td class="values" align="right">6166</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">D</td>
+                <td class="values">Questionable result, use with caution</td>
+                <td class="values" align="right">142</td>
+                <td class="values" align="right">6308</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">F</td>
+                <td class="values">Results not valid</td>
+                <td class="values" align="right">136</td>
+                <td class="values" align="right">6444</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1299</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPDNACC">SPDNACC - Baseline Number of Acceptable Curves</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPDNACC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Baseline Number of Acceptable Curves</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Baseline 1st Test Spirometry, Number of Acceptable Curves Performed (ATS Criteria)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 10</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6444</td>
+                <td class="values" align="right">6444</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1299</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXNQEFF">SPXNQEFF - Baseline Effort Quality Attribute</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXNQEFF</dd>
+            <dt>SAS Label: </dt>
+            <dd>Baseline Effort Quality Attribute</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Baseline 1st Test Spirometry, Effort Quality Attribute</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">A</td>
+                <td class="values">All 6 spirometry quality curve attributes are acceptable</td>
+                <td class="values" align="right">5941</td>
+                <td class="values" align="right">5941</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">B</td>
+                <td class="values">The curves had a large time to peak flow or a non-repeatable peak flow</td>
+                <td class="values" align="right">134</td>
+                <td class="values" align="right">6075</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">C</td>
+                <td class="values">The curves had either &lt; 6 seconds of exhalation or no plateau</td>
+                <td class="values" align="right">348</td>
+                <td class="values" align="right">6423</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">D</td>
+                <td class="values">The curves had either a cough or large extrapolated volume</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6423</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1320</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPDBRONC">SPDBRONC - Selected for Bronchodilator</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPDBRONC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Selected for Bronchodilator</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Best test FEV1/FVC ratio below Lower Limit of Normal and/or less than 70%</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">1001</td>
+                <td class="values" align="right">1001</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">5443</td>
+                <td class="values" align="right">6444</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1299</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBSTAT">SPXBSTAT - Spirometry Second Test Status</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBSTAT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Spirometry Second Test Status</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Spirometry Second Test Status (Post-Bronchodilator Spirometry)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Complete Exam</td>
+                <td class="values" align="right">604</td>
+                <td class="values" align="right">604</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Partial Exam</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Not Done</td>
+                <td class="values" align="right">187</td>
+                <td class="values" align="right">798</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Safety Exclusion</td>
+                <td class="values" align="right">203</td>
+                <td class="values" align="right">1001</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6742</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBCMT">SPXBCMT - Spirometry Second Test Comment</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBCMT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Spirometry Second Test Comment</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Spirometry Second Test Comment (Post-Bronchodilator Spirometry)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">SP refusal</td>
+                <td class="values" align="right">75</td>
+                <td class="values" align="right">75</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">No time</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">81</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Physical limitation</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">84</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Communication problem</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">87</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">14</td>
+                <td class="values">Interrupted</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">88</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">84</td>
+                <td class="values">SP with child</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">89</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">99</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">98</td>
+                <td class="values" align="right">187</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7556</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBFVC">SPXBFVC - 2nd Test FVC (mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBFVC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2nd Test FVC (mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bronchodilator 2nd Test Spirometry, Forced Vital Capacity, in mL.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1211 to 7738</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">611</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7132</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBEV">SPXBEV - 2nd Test Extrapolated Volume (mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBEV</dd>
+            <dt>SAS Label: </dt>
+            <dd>2nd Test Extrapolated Volume (mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bronchodilator 2nd Test Spirometry, Extrapolated Volume, in mL.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11 to 214</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">611</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7132</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBFEV5">SPXBFEV5 - 2nd Test FEV 0.5 (mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBFEV5</dd>
+            <dt>SAS Label: </dt>
+            <dd>2nd Test FEV 0.5 (mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bronchodilator 2nd Test Spirometry, Forced Expiratory Volume in the first 0.5 seconds, in mL.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">516 to 3758</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">611</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7132</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBFEV7">SPXBFEV7 - 2nd Test FEV 0.75 (mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBFEV7</dd>
+            <dt>SAS Label: </dt>
+            <dd>2nd Test FEV 0.75 (mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bronchodilator 2nd Test Spirometry, Forced Expiratory Volume in the first 0.75 seconds, in mL.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">611 to 4757</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">611</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7132</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBFEV1">SPXBFEV1 - 2nd Test FEV 1 (mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBFEV1</dd>
+            <dt>SAS Label: </dt>
+            <dd>2nd Test FEV 1 (mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bronchodilator 2nd Test Spirometry, Forced Expiratory Volume in the first 1.0 second, in mL.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">687 to 5431</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">611</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7132</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBFEV3">SPXBFEV3 - 2nd Test FEV 3 (mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBFEV3</dd>
+            <dt>SAS Label: </dt>
+            <dd>2nd Test FEV 3 (mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bronchodilator 2nd Test Spirometry, Forced Expiratory Volume in the first 3.0 seconds, in mL.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">980 to 7136</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">611</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7132</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBFEV6">SPXBFEV6 - 2nd Test FEV 6 (mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBFEV6</dd>
+            <dt>SAS Label: </dt>
+            <dd>2nd Test FEV 6 (mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bronchodilator 2nd Test Spirometry, Forced Expiratory Volume in the first 6.0 seconds, in mL.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1120 to 7540</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">611</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7132</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBPEF">SPXBPEF - 2nd Test PEF (mL/s)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBPEF</dd>
+            <dt>SAS Label: </dt>
+            <dd>2nd Test PEF (mL/s)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bronchodilator 2nd Test Spirometry, Peak Expiratory Flow Rate, in mL/s.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1496 to 14015</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">611</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7132</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBF257">SPXBF257 - 2nd Test FEF 25-75% (mL/s)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBF257</dd>
+            <dt>SAS Label: </dt>
+            <dd>2nd Test FEF 25-75% (mL/s)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bronchodilator 2nd Test Spirometry, Forced Expiratory Flow Rate 25-75%, in mL/s.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">301 to 5465</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">611</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7132</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBFET">SPXBFET - 2nd Test Forced Expiratory Time (s)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBFET</dd>
+            <dt>SAS Label: </dt>
+            <dd>2nd Test Forced Expiratory Time (s)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bronchodilator 2nd Test Spirometry, Forced Expiratory Time, in seconds.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.5 to 28.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">611</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7132</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBQFVC">SPXBQFVC - 2nd Test FVC Quality Attribute</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBQFVC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2nd Test FVC Quality Attribute</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bronchodilator 2nd Test Spirometry, Forced Vital Capacity Quality Attribute.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">A</td>
+                <td class="values">Exceeds ATS data collection standards</td>
+                <td class="values" align="right">432</td>
+                <td class="values" align="right">432</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">B</td>
+                <td class="values">Meets ATS data collection standards</td>
+                <td class="values" align="right">132</td>
+                <td class="values" align="right">564</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">C</td>
+                <td class="values">Potentially usable value, but does not meet all ATS standards</td>
+                <td class="values" align="right">42</td>
+                <td class="values" align="right">606</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">D</td>
+                <td class="values">Questionable result, use with caution</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">F</td>
+                <td class="values">Results not valid</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7132</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBQFV1">SPXBQFV1 - 2nd Test FEV1 Quality Attribute</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBQFV1</dd>
+            <dt>SAS Label: </dt>
+            <dd>2nd Test FEV1 Quality Attribute</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bronchodilator 2nd Test Spirometry, Forced Expiratory Volume in the first 1.0 second Quality Attribute</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">A</td>
+                <td class="values">Exceeds ATS data collection standards</td>
+                <td class="values" align="right">470</td>
+                <td class="values" align="right">470</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">B</td>
+                <td class="values">Meets ATS data collection standards</td>
+                <td class="values" align="right">113</td>
+                <td class="values" align="right">583</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">C</td>
+                <td class="values">Potentially usable value, but does not meet all ATS standards</td>
+                <td class="values" align="right">25</td>
+                <td class="values" align="right">608</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">D</td>
+                <td class="values">Questionable result, use with caution</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">F</td>
+                <td class="values">Results not valid</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7132</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPDBACC">SPDBACC - 2nd Test Number of Acceptable Curves</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPDBACC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2nd Test Number of Acceptable Curves</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bronchodilator 2nd Test Spirometry, Number of Acceptable Curves Performed (ATS Criteria)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">611</td>
+                <td class="values" align="right">611</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7132</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXBQEFF">SPXBQEFF - 2nd Test Effort Quality Attribute</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXBQEFF</dd>
+            <dt>SAS Label: </dt>
+            <dd>2nd Test Effort Quality Attribute</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bronchodilator 2nd Test Spirometry, Effort Quality Attribute</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">A</td>
+                <td class="values">All 6 spirometry quality curve attributes are acceptable</td>
+                <td class="values" align="right">595</td>
+                <td class="values" align="right">595</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">B</td>
+                <td class="values">The curves had a large time to peak flow or a non-repeatable peak flow</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">595</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">C</td>
+                <td class="values">The curves had either &lt; 6 seconds of exhalation or no plateau</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">609</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">D</td>
+                <td class="values">The curves had either a cough or large extrapolated volume</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">609</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7134</td>
+                <td class="values" align="right">7743</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2370 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>AL_IGE_D</title>
+    <meta name="title" content="NHANES 2005-2006: Allergen Specific IgE(s) &amp; Total IgE - Serum Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#LBXIGE">LBXIGE - Serum total IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDIGELC">LBDIGELC - Serum total IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXID2">LBXID2 - D. Farinae IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDID2LC">LBDID2LC - D. Farinae IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXID1">LBXID1 - D. Pteronyssinus IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDID1LC">LBDID1LC - D. Pteronyssin IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXIE1">LBXIE1 - Cat IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDIE1LC">LBDIE1LC - Cat IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXIE5">LBXIE5 - Dog IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDIE5LC">LBDIE5LC - Dog IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXII6">LBXII6 - Cockroach IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDII6LC">LBDII6LC - Cockroach IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXIM6">LBXIM6 - Alternaria IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDIM6LC">LBDIM6LC - Alternaria IgE comment code</a>
+              </li>
+              <li>
+                <a href="#LBXF13">LBXF13 - Peanut IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDF13LC">LBDF13LC - Peanut IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXIF1">LBXIF1 - Egg IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDIF1LC">LBDIF1LC - Egg IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXIF2">LBXIF2 - Milk IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDIF2LC">LBDIF2LC - Milk IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXIW1">LBXIW1 - Ragweed IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDIW1LC">LBDIW1LC - Ragweed IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXIG5">LBXIG5 - Rye grass IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDIG5LC">LBDIG5LC - Rye grass IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXIG2">LBXIG2 - Bermuda grass IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDIG2LC">LBDIG2LC - Bermuda grass IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXIT7">LBXIT7 - Oak IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDIT7LC">LBDIT7LC - Oak IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXIT3">LBXIT3 - Birch IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDIT3LC">LBDIT3LC - Birch IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXF24">LBXF24 - Shrimp IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDF24LC">LBDF24LC - Shrimp IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXIM3">LBXIM3 - Aspergillus IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDIM3LC">LBDIM3LC - Aspergillus IgE comment code</a>
+              </li>
+              <li>
+                <a href="#LBXW11">LBXW11 - Thistle IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDW11LC">LBDW11LC - Thistle IgE antibody comment code</a>
+              </li>
+              <li>
+                <a href="#LBXE72">LBXE72 - Mouse IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDE72LC">LBDE72LC - Mouse IgE comment code</a>
+              </li>
+              <li>
+                <a href="#LBXE74">LBXE74 - Rat IgE antibody (kU/L)</a>
+              </li>
+              <li>
+                <a href="#LBDE74LC">LBDE74LC - Rat IgE antibody comment code</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2005-2006 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Allergen Specific IgE(s) &amp; Total IgE - Serum (AL_IGE_D)</h3>
+        <h4> Data File: AL_IGE_D.xpt</h4>
+        <h5 class="left">First Published: January 2009</h5>
+        <h5 class="right">Last Revised: February 2013</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>The primary purpose of the NHANES 2005-2006 Allergy Component is to study the effects of common indoor allergens on allergic sensitization in the general U.S. population. A nationally representative sample of household dust was collected to measure the amounts of common indoor allergens present which may be related to asthma and other allergic disease. A blood sample was also drawn at the NHANES examination site for IgE allergy antibody testing. The IgE studies, as a part of Allergy Component, measured both total IgE and also allergen-specific IgE responses to the same panel of allergens measured in the household dust collection. Also, IgE testing was performed for a panel of outdoor aeroallergens and for selected foods. IgE testing specific to these indoor, outdoor, and food allergens had not been previously performed in NHANES surveys. </p>
+<p>The overall NHANES 2005-2006 Allergy Component is designed to assess the allergen exposure, allergic sensitization, allergic symptoms and diseases, and their complex relationship in the general U.S. population. It consists of three parts: 1) collecting self-reported allergic diseases information through household interview questionnaires; 2) analyzing allergen and endotoxin from the dust extract; and 3) measuring total and allergen-specific immunoglobulin E (IgE) from a blood sample drawn at the NHANES mobile examination site).</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>A full sample of NHANES 2005-2006 participants' ages 1 year and older were eligible for total and allergen-specific serum IgE testing.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>Serum samples were analyzed for total and allergen-specific IgE using the Pharmacia Diagnostics ImmunoCAP 1000 System (Kalamazoo, Michigan). A detailed description of the laboratory method used can be found at NHANES 2005-2006 web page. </p>
+<p><strong>Total IgE Analysis Method:</strong> <br />
+Anti-IgE, covalently coupled to the ImmunoCap&trade; [1} reaction vessel, reacts with the total IgE in the sample. After washing, enzyme-labeled antibodies against IgE are added to form a complex. After incubation, unbound enzyme-anti-IgE is washed away and the bound complex is then incubated with a developing agent. After stopping the reaction, the fluorescence of the eluate is measured. The fluorescence is directly proportional with the concentration of IgE antibody in the sample. Test results are obtained by comparing the eluate fluorescence directly to the response for the calibrators. </p>
+<p><strong>Allergen-Specific IgE(s) Method:</strong> <br />
+The specific allergen of interest, covalently coupled to the ImmunoCap&trade; cellulose carrier (sponge), reacts with the allergen-specific IgE in the participant serum sample. After washing away non-specific IgE, enzyme-labeled antibodies against IgE are added to form a complex. After incubation, unbound anti-IgE is washed away and the remaining bound complex is incubated with a developing agent. After stopping the reaction, the sponge is compressed and the fluorescence of the resulting eluate is measured. The higher the response value, the more allergen-specific IgE is present in the sample. To evaluate the test results, the response for the patient samples is compared directly to the response for the calibrators. </p>
+<p>Prior to the NHANES 2005-2006 survey, the only allergen-specific IgE serum testing was to latex antigen (NHANES III, NHANES 1999-2001) The blood sample collection for total and allergen-specific IgE for household, outdoor and food allergens was limited only to the NHANES 2005-2006 survey cycle, and did not continue in 2007. </p>
+<p>The number and type of allergen-specific IgE tests performed varied by age. In the 2005-2006 survey, a basic subset of allergen-specific IgE antibodies were measured for all participants ages 1+ year (Group 1). Because a greater volume of blood could be drawn on older children and adults, the group of participant's ages 6+ years had an additional list of allergen-specific IgE antibodies tested (Group 2).</p>
+<p>
+<table>
+    <caption style="vertical-align: top; text-align: center; captionside: top;">Group 1 Listing of Analytes (1 Year and Older)</caption>
+    <thead>
+        <tr>
+            <th id="ms__id13_heading_0">&nbsp;Variable Name</th>
+            <th id="ms__id13_heading_1">&nbsp;Test Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td headers="ms__id13_heading_0">LBXIGE</td>
+            <td headers="ms__id13_heading_1">Serum total IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id13_heading_0">LBXID2</td>
+            <td headers="ms__id13_heading_1">D. Farinae IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id13_heading_0">LBXID1</td>
+            <td headers="ms__id13_heading_1">D. Pteronyssinus IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id13_heading_0">LBXIE1</td>
+            <td headers="ms__id13_heading_1">Cat IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id13_heading_0">LBXIE5</td>
+            <td headers="ms__id13_heading_1">Dog IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id13_heading_0">LBXII6</td>
+            <td headers="ms__id13_heading_1">Cockroach IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id13_heading_0">LBXIM6</td>
+            <td headers="ms__id13_heading_1">Alternaria IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id13_heading_0">LBXF13</td>
+            <td headers="ms__id13_heading_1">Peanut IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id13_heading_0">LBXIF1</td>
+            <td headers="ms__id13_heading_1">Egg IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id13_heading_0">LBXIF2</td>
+            <td headers="ms__id13_heading_1">Milk IgE antibody (kU/L)</td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<p>
+<table>
+    <caption style="vertical-align: top; text-align: center; captionside: top;">Group2 Listing of Analytes (6 Years and Older)</caption>
+    <thead>
+        <tr>
+            <th id="ms__id14_heading_0">Variable&nbsp;Name&nbsp;</th>
+            <th id="ms__id14_heading_1">Test Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td headers="ms__id14_heading_0">LBXIW1</td>
+            <td headers="ms__id14_heading_1">Ragweed IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id14_heading_0">LBXIG5</td>
+            <td headers="ms__id14_heading_1">Rye grass IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id14_heading_0">LBXIG2</td>
+            <td headers="ms__id14_heading_1">Bermuda grass IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id14_heading_0">LBXIT7</td>
+            <td headers="ms__id14_heading_1">Oak IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id14_heading_0">LBXIT3</td>
+            <td headers="ms__id14_heading_1">Birch IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id14_heading_0">LBXF24</td>
+            <td headers="ms__id14_heading_1">ShrimpIgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id14_heading_0">LBXIM3</td>
+            <td headers="ms__id14_heading_1">Aspergillus IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id14_heading_0">LBXW11</td>
+            <td headers="ms__id14_heading_1">Thistle IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id14_heading_0">LBXE72</td>
+            <td headers="ms__id14_heading_1">Mouse IgE antibody (kU/L)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id14_heading_0">LBXE74</td>
+            <td headers="ms__id14_heading_1">Rat IgE antibody (kU/L)</td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<p>&nbsp;</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>Blood specimens are processed, stored and shipped to Elmhurst Memorial Hospital, Chicago, Illinois. Detailed specimen collection and processing instructions are discussed in the NHANES Laboratory/Medical Technologists Procedures Manual (LPM). Read the LABDOC file for detailed data processing and editing protocols. The analytical methods are described in the Analytic methodology section. </p>
+<p>During the data editing process, data distributions and outlier values were examined. Since there was not sufficient information to conclude that any specific measurements were invalid, they were not excluded from the data set. For samples below the LLOD, fill values equal to the LLOD divided by the square root of 2 are used in the public release dataset. See the NHANES web page link to for more specifics on &ldquo;below detectable limit fill values&rdquo; for this data. </p>
+<p><strong>Detection Limits:</strong> </p>
+<p><strong>Lower Limit of Detection (LLOD):</strong> <br />
+For total serum IgE measurement, the LLOD is equal to 2.00 kU/L. The LLOD was the same for the each of the allergen-specific IgE antibody tests, and equal to 0.35 kU/L. </p>
+<p><strong>Upper Limit of Detection (ULOD):</strong> <br />
+For total serum IgE measurement, all specimens obtained were analyzable, and there was no ULOD reported. The ULOD was the same for the each of the allergen-specific IgE antibody tests, and equal to 1000 kU/L.</p>
+<p>Two variables are provided for each IGE analyte (total and allergen-specific). The variable naming convention &ldquo;LBD___LC&rdquo; (with the underscore filled by an allergen-specific code) indicates whether the result was either measurable, below the LLOD or above the ULOD. There are three values: &ldquo;0&rdquo;, &ldquo;1&rdquo;, and &ldquo;2&rdquo;. A &ldquo;0&rdquo; value means that the result was measurable. A &ldquo;1&rdquo; indicates that the result was below the LLOD. A &ldquo;2&rdquo; indicates that the result was above the ULOD. </p>
+<p>The other variable type, prefixed &ldquo;LBX___ &ldquo;, provides the analytic result for that analyte. </p>
+<p>Detailed instructions on specimen collection and processing can be found at NHANES web page.&nbsp;</p><h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>The NHANES quality control and quality assurance protocols (QA/QC) meet the 1988 Clinical Laboratory Improvement Amendments mandates. Detailed quality control and quality assurance instructions are discussed in the NHANES Laboratory/Medical Technologists Procedures Manual (LPM).</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>The analysis of NHANES 2005-2006 laboratory data including the AL_IGE_D data files must be conducted with the key survey design variables and weights, the basic demographic variables, and with related household, laboratory, and co-morbidity data. The NHANES 2005-2006 participant Household Interview Questionnaire Data Files contain demographic data, and health indicators such as allergy and asthma history (AGQ, RDQ, MCQ). The Family Interview data file contains data on housing characteristics and the home environment. The household dust laboratory data file contains data on the amount of specific allergen detected in the participant&rsquo;s household dust sample. The phlebotomy file includes auxiliary information such as the conditions precluding venipuncture. </p>
+<p><strong>Analytic Note on the sum of specific IgE test values exceeding the total IgE: </strong></p>
+<p>For NHANES 2005-2006 IgE measurements, there were specific participants for whom the sum of their specific IgE test values exceeded their measured total IgE value. This may occur because of the cross-reactivity of specific IgE antibodies to either shared or conformationally similar epitopes of antigens for the allergens [2-5]. For example, trees, grasses, or dust mites have cross-reacting antibodies. The researcher is cautioned in the interpretation of these cross-reacting specific IgE measurements.</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Aalberse RC, Akkerdaas JH, van Ree R. Cross-reactivity of IgE antibodies to allergens. Allergy 2001; 56: 478-490.</li>
+          <li>Aalberse RC. Structural biology of allergens. J Allergy Clin Immunol 2000; 106: 228-238.</li>
+          <li>Paganelli R, Ansotegui IJ, Sastre J, Lange CE, Roovers MH, de Groot H, Lindholm NB, Ewan PW. Specific IgE antibodies in the diagnosis of atopic disease. Clinical evaluation of a new in vitro test system, UniCAP, in six European allergy clinics. Allergy. 1998 53(8):763-8.</li>
+          <li>Weber RW. Cross-reactivity of plant and animal allergens. Clin Rev Allergy Immunol 2001; 21: 153-202.</li>
+          <li>Weber RW. Patterns of pollen cross-allergenicity. J Allergy Clin Immunol 2003; 112: 229-239.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIGE">LBXIGE - Serum total IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIGE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Serum total IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum Total IgE antibody, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.41 to 16148</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">8336</td>
+                <td class="values" align="right">8336</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1104</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIGELC">LBDIGELC - Serum total IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIGELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Serum total IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum total IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">8176</td>
+                <td class="values" align="right">8176</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">160</td>
+                <td class="values" align="right">8336</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8336</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1104</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXID2">LBXID2 - D. Farinae IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXID2</dd>
+            <dt>SAS Label: </dt>
+            <dd>D. Farinae IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Dermatophagoides Farinae, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 1000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">8258</td>
+                <td class="values" align="right">8258</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1182</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDID2LC">LBDID2LC - D. Farinae IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDID2LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>D. Farinae IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">D. Farinae IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1642</td>
+                <td class="values" align="right">1642</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">6615</td>
+                <td class="values" align="right">8257</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">8258</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1182</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXID1">LBXID1 - D. Pteronyssinus IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXID1</dd>
+            <dt>SAS Label: </dt>
+            <dd>D. Pteronyssinus IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Dermatophagoides Pteronyssinus, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 1000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">8336</td>
+                <td class="values" align="right">8336</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1104</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDID1LC">LBDID1LC - D. Pteronyssin IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDID1LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>D. Pteronyssin IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">D. Pteronyssin IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1673</td>
+                <td class="values" align="right">1673</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">6661</td>
+                <td class="values" align="right">8334</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">8336</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1104</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIE1">LBXIE1 - Cat IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIE1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Cat IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Cat Epithelium and Dander, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 476</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">8335</td>
+                <td class="values" align="right">8335</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1105</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIE1LC">LBDIE1LC - Cat IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIE1LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Cat IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Cat IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">931</td>
+                <td class="values" align="right">931</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">7404</td>
+                <td class="values" align="right">8335</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8335</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1105</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIE5">LBXIE5 - Dog IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIE5</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dog IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Dog Dander, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 558</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">8327</td>
+                <td class="values" align="right">8327</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1113</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIE5LC">LBDIE5LC - Dog IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIE5LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dog IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Dog IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1009</td>
+                <td class="values" align="right">1009</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">7318</td>
+                <td class="values" align="right">8327</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8327</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1113</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXII6">LBXII6 - Cockroach IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXII6</dd>
+            <dt>SAS Label: </dt>
+            <dd>Cockroach IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to German Cockroach, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 204</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">8319</td>
+                <td class="values" align="right">8319</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1121</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDII6LC">LBDII6LC - Cockroach IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDII6LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Cockroach IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Cockroach IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1057</td>
+                <td class="values" align="right">1057</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">7262</td>
+                <td class="values" align="right">8319</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8319</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1121</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIM6">LBXIM6 - Alternaria IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIM6</dd>
+            <dt>SAS Label: </dt>
+            <dd>Alternaria IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Alternaria Alternata, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 179</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">8288</td>
+                <td class="values" align="right">8288</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1152</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIM6LC">LBDIM6LC - Alternaria IgE comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIM6LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Alternaria IgE comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Alternaria IgE comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">779</td>
+                <td class="values" align="right">779</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">7509</td>
+                <td class="values" align="right">8288</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8288</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1152</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXF13">LBXF13 - Peanut IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXF13</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peanut IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Peanut, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 1000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">8306</td>
+                <td class="values" align="right">8306</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1134</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDF13LC">LBDF13LC - Peanut IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDF13LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peanut IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Peanut IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">775</td>
+                <td class="values" align="right">775</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">7530</td>
+                <td class="values" align="right">8305</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">8306</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1134</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIF1">LBXIF1 - Egg IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIF1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Egg IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Egg , result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 47.7</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">8295</td>
+                <td class="values" align="right">8295</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1145</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIF1LC">LBDIF1LC - Egg IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIF1LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Egg IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Egg IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">375</td>
+                <td class="values" align="right">375</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">7920</td>
+                <td class="values" align="right">8295</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8295</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1145</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIF2">LBXIF2 - Milk IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIF2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Milk IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Milk , result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 45.6</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">8207</td>
+                <td class="values" align="right">8207</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1233</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIF2LC">LBDIF2LC - Milk IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIF2LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Milk IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Milk IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">651</td>
+                <td class="values" align="right">651</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">7556</td>
+                <td class="values" align="right">8207</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8207</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1233</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIW1">LBXIW1 - Ragweed IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIW1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ragweed IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Common Ragweed, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 469</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7386</td>
+                <td class="values" align="right">7386</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2054</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIW1LC">LBDIW1LC - Ragweed IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIW1LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ragweed IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Ragweed IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1281</td>
+                <td class="values" align="right">1281</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">6105</td>
+                <td class="values" align="right">7386</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">7386</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2054</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIG5">LBXIG5 - Rye grass IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIG5</dd>
+            <dt>SAS Label: </dt>
+            <dd>Rye grass IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Rye Grass, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 1000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7384</td>
+                <td class="values" align="right">7384</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2056</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIG5LC">LBDIG5LC - Rye grass IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIG5LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Rye grass IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Rye grass IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1678</td>
+                <td class="values" align="right">1678</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">5705</td>
+                <td class="values" align="right">7383</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">7384</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2056</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIG2">LBXIG2 - Bermuda grass IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIG2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Bermuda grass IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Bermuda Grass, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 1000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7384</td>
+                <td class="values" align="right">7384</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2056</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIG2LC">LBDIG2LC - Bermuda grass IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIG2LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Bermuda grass IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bermuda grass IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1304</td>
+                <td class="values" align="right">1304</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">6079</td>
+                <td class="values" align="right">7383</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">7384</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2056</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIT7">LBXIT7 - Oak IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIT7</dd>
+            <dt>SAS Label: </dt>
+            <dd>Oak IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to White Oak, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 445</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7382</td>
+                <td class="values" align="right">7382</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2058</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIT7LC">LBDIT7LC - Oak IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIT7LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Oak IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Oak IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">969</td>
+                <td class="values" align="right">969</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">6413</td>
+                <td class="values" align="right">7382</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">7382</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2058</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIT3">LBXIT3 - Birch IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIT3</dd>
+            <dt>SAS Label: </dt>
+            <dd>Birch IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Birch Tree, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 879</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7381</td>
+                <td class="values" align="right">7381</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2059</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIT3LC">LBDIT3LC - Birch IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIT3LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Birch IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Birch IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">812</td>
+                <td class="values" align="right">812</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">6569</td>
+                <td class="values" align="right">7381</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">7381</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2059</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXF24">LBXF24 - Shrimp IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXF24</dd>
+            <dt>SAS Label: </dt>
+            <dd>Shrimp IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Shrimp, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 322</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7377</td>
+                <td class="values" align="right">7377</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2063</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDF24LC">LBDF24LC - Shrimp IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDF24LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Shrimp IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Shrimp IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">577</td>
+                <td class="values" align="right">577</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">6800</td>
+                <td class="values" align="right">7377</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">7377</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2063</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIM3">LBXIM3 - Aspergillus IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIM3</dd>
+            <dt>SAS Label: </dt>
+            <dd>Aspergillus IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Aspergillus Fumigatus, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 62.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7376</td>
+                <td class="values" align="right">7376</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2064</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIM3LC">LBDIM3LC - Aspergillus IgE comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIM3LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Aspergillus IgE comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Aspergillus IgE comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">634</td>
+                <td class="values" align="right">634</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">6742</td>
+                <td class="values" align="right">7376</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">7376</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2064</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXW11">LBXW11 - Thistle IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXW11</dd>
+            <dt>SAS Label: </dt>
+            <dd>Thistle IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to Russian Thistle, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 275</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7370</td>
+                <td class="values" align="right">7370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2070</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDW11LC">LBDW11LC - Thistle IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDW11LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Thistle IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Thistle IgE antibody comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">964</td>
+                <td class="values" align="right">964</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">6406</td>
+                <td class="values" align="right">7370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">7370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2070</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXE72">LBXE72 - Mouse IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXE72</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mouse IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to mouse urine proteins, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 196</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7356</td>
+                <td class="values" align="right">7356</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2084</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDE72LC">LBDE72LC - Mouse IgE comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDE72LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mouse IgE comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mouse IgE comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">119</td>
+                <td class="values" align="right">119</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">7237</td>
+                <td class="values" align="right">7356</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">7356</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2084</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXE74">LBXE74 - Rat IgE antibody (kU/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXE74</dd>
+            <dt>SAS Label: </dt>
+            <dd>Rat IgE antibody (kU/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum IgE antibody to rat urine proteins, result (kU/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 73.6</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7333</td>
+                <td class="values" align="right">7333</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2107</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDE74LC">LBDE74LC - Rat IgE antibody comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDE74LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Rat IgE antibody comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Rat IgE antibody comment code </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">110</td>
+                <td class="values" align="right">110</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">7223</td>
+                <td class="values" align="right">7333</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Above upper detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">7333</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2107</td>
+                <td class="values" align="right">9440</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

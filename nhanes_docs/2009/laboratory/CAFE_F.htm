@@ -1,0 +1,1770 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>CAFE_F</title>
+    <meta name="title" content="NHANES 2009-2010: Caffeine &amp; Caffeine Metabolites - Urine Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#WTSC2YR">WTSC2YR - Two-year C subsample weights</a>
+              </li>
+              <li>
+                <a href="#URXUCR">URXUCR - Creatinine, urine (mg/dL)</a>
+              </li>
+              <li>
+                <a href="#URXMU1">URXMU1 - 1-methyluric acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMU1LC">URDMU1LC - MU1 caffeine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMU2">URXMU2 - 3-methyluric acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMU2LC">URDMU2LC - MU2 caffeine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMU3">URXMU3 - 7-methyluric acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMU3LC">URDMU3LC - MU3 caffeine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMU4">URXMU4 - 1,3-dimethyluric acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMU4LC">URDMU4LC - MU4 caffeine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMU5">URXMU5 - 1,7-dimethyluric acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMU5LC">URDMU5LC - MU5 caffeine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMU6">URXMU6 - 3,7-dimethyluric acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMU6LC">URDMU6LC - MU6 caffeine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMU7">URXMU7 - 1,3,7-trimethyluric acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMU7LC">URDMU7LC - MU7 caffeine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMX1">URXMX1 - 1-methylxanthine (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMX1LC">URDMX1LC - MX1 caffeine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMX2">URXMX2 - 3-methylxanthine (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMX2LC">URDMX2LC - MX2 caffeine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMX3">URXMX3 - 7-methylxanthine (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMX3LC">URDMX3LC - MX3 caffeine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMX4">URXMX4 - 1,3-dimethylxanthine(theophylline)umol/L</a>
+              </li>
+              <li>
+                <a href="#URDMX4LC">URDMX4LC - MX4 caffeine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMX5">URXMX5 - 1,7-dimethylxanthine(paraxanthine)umol/L</a>
+              </li>
+              <li>
+                <a href="#URDMX5LC">URDMX5LC - MX5 caffeine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMX6">URXMX6 - 3,7-dimethylxanthine(theobromine)umol/L</a>
+              </li>
+              <li>
+                <a href="#URDMX6LC">URDMX6LC - MX6 caffeine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMX7">URXMX7 - 1,3,7-trimethylxanthine(caffeine)umol/L</a>
+              </li>
+              <li>
+                <a href="#URDMX7LC">URDMX7LC - MX7 caffeine comment code</a>
+              </li>
+              <li>
+                <a href="#URXAMU">URXAMU - AAMU Caffeine result (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDAMULC">URDAMULC - AAMU comment code</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2009-2010 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Caffeine &amp; Caffeine Metabolites - Urine (CAFE_F)</h3>
+        <h4> Data File: CAFE_F.xpt</h4>
+        <h5 class="left">First Published: March 2014</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Caffeine is an alkaloid that is known to have psychoactive
+stimulatory effects. Caffeine naturally occurs in plants (e.g., coffee beans,
+tea leaves, cocoa beans, cola nuts), and the dietary consumption of&nbsp;caffeine originates mainly from derivative
+beverages (e.g., coffee, tea, cola drinks) and foods (e.g., chocolate).
+Caffeine is also used as a food additive in beverages (e.g., caffeinated soft
+drinks, &ldquo;energy&rdquo; drinks) and as a drug either on its own or as an adjuvant in
+certain medications (e.g., analgesics).</p>
+<p>Given caffeine&rsquo;s high prevalence in the worldwide diet at
+behaviorally active doses, significant scientific interest in the health
+effects of caffeine has developed. As a psychoactive stimulant, the behavioral
+effects of caffeine, such as its effect on mental alertness, have been studied
+extensively, and topics such as caffeine tolerance, addiction, and withdrawal
+have also been examined.&nbsp; Caffeine
+consumption has been studied as a risk factor for many diseases and conditions,
+including hypertension, bone density, &nbsp;cardiovascular diseases, various cancers,
+reproduction and developmental abnormalities, and mental and behavioral
+disorders.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Examined participants aged 6 years and older were eligible.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>Urine specimens are processed, stored, and shipped to the Division of Environmental Health Laboratory Sciences, National Center for Environmental Health, Centers for Disease Control and Prevention for analysis. Detailed specimen collection and processing instructions are discussed in the NHANES Laboratory/Medical Technologists Procedures Manual (LPM). Read the General Documentation on Laboratory Data file for detailed data processing and editing protocols. </p>
+<p>Caffeine and 14 of its metabolites are quantified in urine by use of high performance liquid chromatography-electrospray ionization-tandem quadrupole mass spectrometry (HPLC-ESI-MS/MS) with stable isotope labeled internal standards. A 50-&micro;L aliquot of urine is first diluted with 450 &micro;L of water. 100 &micro;L of the diluted urine is then combined with 120 &micro;L of a 0.2 N NaOH solution containing stable isotope labeled internal standards. The mixture is allowed to incubate for at least 30 min at room temperature, facilitating the conversion of an unstable uracil metabolite into a more stable form. Samples are then acidified 30 &micro;L of 2.0 N HCl and 250 &micro;L of a 1:9 methanol/water solution containing 0.1% formic acid such that the matrix of the sample is similar to the starting mobile phase composition of the analysis step. Samples are then filtered and analyzed by HPLC-ESI-MS/MS in both positive and negative ionization modes. Quantitation is based on peak area ratios interpolated against an 11-point calibration curve derived from calibrators in synthetic urine.</p>
+<p>Refer to the Laboratory Method Files section for a
+detailed description of the laboratory methods used.&nbsp; </p>
+<p>This is the new component in the 2009-2010 survey cycle. </p><h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Urine samples were processed, stored and shipped to the
+Division of Laboratory Sciences, National Center for Environmental Health,
+Centers for Disease Control and Prevention, Atlanta, GA for analysis.&nbsp; </p>
+<p>Detailed
+instructions on specimen collection and processing are discussed in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2009/manuals/lab.pdf" target="_blank">NHANES Laboratory Procedures Manual (LPM)</a>.
+Vials
+were stored under appropriate frozen (-30<sup>o</sup>C)
+conditions
+until they were shipped to National Center
+for Environmental Health for testing.&nbsp; </p>
+<p>The NHANES quality assurance and quality control protocols
+(QA/QC) meet the 1988 Clinical Laboratory Improvement Amendments mandates. Detailed
+QA/QC instructions are discussed in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2009/manuals/lab.pdf" target="_blank">NHANES LPM</a>. </p>
+<p><b>Mobile Examination Centers (MECs)</b></p>
+<p>Laboratory team performance is monitored using several
+techniques. NCHS and contract consultants use a structured competency
+assessment evaluation during visits to evaluate both the quality of the
+laboratory work and the quality-control procedures. Each laboratory staff member
+is observed for equipment operation, specimen collection and preparation;
+testing procedures and constructive feedback are given to each staff member.
+Formal retraining sessions are conducted annually to ensure that required skill
+levels were maintained.</p>
+<p><b>Analytical Laboratories</b></p>
+<p>NHANES uses several methods to monitor the quality of the
+analyses performed by the contract laboratories. In the MEC, these methods
+include performing blind split samples collected during &ldquo;dry run&rdquo; sessions. In
+addition, contract laboratories randomly perform repeat testing on 2% of all
+specimens.</p>
+<p>NCHS developed and distributed a quality control protocol
+for all CDC and contract laboratories, which outlined the use of Westgard rules
+(Westgard,
+et al. 1981)
+when running NHANES specimens. Progress reports containing any problems
+encountered during shipping or receipt of specimens, summary statistics for
+each control pool, QC graphs, instrument calibration, reagents, and any special
+considerations are submitted to NCHS quarterly. The reports are reviewed for
+trends or shifts in the data. The laboratories are required to explain any
+identified areas of concern.</p>
+<p>All
+QC procedures recommended by the manufacturers were followed. Reported results
+for all assays meet the Division of Laboratory Sciences&rsquo; quality control and
+quality assurance performance criteria for accuracy and precision, similar to the
+Westgard rules (Caudill, et al. 2008).</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>The data were reviewed. Incomplete data or improbable values were sent
+to the performing laboratory for confirmation.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Refer to the <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overviewlab.aspx?BeginYear=2009" target="_blank">2009-2010 Laboratory Data Overview </a>for general information on
+NHANES laboratory data.</p>
+<p>Please refer to the NHANES <a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx" target="_blank">Analytic Guidelines </a>and
+the on-line NHANES <a href="https://www.cdc.gov/nchs/tutorials/" target="_blank">Tutorial</a> for details on the use of sample
+weights and analytic issues.</p>
+<p><b>Subsample Weights </b></p>
+<p>Urinary caffeine and caffeine metabolites were measured
+in a one-third subsample of participants 6 years and older. Special sample
+weights are required to analyze these data properly. Specific sample weights
+for this subsample are included in this data file and should be used when
+analyzing these data.&nbsp;</p>
+<p><b>Demographic and Other Related Variables</b></p>
+<p>The analysis of
+NHANES laboratory data must be conducted with the key survey design and basic
+demographic variables. The <a href="https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Demographics&amp;CycleBeginYear=2009" target="_blank">NHANES
+2009-2010 Demographics </a>file contains demographic data, health
+indicators, and other related information collected during household interviews
+as well as the sample design variables. The recommended procedure for variance
+estimation requires use of stratum and PSU variables (SDMVSTRA and SDMVPSU,
+respectively) in the demographic data file.</p>
+<p>This laboratory data file can be linked to the other NHANES
+data files using the unique survey participant identifier (i.e., SEQN).</p>
+<p><b>Detection Limits</b> </p>
+<p>The detection limits were constant for all of the analytes
+in the data set. &nbsp;Two variables are
+provided for each of these analytes. The variable name ending in &ldquo;LC&rdquo; (ex.,
+URDMU1LC) indicates whether the result was below the limit of detection: the
+value &ldquo;0&rdquo; means that the result was at or above the limit of detection, &ldquo;1&rdquo;
+indicates that the result was below the limit of detection. The other variable
+prefixed URX (ex., URXMU1) provides the analytic result for that analyte. For
+analytes with analytic results below the lower limit of detection (ex.,
+URDHU1LC), an imputed fill value was placed in the analyte result field. The
+value is the lower limit of detection divided by the square root of 2
+(LLOD/sqrt[2]).</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Caudill SP, Schleicher RL, Pirkle JL. 2008. Multi-rule quality control for the age-related eye disease study. Stat Med 27:4094-4106.</li>
+          <li>Westgard J.O., Barry P.L., Hunt M.R., Groth T. A multi-rule Shewhart chart for quality control in clinical chemistry. Clin Chem (1981) 27:493-501.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTSC2YR">WTSC2YR - Two-year C subsample weights</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTSC2YR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Two-year C subsample weights</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Two-year C subsample weights</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 413068.05064</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2831</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXUCR">URXUCR - Creatinine, urine (mg/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXUCR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Creatinine, urine (mg/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Creatinine, urine (mg/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3 to 553</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2762</td>
+                <td class="values" align="right">2762</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">69</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMU1">URXMU1 - 1-methyluric acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMU1</dd>
+            <dt>SAS Label: </dt>
+            <dd>1-methyluric acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1-methyluric acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.41 to 2200</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMU1LC">URDMU1LC - MU1 caffeine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMU1LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MU1 caffeine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MU1 caffeine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMU2">URXMU2 - 3-methyluric acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMU2</dd>
+            <dt>SAS Label: </dt>
+            <dd>3-methyluric acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3-methyluric acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 38.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMU2LC">URDMU2LC - MU2 caffeine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMU2LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MU2 caffeine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MU2 caffeine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2176</td>
+                <td class="values" align="right">2176</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">538</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMU3">URXMU3 - 7-methyluric acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMU3</dd>
+            <dt>SAS Label: </dt>
+            <dd>7-methyluric acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">7-methyluric acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 678</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMU3LC">URDMU3LC - MU3 caffeine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMU3LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MU3 caffeine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MU3 caffeine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2679</td>
+                <td class="values" align="right">2679</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">35</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMU4">URXMU4 - 1,3-dimethyluric acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMU4</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,3-dimethyluric acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,3-dimethyluric acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.04 to 2020</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMU4LC">URDMU4LC - MU4 caffeine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMU4LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MU4 caffeine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MU4 caffeine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2628</td>
+                <td class="values" align="right">2628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">86</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMU5">URXMU5 - 1,7-dimethyluric acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMU5</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,7-dimethyluric acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,7-dimethyluric acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.04 to 1230</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMU5LC">URDMU5LC - MU5 caffeine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMU5LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MU5 caffeine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MU5 caffeine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2633</td>
+                <td class="values" align="right">2633</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">81</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMU6">URXMU6 - 3,7-dimethyluric acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMU6</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,7-dimethyluric acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,7-dimethyluric acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.04 to 44.5</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMU6LC">URDMU6LC - MU6 caffeine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMU6LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MU6 caffeine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MU6 caffeine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2543</td>
+                <td class="values" align="right">2543</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">171</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMU7">URXMU7 - 1,3,7-trimethyluric acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMU7</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,3,7-trimethyluric acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,3,7-trimethyluric acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.04 to 70.7</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMU7LC">URDMU7LC - MU7 caffeine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMU7LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MU7 caffeine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MU7 caffeine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">316</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMX1">URXMX1 - 1-methylxanthine (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMX1</dd>
+            <dt>SAS Label: </dt>
+            <dd>1-methylxanthine (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1-methylxanthine (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.04 to 1400</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMX1LC">URDMX1LC - MX1 caffeine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMX1LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MX1 caffeine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MX1 caffeine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMX2">URXMX2 - 3-methylxanthine (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMX2</dd>
+            <dt>SAS Label: </dt>
+            <dd>3-methylxanthine (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3-methylxanthine (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.04 to 830</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMX2LC">URDMX2LC - MX2 caffeine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMX2LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MX2 caffeine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MX2 caffeine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2697</td>
+                <td class="values" align="right">2697</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">17</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMX3">URXMX3 - 7-methylxanthine (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMX3</dd>
+            <dt>SAS Label: </dt>
+            <dd>7-methylxanthine (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">7-methylxanthine (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.04 to 1610</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMX3LC">URDMX3LC - MX3 caffeine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMX3LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MX3 caffeine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MX3 caffeine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2708</td>
+                <td class="values" align="right">2708</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMX4">URXMX4 - 1,3-dimethylxanthine(theophylline)umol/L</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMX4</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,3-dimethylxanthine(theophylline)umol/L</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,3-dimethylxanthine(theophylline)umol/L</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.04 to 338</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMX4LC">URDMX4LC - MX4 caffeine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMX4LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MX4 caffeine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MX4 caffeine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2518</td>
+                <td class="values" align="right">2518</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">196</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMX5">URXMX5 - 1,7-dimethylxanthine(paraxanthine)umol/L</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMX5</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,7-dimethylxanthine(paraxanthine)umol/L</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,7-dimethylxanthine(paraxanthine)(umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 418</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMX5LC">URDMX5LC - MX5 caffeine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMX5LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MX5 caffeine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MX5 caffeine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2596</td>
+                <td class="values" align="right">2596</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">118</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMX6">URXMX6 - 3,7-dimethylxanthine(theobromine)umol/L</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMX6</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,7-dimethylxanthine(theobromine)umol/L</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,7-dimethylxanthine(theobromine)(umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.04 to 482</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMX6LC">URDMX6LC - MX6 caffeine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMX6LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MX6 caffeine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MX6 caffeine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2687</td>
+                <td class="values" align="right">2687</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">27</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMX7">URXMX7 - 1,3,7-trimethylxanthine(caffeine)umol/L</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMX7</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,3,7-trimethylxanthine(caffeine)umol/L</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,3,7-trimethylxanthine(caffeine)(umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 152</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMX7LC">URDMX7LC - MX7 caffeine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMX7LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>MX7 caffeine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MX7 caffeine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2463</td>
+                <td class="values" align="right">2463</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">251</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXAMU">URXAMU - AAMU Caffeine result (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXAMU</dd>
+            <dt>SAS Label: </dt>
+            <dd>AAMU Caffeine result (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">5-acetylamino-6-amino-3-methyluracil(umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 1730</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2714</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDAMULC">URDAMULC - AAMU comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDAMULC</dd>
+            <dt>SAS Label: </dt>
+            <dd>AAMU comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">AAMU comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2647</td>
+                <td class="values" align="right">2647</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">67</td>
+                <td class="values" align="right">2714</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">117</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

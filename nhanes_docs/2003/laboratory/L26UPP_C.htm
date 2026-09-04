@@ -1,0 +1,3083 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>L26UPP_C</title>
+    <meta name="title" content="NHANES 2003-2004: Pesticides - Current Use - Urine (Formerly Priority Pesticides, Non-persistent Pesticide Metabolites) Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#WTSC2YR">WTSC2YR - Environmental C 2 year weights</a>
+              </li>
+              <li>
+                <a href="#URX24D">URX24D - 2,4-D (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URD24DLC">URD24DLC - 2,4-D comment code </a>
+              </li>
+              <li>
+                <a href="#URX25T">URX25T - 2,4,5 Trichlorophenoxyacetic acid (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URD25TLC">URD25TLC - 2,4,5 Trichlorophenoxyacetic acid code</a>
+              </li>
+              <li>
+                <a href="#URXAPE">URXAPE - Acephate (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDAPELC">URDAPELC - Acephate comment code </a>
+              </li>
+              <li>
+                <a href="#URXBSM">URXBSM - Bensulfuron methyl (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDBSMLC">URDBSMLC - Bensulfuron methyl comment code</a>
+              </li>
+              <li>
+                <a href="#URXCBF">URXCBF - Carbofuranphenol (ug/L) </a>
+              </li>
+              <li>
+                <a href="#URDCBFLC">URDCBFLC - Carbofuranphenol comment code</a>
+              </li>
+              <li>
+                <a href="#URXCHS">URXCHS - Chlorsulfuron (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDCHSLC">URDCHSLC - Chlorsulfuron comment code</a>
+              </li>
+              <li>
+                <a href="#URXEMM">URXEMM - Ethametsulfuron methyl (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDEMMLC">URDEMMLC - Ethametsulfuron methyl comment code</a>
+              </li>
+              <li>
+                <a href="#URXETU">URXETU - Ethylenethio urea (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDETULC">URDETULC - Ethylenethio urea comment code </a>
+              </li>
+              <li>
+                <a href="#URXFRM">URXFRM - Foramsulfuron (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDFRMLC">URDFRMLC - Foramsulfuron comment code</a>
+              </li>
+              <li>
+                <a href="#URXHLS">URXHLS - Halosulfuron (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDHLSLC">URDHLSLC - Halosulfuron comment code</a>
+              </li>
+              <li>
+                <a href="#URXMMI">URXMMI - Methamidaphos (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDMMILC">URDMMILC - Methamidaphos comment code </a>
+              </li>
+              <li>
+                <a href="#URXMSM">URXMSM - Mesosulfuron methyl (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDMSMLC">URDMSMLC - Mesosulfuron methyl comment code</a>
+              </li>
+              <li>
+                <a href="#URXMTM">URXMTM - Metsulfuron methyl (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDMTMLC">URDMTMLC - Metsulfuron methyl comment code</a>
+              </li>
+              <li>
+                <a href="#URXMTO">URXMTO - Dimethoate (ug/L) </a>
+              </li>
+              <li>
+                <a href="#URDMTOLC">URDMTOLC - Dimethoate comment code </a>
+              </li>
+              <li>
+                <a href="#URXNOS">URXNOS - Nicosulfuron (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDNOSLC">URDNOSLC - Nicosulfuron comment code</a>
+              </li>
+              <li>
+                <a href="#URXOMO">URXOMO - O-methoate (ug/L) </a>
+              </li>
+              <li>
+                <a href="#URDOMOLC">URDOMOLC - O-methoate comment code </a>
+              </li>
+              <li>
+                <a href="#URXOXS">URXOXS - Oxasulfuron (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDOXSLC">URDOXSLC - Oxasulfuron comment code</a>
+              </li>
+              <li>
+                <a href="#URXPCP">URXPCP - Pentachlorophenol (ug/L) </a>
+              </li>
+              <li>
+                <a href="#URDPCPLC">URDPCPLC - Pentachlorophenol comment code </a>
+              </li>
+              <li>
+                <a href="#URXPIM">URXPIM - Primisulfuron methyl (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDPIMLC">URDPIMLC - Primisulfuron methyl comment code</a>
+              </li>
+              <li>
+                <a href="#URXPPX">URXPPX - 2-isopropoxyphenol (ug/L) </a>
+              </li>
+              <li>
+                <a href="#URDPPXLC">URDPPXLC - 2-isopropoxyphenol comment code </a>
+              </li>
+              <li>
+                <a href="#URXPRO">URXPRO - Prosulfuron (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDPROLC">URDPROLC - Prosulfuron comment code</a>
+              </li>
+              <li>
+                <a href="#URXPTU">URXPTU - Propylenethio urea (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDPTULC">URDPTULC - Propylenethio urea comment code </a>
+              </li>
+              <li>
+                <a href="#URXRIM">URXRIM - Rimsulfuron (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDRIMLC">URDRIMLC - Rimsulfuron comment code</a>
+              </li>
+              <li>
+                <a href="#URXSMM">URXSMM - Sulfometuron methyl (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDSMMLC">URDSMMLC - Sulfometuron methyl comment code</a>
+              </li>
+              <li>
+                <a href="#URXSSF">URXSSF - Sulfosulfuron (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDSSFLC">URDSSFLC - Sulfosulfuron comment code</a>
+              </li>
+              <li>
+                <a href="#URXTHF">URXTHF - Thifensulfuron methyl (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDTHFLC">URDTHFLC - Thifensulfuron methyl comment code</a>
+              </li>
+              <li>
+                <a href="#URXTRA">URXTRA - Triasulfuron (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDTRALC">URDTRALC - Triasulfuron comment code</a>
+              </li>
+              <li>
+                <a href="#URXTRN">URXTRN - Triflusulfuron methyl (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDTRNLC">URDTRNLC - Triflusulfuron methyl comment code</a>
+              </li>
+              <li>
+                <a href="#URXUCR">URXUCR - Creatinine, urine (mg/dL)</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2003-2004 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Pesticides - Current Use - Urine (Formerly Priority Pesticides, Non-persistent Pesticide Metabolites) (L26UPP_C)</h3>
+        <h4> Data File: L26UPP_C.xpt</h4>
+        <h5 class="left">First Published: December 2009</h5>
+        <h5 class="right">Last Revised: August 2011</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Sulfonylurea herbicides are a group of non-selective herbicides that act by disrupting plant protein synthesis. They have been introduced relatively recently and are widely used, but application rates are relatively low. Potential sources for human exposure include foods grown in treated soil or contaminated water. Urinary measurement of sulfonylurea herbicides can be used to assess human exposure.</p>
+<p>Also included are urinary measurements of several organophosphorus pesticides (acephate, methamidophos, dimethoate and its metabolite, omethoate), carbamate pesticide metabolites (carbofuranphenol, isopropoxyphenol), fungicide metabolites (ethylene thiourea, propylene thiourea), herbicides (2,4-dichlorophenoxyacetic acid, 2,4,5-trichorophenoxyacetic acid), and pentachlorophenol. These are a diverse group of chemicals that may have residential and/or agricultural uses, although methamidophos is no longer registered for use in the United States, and carbofuran has restricted use on limited agricultural crops. Human exposure to pesticides may occur through consumption of contaminated food or water, contact with treated surfaces or the pesticide itself, and from inhaling pesticide vapor or fumes.&nbsp;<br />
+&nbsp; </p>
+<p><strong>Acephate (URXAPE), Ethylenethio Urea (URXETU), Methamidaphos (URXMMI), Dimethoate (URXMTO), O-Methoate (URXOMO), and Propylenethio Urea (URXPTU)</strong> </p>
+<p>Acephate (APE), methamidophos (MMI), O-methoate (OMO), and dimethoate (MTO), are organophosphorus (OP) pesticides. OP pesticides are the most commonly used insecticides in agriculture and the domestic field. </p>
+<p>The most widely used fungicides in agriculture are the alkali and metal salts of the alkelenebis-(dithiocarbamate) acids. Ethylenethio urea (ETU) represents the main degradation product of the ethylene bisdithiocarbamates and propylenethio urea (PTU) is the main degradation product of the propylene bisdithiocarbamates. They are foliar applied compounds that control many fungal diseases including early and late blights, leaf spots, rust mildew and scabs in various field crops such as fruits, nuts, cucurbits, vegetables, grapes, and ornamentals.</p>
+<p><strong>Bensulfuron methyl (URXBSM), Chlorsulfuron (URXCHS), Ethametsulfuron methyl (URXEMM), Foramsulfuron (URXFRM), Halosulfuron (URXHLS), Mesosulfuron methyl (URXMSM), Metsulfuron methyl (URXMTM), Nicosulfuron (URXNOS), Oxasulfuron (URXOXS), Primisulfuron methyl (URXPIM), Prosulfuron (URXPRO), Rimsulfuron (URXRIM), Sulfometuron methyl (URXSMM), Sulfosulfuron (URXSSF), Thifensulfuron methyl (URXTHF), Triasulfuron (URXTRA), Triflusulfuron methyl (URXTRN)</strong></p>
+<p><strong>&nbsp;</strong>Because of their increasing use in agricultural applications, a method to measure both occupational and incidental human exposures to Sulfonylurea herbicides was developed.</p>
+<p><strong>Carbofuranphenol (URXCBF), Pentachlorophenol (URXPCP), and 2-isopropoxyphenol (URXPPX)</strong> </p>
+<p>Altogether, these target compounds represent some of the most used pesticides in the United States and give a general, though not total, evaluation of a person&rsquo;s pesticide exposure. </p>
+<p><strong>2,4-D (URX24D), 2,4,5-Trichlorophenoxyacetic acid (URX25T) </strong></p>
+<p>In 1999, an estimated 415,000 tons of conventional pesticides were applied in the United States.&nbsp; The most commonly used pesticide for home and garden was the herbicide 2, 4-D with an estimated use of 3000-4000 tons in those applications, giving an average domestic use per capita of ~ 15g /year.&nbsp; During the same year, the most abundantly applied pesticide in U. S. agriculture was atrazine, with application of 35,000 tons.&nbsp; The widespread use of pesticides and the scientific interest in potential adverse health effect of pesticides exposure have increased the demand for fast and robust analytical methods for measuring markers of possible pesticides.</p>
+<p>This method assesses human exposure to select pesticide metabolites of non-persistent pesticides.&nbsp; It does not directly test for any disease.&nbsp; This method includes specific organophosphorous insecticide metabolites (5-chloro-1-isopropyl-[3H]-1, 2, 4-triazol-3-one; 2-diethylamino-6-methyl pyrimidin-4-ol; 2-isopropyl-6-methyl-4-pyrimidiol; 3-chloro-4-methyl-hydroxycoumarin; 2-[(dimethoxy-phosphorothioyl) sulfanyl] succinic acid; 3, 5, 6-tricholor-2-pyridinol; 4-nitrophenol, synthetic pyrethroids (3-[(1Z)-2-carboxyprop-1-en-1-yl]-2,2-dimethylcyclopropanecarboxylic acid; 3-phenoxybenzoic acid; 4-fluoro-3-phenoxybenzoic acid; cis-3-(2,2-dichlorovinyl)-2,2-dimethyl-cyclopropane-1-carboxylic acid; trans-3-(2,2-dichlorovinyl) -2,2-dimethyl-cyclopropane-1-carboxylic acid; trans - 3 -(2,2 dibromovinyl) -2,2-dimethyl cyclo propane-1-carboxylic acid), herbicides (acetochlor mercapturate; alachlor mercapturate; atrazine mercapturate; metolachlor mercapturate; 2,4-dichloro-phenoxyacetic acid; 2,4,5-trichlorophenoxyacetic acid), and an insect repellant N, N-diethyl-m-toluamide (DEET). </p>
+<p>&nbsp;</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Participants aged 6 years and older who met the subsample requirements. </p>
+<p>&nbsp;</p>
+<h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p><strong>Acephate (URXAPE), Ethylenethio Urea (URXETU), Methamidaphos(URXMMI), Dimethoate (URXMTO), O-Methoate (URXOMO), and Propylenethio Urea (URXPTU)</strong></p>
+<p>The general sample preparation included lyophilization of the urine samples followed by extraction with dichloromethane. The analytical separation was performed by high-performance liquid chromatography (HPLC), and detection by a triple quadrupole mass spectrometer with and APCI source in positive ion mode using multiple reactions monitoring (MRM) and tandem mass spectrometry (MS/MS) analysis. Two different Thermo-Finnigan triple quadrupole mass spectrometers, a TSQ 7000 and a TSQ Quantum Ultra, were used.&nbsp;</p>
+<p><strong>Bensulfuron methyl (URXBSM), Chlorsulfuron (URXCHS), Ethametsulfuron methyl (URXEMM), Foramsulfuron (URXFRM), Halosulfuron (URXHLS), Mesosulfuron methyl (URXMSM), Metsulfuron methyl (URXMTM), Nicosulfuron (URXNOS), Oxasulfuron (URXOXS), Primisulfuron methyl (URXPIM), Prosulfuron (URXPRO), Rimsulfuron (URXRIM), Sulfometuron methyl (URXSMM), Sulfosulfuron (URXSSF), Thifensulfuron methyl (URXTHF), Triasulfuron (URXTRA), Triflusulfuron methyl (URXTRN) <br />
+</strong></p>
+<p>A method for measuring 17 sulfonylurea (SU) herbicides in human urine was developed. Urine samples were extracted using solid phase extraction (SPE), pre-concentrated, and analyzed by high-performance liquid chromatography&ndash;tandem mass spectrometry using turbo-ionspray atmospheric pressure ionization. Carbon 13-labeled ethametsulfuron methyl was used as an internal standard. Chromatographic retention times were under 7 minutes. Total throughput was estimated as &gt;100 samples per day. The limits of detection (LOD) ranged from 0.05 &micro;g/L to 0.10 &micro;g/L with an average LOD of 0.06 &micro;g/L. Average total relative standard deviations were 17%, 12% and 8% at 0.1 &micro;g/L, 3.0 &micro;g/L and 10 &micro;g/L, respectively. Average extraction efficiencies of the SPE cartridges were 87% and 86% at 2.5 &micro;g/L and 25 &micro;g/L, respectively. Chemical degradation in acetonitrile and urine was monitored over 250 days. Estimated days for 10% and 50% degradation in urine and acetonitrile ranged from 0.7 days to &gt;318 days. </p>
+<strong></strong>
+<p><strong>Carbofuranphenol (URXCBF), Pentachlorophenol (URXPCP), and 2-isopropoxyphenol (URXPPX)</strong></p>
+<p>A method to measure 12 urinary phenolic metabolites of pesticides or related chemicals has developed. The target chemicals for our method are 2-isopropoxyphenol; 2,4-dichlorophenol; 2,5-dichlorophenol; carbofuranphenol; 2,4,5-trichlorophenol; 2,4,6-trichlorophenol; 3,5,6-trichloro-2-pyridinol; para-nitrophenol, ortho-phenylphenol, pentachlorophenol, 1-naphthol and 2-naphthol. The sample preparation involves enzyme hydrolysis, isolation of the target chemicals using solid phase extraction cartridges, a phase-transfer catalyzed derivatization, cleanup using sorbent-immobilized liquid /liquid extraction cartridges, and concentration of the sample. Derivatized samples are analyzed by capillary gas chromatography-tandem mass spectroscopy using isotope dilution calibration for quantification. The limits of detection are in the mid ng/L range and the average coefficient of variation was below 15% for most of the analytes. Using our method, we measured concentrations of the target chemicals in urine samples from the general population.</p>
+<p><strong>2,4-D (URX24D), 2,4,5-Trichlorophenoxyacetic acid (URX25T)</strong></p>
+<p>The analytes are extracted and concentrated from the urine matrix using solid phase extraction cartridges, separated through high pressure liquid chromatography, and analyzed on a triple quadrupole mass spectrometer.</p><h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Urine specimens are processed, stored, and shipped to the Division of Laboratory Sciences, National Center for Environmental Health, Centers for Disease Control and Prevention for analysis.<br />
+<br />
+Detailed specimen collection and processing instructions are discussed in the NHANES Laboratory/Medical Technologists Procedures Manual (LPM). Vials are stored under appropriate frozen (–20°C) conditions until they are shipped to National Center for Environmental Health for testing. </p>
+<p><strong>Mobile Examination Centers (MECs)</strong> <br />
+Laboratory team performance is monitored using several techniques. NCHS and contract consultants use a structured quality assurance evaluation during unscheduled visits to evaluate both the quality of the laboratory work and the quality-control procedures. Each laboratory staff person is observed for equipment operation, specimen collection and preparation; testing procedures and constructive feedback are given to each staff. Formal retraining sessions are conducted annually to ensure that required skill levels were maintained. <br />
+<br />
+The NHANES QA/QC protocols meet the 1988 Clinical Laboratory Improvement Amendments mandates. Detailed QA/QC instructions are discussed in the NHANES LPM. <br />
+<br />
+<strong>Analytical Laboratories</strong> <br />
+NHANES uses several methods to monitor the quality of the analyses performed by the laboratories. In the MEC, these methods include performing blind split samples collected on “dry run” sessions. In addition, contract laboratories randomly perform repeat testing on 2.0% of all specimens. <br />
+<br />
+NCEH developed and distributed a quality control protocol for all the laboratories which outlined the Westgard rules used when running NHANES specimens. Any problems encountered during shipping or receipt of specimens, instrument calibration, reagents, and any special considerations are submitted to NCHS and Westat. Summary statistics for each control pool, QC graphs, are reviewed by NCHS for trends or shifts in the data. The laboratories are required to explain any identified areas of concern. <br />
+<br />
+All QC procedures recommended by the manufacturers were followed. Reported results for all assays meet the Division of Laboratory Sciences’ quality control and quality assurance performance criteria for accuracy and precision (similar to specifications outlined by Westgard (1981)). </p>
+<p> </p>
+<h2 id="Analytic_Notes">Analytic Notes</h2><p>The list of chemicals in the following table have been withdrawn from the 2003-2004 Urinary Current Use Pesticide file (L26UPP_C) due to unacceptable measurement variance at or near the limit of detection. <br />
+<br />
+Chemical name <br />
+Atrazine mercapturate <br />
+Atrazine <br />
+Desethyl atrazine mercapturate <br />
+Diaminochloroatrazine <br />
+Desethyl atrazine <br />
+Desisopropyl atrazine <br />
+Acetochlor mercapture <br />
+Alachlor mercapturate <br />
+cis-dibromovinyl-dimethyl cyclopropane carboxylic acid <br />
+cis-dichlorovinyl-dimethylcyclopropane carboxylic acid <br />
+Chloro-dihydro-isopropyl-triazol/one <br />
+cis-dimethylvinyl-dimethylcyclo-propane carboxylic acid <br />
+Chloro-hydroxy-methyl-chromen-ol/one <br />
+DEET <br />
+Diethylaminomethylpyrimidine-ol/one <br />
+Fluoro-phenoxybenzoic acid <br />
+Malathion diacid <br />
+Metolachlor mercapturate <br />
+3-phenoxybenzoic acid <br />
+Paranitrophenol <br />
+trans-dichlorovinyl-dimethylcylopropane carboxylic acid <br />
+<br />
+<strong>Subsample weights</strong> <br />
+Measures of urinary diakyl phosphate metabolites were measured in a one third subsample of persons 6 years and over. Special sample weights are required to analyze these data properly. Specific sample weights for this subsample are included in this data file and should be used when analyzing these data. </p>
+<p><strong>Variance estimation</strong> <br />
+The analysis of NHANES 2003-2004 laboratory data must be conducted with the key survey design and basic demographic variables. The NHANES 2003-2004 Demographic Data File contains demographic and sample design variables. The recommended procedure for variance estimation requires use of stratum and PSU variables (SDMVSTRA and SDMVPSU, respectively) in the demographic data file. </p>
+<p><strong>Links to NHANES Data Files</strong> <br />
+This laboratory data file can be linked to the other NHANES 2003-2004 data files using the unique survey participant identifier SEQN. </p>
+<p><strong>Detection Limits</strong> <br />
+Two variables are provided for each of these analytes. The variable named URD___LC indicates whether the result was below the limit of detection. There are two values: &ldquo;0&rdquo; and &ldquo;1&rdquo;&rdquo;. &ldquo;0&rdquo; means that the result was at or above the limit of detection. &ldquo;1&rdquo; indicates that the result was below the limit of detection. </p>
+<p>The other variable named URX___ provides the analytic result for that analyte. </p>
+<p>The detection limit divided by the square root of 2 is the value that is provided for results that are below the limit of detection. </p>
+<p>Please refer to the Analytic Guidelines for further details on the use of sample weights and other analytic issues. </p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Angerer, J.; Ritter, A. J. Chromatogr., B 1997, 695, 217-226.</li>
+          <li>Baker, S. E.; Barr, D. B.; Driskell, W. J.; Beeson, M. D.; Needham, L. L. J. Exp. Anal. Environ. Epidemiol. 2000, 10, 789-798.
+</li>
+          <li>Bradway, D. E.; Talaat, M. S. J. Agric. Food Chem. 1977, 25, 1342-1344.</li>
+          <li>Brealey, C. J.; Lawrence, D. K. J. Chromatogr. 1979, 168, 461-469.</li>
+          <li>Buchholz, B. A.; Fultz, E.; Haack, K. W.; Vogel, J. S.; Gilman, S. D.;Gee, S. J.; Hammock, B. D.; Hui, X.; Wester, R. C.; Maibach, H. Anal. Chem. 1999, 71, 3519-3525.</li>
+          <li>Driskell, W. J.; Hill, R. H. Bull. Environ. Contam. Toxicol. 1997, 58, 929&#172;933.</li>
+          <li>Driskell, W. J.; Hill, R. H.; Shealy, D. B.; Hull, R. D.; Hines, C. J. Bull. Environ. Contam. Toxicol. 1996, 56, 853-859.</li>
+          <li>Eadsforth, C. V.; Baldwin, M. K. Xenobiotica 1983, 13,67-7</li>
+          <li>Hill, R. H.; Shealy, D. B.; Head, S. L.; Williams, C. C.; Bailey, S. L.; Gregg, M.; Baker, S. E.; Needham, L. L. J. Anal. Toxicol. 1995, 19, 323-329.</li>
+          <li>Jaga K and Dharmani C. Sources of exposure and public health implications for organophosphate pesticides. Rev Panam Salud Publica 2003: 14(3):171-185.</li>
+          <li>Kamanyire R. and Karalliedde L. Organophosphate toxicity and occupational exposure. Occup Med 2004: 54: 69-75.
+</li>
+          <li>Leng, G.; Leng, A.; Ku &#168;hn, K.-H.; Lewalter, J.; Pauluhn, J. Xenobiotica 1997, 27, 1273-1283.</li>
+          <li>Lucas, A. D.; Jones, A. D.; Goodrow, M. H.; Saiz, S. G.; Blewett, C.; Seiber, J. N.; Hammock, B. D. Chem. Res. Toxicol. 1993, 6, 107-116.</li>
+          <li>Moretti, M.; Villarini, M.; Scassellati-Sforzolini, G.; Pasquini, R.; Monarca, S. Arch. Environ. Contam. Toxicol. 1997, 33, 323-328</li>
+          <li>Nolan, R. J.; Rick, D. L.; Freshour, N. L.; Saunders, J. H. Toxicol. Appl. Pharmacol. 1984, 73,8-15.</li>
+          <li>Oneto, M. L.; Basack, S. B.; Kesten, E. M. Sci. Justice 1995, 35, 207-211.</li>
+          <li>Second National Report on Human Exposure to Environmental Chemicals. U.S. Centers for Disease Control and Prevention, National Center for Environmental Health, Division of Laboratory Sciences, Atlanta, 2003. <a href="http://www.cdc.gov/exposurereport/">http://www.cdc.gov/exposurereport/</a>
+          </li>
+          <li>Taylor, W. G.; Spooner, R. W. J. Agric. Food Chem. 1990, 38, 1422-1427.</li>
+          <li>Vettorazzi G., Almeida W.F., Burin G.J., Jaeger R.B., Puga F.R., Rahde A.F., Reyes G.J., and Schvartsman S. International Safety Assessment of Pesticides: Dithiocarbamate Pesticides, ETU, and PTU &#8211; A Review and Update. Teratogenesis Carcinogen Mutagen, 1995: 15:313-337.</li>
+          <li>Westgard JO, Barry PL, Hunt MR, Groth T. Clin Chem. 1981:27;493-501.</li>
+          <li>Woollen, B. H.; Marsh, J. R.; Laird, W. J. D.; Lesser, J. E. Xenobiotica 1992, 22, 983-991.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTSC2YR">WTSC2YR - Environmental C 2 year weights</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTSC2YR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Environmental C 2 year weights</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Environmental C 2 year weights</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 456851.11941</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2612</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URX24D">URX24D - 2,4-D (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URX24D</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,4-D (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,4-D result (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 43.08</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2488</td>
+                <td class="values" align="right">2488</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">124</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URD24DLC">URD24DLC - 2,4-D comment code </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URD24DLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,4-D comment code </dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,4-D comment code </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1645</td>
+                <td class="values" align="right">1645</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">843</td>
+                <td class="values" align="right">2488</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">124</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URX25T">URX25T - 2,4,5 Trichlorophenoxyacetic acid (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URX25T</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,4,5 Trichlorophenoxyacetic acid (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,4,5 Trichlorophenoxyacetic acid (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 42.47</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2416</td>
+                <td class="values" align="right">2416</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">196</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URD25TLC">URD25TLC - 2,4,5 Trichlorophenoxyacetic acid code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URD25TLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,4,5 Trichlorophenoxyacetic acid code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,4,5 Trichlorophenoxyacetic acid code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">208</td>
+                <td class="values" align="right">208</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2208</td>
+                <td class="values" align="right">2416</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">196</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXAPE">URXAPE - Acephate (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXAPE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Acephate (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Acephate (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 8.57</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2491</td>
+                <td class="values" align="right">2491</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">121</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDAPELC">URDAPELC - Acephate comment code </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDAPELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Acephate comment code </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Acephate comment code </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">48</td>
+                <td class="values" align="right">48</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2443</td>
+                <td class="values" align="right">2491</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">121</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXBSM">URXBSM - Bensulfuron methyl (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXBSM</dd>
+            <dt>SAS Label: </dt>
+            <dd>Bensulfuron methyl (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bensulfuron methyl (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.035 to 0.035</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2355</td>
+                <td class="values" align="right">2355</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">257</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDBSMLC">URDBSMLC - Bensulfuron methyl comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDBSMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Bensulfuron methyl comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Bensulfuron methyl comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2355</td>
+                <td class="values" align="right">2355</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">257</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXCBF">URXCBF - Carbofuranphenol (ug/L) </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXCBF</dd>
+            <dt>SAS Label: </dt>
+            <dd>Carbofuranphenol (ug/L) </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Carbofuranphenol (ug/L) result</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.28 to 29.83</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2390</td>
+                <td class="values" align="right">2390</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">222</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDCBFLC">URDCBFLC - Carbofuranphenol comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDCBFLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Carbofuranphenol comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Carbofuranphenol comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">11</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2379</td>
+                <td class="values" align="right">2390</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">222</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXCHS">URXCHS - Chlorsulfuron (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXCHS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Chlorsulfuron (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Chlorsulfuron (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.035 to 0.035</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2100</td>
+                <td class="values" align="right">2100</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">512</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDCHSLC">URDCHSLC - Chlorsulfuron comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDCHSLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Chlorsulfuron comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Chlorsulfuron comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2100</td>
+                <td class="values" align="right">2100</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">512</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXEMM">URXEMM - Ethametsulfuron methyl (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXEMM</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ethametsulfuron methyl (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Ethametsulfuron methyl (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.071 to 0.77</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2321</td>
+                <td class="values" align="right">2321</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">291</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDEMMLC">URDEMMLC - Ethametsulfuron methyl comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDEMMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ethametsulfuron methyl comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Ethametsulfuron methyl comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2318</td>
+                <td class="values" align="right">2321</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">291</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXETU">URXETU - Ethylenethio urea (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXETU</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ethylenethio urea (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Ethylenethio urea (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 20.69</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2169</td>
+                <td class="values" align="right">2169</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">443</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDETULC">URDETULC - Ethylenethio urea comment code </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDETULC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ethylenethio urea comment code </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Ethylenethio urea comment code </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">108</td>
+                <td class="values" align="right">108</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2061</td>
+                <td class="values" align="right">2169</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">443</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXFRM">URXFRM - Foramsulfuron (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXFRM</dd>
+            <dt>SAS Label: </dt>
+            <dd>Foramsulfuron (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Foramsulfuron (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.042 to 0.042</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2255</td>
+                <td class="values" align="right">2255</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">357</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDFRMLC">URDFRMLC - Foramsulfuron comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDFRMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Foramsulfuron comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Foramsulfuron comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2255</td>
+                <td class="values" align="right">2255</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">357</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXHLS">URXHLS - Halosulfuron (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXHLS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Halosulfuron (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Halosulfuron (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.049 to 0.049</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2356</td>
+                <td class="values" align="right">2356</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">256</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDHLSLC">URDHLSLC - Halosulfuron comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDHLSLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Halosulfuron comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Halosulfuron comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2356</td>
+                <td class="values" align="right">2356</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">256</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMMI">URXMMI - Methamidaphos (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMMI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Methamidaphos (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Methamidaphos (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 0.77</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2379</td>
+                <td class="values" align="right">2379</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">233</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMMILC">URDMMILC - Methamidaphos comment code </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMMILC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Methamidaphos comment code </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Methamidaphos comment code </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2371</td>
+                <td class="values" align="right">2379</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">233</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMSM">URXMSM - Mesosulfuron methyl (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMSM</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mesosulfuron methyl (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mesosulfuron methyl (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.035 to 0.035</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2427</td>
+                <td class="values" align="right">2427</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">185</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMSMLC">URDMSMLC - Mesosulfuron methyl comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMSMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mesosulfuron methyl comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mesosulfuron methyl comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2427</td>
+                <td class="values" align="right">2427</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">185</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMTM">URXMTM - Metsulfuron methyl (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMTM</dd>
+            <dt>SAS Label: </dt>
+            <dd>Metsulfuron methyl (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Metsulfuron methyl (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.035 to 0.07</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2360</td>
+                <td class="values" align="right">2360</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">252</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMTMLC">URDMTMLC - Metsulfuron methyl comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMTMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Metsulfuron methyl comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Metsulfuron methyl comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2358</td>
+                <td class="values" align="right">2360</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">252</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMTO">URXMTO - Dimethoate (ug/L) </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMTO</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dimethoate (ug/L) </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Dimethoate (ug/L) </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 2.98</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2455</td>
+                <td class="values" align="right">2455</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">157</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMTOLC">URDMTOLC - Dimethoate comment code </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMTOLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dimethoate comment code </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Dimethoate comment code </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">18</td>
+                <td class="values" align="right">18</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2437</td>
+                <td class="values" align="right">2455</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">157</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXNOS">URXNOS - Nicosulfuron (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXNOS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Nicosulfuron (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Nicosulfuron (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.071 to 0.27</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2322</td>
+                <td class="values" align="right">2322</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">290</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDNOSLC">URDNOSLC - Nicosulfuron comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDNOSLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Nicosulfuron comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Nicosulfuron comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2321</td>
+                <td class="values" align="right">2322</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">290</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXOMO">URXOMO - O-methoate (ug/L) </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXOMO</dd>
+            <dt>SAS Label: </dt>
+            <dd>O-methoate (ug/L) </dd>
+            <dt>English Text: </dt>
+            <dd class="info">O-methoate (ug/L) </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 0.07</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2455</td>
+                <td class="values" align="right">2455</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">157</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDOMOLC">URDOMOLC - O-methoate comment code </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDOMOLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>O-methoate comment code </dd>
+            <dt>English Text: </dt>
+            <dd class="info">O-methoate comment code </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2455</td>
+                <td class="values" align="right">2455</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">157</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXOXS">URXOXS - Oxasulfuron (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXOXS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Oxasulfuron (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Oxasulfuron (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.042 to 0.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2355</td>
+                <td class="values" align="right">2355</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">257</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDOXSLC">URDOXSLC - Oxasulfuron comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDOXSLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Oxasulfuron comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Oxasulfuron comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2354</td>
+                <td class="values" align="right">2355</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">257</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXPCP">URXPCP - Pentachlorophenol (ug/L) </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXPCP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Pentachlorophenol (ug/L) </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Pentachlorophenol (ug/L) result</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.35 to 56.16</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2354</td>
+                <td class="values" align="right">2354</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">258</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDPCPLC">URDPCPLC - Pentachlorophenol comment code </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDPCPLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Pentachlorophenol comment code </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Pentachlorophenol comment code </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">801</td>
+                <td class="values" align="right">801</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1553</td>
+                <td class="values" align="right">2354</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">258</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXPIM">URXPIM - Primisulfuron methyl (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXPIM</dd>
+            <dt>SAS Label: </dt>
+            <dd>Primisulfuron methyl (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Primisulfuron methyl (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.042 to 0.042</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2250</td>
+                <td class="values" align="right">2250</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">362</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDPIMLC">URDPIMLC - Primisulfuron methyl comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDPIMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Primisulfuron methyl comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Primisulfuron methyl comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2250</td>
+                <td class="values" align="right">2250</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">362</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXPPX">URXPPX - 2-isopropoxyphenol (ug/L) </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXPPX</dd>
+            <dt>SAS Label: </dt>
+            <dd>2-isopropoxyphenol (ug/L) </dd>
+            <dt>English Text: </dt>
+            <dd class="info">2-isopropoxyphenol (ug/L) result</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.28 to 0.28</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2387</td>
+                <td class="values" align="right">2387</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">225</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDPPXLC">URDPPXLC - 2-isopropoxyphenol comment code </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDPPXLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2-isopropoxyphenol comment code </dd>
+            <dt>English Text: </dt>
+            <dd class="info">2-isopropoxyphenol comment code </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2387</td>
+                <td class="values" align="right">2387</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">225</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXPRO">URXPRO - Prosulfuron (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXPRO</dd>
+            <dt>SAS Label: </dt>
+            <dd>Prosulfuron (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Prosulfuron(ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.035 to 0.07</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2247</td>
+                <td class="values" align="right">2247</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">365</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDPROLC">URDPROLC - Prosulfuron comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDPROLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Prosulfuron comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Prosulfuron comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2246</td>
+                <td class="values" align="right">2247</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">365</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXPTU">URXPTU - Propylenethio urea (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXPTU</dd>
+            <dt>SAS Label: </dt>
+            <dd>Propylenethio urea (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Propylenethio urea (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 2.74</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2456</td>
+                <td class="values" align="right">2456</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">156</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDPTULC">URDPTULC - Propylenethio urea comment code </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDPTULC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Propylenethio urea comment code </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Propylenethio urea comment code </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2453</td>
+                <td class="values" align="right">2456</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">156</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXRIM">URXRIM - Rimsulfuron (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXRIM</dd>
+            <dt>SAS Label: </dt>
+            <dd>Rimsulfuron (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Rimsulfuron (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.042 to 0.042</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2284</td>
+                <td class="values" align="right">2284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">328</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDRIMLC">URDRIMLC - Rimsulfuron comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDRIMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Rimsulfuron comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Rimsulfuron comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2284</td>
+                <td class="values" align="right">2284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">328</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXSMM">URXSMM - Sulfometuron methyl (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXSMM</dd>
+            <dt>SAS Label: </dt>
+            <dd>Sulfometuron methyl (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Sulfometuron methyl (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.035 to 0.035</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2067</td>
+                <td class="values" align="right">2067</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">545</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDSMMLC">URDSMMLC - Sulfometuron methyl comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDSMMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Sulfometuron methyl comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Sulfometuron methyl comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2067</td>
+                <td class="values" align="right">2067</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">545</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXSSF">URXSSF - Sulfosulfuron (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXSSF</dd>
+            <dt>SAS Label: </dt>
+            <dd>Sulfosulfuron (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Sulfosulfuron (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.035</td>
+                <td class="values">0.035</td>
+                <td class="values" align="right">2389</td>
+                <td class="values" align="right">2389</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">0.07</td>
+                <td class="values">0.07</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">2390</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">0.09</td>
+                <td class="values">0.09</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">2391</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">221</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDSSFLC">URDSSFLC - Sulfosulfuron comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDSSFLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Sulfosulfuron comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Sulfosulfuron comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2389</td>
+                <td class="values" align="right">2391</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">221</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXTHF">URXTHF - Thifensulfuron methyl (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXTHF</dd>
+            <dt>SAS Label: </dt>
+            <dd>Thifensulfuron methyl (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Thifensulfuron methyl (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.057 to 0.057</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2355</td>
+                <td class="values" align="right">2355</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">257</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDTHFLC">URDTHFLC - Thifensulfuron methyl comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDTHFLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Thifensulfuron methyl comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Thifensulfuron methyl comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2355</td>
+                <td class="values" align="right">2355</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">257</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXTRA">URXTRA - Triasulfuron (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXTRA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Triasulfuron (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Triasulfuron (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.049 to 0.049</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2250</td>
+                <td class="values" align="right">2250</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">362</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDTRALC">URDTRALC - Triasulfuron comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDTRALC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Triasulfuron comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Triasulfuron comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2250</td>
+                <td class="values" align="right">2250</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">362</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXTRN">URXTRN - Triflusulfuron methyl (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXTRN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Triflusulfuron methyl (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Triflusulfuron methyl (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.035 to 0.035</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2427</td>
+                <td class="values" align="right">2427</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">185</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDTRNLC">URDTRNLC - Triflusulfuron methyl comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDTRNLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Triflusulfuron methyl comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Triflusulfuron methyl comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2427</td>
+                <td class="values" align="right">2427</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">185</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXUCR">URXUCR - Creatinine, urine (mg/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXUCR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Creatinine, urine (mg/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Creatinine, urine (mg/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">7 to 648</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2530</td>
+                <td class="values" align="right">2530</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">82</td>
+                <td class="values" align="right">2612</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

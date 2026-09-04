@@ -1,0 +1,2347 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>CAFE_G</title>
+    <meta name="title" content="NHANES 2011-2012: Caffeine &amp; Caffeine Metabolites - Urine  Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Method_Files">Laboratory Method Files</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent Sequence Number</a>
+              </li>
+              <li>
+                <a href="#WTSC2YR">WTSC2YR - Two-year C subsample weights</a>
+              </li>
+              <li>
+                <a href="#URXMU1">URXMU1 - 1-methyluric acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMU1LC">URDMU1LC - 1-methyluric acid comment code</a>
+              </li>
+              <li>
+                <a href="#URXMU2">URXMU2 - 3-methyluric acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMU2LC">URDMU2LC - 3-methyluric acid comment code</a>
+              </li>
+              <li>
+                <a href="#URXMU3">URXMU3 - 7-methyluric acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMU3LC">URDMU3LC - 7-methyluric acid comment code</a>
+              </li>
+              <li>
+                <a href="#URXMU4">URXMU4 - 1,3-dimethyluric acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMU4LC">URDMU4LC - 1,3-dimethyluric acid comment code</a>
+              </li>
+              <li>
+                <a href="#URXMU5">URXMU5 - 1,7-dimethyluric acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMU5LC">URDMU5LC - 1,7-dimethyluric acid comment code</a>
+              </li>
+              <li>
+                <a href="#URXMU6">URXMU6 - 3,7-dimethyluric acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMU6LC">URDMU6LC - 3,7-dimethyluric acid comment code</a>
+              </li>
+              <li>
+                <a href="#URXMU7">URXMU7 - 1,3,7-trimethyluric acid (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMU7LC">URDMU7LC - 1,3,7-trimethyluric acid comment code</a>
+              </li>
+              <li>
+                <a href="#URXMX1">URXMX1 - 1-methylxanthine (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMX1LC">URDMX1LC - 1-methylxanthine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMX2">URXMX2 - 3-methylxanthine (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMX2LC">URDMX2LC - 3-methylxanthine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMX3">URXMX3 - 7-methylxanthine (umol/L)</a>
+              </li>
+              <li>
+                <a href="#URDMX3LC">URDMX3LC - 7-methylxanthine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMX4">URXMX4 - 1,3-dimethylxanthine(theophylline)umol/L</a>
+              </li>
+              <li>
+                <a href="#URDMX4LC">URDMX4LC - 1,3-dimethylxanthine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMX5">URXMX5 - 1,7-dimethylxanthine(paraxanthine)umol/L</a>
+              </li>
+              <li>
+                <a href="#URDMX5LC">URDMX5LC - 1,7-dimethylxanthine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMX6">URXMX6 - 3,7-dimethylxanthine(theobromine)umol/L</a>
+              </li>
+              <li>
+                <a href="#URDMX6LC">URDMX6LC - 3,7-dimethylxanthine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMX7">URXMX7 - 1,3,7-trimethylxanthine(caffeine)umol/L</a>
+              </li>
+              <li>
+                <a href="#URDMX7LC">URDMX7LC - 1,3,7-trimethylxanthine comment code</a>
+              </li>
+              <li>
+                <a href="#URXAMU">URXAMU - 5-actylamino-6-amno-3-methyluracil(uM/L)</a>
+              </li>
+              <li>
+                <a href="#URDAMULC">URDAMULC - 5-actylamno-6-amno-3-methylucl cmnt code</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2011-2012 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Caffeine &amp; Caffeine Metabolites - Urine  (CAFE_G)</h3>
+        <h4> Data File: CAFE_G.xpt</h4>
+        <h5 class="left">First Published: January 2020</h5>
+        <h5 class="right">Last Revised: NA</h5>
+        <h5 class="specialnote">Note: See Analytic Note describing the change in method in the 2011-2012 survey cycle.</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Caffeine is an alkaloid that is known to have psychoactive
+stimulatory effects. Caffeine naturally occurs in plants (e.g., coffee beans,
+tea leaves, cocoa beans, cola nuts), and the dietary consumption of &nbsp;&nbsp;caffeine originates mainly from derivative
+beverages (e.g., coffee, tea, cola drinks) and foods (e.g., chocolate).
+Caffeine is also used as a food additive in beverages (e.g., caffeinated soft
+drinks, &ldquo;energy&rdquo; drinks) and as a drug either on its own or as an adjuvant in
+certain medications (e.g., analgesics).</p>
+<p>Given the high prevalence of behaviorally active caffeine doses
+in the worldwide diet, significant scientific interest in the health effects of
+caffeine has developed. As a psychoactive stimulant, the behavioral effects of
+caffeine, such as its effect on mental alertness, have been studied
+extensively, and topics such as caffeine tolerance, addiction, and withdrawal
+have also been examined.&nbsp; Caffeine
+consumption has been studied as a risk factor for many diseases and conditions,
+including hypertension, bone density, cardiovascular diseases, various cancers,
+reproduction and developmental abnormalities, and mental and behavioral
+disorders.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Examined participants aged 6 years and older from a
+one-third sample were eligible.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>Caffeine and 14 of its metabolites are quantified in
+urine by use of high-performance liquid chromatography-electrospray
+ionization-tandem quadrupole mass spectrometry (HPLC-ESI-MS/MS) with stable
+isotope labeled internal standards. A 50-&micro;L aliquot of urine is first diluted
+with 450 &micro;L of water. Then, 100 &micro;L of the diluted urine is combined with 120 &micro;L
+of a 0.2 N NaOH solution containing stable isotope labeled internal standards.
+The mixture is incubated for at least 30 min at room temperature, facilitating
+the conversion of an unstable uracil metabolite into a more stable form.
+Samples are then acidified with 30 &micro;L of 2.0 N HCl and 250 &micro;L of a 1:9
+methanol/water solution containing 0.1% formic acid such that the matrix of the
+sample is similar to the starting mobile phase composition of the analysis
+step. Samples are filtered and analyzed by use of HPLC-ESI-MS/MS in both
+positive and negative ionization modes. Quantitation is based on peak area
+ratios interpolated against an 11-point calibration curve derived from calibrators
+in synthetic urine.&nbsp; &nbsp;</p>
+<p>Refer to the Laboratory Method Files section for a
+detailed description of the laboratory methods used.</p>
+<p>There were no
+changes to the lab method, lab equipment, or lab site for this component during
+the NHANES 2011-2012 cycle.</p><h2 id="Laboratory_Method_Files">Laboratory Method Files</h2>
+        <p>
+          <a target="_blank" href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2011/labmethods/CAFE_G_MET.pdf">Caffeine and Caffeine Metabolites</a>
+          <span> (January 2020)</span>
+        </p>
+        <h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Urine samples were processed, stored, and shipped to the
+Division of Laboratory Sciences, National Center for Environmental Health,
+Centers for Disease Control and Prevention, Atlanta, GA for analysis. </p>
+<p>Detailed instructions on specimen collection and
+processing are discussed in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2011/manuals/2011-12_laboratory_procedures_manual.pdf" target="_blank">NHANES </a><a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2011/manuals/2011-12_laboratory_procedures_manual.pdf" target="_blank">Laboratory Procedures Manual (LPM). </a>Vials were stored under the appropriate
+frozen (-30<sup>o</sup>C) conditions until they were shipped to the National
+Center for Environmental Health for testing.&nbsp;
+</p>
+<p>The NHANES quality assurance and quality control (QA/QC)
+protocols meet the 1988 Clinical Laboratory Improvement Amendments mandates. Detailed
+QA/QC instructions are discussed in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2011/manuals/2011-12_laboratory_procedures_manual.pdf" target="_blank">NHANES LPM</a>.</p>
+<p><b>Mobile Examination Center (MECs)</b></p>
+<p>Laboratory team performance is monitored using several
+techniques. NCHS and contract consultants use a structured competency
+assessment evaluation during visits to evaluate both the quality of the
+laboratory work and the quality-control procedures. Each laboratory staff member
+is observed for equipment operation, specimen collection and preparation;
+testing procedures and constructive feedback are given to each staff member.
+Formal retraining sessions are conducted annually to ensure that required skill
+levels were maintained.</p>
+<p><b>Analytical Laboratories</b></p>
+<p>NHANES uses several methods to monitor the quality of the
+analyses performed by the contract laboratories. In the MEC, these methods
+include performing blind split samples collected during &ldquo;dry run&rdquo; sessions. In
+addition, contract laboratories randomly perform repeat testing on 2% of all
+specimens.</p>
+<p>NCHS developed and distributed a quality control protocol
+for all CDC and contract laboratories, which outlined the use of Westgard rules
+(Westgard,
+et al. 1981)
+when running NHANES specimens. Progress reports containing any problems
+encountered during shipping or receipt of specimens, summary statistics for
+each control pool, QC graphs, instrument calibration, reagents, and any special
+considerations are submitted to NCHS quarterly. The reports are reviewed for trends
+or shifts in the data. The laboratories are required to explain any identified
+areas of concern.</p>
+<p>All QC procedures recommended by the manufacturers were
+followed. Reported results for all assays meet the Division of Laboratory
+Sciences&rsquo; quality control and quality assurance performance criteria for
+accuracy and precision, similar to the Westgard rules (Caudill, et al. 2008).</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>The data were reviewed.
+Incomplete data or improbable values were sent to the performing laboratory for
+confirmation.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Refer to the <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overviewlab.aspx?BeginYear=2011" target="_blank">2011-2012 Laboratory Data Overview</a>
+for general information on NHANES laboratory data.&nbsp; </p>
+<p>Please refer to the NHANES <a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx" target="_blank">Analytic Guidelines </a>and the on-line NHANES <a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/" target="_blank">Tutorial</a> for details on the
+use of sample weights and analytic issues. </p>
+<p><b>Subsample Weights </b></p>
+<p>Urinary caffeine and caffeine metabolites were measured
+in a one-third subsample of participants 6 years and over. Special sample
+weights are required to analyze these data properly. Specific sample weights
+for this subsample are included in this data file and should be used when
+analyzing these data.&nbsp;
+&nbsp;</p>
+<p><b>Demographic and Other Related Variables</b></p>
+<p>The analysis of NHANES laboratory data must be conducted using
+the appropriate survey design and demographic variables.&nbsp; The <a href="https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Demographics&amp;CycleBeginYear=2011" target="_blank">NHANES 2011-2012 Demographic File</a> contains demographic data,
+health indicators, and other related information collected during household
+interviews as well as the sample design variables.&nbsp; The recommended procedures for variance
+estimation requires use of stratum and PSU variables (SDMVSTRA and SDMVPSU,
+respectively) in the demographic data file. </p>
+<p>This laboratory data can be
+linked to the other NHANES data files using the unique survey participant
+identifier (i.e., SEQN).</p>
+<p>Starting in the 2011-2012 NHANES
+cycle, the variable URXUCR (urine creatinine) will not be reported with this
+file. URXUCR can be found in the data file titled &ldquo;Albumin &amp; Creatinine &ndash;
+Urine&rdquo;.</p>
+<p><b>Detection Limits</b> </p>
+<p>The detection limits were constant for all of the analytes
+in the data set. Two variables are provided for each of these analytes. The
+variable name ending in &ldquo;LC&rdquo; (ex., URDMU1LC) indicates whether the result was
+below the limit of detection: the value &ldquo;0&rdquo; means that the result was at or
+above the limit of detection, &ldquo;1&rdquo; indicates that the result was below the limit
+of detection. The other variable prefixed URX (ex., URXMU1) provides the
+analytic result for that analyte. For analytes with analytic results below the
+lower limit of detection (ex., URDHU1LC = 1), an imputed fill value was placed in
+the analyte result field. The value is the lower limit of detection divided by
+the square root of 2 (LLOD/sqrt[2]).</p>
+<p>The
+lower limit of detection (LLOD in umol/L)&nbsp;for caffeine and caffeine metabolites:&nbsp;</p>
+<table width="587" style="width: 440.5pt; border-collapse: collapse; mso-yfti-tbllook: 1184; mso-padding-alt: 0in 0in 0in 0in;" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr style="height: 18.75pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
+            <td style="background: #00b050; padding: 0in 5.4pt; border: 1pt solid windowtext; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><b><span style="font-family: Calibri;">VARIABLE</span></b></p>
+            </td>
+            <td style="background: #00b050; border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: windowtext windowtext windowtext #000000; padding: 0in 5.4pt; border-image: none; width: 238.5pt; height: 18.75pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><b><span style="font-family: Calibri;">SAS LABEL</span></b></p>
+            </td>
+            <td valign="top" style="background: #00b050; border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: windowtext windowtext windowtext #000000; padding: 0in; border-image: none; width: 94.5pt; height: 18.75pt;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><b><span style="font-family: Calibri;">LLOD</span></b></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 1;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXMU1</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">1-methyluric acid (umol/L)</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.05</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 2;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXMU2</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">3-methyluric acid (umol/L)</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.1</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 3;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXMU3</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">7-methyluric acid (umol/L)</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.04</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 4;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXMU4</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">1,3-dimethyluric acid (umol/L)</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.02</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 5;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXMU5</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">1,7-dimethyluric acid (umol/L)</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.02</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 6;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXMU6</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">3,7-dimethyluric acid (umol/L)</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.03</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 7;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXMU7</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">1,3,7-trimethyluric acid (umol/L)</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.005</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 8;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXMX1</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">1-methylxanthine (umol/L)</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.03</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 9;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXMX2</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">3-methylxanthine (umol/L)</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.04</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 10;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXMX3</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">7-methylxanthine (umol/L)</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.02</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 11;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXMX4</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">1,3-dimethylxanthine (theophylline) (umol/L)</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.01</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 12;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXMX5</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">1,7-dimethylxanthine (paraxanthine) (umol/L)</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.006</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 13;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXMX6</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">3,7-dimethylxanthine (theobromine) (umol/L)</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.004</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 14;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXMX7</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">1,3,7-trimethylxanthine (caffeine) (umol/L)</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.003</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 15; mso-yfti-lastrow: yes;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 107.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">URXAMU</span></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in 5.4pt; width: 238.5pt; height: 18.75pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">5-acetylamino-6-amino-3-methyluracil</span></p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 0in; width: 94.5pt; height: 18.75pt; background-color: transparent;">
+            <p style="margin: 0in 0in 8pt; text-align: center; line-height: 115%;"><span style="font-family: Calibri;">0.1</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p><b>Caffeine and caffeine
+metabolite regression equations recommended when comparing or combining
+2011-2012 and 2009-2010 data: </b></p>
+<p>A method validation
+(bridging) study was performed to assess possible differences resulting from an
+instrument change in the 2011-2012 cycle. Urine caffeine and caffeine metabolites
+were measured by use of HPLC-ESI-MS/MS for both NHANES 2009-2010 and 2011-2012 cycles,
+but with different instruments for each cycle. In both NHANES cycles, urine
+caffeine and caffeine metabolites were analyzed using both polarity modes to
+ensure best possible measurement sensitivity, i.e., some compounds were
+measured as positive ions and others as negative ions. For NHANES 2009&ndash;2010,
+the instrument used was not suitable for analyzing both positive and negative
+ions simultaneously so each urine specimen was analyzed twice: once to obtain
+data for positive ion compounds, and a second time to obtain data for negative
+ion compounds. For NHANES 2011&ndash;2012, the instrument that was used had improved
+polarity-switching capabilities and could be used to measure both positive and
+negative ions in a single analysis. </p>
+<p>A convenience sample (n=180)
+of surplus urine specimens from NHANES 2009&ndash;2010 participants were measured
+using the 2011-2012 instrument in 2014. These data were then compared with
+their original 2009-2010 results measured during August 2011 through October 2012. Data from the bridging study indicated that the correlation coefficient (<i>r</i>) between the measurements for all
+caffeine analytes ranged between 0.990 to 0.998. To account for observed proportional
+differences in variability, weighted Deming regressions were chosen to compare the
+urine caffeine results (umol/L). The list of analytes and the results from the bridging study for each
+analyte, including the number of valid specimens (n), median of the differences
+(% Diff, in %) and correlation coefficients (<i>r</i>) between the two measurements, as well as the forward and
+backward adjustment equations are provided in the table below. Analyses were
+performed using Analyse-it, v4.30.4. </p>
+<p>The method validation
+study tested specimens from the same participants on both instruments; however,
+this testing was not performed concurrently.&nbsp;
+Although the analysis laboratory has a comprehensive set of policies and
+procedures in place to ensure the quality and consistency of specimen storage,
+handling, and analysis over time, the non-concurrent nature of the bridging
+study may have been affected by unknown or unidentified temporal factors. </p>
+<p>These regression
+equations are recommended when examining trends of urine caffeine data across the
+2009-2010 and 2011-2012 cycles or combining data from these two cycles for
+analysis. </p>
+<table width="642" style="border: currentColor; border-image: none; width: 481.25pt; border-collapse: collapse; mso-yfti-tbllook: 1184; mso-padding-alt: 2.15pt 0in 2.15pt 0in; mso-border-alt: solid windowtext .5pt; mso-border-insideh: .5pt solid windowtext; mso-border-insidev: .5pt solid windowtext;" border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr style="height: 18.75pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
+            <td style="background: #00b050; padding: 0in 5.4pt; border: 1pt solid windowtext; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; mso-border-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;"><b>Analyte</b></p>
+            </td>
+            <td style="background: #00b050; border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: windowtext windowtext windowtext #000000; padding: 2.15pt 0in; border-image: none; width: 34pt; height: 18.75pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;"><b>n<sup>1</sup></b></p>
+            </td>
+            <td style="background: #00b050; border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: windowtext windowtext windowtext #000000; padding: 2.15pt 0in; border-image: none; width: 145.65pt; height: 18.75pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;"><b>Forward
+            Equation [CI]</b></p>
+            </td>
+            <td style="background: #00b050; border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: windowtext windowtext windowtext #000000; padding: 2.15pt 0in; border-image: none; width: 154.05pt; height: 18.75pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;"><b>Backward
+            Equation [CI]</b></p>
+            </td>
+            <td style="background: #00b050; border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: windowtext windowtext windowtext #000000; padding: 2.15pt 0in; border-image: none; width: 45.1pt; height: 18.75pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;"><b>% Diff<sup>2</sup></b></p>
+            </td>
+            <td style="background: #00b050; border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: windowtext windowtext windowtext #000000; padding: 2.15pt 0in; border-image: none; width: 42.35pt; height: 18.75pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;"><b><i style="mso-bidi-font-style: normal;">r</i></b><b><sup>3</sup></b></p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 1;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXMU1<b style="mso-bidi-font-weight: normal;"><sup>4</sup></b></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">171</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">N/A</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">N/A</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">-1.40</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.995</p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 2;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXMU2</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">137</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(11-12)</sub>
+            = -0.013 [-0.036, 0.010] + 1.119 [1.067, 1.170] * X<sub>(09-10)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(09-10)</sub>
+            = 0.012 [-0.009, 0.032] + 0.894 [0.853, 0.935] * X<sub>(11-12)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">10.3</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.990</p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 3;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXMU3</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">165</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(11-12)</sub>
+            = 0.003 [-0.033, 0.040] + 1.023 [1.008, 1.038] * X<sub>(09-10)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(09-10)</sub>
+            = -0.003 [-0.039, 0.033] + 0.978 [0.964, 0.992] * X<sub>(11-12)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">1.58</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.997</p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 4;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXMU4</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">163</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(11-12)</sub>
+            = -0.012 [-0.027, 0.003] + 0.980 [0.968, 0.993] * X<sub>(09-10)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(09-10)</sub>
+            = 0.012 [-0.003, 0.027] + 1.020 [1.007, 1.033] * X<sub>(11-12)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">-3.15</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.996</p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 5;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXMU5</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">167</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(11-12)</sub>
+            = -0.002 [-0.020, 0.016] + 1.014 [1.003, 1.026] * X<sub>(09-10)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(09-10)</sub>
+            = 0.002 [-0.015, 0.019] + 0.986 [0.975, 0.997] * X<sub>(11-12)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">1.49</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.998</p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 6;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXMU6<sup>4</sup></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">158</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">N/A</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">N/A</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">2.53</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.996</p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 7;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXMU7</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">153</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(11-12)</sub>
+            = -0.002 [-0.011, 0.007] + 1.033 [1.017, 1.048] * X<sub>(09-10)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(09-10)</sub>
+            = 0.002 [-0.006, 0.010] + 0.968 [0.954, 0.983] * X<sub>(11-12)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">2.96</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.998</p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 8;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXMX1</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">170</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(11-12)</sub>
+            = -0.025 [-0.072, 0.021] + 1.021 [1.009, 1.034] * X<sub>(09-10)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(09-10)</sub>
+            = 0.025 [-0.020, 0.070] + 0.979 [0.967, 0.991] * X<sub>(11-12)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">1.49</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.997</p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 9;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXMX2</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">165</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(11-12)</sub>
+            = -0.005 [-0.029, 0.019] + 1.134 [1.115, 1.153] * X<sub>(09-10)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(09-10)</sub>
+            = 0.005 [-0.016, 0.025] + 0.882 [0.867, 0.896] * X<sub>(11-12)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">12.9</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.995</p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 10;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXMX3</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">169</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(11-12)</sub>
+            = 0.203 [-0.073, 0.479] + 1.183 [1.155, 1.210] * X<sub>(09-10)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(09-10)</sub>
+            = -0.172 [-0.411, 0.068] + 0.846 [0.826, 0.865] * X<sub>(11-12)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">18.4</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.997</p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 11;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXMX4</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">158</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(11-12)</sub>
+            = 0.005 [-0.005, 0.016] + 1.036 [1.017, 1.054] * X<sub>(09-10)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(09-10)</sub>
+            = -0.005 [-0.015, 0.004] + 0.965 [0.948, 0.983] * X<sub>(11-12)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">3.41</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.995</p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 12;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXMX5</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">165</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(11-12)</sub>
+            = -0.006 [-0.022, 0.010] + 1.029 [1.014, 1.044] * X<sub>(09-10)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(09-10)</sub>
+            = 0.006 [-0.009, 0.022] + 0.972 [0.958, 0.986] * X<sub>(11-12)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">3.06</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.996</p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 13;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXMX6</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">168</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(11-12)</sub>
+            = -0.026 [-0.043, -0.008] + 1.019 [1.009, 1.029] * X<sub>(09-10)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(09-10)</sub>
+            = 0.025 [0.008, 0.043] +<br />
+            0.981 [0.971, 0.991] * X<sub>(11-12)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">1.20</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.998</p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 14;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXMX7</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">148</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(11-12)</sub>
+            = 0.026 [-0.002, 0.053] + 1.045 [1.028, 1.062] * X<sub>(09-10)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(09-10)</sub>
+            = -0.025 [-0.051, 0.002] + 0.957 [0.941, 0.973] * X<sub>(11-12)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">5.58</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.998</p>
+            </td>
+        </tr>
+        <tr style="height: 18.75pt; mso-yfti-irow: 15; mso-yfti-lastrow: yes;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 0in 5.4pt; border-image: none; width: 60.1pt; height: 18.75pt; white-space: nowrap; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">URXAMU</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 34pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">165</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 145.65pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(11-12)</sub>
+            = 2.116 [1.714, 2.517] + 0.976 [0.954, 0.997] * X<sub>(09-10)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 154.05pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal; -ms-layout-grid-mode: char;">Y<sub>(09-10)</sub>
+            = -2.168 [-2.618, -1.718] + 1.025 [1.002, 1.047] * X<sub>(11-12)</sub></p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 45.1pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">3.45</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 2.15pt 0in; width: 42.35pt; height: 18.75pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal; -ms-layout-grid-mode: char;">0.998</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p><sup>1</sup><b><sup> </sup></b>Records with values&nbsp;&lt; LOD or missing were not included in the analysis</p>
+<p><a name="_Hlk27396656"><sup>2 </sup></a>The median of the percent differences (calculated as [(New-Old)/Old] * 100)
+was presented to indicate the crude difference between the two measurements. </p>
+<p><sup>3 </sup>Pearson&rsquo;s correlation
+coefficient (<i>r</i>) between the
+measurements. </p>
+<p><sup>4</sup><b><sup> </sup></b>The weighted Deming regression equations did not show a significant slope
+or intercept (i.e., 95% confidence interval [CI] for slope included 1 and for
+intercept included 0), therefore, it was determined that the results for URXMU1
+and
+URXMU6 did not need to be adjusted.</p>
+<p>&nbsp;</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li><p style="margin: 8.4pt 0in 8pt; line-height: normal; mso-margin-bottom-alt: auto; tab-stops: 405.0pt;">Caudill SP,
+Schleicher RL, Pirkle JL. 2008. Multi-rule quality control for the age-related
+eye disease study. Stat Med 27:4094-4106.</p></li>
+          <li><p style="margin: 8.4pt 0in; line-height: normal; tab-stops: 6.0in;">Westgard
+J.O., Barry P.L., Hunt M.R., Groth T. A multi-rule Shewhart chart for quality
+control in clinical chemistry. Clin Chem (1981) 27:493-501.</p></li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent Sequence Number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent Sequence Number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent Sequence Number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTSC2YR">WTSC2YR - Two-year C subsample weights</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTSC2YR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Two-year C subsample weights</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Two-year C subsample weights</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">14032.338381 to 649694.78163</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2441</td>
+                <td class="values" align="right">2441</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">No Lab Specimen</td>
+                <td class="values" align="right">64</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMU1">URXMU1 - 1-methyluric acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMU1</dd>
+            <dt>SAS Label: </dt>
+            <dd>1-methyluric acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1-methyluric acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.657 to 2620</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMU1LC">URDMU1LC - 1-methyluric acid comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMU1LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1-methyluric acid comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1-methyluric acid comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMU2">URXMU2 - 3-methyluric acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMU2</dd>
+            <dt>SAS Label: </dt>
+            <dd>3-methyluric acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3-methyluric acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.071 to 44.9</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMU2LC">URDMU2LC - 3-methyluric acid comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMU2LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>3-methyluric acid comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3-methyluric acid comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">1864</td>
+                <td class="values" align="right">1864</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">534</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMU3">URXMU3 - 7-methyluric acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMU3</dd>
+            <dt>SAS Label: </dt>
+            <dd>7-methyluric acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">7-methyluric acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.028 to 710</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMU3LC">URDMU3LC - 7-methyluric acid comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMU3LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>7-methyluric acid comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">7-methyluric acid comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2383</td>
+                <td class="values" align="right">2383</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMU4">URXMU4 - 1,3-dimethyluric acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMU4</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,3-dimethyluric acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,3-dimethyluric acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.014 to 2220</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMU4LC">URDMU4LC - 1,3-dimethyluric acid comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMU4LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,3-dimethyluric acid comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,3-dimethyluric acid comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2335</td>
+                <td class="values" align="right">2335</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">63</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMU5">URXMU5 - 1,7-dimethyluric acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMU5</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,7-dimethyluric acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,7-dimethyluric acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.014 to 785</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMU5LC">URDMU5LC - 1,7-dimethyluric acid comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMU5LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,7-dimethyluric acid comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,7-dimethyluric acid comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2342</td>
+                <td class="values" align="right">2342</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">56</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMU6">URXMU6 - 3,7-dimethyluric acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMU6</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,7-dimethyluric acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,7-dimethyluric acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.021 to 51.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMU6LC">URDMU6LC - 3,7-dimethyluric acid comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMU6LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,7-dimethyluric acid comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,7-dimethyluric acid comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2270</td>
+                <td class="values" align="right">2270</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">128</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMU7">URXMU7 - 1,3,7-trimethyluric acid (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMU7</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,3,7-trimethyluric acid (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,3,7-trimethyluric acid (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.004 to 47.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMU7LC">URDMU7LC - 1,3,7-trimethyluric acid comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMU7LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,3,7-trimethyluric acid comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,3,7-trimethyluric acid comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2288</td>
+                <td class="values" align="right">2288</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">110</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMX1">URXMX1 - 1-methylxanthine (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMX1</dd>
+            <dt>SAS Label: </dt>
+            <dd>1-methylxanthine (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1-methylxanthine (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.098 to 1380</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMX1LC">URDMX1LC - 1-methylxanthine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMX1LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1-methylxanthine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1-methylxanthine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMX2">URXMX2 - 3-methylxanthine (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMX2</dd>
+            <dt>SAS Label: </dt>
+            <dd>3-methylxanthine (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3-methylxanthine (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.028 to 1260</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMX2LC">URDMX2LC - 3-methylxanthine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMX2LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>3-methylxanthine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3-methylxanthine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2375</td>
+                <td class="values" align="right">2375</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">23</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMX3">URXMX3 - 7-methylxanthine (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMX3</dd>
+            <dt>SAS Label: </dt>
+            <dd>7-methylxanthine (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">7-methylxanthine (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.052 to 2150</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMX3LC">URDMX3LC - 7-methylxanthine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMX3LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>7-methylxanthine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">7-methylxanthine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMX4">URXMX4 - 1,3-dimethylxanthine(theophylline)umol/L</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMX4</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,3-dimethylxanthine(theophylline)umol/L</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,3-dimethylxanthine (theophylline)(umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.007 to 584</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMX4LC">URDMX4LC - 1,3-dimethylxanthine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMX4LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,3-dimethylxanthine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,3-dimethylxanthine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2318</td>
+                <td class="values" align="right">2318</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">80</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMX5">URXMX5 - 1,7-dimethylxanthine(paraxanthine)umol/L</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMX5</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,7-dimethylxanthine(paraxanthine)umol/L</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,7-dimethylxanthine (paraxanthine) (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.004 to 286</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMX5LC">URDMX5LC - 1,7-dimethylxanthine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMX5LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,7-dimethylxanthine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,7-dimethylxanthine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2377</td>
+                <td class="values" align="right">2377</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">21</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMX6">URXMX6 - 3,7-dimethylxanthine(theobromine)umol/L</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMX6</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,7-dimethylxanthine(theobromine)umol/L</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,7-dimethylxanthine (theobromine)(umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.003 to 512</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMX6LC">URDMX6LC - 3,7-dimethylxanthine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMX6LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,7-dimethylxanthine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,7-dimethylxanthine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2394</td>
+                <td class="values" align="right">2394</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMX7">URXMX7 - 1,3,7-trimethylxanthine(caffeine)umol/L</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMX7</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,3,7-trimethylxanthine(caffeine)umol/L</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,3,7-trimethylxanthine (caffeine)(umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.002 to 75</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2398</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMX7LC">URDMX7LC - 1,3,7-trimethylxanthine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMX7LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,3,7-trimethylxanthine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,3,7-trimethylxanthine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2319</td>
+                <td class="values" align="right">2319</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">79</td>
+                <td class="values" align="right">2398</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXAMU">URXAMU - 5-actylamino-6-amno-3-methyluracil(uM/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXAMU</dd>
+            <dt>SAS Label: </dt>
+            <dd>5-actylamino-6-amno-3-methyluracil(uM/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">5-acetylamino-6-amino-3-methyluracil (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.4 to 2270</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2397</td>
+                <td class="values" align="right">2397</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">108</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDAMULC">URDAMULC - 5-actylamno-6-amno-3-methylucl cmnt code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDAMULC</dd>
+            <dt>SAS Label: </dt>
+            <dd>5-actylamno-6-amno-3-methylucl cmnt code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">5-acetylamino-6-amino-3-methyluracil comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">2397</td>
+                <td class="values" align="right">2397</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2397</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">108</td>
+                <td class="values" align="right">2505</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

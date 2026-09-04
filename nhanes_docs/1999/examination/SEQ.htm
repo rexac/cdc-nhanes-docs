@@ -1,0 +1,1075 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>SEQ</title>
+    <meta name="title" content="NHANES 1999-2000: Shared Exclusion Questions Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Interview_Setting_and_Mode_of_Administration">Interview Setting and Mode of Administration</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#SEQ010">SEQ010 - Hemophilia?</a>
+              </li>
+              <li>
+                <a href="#SEQ020">SEQ020 - Cancer chemotherapy past or future 4 wks</a>
+              </li>
+              <li>
+                <a href="#SEQ030">SEQ030 - Pacemaker or automatic defibrillator?</a>
+              </li>
+              <li>
+                <a href="#SEQ040">SEQ040 - Amputations of legs/feet other than toes</a>
+              </li>
+              <li>
+                <a href="#SEQ050">SEQ050 - Where is the amputation?</a>
+              </li>
+              <li>
+                <a href="#SEQ060">SEQ060 - Are you currently pregnant?</a>
+              </li>
+              <li>
+                <a href="#SEQ070">SEQ070 - How many weeks?</a>
+              </li>
+              <li>
+                <a href="#WHQ020L">WHQ020L - How much weight without clothes or shoes</a>
+              </li>
+              <li>
+                <a href="#SEQ080">SEQ080 - CV  Exclusion &amp; Physician Medical Review</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>1999-2000 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Shared Exclusion Questions (SEQ)</h3>
+        <h4> Data File: SEQ.xpt</h4>
+        <h5 class="left">First Published: June 2002</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p >Exclusion criteria were developed to prevent survey participants with specific health conditions from receiving certain MEC examination components for reasons of safety. In addition, criteria for exclusion were developed to address specific health conditions that would affect data collection or grading. Some exclusion criteria applied to more than one component. Therefore, a system of shared exclusion questions (variable name prefix SEQ) was developed so that a participant would only be asked about a condition one time. The information would be communicated or "shared" with multiple survey examination components. </p>
+
+<h2 id="Interview_Setting_and_Mode_of_Administration">Interview Setting and Mode of Administration</h2><p><strong>Question and related examinations</strong> </p>
+<p>The NHANES Integrated Survey Information System (ISIS) shares information that was obtained during the Household Interview. Following the Household interview, the survey participant is asked questions that may affect their ability to safely participate in certain MEC examination components. If the response to any of these questions excludes the survey participant from the component(s), the Coordinator System in the MEC “blocks” the survey participant from the examination component(s). If the question is not answered during the Household Interview, it is asked in the first examination component the question is shared with. During the course of the MEC examination, the reporting of results affecting the safety or physical inability of the survey participant to conduct an examination triggers a blocking procedure. This procedure includes the following: </p>
+<ul>
+    <li>Automatic profile update to block the examinations affected. </li>
+    <li>Coordinator receives an alert message indicating the block. </li>
+    <li>The system is updated to reflect the new blocking information. </li>
+</ul>
+<p>The factors for blocking are listed below and are compiled during the interview process.</p>
+<p>
+<table>
+    <thead>
+        <tr>
+            <th id="ms__id139_heading_0"> Question</th>
+            <th id="ms__id139_heading_1">Component Question is Shared </th>
+            <th id="ms__id139_heading_2"> Blocked Component of Section</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td headers="ms__id139_heading_0">
+            <p><span style="font-size: 13px;">Do you have any amputations of your legs and feet other than toes? </span></p>
+            <p><span style="font-size: 13px;">1 = Yes <br />
+            2 = No </span></p>
+            </td>
+            <td headers="ms__id139_heading_1"><span style="font-size: 13px;">Muscle Strength <br />
+            Physician <br />
+            LED <br />
+            Body Composition<br />
+            Balance </span></td>
+            <td headers="ms__id139_heading_2"><span style="font-size: 13px;">Balance if 1 <br />
+            CV if 1 <br />
+            BC (BIA Section) if 1 <br />
+            Phys. (CV Section) if 1 </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id139_heading_0"><span style="font-size: 13px;">Where is the amputation?
+            <p style="text-align: left;">1 = Right leg <br />
+            2 = Left leg <br />
+            3 = Both legs </p>
+            </span></td>
+            <td headers="ms__id139_heading_1"><span style="font-size: 13px;">Muscle Strength <br />
+            Physician <br />
+            LED <br />
+            Body Composition<br />
+            Balance </span></td>
+            <td headers="ms__id139_heading_2"><span style="font-size: 13px;">MS (Isokinetic Testing Section) if 1 or 3 <br />
+            LED if 3</span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id139_heading_0"><span style="font-size: 13px;">How much do you weigh without clothes or shoes? </span></td>
+            <td headers="ms__id139_heading_1"><span style="font-size: 13px;">Muscle Strength <br />
+            Physician <br />
+            LED <br />
+            Body Composition<br />
+            Balance</span></td>
+            <td headers="ms__id139_heading_2"><span style="font-size: 13px;">Balance if &gt; 275 <br />
+            LED if &gt; 400 <br />
+            CV if &gt; 350 <br />
+            BC &gt; 300 <br />
+            Phys. (CV Section) &gt; 350 </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id139_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Do you have a pacemaker or automatic defibrillator? </p>
+            <p style="text-align: left;">1 = Yes <br />
+            2 = No <br />
+            9 = Don’t know </p>
+            </span></td>
+            <td headers="ms__id139_heading_1"><span style="font-size: 13px;">Body Composition<br />
+            Physician <br />
+            Dental </span></td>
+            <td headers="ms__id139_heading_2"><span style="font-size: 13px;">CV if 1 or 9 <br />
+            BC (BIA Section) if 1 or 9 <br />
+            Phys. (CV Section) if 1 or 9 <br />
+            Dental (Perio. &amp; Root Caries) if 1 or 9 </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id139_heading_0"><span style="font-size: 13px;">Do you have hemophilia?
+            <p style="text-align: left;">1 = Yes <br />
+            2 = No <br />
+            7 = Refusal <br />
+            9 = Don’t know </p>
+            </span></td>
+            <td headers="ms__id139_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">Phlebotomy<br />
+            Dental </p>
+            </span></td>
+            <td headers="ms__id139_heading_2"><span style="font-size: 13px;">Phlebotomy if 1, 7, or 9 <br />
+            Dental (Perio. &amp; Root Caries) if 1 </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id139_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Have you received cancer chemotherapy in the past four weeks or do you anticipate such therapy in the next four weeks? </p>
+            <p style="text-align: left;">1 = Yes <br />
+            2 = No <br />
+            7 = Refusal <br />
+            9 = Don’t know </p>
+            </span></td>
+            <td headers="ms__id139_heading_1">Phlebotomy </td>
+            <td headers="ms__id139_heading_2"><span style="font-size: 13px;">Phlebotomy if 1, 7, or 9 <br />
+            1999 NHANES only: Dental (Perio. &amp; Root Caries) if 1 or 9 </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id139_heading_0">
+            <p><span style="font-size: 13px;">Are you currently pregnant? </span></p>
+            <p><span style="font-size: 13px;">1 = Yes <br />
+            2 = No <br />
+            9 = Don’t know </span></p>
+            </td>
+            <td headers="ms__id139_heading_1"><span style="font-size: 13px;">Physician <br />
+            Body Composition </span></td>
+            <td headers="ms__id139_heading_2"><span style="font-size: 13px;">BC if 1 or 9 </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id139_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">How many weeks? </p>
+            <p style="text-align: left;">99 = Don’t know </p>
+            </span></td>
+            <td headers="ms__id139_heading_1"><span style="font-size: 13px;">Physician <br />
+            Body Composition </span></td>
+            <td headers="ms__id139_heading_2"><span style="font-size: 13px;">
+            <p style="text-align: left;">CV if 12 or 99<br />
+            <span style="font-size: 13px;">Phys, (CV Section) if 12 or 9
+            <p>&nbsp;</p>
+            </span></p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id139_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Pulse Rate </p>
+            </span></td>
+            <td headers="ms__id139_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">Physician </p>
+            </span></td>
+            <td headers="ms__id139_heading_2"><span style="font-size: 13px;">
+            <p style="text-align: left;">CV if &gt; 100 <br />
+            Phys, (CV Section) if &gt; 100 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id139_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Systolic Blood Pressure Average </p>
+            </span></td>
+            <td headers="ms__id139_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">Physician </p>
+            </span></td>
+            <td headers="ms__id139_heading_2"><span style="font-size: 13px;">
+            <p style="text-align: left;">CV if &gt; 180 <br />
+            Phys, (CV Section) if &gt; 180 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id139_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Diastolic Blood Pressure Average </p>
+            </span></td>
+            <td headers="ms__id139_heading_1">
+            <p style="text-align: left;">Physician </p>
+            </td>
+            <td headers="ms__id139_heading_2"><span style="font-size: 13px;">
+            <p style="text-align: left;">CV if &gt; 100 <br />
+            Phys, (CV Section) if &gt; 100 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id139_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Number of Missed Heart Beats </p>
+            </span></td>
+            <td headers="ms__id139_heading_1">
+            <p style="text-align: left;">Physician </p>
+            </td>
+            <td headers="ms__id139_heading_2"><span style="font-size: 13px;">
+            <p style="text-align: left;">CV if &gt; 3<br />
+            Phys, (CV Section) if &gt; 3 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id139_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Prescription Medication </p>
+            </span></td>
+            <td headers="ms__id139_heading_1">
+            <p style="text-align: left;">Physician Review</p>
+            </td>
+            <td headers="ms__id139_heading_2"><span style="font-size: 13px;">
+            <p style="text-align: left;">CV <br />
+            Phys, (CV Section) </p>
+            </span></td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<p>
+<table>
+    <caption valign="top" align="center">Table 1.1 CV Block Due to Data Collected During the Household Questionnaire</caption>
+    <thead>
+        <tr>
+            <th id="ms__id138_heading_0"> Question</th>
+            <th id="ms__id138_heading_1">Component Question is Shared </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td headers="ms__id138_heading_0">
+            <p><span style="font-size: 13px;">Congestive Heart Failure </span></p>
+            <p><span style="font-size: 13px;">If 1, 7, or 9 </span></p>
+            </td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">MCQ.160b </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">Coronary Heart Disease
+            <p style="text-align: left;">If 1, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">MCQ.160c </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">Angina
+            <p style="text-align: left;">If 1, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">MCQ.160d </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">Myocardial Infarction
+            <p style="text-align: left;">If 1, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">MCQ.160e </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">Stroke
+            <p style="text-align: left;">If 1, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">MCQ.160f </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">Emphysema
+            <p style="text-align: left;">If 1, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">MCQ.160g </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">Difficulty Walking ¼ Mile
+            <p style="text-align: left;">If 3, 4, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">PFQ.060b </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Difficulty Walking Up 10 Steps </p>
+            <p style="text-align: left;">If 3, 4, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">PFQ.060c </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Difficulty Walking One Room to Another </p>
+            <p style="text-align: left;">If 3, 4, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">PFQ.060h </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Standing Up from Armless Chair </p>
+            <p style="text-align: left;">If 3, 4, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">PFQ.060i </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Back or Neck Problem </p>
+            <p style="text-align: left;">If = 11 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">PFQ.067 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Developmental Problems </p>
+            <p style="text-align: left;">If = 15 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">PFQ.067 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Fractures/Bond Injury </p>
+            <p style="text-align: left;">If = 17 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">PFQ.067 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Heart Problems </p>
+            <p style="text-align: left;">If = 19 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">PFQ.067 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Lung/Breathing Problems </p>
+            <p style="text-align: left;">If = 21 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">PFQ.067 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Stroke Problem </p>
+            <p style="text-align: left;">If = 25 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">PFQ.067 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Refused </p>
+            <p style="text-align: left;">If = 77 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">PFQ.067 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Do Not Know </p>
+            <p style="text-align: left;">If = 99 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">PFQ.067 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Use of a Device or Cane </p>
+            <p style="text-align: left;">If 1, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">PFQ.090 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Retinopathy </p>
+            <p style="text-align: left;">If 1, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">DIQ.080 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Stop when Walking on Own Pace on Level </p>
+            <p style="text-align: left;">If 1, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">CDQ.030 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Shortness of Breath – 100 Yards </p>
+            <p style="text-align: left;">If 1, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">CDQ.040 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">PND </p>
+            <p style="text-align: left;">If 1, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">CDQ.050 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">PND – Relieved by Sitting on Side of Bed</p>
+            <p style="text-align: left;">If 1, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">CDQ.060 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Orthopnea </p>
+            <p style="text-align: left;">If 1, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">CDQ.070 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Wheezing in Past 12 Months </p>
+            <p style="text-align: left;">&gt;= 12 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">RDQ.080 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Wheezing the Limits Speech (Last 12 Months) </p>
+            <p style="text-align: left;">If 1, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">RDQ.110 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">
+            <p style="text-align: left;">Blind </p>
+            <p style="text-align: left;">If 1, 7, or 9 </p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">VIQ.020 </p>
+            </span></td>
+        </tr>
+        <tr>
+            <td headers="ms__id138_heading_0"><span style="font-size: 13px;">Very Poor Eyesight
+            <p style="text-align: left;">If 5, 7, or 9</p>
+            </span></td>
+            <td headers="ms__id138_heading_1"><span style="font-size: 13px;">
+            <p style="text-align: left;">VIQ.030 </p>
+            </span></td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<p><strong>Blocking Body Composition Component Testing Due to Pregnancy Status </strong></p>
+<p>For female participants, the survey participant is blocked from the Body Composition component by the MEC Coordinator ‘s workstation until a pregnancy result is obtained from the MEC laboratory. Pregnancy testing was done on females 18 to 59 years of age during the 1999 data collection year. During the 2000 data collection cycle, menstruating females 8-11 years and all females 12-59 received a pregnancy test. A positive pregnancy test excluded the survey participant from the Body Composition component. The MEC physician's ISIS subsystem was also updated to show the pregnancy results. If a positive pregnancy result was determined after the survey participant had seen the Physician, and the survey participant was not aware of the condition, the MEC Coordinator’s screen was updated to indicate that the survey participant must see the Physician again prior to leaving the MEC. </p>
+<p><strong>Blocking of an survey participant from CV Fitness Pending Physician Exam</strong> </p>
+<p>The Physician exam must be completed before the Coordinator system allows the survey participant to perform the CV Fitness exam. Based on the survey participant’s pulse rate and blood pressure as detailed in the blocking chart, he/she may be excluded from CV Fitness. Additionally, the Physician must review the survey participant’s medical history and ask an additional set of safety exclusion questions prior to the administration of the CV Fitness examination.</p>
+</div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQ010">SEQ010 - Hemophilia?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQ010</dd>
+            <dt>SAS Label: </dt>
+            <dd>Hemophilia?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Hemophilia?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">8598</td>
+                <td class="values" align="right">8601</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">8602</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">8604</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">228</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQ020">SEQ020 - Cancer chemotherapy past or future 4 wks</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQ020</dd>
+            <dt>SAS Label: </dt>
+            <dd>Cancer chemotherapy past or future 4 wks</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Have you received cancer chemotherapy in the past four weeks or do you anticipate such therapy in the next four weeks?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">32</td>
+                <td class="values" align="right">32</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">8467</td>
+                <td class="values" align="right">8499</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8499</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8499</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">333</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQ030">SEQ030 - Pacemaker or automatic defibrillator?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQ030</dd>
+            <dt>SAS Label: </dt>
+            <dd>Pacemaker or automatic defibrillator?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Do you have a pacemaker or automatic defibrillator?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 8 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">37</td>
+                <td class="values" align="right">37</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">7240</td>
+                <td class="values" align="right">7277</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">7280</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1552</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQ040">SEQ040 - Amputations of legs/feet other than toes</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQ040</dd>
+            <dt>SAS Label: </dt>
+            <dd>Amputations of legs/feet other than toes</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Do you have any amputations of your legs and feet other than toes?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 8 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">10</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">7224</td>
+                <td class="values" align="right">7234</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1598</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQ050">SEQ050 - Where is the amputation?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQ050</dd>
+            <dt>SAS Label: </dt>
+            <dd>Where is the amputation?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Where is the amputation?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 8 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Right</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">5</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Left</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Both</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">10</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8822</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQ060">SEQ060 - Are you currently pregnant?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQ060</dd>
+            <dt>SAS Label: </dt>
+            <dd>Are you currently pregnant?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Are you currently pregnant?</dd>
+            <dt>Target: </dt>
+            <dd> Females only 12 YEARS -
+			59 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2307</td>
+                <td class="values" align="right">2591</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">2607</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6225</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQ070">SEQ070 - How many weeks?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQ070</dd>
+            <dt>SAS Label: </dt>
+            <dd>How many weeks?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">How many weeks?</dd>
+            <dt>Target: </dt>
+            <dd> Females only 12 YEARS -
+			59 YEARS</dd>
+            <dt>Hard Edits: </dt>
+            <dd class="info">0.0000 to 45.0000</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">4 to 40</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">279</td>
+                <td class="values" align="right">279</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">99</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8548</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WHQ020L">WHQ020L - How much weight without clothes or shoes</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WHQ020L</dd>
+            <dt>SAS Label: </dt>
+            <dd>How much weight without clothes or shoes</dd>
+            <dt>English Text: </dt>
+            <dd class="info">How much {do you/does SP} weigh without clothes or shoes?</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">ENTER NUMBER OF POUNDS</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 8 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">35 to 420</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7386</td>
+                <td class="values" align="right">7386</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">77777</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">7386</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">99999</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">7386</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1446</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQ080">SEQ080 - CV  Exclusion &amp; Physician Medical Review</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQ080</dd>
+            <dt>SAS Label: </dt>
+            <dd>CV  Exclusion &amp; Physician Medical Review</dd>
+            <dt>English Text: </dt>
+            <dd class="info">CV  Exclusions and Medical Review by Physicion</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			49 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Excluded</td>
+                <td class="values" align="right">367</td>
+                <td class="values" align="right">367</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Reviewed, not excluded</td>
+                <td class="values" align="right">3426</td>
+                <td class="values" align="right">3793</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5039</td>
+                <td class="values" align="right">8832</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,633 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>FETIB_J</title>
+    <meta name="title" content="NHANES 2017-2018: Iron Status - Serum Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Method_Files">Laboratory Method Files</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#LBXIRN">LBXIRN - Iron frozen, Serum (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDIRNSI">LBDIRNSI - Iron frozen, Serum (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBXUIB">LBXUIB - UIBC, Serum (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDUIBLC">LBDUIBLC - UIBC, Serum Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBDUIBSI">LBDUIBSI - UIBC, Serum (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDTIB">LBDTIB - Total Iron Binding Capacity TIBC (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDTIBSI">LBDTIBSI - Tot Iron Binding Capacity TIBC (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDPCT">LBDPCT - Transferrin Saturation (%) </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2017-2018 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Iron Status - Serum (FETIB_J)</h3>
+        <h4> Data File: FETIB_J.xpt</h4>
+        <h5 class="left">First Published: February 2020</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Specific goals of
+the serum iron status component include providing data in a nationally
+representative sample to: 1) assess overall iron status and function; 2) assess
+iron deficiency anemia and anemias of chronic diseases; 3) monitor trends in
+measures of nutritional status; and 4) assess and provide estimates of liver
+function in support of the liver elastography component.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Examined
+participants aged 12 years and older were eligible.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>All methods were
+measured on the Roche Cobas 6000 (c501 module) analyzer.</p>
+<p><b>Iron (Frozen)</b></p>
+<p>The Roche method
+of iron measurement is a three-step process using FerroZine reagent: Fe3+ is
+liberated from transferrin by acid/detergent, Fe3+ is reduced to Fe2+ by
+ascorbate, and the reduced iron then reacts with the FerroZine reagent to form
+a colored complex. The intensity of this final product is directly proportional
+to the iron concentration in the sample. </p>
+<p><b>Unsaturated Iron Binding Capacity (UIBC) </b></p>
+<p>In the first step
+of the measurement process in the Roche method for UIBC, excess Fe2+ is added
+to the specimen. In an alkaline environment it is converted to Fe3+ as it binds
+to the unbound endogenous transferrin. The unbound Fe2+ in the reagent then
+reacts with FerroZine reagent to form a colored compound. This is an inverse
+outcome: greater color development indicates the transferrin is more highly
+occupied by iron (low UIBC). Lesser color development indicates that the transferrin
+has more binding capacity available (high UIBC). Because of this characteristic
+and the calibration model, all results are multiplied by a factor (-1) to yield
+a positive result. This is a two-point, endpoint reaction, with measurement
+occurring at 546 nm (secondary wavelength 700 nm).</p>
+<p><b>Total Iron Binding Capacity (TIBC) </b></p>
+<p>Total Iron Binding
+Capacity (TIBC) was calculated indirectly using Iron (frozen), serum and Unsaturated
+Iron Binding Capacity, serum (UIBC):</p>
+<p><b>Calculated TIBC (LBDTIB) =</b> [Iron (frozen), serum (LBXIRN) +
+UIBC, serum (LBXUIB)]</p>
+<p><b>Transferrin Saturation (%Sat)</b></p>
+<p>Transferrin saturation
+(%Sat) value was calculated using Iron (frozen), serum and calculated Total
+Iron Binding Capacity (TIBC):</p>
+<p><b>Calculated %Sat (LBDPCT) =</b> [Iron (frozen), serum (LBXIRN) /
+TIBC (LBDTIB)] x 100 </p>
+<p>Refer to the
+Laboratory Method Files section for a detailed description of the laboratory
+methods used.</p>
+<p>This is a new
+component in the NHANES 2017-2018 survey cycle.</p><h2 id="Laboratory_Method_Files">Laboratory Method Files</h2>
+        <p>
+          <a target="_blank" href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2017/labmethods/FETIB-J-MET-Iron-(Frozen)-508.pdf">Iron Status - Iron (Frozen)</a>
+          <span> (February 2020)</span>
+        </p>
+        <p>
+          <a target="_blank" href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2017/labmethods/FETIB-J-MET-UIBC-508.pdf">Iron Status - UIBC (Frozen)</a>
+          <span> (February 2020)</span>
+        </p>
+        <h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Serum specimens were
+processed, stored, and shipped to the University of Minnesota, Minneapolis, MN
+for analysis.</p>
+<p>Detailed
+instructions on specimen collection and processing are discussed in the NHANES <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2017/manuals/2017_MEC_Laboratory_Procedures_Manual.pdf">Laboratory
+Procedures Manual (LPM)</a>. Vials are stored
+under appropriate frozen (&ndash;30&deg;C) conditions until they are shipped to
+University of Minnesota for testing. </p>
+<p>The NHANES quality
+assurance and quality control (QA/QC) protocols meet the 1988 Clinical
+Laboratory Improvement Act mandates. Detailed QA/QC instructions are discussed
+in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2017/manuals/2017_MEC_Laboratory_Procedures_Manual.pdf">NHANES LPM</a>.</p>
+<p><b>Mobile Examination
+Centers (MECs)</b> </p>
+<p>Laboratory team
+performance is monitored using several techniques. NCHS and contract
+consultants use a structured competency assessment evaluation during visits to
+evaluate both the quality of the laboratory work and the quality control
+procedures. Each laboratory staff member is observed for equipment operation,
+specimen collection and preparation; testing procedures and constructive
+feedback are given to each staff member. Formal retraining sessions are
+conducted annually to ensure that required skill levels were maintained.</p>
+<p><b>Analytical
+Laboratories</b> </p>
+<p>NHANES uses
+several methods to monitor the quality of the analyses performed by the
+contract laboratories. In the MEC, these methods include performing blind split
+specimens collected on &ldquo;dry run&rdquo; sessions. In addition, contract laboratories
+randomly perform repeat testing on 2% of all specimens. </p>
+<p>NCHS developed and
+distributed a quality control protocol for all CDC and contract laboratories,
+which outlined the use of Westgard rules (Westgard et al., 1981) when running
+NHANES specimens. Progress reports containing any problems encountered during
+shipping or receipt of specimens, summary statistics for each control pool, QC
+graphs, instrument calibration, reagents, and any special considerations are submitted
+to NCHS quarterly. The reports are reviewed for trends or shifts in the data.
+The laboratories are required to explain any identified areas of concern. </p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>The data were
+reviewed. Incomplete data or improbable values were sent to the performing laboratory
+for confirmation. </p>
+<p>There were three
+additional variables created in this data file to convert the analyzed values
+into International System of Units (SI). These variables were created using the
+following formulas:</p>
+<p><b>LBDIRNSI</b></p>
+<p>The iron frozen,
+serum (LBXIRN) in ug/dL was converted to umol/L (LBDIRNSI) by multiplying by <b>0.1791</b>.</p>
+<p><b>LBDUIBSI</b></p>
+<p>The Unsaturated
+Iron Binding Capacity, serum (LBXUIB) in ug/dL was converted to umol/L (LBDUIBSI)
+by multiplying by <b>0.1791</b>.</p>
+<p><b>LBDTIBSI</b></p>
+<p>The calculated Total
+Iron Binding Capacity (LBXTIB) in ug/dL was converted to umol/L (LBDTIBSI) by
+multiplying by <b>0.1791</b>. </p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Refer to the 2017-2018 Laboratory Data Overview for general
+information on NHANES laboratory data.</p>
+<p>There are over 800 laboratory tests performed on NHANES participants. However, not all participants provided biospecimens or enough volume for all the tests to be performed. The specimen availability can also vary by age or other population characteristics. For example, in 2017-2018, approximately 80% of children aged 1-17 years who were examined in the MEC provided a blood specimen through phlebotomy, while 95% of examined adults age 18 and older provided a blood specimen. Analysts should evaluate the extent of missing data in the dataset related to the outcome of interest as well as any predictor variables used in the analyses to determine whether additional re-weighting for item non-response is necessary.</p>
+<p>Please refer to
+the NHANES <a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx" target="_blank">Analytic
+Guidelines </a>and the on-line <a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/" target="_blank">NHANES </a><a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/" target="_blank">Tutorial</a> for further details on the use of sample weights and other analytic
+issues. </p>
+<p><b>Demographic and
+Other Related Variables </b></p>
+<p>The analysis of
+NHANES laboratory data must be conducted using the appropriate survey design
+and demographic variables. The <a href="https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Demographics&amp;CycleBeginYear=2017" target="_blank">NHANES 2017-2018
+Demographics File </a>contains demographic data, health indicators, and
+other related information collected during household interviews as well as the
+sample design variables. The recommended procedure for variance estimation
+requires use of stratum and PSU variables (SDMVSTRA and SDMVPSU, respectively)
+in the demographic data file. </p>
+<p>The <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2017/datafiles/fastqx_j.htm" target="_blank">Fasting Questionnaire File </a>includes auxiliary
+information such as fasting status, length of fast, and the time of
+venipuncture. </p>
+<p>The laboratory
+data file can be linked to other NHANES data file using the unique survey
+participant identifier (i.e., SEQN). </p>
+<p><b>Detection Limits</b> </p>
+<p>The detection
+limits were constant for this analyte in the data set. </p>
+<p>The lower limit of
+detection (LLOD, in ug/dL) for serum iron and UIBC: </p>
+<div style="text-align: center;">
+<table width="0" border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td style="width: 143px;">
+            <p style="text-align: center;"><b>Variable Name</b></p>
+            </td>
+            <td style="width: 324px;">
+            <p style="text-align: center;"><b>Analyte Description</b></p>
+            </td>
+            <td style="width: 104px;">
+            <p style="text-align: center;"><b>LLOD</b></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 143px;">
+            <p style="text-align: center;">LBXIRN</p>
+            </td>
+            <td style="width: 324px;">
+            <p style="text-align: center;">Iron
+            frozen, Serum (ug/dL)</p>
+            </td>
+            <td style="width: 104px;">
+            <p style="text-align: center;">5</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 143px;">
+            <p style="text-align: center;">LBXUIB</p>
+            </td>
+            <td style="width: 324px;">
+            <p style="text-align: center;">Unsaturated
+            Iron Binding Capacity (UIBC), Serum (ug/dL)</p>
+            </td>
+            <td style="width: 104px;">
+            <p style="text-align: center;">17</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Westgard J.O., Barry P.L., Hunt M.R., Groth T. A multi-rule Shewhart chart for quality control in clinical chemistry. Clin Chem (1981) 27:493-501.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXIRN">LBXIRN - Iron frozen, Serum (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXIRN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Iron frozen, Serum (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Iron frozen, Serum (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11 to 481</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5922</td>
+                <td class="values" align="right">5922</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">479</td>
+                <td class="values" align="right">6401</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDIRNSI">LBDIRNSI - Iron frozen, Serum (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDIRNSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Iron frozen, Serum (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Iron frozen, Serum (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2 to 86.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5922</td>
+                <td class="values" align="right">5922</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">479</td>
+                <td class="values" align="right">6401</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXUIB">LBXUIB - UIBC, Serum (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXUIB</dd>
+            <dt>SAS Label: </dt>
+            <dd>UIBC, Serum (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Unsaturated Iron Binding Capacity (UIBC), Serum (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">12 to 602</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5899</td>
+                <td class="values" align="right">5899</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">502</td>
+                <td class="values" align="right">6401</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDUIBLC">LBDUIBLC - UIBC, Serum Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDUIBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>UIBC, Serum Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Unsaturated Iron Binding Capacity (UIBC), Serum Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above detection limit</td>
+                <td class="values" align="right">5893</td>
+                <td class="values" align="right">5893</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">5899</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">502</td>
+                <td class="values" align="right">6401</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDUIBSI">LBDUIBSI - UIBC, Serum (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDUIBSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>UIBC, Serum (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Unsaturated Iron Binding Capacity (UIBC), Serum (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.18 to 107.82</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5899</td>
+                <td class="values" align="right">5899</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">502</td>
+                <td class="values" align="right">6401</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDTIB">LBDTIB - Total Iron Binding Capacity TIBC (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDTIB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total Iron Binding Capacity TIBC (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total Iron Binding Capacity TIBC (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">139 to 621</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5893</td>
+                <td class="values" align="right">5893</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">508</td>
+                <td class="values" align="right">6401</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDTIBSI">LBDTIBSI - Tot Iron Binding Capacity TIBC (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDTIBSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Tot Iron Binding Capacity TIBC (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total Iron Binding Capacity (TIBC) (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">24.89 to 111.22</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5893</td>
+                <td class="values" align="right">5893</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">508</td>
+                <td class="values" align="right">6401</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDPCT">LBDPCT - Transferrin Saturation (%) </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDPCT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Transferrin Saturation (%) </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Transferrin Saturation (%) </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2 to 92</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5893</td>
+                <td class="values" align="right">5893</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">508</td>
+                <td class="values" align="right">6401</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

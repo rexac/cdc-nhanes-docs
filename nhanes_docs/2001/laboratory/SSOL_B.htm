@@ -1,0 +1,1241 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>SSOL_B</title>
+    <meta name="title" content="NHANES 2001-2002: Monoclonal gammopathy of undetermined significance (MGUS) (Surplus) Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#SSIMP">SSIMP - PEL_Impression</a>
+              </li>
+              <li>
+                <a href="#SSRES">SSRES - IF_Result</a>
+              </li>
+              <li>
+                <a href="#SSSPIKE">SSSPIKE - Size of peak if available</a>
+              </li>
+              <li>
+                <a href="#SSSPIKE2">SSSPIKE2 - Size of 2nd peak if available</a>
+              </li>
+              <li>
+                <a href="#SSTOTAL">SSTOTAL - Total_Protein</a>
+              </li>
+              <li>
+                <a href="#SSALB">SSALB - Albumin</a>
+              </li>
+              <li>
+                <a href="#SSA1">SSA1 - Alpha1</a>
+              </li>
+              <li>
+                <a href="#SSA2">SSA2 - Alpha2</a>
+              </li>
+              <li>
+                <a href="#SSBETA">SSBETA - Beta</a>
+              </li>
+              <li>
+                <a href="#SSGAM">SSGAM - Gamma</a>
+              </li>
+              <li>
+                <a href="#SSAG_R">SSAG_R - Albumin/Gamma</a>
+              </li>
+              <li>
+                <a href="#SSK_FLC">SSK_FLC - Kappa FLC</a>
+              </li>
+              <li>
+                <a href="#SSL_FLC">SSL_FLC - Lambda FLC</a>
+              </li>
+              <li>
+                <a href="#SSKL_R">SSKL_R - K/L Ratio</a>
+              </li>
+              <li>
+                <a href="#SSK_FLCX">SSK_FLCX - Denotes imprecise kappa (n=2)</a>
+              </li>
+              <li>
+                <a href="#SSKL_RX">SSKL_RX - Denotes imprecise k/l (n=2)</a>
+              </li>
+              <li>
+                <a href="#SSIS">SSIS - Flag:Insufficient sample</a>
+              </li>
+              <li>
+                <a href="#SSTTGV">SSTTGV - TTG IGA value</a>
+              </li>
+              <li>
+                <a href="#SSTTGR">SSTTGR - TTG IGA result</a>
+              </li>
+              <li>
+                <a href="#SSEMA">SSEMA - EMA result</a>
+              </li>
+              <li>
+                <a href="#SSSERO">SSSERO - Serology result (associated with CD)</a>
+              </li>
+              <li>
+                <a href="#SSOL_H">SSOL_H - Heavy chain MGUS</a>
+              </li>
+              <li>
+                <a href="#SSOL_L">SSOL_L - Light chain MGUS</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2001-2002 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Monoclonal gammopathy of undetermined significance (MGUS) (Surplus) (SSOL_B)</h3>
+        <h4> Data File: SSOL_B.xpt</h4>
+        <h5 class="left">First Published: August 2012</h5>
+        <h5 class="right">Last Revised: April 2022</h5>
+        <h5 class="specialnote">Note: The NHANES Biospecimen Program processes were reevaluated in 2021 and 2022 to monitor quality control after a procedural error was identified. This error did not pose any risk of participant disclosure. Addressing this error resulted in the removal of some records from various stored biospecimen data files between 1999 and 2018 that did not meet program standards. After a comprehensive review of all stored specimen datasets, this data file was modified to remove records (<5% of records) that were initially included in error. No data values were altered. The sample weights and overall estimates were compared between the original and revised files. The sample weights provided with the original data release are appropriate to use with this updated data file; therefore, no new survey weights were created. The overall estimates from these files were examined and are consistent with the previous file. However, not all possible analyses were performed. For any queries related to this dataset please email the Biospecimen Program at serumplasmaurine@cdc.gov.</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Conduct serum protein electrophoresis, immunofixation analyses, and kappa and lambda free light chain (FLC) assays in serum, to determine the age-adjusted prevalence and monoclonal protein size distribution of MGUS by ethnic/racial group. Using our results from applied serum analyses, in combination with available information from the NHANES surveys (such as data from medical exams; routine blood samples; questionnaires covering medical history, drug intake, nutrition, smoking, and demographics), we will be able to dissect etiologic mechanisms involved in MGUS development and transformation to full-blown multiple myeloma.</p>
+<p>Because the mucosal immune system is a a major site of extrinsic immune stimuation, and celiac disease is associated with a potent stimulation of the gut immune system, elaborating both T cell and B cell mediated immune responses, typically associated with an increase in expansion of B cells and plasma cells within the gut the assays also include serologic testing for celiac disease. Immune responses in celiac disease include both IgA and IgG and possibly IgM responses. Celiac disease may affect as many as 1% of the population but most remain undiagnosed. Celiac disease has also occasionally been reported in association with multiple myeloma. Using the celiac assays we are evaluating if there is any correlation between seropositivity for celiac disease and markers for plasma protein abnormalities. </p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Participants &ge; 50 years of age from NHANES 2001-2002.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p><strong>Measurement of Serum Protein Markers</strong></p>
+<p>A total of 250 microliter of serum was used for each study subject to perform the analyses to detect and quantify M protein and FLC (described below). For those individuals where an abnormal protein band or equivocal pattern with conventional agarose-gel electrophoresis was found, an additional 250 microliter serum was used to perform immunofixation for validation purposes (see below). </p>
+<p><strong>Electrophoresis </strong></p>
+<p>First, serum samples were analyzed for all identified subjects (described above) by using conventional agarose-gel electrophoresis, which has been described in detail previously. This revealed the occurrence and pattern (including determination of the size) of M proteins in the study cohort. If there was an abnormal band or equivocal pattern, immunofixation was performed to validate and to specify type of M protein. </p>
+<p><strong>Free light chains</strong></p>
+<p>FLC levels were determined in all positive study samples (described above) using the FLC assay (Freelite; The Binding Site, Birmingham, United Kingdom) performed on a Dade-Behring Nephelometer (Deerfield, IL). It consists of two separate measurements, one to detect free-kappa (normal range, 3.3-19.4 mg/L) and the other to detect free-lambda (normal range, 5.7-26.3 mg/L) light chains. In addition to measuring the absolute levels of FLC, the test also allows the assessment of clonality based on the ratio of kappa-lambda light chain levels (normal reference range, 0.26-1.65). Subjects with a kappa-lambda FLC ratio less than 0.26 are typically defined as having monoclonal lambda FLC and those with ratios greater than 1.65 are defined as having a monoclonal kappa FLC. If the FLC ratio is greater than 1.65, kappa is considered to be the &ldquo;involved&rdquo; FLC and lambda the &ldquo;uninvolved&rdquo; FLC, and vice versa if the ratio is less than 0.26. The normal reference range of 0.26 to 1.65 for the free-kappa-lambda ratio in the FLC assay reflects a higher serum level of free-lambda light chains than would be expected given the usual kappa-lambda ratio of two intact immuno&not;globulins. This occurs because the renal excretion of free kappa (which exists usually in a monomeric state) is much faster than free lambda (which is usually in a dimeric state). </p>
+<p><strong>Celiac assays</strong></p>
+<p>Testing consists of a sequential test strategy, which has proven both sensitive and specific for establishing a serologic diagnosis of celiac disease. The first level test consists of a tissue transglutaminase IgA ELISA test and, for patients who&rsquo;s test exceeds the normal range, a confirmatory test with endomysial antibody by immunofluorescence is then carried out. </p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>All protein analyses in this study will be performed at the Protein Immunology Laboratory at Mayo Clinic, Rochester, Minnesota. The Protein Immunology Laboratory is the leading laboratory in the world with regard to protein studies on MGUS and multiple myeloma. Since the early 1960&rsquo;s Mayo Clinic have published extensively in this field. In order to assess accuracy and precision before study start, we performed quality control (QC) analyses of serum from 2 positive MGUS subjects (known to have MGUS), 2 negative MGUS subject (known not to have MGUS), 2 positive FLC subjects (known to have FLC), and 2 negative FLC subject (known not to have FLC). Briefly, for each of these six QC individuals, we aliquoted serum into 5 tubes at an NCI laboratory and thereafter sent the serum in blinded tubes to the Protein Immunology Laboratory at Mayo Clinic for analyses of M protein and FLC, respectively. The results were very stable.</p>
+<p>In terms of sample storage and potential influence on results; the Mayo Clinic lab has analyzed over 1,100 sera collected up to 35 years before testing, without any problems to perform the assays. The practice in the laboratory is to repeat the assay following a variety of storage activities. For example, serum is stored at room temperature for one week and the assays are repeated on days 1, 3, 5, and 7. Also, samples are refrigerated at 0 to 4 degrees Celsius for 7 days and then assays are repeated on days 1, 3, 5, and 7. Further, they freeze serum sample at -20 degrees Celsius for 1 and 2 weeks, then they thaw and run the assays. In addition, they subject samples to 3 cycles of freeze/thaw and then repeat the assays (personal communication, Dr. Kyle, December 2006). Thus, freeze/thaw steps will not have an adverse impact on the methods being used in our proposed study. </p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>Data was received after all the laboratory testing was complete. The data were not edited.</p>
+<p>Data Access: All data are publicly available. </p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Abraham RS, Clark RJ, Bryant SC, Lymp JF, Larson T, Kyle RA, et al. Correlation of serum immunoglobulin free light chain quantification with urinary Bence Jones protein in light chain myeloma. Clin Chem. 2002;48(4):655-7.</li>
+          <li>Bradwell AR, Carr-Smith HD, Mead GP, Harvey TC, Drayson MT. Serum test for assessment of patients with Bence Jones myeloma. Lancet. 2003;361(9356):489-91. Epub 2003/02/14.</li>
+          <li>Drayson M, Tang LX, Drew R, Mead GP, Carr-Smith H, Bradwell AR. Serum free light-chain measurements for identifying and monitoring patients with nonsecretory multiple myeloma. Blood. 2001;97(9):2900-2. Epub 2001/04/21.</li>
+          <li>Katzmann JA, Clark RJ, Abraham RS, Bryant S, Lymp JF, Bradwell AR, et al. Serum reference intervals and diagnostic ranges for free kappa and free lambda immunoglobulin light chains: relative sensitivity for detection of monoclonal light chains. Clin Chem. 2002;48(9):1437-44.</li>
+          <li>Kyle RA, Gertz MA, Witzig TE, Lust JA, Lacy MQ, Dispenzieri A, et al. Review of 1027 patients with newly diagnosed multiple myeloma. Mayo Clin Proc. 2003;78(1):21-33.</li>
+          <li>Kyle RA, Therneau TM, Rajkumar SV, Larson DR, Plevak MF, Melton LJ, 3rd. Long-term follow-up of 241 patients with monoclonal gammopathy of undetermined significance: the original Mayo Clinic series 25 years later. Mayo Clin Proc. 2004;79(7):859-66. Epub 2004/07/13.</li>
+          <li>Kyle RA, Therneau TM, Rajkumar SV, Offord JR, Larson DR, Plevak MF, et al. A long-term study of prognosis in monoclonal gammopathy of undetermined significance. N Engl J Med. 2002;346(8):564-9.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSIMP">SSIMP - PEL_Impression</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSIMP</dd>
+            <dt>SAS Label: </dt>
+            <dd>PEL_Impression</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PEL_Impression</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">PEL_Impression</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">2041</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSRES">SSRES - IF_Result</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSRES</dd>
+            <dt>SAS Label: </dt>
+            <dd>IF_Result</dd>
+            <dt>English Text: </dt>
+            <dd class="info">IF_Result</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">IF_Result</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">171</td>
+                <td class="values" align="right">171</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1870</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSSPIKE">SSSPIKE - Size of peak if available</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSSPIKE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Size of peak if available</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Size of peak if available</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 3.28</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">121</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1920</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSSPIKE2">SSSPIKE2 - Size of 2nd peak if available</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSSPIKE2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Size of 2nd peak if available</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Size of 2nd peak if available</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.5</td>
+                <td class="values">0.5</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">0.6</td>
+                <td class="values">0.6</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">0.7</td>
+                <td class="values">0.7</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2038</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSTOTAL">SSTOTAL - Total_Protein</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSTOTAL</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total_Protein</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total_Protein</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">5.9 to 10</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">170</td>
+                <td class="values" align="right">170</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1871</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSALB">SSALB - Albumin</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSALB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Albumin</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Albumin</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.5 to 4.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">170</td>
+                <td class="values" align="right">170</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1871</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSA1">SSA1 - Alpha1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSA1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Alpha1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Alpha1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.19 to 0.42</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">170</td>
+                <td class="values" align="right">170</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1871</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSA2">SSA2 - Alpha2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSA2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Alpha2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Alpha2</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.7 to 1.71</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">170</td>
+                <td class="values" align="right">170</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1871</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSBETA">SSBETA - Beta</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSBETA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Beta</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Beta</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.7 to 2.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">170</td>
+                <td class="values" align="right">170</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1871</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSGAM">SSGAM - Gamma</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSGAM</dd>
+            <dt>SAS Label: </dt>
+            <dd>Gamma</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Gamma</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.3 to 3.47</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">170</td>
+                <td class="values" align="right">170</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1871</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSAG_R">SSAG_R - Albumin/Gamma</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSAG_R</dd>
+            <dt>SAS Label: </dt>
+            <dd>Albumin/Gamma</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Albumin/Gamma</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.57 to 9.78</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">170</td>
+                <td class="values" align="right">170</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1871</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSK_FLC">SSK_FLC - Kappa FLC</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSK_FLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Kappa FLC</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Kappa FLC</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0267 to 204</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">164</td>
+                <td class="values" align="right">164</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1877</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSL_FLC">SSL_FLC - Lambda FLC</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSL_FLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Lambda FLC</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Lambda FLC</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0851 to 48.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">164</td>
+                <td class="values" align="right">164</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1877</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSKL_R">SSKL_R - K/L Ratio</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSKL_R</dd>
+            <dt>SAS Label: </dt>
+            <dd>K/L Ratio</dd>
+            <dt>English Text: </dt>
+            <dd class="info">K/L Ratio</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0252 to 666.6667</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">163</td>
+                <td class="values" align="right">163</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1878</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSK_FLCX">SSK_FLCX - Denotes imprecise kappa (n=2)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSK_FLCX</dd>
+            <dt>SAS Label: </dt>
+            <dd>Denotes imprecise kappa (n=2)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Denotes imprecise kappa (n=2)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2041</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSKL_RX">SSKL_RX - Denotes imprecise k/l (n=2)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSKL_RX</dd>
+            <dt>SAS Label: </dt>
+            <dd>Denotes imprecise k/l (n=2)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Denotes imprecise k/l (n=2)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2041</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSIS">SSIS - Flag:Insufficient sample</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSIS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Flag:Insufficient sample</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Flag:Insufficient sample</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">1</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">14</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2027</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSTTGV">SSTTGV - TTG IGA value</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSTTGV</dd>
+            <dt>SAS Label: </dt>
+            <dd>TTG IGA value</dd>
+            <dt>English Text: </dt>
+            <dd class="info">TTG IGA value</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.42 to 98.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2032</td>
+                <td class="values" align="right">2032</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSTTGR">SSTTGR - TTG IGA result</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSTTGR</dd>
+            <dt>SAS Label: </dt>
+            <dd>TTG IGA result</dd>
+            <dt>English Text: </dt>
+            <dd class="info">TTG IGA result</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">NEG</td>
+                <td class="values">NEG</td>
+                <td class="values" align="right">2017</td>
+                <td class="values" align="right">2017</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">POS</td>
+                <td class="values">POS</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">2023</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">WKPOS</td>
+                <td class="values">WKPOS</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">2032</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSEMA">SSEMA - EMA result</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSEMA</dd>
+            <dt>SAS Label: </dt>
+            <dd>EMA result</dd>
+            <dt>English Text: </dt>
+            <dd class="info">EMA result</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">NA</td>
+                <td class="values">NA</td>
+                <td class="values" align="right">2017</td>
+                <td class="values" align="right">2017</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">NEG</td>
+                <td class="values">NEG</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">2027</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">POS</td>
+                <td class="values">POS</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">2032</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSSERO">SSSERO - Serology result (associated with CD)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSSERO</dd>
+            <dt>SAS Label: </dt>
+            <dd>Serology result (associated with CD)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serology result (associated with CD)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">IND</td>
+                <td class="values">IND</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">10</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">NEG</td>
+                <td class="values">NEG</td>
+                <td class="values" align="right">2017</td>
+                <td class="values" align="right">2027</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">POS</td>
+                <td class="values">POS</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">2032</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSOL_H">SSOL_H - Heavy chain MGUS</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSOL_H</dd>
+            <dt>SAS Label: </dt>
+            <dd>Heavy chain MGUS</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Heavy chain MGUS</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">A</td>
+                <td class="values">IgA</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">5</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">BI</td>
+                <td class="values">Biclonal</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">12</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">G</td>
+                <td class="values">IgG</td>
+                <td class="values" align="right">44</td>
+                <td class="values" align="right">56</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">M</td>
+                <td class="values">IgM</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">63</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1978</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSOL_L">SSOL_L - Light chain MGUS</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSOL_L</dd>
+            <dt>SAS Label: </dt>
+            <dd>Light chain MGUS</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Light chain MGUS</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">BI</td>
+                <td class="values">Biclonal</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">7</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">K</td>
+                <td class="values">Kappa</td>
+                <td class="values" align="right">37</td>
+                <td class="values" align="right">44</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">L</td>
+                <td class="values">Lambda</td>
+                <td class="values" align="right">19</td>
+                <td class="values" align="right">63</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1978</td>
+                <td class="values" align="right">2041</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

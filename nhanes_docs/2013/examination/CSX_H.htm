@@ -1,0 +1,2738 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>CSX_H</title>
+    <meta name="title" content="NHANES 2013-2014: Taste &amp; Smell Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Protocol_and_Procedure">Protocol and Procedure</a>
+          </li>
+          <li>
+            <a href="#Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#CSXEXSTS">CSXEXSTS - Overall Taste &amp; Smell Exam Status</a>
+              </li>
+              <li>
+                <a href="#CSXEXCMT">CSXEXCMT - Taste &amp; Smell Exam Status Comment Code</a>
+              </li>
+              <li>
+                <a href="#CSQ245">CSQ245 - Ever had quinine allergy?</a>
+              </li>
+              <li>
+                <a href="#CSQ241">CSQ241 - Currently pregnant or breast feeding?</a>
+              </li>
+              <li>
+                <a href="#CSQ260a">CSQ260a - Sneeze Frequently?</a>
+              </li>
+              <li>
+                <a href="#CSQ260d">CSQ260d - Have Discolored Nasal Mucus?</a>
+              </li>
+              <li>
+                <a href="#CSQ260g">CSQ260g - Have Nasal Blockage?</a>
+              </li>
+              <li>
+                <a href="#CSQ260i">CSQ260i - Have Sinus Pain?</a>
+              </li>
+              <li>
+                <a href="#CSQ260n">CSQ260n - Runny Nose?</a>
+              </li>
+              <li>
+                <a href="#CSQ260m">CSQ260m - None of the above?</a>
+              </li>
+              <li>
+                <a href="#CSQ270">CSQ270 - Type of Nasal Blockage</a>
+              </li>
+              <li>
+                <a href="#CSQ450">CSQ450 - Low intermediate light (85 candelas/m2)</a>
+              </li>
+              <li>
+                <a href="#CSQ460">CSQ460 - High intermediate light(439 candelas/m2)</a>
+              </li>
+              <li>
+                <a href="#CSQ470">CSQ470 - Medium test light (193 candelas/m2)</a>
+              </li>
+              <li>
+                <a href="#CSQ480">CSQ480 - Low test light (4.3 candelas/m2)</a>
+              </li>
+              <li>
+                <a href="#CSQ490">CSQ490 - High test light (1000 candelas/m2)</a>
+              </li>
+              <li>
+                <a href="#CSXQUIPG">CSXQUIPG - Tongue Tip Test: 1 mM Quinine gLMS</a>
+              </li>
+              <li>
+                <a href="#CSXQUIPT">CSXQUIPT - Tongue Tip 1mM Quinine: What Was Taste?</a>
+              </li>
+              <li>
+                <a href="#CSXNAPG">CSXNAPG - Tongue Tip Test: 1M NaCl gLMS</a>
+              </li>
+              <li>
+                <a href="#CSXNAPT">CSXNAPT - Tongue Tip 1M NaCl: What Was Taste?</a>
+              </li>
+              <li>
+                <a href="#CSXQUISG">CSXQUISG - Whole Mouth Test: 1 mM Quinine gLMS</a>
+              </li>
+              <li>
+                <a href="#CSXQUIST">CSXQUIST - Whole Mouth 1 mM Quinine: What Was Taste</a>
+              </li>
+              <li>
+                <a href="#CSXSLTSG">CSXSLTSG - Whole Mouth Test: 1 M NaCl gLMS</a>
+              </li>
+              <li>
+                <a href="#CSXSLTST">CSXSLTST - Whole Mouth 1 M NaCl: What Was Taste?</a>
+              </li>
+              <li>
+                <a href="#CSXNASG">CSXNASG - Whole Mouth Test: .32 M NaCl gLMS</a>
+              </li>
+              <li>
+                <a href="#CSXNAST">CSXNAST - Whole Mouth .32 NaCl: What Was Taste?</a>
+              </li>
+              <li>
+                <a href="#CSXTSEQ">CSXTSEQ - Whole Mouth Taste Test Sequence</a>
+              </li>
+              <li>
+                <a href="#CSXCHOOD">CSXCHOOD - Smell Test: Chocolate Scent</a>
+              </li>
+              <li>
+                <a href="#CSXSBOD">CSXSBOD - Smell Test: Strawberry Scent</a>
+              </li>
+              <li>
+                <a href="#CSXSMKOD">CSXSMKOD - Smell Test: Smoke Scent</a>
+              </li>
+              <li>
+                <a href="#CSXLEAOD">CSXLEAOD - Smell Test: Leather Scent</a>
+              </li>
+              <li>
+                <a href="#CSXSOAOD">CSXSOAOD - Smell Test: Soap Scent</a>
+              </li>
+              <li>
+                <a href="#CSXGRAOD">CSXGRAOD - Smell Test: Grape Scent</a>
+              </li>
+              <li>
+                <a href="#CSXONOD">CSXONOD - Smell Test: Onion Scent</a>
+              </li>
+              <li>
+                <a href="#CSXNGSOD">CSXNGSOD - Smell Test: Natural Gas Scent</a>
+              </li>
+              <li>
+                <a href="#CSXSLTRT">CSXSLTRT - Whole Mouth Repeat: 1M NaCl gLMS</a>
+              </li>
+              <li>
+                <a href="#CSXSLTRG">CSXSLTRG - Repeat 1M NaCl: What Was Taste?</a>
+              </li>
+              <li>
+                <a href="#CSXNART">CSXNART - Whole Mouth Repeat: 0.32M NaCl gLMS</a>
+              </li>
+              <li>
+                <a href="#CSXNARG">CSXNARG - Repeat .32M NaCl: What Was Taste?</a>
+              </li>
+              <li>
+                <a href="#CSAEFFRT">CSAEFFRT - Participant's Understanding of Test</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2013-2014 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Taste &amp; Smell (CSX_H)</h3>
+        <h4> Data File: CSX_H.xpt</h4>
+        <h5 class="left">First Published: February 2016</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>The taste and smell exam measured the ability to taste and smell, using an odor identification test and salt and quinine taste testing. The objectives of this component were:
+</p>
+<blockquote>
+<ol>
+    <li>to provide reference data for taste and smell testing for U.S. adults aged 40 and over; </li>
+    <li>to examine variations in the ability to smell and to taste salt and bitter tastants and analyze these variations with NHANES hypertension, nutritional, and obesity data; and </li>
+    <li>to help estimate the prevalence of U.S. adults who may not recognize the odor of smoke and natural gas, which are important early warning signals for home safety hazards. </li>
+</ol>
+</blockquote>
+<p>
+The taste and smell examination component (variable name prefix CSX) was a new health examination component first conducted in 2012 in the second year of the NHANES 2011-2012 cycle. Since only 1-year (2012) of data collection was performed, it is a restricted access dataset with the NCHS Research Data Center (RDC). In 2013-2014, the taste and smell examination was conducted for the full 2-year cycle, and therefore the data is not restricted and is available through public use.
+</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>All participants aged 40 and over who did not meet any of the exclusion criteria, were eligible.
+<br />
+<br />
+Women who were currently pregnant (had either self-reported pregnancy or positive urine pregnancy test) or currently breastfeeding were excluded from the taste and smell examination. Participants who were unable to provide a correct ordinal ranking of the three light intensity standards on the gLMS scale were excluded from taste testing, but not from smell testing. Participants with an allergy to quinine were excluded from quinine taste testing, but not from any other part of the exam.</p><h2 id="Protocol_and_Procedure">Protocol and Procedure</h2><p>The examination protocol content and sequence is illustrated in the flow diagram in Appendix A. The detailed examination procedures are described in the online NHANES Taste and Smell Examination Component Manual. The exam was performed in the following sequence:
+<br />
+<br />
+Pre-Exam Procedures:
+<br />
+<br />
+The participant first answered a short pre-exam questionnaire. This included the two exclusion questions and a short series of questions to screen for certain conditions, such as current nasal symptoms present at the time of the exam. This could potentially influence the interpretation of the results of the smell test. This data may help to distinguish temporary from chronic impairment of smell abilities. The nasal symptom questions were not exclusion questions. The pre-examination symptom questions were administered in a "code all that apply" format. Please see the Taste and Smell Examination Procedures Manual, page 4-3 Exhibit 4-3 for an image of the data collection format screen.
+<br />
+<br />
+Training and Rating on the Perceived Taste Intensity Scale:
+<br />
+<br />
+Following the pre-exam questionnaire, the participant received a brief introduction to the generalized labeled magnitude scale (gLMS), used for rating perceived taste intensities (Bartoshuk et al., 2004). This is a verbally anchored quasi-logarithmic response scale with a total of 100 units presented as a vertical line graph, which has the labels "barely", "weak", "moderate", "strong", "very strong", and "strongest of any kind" spaced at 1, 5, 16, 34, 53, and 100 units, respectively (Bartoshuk et al., 2004; Green et al, 1996). The participant was instructed to let the top value (100) represent the strongest sensation of any kind that they had experienced, including his/her experiences with light, sound, pain, temperature, or taste.
+<br />
+<br />
+Two standardized light intensities were then presented to the participant (LED luminescence panel; Illumination Technologies, Elbridge, NY) to provide an initial opportunity to practice using the scale (a lower intensity light [CSQ450] and a higher intensity light [CSQ460]). In previous studies, pure tone audiometric stimuli have been used for this purpose; however, for NHANES, light stimuli were chosen for ease of presentation and because deficits in gross light intensity perception are less likely to be affected by aging as opposed to hearing deficits.
+<br />
+<br />
+Following the brief practice session, the participant then rated the brightness of a standard series of three lights of differing intensity. A moderate intensity light was presented first [CSQ470], then a dim light [CSQ480], and then a high intensity light [CSQ490] in that fixed order. If the participant rated these three lights in the correct relative order on the gLMS scale, he/she proceeded to the taste exam. If he/she was unable to, then he/she was excluded from taste testing but not smell testing.
+<br />
+<br />
+Tongue Tip Taste Testing:
+<br />
+<br />
+The participant was then presented with two tastants: 1 mM quinine as a bitter taste and then 1 M NaCl as a salt taste in that fixed presentation order. Each tastant was gently applied to the edge of the circle at the tip of the tongue with a cotton swab applicator in a standardized manner so as not to evoke any tactile stimulation. They were asked to keep their tongue out while rating the tastant intensity. Then they identified it as salty, bitter, sour, some other taste, or no taste. The mouth was rinsed with water before proceeding to the next tastant. The participant was asked if they had any lingering taste effect after the water rinse, and if so it was repeated until the taste was extinguished. There was a minimum wait period of 30 seconds between administering tastants.
+<br />
+<br />
+Whole Mouth Taste Testing:
+<br />
+<br />
+When tongue tip taste testing was completed, the participant then proceeded to the primary whole mouth taste testing. Here each participant was presented with three tastants, administered in one of two randomized presentation orders: 0.32 M NaCl, 1 mM quinine, 1M NaCl; or 1M NaCl, 1 mM quinine, 0.32 M NaCl. For each tastant, the participant was asked to take all of the 10 ml tastant solution into his/her mouth but not to swallow it. He/she was instructed to gently swish the solution in his/her mouth for 3 seconds, then spit it out. The participant then provided a tastant-specific intensity rating and identified it as salty, bitter, sour, some other taste, or no taste. The mouth was then rinsed using the same procedure as tongue tip taste testing.
+<br />
+<br />
+The 8-Item Odor Identification Test:
+<br />
+<br />
+This test was a brief 8-item "scratch and sniff", forced-choice smell test manufactured by Sensonics, Inc. The smell test contained four food-related and four nonfood-related odors, the latter including the odors of smoke and natural gas. The eight specific odors in their fixed order of presentation were: chocolate, strawberry, smoke, leather, soap, grape, onion, and natural gas.
+<br />
+<br />
+In the kits, the test odorants are embedded in micro-capsules positioned on scent strips on a paper test booklet. The composition of the scents used in the NHANES study were proprietary to the smell test kit manufacturer. The stimuli to be smelled were released by scratching the odor test strips with a plastic stylus in a standardized manner. Then the participant smelled the odor and identified it. Above each odorant strip there was a list of four possible responses. For example, one of the items reads: "This odor smells most like: a) soap; b) black pepper; c) leather; or d) peanut." The participant was required to choose one of the four choices presented. If the participant stated he/she could not smell any odor when presented with an odorant, he/she was required to choose one of the four alternatives as an answer. The "forced choice" format was employed because it is thought that even in persons with moderate impairments in olfaction; some residual ability to smell may remain even if the individual is unaware of it.
+<br />
+<br />
+Whole Mouth Replicate Salt Taste Test:
+<br />
+<br />
+Following odor identification testing, a single replicate whole mouth test of a salt solution was performed. The participant was randomized to receive either a .32 M NaCl or a 1 M NaCl salt solution. The replicate taste testing protocol was identical to the initial whole mouth tasting testing.</p><h2 id="Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</h2><p>The NHANES health technicians had initial component training program with expert consultants and survey staff. The training included a didactic overview of the component and demonstrations conducted by the expert examiner with volunteer subjects. Supervised practice exercises followed, again conducted with volunteer subjects. During the 2013-2014 survey, the chief health technician at each of the mobile examination centers monitored staff performance in the field. Health technician performance was also periodically monitored by NCHS staff, data collection contractor Project Officers, and the expert consultants.
+<br />
+<br />
+The NHANES Taste and Smell Examination Component Manual includes detailed descriptions of the quality assurance and quality control measures that were used in the 2013-2014 data collection. Equipment maintenance and calibration was performed on a routine basis by the health technicians and verified by supervisory staff. Periodic review of examination and calibration data was performed to help verify data collection accuracy.</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>All data were captured into a computerized database system, and automatically uploaded. The 2013-2014 NHANES taste and smell examination data was also verified against the main data collection data file. Computerized data editing was performed to check for logical inconsistencies in the data and health technician errors, and to cross-check other issues potentially affecting data quality. Back-end edits of the data were performed as needed when errors were detected.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>The following technical notes are provided for data analysts:
+<br />
+<br />
+i. gLMS Scale Format:
+<br />
+<br />
+The gLMS scale format used for tastant ratings was similar to that used in previous studies (Cruickshanks et. al, 2009); however, it was modified based on piloting experience. To counter label preference bias, the scale graphic was revised. The scale labels were enlarged and were moved farther to the right of the scale&rsquo;s left border and the horizontal lines projecting from the scale labels were shortened and no longer intersected with the left sided measurement line. Also, the term "imaginable" was dropped from the scale instruction text as the meaning of phrase "the strongest imaginable sensation" was not immediately transparent and unambiguous for many participants.
+<br />
+<br />
+ii. Participant Tastant Ratings:
+<br />
+<br />
+When participants were observed to select a gLMS scale label for a taste intensity rating, they were actively coached to consider the entire scale for the tastant rating. However, if they persisted in choosing a scale label value as the intensity rating, then it was accepted and recorded as the result. Analysts should therefore consider scale label choice frequency in data analysis.
+<br />
+<br />
+Some participants rated whole mouth tastants at a maximum (100) corresponding to their strongest perceived sensation of any kind. Health Technicians asked the participants to verify this type of rating when it occurred, and asked them to verify that they were not rating their dislike for or a sense surprise at experiencing a strong taste. However, if the participant persisted in choosing the "100" value, then it was accepted and recorded.
+<br />
+<br />
+iii. Odor Identification Testing:
+<br />
+<br />
+A wide variety of natural gas odorants are in current commercial use and natural gas suppliers routinely formulate and sell mixtures of odorants to improve natural gas safety warning properties. Methyl mercaptan is a widely used odorant; however, ethyl mercaptan and thiophane are commonly used by LP gas suppliers serving rural U.S. areas (Cain and Turk, 1985). The composition of the natural gas scent used in the NHANES study was proprietary to the smell test kit manufacturer. This fact and the wide variety of natural gas odorants currently in commercial use should therefore be considered by analysts in assessing comparability to other research and in generalizing the results of their studies.
+<br />
+<br />
+iv. Statistical Considerations:
+<br />
+<br />
+The NHANES examination sample weights should be used to analyze the taste and smell exam data.
+<br />
+This dataset contains Taste and Smell exam data for participants ages 40+ years of age, however for proper variance estimation with the complex NHANES survey design, the dataset should be merged with the basic demographic data file variables (including sample weights, strata and PSU variables) for the entire set of NHANES 2013-2014 participants. Then in the statistical analysis program used, the domain of interest is specified in a subpopulation statement as the set of adults ages 40+ years.
+<br />
+<br />
+Please refer to the <a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx" target="_blank">NHANES Analytic Guidelines</a> and the online <a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/">NHANES Tutorial</a> for further details on the use of sample weights and other analytic issues.
+<br />
+<br />
+v. Related NHANES Datasets
+<br />
+<br />
+The NHANES 2013-2014 Household Interview questionnaire (CSQ) dataset contains data on self-reported symptoms, risk factors, and medical treatment history for taste and smell disorders. Other NHANES 2013-2014 datasets that may be pertinent to the analysis of taste and smell data include the datasets on medical conditions (MCQ, KIQ, DIQ, BPQ); blood sugar (BIOPRO, GHB); blood pressure (BPX); body weight (BMQ, WHQ); diet and nutrition (DTQ, DRXDOC, DSQDOC, DBQ); smoking (SMQ, COTNAL); osteoporosis (OSQ, DXX); oral health (OHXDEN, OHXPER); alcohol (ALQ); and prescription medication use (RXQ_RX).</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Bartoshuk LM, Duffy VB, Green BG, Hoffman HJ, Ko CW, Lucchina LA, Marks LE, Snyder DJ, Weiffenbach JM. Valid across-group comparisons with labeled scales: the gLMS versus magnitude matching. Physiol Behav. 2004 Aug;82(1):109-14.</li>
+          <li>Cain WS, Turk A. Smell of danger: an analysis of LP-gas odorization. Am Ind Hyg Assoc J. 1985 Mar;46(3):115-26.</li>
+          <li>Cruickshanks KJ, Schubert CR, Snyder DJ, Bartoshuk LM, Huang GH, Klein BE, Klein R, Nieto FJ, Pankow JS, Tweed TS, Krantz EM, Moy GS. Measuring taste impairment in epidemiologic studies: the Beaver Dam Offspring Study. Ann N Y Acad Sci. 2009. 1170:543-52.</li>
+          <li>Green BG, Dalton P, Cowart B, Shaffer G, Rankin K, Higgins J. Evaluating the 'Labeled Magnitude Scale' for measuring sensations of taste and smell. Chem Senses. 1996 Jun;21(3):323-34.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXEXSTS">CSXEXSTS - Overall Taste &amp; Smell Exam Status</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXEXSTS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Overall Taste &amp; Smell Exam Status</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Overall Status for the MEC Taste &amp; Smell Examination</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Complete</td>
+                <td class="values" align="right">3094</td>
+                <td class="values" align="right">3094</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Partial</td>
+                <td class="values" align="right">462</td>
+                <td class="values" align="right">3556</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Not done</td>
+                <td class="values" align="right">152</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXEXCMT">CSXEXCMT - Taste &amp; Smell Exam Status Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXEXCMT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Taste &amp; Smell Exam Status Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Comment Code for the MEC Taste &amp; Smell Examination</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Safety exclusion</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">12</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">No Time</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">20</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Physical Limitation</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">26</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Communication Problem</td>
+                <td class="values" align="right">19</td>
+                <td class="values" align="right">45</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Equipment problem</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">47</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">SP ill/emergency</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">61</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">12</td>
+                <td class="values">Eye specific limitation</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">69</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">34</td>
+                <td class="values">SP pregnant</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">70</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">38</td>
+                <td class="values">Technical difficulty</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">71</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">49</td>
+                <td class="values">Urine not Collected</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">80</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">51</td>
+                <td class="values">SP unable to comply</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">84</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">56</td>
+                <td class="values">Came Late/Left Early</td>
+                <td class="values" align="right">97</td>
+                <td class="values" align="right">181</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">84</td>
+                <td class="values">SP with Child</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">183</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">99</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">197</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">122</td>
+                <td class="values">Language Barrier</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">208</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3500</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSQ245">CSQ245 - Ever had quinine allergy?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSQ245</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ever had quinine allergy?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Have you ever had a skin rash or allergy caused by quinine?</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">If Yes, DK, Refused, Exclude from quinine</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">23</td>
+                <td class="values" align="right">23</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">3418</td>
+                <td class="values" align="right">3441</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">3443</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">114</td>
+                <td class="values" align="right">3557</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">151</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSQ241">CSQ241 - Currently pregnant or breast feeding?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSQ241</dd>
+            <dt>SAS Label: </dt>
+            <dd>Currently pregnant or breast feeding?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Are you currently pregnant or breast feeding a baby?</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">If Yes, DK, Refused, End Exam</dd>
+            <dt>Target: </dt>
+            <dd> Females only 40 YEARS -
+			59 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">6</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">971</td>
+                <td class="values" align="right">977</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">978</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">979</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2729</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSQ260a">CSQ260a - Sneeze Frequently?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSQ260a</dd>
+            <dt>SAS Label: </dt>
+            <dd>Sneeze Frequently?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Do you now have any of the following problems with your nose?  Sneeze Frequently?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Checked</td>
+                <td class="values" align="right">177</td>
+                <td class="values" align="right">177</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">179</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">182</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3526</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSQ260d">CSQ260d - Have Discolored Nasal Mucus?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSQ260d</dd>
+            <dt>SAS Label: </dt>
+            <dd>Have Discolored Nasal Mucus?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Do you now have any of the following problems with your nose? Green, Yellow  or Brown Mucus Discharge?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Checked</td>
+                <td class="values" align="right">74</td>
+                <td class="values" align="right">74</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3634</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSQ260g">CSQ260g - Have Nasal Blockage?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSQ260g</dd>
+            <dt>SAS Label: </dt>
+            <dd>Have Nasal Blockage?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Do you now have any of the following problems with your nose? Completely blocked up nose</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">If checked, Enable CSQ270</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Checked</td>
+                <td class="values" align="right">283</td>
+                <td class="values" align="right">283</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3425</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSQ260i">CSQ260i - Have Sinus Pain?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSQ260i</dd>
+            <dt>SAS Label: </dt>
+            <dd>Have Sinus Pain?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Do you now have any of the following problems with your nose? Sinus Pain?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Checked</td>
+                <td class="values" align="right">105</td>
+                <td class="values" align="right">105</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3603</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSQ260n">CSQ260n - Runny Nose?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSQ260n</dd>
+            <dt>SAS Label: </dt>
+            <dd>Runny Nose?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Do you now have any of the following problems with your nose? A Runny Nose?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Checked</td>
+                <td class="values" align="right">421</td>
+                <td class="values" align="right">421</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3287</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSQ260m">CSQ260m - None of the above?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSQ260m</dd>
+            <dt>SAS Label: </dt>
+            <dd>None of the above?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Do you now have any of the following problems with your nose? None of the above?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Checked</td>
+                <td class="values" align="right">2754</td>
+                <td class="values" align="right">2754</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">954</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSQ270">CSQ270 - Type of Nasal Blockage</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSQ270</dd>
+            <dt>SAS Label: </dt>
+            <dd>Type of Nasal Blockage</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Was {your/SPs} nose blocked up on both sides, or on just one side?</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Disabled unless CSQ260g checked</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">146</td>
+                <td class="values" align="right">146</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">135</td>
+                <td class="values" align="right">281</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">281</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">283</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3425</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSQ450">CSQ450 - Low intermediate light (85 candelas/m2)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSQ450</dd>
+            <dt>SAS Label: </dt>
+            <dd>Low intermediate light (85 candelas/m2)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">First practice light 85 candelas/ m2 (low intermediate light)</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Hard Edit: if &lt; 0 or &gt; 100, not valid data entry</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 100</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3420</td>
+                <td class="values" align="right">3420</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">288</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSQ460">CSQ460 - High intermediate light(439 candelas/m2)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSQ460</dd>
+            <dt>SAS Label: </dt>
+            <dd>High intermediate light(439 candelas/m2)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Second practice light 493 candelas/ m2 (high intermediate light)</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Hard Edit: if &lt; 0 or &gt; 100, not valid data entry. Soft Edit:  If CSQ430 &gt;= CSQ440, Verify that rating'.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 100</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3416</td>
+                <td class="values" align="right">3416</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">292</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSQ470">CSQ470 - Medium test light (193 candelas/m2)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSQ470</dd>
+            <dt>SAS Label: </dt>
+            <dd>Medium test light (193 candelas/m2)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">First test light 193 candelas/ m2 (medium light level)</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Hard Edit: if &lt; 0 or &gt; 100, not valid data entry</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 100</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3412</td>
+                <td class="values" align="right">3412</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">296</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSQ480">CSQ480 - Low test light (4.3 candelas/m2)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSQ480</dd>
+            <dt>SAS Label: </dt>
+            <dd>Low test light (4.3 candelas/m2)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Second test light 4.3 candelas/ m2 (low light level)</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Hard Edit: if &lt; 0 or &gt; 100, not valid data entry</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 100</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3411</td>
+                <td class="values" align="right">3411</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">297</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSQ490">CSQ490 - High test light (1000 candelas/m2)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSQ490</dd>
+            <dt>SAS Label: </dt>
+            <dd>High test light (1000 candelas/m2)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Third  test light 1000 candelas/ m2 (high light level)</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Hard Edit: if &lt; 0 or &gt; 100, not valid data entry.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 100</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3411</td>
+                <td class="values" align="right">3411</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">297</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXQUIPG">CSXQUIPG - Tongue Tip Test: 1 mM Quinine gLMS</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXQUIPG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Tongue Tip Test: 1 mM Quinine gLMS</dd>
+            <dt>English Text: </dt>
+            <dd class="info">gLMS rating for bitter when 1 mM quinine solution is painted on the tongue tip.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Hard Edit: if &lt; 0 or &gt; 100, not valid data entry. 
+Hard Edit:  if CSXQUIPT=1,2,3, or 5 and CSXQUIPG = 0, not valid data entry. Hard Edit:  if CSXQUIPT = 4 and CSXQUIPG &gt; 6, not valid data entry.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 100</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3133</td>
+                <td class="values" align="right">3133</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">575</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXQUIPT">CSXQUIPT - Tongue Tip 1mM Quinine: What Was Taste?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXQUIPT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Tongue Tip 1mM Quinine: What Was Taste?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Name of substance examinee tasted when 1mM quinine was painted on the tongue tip.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Salty</td>
+                <td class="values" align="right">103</td>
+                <td class="values" align="right">103</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Bitter</td>
+                <td class="values" align="right">1232</td>
+                <td class="values" align="right">1335</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Something else</td>
+                <td class="values" align="right">492</td>
+                <td class="values" align="right">1827</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Taste</td>
+                <td class="values" align="right">1149</td>
+                <td class="values" align="right">2976</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Sour</td>
+                <td class="values" align="right">157</td>
+                <td class="values" align="right">3133</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">575</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXNAPG">CSXNAPG - Tongue Tip Test: 1M NaCl gLMS</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXNAPG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Tongue Tip Test: 1M NaCl gLMS</dd>
+            <dt>English Text: </dt>
+            <dd class="info">gLMS rating when 1M NaCl solution is painted on the tongue tip.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Hard Edit: if &lt; 0 or &gt; 100, not valid data entry. 
+Hard Edit:  if CSXNAPT=1,2,3, or 5 and CSXNAPG = 0, not valid data entry. Hard Edit:  if CSXNAPT = 4 and
+CSXNAPG &gt; 6, not valid data entry.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 100</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3129</td>
+                <td class="values" align="right">3129</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">579</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXNAPT">CSXNAPT - Tongue Tip 1M NaCl: What Was Taste?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXNAPT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Tongue Tip 1M NaCl: What Was Taste?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Name of substance examinee tasted when 1M NaCl was painted on the tongue tip.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Salty</td>
+                <td class="values" align="right">2675</td>
+                <td class="values" align="right">2675</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Bitter</td>
+                <td class="values" align="right">125</td>
+                <td class="values" align="right">2800</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Something else</td>
+                <td class="values" align="right">102</td>
+                <td class="values" align="right">2902</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Taste</td>
+                <td class="values" align="right">90</td>
+                <td class="values" align="right">2992</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Sour</td>
+                <td class="values" align="right">225</td>
+                <td class="values" align="right">3217</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">491</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXQUISG">CSXQUISG - Whole Mouth Test: 1 mM Quinine gLMS</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXQUISG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Whole Mouth Test: 1 mM Quinine gLMS</dd>
+            <dt>English Text: </dt>
+            <dd class="info">gLMS rating for bitter when 1 mM quinine solution is sampled with the whole mouth.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Hard Edit: if &lt; 0 or &gt; 100, not valid data entry. 
+Hard Edit:  if CSXQUIST=1,2,3 or 5 and CSXQUISG = 0, not valid data entry. Hard Edit:  if CSXQUIST = 4 and CSXQUISG &gt; 6, not valid data entry.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 100</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3114</td>
+                <td class="values" align="right">3114</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">594</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXQUIST">CSXQUIST - Whole Mouth 1 mM Quinine: What Was Taste</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXQUIST</dd>
+            <dt>SAS Label: </dt>
+            <dd>Whole Mouth 1 mM Quinine: What Was Taste</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Name of substance examinee tasted when bitter taste 1 (1 mM quinine) was sampled in the whole mouth.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Salty</td>
+                <td class="values" align="right">34</td>
+                <td class="values" align="right">34</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Bitter</td>
+                <td class="values" align="right">2574</td>
+                <td class="values" align="right">2608</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Something else</td>
+                <td class="values" align="right">344</td>
+                <td class="values" align="right">2952</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Taste</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">2967</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Sour</td>
+                <td class="values" align="right">147</td>
+                <td class="values" align="right">3114</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">594</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXSLTSG">CSXSLTSG - Whole Mouth Test: 1 M NaCl gLMS</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXSLTSG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Whole Mouth Test: 1 M NaCl gLMS</dd>
+            <dt>English Text: </dt>
+            <dd class="info">gLMS rating for salty taste when 1M NaCl is sampled with the whole mouth.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Hard Edit: if &lt; 0 or &gt; 100, not valid data entry.  
+Hard Edit:  if CSXSLTST=1,2,3, or 5 and CSXSLTSG = 0, not valid data entry. Hard Edit:  if CSXSLTST = 4 and CSXSLTSG &gt; 6, not valid data entry.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2 to 100</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3217</td>
+                <td class="values" align="right">3217</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">491</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXSLTST">CSXSLTST - Whole Mouth 1 M NaCl: What Was Taste?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXSLTST</dd>
+            <dt>SAS Label: </dt>
+            <dd>Whole Mouth 1 M NaCl: What Was Taste?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Name of substance examinee tasted when 1 M NaCl was sampled in the whole mouth.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Salty</td>
+                <td class="values" align="right">3128</td>
+                <td class="values" align="right">3128</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Bitter</td>
+                <td class="values" align="right">34</td>
+                <td class="values" align="right">3162</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Something else</td>
+                <td class="values" align="right">23</td>
+                <td class="values" align="right">3185</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Taste</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">3186</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Sour</td>
+                <td class="values" align="right">31</td>
+                <td class="values" align="right">3217</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">491</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXNASG">CSXNASG - Whole Mouth Test: .32 M NaCl gLMS</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXNASG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Whole Mouth Test: .32 M NaCl gLMS</dd>
+            <dt>English Text: </dt>
+            <dd class="info">gLMS rating when  .32 M NaCl is sampled with the whole mouth.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Hard Edit: if &lt; 0 or &gt; 100, not valid data entry. 
+Hard Edit:  if CSXNAST=1,2,3, or 5 and CSXNASG = 0, not valid data entry. Hard Edit:  if CSXNAST = 4 and
+CSXNASG &gt; 6, not valid data entry.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 100</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3218</td>
+                <td class="values" align="right">3218</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">490</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXNAST">CSXNAST - Whole Mouth .32 NaCl: What Was Taste?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXNAST</dd>
+            <dt>SAS Label: </dt>
+            <dd>Whole Mouth .32 NaCl: What Was Taste?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Name of substance examinee tasted when .32 M NaCl was sampled in the whole mouth.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Salty</td>
+                <td class="values" align="right">2885</td>
+                <td class="values" align="right">2885</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Bitter</td>
+                <td class="values" align="right">78</td>
+                <td class="values" align="right">2963</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Something else</td>
+                <td class="values" align="right">146</td>
+                <td class="values" align="right">3109</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Taste</td>
+                <td class="values" align="right">28</td>
+                <td class="values" align="right">3137</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Sour</td>
+                <td class="values" align="right">81</td>
+                <td class="values" align="right">3218</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">490</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXTSEQ">CSXTSEQ - Whole Mouth Taste Test Sequence</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXTSEQ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Whole Mouth Taste Test Sequence</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Sequence in which whole mouth taste tests were administered.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">A</td>
+                <td class="values">1M NaCl, 1mM quinine, 0.32M NaCl</td>
+                <td class="values" align="right">1576</td>
+                <td class="values" align="right">1576</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">B</td>
+                <td class="values">0.32M NaCl, 1mM quinine, 1M NaCl</td>
+                <td class="values" align="right">1658</td>
+                <td class="values" align="right">3234</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXCHOOD">CSXCHOOD - Smell Test: Chocolate Scent</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXCHOOD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Smell Test: Chocolate Scent</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Forced Choice Odor Selection, Chocolate Scent</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Lemon</td>
+                <td class="values" align="right">120</td>
+                <td class="values" align="right">120</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Chocolate</td>
+                <td class="values" align="right">2901</td>
+                <td class="values" align="right">3021</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Smoke</td>
+                <td class="values" align="right">356</td>
+                <td class="values" align="right">3377</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Black pepper</td>
+                <td class="values" align="right">150</td>
+                <td class="values" align="right">3527</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">181</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXSBOD">CSXSBOD - Smell Test: Strawberry Scent</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXSBOD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Smell Test: Strawberry Scent</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Forced Choice Odor Selection, Strawberry Scent</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Strawberry</td>
+                <td class="values" align="right">2819</td>
+                <td class="values" align="right">2819</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Garlic</td>
+                <td class="values" align="right">29</td>
+                <td class="values" align="right">2848</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Leather</td>
+                <td class="values" align="right">553</td>
+                <td class="values" align="right">3401</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Gasoline</td>
+                <td class="values" align="right">124</td>
+                <td class="values" align="right">3525</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">183</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXSMKOD">CSXSMKOD - Smell Test: Smoke Scent</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXSMKOD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Smell Test: Smoke Scent</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Forced Choice Odor Selection, Smoke Scent</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Garlic</td>
+                <td class="values" align="right">124</td>
+                <td class="values" align="right">124</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Grass</td>
+                <td class="values" align="right">223</td>
+                <td class="values" align="right">347</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Smoke</td>
+                <td class="values" align="right">3047</td>
+                <td class="values" align="right">3394</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Peach</td>
+                <td class="values" align="right">129</td>
+                <td class="values" align="right">3523</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">185</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXLEAOD">CSXLEAOD - Smell Test: Leather Scent</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXLEAOD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Smell Test: Leather Scent</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Forced Choice Odor Selection, Leather Scent</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Mint</td>
+                <td class="values" align="right">206</td>
+                <td class="values" align="right">206</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Flower</td>
+                <td class="values" align="right">429</td>
+                <td class="values" align="right">635</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Leather</td>
+                <td class="values" align="right">2693</td>
+                <td class="values" align="right">3328</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Apple</td>
+                <td class="values" align="right">192</td>
+                <td class="values" align="right">3520</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">188</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXSOAOD">CSXSOAOD - Smell Test: Soap Scent</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXSOAOD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Smell Test: Soap Scent</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Forced Choice Odor Selection, Soap Scent</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Soap</td>
+                <td class="values" align="right">3250</td>
+                <td class="values" align="right">3250</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Black Pepper</td>
+                <td class="values" align="right">99</td>
+                <td class="values" align="right">3349</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Leather</td>
+                <td class="values" align="right">101</td>
+                <td class="values" align="right">3450</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Peanut</td>
+                <td class="values" align="right">70</td>
+                <td class="values" align="right">3520</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">188</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXGRAOD">CSXGRAOD - Smell Test: Grape Scent</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXGRAOD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Smell Test: Grape Scent</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Forced Choice Odor Selection, Grape Scent</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Gasoline</td>
+                <td class="values" align="right">444</td>
+                <td class="values" align="right">444</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Grape</td>
+                <td class="values" align="right">2192</td>
+                <td class="values" align="right">2636</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Rose</td>
+                <td class="values" align="right">774</td>
+                <td class="values" align="right">3410</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Peanut</td>
+                <td class="values" align="right">109</td>
+                <td class="values" align="right">3519</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">189</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXONOD">CSXONOD - Smell Test: Onion Scent</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXONOD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Smell Test: Onion Scent</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Forced Choice Odor Selection, Onion Scent</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Chocolate</td>
+                <td class="values" align="right">53</td>
+                <td class="values" align="right">53</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Strawberry</td>
+                <td class="values" align="right">33</td>
+                <td class="values" align="right">86</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Onion</td>
+                <td class="values" align="right">3321</td>
+                <td class="values" align="right">3407</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Fruit Punch</td>
+                <td class="values" align="right">112</td>
+                <td class="values" align="right">3519</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">189</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXNGSOD">CSXNGSOD - Smell Test: Natural Gas Scent</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXNGSOD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Smell Test: Natural Gas Scent</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Forced Choice Odor Selection, Natural Gas Scent</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Orange</td>
+                <td class="values" align="right">111</td>
+                <td class="values" align="right">111</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Cinnamon</td>
+                <td class="values" align="right">184</td>
+                <td class="values" align="right">295</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Cola</td>
+                <td class="values" align="right">175</td>
+                <td class="values" align="right">470</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Natural Gas</td>
+                <td class="values" align="right">3049</td>
+                <td class="values" align="right">3519</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">189</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXSLTRT">CSXSLTRT - Whole Mouth Repeat: 1M NaCl gLMS</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXSLTRT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Whole Mouth Repeat: 1M NaCl gLMS</dd>
+            <dt>English Text: </dt>
+            <dd class="info">gLMS rating for salty taste when replicate 1M NaCl is sampled with the whole mouth.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Hard Edit: if &lt; 0 or &gt; 100, not valid data entry. 
+Hard Edit:  if CSXSLTRG=1,2,3, or 5 and CSXSLTRT = 0, not valid data entry. Hard Edit:  if CSXSLTRG = 4 and CSXSLTRT &gt; 6, not valid data entry.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 100</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1595</td>
+                <td class="values" align="right">1595</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2113</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXSLTRG">CSXSLTRG - Repeat 1M NaCl: What Was Taste?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXSLTRG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Repeat 1M NaCl: What Was Taste?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Name of substance examinee tasted when replicate 1M NaCl was sampled with the whole mouth.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Salty</td>
+                <td class="values" align="right">1548</td>
+                <td class="values" align="right">1548</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Bitter</td>
+                <td class="values" align="right">20</td>
+                <td class="values" align="right">1568</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Something else</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">1578</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Taste</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">1580</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Sour</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">1595</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2113</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXNART">CSXNART - Whole Mouth Repeat: 0.32M NaCl gLMS</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXNART</dd>
+            <dt>SAS Label: </dt>
+            <dd>Whole Mouth Repeat: 0.32M NaCl gLMS</dd>
+            <dt>English Text: </dt>
+            <dd class="info">gLMS rating for salty taste when replicate .32 M NaCl is sampled with the whole mouth.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Hard Edit: if &lt; 0 or &gt; 100, not valid data entry. 
+Hard Edit:  if CSXNARG=1,2,3, or 5 and CSXNART = 0, not valid data entry. Hard Edit:  if CSXNARG = 4 and
+ CSXNART &gt; 6, not valid data entry.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 100</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1613</td>
+                <td class="values" align="right">1613</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2095</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSXNARG">CSXNARG - Repeat .32M NaCl: What Was Taste?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSXNARG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Repeat .32M NaCl: What Was Taste?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Name of substance examinee tasted when replicate .32 M NaCl was sampled with the whole mouth.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Salty</td>
+                <td class="values" align="right">1464</td>
+                <td class="values" align="right">1464</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Bitter</td>
+                <td class="values" align="right">40</td>
+                <td class="values" align="right">1504</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Something else</td>
+                <td class="values" align="right">67</td>
+                <td class="values" align="right">1571</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Taste</td>
+                <td class="values" align="right">21</td>
+                <td class="values" align="right">1592</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Sour</td>
+                <td class="values" align="right">21</td>
+                <td class="values" align="right">1613</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2095</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="CSAEFFRT">CSAEFFRT - Participant's Understanding of Test</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">CSAEFFRT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Participant's Understanding of Test</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MEC Technician's overall rating for participant's understanding of and cooperation with exam procedures.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Very good</td>
+                <td class="values" align="right">1845</td>
+                <td class="values" align="right">1845</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Good</td>
+                <td class="values" align="right">1096</td>
+                <td class="values" align="right">2941</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Fair</td>
+                <td class="values" align="right">404</td>
+                <td class="values" align="right">3345</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Poor</td>
+                <td class="values" align="right">164</td>
+                <td class="values" align="right">3509</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Unable to Cooperate</td>
+                <td class="values" align="right">28</td>
+                <td class="values" align="right">3537</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">171</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

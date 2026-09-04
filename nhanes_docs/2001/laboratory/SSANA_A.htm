@@ -1,0 +1,3588 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>SSANA_A</title>
+    <meta name="title" content="NHANES 1999-2004: Autoantibodies - Immunofluorescence &amp; Immunoprecipitation Analyses (Surplus) Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#WTANA6YR">WTANA6YR - Six-year SSANA subsample weights</a>
+              </li>
+              <li>
+                <a href="#SSCYT">SSCYT - total cytoplasm intensity</a>
+              </li>
+              <li>
+                <a href="#SSNUC">SSNUC - total nucleus intensity</a>
+              </li>
+              <li>
+                <a href="#SSTOT">SSTOT - total ANA intensity</a>
+              </li>
+              <li>
+                <a href="#SS80">SS80 - 1:80 dilution</a>
+              </li>
+              <li>
+                <a href="#SS160">SS160 - 1:160 dilution</a>
+              </li>
+              <li>
+                <a href="#SS320">SS320 - 1:320 dilution</a>
+              </li>
+              <li>
+                <a href="#SS640">SS640 - 1:640 dilution</a>
+              </li>
+              <li>
+                <a href="#SS1280">SS1280 - 1:1280 dilution or higher</a>
+              </li>
+              <li>
+                <a href="#SSNUCPOS">SSNUCPOS - nuclear nucleolar positive</a>
+              </li>
+              <li>
+                <a href="#SSNUCSIG">SSNUCSIG - nuclear nucleolar signal</a>
+              </li>
+              <li>
+                <a href="#SSNUHOMP">SSNUHOMP - nuclear homogenous positive</a>
+              </li>
+              <li>
+                <a href="#SSNUHOMS">SSNUHOMS - nuclear homogenous signal</a>
+              </li>
+              <li>
+                <a href="#SSNUSPP">SSNUSPP - nuclear speckles positive</a>
+              </li>
+              <li>
+                <a href="#SSNUSPS">SSNUSPS - nuclear speckles signal</a>
+              </li>
+              <li>
+                <a href="#SSNUCENP">SSNUCENP - nuclear centromere positive</a>
+              </li>
+              <li>
+                <a href="#SSNUCENS">SSNUCENS - nuclear centromere signal</a>
+              </li>
+              <li>
+                <a href="#SSNUDOTP">SSNUDOTP - nuclear dots positive</a>
+              </li>
+              <li>
+                <a href="#SSNUDOTS">SSNUDOTS - nuclear dots signal</a>
+              </li>
+              <li>
+                <a href="#SSNUENVP">SSNUENVP - nuclear envelope positive</a>
+              </li>
+              <li>
+                <a href="#SSNUENVS">SSNUENVS - nuclear envelope signal</a>
+              </li>
+              <li>
+                <a href="#SSCYHOMP">SSCYHOMP - cytoplasmic homogeneous positive</a>
+              </li>
+              <li>
+                <a href="#SSCYHOMS">SSCYHOMS - cytoplasmic homogeneous signal</a>
+              </li>
+              <li>
+                <a href="#SSCYSPP">SSCYSPP - cytoplasmic speckles positive</a>
+              </li>
+              <li>
+                <a href="#SSCYSPS">SSCYSPS - cytoplasmic speckles signal</a>
+              </li>
+              <li>
+                <a href="#SSCYMIP">SSCYMIP - cytoplasmic mitochondria-like positive</a>
+              </li>
+              <li>
+                <a href="#SSCYMIS">SSCYMIS - cytoplasmic mitochondria-like signal</a>
+              </li>
+              <li>
+                <a href="#SSCYGOP">SSCYGOP - cytoplasmic golgi complex positive</a>
+              </li>
+              <li>
+                <a href="#SSCYGOS">SSCYGOS - cytoplasmic golgi complex signal</a>
+              </li>
+              <li>
+                <a href="#SSCYCEP">SSCYCEP - cytoplasmic centriole positive</a>
+              </li>
+              <li>
+                <a href="#SSCYCES">SSCYCES - cytoplasmic centriole signal</a>
+              </li>
+              <li>
+                <a href="#SSCYGWP">SSCYGWP - cytoplasmic GW body positive</a>
+              </li>
+              <li>
+                <a href="#SSCYGWS">SSCYGWS - cytoplasmic GW body signal</a>
+              </li>
+              <li>
+                <a href="#SSCYCFP">SSCYCFP - cytoplasmic cytofilament positive</a>
+              </li>
+              <li>
+                <a href="#SSCYCFS">SSCYCFS - cytoplasmic cytofilament signal</a>
+              </li>
+              <li>
+                <a href="#SSCYRRP">SSCYRRP - cytoplasmic rods/rings positive</a>
+              </li>
+              <li>
+                <a href="#SSCYRRS">SSCYRRS - cytoplasmic rods/rings signal</a>
+              </li>
+              <li>
+                <a href="#SSCYLYP">SSCYLYP - cytoplasmic lysosomes positive</a>
+              </li>
+              <li>
+                <a href="#SSCYLYS">SSCYLYS - cytoplasmic lysosomes signal</a>
+              </li>
+              <li>
+                <a href="#SSMIHOMP">SSMIHOMP - mitotic homogeneous positive</a>
+              </li>
+              <li>
+                <a href="#SSMIHOMS">SSMIHOMS - mitotic homogeneous signal</a>
+              </li>
+              <li>
+                <a href="#SSMISPP">SSMISPP - mitotic speckles positive</a>
+              </li>
+              <li>
+                <a href="#SSMISPS">SSMISPS - mitotic speckles signal</a>
+              </li>
+              <li>
+                <a href="#SSMISAP">SSMISAP - mitotic spindle apparatus positive</a>
+              </li>
+              <li>
+                <a href="#SSMISAS">SSMISAS - mitotic spindle apparatus signal</a>
+              </li>
+              <li>
+                <a href="#SSMIMBP">SSMIMBP - mitotic mid-body positive</a>
+              </li>
+              <li>
+                <a href="#SSMIMBS">SSMIMBS - mitotic mid-body signal</a>
+              </li>
+              <li>
+                <a href="#SSMICHP">SSMICHP - mitotic chromosomes positive</a>
+              </li>
+              <li>
+                <a href="#SSMICHS">SSMICHS - mitotic chromosomes signal</a>
+              </li>
+              <li>
+                <a href="#SSU1RNP">SSU1RNP - U1 small nuclear ribonucleoprotein</a>
+              </li>
+              <li>
+                <a href="#SSSM">SSSM - Sm antigen</a>
+              </li>
+              <li>
+                <a href="#SSRIBOP">SSRIBOP - ribosomal P protein</a>
+              </li>
+              <li>
+                <a href="#SSROSSA">SSROSSA - Ro/SS-A 60kDa antigen</a>
+              </li>
+              <li>
+                <a href="#SSLASSB">SSLASSB - La/SS-B antigen</a>
+              </li>
+              <li>
+                <a href="#SSSUAR2">SSSUAR2 - Su antigen/Argonaute2 (Ago2) protein</a>
+              </li>
+              <li>
+                <a href="#SSRPA">SSRPA - replication protein A</a>
+              </li>
+              <li>
+                <a href="#SSJO_1">SSJO_1 - Jo-1 antigen</a>
+              </li>
+              <li>
+                <a href="#SSPL_7">SSPL_7 - PL-7 antigen</a>
+              </li>
+              <li>
+                <a href="#SSPL_12">SSPL_12 - PL-12 antigen</a>
+              </li>
+              <li>
+                <a href="#SSEJ">SSEJ - EJ antigen</a>
+              </li>
+              <li>
+                <a href="#SSOJ">SSOJ - OJ antigen</a>
+              </li>
+              <li>
+                <a href="#SSSRP">SSSRP - signal recognition particle</a>
+              </li>
+              <li>
+                <a href="#SSKU">SSKU - Ku antigen</a>
+              </li>
+              <li>
+                <a href="#SSPM_SCL">SSPM_SCL - PM-Scl antigen</a>
+              </li>
+              <li>
+                <a href="#SSMI_2">SSMI_2 - Mi-2 antigen</a>
+              </li>
+              <li>
+                <a href="#SSTOPOI">SSTOPOI - Topoisomerase I</a>
+              </li>
+              <li>
+                <a href="#SSRNAPOL">SSRNAPOL - RNA polymerase I and III</a>
+              </li>
+              <li>
+                <a href="#SSU3RNP">SSU3RNP - U3 small nuclear ribonucleoprotein</a>
+              </li>
+              <li>
+                <a href="#SSNOR_90">SSNOR_90 - nucleolar organizer region antigen 90kDa</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>1999-2004 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Autoantibodies - Immunofluorescence &amp; Immunoprecipitation Analyses (Surplus) (SSANA_A)</h3>
+        <h4> Data File: SSANA_A.xpt</h4>
+        <h5 class="left">First Published: June 2011</h5>
+        <h5 class="right">Last Revised: July 2022</h5>
+        <h5 class="specialnote">Note: The NHANES Biospecimen Program processes were reevaluated in 2021 and 2022 to monitor quality control after a procedural error was identified. This error did not pose any risk of participant disclosure. Addressing this error resulted in the removal of some records from various stored biospecimen data files between 1999 and 2018 that did not meet program standards. After a comprehensive review of all stored specimen datasets, this data file was modified to remove records (<5% of records) that were initially included in error. No data values were altered. The sample weights and overall estimates were compared between the original and revised files. The sample weights provided with the original data release are appropriate to use with this updated data file; therefore, no new survey weights were created. The overall estimates from these files were examined and are consistent with the previous file. However, not all possible analyses were performed.<br/><br/>See Revised Analytical Note for NHANES 1999-2004 Immunofluorescence and immunoprecipitation analyses of autoantibodies (Revised January 2012)</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>IgG autoantibody testing of a subsample stored serum of specimens from NHANES (1999&ndash;2004) was conducted to estimate the prevalence and specificities of selected autoantibodies in the US population in 1999-2004.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>One third subsample of participants aged 12 years and older from NHANES 1999-2004 in the Dioxin subsample who had stored sera (total of N = ~5,000 from NHANES 1999-2004).</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p><span style="text-decoration: underline;">Immunofluorescence analysis<br />
+</span>Testing of IgG autoantibodies to human cellular antigens was performed by the HEp-2 cell immunofluorescence assay using slides from INOVA Diagnostics, San Diego, CA (Cat # 508100) following the manufacturer’s instructions.</p>
+<p>The cellular pattern of staining and its staining intensity from 0 to 4+ was described using a reference gallery per below. The determination of autoantibody titers from 1:80 to 1:1280 was performed by serial dilution on samples that showed a 3+ or greater nuclear and/or cytoplasmic immunofluorescence pattern. </p>
+<p><span style="text-decoration: underline;">Immunoprecipitation analysis <br />
+</span>Testing of IgG autoantibodies to human cellular antigens was performed on samples that showed a 3+ or greater immunofluorescence staining using immunoprecipitation assays by a standard method (Reeves WH,et al., 2006) </p>
+<p>Sera that showed known autoantibody specificities based on visible immunoprecipitated protein bands consistent with the combination of bands and their estimated size per the table below were recorded. Immunoprecipitated ribonucleic acid bands on stained gels were also recorded when they were needed to confirm the specificity. When necessary, the size and the pattern of migration were compared with reference sera (Reeves WH,et al., 2006). </p>
+<h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>Data Access: All data are publicly available.</p>
+<h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p><span style="text-decoration: underline;">Immunofluorescence analysis<br />
+</span>Serum samples were tested using established protocols outlined by manufacturer. A set of CDC autoimmune reference sera (12 different specificities) (Chan EKL et al., 2007) and 2 healthy control sera were coded and tested in a blinded fashion two times to verify consistent results throughout screening test: towards the beginning and when approximately half of the samples were tested.</p>
+<p>Samples that showed discrepant results were repeated. </p>
+<p>More than every 50th sample (2% of the total from NHANES 1999-2004) was automatically repeated to assess assay precision issues. Additional samples were repeated for the following reasons: <br />
+1) Titering of 3+/4+ positive samples (repeat, n=692) <br />
+2) Randomly selected samples for titering (and repeat, n=1035) <br />
+3) Other repeats are performed whenever there is any doubt for accuracy or technical issues. Samples repeated with 2 independent staining = 895; 3 independent staining = 194; 4 independent staining = 4. </p>
+<p><span style="text-decoration: underline;">Immunoprecipitation analysis</span> <br />
+Serum samples were tested using the standard immunoprecipitation protocol (Reeves WH,et al., 2006). A set of CDC autoimmune reference sera (12 specificities) and 2 healthy controls were tested in a blinded fashion two times to verify consistent results throughout screening test: towards the beginning of the study and when approximately half of the samples were tested.</p>
+<p>Samples that showed common bands were repeated in parallel side-by-side fashion for comparison with each other and with known controls as needed.</p>
+<p>Assay reproducibility was initially assessed by random selection of the ANA 3+ or 4+ sera number of serum specimens tested and repeating the immunoprecipitation assay. The percentage of samples that were repeated was actually 15% (103/692) of the sera tested by IP.   </p>
+<h2 id="Analytic_Notes">Analytic Notes</h2><p><span style="text-decoration: underline;">The NHANES Survey Design:
+<br />
+<br />
+</span>The analysis of NHANES laboratory data should be conducted using the key survey design variables. The NHANES Demographic data files for each 2-year survey cycle contain core information on the survey and the survey design variables for strata and PSU (SDMVSTRA and SDMVPSU, respectively) which are recommended to be used in variance estimation. This laboratory data files may be linked to other NHANES data files using the unique survey participant identifier SEQN.<span style="text-decoration: underline;"><br />
+<br />
+Weighting:
+<br />
+</span><br />
+Special subsample sample weights WTANA6YR in the file are required to analyze the NHANES 1999-2004 ANA data. This is because the ANA data were analyzed using stored serum samples obtained from survey participants who had been selected from NHANES 1999-2004 Dioxin subsamples. The NHANES 1999-2004 ANA sample and the subsample weights were created for 6 years analysis and should be used to analyze all six years together.
+<span style="text-decoration: underline;"><br />
+</span></p>
+<p><span style="text-decoration: underline;">Immunofluorescence analysis</span>&nbsp;</p>
+<p>A standard gallery of images showing the intensity of staining and the cellular patterns of reactivity is&nbsp;shown below&nbsp;and the following patterns were reported:</p>
+<p>Nuclear patterns <br />
+1) homogeneous 2) speckles 3) centromere<br />
+4) nuclear dots 5) nuclear envelope 6) nucleolar </p>
+<p>Cytoplasmic patterns <br />
+1) homogeneous 2) speckles 3) mitochondria-like<br />
+4) Golgi complex 5) centriole&nbsp; 6) GW Body<br />
+7) cytofilament 8) rods/rings 9) lysosomes</p>
+<p>Mitotic cell patterns <br />
+1) homogeneous 2) speckles 3) spindle apparatus <br />
+4) mid-body 5) chromosomes </p>
+<p><img alt="ANA staining intensity reference gallery Staining Signal Guidelines for Multiple Staining Patterns" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/zz_ANA%20staining%20intensity%20refernce%20gallery%20Jen.jpg" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table>
+    <caption style="text-align: center; vertical-align: top; caption-side: top;"><strong>Nuclear Patterns</strong></caption>
+    <thead>
+        <tr>
+            <th id="ms__id1121_heading_0"><strong>&nbsp;Nuclear staining</strong></th>
+            <th id="ms__id1121_heading_1">&nbsp;Images</th>
+            <th id="ms__id1121_heading_2"><strong>&nbsp;Description of staining patterns</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td headers="ms__id1121_heading_0">&nbsp;Homogeneous</td>
+            <td headers="ms__id1121_heading_1">&nbsp;<img alt="Homogeneous Uniform diffuse staining of the nucleus in interphase cells" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_NucPat_homogeneous.JPG" /></td>
+            <td headers="ms__id1121_heading_2">&nbsp;Uniform diffuse staining of the nucleus in interphase cells</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1121_heading_0">&nbsp;&nbsp;Speckles </td>
+            <td headers="ms__id1121_heading_1">&nbsp;<img alt="Speckles in the nucleus of interphase cells" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_NucPat_Speckles.JPG" /></td>
+            <td headers="ms__id1121_heading_2">&nbsp;Speckles in the nucleus of interphase cells</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1121_heading_0">&nbsp;Centromere</td>
+            <td headers="ms__id1121_heading_1">&nbsp;<img alt="Discrete speckles (40-80/cell) in interphase cells and on metaphase plates" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_NucPat_Centromere.JPG" /></td>
+            <td headers="ms__id1121_heading_2">&nbsp;Discrete speckles (40-80/cell) in interphase cells and on metaphase plates</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1121_heading_0">&nbsp;Nuclear dots</td>
+            <td headers="ms__id1121_heading_1">&nbsp;<img alt="Countable discrete speckles PML bodies, Cajal bodies (coiled bodies)" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_NucPat_Nuclear%20dots.JPG" /></td>
+            <td headers="ms__id1121_heading_2">&nbsp;Countable discrete speckles PML bodies, Cajal bodies (coiled bodies)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1121_heading_0">&nbsp;Nuclear envelope</td>
+            <td headers="ms__id1121_heading_1">&nbsp;<img alt=" Homogeneous nuclear staining with greater intensity at its outer rim" src="/nchs/data/nhanes/public/1999/datafiles/00_NucPat_Nuclear%20envelope.JPG" /></td>
+            <td headers="ms__id1121_heading_2">&nbsp;Homogeneous nuclear staining with greater intensity at its outer rim</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1121_heading_0">&nbsp;Nucleolar</td>
+            <td headers="ms__id1121_heading_1">&nbsp;<img alt="Homogeneous or speckled staining of the nucleolus" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_NucPat_Nucleolar.JPG" /></td>
+            <td headers="ms__id1121_heading_2">&nbsp;Homogeneous or speckled staining of the nucleolus</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table>
+    <caption style="text-align: center; vertical-align: top; caption-side: top;"><strong>Cytoplasmic Patterns</strong></caption>
+    <thead>
+        <tr>
+            <th id="ms__id1122_heading_0">&nbsp;<strong>Cytoplasmic staining</strong></th>
+            <th id="ms__id1122_heading_1">Images&nbsp;</th>
+            <th id="ms__id1122_heading_2">&nbsp;<strong>Description of staining patterns</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td headers="ms__id1122_heading_0">&nbsp;Homogeneous</td>
+            <td headers="ms__id1122_heading_1"><img style="width: 352px; height: 319px;" alt="Uniform diffuse staining of the cytoplasm in interphase" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_Cyto_Pat_Homogeneous.jpg" /></td>
+            <td headers="ms__id1122_heading_2">&nbsp;Uniform diffuse staining of the cytoplasm in interphase cells</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1122_heading_0">&nbsp;Speckles</td>
+            <td headers="ms__id1122_heading_1">&nbsp;<img alt="Speckles Speckled staining of the cytoplasm" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_Cyto_Pat_Speckles.JPG" /></td>
+            <td headers="ms__id1122_heading_2">&nbsp;Speckled staining of the cytoplasm</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1122_heading_0">&nbsp;Mitochondria-like </td>
+            <td headers="ms__id1122_heading_1">&nbsp;<img alt="Coarse granular filamentous staining" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_Cyto_Pat_Mitochondria-like.JPG" /></td>
+            <td headers="ms__id1122_heading_2">&nbsp;Coarse granular filamentous staining</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1122_heading_0">&nbsp;Golgi complex</td>
+            <td headers="ms__id1122_heading_1">&nbsp;<img alt="Discontinuous speckled or granular perinuclear staining" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_Cyto_Pat_Golgi%20complex.JPG" /></td>
+            <td headers="ms__id1122_heading_2">&nbsp;Discontinuous speckled or granular perinuclear staining</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1122_heading_0">&nbsp;Centriole </td>
+            <td headers="ms__id1122_heading_1">&nbsp;<img alt="Distinct dots (2-4/cell) in cytoplasm and at the poles of mitotic spindle" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_Cyto_Pat_Centriole.JPG" /></td>
+            <td headers="ms__id1122_heading_2">&nbsp;Distinct dots (2-4/cell) in cytoplasm and at the poles of mitotic spindle</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1122_heading_0">&nbsp;GW body</td>
+            <td headers="ms__id1122_heading_1">&nbsp;<img alt="Discrete dots in cytoplasm of interphase cells" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_Cyto_Pat_GW%20body.JPG" /></td>
+            <td headers="ms__id1122_heading_2">&nbsp;Discrete dots in cytoplasm of interphase cells</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1122_heading_0">&nbsp;Cytofilament </td>
+            <td headers="ms__id1122_heading_1">&nbsp;<img alt="Cytoskeleton staining with variable intensity interphase cells" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_Cyto_Pat_Cytofilament.JPG" /></td>
+            <td headers="ms__id1122_heading_2">&nbsp;Cytoskeleton staining with variable intensity interphase cells</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1122_heading_0">&nbsp;Rods/Rings </td>
+            <td headers="ms__id1122_heading_1">&nbsp;<img alt="Distinct rod and ring structures throughout the cytoplasm" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_Cyto_Pat_Rods_Rings.JPG" /></td>
+            <td headers="ms__id1122_heading_2">&nbsp;Distinct rod and ring structures throughout the cytoplasm</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1122_heading_0">&nbsp;Lysosomes</td>
+            <td headers="ms__id1122_heading_1">&nbsp;<img alt="Distinct and bright speckled staining irregularly distributed in the cytoplasm" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_Cyto_Pat_Lysosomes.JPG" /></td>
+            <td headers="ms__id1122_heading_2">&nbsp;Distinct and bright speckled staining irregularly distributed in the cytoplasm</td>
+        </tr>
+    </tbody>
+</table>
+<table>
+    <caption style="text-align: center; vertical-align: top; caption-side: top;"><strong>Mitotic cell patterns</strong></caption>
+    <thead>
+        <tr>
+            <th id="ms__id1123_heading_0"><strong>&nbsp;Mitotic cell staining</strong></th>
+            <th id="ms__id1123_heading_1">Images&nbsp;</th>
+            <th id="ms__id1123_heading_2"><strong>Description of staining patterns</strong>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td headers="ms__id1123_heading_0">&nbsp;Homogeneous</td>
+            <td headers="ms__id1123_heading_1">&nbsp;<img alt=" Uniform diffuse staining of the mitotic cytoplasm " src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_Mito_Homogeneous.JPG" /></td>
+            <td headers="ms__id1123_heading_2">&nbsp;Uniform diffuse staining of the mitotic cytoplasm</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1123_heading_0">&nbsp;Speckles</td>
+            <td headers="ms__id1123_heading_1">&nbsp;<img alt="Speckles Numerous speckles in cytoplasm of mitotic cells" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_Mito_Speckles.JPG" /></td>
+            <td headers="ms__id1123_heading_2">&nbsp;Numerous speckles in cytoplasm of mitotic cells</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1123_heading_0">&nbsp;Spindle Apparatus </td>
+            <td headers="ms__id1123_heading_1">&nbsp;<img alt="The spindle fibers between the poles are stained in mitotic cells, associated " src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_Mito_Spindle%20apparatus.JPG" /></td>
+            <td headers="ms__id1123_heading_2">&nbsp;The spindle fibers between the poles are stained in mitotic cells, associated with cone-shaped decoration of the mitotic poles</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1123_heading_0">&nbsp;Mid-body</td>
+            <td headers="ms__id1123_heading_1">&nbsp;<img alt=" Staining of the intercellular bridge that connects daughter cells by the end of cell division, but before cell separation" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_Mito_Mid-body.JPG" /></td>
+            <td headers="ms__id1123_heading_2">&nbsp;Staining of the intercellular bridge that connects daughter cells by the end of cell division, but before cell separation</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1123_heading_0">&nbsp;Chromosomes</td>
+            <td headers="ms__id1123_heading_1">&nbsp;<img alt="Diffuse staining of condensed chromatin in mitotic cells" src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_Mito_Chromosomes.JPG" /></td>
+            <td headers="ms__id1123_heading_2">&nbsp;Diffuse staining of condensed chromatin in mitotic cells</td>
+        </tr>
+    </tbody>
+</table>
+<p><span style="text-decoration: underline;">Immunoprecipitation analysis</span><span style="text-decoration: underline;"><br />
+</span>A standard set of images defining the immunoprecipitation patterns of reactivity is shown below and the specific reactivities that are reported are shown in the table below. Those samples that did not show any of these reactivities were reported as negative. </p>
+<p>&nbsp;<img alt="Analysis of protein components of autoantigens (12.5% SDS-PAGE). 35S-methionine labeled K562 cell extract was immunoprecipitated by prototype human autoimmune sera or normal human serum (NHS). Components of each autoantigen are indicated by red arrowheads." src="/nchs/data/nhanes/public/1999/datafiles/SSANA/00_ANA%20-%20IP%20patterns%20of%20autoantibodies%20Feb25rev_reduced.JPG" /></p>
+<p><strong>Analysis of protein components of autoantigens (12.5% SDS-PAGE).</strong> <sup>35</sup>S-methionine labeled K562 cell extract was immunoprecipitated by prototype human autoimmune sera or normal human serum (NHS). Components of each autoantigen are indicated by red arrowheads.</p>
+<p><img alt="Analysis of protein components of autoantigens (8% SDS-PAGE).  35S-methionine labeled K562 cell extract was immunoprecipitated by prototype human autoimmune sera or normal human serum (NHS). Components of each autoantigen are indicated by red arrowheads." src="/nchs/data/nhanes/public/1999/datafiles/SSANA/protein%20components%20of%20autoantigens%208%20percent%20sds-page.jpg" /></p>
+<p><strong>Analysis of protein components of autoantigens (8% SDS-PAGE).</strong> <sup>35</sup>S-methionine labeled K562 cell extract was immunoprecipitated by prototype human autoimmune sera or normal human serum (NHS). Components of each autoantigen are indicated by red arrowheads.</p>
+<p><img alt="Analysis of RNA components of autoantigens. K562 cell extract from 107 cells was immunoprecipitated by prototype sera for anti-U3RNP, Jo-1, and normal human serum (NHS). RNA component was extracted and analyzed by urea-PAGE and silver staining. RNA components of each autoantigen are shown with arrowheads. Total RNA and the pattern by anti-Sm serum are shown as references." src="/nchs/data/nhanes/public/1999/datafiles/SSANA/RNA%20components%20of%20autoantigens.jpg" /></p>
+<p>Analysis of RNA components of autoantigens. K562 cell extract from 10<sup>7</sup> cells was immunoprecipitated by prototype sera for anti-U3RNP, Jo-1, and normal human serum (NHS). RNA component was extracted and analyzed by urea-PAGE and silver staining. RNA components of each autoantigen are shown with arrowheads. Total RNA and the pattern by anti-Sm serum are shown as references.</p>
+<table bordercolor="#000000" border="1">
+    <caption style="text-align: center; vertical-align: top; caption-side: top;"><strong>Identification of autoantibodies by protein and RNA immunoprecipitation</strong> </caption>
+    <thead>
+        <tr>
+            <th id="ms__id1124_heading_0">Autoantibody Specificity</th>
+            <th id="ms__id1124_heading_1">35S-methionine IP protein analysis</th>
+            <th id="ms__id1124_heading_2">IP-RNA analysis silver staining</th>
+            <th id="ms__id1124_heading_3">Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td headers="ms__id1124_heading_0">U1RNP</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">A characteristic set of UsnRNPs proteins, U1-70k, A (33kD), B&rsquo;/B (29/28kD), C (22kD), D1/D2/D3 (16kD). E,F, and G without U5-200kD doublet</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">Sm</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">A characteristic set of UsnRNPs proteins as above with U5-200kD doublet</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">Ribosomal P</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">A characteristic set of proteins P0 (38kD), P1 (19kD), and P2 (17kD)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">Ro60 (SS-A)</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">60kD protein</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">La (SS-B)</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">48kD protein</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">Su (ago2)</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">A set of 100/102kD doublet and 200kD proteins</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">Replication protein A</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">A set of 70kD, 32kD, and 14kD proteins</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">Jo-1 (histidyl-tRNA synthetase)</td>
+            <td headers="ms__id1124_heading_1">(Y)</td>
+            <td headers="ms__id1124_heading_2">Y</td>
+            <td headers="ms__id1124_heading_3">50kD protein and tRNA by RNA analysis</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">PL-7 (threonyl-tRNA synthetase)</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">80kD protein</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">PL-12 (alanyl-tRNA synthetase)</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">110kD protein</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">EJ (glycyl-tRNA synthetase)</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">75kD protein</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">OJ (isoleucyl-tRNA synthetase)</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">130kD, 150kD, 170kD proteins</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">SRP (signal recognition particle)</td>
+            <td headers="ms__id1124_heading_1">(Y)</td>
+            <td headers="ms__id1124_heading_2">Y</td>
+            <td headers="ms__id1124_heading_3">72/68kD, 54kD, 19kD, 14kD, 9kD proteins and 7SL RNA by RNA analysis</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">Ku</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">70kD and 86kD proteins</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">PM-Scl</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">110kD, 75kD, and a set of other proteins</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">Mi-2</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">240kD, 150kD proteins and several other proteins</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">Topoisomerase I (Scl-70)</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">110kD protein with a smear toward higher molecular weight due to phosphorylation</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">RNA polymerase I/III</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">A characteristic set of proteins. Two largest subunits of each (RNAP I: 190, 120kD, RNAP III (155, 135kD)</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">U3RNP (Fibrillarin)</td>
+            <td headers="ms__id1124_heading_1">(Y)</td>
+            <td headers="ms__id1124_heading_2">Y</td>
+            <td headers="ms__id1124_heading_3">34kD protein, nucleolar staining, and U3RNA by RNA analysis</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1124_heading_0">NOR-90</td>
+            <td headers="ms__id1124_heading_1">Y</td>
+            <td headers="ms__id1124_heading_2">ND</td>
+            <td headers="ms__id1124_heading_3">93/95kD thick protein doublet</td>
+        </tr>
+    </tbody>
+</table>
+<p>IP: immunoprecipitation; Y: Identity can be confirmed; (Y) identity suggested but requires RNA-IP to confirm; ND: not done</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li><p>Chan EKL, Fritzler MJ, Wiik A, Andrade LE, Reeves WH, Tincani A, Meroni PL. AutoAbSC.Org - Autoantibody Standardization Committee in 2006. Autoimmun.Rev. 2007;6(8):577-80.</p></li>
+          <li><p>Reeves WH, Satoh M, Lyons R, Nichols C, Narain S: Detection of autoantibodies against proteins and ribonucleoproteins by double immunodiffusion, immunoprecipitation, and western blotting. In: Manual of Molecular and Clinical Laboratory Immunology, 7th edition. Edited by Rose NR, Hamilton RG, Detrick B, Reeves WH. Washington, D.C.: American Society of Microbiology Press; 2006: 1007-1018.</p></li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTANA6YR">WTANA6YR - Six-year SSANA subsample weights</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTANA6YR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Six-year SSANA subsample weights</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Six-year SSANA subsample weights</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1715.213371 to 262789.6562</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">No Lab Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYT">SSCYT - total cytoplasm intensity</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYT</dd>
+            <dt>SAS Label: </dt>
+            <dd>total cytoplasm intensity</dd>
+            <dt>English Text: </dt>
+            <dd class="info">total cytoplasm intensity</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSNUC">SSNUC - total nucleus intensity</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSNUC</dd>
+            <dt>SAS Label: </dt>
+            <dd>total nucleus intensity</dd>
+            <dt>English Text: </dt>
+            <dd class="info">total nucleus intensity</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSTOT">SSTOT - total ANA intensity</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSTOT</dd>
+            <dt>SAS Label: </dt>
+            <dd>total ANA intensity</dd>
+            <dt>English Text: </dt>
+            <dd class="info">total ANA intensity</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SS80">SS80 - 1:80 dilution</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SS80</dd>
+            <dt>SAS Label: </dt>
+            <dd>1:80 dilution</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1:80 dilution</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SS160">SS160 - 1:160 dilution</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SS160</dd>
+            <dt>SAS Label: </dt>
+            <dd>1:160 dilution</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1:160 dilution</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SS320">SS320 - 1:320 dilution</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SS320</dd>
+            <dt>SAS Label: </dt>
+            <dd>1:320 dilution</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1:320 dilution</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SS640">SS640 - 1:640 dilution</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SS640</dd>
+            <dt>SAS Label: </dt>
+            <dd>1:640 dilution</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1:640 dilution</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SS1280">SS1280 - 1:1280 dilution or higher</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SS1280</dd>
+            <dt>SAS Label: </dt>
+            <dd>1:1280 dilution or higher</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1:1280 dilution or higher</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSNUCPOS">SSNUCPOS - nuclear nucleolar positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSNUCPOS</dd>
+            <dt>SAS Label: </dt>
+            <dd>nuclear nucleolar positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">nuclear nucleolar positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSNUCSIG">SSNUCSIG - nuclear nucleolar signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSNUCSIG</dd>
+            <dt>SAS Label: </dt>
+            <dd>nuclear nucleolar signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">nuclear nucleolar signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSNUHOMP">SSNUHOMP - nuclear homogenous positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSNUHOMP</dd>
+            <dt>SAS Label: </dt>
+            <dd>nuclear homogenous positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">nuclear homogenous positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSNUHOMS">SSNUHOMS - nuclear homogenous signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSNUHOMS</dd>
+            <dt>SAS Label: </dt>
+            <dd>nuclear homogenous signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">nuclear homogenous signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSNUSPP">SSNUSPP - nuclear speckles positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSNUSPP</dd>
+            <dt>SAS Label: </dt>
+            <dd>nuclear speckles positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">nuclear speckles positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSNUSPS">SSNUSPS - nuclear speckles signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSNUSPS</dd>
+            <dt>SAS Label: </dt>
+            <dd>nuclear speckles signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">nuclear speckles signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSNUCENP">SSNUCENP - nuclear centromere positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSNUCENP</dd>
+            <dt>SAS Label: </dt>
+            <dd>nuclear centromere positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">nuclear centromere positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSNUCENS">SSNUCENS - nuclear centromere signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSNUCENS</dd>
+            <dt>SAS Label: </dt>
+            <dd>nuclear centromere signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">nuclear centromere signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSNUDOTP">SSNUDOTP - nuclear dots positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSNUDOTP</dd>
+            <dt>SAS Label: </dt>
+            <dd>nuclear dots positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">nuclear dots positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSNUDOTS">SSNUDOTS - nuclear dots signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSNUDOTS</dd>
+            <dt>SAS Label: </dt>
+            <dd>nuclear dots signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">nuclear dots signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSNUENVP">SSNUENVP - nuclear envelope positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSNUENVP</dd>
+            <dt>SAS Label: </dt>
+            <dd>nuclear envelope positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">nuclear envelope positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSNUENVS">SSNUENVS - nuclear envelope signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSNUENVS</dd>
+            <dt>SAS Label: </dt>
+            <dd>nuclear envelope signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">nuclear envelope signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYHOMP">SSCYHOMP - cytoplasmic homogeneous positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYHOMP</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic homogeneous positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic homogeneous positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYHOMS">SSCYHOMS - cytoplasmic homogeneous signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYHOMS</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic homogeneous signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic homogeneous signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYSPP">SSCYSPP - cytoplasmic speckles positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYSPP</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic speckles positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic speckles positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYSPS">SSCYSPS - cytoplasmic speckles signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYSPS</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic speckles signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic speckles signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYMIP">SSCYMIP - cytoplasmic mitochondria-like positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYMIP</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic mitochondria-like positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic mitochondria-like positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYMIS">SSCYMIS - cytoplasmic mitochondria-like signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYMIS</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic mitochondria-like signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic mitochondria-like signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYGOP">SSCYGOP - cytoplasmic golgi complex positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYGOP</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic golgi complex positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic golgi complex positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYGOS">SSCYGOS - cytoplasmic golgi complex signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYGOS</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic golgi complex signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic golgi complex signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYCEP">SSCYCEP - cytoplasmic centriole positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYCEP</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic centriole positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic centriole positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYCES">SSCYCES - cytoplasmic centriole signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYCES</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic centriole signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic centriole signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYGWP">SSCYGWP - cytoplasmic GW body positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYGWP</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic GW body positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic GW body positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYGWS">SSCYGWS - cytoplasmic GW body signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYGWS</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic GW body signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic GW body signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYCFP">SSCYCFP - cytoplasmic cytofilament positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYCFP</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic cytofilament positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic cytofilament positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYCFS">SSCYCFS - cytoplasmic cytofilament signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYCFS</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic cytofilament signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic cytofilament signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYRRP">SSCYRRP - cytoplasmic rods/rings positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYRRP</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic rods/rings positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic rods/rings positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYRRS">SSCYRRS - cytoplasmic rods/rings signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYRRS</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic rods/rings signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic rods/rings signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYLYP">SSCYLYP - cytoplasmic lysosomes positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYLYP</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic lysosomes positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic lysosomes positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSCYLYS">SSCYLYS - cytoplasmic lysosomes signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSCYLYS</dd>
+            <dt>SAS Label: </dt>
+            <dd>cytoplasmic lysosomes signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cytoplasmic lysosomes signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMIHOMP">SSMIHOMP - mitotic homogeneous positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMIHOMP</dd>
+            <dt>SAS Label: </dt>
+            <dd>mitotic homogeneous positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">mitotic homogeneous positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMIHOMS">SSMIHOMS - mitotic homogeneous signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMIHOMS</dd>
+            <dt>SAS Label: </dt>
+            <dd>mitotic homogeneous signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">mitotic homogeneous signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMISPP">SSMISPP - mitotic speckles positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMISPP</dd>
+            <dt>SAS Label: </dt>
+            <dd>mitotic speckles positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">mitotic speckles positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMISPS">SSMISPS - mitotic speckles signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMISPS</dd>
+            <dt>SAS Label: </dt>
+            <dd>mitotic speckles signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">mitotic speckles signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMISAP">SSMISAP - mitotic spindle apparatus positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMISAP</dd>
+            <dt>SAS Label: </dt>
+            <dd>mitotic spindle apparatus positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">mitotic spindle apparatus positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMISAS">SSMISAS - mitotic spindle apparatus signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMISAS</dd>
+            <dt>SAS Label: </dt>
+            <dd>mitotic spindle apparatus signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">mitotic spindle apparatus signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMIMBP">SSMIMBP - mitotic mid-body positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMIMBP</dd>
+            <dt>SAS Label: </dt>
+            <dd>mitotic mid-body positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">mitotic mid-body positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMIMBS">SSMIMBS - mitotic mid-body signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMIMBS</dd>
+            <dt>SAS Label: </dt>
+            <dd>mitotic mid-body signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">mitotic mid-body signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMICHP">SSMICHP - mitotic chromosomes positive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMICHP</dd>
+            <dt>SAS Label: </dt>
+            <dd>mitotic chromosomes positive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">mitotic chromosomes positive</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMICHS">SSMICHS - mitotic chromosomes signal</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMICHS</dd>
+            <dt>SAS Label: </dt>
+            <dd>mitotic chromosomes signal</dd>
+            <dt>English Text: </dt>
+            <dd class="info">mitotic chromosomes signal</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">4532</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSU1RNP">SSU1RNP - U1 small nuclear ribonucleoprotein</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSU1RNP</dd>
+            <dt>SAS Label: </dt>
+            <dd>U1 small nuclear ribonucleoprotein</dd>
+            <dt>English Text: </dt>
+            <dd class="info">U1 small nuclear ribonucleoprotein</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSSM">SSSM - Sm antigen</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSSM</dd>
+            <dt>SAS Label: </dt>
+            <dd>Sm antigen</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Sm antigen</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSRIBOP">SSRIBOP - ribosomal P protein</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSRIBOP</dd>
+            <dt>SAS Label: </dt>
+            <dd>ribosomal P protein</dd>
+            <dt>English Text: </dt>
+            <dd class="info">ribosomal P protein</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSROSSA">SSROSSA - Ro/SS-A 60kDa antigen</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSROSSA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ro/SS-A 60kDa antigen</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Ro/SS-A 60kDa antigen</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSLASSB">SSLASSB - La/SS-B antigen</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSLASSB</dd>
+            <dt>SAS Label: </dt>
+            <dd>La/SS-B antigen</dd>
+            <dt>English Text: </dt>
+            <dd class="info">La/SS-B antigen</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSSUAR2">SSSUAR2 - Su antigen/Argonaute2 (Ago2) protein</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSSUAR2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Su antigen/Argonaute2 (Ago2) protein</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Su antigen/Argonaute2 (Ago2) protein</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSRPA">SSRPA - replication protein A</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSRPA</dd>
+            <dt>SAS Label: </dt>
+            <dd>replication protein A</dd>
+            <dt>English Text: </dt>
+            <dd class="info">replication protein A</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSJO_1">SSJO_1 - Jo-1 antigen</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSJO_1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Jo-1 antigen</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Jo-1 antigen</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">0</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSPL_7">SSPL_7 - PL-7 antigen</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSPL_7</dd>
+            <dt>SAS Label: </dt>
+            <dd>PL-7 antigen</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PL-7 antigen</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">0</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSPL_12">SSPL_12 - PL-12 antigen</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSPL_12</dd>
+            <dt>SAS Label: </dt>
+            <dd>PL-12 antigen</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PL-12 antigen</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">0</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSEJ">SSEJ - EJ antigen</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSEJ</dd>
+            <dt>SAS Label: </dt>
+            <dd>EJ antigen</dd>
+            <dt>English Text: </dt>
+            <dd class="info">EJ antigen</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">0</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSOJ">SSOJ - OJ antigen</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSOJ</dd>
+            <dt>SAS Label: </dt>
+            <dd>OJ antigen</dd>
+            <dt>English Text: </dt>
+            <dd class="info">OJ antigen</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSSRP">SSSRP - signal recognition particle</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSSRP</dd>
+            <dt>SAS Label: </dt>
+            <dd>signal recognition particle</dd>
+            <dt>English Text: </dt>
+            <dd class="info">signal recognition particle</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">0</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSKU">SSKU - Ku antigen</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSKU</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ku antigen</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Ku antigen</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">0</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSPM_SCL">SSPM_SCL - PM-Scl antigen</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSPM_SCL</dd>
+            <dt>SAS Label: </dt>
+            <dd>PM-Scl antigen</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PM-Scl antigen</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">0</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMI_2">SSMI_2 - Mi-2 antigen</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMI_2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mi-2 antigen</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mi-2 antigen</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">0</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSTOPOI">SSTOPOI - Topoisomerase I</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSTOPOI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Topoisomerase I</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Topoisomerase I</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSRNAPOL">SSRNAPOL - RNA polymerase I and III</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSRNAPOL</dd>
+            <dt>SAS Label: </dt>
+            <dd>RNA polymerase I and III</dd>
+            <dt>English Text: </dt>
+            <dd class="info">RNA polymerase I and III</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">0</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSU3RNP">SSU3RNP - U3 small nuclear ribonucleoprotein</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSU3RNP</dd>
+            <dt>SAS Label: </dt>
+            <dd>U3 small nuclear ribonucleoprotein</dd>
+            <dt>English Text: </dt>
+            <dd class="info">U3 small nuclear ribonucleoprotein</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">0</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSNOR_90">SSNOR_90 - nucleolar organizer region antigen 90kDa</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSNOR_90</dd>
+            <dt>SAS Label: </dt>
+            <dd>nucleolar organizer region antigen 90kDa</dd>
+            <dt>English Text: </dt>
+            <dd class="info">nucleolar organizer region antigen 90kDa</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">628</td>
+                <td class="values" align="right">628</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3904</td>
+                <td class="values" align="right">4532</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

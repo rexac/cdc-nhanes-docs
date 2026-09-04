@@ -1,0 +1,2555 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>BFRPOL_E</title>
+    <meta name="title" content="NHANES 2007-2008: Brominated Flame Retardants (BFRs) - Pooled Samples Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Method_Files">Laboratory Method Files</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SAMPLEID">SAMPLEID - Pool identification number</a>
+              </li>
+              <li>
+                <a href="#RIAGENDR">RIAGENDR - Gender</a>
+              </li>
+              <li>
+                <a href="#ETHNICTY">ETHNICTY - Ethnicity - Recode</a>
+              </li>
+              <li>
+                <a href="#RIDAGGRP">RIDAGGRP - Age group</a>
+              </li>
+              <li>
+                <a href="#RIANSMP">RIANSMP - Number of samples in a pool</a>
+              </li>
+              <li>
+                <a href="#WTSMSMPA">WTSMSMPA - Adjust sum sampling weights in same pool</a>
+              </li>
+              <li>
+                <a href="#LBCBB1">LBCBB1 - 2,2',4,4',5,5'-hexabromobiphenyl (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCBB1LA">LBCBB1LA - 2,2',4,4',5,5'-hxbrmbiphl lipd adj(ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDBB1LC">LBDBB1LC - 2,2',4,4',5,5'-hexabromobiphenyl comnt</a>
+              </li>
+              <li>
+                <a href="#LBCBR1">LBCBR1 - 2,2',4-tribromodiphenyl ether (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCBR1LA">LBCBR1LA - 2,2',4-tribromodiphl ether lpd adj(ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDBR1LC">LBDBR1LC - 2,2',4-tribromodiphenyl ether comment</a>
+              </li>
+              <li>
+                <a href="#LBCBR11">LBCBR11 - PBDE 209 (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCBR11L">LBCBR11L - PBDE 209  lipid adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDBR11C">LBDBR11C - PBDE 209  comment</a>
+              </li>
+              <li>
+                <a href="#LBCBR2">LBCBR2 - 2,4,4'-tribromodiphenyl ether (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCBR2LA">LBCBR2LA - 2,4,4'-tribrmdphenyl ether lpd adj(ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDBR2LC">LBDBR2LC - 2,4,4'-tribromodiphenyl ether comment</a>
+              </li>
+              <li>
+                <a href="#LBCBR3">LBCBR3 - 2,2',4,4'-tetrabromodiphenyl ether(pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCBR3LA">LBCBR3LA - 2,2',4,4'-tetrmdiphnyl ethr lpd ad(ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDBR3LC">LBDBR3LC - 2,2',4,4'-tetrabromphenyl ether comment </a>
+              </li>
+              <li>
+                <a href="#LBCBR4">LBCBR4 - 2,2',3,4,4'-pentbromodiphnyl ether(pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCBR4LA">LBCBR4LA - 2,2',3,4,4'-pentabromphnyl lpd adj(ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDBR4LC">LBDBR4LC - 2,2',3,4,4'-pentabromphenyl ether comt </a>
+              </li>
+              <li>
+                <a href="#LBCBR5">LBCBR5 - 2,2',4,4',5-pentabromodiphnyl ethr(pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCBR5LA">LBCBR5LA - 2,2',4,4',5-pentabrompheyl lpd adj(ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDBR5LC">LBDBR5LC - 2,2',4,4',5-pentabromphenyl ether comt</a>
+              </li>
+              <li>
+                <a href="#LBCBR6">LBCBR6 - 2,2',4,4',6-pentabromodiphyl ether(pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCBR6LA">LBCBR6LA - 2,2',4,4',6-pentabromdphyl lpd adj(ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDBR6LC">LBDBR6LC - 2,2',4,4',6-pentabromdphenyl ether comt</a>
+              </li>
+              <li>
+                <a href="#LBCBR66">LBCBR66 - 2,3',4,4'-tetrabromodiphenyl ether(pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCBR66L">LBCBR66L - 2,3',4,4'-tetrabromodiphyl lpd adj(ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDBR66C">LBDBR66C - 2,3',4,4'-tetrabromodiphenyl ether comt</a>
+              </li>
+              <li>
+                <a href="#LBCBR7">LBCBR7 - 2,2',4,4',5,5'-hxbromodiphnyl ethr(pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCBR7LA">LBCBR7LA - 2,2',4,4',5,5'-hxbrompheyl lpd adj(ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDBR7LC">LBDBR7LC - 2,2',4,4',5,5'-hexabromphenyl ether comt</a>
+              </li>
+              <li>
+                <a href="#LBCBR8">LBCBR8 - 2,2',4,4',5,6'hexabromodiphyl ethr(pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCBR8LA">LBCBR8LA - 2,2',4,4',5,6'-hxabromphyl lpd adj(ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDBR8LC">LBDBR8LC - 2,2',4,4',5,6'-hexabromphenyl ether comt</a>
+              </li>
+              <li>
+                <a href="#LBCBR9">LBCBR9 - 2,2',3,4,4',5,6heptbromdiphyl ethr(pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCBR9LA">LBCBR9LA - 2,2',3,4,4',5',6-heptbrphl lpd adj(ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDBR9LC">LBDBR9LC - 2,2',3,4,4',5',6-heptabrophenl ether cmt</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2007-2008 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Brominated Flame Retardants (BFRs) - Pooled Samples (BFRPOL_E)</h3>
+        <h4> Data File: BFRPOL_E.xpt</h4>
+        <h5 class="left">First Published: July 2013</h5>
+        <h5 class="right">Last Revised: November 2020</h5>
+        <h5 class="specialnote">Note: See Analytic Notes for information related to revisions.</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Polybrominated diphenyl ethers (PBDEs) and
+2,2&rsquo;,4,4&rsquo;,5,5&rsquo;-hexabromobiphenyl (PBB-153) are included in a larger group of
+chemicals known as brominated flame retardants (BFRs) that are added to
+products such as foam padding, textiles, or plastics&nbsp;to prevent accidental
+ignition and fire development. BFRs are not chemically bound to the
+flame-retarded material, so they can enter the environment from volatilization,
+leaching, or degradation of BFR-containing products. PBDEs are generally
+persistent in the environment and have been measured in aquatic sediments,
+house dust, and aquatic and terrestrial animals. PBDEs have been shown to bio
+accumulate in fish. Humans may be exposed though the diet, including breast
+feeding, and by contact with BFR-treated products and contaminated house dust.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Examined participants aged 12 years and older from a
+one-third subsample were eligible.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>Eleven polybrominated diphenyl ethers (PBDEs) and PBB-153
+were measured in serum through the use of automated liquid/liquid extraction
+and subsequent sample clean-up. Final determination of target analytes was
+performed by isotope dilution gas chromatography high-resolution mass
+spectrometry GC/IDHRMS. The analytical method is described in Jones et al,
+2012, which is a modification of the method described by Sjodin et al., 2004. </p>
+<p>Refer to the Laboratory Methods Files section for a
+detailed description of the laboratory methods used.&nbsp; </p>
+<p>There were no changes to the lab method, lab equipment,
+or lab site for this component in the NHANES 2007-2008 cycle.&nbsp; However, the samples were measured in a
+pooled fashion for 2007-2008 rather than individual measurements.
+<br />
+</p><h2 id="Laboratory_Method_Files">Laboratory Method Files</h2>
+        <p>
+          <a target="_blank" href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2005/labmethods/BFR_met_E_PBDE.pdf">Polybrominated diphenyl ethers (PBDEs)</a>
+          <span> (July 2013)</span>
+        </p>
+        <h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Serum samples were processed, stored and shipped to the
+Division of Laboratory Sciences, National Center for Environmental Health,
+Centers for Disease Control and Prevention, Atlanta, GA for analysis.&nbsp; </p>
+<p>Detailed instructions on specimen collection and
+processing are discussed in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2007/manuals/manual_lab.pdf" target="_blank">NHANES Laboratory Procedure Manual (LPM)</a>.&nbsp;
+Vials are stored under appropriate frozen (-30<sup>o</sup>C) conditions
+until they were shipped to the National Center for Environmental Health for
+testing.&nbsp; </p>
+<p>The NHANES quality assurance and quality control (QA/QC)
+protocols meet the 1988 Clinical Laboratory Improvement Amendments mandates. Detailed
+QA/QC instructions are discussed in the NHANES <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2007/manuals/manual_lab.pdf" target="_blank">LPM</a>. </p>
+<p><b>Mobile Examination Centers (MECs)</b></p>
+<p>Laboratory team performance is monitored using several
+techniques. NCHS and contract consultants use a structured competency assessment
+evaluation during visits to evaluate both the quality of the laboratory work
+and the quality-control procedures. Each laboratory staff member is observed
+for equipment operation, specimen collection and preparation; testing
+procedures and constructive feedback are given to each staff member. Formal
+retraining sessions are conducted annually to ensure that required skill levels
+were maintained.</p>
+<p><b>Analytical Laboratories</b></p>
+<p>NHANES uses several methods to monitor the quality of the
+analyses performed by the contract laboratories. In the MEC, these methods
+include performing blind split samples collected during &ldquo;dry run&rdquo; sessions. In
+addition, contract laboratories randomly perform repeat testing on 2% of all
+specimens.</p>
+<p>NCHS developed and distributed a quality control protocol
+for all CDC and contract laboratories, which outlined the use of Westgard rules
+(Westgard,
+et al. 1981)
+when running NHANES specimens. Progress reports containing any problems
+encountered during shipping or receipt of specimens, summary statistics for
+each control pool, QC graphs, instrument calibration, reagents, and any special
+considerations are submitted to NCHS quarterly. The reports are reviewed for
+trends or shifts in the data. The laboratories are required to explain any
+identified areas of concern.</p>
+<p>All QC procedures recommended by the manufacturers were
+followed. Reported results for all assays meet the Division of Laboratory
+Sciences&rsquo; quality control and quality assurance performance criteria for
+accuracy and precision, similar to the Westgard rules (Caudill, et al. 2008).</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>The data were reviewed. Incomplete data or improbable values were
+sent to the performing laboratory for confirmation.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Refer to the <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overviewlab.aspx?BeginYear=2007" target="_blank">2007-2008 Laboratory Data Overview</a>
+for general information on NHANES laboratory data.</p>
+<p>Please refer to the <a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx" target="_blank">NHANES Analytic Guidelines </a>and the on-line <a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/" target="_blank">NHANES </a><a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/" target="_blank">Tutorial</a> for details on the
+use of sample weights and analytic issues.</p>
+<p><b>Subsample Weights</b>&nbsp;<br />
+<br />
+The original pooled-sample weight created for this file released in July 2013
+did not accurately take into account the new sample design for this NHANES
+survey cycle and it was not correctly stratified to the U.S. population
+total.&nbsp; This new file contains the corrected sample weight
+(WTSMSMPA).&nbsp; The corrected sample weight was created so that analyses
+using race and Hispanic origin would be comparable to the three groups used in
+NHANES 2005-2006 (non-Hispanic white, non-Hispanic black and Mexican-American).&nbsp;
+Therefore, analyses of the data for &rdquo;Total Hispanics&rdquo; is not appropriate. No
+changes or corrections were made to the lab analyte data in this new
+release.&nbsp; Any analyses of the data using the old public use data file
+should be repeated using the corrected sample weight on this new file.</p>
+<p>PBDEs and PBB-153 were measured in a one third subsample
+of persons 12 years and over, and samples were pooled in groups of 8 samples
+per pool within 32 demographic groups. The analysis of NHANES 2007-2008
+pooled-sample data must be conducted with the basic demographic variables
+provided in this data file. This pooled-sample data file cannot be linked to
+other NHANES 2007-2008 data. &nbsp;Because each sample person does not have an
+equal probability of selection, sample weighting is needed to produce correct
+population estimates of means, percentiles, and other descriptive statistics. </p>
+<p>The pooled-sample weights required to produce estimates
+from these data are included in this data file.&nbsp; The analysis of
+pooled-samples from survey data is a relatively new field of study, and there
+is currently no established method to produce variance estimates for these
+pooled results.&nbsp;&nbsp; These data cannot be analyzed using software
+designed for complex surveys because design features are not available.&nbsp; </p>
+<p><b>Demographic and Other Related Variables</b></p>
+<p>The analysis of NHANES laboratory data must be conducted using
+the appropriate survey design and demographic variables. The <a href="https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Demographics&amp;CycleBeginYear=2007" target="_blank">NHANES
+2007-2008 Demographics</a>&nbsp;File contains demographic data, health
+indicators, and other related information collected during household interviews
+as well as the sample design variables. The recommended procedure for variance
+estimation requires use of stratum and PSU variables (SDMVSTRA and SDMVPSU,
+respectively) in the demographic data file.</p>
+<p>The <a href="https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Laboratory&amp;CycleBeginYear=2007" target="_blank">Fasting
+Questionnaire File</a>&nbsp;includes auxiliary information, such as
+fasting status, length of fast and the time of venipuncture. </p>
+<p>This laboratory data file can be linked to the other NHANES
+data files using the unique survey participant identifier (i.e., SEQN).</p>
+<p><b>Rationale and Methods Used to Create Pooled Results</b></p>
+<p>The Centers for Disease Control and Prevention (CDC)
+provides an ongoing assessment of the US population's exposure to environmental
+chemicals by using biomonitoring in conjunction with CDC's National Health and
+Nutrition Examination Survey (NHANES). Characterizing the distributions of
+concentrations of environmental compounds or their metabolites in the US
+population is a primary objective of CDC's biomonitoring program. Historically,
+this characterization has been based on individual measurements of these
+compounds in body fluid or tissue from representative samples of the
+population. Pooling samples allows for larger sample volumes which can result
+in lower limits of detection and reduces the number of measurements and
+costs.&nbsp;In NHANES 2007-2008, a weighted pooled-sample design was
+implemented to facilitate pooling samples before making analytical
+measurements. Table 1 lists the IUPAC (International Union of Pure and Applied
+Chemistry (IUPAC) names, common abbreviation, and NHANES variable name for the
+analytes included in this data file.</p>
+<p>Pools were
+prepared from&nbsp;serum collected from a random one-third subset of the NHANES
+2007-2008 participants aged 12 years and older. Samples were pooled based on
+gender, race and Hispanic origin, and age. To implement the pooled-sample
+design, each participant sample was identified as belonging to one of 32
+demographic groups based on race and Hispanic origin&nbsp;(non-Hispanic white:
+NHW,&nbsp;non-Hispanic black: NHB, Mexican American: MA,&nbsp;not non-Hispanic
+black,&nbsp;non-Hispanic white:or Mexican American: OTHER), gender (Male,
+Female), and age group (12-19, 20-39, 40-59, and 60+ years of age and older).
+Eight (8) samples were included in each pool. The number of pools created for
+each of the 32 demographic groups varied depending on the total number of
+individual samples available in a demographic group. The one-third subset of
+NHANES 2007-2008 represents 2282 individual samples, but because the
+pooled-sample design requires that all samples be of sufficient volume and that
+there be the same number of samples in each pool, only 2070 samples were
+available to create 264 pools with 8 samples per pool. &nbsp;See more details on pool sample formation and
+exceptions in Table 2. The variable SAMPLEID denotes the identification number for each pool and ranges from 1 through 260. Please refer to the
+Pooled-Sample Technical Support file (POOLTF_E) for detailed information on
+individual participants included in each pool.</p>
+<p>In order to incorporate sample weighting into the
+pooled-sample design it was necessary to use a different volume of material
+from each sample contributing to a pool. The volume chosen for each sample in a
+pool was based on the ratio of its sampling weight to the sum of the sampling
+weights of all samples in the pool. To physically accomplish the pooling in the
+laboratory required that the ratio of the largest to the smallest sampling
+weight of samples in the same pool be no larger than about 4 or 5. The individual
+samples were sorted/stratified by sampling weight within each of the 32
+demographic groups and pools were formed using samples with sampling weights
+adjacent to one another in the sorted list. The number of samples in the
+one-third subset, number of samples available, the number of these samples that
+were usable, and the number of pools formed in each demographic group are
+presented in Table 2. Once the pools were created, summed sampling weights were
+further adjusted to account for the unused samples. These adjusted summed
+sampling weights are represented by the variable named WTSMSMPA.</p>
+<p><b>Detection Limits</b></p>
+<p>In the dataset, the whole weight detection limit (pg/g
+serum) is a variable and dependent on the available sample size, however, the
+variation in sample size was low. Lipid adjusted detection
+limits are variable (ng/g lipid) due to differences of the lipid levels
+measured in individual pools/specimens. In cases where the result was below the
+limit of detection, the value for that variable is the detection limit divided
+by the square root of 2.</p>
+<p><b>Table 1.</b> NHANES Variable
+name, common abbreviation and International Union of Pure and Applied Chemistry
+(IUPAC) name for each analyte reported and maximum limit of detection (MLOD). </p>
+<table width="571" style="margin: auto auto auto 32pt; width: 5.95in; border-collapse: collapse; mso-yfti-tbllook: 1184; mso-padding-alt: 0in 5.4pt 0in 5.4pt;" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr style="height: 15pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
+            <td style="background: white; border-width: 1pt 0px 0px; border-style: solid none none; border-color: windowtext #000000 #000000; padding: 0in 5.4pt; border-image: none; height: 15pt; white-space: nowrap; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">Variable</span></b></p>
+            </td>
+            <td style="background: white; border-width: 1pt 0px 0px; border-style: solid none none; border-color: windowtext #000000 #000000; padding: 0in 5.4pt; border-image: none; height: 15pt; white-space: nowrap; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">Common</span></b></p>
+            </td>
+            <td style="background: white; border-width: 1pt 0px; border-style: solid none; border-color: windowtext #000000 black; padding: 0in 5.4pt; height: 15pt; white-space: nowrap; mso-border-top-alt: solid windowtext .5pt; mso-border-bottom-alt: solid black .5pt;" rowspan="2">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">IUPAC Name</span></b></p>
+            </td>
+            <td valign="bottom" style="background: white; border-width: 1pt 0px; border-style: solid none; border-color: windowtext #000000; padding: 0in 5.4pt; height: 15pt; white-space: nowrap; mso-border-top-alt: solid windowtext .5pt; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in -7.5pt 0pt 9.25pt; text-align: right; line-height: normal; text-indent: -9.25pt;"><b><span style="font-family: Calibri;">MLOD<sup><span style="font-size: 13px;">a</span></sup> </span></b></p>
+            </td>
+            <td valign="bottom" style="background: white; border-width: 1pt 0px; border-style: solid none; border-color: windowtext #000000; padding: 0in 5.4pt; height: 15pt; text-align: right; white-space: nowrap; mso-border-top-alt: solid windowtext .5pt; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 1;">
+            <td style="background: white; border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; height: 15pt; text-align: right; white-space: nowrap; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">Name</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; height: 15pt; white-space: nowrap; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">Abbrev.</span></b></p>
+            </td>
+            <td valign="bottom" style="background: white; border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; height: 15pt; white-space: nowrap; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">pg/g serum</span></b></p>
+            </td>
+            <td valign="bottom" style="background: white; border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; height: 15pt; white-space: nowrap; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">ng/g lipid</span></b></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 2;">
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCBR1</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">PBDE17</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">2,2&acute;,4- Tribromodiphenyl ether</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">1.8</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">0.4</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 3;">
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCBR2</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">PBDE28</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">2,4,4&acute;-Tribromodiphenyl ether</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">1.8</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">0.4</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 4;">
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCBR3</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">PBDE47</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">2,2&acute;,4,4&acute;-Tetrabromodiphenyl ether</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">1.8</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">0.4</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 5;">
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCBR66</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">PBDE66</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">2,3&acute;,4&acute;,4-Tetrabromodiphenyl ether</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">1.8</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">0.4</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 6;">
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCBR4</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">PBDE85</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">2,2&acute;,3,4,4&acute;-Tentabromodiphenyl ether</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">1.8</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">0.4</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 7;">
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCBR5</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">PBDE99</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">2,2&acute;,4,4&acute;,5-Pentabromodiphenyl ether</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">1.8</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">0.4</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 8;">
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCBR6</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">PBDE100</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">2,2&acute;,4,4&acute;,6-Pentabromodiphenyl ether</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">1.8</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">0.4</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 9;">
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCBR7</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">PBDE153</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">2,2&acute;,4,4&acute;,5,5&acute;-Hexabromodiphenyl ether</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">1.8</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">0.4</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 10;">
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCBR8</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">PBDE154</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">2,2&acute;,4,4&acute;,5,6&acute;-Hexabromodiphenyl ether</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">1.8</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">0.4</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 11;">
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCBR9</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">PBDE183</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">2,2&acute;,3,4,4&acute;,5&acute;,6-Heptabromodiphenyl ether</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">1.8</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">0.4</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 12;">
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCBR11</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">PBDE209</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">Decabromodiphenyl ether</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">18</span></p>
+            </td>
+            <td valign="bottom" style="background: white; padding: 0in 5.4pt; border: #000000; border-image: none; height: 15pt; white-space: nowrap;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">4.1</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 13; mso-yfti-lastrow: yes;">
+            <td valign="bottom" style="background: white; border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; height: 15pt; white-space: nowrap; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCBB1</span></p>
+            </td>
+            <td valign="bottom" style="background: white; border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; height: 15pt; white-space: nowrap; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">PBB153</span></p>
+            </td>
+            <td valign="bottom" style="background: white; border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; height: 15pt; white-space: nowrap; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">2,2&acute;,4,4&acute;,5,5&acute;-Hexabromobiphenyl</span></p>
+            </td>
+            <td valign="bottom" style="background: white; border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; height: 15pt; white-space: nowrap; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">1.8</span></p>
+            </td>
+            <td valign="bottom" style="background: white; border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; height: 15pt; white-space: nowrap; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: right; line-height: normal;"><span style="font-family: Calibri;">0.4</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p style="margin: 0in 0pt 0pt 32pt; line-height: normal;"><b><sup>a</sup></b>The
+values given in the tables are the maximum limit of detection (MLOD) divided by
+the square root of 2 and are expressed as pg/g serum and ng/g lipid.</p>
+<p>&nbsp;</p>
+<p><b>Table 2.&nbsp; </b>Number of subjects per demographic group in the NHANES 2007&ndash;2008 one-third subsample, number of individual serum samples available, number of usable samples, and number of pools formed from usable samples.<img alt="Table 2.  Number of subjects per demographic group in the NHANES 2007–2008 one-third subsample, number of individual serum samples available, number of usable samples, and number of pools formed from usable samples." src="/Nchs/Nchs/Nhanes/2007-2008/BFRPOL_E/serum%20samples%20available_revised.gif" />&nbsp;
+</p>
+<p><b>Methodological issues for analysis</b></p>
+<p>There are a few pooled-sample methodological publications which address issues related to the following topics (See References.) </p>
+<ul>
+    <li>Variance estimation and bias correction when pooling samples from log-normally distributed populations (Caudill, 2010a; Caudill, 2010b; Caudill et al.,    2007); </li>
+    <li>Models that incorporate measurement error when analyzing pooled-samples from normally or log-normally distributed populations (Caudill, 2010a);</li>
+    <li>Incorporation of sample weighting into a pooled-sample design (Caudill, 2012; Caudill, 2010a);</li>
+    <li>Estimation of standard errors and confidence limits for point estimates from pooled-samples (Caudill, 2012; Caudill, 2010a). </li>
+</ul></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Caudill SP, Characterizing populations of individuals using pooled samples. J Expo Sci Environ Epidemiol 2010a;20(1):29-37.</li>
+          <li>Caudill SP, Important issues related to using pooled samples for environmental chemical biomonitoring. Stat Med 2010b;30(5):515-21.</li>
+          <li>Caudill SP, Turner WE, and Patterson Jr. DG. Geometric mean estimation from pooled samples. Chemosphere 2007;69:371-80.</li>
+          <li>Caudill SP, Use of pooled samples from the National Health and Nutrition Examination Survey. Stat Med 2012;31(27):3269-77.</li>
+          <li>Jones R, Edenfield E, Anderson S, Zhang Y, Sj&ouml;din A. Semi-automated extraction and cleanup method for measuring persistent organic pollutants in human serum. Organohalogen Compounds 2012;A3:103. [online] available at:<br />
+<a href="https://www.scienceopen.com/document?vid=9f9feb53-fd7e-4405-8cc1-18c162f9d1c7">https://www.scienceopen.com/document?vid=9f9feb53-fd7e-4405-8cc1-18c162f9d1c7</a><a></a><span style="font-family: Calibri;">.</span></li>
+          <li>Sjodin A, Jones RS, Lapeza CR, Focant J-F, McGahee EE III, Patterson DG Jr. Semiautomated high-throughput extraction and cleanup method for the measurement of polybrominated diphenyl ethers, polybrominated biphenyls, and polychlorinated biphenyls in human serum. Anal. Chem. 2004; 76:1921-7.</li>
+          <li>Westgard JO, Barry PL, Hunt MR, Groth T. A multi-rule Shewhart chart for quality control in clinical chemistry. Clin Chem 1981;27(3):493-501.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SAMPLEID">SAMPLEID - Pool identification number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SAMPLEID</dd>
+            <dt>SAS Label: </dt>
+            <dd>Pool identification number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Pool identification number</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RIAGENDR">RIAGENDR - Gender</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RIAGENDR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Gender</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Gender</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Male</td>
+                <td class="values" align="right">132</td>
+                <td class="values" align="right">132</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Female</td>
+                <td class="values" align="right">132</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="ETHNICTY">ETHNICTY - Ethnicity - Recode</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">ETHNICTY</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ethnicity - Recode</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Ethnicity - Recode</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Non-Hispanic White</td>
+                <td class="values" align="right">118</td>
+                <td class="values" align="right">118</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Non-Hispanic Black</td>
+                <td class="values" align="right">54</td>
+                <td class="values" align="right">172</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Mexican American</td>
+                <td class="values" align="right">50</td>
+                <td class="values" align="right">222</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">42</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RIDAGGRP">RIDAGGRP - Age group</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RIDAGGRP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Age group</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Age group</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">12-19 years</td>
+                <td class="values" align="right">42</td>
+                <td class="values" align="right">42</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">20-39 years</td>
+                <td class="values" align="right">72</td>
+                <td class="values" align="right">114</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">40-59 years</td>
+                <td class="values" align="right">71</td>
+                <td class="values" align="right">185</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">60+ years</td>
+                <td class="values" align="right">79</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RIANSMP">RIANSMP - Number of samples in a pool</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RIANSMP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Number of samples in a pool</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Number of samples in a pool</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3 to 8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTSMSMPA">WTSMSMPA - Adjust sum sampling weights in same pool</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTSMSMPA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Adjust sum sampling weights in same pool</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Adjust sum sampling weights in same pool</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">92401.04944 to 3363512.5108</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBB1">LBCBB1 - 2,2',4,4',5,5'-hexabromobiphenyl (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBB1</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',5,5'-hexabromobiphenyl (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',5,5'-hexabromobiphenyl (pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.8 to 804.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBB1LA">LBCBB1LA - 2,2',4,4',5,5'-hxbrmbiphl lipd adj(ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBB1LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',5,5'-hxbrmbiphl lipd adj(ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',5,5'-hxbrmbiphl lipid adj (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.3 to 133</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBB1LC">LBDBB1LC - 2,2',4,4',5,5'-hexabromobiphenyl comnt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBB1LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',5,5'-hexabromobiphenyl comnt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',5,5'-hexabromobiphenyl comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">245</td>
+                <td class="values" align="right">245</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">19</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR1">LBCBR1 - 2,2',4-tribromodiphenyl ether (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR1</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4-tribromodiphenyl ether (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4-tribromodiphenyl ether (pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.8 to 9.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR1LA">LBCBR1LA - 2,2',4-tribromodiphl ether lpd adj(ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR1LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4-tribromodiphl ether lpd adj(ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4-tribromodiphl ether lipid adj (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.2 to 1.5</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBR1LC">LBDBR1LC - 2,2',4-tribromodiphenyl ether comment</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBR1LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4-tribromodiphenyl ether comment</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4-tribromodiphenyl ether comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">26</td>
+                <td class="values" align="right">26</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">238</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR11">LBCBR11 - PBDE 209 (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR11</dd>
+            <dt>SAS Label: </dt>
+            <dd>PBDE 209 (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PBDE 209 (pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">17.3 to 133.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR11L">LBCBR11L - PBDE 209  lipid adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR11L</dd>
+            <dt>SAS Label: </dt>
+            <dd>PBDE 209  lipid adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PBDE 209  lipid adj (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.9 to 21.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBR11C">LBDBR11C - PBDE 209  comment</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBR11C</dd>
+            <dt>SAS Label: </dt>
+            <dd>PBDE 209  comment</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PBDE 209  comment</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">28</td>
+                <td class="values" align="right">28</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">236</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR2">LBCBR2 - 2,4,4'-tribromodiphenyl ether (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR2</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,4,4'-tribromodiphenyl ether (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,4,4'-tribromodiphenyl ether (pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.3 to 54.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR2LA">LBCBR2LA - 2,4,4'-tribrmdphenyl ether lpd adj(ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR2LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,4,4'-tribrmdphenyl ether lpd adj(ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,4,4'-tribrmdphenyl ether lpd adj (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.5 to 7.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBR2LC">LBDBR2LC - 2,4,4'-tribromodiphenyl ether comment</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBR2LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,4,4'-tribromodiphenyl ether comment</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,4,4'-tribromodiphenyl ether comment</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR3">LBCBR3 - 2,2',4,4'-tetrabromodiphenyl ether(pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR3</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4'-tetrabromodiphenyl ether(pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4'-tetrabromodiphenyl ether (pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">37.7 to 1036.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR3LA">LBCBR3LA - 2,2',4,4'-tetrmdiphnyl ethr lpd ad(ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR3LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4'-tetrmdiphnyl ethr lpd ad(ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4'-tetrmdiphnyl ether lpd adj(ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">5.8 to 169</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBR3LC">LBDBR3LC - 2,2',4,4'-tetrabromphenyl ether comment </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBR3LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4'-tetrabromphenyl ether comment </dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4'-tetrabromphenyl ether comment</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR4">LBCBR4 - 2,2',3,4,4'-pentbromodiphnyl ether(pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR4</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',3,4,4'-pentbromodiphnyl ether(pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',3,4,4'-pentbromodiphenyl ether(pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.8 to 31.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR4LA">LBCBR4LA - 2,2',3,4,4'-pentabromphnyl lpd adj(ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR4LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',3,4,4'-pentabromphnyl lpd adj(ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',3,4,4'-pentabromphnyl lpd adj (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.2 to 5.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBR4LC">LBDBR4LC - 2,2',3,4,4'-pentabromphenyl ether comt </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBR4LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',3,4,4'-pentabromphenyl ether comt </dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',3,4,4'-pentabromphenyl ether comt</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">206</td>
+                <td class="values" align="right">206</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">58</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR5">LBCBR5 - 2,2',4,4',5-pentabromodiphnyl ethr(pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR5</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',5-pentabromodiphnyl ethr(pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',5-pentabromodiphnyl ether(pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">6.5 to 324.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR5LA">LBCBR5LA - 2,2',4,4',5-pentabrompheyl lpd adj(ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR5LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',5-pentabrompheyl lpd adj(ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',5-pentabromphenyl lpid adj(ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 51.9</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBR5LC">LBDBR5LC - 2,2',4,4',5-pentabromphenyl ether comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBR5LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',5-pentabromphenyl ether comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',5-pentabromodiphenyl ether comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR6">LBCBR6 - 2,2',4,4',6-pentabromodiphyl ether(pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR6</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',6-pentabromodiphyl ether(pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',6-pentabromodiphyl ether(pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">8.2 to 229.5</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR6LA">LBCBR6LA - 2,2',4,4',6-pentabromdphyl lpd adj(ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR6LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',6-pentabromdphyl lpd adj(ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',6-pentabromdphyl lipid adj(ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.2 to 36.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBR6LC">LBDBR6LC - 2,2',4,4',6-pentabromdphenyl ether comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBR6LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',6-pentabromdphenyl ether comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',6-pentabromdphenyl ether comt</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR66">LBCBR66 - 2,3',4,4'-tetrabromodiphenyl ether(pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR66</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,3',4,4'-tetrabromodiphenyl ether(pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3',4,4'-tetrabromodiphenyl ether(pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.8 to 5.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR66L">LBCBR66L - 2,3',4,4'-tetrabromodiphyl lpd adj(ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR66L</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,3',4,4'-tetrabromodiphyl lpd adj(ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3',4,4'-tetrabromodiphyl lipid adj(ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.2 to 0.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBR66C">LBDBR66C - 2,3',4,4'-tetrabromodiphenyl ether comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBR66C</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,3',4,4'-tetrabromodiphenyl ether comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3',4,4'-tetrabromodiphenyl ether comt</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">6</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">258</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR7">LBCBR7 - 2,2',4,4',5,5'-hxbromodiphnyl ethr(pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR7</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',5,5'-hxbromodiphnyl ethr(pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',5,5'-hxbromodiphnyl ether(pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">16.1 to 448</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR7LA">LBCBR7LA - 2,2',4,4',5,5'-hxbrompheyl lpd adj(ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR7LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',5,5'-hxbrompheyl lpd adj(ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',5,5'-hxbromphenyl lipid adj(ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.4 to 71.7</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBR7LC">LBDBR7LC - 2,2',4,4',5,5'-hexabromphenyl ether comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBR7LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',5,5'-hexabromphenyl ether comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',5,5'-hexabromphenyl ether comt</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR8">LBCBR8 - 2,2',4,4',5,6'hexabromodiphyl ethr(pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR8</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',5,6'hexabromodiphyl ethr(pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',5,6'-hexabromodiphyl ether(pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.8 to 29.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR8LA">LBCBR8LA - 2,2',4,4',5,6'-hxabromphyl lpd adj(ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR8LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',5,6'-hxabromphyl lpd adj(ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',5,6'-hxabromphenyl lpd adj(ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.2 to 4.7</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBR8LC">LBDBR8LC - 2,2',4,4',5,6'-hexabromphenyl ether comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBR8LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',4,4',5,6'-hexabromphenyl ether comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',4,4',5,6'-hexabromphenyl ether comt</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">192</td>
+                <td class="values" align="right">192</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">72</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR9">LBCBR9 - 2,2',3,4,4',5,6heptbromdiphyl ethr(pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR9</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',3,4,4',5,6heptbromdiphyl ethr(pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',3,4,4',5',6-heptabromodiphyl ethr(pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.8 to 23.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBR9LA">LBCBR9LA - 2,2',3,4,4',5',6-heptbrphl lpd adj(ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBR9LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',3,4,4',5',6-heptbrphl lpd adj(ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',3,4,4',5',6-heptabrophenl lipid adj(ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.2 to 3.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBR9LC">LBDBR9LC - 2,2',3,4,4',5',6-heptabrophenl ether cmt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBR9LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,2',3,4,4',5',6-heptabrophenl ether cmt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,2',3,4,4',5',6-heptabrophenl ether cmt</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">87</td>
+                <td class="values" align="right">87</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">177</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">264</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

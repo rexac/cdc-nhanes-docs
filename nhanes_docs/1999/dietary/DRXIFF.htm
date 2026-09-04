@@ -1,0 +1,3962 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>DRXIFF</title>
+    <meta name="title" content="NHANES 1999-2000: Dietary Interview - Individual Foods Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Protocol_and_Procedure">Protocol and Procedure</a>
+          </li>
+          <li>
+            <a href="#Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#WTDRD1">WTDRD1 - Dietary day one 2-Year sample weight</a>
+              </li>
+              <li>
+                <a href="#WTDR4YR">WTDR4YR - Dietary day one 4-Year sample weight</a>
+              </li>
+              <li>
+                <a href="#DRXILINE">DRXILINE - Food/individ.component number(sequentl#)</a>
+              </li>
+              <li>
+                <a href="#DRDDRSTS">DRDDRSTS - Dietary recall status</a>
+              </li>
+              <li>
+                <a href="#DRDINTMD">DRDINTMD - Mode of interview</a>
+              </li>
+              <li>
+                <a href="#DRDDAY">DRDDAY - Intake day of week</a>
+              </li>
+              <li>
+                <a href="#DRALANG">DRALANG - Language SP/Proxy used mostly</a>
+              </li>
+              <li>
+                <a href="#DRXCCMNM">DRXCCMNM - Combination food number(sequential#)</a>
+              </li>
+              <li>
+                <a href="#DRDCCMTY">DRDCCMTY - Combination food type</a>
+              </li>
+              <li>
+                <a href="#DRD020">DRD020 - Meal time of eating (HH:MM)</a>
+              </li>
+              <li>
+                <a href="#DRD030">DRD030 - Coded meal name</a>
+              </li>
+              <li>
+                <a href="#DRD040">DRD040 - Meal Place</a>
+              </li>
+              <li>
+                <a href="#DRDCFF">DRDCFF - Combination food flag</a>
+              </li>
+              <li>
+                <a href="#DRDMRUF">DRDMRUF - Flag for modified recipe use</a>
+              </li>
+              <li>
+                <a href="#DRDIFDCD">DRDIFDCD - USDA food code</a>
+              </li>
+              <li>
+                <a href="#DRDISODF">DRDISODF - Salt adjustment flag of individual food</a>
+              </li>
+              <li>
+                <a href="#DRXIGRMS">DRXIGRMS - Grams</a>
+              </li>
+              <li>
+                <a href="#DRXIKCAL">DRXIKCAL - Energy (kcal)</a>
+              </li>
+              <li>
+                <a href="#DRXIPROT">DRXIPROT - Protein (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXICARB">DRXICARB - Carbohydrate (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXITFAT">DRXITFAT - Total fat (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXISFAT">DRXISFAT - Total saturated fatty acids (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIMFAT">DRXIMFAT - Total monounsaturated fatty acids (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIPFAT">DRXIPFAT - Total polyunsaturated fatty acids (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXICHOL">DRXICHOL - Cholesterol (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXIFIBE">DRXIFIBE - Dietary fiber (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIVAIU">DRXIVAIU - Vitamin A (IU)</a>
+              </li>
+              <li>
+                <a href="#DRXIVARE">DRXIVARE - Vitamin A (RE)</a>
+              </li>
+              <li>
+                <a href="#DRXICARO">DRXICARO - Carotene (RE)</a>
+              </li>
+              <li>
+                <a href="#DRXIVB1">DRXIVB1 - Thiamin (Vitamin B1) (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXIVB2">DRXIVB2 - Riboflavin (Vitamin B2) (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXINIAC">DRXINIAC - Niacin (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXIVB6">DRXIVB6 - Vitamin B6 (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXIFOLA">DRXIFOLA - Total Folate (mcg)</a>
+              </li>
+              <li>
+                <a href="#DRXIVB12">DRXIVB12 - Vitamin B12 (mcg)</a>
+              </li>
+              <li>
+                <a href="#DRXIVC">DRXIVC - Vitamin C (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXIVE">DRXIVE - Vitamin E (ATE) (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXICALC">DRXICALC - Calcium (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXIPHOS">DRXIPHOS - Phosphorus (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXIMAGN">DRXIMAGN - Magnesium (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXIIRON">DRXIIRON - Iron (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXIZINC">DRXIZINC - Zinc (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXICOPP">DRXICOPP - Copper (mg)</a>
+              </li>
+              <li>
+                <a href="#DRDISODI">DRDISODI - Sodium (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXIPOTA">DRXIPOTA - Potassium (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXISELE">DRXISELE - Selenium (mcg)</a>
+              </li>
+              <li>
+                <a href="#DRXICAFF">DRXICAFF - Caffeine (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXITHEO">DRXITHEO - Theobromine (mg)</a>
+              </li>
+              <li>
+                <a href="#DRXIALCO">DRXIALCO - Alcohol (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIWATE">DRXIWATE - Moisture (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIS040">DRXIS040 - SFA 4:0 (Butanoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIS060">DRXIS060 - SFA 6:0 (Hexanoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIS080">DRXIS080 - SFA 8:0 (Octanoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIS100">DRXIS100 - SFA 10:0 (Decanoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIS120">DRXIS120 - SFA 12:0 (Dodecanoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIS140">DRXIS140 - SFA 14:0 (Tetradecanoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIS160">DRXIS160 - SFA 16:0 (Hexadecanoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIS180">DRXIS180 - SFA 18:0 (Octadecanoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIM161">DRXIM161 - MFA 16:1 (Hexadecenoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIM181">DRXIM181 - MFA 18:1 (Octadecenoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIM201">DRXIM201 - MFA 20:1 (Eicosenoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIM221">DRXIM221 - MFA 22:1 (Docosenoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIP182">DRXIP182 - PFA 18:2 (Octadecadienoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIP183">DRXIP183 - PFA 18:3 (Octadecatrienoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIP184">DRXIP184 - PFA 18:4 (Octadecatetraenoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIP204">DRXIP204 - PFA 20:4 (Eicosatetraenoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIP205">DRXIP205 - PFA 20:5 (Eicosapentaenoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIP225">DRXIP225 - PFA 22:5 (Docosapentaenoic) (gm)</a>
+              </li>
+              <li>
+                <a href="#DRXIP226">DRXIP226 - PFA 22:6 (Docosahexaenoic) (gm)</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#Appendix_1:_Food_Code_Format_File_">Appendix 1: Food Code Format File </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>1999-2000 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Dietary Interview - Individual Foods (DRXIFF)</h3>
+        <h4> Data File: DRXIFF.xpt</h4>
+        <h5 class="left">First Published: June 2002</h5>
+        <h5 class="right">Last Revised: July 2010</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p >The objective of the dietary interview component is to obtain detailed dietary intake information from the NHANES examined sample. All examinees are eligible for this component. The dietary intake data are used to estimate total intake of energy, nutrients, and non-nutrient food components from foods and beverages that were consumed during the 24-hour period prior to the interview (midnight to midnight). Following the dietary recall, a short "post-recall" questionnaire is administered; respondents estimate their intake of plain water during the previous 24-hour time period, and frequency of fish and shellfish consumption during the past 30 days. Two data files were produced from the dietary interview dataset: the Total Nutrient Intakes File (DRXTOT) that consists of total nutrient intakes, intake of plain water, and frequency of fish and shellfish data; and the Individual Foods File (DRXIFF) that includes detailed information about the individual foods reported by respondents. Nutrient intakes reported in these files do not include those obtained from dietary supplements, medications or plain drinking water. </p>
+<h2 id="Protocol_and_Procedure">Protocol and Procedure</h2><p><strong>Data Collection Methods</strong> </p>
+<p>The NHANES computer-assisted dietary interview (CADI) system is an automated data collection form that was developed using Power Builder&trade;; several databases (i.e., Quick List food list, brand name food list, and food amount unit list) are linked to this system. Food probes that were used in previous NHANES and USDA surveys became part of the built-in features of the system, developed using RoboHelp&trade;. The CADI provides a standardized interview format to collect NHANES dietary interview data. </p>
+<p>The interviewers follow the scripts provided in the system screens to explain the dietary interview component to the respondents. The CADI screens include data entry screens, food probe information screens, and a post-recall questionnaire. The interviewers also record administrative information about the interview such as the main respondent and language of the interview, and reliability and completeness of the data. </p>
+<p>The CADI interface includes the following screen features and data collection components: </p>
+<ul>
+    <li>Online data entry screens </li>
+    <li>Instructions for recording information about foods such as: <br />
+    <ul>
+        <li>brand names (selected food groups) </li>
+        <li>food preparation methods: use of fat and salt in preparation, cooking methods, type of liquid added in recipe foods (selected food groups) </li>
+    </ul>
+    </li>
+    <li>Food amount options: food group-specific guidelines were listed for the interviewers so they would know how to probe for food amounts and record amount information </li>
+    <li>Post-recall questionnaire </li>
+</ul>
+<p>A &ldquo;multiple pass&rdquo; 24-hour dietary interview format was used to collect detailed information about all foods and beverages. The interview passes included the following: </p>
+<ol>
+    <li>Quick List: Respondent was asked to recall all foods and beverages consumed in a 24-hour period the day before the interview without interrupting. </li>
+    <li>Time, Occasion and Place: Respondent was asked to report the time and place each food was eaten and what they would call the eating occasion for the food. Afterwards, a list of frequently forgotten foods was shown to probe the respondent for any forgotten foods or drinks. </li>
+    <li>Food Details: Specific food probes were used to collect detailed information for each food reported. This includes a complete description of each food and the amount eaten. </li>
+    <li>Final Review: The reported foods were reviewed with the respondent in chronological order. Any additional foods remembered during the process were added to the record as well as modifications for reported foods. </li>
+</ol>
+<p>The Post-Dietary Recall Questionnaire was administered after the 24-hour recall. <br />
+Detailed descriptions of the dietary interview methods are provided in the <span style="text-decoration: underline;">NHANES Dietary Interviewer&rsquo;s Training Manua</span>l, available at: <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=1999"><a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/manuals.aspx?BeginYear=1999">NHANES 1999-2000 Procedure Manuals</a></a> </p>
+<p><strong>Examination Protocol</strong> </p>
+<p>All examinees are eligible for the dietary interview component. Proxy respondents were permitted for survey participants less than six years of age. Assisted interviews were completed with survey participants 6-11 years of age. </p>
+<p>The primary interview mode for the NHANES 1999-2000 dietary recall component is the in-person interview mode. Interviews were conducted in a private setting in the NHANES Mobile Examination Centers (MECs). A methodological study, the Dietary Interview Mode Evaluation Study (DIMES) was conducted on a subsample of primary sampling units (PSUs) in both 1999 and 2000. The purpose of the DIMES was to test the operational feasibility of the telephone interview mode within the NHANES setting. For dietary interviews conducted in the DIMES PSUs, half were completed in-person and half were completed by telephone. </p>
+<p>According to the NHANES sampling procedure, each participant was randomly assigned to either a morning exam session or an afternoon/evening exam session for his/her MEC visit. During the DIMES, examinees randomly assigned to the morning session completed the dietary interviewin- person in the MEC. Those persons randomly assigned to an afternoon or evening MEC examination session were asked to schedule an appointment for a telephone dietary interview; a small percentage of afternoon and evening sample examinees completed their interviews in-person due to lack of telephone or personal scheduling problems. Telephone dietary interviews were conducted 4-10 days after the MEC health examination. </p>
+<p>Dietary interviews were conducted in English and Spanish. Translators were used to conduct interviews in other languages.</p>
+<p><strong>Survey Staff</strong> </p>
+<p>Trained, bilingual dietary interviewers collected all dietary interview data. Dietary interviewers were required to have a B.S. Degree in Food and Nutrition or Home Economics (with at least 10 credit hours in food and nutrition). All interviewers completed an intensive 2-week training course; formal training was followed by a week of supervised, practice interviewing. </p>
+<p><strong>Data Collection Forms</strong> </p>
+<p>Please refer to the Dietary Interviewer&rsquo;s Training Manual, available at: <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=1999"></a><a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/manuals.aspx?BeginYear=1999">NHANES 1999-2000 Procedure Manuals</a>. The Manual includes pictures of the CADI system screens, measurement guides, and charts used to collect dietary information. All data were collected and transmitted via automated systems; no printed forms were used.</p><h2 id="Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</h2><p>The interviewers were required to review and edit all of their interviews. Written guidelines for completing the required procedures were developed for all survey staff. These procedures were reinforced during reviews of taped interviews and in-person observations, staff retraining, memos to the field, and informal e-mail correspondence. </p>
+<p>The initial quality control consisted of: </p>
+<ul>
+    <li>Reviews of data transmittal sheets to verify receipt of data files; </li>
+    <li>Reviews of audio taped interviews for approximately 5% of each interviewer&#8217;s work; </li>
+    <li>Reviews of completeness of the recalls: recalls were checked for missing information, inconsistent reports, and unclear notes; written notification and feedback were provided to the interviewers; </li>
+    <li>10% of the coders&#8217; work was double-coded and adjudicated if necessary to ensure quality and completeness; </li>
+    <li>Staff retraining for interviewers and coders was conducted as needed; annual retraining sessions are held with all MEC staff.</li>
+</ul>
+<h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>Interview data files were sent back to the home office electronically. The interview files were imported into the University of Texas Food Intake Analysis System (FIAS) for coding. FIAS version 3.99 with the USDA 1994-98 Survey Nutrient Database was used to code and report the NHANES 1999-2000 data. </p>
+<p>After the initial coding, data files were transmitted for final processing. The final data processing consisting of: </p>
+<ul>
+    <li>Modifying food records specified as &ldquo;no salt added&rdquo;. <br />
+    NCHS applied modified sodium values to foods when respondents specified that they did not use salt in preparation. An USDA Technical Support Recipe Data File developed for use with CSFII 1994-96 data was used to assign sodium values to foods reported as prepared without salt. (Note: No attempt was made to quantify salt added at the table.) </li>
+    <li>Assigning USDA food codes to foods with modified recipes. <br />
+    During the initial coding process, Westat coders assigned a 6-digit modified recipe food code and food description to modified recipe foods. An example of a modified recipe is an egg scrambled in olive oil instead of regular oil. The modified recipe code documents the actual recipe. Nutrients assigned to modified recipe foods reflect the recipe modification. The modified recipe codes were linked to a USDA food code that best characterized the food. All foods reported in the current NHANES are released with an 8-digit USDA food code as a means of providing a basic description of the food. </li>
+    <li>Assigning USDA food codes to foods that are not in the USDA database. <br />
+    During the initial coding process, Westat coders assigned a 7-digit food code and food description to foods that are not in the USDA database. Coding decisions were made in consultation with NCHS to assign nutrient values to the foods. Resources such as manufacturer information and University of Minnesota Nutrition Coordinating Center (NCC) nutrient composition database are used in making these decisions. An 8-digit USDA food code was assigned to the food to describe the basic characteristics of the food for reporting purposes. </li>
+    <li>Computing total plain water and total home tap water intakes. </li>
+    <li>Tabulating shellfish and fish frequency questionnaire data.</li>
+</ul>
+<p>This file, titled &ldquo;Individual Foods File&rdquo;, provides detailed information including eating occasions (meal names), places where foods were eaten and time of eating of all individual foods and beverages reported by respondents during the dietary interview. All foods have been assigned an USDA food code. Foods with modified recipes including those that are not in the USDA database are flagged by variable DRDMRUF. Gram weight consumed and nutrient values are reported for each food. </p>
+<p>The text descriptions of each food record are provided in a separate data file called &ldquo;Food Code Format File (DRXFMT)&rdquo;. Please refer to the documentation for DRXFMT for details. SAS code to link the Food Code Format File with the Individual Foods File or to obtain a list of formatted text labels of the food codes is provided in the documentation. <br />
+Food records reported by the respondent are sequentially numbered. Foods that were eaten in combination with other foods, such as cereal with milk, are flagged by the variable DRDCFF with value equal to &ldquo;1&rdquo;. All the combination foods reported by a respondent are numbered with a &ldquo;combination food number (DRXCCMNM)&rdquo;. The same combination food number identifies foods eaten together. The types of combination foods are categorized by a combination type code (DRDCCMTY) with 24 categories. </p>
+<p>Information about total nutrient intakes, intake of plain water during the previous 24-hours, and frequency of fish and shellfish consumption during the past 30 days of the respondent is contained in a separate NHANES 1999-2000 Dietary Data File titled &ldquo;Total Nutrient Intakes File&rdquo;.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>As was mentioned previously, two interview modes (in-person and telephone) were used to collect NHANES 1999-2000 dietary interview data. The variable DRDINTMD indicates the actual mode by which the interview was administered. Analysis of dietary data should include investigation of the potential effect of interview mode on the estimates of interest. Data users who are interested in linking dietary data with data from other exam components such as blood biochemical data should be cognizant of the time lapse between the collections of phone-administered dietary interview (DRDINTMD=2) and other data of interest. Telephone dietary interviews were conducted 4-10 days after the NHANES health examination.</p>
+<p><strong>Special Notes on Using the Dataset</strong></p>
+<p>The Individual Foods File is comprised of food records. In most cases, there are multiple records per survey participant in the file. This file can be linked with other NHANES files by the combination of respondent sequence number (SEQN) and food number (DRXILINE). </p>
+<p>A status code (DRDDRSTS) is used in the current NHANES dietary interview component to indicate the quality and completeness of response to the dietary recall section. The dietary recall section status is coded as follows: </p>
+<ol>
+    <li><span style="text-decoration: underline;">Reliable and met the minimum criteria</span> <br />
+    The recall record was verified as reliable and met the following minimum criteria for the overall quality and completeness of the reported dietary information: <br />
+    <ol style="list-style-type: lower-alpha;">
+        <li>Less than 25% foods with missing descriptive information (e.g., caffeinated or decaffeinated, preparation methods, or brand names); </li>
+        <li>Less than 15% foods with missing amounts; and </li>
+        <li>Any meal reported must have at least one known food. For example, if a respondent reported having a lunch but could not remember any foods from that lunch, the recall did not meet the criterion.
+        <ul></ul>
+            </li>
+        </ol>
+        </li>
+        <li><span style="text-decoration: underline;">Reliable but did not meet the minimum criteria</span> <br />
+        The dietary recall record was verified as reliable but did not meet the minimum criteria as stated in code 1. </li>
+        <li><span style="text-decoration: underline;">Not reliable</span> <br />
+        The dietary recall information provided by the respondent was determined to be unreliable. No data on individual food consumption or total nutrient intake was provided in the dataset for unreliable cases. </li>
+        <li><span style="text-decoration: underline;">Breast-fed infant or child</span> <br />
+        The foods reported during the dietary recall interview included human milk. Few respondents could quantify the human milk intake for their breast-fed <br />
+        infants/children. The foods consumed by nursing infants and children are reported in the Individual Foods File. For those who could not quantify the amount of human milk intake, gram weight consumed and nutrient values of the human milk records were set to missing. </li>
+        <li><span style="text-decoration: underline;">Not Done <br />
+        </span>The dietary recall section of the interview did not take place due to various reasons (e.g. came late/left early, refusal, illness, emergency, or equipment failure). </li>
+    </ol>
+    <p><strong>Sample weights for dietary intake data:</strong> The NHANES participants were selected on the basis of a national probability design. In order to increase the number of participants for specific demographic groups, a multi-stage, unequal probability of selection design was implemented. The NHANES oversamples blacks, Mexican Americans, low income whites, adolescents 12-19 years, and persons 60 years and older. Sample weights are constructed that encompass the unequal probabilities of selection, as well as adjustments for non-participation by selected sample persons. In order to produce national, representative estimates, the appropriate sample weights must be used.</p>
+    <p>For the 1999-2000 NHANES, there were 12,160 persons selected; of these 9,282 were considered respondents to the MEC examination and data collection. However, only 8,730 of the MEC respondents provided complete dietary intakes.</p>
+    <p>Most analyses of NHANES data use data collected in the MEC and the variable WTMEC2YR should be used for the sample weights. However, for the dietary data, different sample weights are recommended for analysis. Although attempts are made to schedule MEC exams uniformly throughout the week, proportionally more exams occur on weekend days than on weekdays. Because food intake can vary by day of week, use of the MEC weights would disproportionately represent intakes on weekends.</p>
+    <p>A set of weights WTDRD1 is provided that should be used when an analysis uses the NHANES 1999-2000 dietary recall data (either alone or when nutrient data are used in conjunction with MEC data). The set of weights WTDRD1 is applicable to the 8,730 respondents with dietary data. The weights WTDRD1 were constructed by taking the MEC sample weights (WTMEC2YR) and further adjusting for (a) the additional non-response and (b) the differential allocation by day of the week for the dietary intake data collection. These weights are more variable than the MEC weights, and the sample size is smaller, so estimated standard errors using dietary data and dietary weights are larger than standard errors for similar estimates based on MEC weights. In addition, a set of four-year dietary weight (WTDR4YR) is also provided that should be used for the combined analyses of NHANES 1999-2000 and NHANES 2001-2002 data.</p>
+    <p>Note that all sample weights are person-level weights and each set of weights should add to the same population control total as the MEC weights (WTMEC2YR). In addition, the MEC weights (WTMEC2YR) are appropriate for use in the analysis of the fish and shellfish consumption data (i.e., variables DRQ340, DRD350A-K, DRQ350AQ-JQ, DRQ360, DRD370A-V, and DRQ370AQ-UQ) located in the Total Nutrient Intake File (DRXTOT), if no other dietary data are included in the analysis. Additional explanation of sample weights and appropriate uses are included in the <strong><a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx">NHANES Analytic Guidelines</a></strong>  (<a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx">https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx</a>). Please also refer to the on-line <strong><a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/">NHANES Tutorial</a></strong> (<a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/">https://wwwn.cdc.gov/nchs/nhanes/tutorials/</a>) for further details on other analytic issues.</p>
+</div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Centers for Disease Control and Prevention, National Center for Health Statistics. National Health and Nutrition Examination Survey MEC In-Person Dietary Interviewers Procedure Manual. Hyattsville, MD: U.S. Department of Health and Human Services, Centers for Disease Control and Prevention, 2000. 
+ <a href="http://www.cdc.gov/nchs/nhanes/nhanes1999-2000/current_nhanes_99_00.htm">http://www.cdc.gov/nchs/nhanes/nhanes1999-2000/current_nhanes_99_00.htm</a>
+          </li>
+          <li>Centers for Disease Control and Prevention, National Center for Health Statistics. The National Health and Nutrition Examination Survey (NHANES) Analytic and Reporting Guidelines. Hyattsville, MD: U.S. Department of Health and Human Services, Centers for Disease Control and Prevention, September 2006. 
+ <a href="http://www.cdc.gov/nchs/nhanes/survey_methods.htm">http://www.cdc.gov/nchs/nhanes/survey_methods.htm</a>
+          </li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTDRD1">WTDRD1 - Dietary day one 2-Year sample weight</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTDRD1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dietary day one 2-Year sample weight</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Dietary day one 2-Year sample weight - Used for 1999-2000 data collection years only</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">576.43623642 to 537656.81002</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">126736</td>
+                <td class="values" align="right">126736</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1104</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTDR4YR">WTDR4YR - Dietary day one 4-Year sample weight</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTDR4YR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dietary day one 4-Year sample weight</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Dietary day one 4-Year sample weight - Used for 1999-2002 data collection years only</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">369.94559902 to 200052.31063</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">126736</td>
+                <td class="values" align="right">126736</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1104</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXILINE">DRXILINE - Food/individ.component number(sequentl#)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXILINE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Food/individ.component number(sequentl#)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Food/Individual Component Number (sequential number)</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">One of the key variables for the file.  Primary key variables: SEQN and DRXILINE</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 49</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127840</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRDDRSTS">DRDDRSTS - Dietary recall status</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRDDRSTS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dietary recall status</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Dietary recall status</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Reliable and meet minimum criteria</td>
+                <td class="values" align="right">125226</td>
+                <td class="values" align="right">125226</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Reliable but not meet minimum criteria</td>
+                <td class="values" align="right">1104</td>
+                <td class="values" align="right">126330</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Not reliable</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">126330</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Breast-fed infant or child</td>
+                <td class="values" align="right">1510</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Not done</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRDINTMD">DRDINTMD - Mode of interview</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRDINTMD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mode of interview</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mode of interview</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">In-person</td>
+                <td class="values" align="right">103424</td>
+                <td class="values" align="right">103424</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Telephone</td>
+                <td class="values" align="right">24399</td>
+                <td class="values" align="right">127823</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">17</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRDDAY">DRDDAY - Intake day of week</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRDDAY</dd>
+            <dt>SAS Label: </dt>
+            <dd>Intake day of week</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Intake day of the week</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sunday</td>
+                <td class="values" align="right">17426</td>
+                <td class="values" align="right">17426</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Monday</td>
+                <td class="values" align="right">11847</td>
+                <td class="values" align="right">29273</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Tuesday</td>
+                <td class="values" align="right">10601</td>
+                <td class="values" align="right">39874</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Wednesday</td>
+                <td class="values" align="right">15917</td>
+                <td class="values" align="right">55791</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Thursday</td>
+                <td class="values" align="right">16561</td>
+                <td class="values" align="right">72352</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Friday</td>
+                <td class="values" align="right">31849</td>
+                <td class="values" align="right">104201</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Saturday</td>
+                <td class="values" align="right">23639</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRALANG">DRALANG - Language SP/Proxy used mostly</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRALANG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Language SP/Proxy used mostly</dd>
+            <dt>English Text: </dt>
+            <dd class="info">The SP/Proxy spoke mostly:</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">English</td>
+                <td class="values" align="right">105922</td>
+                <td class="values" align="right">105922</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Spanish</td>
+                <td class="values" align="right">20348</td>
+                <td class="values" align="right">126270</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">English and Spanish</td>
+                <td class="values" align="right">1295</td>
+                <td class="values" align="right">127565</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">206</td>
+                <td class="values" align="right">127771</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">69</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXCCMNM">DRXCCMNM - Combination food number(sequential#)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXCCMNM</dd>
+            <dt>SAS Label: </dt>
+            <dd>Combination food number(sequential#)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Combination food number (sequential Number)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 13</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">70871</td>
+                <td class="values" align="right">70871</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">56969</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRDCCMTY">DRDCCMTY - Combination food type</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRDCCMTY</dd>
+            <dt>SAS Label: </dt>
+            <dd>Combination food type</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Combination food type</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">Non-combination food</td>
+                <td class="values" align="right">56969</td>
+                <td class="values" align="right">56969</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Baby food combo</td>
+                <td class="values" align="right">1284</td>
+                <td class="values" align="right">58253</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Dried beans w/adds</td>
+                <td class="values" align="right">462</td>
+                <td class="values" align="right">58715</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Beverage combo</td>
+                <td class="values" align="right">8901</td>
+                <td class="values" align="right">67616</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Bread/baked products w/adds</td>
+                <td class="values" align="right">5606</td>
+                <td class="values" align="right">73222</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Cereal mix/cereal w/adds</td>
+                <td class="values" align="right">6253</td>
+                <td class="values" align="right">79475</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Chips w/adds</td>
+                <td class="values" align="right">827</td>
+                <td class="values" align="right">80302</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Crackers w/adds</td>
+                <td class="values" align="right">531</td>
+                <td class="values" align="right">80833</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Desserts w/adds</td>
+                <td class="values" align="right">1247</td>
+                <td class="values" align="right">82080</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Eggs w/adds</td>
+                <td class="values" align="right">685</td>
+                <td class="values" align="right">82765</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">10</td>
+                <td class="values">Fish w/adds</td>
+                <td class="values" align="right">629</td>
+                <td class="values" align="right">83394</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">Frozen meal</td>
+                <td class="values" align="right">324</td>
+                <td class="values" align="right">83718</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">12</td>
+                <td class="values">Fruit combo</td>
+                <td class="values" align="right">835</td>
+                <td class="values" align="right">84553</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">13</td>
+                <td class="values">Grains w/adds</td>
+                <td class="values" align="right">1022</td>
+                <td class="values" align="right">85575</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">14</td>
+                <td class="values">Meat w/adds</td>
+                <td class="values" align="right">1445</td>
+                <td class="values" align="right">87020</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">15</td>
+                <td class="values">Mixed dish</td>
+                <td class="values" align="right">5833</td>
+                <td class="values" align="right">92853</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">17</td>
+                <td class="values">Poultry w/adds</td>
+                <td class="values" align="right">1739</td>
+                <td class="values" align="right">94592</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">18</td>
+                <td class="values">Salads (greens based)</td>
+                <td class="values" align="right">5042</td>
+                <td class="values" align="right">99634</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">19</td>
+                <td class="values">Salads (non-greens based)</td>
+                <td class="values" align="right">515</td>
+                <td class="values" align="right">100149</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">20</td>
+                <td class="values">Sandwiches</td>
+                <td class="values" align="right">16373</td>
+                <td class="values" align="right">116522</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">21</td>
+                <td class="values">Soup combo</td>
+                <td class="values" align="right">1229</td>
+                <td class="values" align="right">117751</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">22</td>
+                <td class="values">Tortilla w/adds</td>
+                <td class="values" align="right">4808</td>
+                <td class="values" align="right">122559</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">23</td>
+                <td class="values">Vegetable combo</td>
+                <td class="values" align="right">4614</td>
+                <td class="values" align="right">127173</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">90</td>
+                <td class="values">Other foods eaten together</td>
+                <td class="values" align="right">667</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRD020">DRD020 - Meal time of eating (HH:MM)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRD020</dd>
+            <dt>SAS Label: </dt>
+            <dd>Meal time of eating (HH:MM)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">What time did you begin to eat/drink the meal/food.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 86340</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127840</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRD030">DRD030 - Coded meal name</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRD030</dd>
+            <dt>SAS Label: </dt>
+            <dd>Coded meal name</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Coded meal name</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Breakfast</td>
+                <td class="values" align="right">21390</td>
+                <td class="values" align="right">21390</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Brunch</td>
+                <td class="values" align="right">1335</td>
+                <td class="values" align="right">22725</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Lunch</td>
+                <td class="values" align="right">26739</td>
+                <td class="values" align="right">49464</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Snack/beverage</td>
+                <td class="values" align="right">26641</td>
+                <td class="values" align="right">76105</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Dinner/supper</td>
+                <td class="values" align="right">32031</td>
+                <td class="values" align="right">108136</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Infant feeding</td>
+                <td class="values" align="right">4067</td>
+                <td class="values" align="right">112203</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Extended consumption</td>
+                <td class="values" align="right">1599</td>
+                <td class="values" align="right">113802</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">55</td>
+                <td class="values" align="right">113857</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Desayuno (Spanish)</td>
+                <td class="values" align="right">2184</td>
+                <td class="values" align="right">116041</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">10</td>
+                <td class="values">Almuerzo (Spanish)</td>
+                <td class="values" align="right">2255</td>
+                <td class="values" align="right">118296</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">Comida (Spanish)</td>
+                <td class="values" align="right">3964</td>
+                <td class="values" align="right">122260</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">12</td>
+                <td class="values">Merienda (Spanish)</td>
+                <td class="values" align="right">839</td>
+                <td class="values" align="right">123099</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">13</td>
+                <td class="values">Cena (Spanish)</td>
+                <td class="values" align="right">3643</td>
+                <td class="values" align="right">126742</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">14</td>
+                <td class="values">Entre comida/bebida (Spanish)</td>
+                <td class="values" align="right">718</td>
+                <td class="values" align="right">127460</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">15</td>
+                <td class="values">Bocadillo (Spanish)</td>
+                <td class="values" align="right">106</td>
+                <td class="values" align="right">127566</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">16</td>
+                <td class="values">Botana (Spanish)</td>
+                <td class="values" align="right">270</td>
+                <td class="values" align="right">127836</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">99</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRD040">DRD040 - Meal Place</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRD040</dd>
+            <dt>SAS Label: </dt>
+            <dd>Meal Place</dd>
+            <dt>English Text: </dt>
+            <dd class="info">List of places: Where did you eat this meal/food?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Boat</td>
+                <td class="values" align="right">17</td>
+                <td class="values" align="right">17</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Self serve buffet</td>
+                <td class="values" align="right">432</td>
+                <td class="values" align="right">449</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Cafeteria</td>
+                <td class="values" align="right">457</td>
+                <td class="values" align="right">906</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Car</td>
+                <td class="values" align="right">1961</td>
+                <td class="values" align="right">2867</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Community feeding program</td>
+                <td class="values" align="right">114</td>
+                <td class="values" align="right">2981</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Deli</td>
+                <td class="values" align="right">104</td>
+                <td class="values" align="right">3085</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Fast food</td>
+                <td class="values" align="right">3337</td>
+                <td class="values" align="right">6422</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Friend's house</td>
+                <td class="values" align="right">2363</td>
+                <td class="values" align="right">8785</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Home</td>
+                <td class="values" align="right">85987</td>
+                <td class="values" align="right">94772</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">Plane</td>
+                <td class="values" align="right">26</td>
+                <td class="values" align="right">94798</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">12</td>
+                <td class="values">Restaurant</td>
+                <td class="values" align="right">8081</td>
+                <td class="values" align="right">102879</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">13</td>
+                <td class="values">School</td>
+                <td class="values" align="right">6901</td>
+                <td class="values" align="right">109780</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">14</td>
+                <td class="values">Someone else's house</td>
+                <td class="values" align="right">3622</td>
+                <td class="values" align="right">113402</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">15</td>
+                <td class="values">Store</td>
+                <td class="values" align="right">495</td>
+                <td class="values" align="right">113897</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">16</td>
+                <td class="values">Take out</td>
+                <td class="values" align="right">419</td>
+                <td class="values" align="right">114316</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">17</td>
+                <td class="values">Work</td>
+                <td class="values" align="right">8425</td>
+                <td class="values" align="right">122741</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">18</td>
+                <td class="values">Day camp</td>
+                <td class="values" align="right">68</td>
+                <td class="values" align="right">122809</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">19</td>
+                <td class="values">Day care</td>
+                <td class="values" align="right">863</td>
+                <td class="values" align="right">123672</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">90</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">4168</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRDCFF">DRDCFF - Combination food flag</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRDCFF</dd>
+            <dt>SAS Label: </dt>
+            <dd>Combination food flag</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Combination food flag</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">Single component food</td>
+                <td class="values" align="right">56969</td>
+                <td class="values" align="right">56969</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Combo food</td>
+                <td class="values" align="right">70871</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRDMRUF">DRDMRUF - Flag for modified recipe use</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRDMRUF</dd>
+            <dt>SAS Label: </dt>
+            <dd>Flag for modified recipe use</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Flag for modified recipe use
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">Non-modified recipe</td>
+                <td class="values" align="right">120718</td>
+                <td class="values" align="right">120718</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Modified recipe</td>
+                <td class="values" align="right">7122</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRDIFDCD">DRDIFDCD - USDA food code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRDIFDCD</dd>
+            <dt>SAS Label: </dt>
+            <dd>USDA food code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">USDA food code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11000000 to 94000000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127840</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRDISODF">DRDISODF - Salt adjustment flag of individual food</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRDISODF</dd>
+            <dt>SAS Label: </dt>
+            <dd>Salt adjustment flag of individual food</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Salt adjustment flag of individual food
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">No sodium adjustment done</td>
+                <td class="values" align="right">123345</td>
+                <td class="values" align="right">123345</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Sodium value adjusted for salt use in food preparation</td>
+                <td class="values" align="right">4495</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIGRMS">DRXIGRMS - Grams</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIGRMS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Grams</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Gram weight of the food/individual component</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.02 to 9000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIKCAL">DRXIKCAL - Energy (kcal)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIKCAL</dd>
+            <dt>SAS Label: </dt>
+            <dd>Energy (kcal)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Energy (kcal)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4620</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIPROT">DRXIPROT - Protein (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIPROT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Protein (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Protein (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 342.42</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXICARB">DRXICARB - Carbohydrate (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXICARB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Carbohydrate (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Carbohydrate (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 928.51</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXITFAT">DRXITFAT - Total fat (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXITFAT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total fat (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total fat (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 250.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXISFAT">DRXISFAT - Total saturated fatty acids (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXISFAT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total saturated fatty acids (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total saturated fatty acids (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 157.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIMFAT">DRXIMFAT - Total monounsaturated fatty acids (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIMFAT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total monounsaturated fatty acids (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total monounsaturated fatty acids (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 93.9</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIPFAT">DRXIPFAT - Total polyunsaturated fatty acids (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIPFAT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total polyunsaturated fatty acids (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total polyunsaturated fatty acids (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 75.21</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXICHOL">DRXICHOL - Cholesterol (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXICHOL</dd>
+            <dt>SAS Label: </dt>
+            <dd>Cholesterol (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Cholesterol (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 2976.03</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIFIBE">DRXIFIBE - Dietary fiber (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIFIBE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dietary fiber (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Dietary fiber (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 88.28</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIVAIU">DRXIVAIU - Vitamin A (IU)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIVAIU</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin A (IU)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vitamin A (IU)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 162023.04</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIVARE">DRXIVARE - Vitamin A (RE)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIVARE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin A (RE)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vitamin A (RE)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 36203.19</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXICARO">DRXICARO - Carotene (RE)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXICARO</dd>
+            <dt>SAS Label: </dt>
+            <dd>Carotene (RE)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Carotene (RE)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 16202.88</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIVB1">DRXIVB1 - Thiamin (Vitamin B1) (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIVB1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Thiamin (Vitamin B1) (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Thiamin (Vitamin B1) (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 10.64</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIVB2">DRXIVB2 - Riboflavin (Vitamin B2) (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIVB2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Riboflavin (Vitamin B2) (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Riboflavin (Vitamin B2) (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 14.09</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXINIAC">DRXINIAC - Niacin (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXINIAC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Niacin (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Niacin (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 140.06</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIVB6">DRXIVB6 - Vitamin B6 (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIVB6</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin B6 (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vitamin B6 (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 17.71</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIFOLA">DRXIFOLA - Total Folate (mcg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIFOLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total Folate (mcg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total Folate (mcg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 2156</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIVB12">DRXIVB12 - Vitamin B12 (mcg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIVB12</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin B12 (mcg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vitamin B12 (mcg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 377.26</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIVC">DRXIVC - Vitamin C (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIVC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin C (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vitamin C (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1715.11</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIVE">DRXIVE - Vitamin E (ATE) (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIVE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin E (ATE) (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vitamin E (Alpha-Tocopherol Equivalents) (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 93.97</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXICALC">DRXICALC - Calcium (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXICALC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Calcium (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Calcium (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 5685.04</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIPHOS">DRXIPHOS - Phosphorus (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIPHOS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Phosphorus (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Phosphorus (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 5166.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIMAGN">DRXIMAGN - Magnesium (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIMAGN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Magnesium (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Magnesium (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1063.14</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIIRON">DRXIIRON - Iron (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIIRON</dd>
+            <dt>SAS Label: </dt>
+            <dd>Iron (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Iron (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 96.99</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIZINC">DRXIZINC - Zinc (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIZINC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Zinc (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Zinc (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 584.57</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXICOPP">DRXICOPP - Copper (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXICOPP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Copper (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Copper (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 28.66</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRDISODI">DRDISODI - Sodium (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRDISODI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Sodium (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Sodium (mg)(adjusted for salt use in food preparation)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 11993.01</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIPOTA">DRXIPOTA - Potassium (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIPOTA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Potassium (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Potassium (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 8382.87</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXISELE">DRXISELE - Selenium (mcg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXISELE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Selenium (mcg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Selenium (mcg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1196.21</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXICAFF">DRXICAFF - Caffeine (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXICAFF</dd>
+            <dt>SAS Label: </dt>
+            <dd>Caffeine (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Caffeine (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4120.32</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXITHEO">DRXITHEO - Theobromine (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXITHEO</dd>
+            <dt>SAS Label: </dt>
+            <dd>Theobromine (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Theobromine (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1754.22</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIALCO">DRXIALCO - Alcohol (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIALCO</dd>
+            <dt>SAS Label: </dt>
+            <dd>Alcohol (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Alcohol (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 665.28</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIWATE">DRXIWATE - Moisture (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIWATE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Moisture (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Moisture (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 8568</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIS040">DRXIS040 - SFA 4:0 (Butanoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIS040</dd>
+            <dt>SAS Label: </dt>
+            <dd>SFA 4:0 (Butanoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">SFA 4:0 (Butanoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 8.16</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIS060">DRXIS060 - SFA 6:0 (Hexanoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIS060</dd>
+            <dt>SAS Label: </dt>
+            <dd>SFA 6:0 (Hexanoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">SFA 6:0 (Hexanoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 4.46</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIS080">DRXIS080 - SFA 8:0 (Octanoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIS080</dd>
+            <dt>SAS Label: </dt>
+            <dd>SFA 8:0 (Octanoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">SFA 8:0 (Octanoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 5.95</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIS100">DRXIS100 - SFA 10:0 (Decanoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIS100</dd>
+            <dt>SAS Label: </dt>
+            <dd>SFA 10:0 (Decanoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">SFA 10:0 (Decanoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 5.89</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIS120">DRXIS120 - SFA 12:0 (Dodecanoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIS120</dd>
+            <dt>SAS Label: </dt>
+            <dd>SFA 12:0 (Dodecanoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">SFA 12:0 (Dodecanoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 18.53</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIS140">DRXIS140 - SFA 14:0 (Tetradecanoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIS140</dd>
+            <dt>SAS Label: </dt>
+            <dd>SFA 14:0 (Tetradecanoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">SFA 14:0 (Tetradecanoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 25.73</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIS160">DRXIS160 - SFA 16:0 (Hexadecanoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIS160</dd>
+            <dt>SAS Label: </dt>
+            <dd>SFA 16:0 (Hexadecanoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">SFA 16:0 (Hexadecanoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 70.26</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIS180">DRXIS180 - SFA 18:0 (Octadecanoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIS180</dd>
+            <dt>SAS Label: </dt>
+            <dd>SFA 18:0 (Octadecanoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">SFA 18:0 (Octadecanoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 29.01</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIM161">DRXIM161 - MFA 16:1 (Hexadecenoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIM161</dd>
+            <dt>SAS Label: </dt>
+            <dd>MFA 16:1 (Hexadecenoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MFA 16:1 (Hexadecenoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 22.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIM181">DRXIM181 - MFA 18:1 (Octadecenoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIM181</dd>
+            <dt>SAS Label: </dt>
+            <dd>MFA 18:1 (Octadecenoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MFA 18:1 (Octadecenoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 92.04</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIM201">DRXIM201 - MFA 20:1 (Eicosenoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIM201</dd>
+            <dt>SAS Label: </dt>
+            <dd>MFA 20:1 (Eicosenoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MFA 20:1 (Eicosenoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 2.42</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIM221">DRXIM221 - MFA 22:1 (Docosenoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIM221</dd>
+            <dt>SAS Label: </dt>
+            <dd>MFA 22:1 (Docosenoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MFA 22:1 (Docosenoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 5.07</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIP182">DRXIP182 - PFA 18:2 (Octadecadienoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIP182</dd>
+            <dt>SAS Label: </dt>
+            <dd>PFA 18:2 (Octadecadienoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PFA 18:2 (Octadecadienoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 69.79</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIP183">DRXIP183 - PFA 18:3 (Octadecatrienoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIP183</dd>
+            <dt>SAS Label: </dt>
+            <dd>PFA 18:3 (Octadecatrienoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PFA 18:3 (Octadecatrienoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 7.26</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIP184">DRXIP184 - PFA 18:4 (Octadecatetraenoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIP184</dd>
+            <dt>SAS Label: </dt>
+            <dd>PFA 18:4 (Octadecatetraenoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PFA 18:4 (Octadecatetraenoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 0.75</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIP204">DRXIP204 - PFA 20:4 (Eicosatetraenoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIP204</dd>
+            <dt>SAS Label: </dt>
+            <dd>PFA 20:4 (Eicosatetraenoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PFA 20:4 (Eicosatetraenoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 2.09</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIP205">DRXIP205 - PFA 20:5 (Eicosapentaenoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIP205</dd>
+            <dt>SAS Label: </dt>
+            <dd>PFA 20:5 (Eicosapentaenoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PFA 20:5 (Eicosapentaenoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 2.96</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIP225">DRXIP225 - PFA 22:5 (Docosapentaenoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIP225</dd>
+            <dt>SAS Label: </dt>
+            <dd>PFA 22:5 (Docosapentaenoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PFA 22:5 (Docosapentaenoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 1.02</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXIP226">DRXIP226 - PFA 22:6 (Docosahexaenoic) (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXIP226</dd>
+            <dt>SAS Label: </dt>
+            <dd>PFA 22:6 (Docosahexaenoic) (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">PFA 22:6 (Docosahexaenoic) (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 3.16</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">127147</td>
+                <td class="values" align="right">127147</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">693</td>
+                <td class="values" align="right">127840</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="Appendices">
+        <div id="Appendix">
+          <h2 id="Appendix_1:_Food_Code_Format_File_">Appendix 1: Food Code Format File </h2><p>This dataset is a technical support file for the Individual Foods File (DRXIFF) of the dietary interview component. It provides text descriptions for the food codes used in the Individual Foods File. The source of the text descriptions used in this file is the USDA 1994-98 Survey Nutrient Database. Please refer to the documentation for the Individual Foods File for details information on the dietary interview component and related dietary data files. </p>
+<p>The Food Code Format File was created for linking the text descriptions with the food codes used in the Individual Foods File. There are three variables included in the file: </p>
+<p>1) FMTNAME: a text field encoding the name of the key variable (i.e., DRDIFDCD) used to link with the Individual Foods File; <br />
+2) START: the numeric value of the USDA food codes; <br />
+3) VALUE: the text description for the correspondent food code. </p>
+<p>The following is an example SAS code to associate the text descriptions with the food codes using format option: </p>
+<p>Assuming that the individual foods file (DRXIFF) and the Format file (DRXFMT) have been copied to a SAS library NHANES: </p>
+<p>Proc Format CntlIn=NHANES.DRXFMT; Proc DataSets Lib=NHANES; <br />
+Modify DRXIFF; <br />
+FORMAT DRDIFDCD DRDIFDCD.; Quit; <br />
+To simply obtain a listing of formatted text labels for each food code, data users can apply the following SAS code: <br />
+Options LS=240; <br />
+Proc Print Data= NHANES.DRXFMT; <br />
+Run; </p>
+<p>Note that the text label is up to 60 characters long. </p>
+<p>For foods with modified recipes including those that are not in the USDA database (DRDMRUF=1, in the individual foods file), the USDA food codes and corresponding text descriptions were assigned for reporting purpose only. While the description expresses the basic characteristics of the food, it does not reflect the actual recipe used in the food. However, the nutrient values assigned to modified recipe foods in the dietary data files do reflect the recipe modification. Please refer to the documentation for Individual Foods File for details. </p></div>
+      </div>
+    </div>
+  </body>
+</html>

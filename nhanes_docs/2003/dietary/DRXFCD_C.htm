@@ -1,0 +1,209 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>DRXFCD_C</title>
+    <meta name="title" content="NHANES 2003-2004: Dietary Interview Technical Support File - Food Codes Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#DRXFDCD">DRXFDCD - USDA food code</a>
+              </li>
+              <li>
+                <a href="#DRXFCSD">DRXFCSD - Food Code Short Description</a>
+              </li>
+              <li>
+                <a href="#DRXFCLD">DRXFCLD - Food Code Long Description</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2003-2004 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Dietary Interview Technical Support File - Food Codes (DRXFCD_C)</h3>
+        <h4> Data File: DRXFCD_C.xpt</h4>
+        <h5 class="left">First Published: September 2006</h5>
+        <h5 class="right">Last Revised: November 2007</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Two technical support files are included with the Individual Foods Files: the Food Code Description file (<strong>DRXFCD_C</strong>) and the Modification Code Description file (<strong>DRXMCD_C</strong>). The <strong>DRXFCD_C</strong> file includes abbreviated descriptions (up to 60 characters) and complete descriptions (up to 200 characters) associated with each USDA food code identified in the Individual Foods Files. The <strong>DRXMCD_C</strong> file includes descriptions associated with each modification code identified in the Individual Foods Files.</p>
+<p>The Food Code Description File (<strong>DRXFCD_C</strong>) contains three variables: </p>
+<ol>
+    <li><strong>DRDIFDCD</strong> a numeric value corresponding to DR1IFDCD in the file DR1IFF_C or DR2IFDCD in the file DR2IFF_C;&nbsp; </li>
+    <li><strong>DRXFCSD</strong> a short description (up to 60 characters) of the food code. </li>
+    <li><strong>DRXFCLD</strong> a long description (up to 200 characters) of the food code. </li>
+</ol>
+<p>The Modification Code Description File (<strong>DRXMCD_C</strong>) contains two variables:</p>
+<ol>
+    <li><strong>DRDMC</strong> a numeric value corresponding to DR1MC in the file DR1IFF_C or DR2MC in the file DR2IFF_C; </li>
+    <li><strong>DRMCD</strong> a description (up to 200 characters) of the modification code. </li>
+</ol>
+<p>The following SQL code is an example of appending the modifications code description (here called DR1MCD) to one of the individual foods files. This code is for SAS&reg; Proc SQL. Other SQL implementations may be different. This same technique may be used for the Food Code Description File as well. </p>
+<p><strong>proc sql; <br />
+&nbsp; create table dr1iff_c_plus as <br />
+&nbsp; select a.*, b.drxmcd as dr1mcd <br />
+&nbsp; from nhanes.dr1iff_c a <br />
+&nbsp; left join <br />
+&nbsp; nhanes.drxmcd_c b <br />
+&nbsp; on a.dr1mc = b.drxmc <br />
+&nbsp; order by seqn, dr1iline; <br />
+quit; <br />
+</strong></p>
+<p>SAS&reg; users may wish to use Proc Format to assign labels to the food codes or to the modification codes. The following example assigns a permanent format to the food code based on the short description. It is assumed that the user has stored the Individual Foods Files and the Food Code Description file in a library called NHANES and wishes to store the formats there as well.</p>
+<p>&nbsp; <strong>Options FmtSearch = (NHANES);</strong></p>
+<p><strong>&nbsp; Data DRXFMT; <br />
+&nbsp;&nbsp;&nbsp; Set NHANES.DRXFCD_C; <br />
+&nbsp;&nbsp;&nbsp; Retain FMTNAME 'DRDIFDCD'; <br />
+&nbsp;&nbsp;&nbsp; Rename DRDIFDCD = Start; <br />
+&nbsp;&nbsp;&nbsp; Rename DRXFCSD = Value; <br />
+&nbsp;&nbsp;&nbsp; Drop DRXFCLD; <br />
+&nbsp; Run; </strong></p>
+<p><strong>&nbsp; Proc Format CntlIn= DRXFMT Library=NHANES; <br />
+&nbsp; Run;&nbsp;</strong></p>
+<p><strong>&nbsp; Proc DataSets Lib=NHANES; <br />
+&nbsp;&nbsp;&nbsp; Modify DR1IFF_C; <br />
+&nbsp;&nbsp;&nbsp; Format DR1IFDCD DRDIFDCD.; <br />
+&nbsp;&nbsp;&nbsp; Modify DR2IFF_C; <br />
+&nbsp;&nbsp;&nbsp; Format DR2IFDCD DRDIFDCD.; <br />
+&nbsp; Quit;<br />
+</strong>&nbsp;</p></div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXFDCD">DRXFDCD - USDA food code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXFDCD</dd>
+            <dt>SAS Label: </dt>
+            <dd>USDA food code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">USDA food code to be matched with individual foods file.</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11000000 to 94210100</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6940</td>
+                <td class="values" align="right">6940</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6940</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXFCSD">DRXFCSD - Food Code Short Description</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXFCSD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Food Code Short Description</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Food Code Short Description</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">Food Code Short Description</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">6940</td>
+                <td class="values" align="right">6940</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6940</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRXFCLD">DRXFCLD - Food Code Long Description</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRXFCLD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Food Code Long Description</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Food Code Long Description </dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">Food Code Long Description</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">6940</td>
+                <td class="values" align="right">6940</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6940</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

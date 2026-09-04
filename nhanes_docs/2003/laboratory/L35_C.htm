@@ -1,0 +1,3209 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>L35_C</title>
+    <meta name="title" content="NHANES 2003-2004: Methicillin - Resistant Staphylococcus aureus (MRSA) Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#LBXMS1">LBXMS1 - S. aureus present 1</a>
+              </li>
+              <li>
+                <a href="#LBXM1">LBXM1 - MRSA 1</a>
+              </li>
+              <li>
+                <a href="#LBXMT1">LBXMT1 - Tetracycline 1</a>
+              </li>
+              <li>
+                <a href="#LBXMZ1">LBXMZ1 - Trimethoprim/Sulfamethoxazole 1</a>
+              </li>
+              <li>
+                <a href="#LBXMC1">LBXMC1 - Clindamycin 1</a>
+              </li>
+              <li>
+                <a href="#LBXME1">LBXME1 - Erythromycin 1</a>
+              </li>
+              <li>
+                <a href="#LBXMP1">LBXMP1 - Penicillin 1</a>
+              </li>
+              <li>
+                <a href="#LBXMV1">LBXMV1 - Vancomycin 1</a>
+              </li>
+              <li>
+                <a href="#LBXMO1">LBXMO1 - Oxacillin 1</a>
+              </li>
+              <li>
+                <a href="#LBXMG1">LBXMG1 - Gentamicin 1</a>
+              </li>
+              <li>
+                <a href="#LBXML1">LBXML1 - Levofloxacin 1</a>
+              </li>
+              <li>
+                <a href="#LBXMR1">LBXMR1 - Rifampin 1</a>
+              </li>
+              <li>
+                <a href="#LBAMMT1">LBAMMT1 - Molecular type 1</a>
+              </li>
+              <li>
+                <a href="#LBXBL1">LBXBL1 - B-lactamase 1</a>
+              </li>
+              <li>
+                <a href="#LBXCD1">LBXCD1 - Clinda induction (D) test 1</a>
+              </li>
+              <li>
+                <a href="#LBXCH1">LBXCH1 - Chloramphenicol 1</a>
+              </li>
+              <li>
+                <a href="#LBXDX1">LBXDX1 - Doxycycline 1</a>
+              </li>
+              <li>
+                <a href="#LBXDY1">LBXDY1 - Daptomycin 1</a>
+              </li>
+              <li>
+                <a href="#LBXLZ1">LBXLZ1 - Linezolid 1</a>
+              </li>
+              <li>
+                <a href="#LBXQD1">LBXQD1 - Quinupristin-dalfopristin 1</a>
+              </li>
+              <li>
+                <a href="#LBXMS2">LBXMS2 - S. aureus present 2</a>
+              </li>
+              <li>
+                <a href="#LBXMT2">LBXMT2 - Tetracyline 2</a>
+              </li>
+              <li>
+                <a href="#LBXMZ2">LBXMZ2 - Trimethoprim/Sulfamethoxazole 2</a>
+              </li>
+              <li>
+                <a href="#LBXMC2">LBXMC2 - Clindamycin 2</a>
+              </li>
+              <li>
+                <a href="#LBXME2">LBXME2 - Erythromycin 2</a>
+              </li>
+              <li>
+                <a href="#LBXMP2">LBXMP2 - Penicillin 2</a>
+              </li>
+              <li>
+                <a href="#LBXMV2">LBXMV2 - Vancomycin 2</a>
+              </li>
+              <li>
+                <a href="#LBXMO2">LBXMO2 - Oxacillin 2</a>
+              </li>
+              <li>
+                <a href="#LBXMG2">LBXMG2 - Gentamicin 2</a>
+              </li>
+              <li>
+                <a href="#LBXML2">LBXML2 - Levofloxacin 2</a>
+              </li>
+              <li>
+                <a href="#LBXMR2">LBXMR2 - Rifampin 2</a>
+              </li>
+              <li>
+                <a href="#LBXBL2">LBXBL2 - B-lactamase</a>
+              </li>
+              <li>
+                <a href="#LBXCD2">LBXCD2 - Clinda induction (D)</a>
+              </li>
+              <li>
+                <a href="#LBXCH2">LBXCH2 - Chloramphenicol</a>
+              </li>
+              <li>
+                <a href="#LBXDX2">LBXDX2 - Doxycycline</a>
+              </li>
+              <li>
+                <a href="#LBXDY2">LBXDY2 - Daptomycin</a>
+              </li>
+              <li>
+                <a href="#LBXLZ2">LBXLZ2 - Linezolid</a>
+              </li>
+              <li>
+                <a href="#LBXQD2">LBXQD2 - Quinupristin-dalfopristin</a>
+              </li>
+              <li>
+                <a href="#LBAMMT2">LBAMMT2 - Molecular type 2</a>
+              </li>
+              <li>
+                <a href="#LBXETA">LBXETA - Enterotoxin A</a>
+              </li>
+              <li>
+                <a href="#LBXETB">LBXETB - Enterotoxin B</a>
+              </li>
+              <li>
+                <a href="#LBXETC">LBXETC - Enterotoxin C</a>
+              </li>
+              <li>
+                <a href="#LBXETD">LBXETD - Enterotoxin D</a>
+              </li>
+              <li>
+                <a href="#LBXETE">LBXETE - Enterotoxin E</a>
+              </li>
+              <li>
+                <a href="#LBXETH">LBXETH - Enterotoxin H</a>
+              </li>
+              <li>
+                <a href="#LBXTSS">LBXTSS - Toxic Shock Syndrome Toxin 1</a>
+              </li>
+              <li>
+                <a href="#LBXPVL">LBXPVL - Panton Valentine Leukocidin</a>
+              </li>
+              <li>
+                <a href="#LBXSCC">LBXSCC - SCCmec Type</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2003-2004 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Methicillin - Resistant Staphylococcus aureus (MRSA) (L35_C)</h3>
+        <h4> Data File: L35_C.xpt</h4>
+        <h5 class="left">First Published: November 2006</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p><em>Staphylococcus aureus</em> is one of the most common causes of skin and soft tissue infection in both the health care and community settings. Antimicrobial resistance in S. aureus has increased dramatically, particularly in the hospital, where the rapid emergence of methicillin-resistant <em>S. aureus</em> (MRSA) and the appearance of <em>S. aureus</em> isolates with resistance to vancomycin have led to concern that this organism may become untreatable with currently available antimicrobials. Previously limited to hospitals, MRSA infections have been increasingly reported in the community. However, no prospective, population-based prevalence study has been done to measure the prevalence of MRSA in the community, and no national surveillance exists to provide a reliable national population estimate.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Participants aged 1 year and older are tested.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>Nasal swabs were first examined for proper labeling and integrity, and then plated on mannitol salt agar (MSA), a selective media for the isolation of <em>S. aureus</em>. MSA plates were incubated at 37&deg;C for 48 hours. Mannitol-fermenting colonies (yellow or gold) were selected from the MSA plates and subcultured to trypticase soy agar + 5% sheep blood plates (BAP) and incubated at 37&deg;C overnight. MSA plates with little or no growth were re-incubated at 37&deg;C overnight, and plates with non-mannitol fermenting growth were held at room temperature. These plates were reexamined the next day, and any yellow or gold colonies were subcultured to BAP. </p>
+<p>Overnight cultures on BAP were first screened using Staphaurex, a rapid latex kit for the identification of <em>S. aureus</em>. A tube coagulase test using rabbit plasma with EDTA was then performed on Staphaurex-negative isolates from BAP with morphology consistent with<em> S. aureus</em> and Staphaurex-positive isolates with morphology inconsistent with <em>S. aureus</em> (non-hemolytic). Staphaurex-positive isolates and Staphaurex-negative tube coagulase-positive isolates were identified as S. aureus and saved for further testing. Staphaurex-positive tube coagulase-negative isolates were discarded. </p>
+<p><em>S. aureus</em> isolates were screened for methicillin resistance following the NCCLS disk diffusion method. Overnight cultures from BAP were plated on Mueller-Hinton (MH) agar, and a 1-&mu;g oxacillin (OX) disk was placed on the inoculated plate. Zone diameters were measured and recorded after 24-hr incubation at 37&deg;C (sensitive &gt; 13 mm; intermediate = 11&ndash;12 mm; resistant &lt; 10 mm). </p>
+<p>Isolates resistant to OX (i.e., MRSA), intermediate to OX, and every 10th isolate sensitive to OX [i.e., methicillin-sensitive <em>Staphylococcus aureus</em> (MSSA)] by disk diffusion were saved for additional testing of organism characteristics. These tests included: antimicrobial susceptibility testing (minimum inhibitory concentration [MIC]) by broth microdilution using NCCLS reference methods; strain typing by pulsed-field gel electrophoresis (PFGE) using SmaI enzyme; singleplex polymerase chain reaction (PCR) for detection of enterotoxins, toxic shock syndrome toxin-1, and Panton-Valentine leukocidin (PVL) toxin; and SCCmec cassette typing by PCR. </p>
+<p>There were no changes to equipment, lab methods, or lab site from the previous 2 years of NHANES. Some antimicrobial susceptibility testing was dropped from the 2003-2004 data file that was previously tested in 2001-2002. The tests were imipenem (LBXMI1 and LBXMI2), cefazolin(LBXMF1 and LBXMF2), ciprofloxacin (LBXMD1 and LBXMD2), and amoxicillin/k clavulanate (LBXMY1 and LBXMY2). </p>
+<p>A detailed description of the laboratory method used can be found on the NHANES website.</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>Nasal swab specimens were processed, stored, and shipped to Division of Healthcare Quality Promotion, National Center for Infectious Diseases, National Centers for Disease Control and Prevention, Atlanta, GA for analysis. Detailed specimen collection and processing instructions are discussed in the NHANES LPM. Read the LABDOC file for detailed data processing and editing protocols. The analytical methods are described in the Description of the Laboratory Methodology section. </p>
+<p>Detailed instructions on specimen collection and processing can be found on the NHANES website.</p><h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>The NHANES quality assurance and quality control protocols (QA/QC) meet the 1988 Clinical Laboratory Improvement Amendments mandates. Detailed QA/QC instructions are discussed in the NHANES Laboratory/Medical Technologists Procedures Manual (LPM). Read the LABDOC file for detailed QA/QC protocols. </p>
+<p>A detailed description of the quality assurance and quality control procedures can be found on the NHANES website.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>The analysis of NHANES 2003&ndash;2004 laboratory data must be conducted with the key survey design and basic demographic variables. The NHANES 2003&ndash;2004 Household Questionnaire Data Files contain demographic data, health indicators, and other related information collected during household interviews. They also contain all survey design variables and sample weights for these age groups. The phlebotomy file includes auxiliary information such as the conditions precluding venipuncture. The household questionnaire and phlebotomy files may be linked to the laboratory data file using the unique survey participant identifier SEQN. </p>
+<p><strong><em>S. aureus</em> Present and Organism Identified as MRSA</strong> </p>
+<p>If LBXMS1 = 1 and LBXM1 = 1, further organism characteristic testing was performed. </p>
+<p>Isolates resistant to OX (i.e., MRSA), intermediate to OX, and every 10th isolate sensitive to OX (i.e., MSSA) by disk diffusion were saved for additional testing of organism characteristics. These tests included: antimicrobial susceptibility testing [minimum inhibitory concentration (MIC)] by broth microdilution using NCCLS reference methods; strain-typing by pulsed-field gel electrophoresis (PFGE) using SmaI enzyme; singleplex polymerase chain reaction (PCR) for detection of enterotoxins, toxic shock syndrome toxin-1, and Panton-Valentine leukocidin (PVL) toxin; and SCCmec cassette typing by PCR. </p>
+<p><strong><em>S. aureus</em> Present and Organism Identified as MSSA</strong> </p>
+<p>Every 10th isolate sensitive to OX (i.e., MSSA) by disk diffusion was saved for additional testing of organism characteristics. These tests included: antimicrobial susceptibility testing (minimum inhibitory concentration [MIC]) by broth microdilution using NCCLS reference methods, and strain-typing by pulsed-field gel electrophoresis (PFGE) using SmaI enzyme.</p></div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMS1">LBXMS1 - S. aureus present 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMS1</dd>
+            <dt>SAS Label: </dt>
+            <dd>S. aureus present 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">S. aureus present 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">2442</td>
+                <td class="values" align="right">2442</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">6562</td>
+                <td class="values" align="right">9004</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">175</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXM1">LBXM1 - MRSA 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXM1</dd>
+            <dt>SAS Label: </dt>
+            <dd>MRSA 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">MRSA 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">133</td>
+                <td class="values" align="right">133</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2309</td>
+                <td class="values" align="right">2442</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6737</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMT1">LBXMT1 - Tetracycline 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMT1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Tetracycline 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Tetracycline 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">352</td>
+                <td class="values" align="right">352</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">368</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMZ1">LBXMZ1 - Trimethoprim/Sulfamethoxazole 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMZ1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Trimethoprim/Sulfamethoxazole 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Trimethoprim/Sulfamethoxazole 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">368</td>
+                <td class="values" align="right">368</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMC1">LBXMC1 - Clindamycin 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMC1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Clindamycin 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Clindamycin 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">320</td>
+                <td class="values" align="right">320</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">50</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXME1">LBXME1 - Erythromycin 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXME1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Erythromycin 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Erythromycin 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">204</td>
+                <td class="values" align="right">204</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">166</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMP1">LBXMP1 - Penicillin 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMP1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Penicillin 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Penicillin 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">27</td>
+                <td class="values" align="right">27</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">343</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMV1">LBXMV1 - Vancomycin 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMV1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vancomycin 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vancomycin 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">370</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMO1">LBXMO1 - Oxacillin 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMO1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Oxacillin 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Oxacillin 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">237</td>
+                <td class="values" align="right">237</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">133</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMG1">LBXMG1 - Gentamicin 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMG1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Gentamicin 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Gentamicin 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">368</td>
+                <td class="values" align="right">368</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXML1">LBXML1 - Levofloxacin 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXML1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Levofloxacin 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Levofloxacin 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">293</td>
+                <td class="values" align="right">293</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">62</td>
+                <td class="values" align="right">355</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMR1">LBXMR1 - Rifampin 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMR1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Rifampin 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Rifampin 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">368</td>
+                <td class="values" align="right">368</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBAMMT1">LBAMMT1 - Molecular type 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBAMMT1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Molecular type 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Molecular Type 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">Molecular type 1</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">370</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXBL1">LBXBL1 - B-lactamase 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXBL1</dd>
+            <dt>SAS Label: </dt>
+            <dd>B-lactamase 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">B-lactamase 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Negative</td>
+                <td class="values" align="right">27</td>
+                <td class="values" align="right">27</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Positive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">27</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">No result</td>
+                <td class="values" align="right">343</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXCD1">LBXCD1 - Clinda induction (D) test 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXCD1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Clinda induction (D) test 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Clinda induction (D) test 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">No inducible resistance detected</td>
+                <td class="values" align="right">29</td>
+                <td class="values" align="right">29</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Inducible resistance detected</td>
+                <td class="values" align="right">87</td>
+                <td class="values" align="right">116</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">No result</td>
+                <td class="values" align="right">254</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXCH1">LBXCH1 - Chloramphenicol 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXCH1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Chloramphenicol 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Chloramphenicol 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">266</td>
+                <td class="values" align="right">266</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">276</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">94</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXDX1">LBXDX1 - Doxycycline 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXDX1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Doxycycline 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Doxycycline 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">72</td>
+                <td class="values" align="right">72</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">72</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">72</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">298</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXDY1">LBXDY1 - Daptomycin 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXDY1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Daptomycin 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Daptomycin 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">189</td>
+                <td class="values" align="right">189</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Nonsusceptible</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">190</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">No result</td>
+                <td class="values" align="right">180</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXLZ1">LBXLZ1 - Linezolid 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXLZ1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Linezolid 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Linezolid 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">370</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Non susceptible</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">No result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXQD1">LBXQD1 - Quinupristin-dalfopristin 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXQD1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Quinupristin-dalfopristin 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Quinupristin-dalfopristin 1</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">254</td>
+                <td class="values" align="right">254</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">254</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">254</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">116</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMS2">LBXMS2 - S. aureus present 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMS2</dd>
+            <dt>SAS Label: </dt>
+            <dd>S. aureus present 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">S. aureus present 2
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMT2">LBXMT2 - Tetracyline 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMT2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Tetracyline 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Tetracyline 2
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMZ2">LBXMZ2 - Trimethoprim/Sulfamethoxazole 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMZ2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Trimethoprim/Sulfamethoxazole 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Trimethoprim/Sulfamethoxazole 2
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMC2">LBXMC2 - Clindamycin 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMC2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Clindamycin 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Clindamycin 2
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXME2">LBXME2 - Erythromycin 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXME2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Erythromycin 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Erythromycin 2
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMP2">LBXMP2 - Penicillin 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMP2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Penicillin 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Penicillin 2
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMV2">LBXMV2 - Vancomycin 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMV2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vancomycin 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vancomycin 2
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMO2">LBXMO2 - Oxacillin 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMO2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Oxacillin 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Oxacillin 2
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMG2">LBXMG2 - Gentamicin 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMG2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Gentamicin 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Gentamicin 2
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXML2">LBXML2 - Levofloxacin 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXML2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Levofloxacin 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Levofloxacin 2
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMR2">LBXMR2 - Rifampin 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMR2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Rifampin 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Rifampin 2
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXBL2">LBXBL2 - B-lactamase</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXBL2</dd>
+            <dt>SAS Label: </dt>
+            <dd>B-lactamase</dd>
+            <dt>English Text: </dt>
+            <dd class="info">B-lactamase</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Negative</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Positive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">No result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXCD2">LBXCD2 - Clinda induction (D)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXCD2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Clinda induction (D)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Clinda induction (D)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">No inducible resistance detected</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Inducible resistance detected</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">No result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXCH2">LBXCH2 - Chloramphenicol</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXCH2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Chloramphenicol</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Chloramphenicol</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXDX2">LBXDX2 - Doxycycline</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXDX2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Doxycycline</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Doxycycline</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXDY2">LBXDY2 - Daptomycin</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXDY2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Daptomycin</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Daptomycin</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Nonsusceptible</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">No result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXLZ2">LBXLZ2 - Linezolid</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXLZ2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Linezolid</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Linezolid</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Nonsusceptible</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">No result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXQD2">LBXQD2 - Quinupristin-dalfopristin</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXQD2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Quinupristin-dalfopristin</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Quinupristin-dalfopristin</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sensitive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Resistant</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Intermediate</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">No Result</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBAMMT2">LBAMMT2 - Molecular type 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBAMMT2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Molecular type 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Molecular type 2
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9179</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXETA">LBXETA - Enterotoxin A</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXETA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Enterotoxin A</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Enterotoxin A
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Positive</td>
+                <td class="values" align="right">54</td>
+                <td class="values" align="right">54</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Negative</td>
+                <td class="values" align="right">316</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXETB">LBXETB - Enterotoxin B</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXETB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Enterotoxin B</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Enterotoxin B
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Positive</td>
+                <td class="values" align="right">31</td>
+                <td class="values" align="right">31</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Negative</td>
+                <td class="values" align="right">339</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXETC">LBXETC - Enterotoxin C</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXETC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Enterotoxin C</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Enterotoxin C
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Positive</td>
+                <td class="values" align="right">34</td>
+                <td class="values" align="right">34</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Negative</td>
+                <td class="values" align="right">336</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXETD">LBXETD - Enterotoxin D</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXETD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Enterotoxin D</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Enterotoxin D
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Positive</td>
+                <td class="values" align="right">74</td>
+                <td class="values" align="right">74</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Negative</td>
+                <td class="values" align="right">296</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXETE">LBXETE - Enterotoxin E</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXETE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Enterotoxin E</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Enterotoxin E
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Positive</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Negative</td>
+                <td class="values" align="right">370</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXETH">LBXETH - Enterotoxin H</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXETH</dd>
+            <dt>SAS Label: </dt>
+            <dd>Enterotoxin H</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Enterotoxin H
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Positive</td>
+                <td class="values" align="right">20</td>
+                <td class="values" align="right">20</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Negative</td>
+                <td class="values" align="right">350</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXTSS">LBXTSS - Toxic Shock Syndrome Toxin 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXTSS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Toxic Shock Syndrome Toxin 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Toxic Shock Syndrome Toxin 1
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Positive</td>
+                <td class="values" align="right">71</td>
+                <td class="values" align="right">71</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Negative</td>
+                <td class="values" align="right">299</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXPVL">LBXPVL - Panton Valentine Leukocidin</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXPVL</dd>
+            <dt>SAS Label: </dt>
+            <dd>Panton Valentine Leukocidin</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Panton Valentine Leukocidin
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Positive</td>
+                <td class="values" align="right">26</td>
+                <td class="values" align="right">26</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Negative</td>
+                <td class="values" align="right">344</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXSCC">LBXSCC - SCCmec Type</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXSCC</dd>
+            <dt>SAS Label: </dt>
+            <dd>SCCmec Type</dd>
+            <dt>English Text: </dt>
+            <dd class="info">SCCmec Type
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Type I</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Type II</td>
+                <td class="values" align="right">68</td>
+                <td class="values" align="right">68</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Type III</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">68</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Type IV-No Subtype</td>
+                <td class="values" align="right">18</td>
+                <td class="values" align="right">86</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Type Iva</td>
+                <td class="values" align="right">36</td>
+                <td class="values" align="right">122</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Type Ivb</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">125</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Type Ivc</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">132</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">Not Typable</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">133</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">No data</td>
+                <td class="values" align="right">237</td>
+                <td class="values" align="right">370</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8809</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

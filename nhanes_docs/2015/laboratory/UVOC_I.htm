@@ -1,0 +1,3445 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>UVOC_I</title>
+    <meta name="title" content="NHANES 2015-2016: Volatile Organic Compound (VOC) Metabolites - Urine Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Method_Files">Laboratory Method Files</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent Sequence Number</a>
+              </li>
+              <li>
+                <a href="#WTSA2YR">WTSA2YR - Subsample A Weights</a>
+              </li>
+              <li>
+                <a href="#URX1DC">URX1DC - N-acel-S-(1,2-dichlorovinl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URD1DCLC">URD1DCLC - N-acel-S-(1,2-dichlorovinl)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URX2DC">URX2DC - N-acel-S-(2,2-dichlorvinyl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URD2DCLC">URD2DCLC - N-acel-S-(2,2-dichlorvinyl)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URX2MH">URX2MH - 2-methylhippuric acid (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URD2MHLC">URD2MHLC - 2-methylhippuric acid comment code</a>
+              </li>
+              <li>
+                <a href="#URX34M">URX34M - 3-methipurc acd &amp; 4-methipurc acd(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URD34MLC">URD34MLC - 3-methipurc acd &amp; 4-methipurc acid comt</a>
+              </li>
+              <li>
+                <a href="#URXAAM">URXAAM - N-ace-S-(2-carbamoylethyl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDAAMLC">URDAAMLC - N-ace-S-(2-carbamoylethyl)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URXAMC">URXAMC - N-ace-S-(N-methlcarbamoyl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDAMCLC">URDAMCLC - N-ace-S-(N-methlcarbamoyl)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URXATC">URXATC - 2-amnothiazolne-4-carbxylic acid(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDATCLC">URDATCLC - 2-amnothiazolne-4-carbxylic acid comt</a>
+              </li>
+              <li>
+                <a href="#URXBMA">URXBMA - N-acetyl-S-(benzyl)-L-cysteine(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDBMALC">URDBMALC - N-acetyl-S-(benzyl)-L-cysteine comt</a>
+              </li>
+              <li>
+                <a href="#URXBPM">URXBPM - N-acetyl-S-(n-propyl)-L-cysteine(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDBPMLC">URDBPMLC - N-acetyl-S-(n-propyl)-L-cysteine comt</a>
+              </li>
+              <li>
+                <a href="#URXCEM">URXCEM - N-acetyl-S-(2-carbxyethyl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDCEMLC">URDCEMLC - N-acetyl-S-(2-carbxyethyl)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URXCYHA">URXCYHA - CYHA cysteine (ng/mL) </a>
+              </li>
+              <li>
+                <a href="#URDCYALC">URDCYALC - CYHA cysteine comment code</a>
+              </li>
+              <li>
+                <a href="#URXCYM">URXCYM - N-acetyl-S-(2-cyanoethyl)-L-cyst(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDCYMLC">URDCYMLC - N-acetyl-S-(2-cyanoethyl)-L-cyst comt</a>
+              </li>
+              <li>
+                <a href="#URXDHB">URXDHB - N-ace-S-(3,4-dihidxybutl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDDHBLC">URDDHBLC - N-ace-S-(3,4-dihidxybutl)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URXDPM">URXDPM - N-ace-S-(dimethylphenyl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDDPMLC">URDDPMLC - N-ace-S-(dimethylphenyl)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URXGAM">URXGAM - N-ac-S-(2-carbmo-2-hydxel)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDGAMLC">URDGAMLC - N-ac-S-(2-carbmo-2-hydxel)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URXHEM">URXHEM - N-ace-S-(2-hydroxyethyl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDHEMLC">URDHEMLC - N-ace-S-(2-hydroxyethyl)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URXHP2">URXHP2 - N-ace-S-(2-hydroxypropyl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDHP2LC">URDHP2LC - N-ace-S-(2-hydroxypropyl)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URXHPM">URXHPM - N-ace-S-(3-hydroxypropyl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDHPMLC">URDHPMLC - N-ace-S-(3-hydroxypropyl)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URXIPM1">URXIPM1 - IPM1 cysteine (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDPM1LC">URDPM1LC - IPM1 cysteine comment code</a>
+              </li>
+              <li>
+                <a href="#URXIPM3">URXIPM3 - IPM3 cysteine (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDPM3LC">URDPM3LC - IPM3 cysteine comment code</a>
+              </li>
+              <li>
+                <a href="#URXMAD">URXMAD - Mandelic acid(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMADLC">URDMADLC - Mandelic acid comment code</a>
+              </li>
+              <li>
+                <a href="#URXMB1">URXMB1 - N-A-S-(1-hydrxmet)-2-Prpn)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMB1LC">URDMB1LC - N-A-S-(1-hydrxmet)-2-Prpn)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URXMB2">URXMB2 - N-Ac-S-(2-hydrxy-3-butenyl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMB2LC">URDMB2LC - N-Ac-S-(2-hydrxy-3-butenyl)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URXMB3">URXMB3 - N-A-S-(4-hydrxy-2-butenyl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDMB3LC">URDMB3LC - N-A-S-(4-hydrxy-2-butenyl)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URXPHE">URXPHE - N-ace-S-(phenl-2-hydxyetl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDPHELC">URDPHELC - N-ace-S-(phenl-2-hydxyetl)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URXPHG">URXPHG - Phenylglyoxylic acid(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDPHGLC">URDPHGLC - Phenylglyoxylic acid comment code</a>
+              </li>
+              <li>
+                <a href="#URXPMA">URXPMA - N-acetyl-S-(phenyl)-L-cysteine(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDPMALC">URDPMALC - N-acetyl-S-(phenyl)-L-cysteine comt</a>
+              </li>
+              <li>
+                <a href="#URXPMM">URXPMM - N-A-S-(3-hydrxprpl-1-metl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDPMMLC">URDPMMLC - N-A-S-(3-hydrxprpl-1-metl)-L-cys comt</a>
+              </li>
+              <li>
+                <a href="#URXTCV">URXTCV - N-acetyl-S-(trichlorovinyl)-L-cys(ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDTCVLC">URDTCVLC - N-acetyl-S-(trichlorovinyl)-L-cys comt</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2015-2016 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Volatile Organic Compound (VOC) Metabolites - Urine (UVOC_I)</h3>
+        <h4> Data File: UVOC_I.xpt</h4>
+        <h5 class="left">First Published: November 2018</h5>
+        <h5 class="right">Last Revised: November 2021</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Exposure to volatile organic compounds (VOCs) is ubiquitous. Chronic exposure to extremely high levels of some VOCs can lead to cancer and neurocognitive dysfunction. Urinary metabolites of VOCs can be detectable in urine for a longer period of time than the parent VOCs can be detected in blood.</p>
+<p>Nearly 200 air toxicants have been associated with adverse health effects in occupational studies or laboratory studies, but have not been monitored in general population groups. Information on levels of exposure to these compounds, as measured by their metabolite levels in urine, is essential to determine the need for regulatory mechanisms to reduce the levels of hazardous air pollutants to which the general population is exposed.  </p><h2 id="Eligible_Sample">Eligible Sample</h2><p>All examined participants aged 3 to 5 years were eligible, and participants aged 6 years and older from a one-third subsample were eligible.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>This method is a quantitative procedure for the measurement of VOC metabolites in human urine using ultra performance liquid chromatography coupled with electrospray tandem mass spectrometry (UPLC-ESI/MSMS) as described by Alwis et al (2012). Chromatographic separation is achieved using an Acquity UPLC&reg; HSS T3 (Part no. 186003540, 1.8 &micro;m x 2.1 mm x 150 mm, Waters Inc.) column with 15 mM ammonium acetate and acetonitrile as the mobile phases. The eluent from the column is ionized using an electrospray interface to generate and transmit negative ions into the mass spectrometer. Comparison of relative response factors (ratio of native analyte to stable isotope labeled internal standard) with known standard concentrations yields individual analyte concentrations.</p>
+<p>Refer to the Laboratory Method Files section for a detailed description of the laboratory methods used.</p><h2 id="Laboratory_Method_Files">Laboratory Method Files</h2>
+        <p>
+          <a target="_blank" href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2015/labmethods/UVOC_UVOCS_I_MET.pdf"> Volatile Organic Compound (VOC) Metabolites-Urine</a>
+          <span> (November 2018)</span>
+        </p>
+        <h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Urine specimens are processed, stored, and shipped to the Division of Laboratory Sciences, National Center for Environmental Health, Centers for Disease Control and Prevention, Atlanta GA for analysis.</p>
+<p>Detailed instructions on specimen collection and processing are discussed in the NHANES <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2015/manuals/2016_MEC_Laboratory_Procedures_Manual.pdf">Laboratory Procedures Manual (LPM)</a>. Vials are stored under appropriate frozen
+(&ndash;20&deg;C) conditions until they are shipped to National Center for Environmental
+Health for testing. </p>
+<p>The NHANES quality assurance and quaility control (QA/QC) protocols meet the 1988 Clinical Laboratory Improvement Amendments mandates. Detailed QA/QC instructions are discussed in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2015/manuals/2016_MEC_Laboratory_Procedures_Manual.pdf">NHANES LPM.</a></p>
+<p><strong>Mobile Examination Centers (MECs)</strong></p>
+<p>Laboratory team performance is monitored using several techniques. NCHS and contract consultants use a structured competency assessment evaluation during visits to evaluate both the quality of the laboratory work and the QC procedures. Each laboratory staff member is observed for equipment operation, specimen collection and preparation; testing procedures and constructive feedback are given to each staff member. Formal retraining sessions are conducted annually to ensure that required skill levels were maintained.</p>
+<p><strong>Analytical Laboratories</strong></p>
+<p>NHANES uses several methods to monitor the quality of the analyses performed by the contract laboratories. In the MEC, these methods include performing blind split samples collected during &ldquo;dry run&rdquo; sessions. In addition, contract laboratories randomly perform repeat testing on 2% of all specimens.</p>
+<p>NCHS developed and distributed a QC protocol for all CDC and contract laboratories, which outlined the use of Westgard rules (Westgard, et al. 1981) when testing NHANES specimens. Progress reports containing any problems encountered during shipping or receipt of specimens, summary statistics for each control pool, QC graphs, instrument calibration, reagents, and any special considerations are submitted to NCHS quarterly. The reports are reviewed for trends or shifts in the data. The laboratories are required to explain any identified areas of concern.</p>
+<p>All QC procedures recommended by the manufacturers were followed. Reported results for all assays meet the Division of Laboratory Sciences&rsquo; QA/QC performance criteria for accuracy and precision, similar to the Westgard rules (Caudill et al., 2008). </p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p style="line-height: 15.95pt; margin-top: 0in; margin-right: 0in; margin-bottom: 12pt;"><a name="_GoBack"></a>The data were reviewed. Incomplete data or improbable values
+were sent to the performing laboratory for confirmation.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Refer to the <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overviewlab.aspx?BeginYear=2015">2015-2016 Laboratory Data Overview</a>&nbsp;for general information on NHANES laboratory data.</p>
+<p>There are over 800 laboratory tests performed on NHANES participants. However, not all participants provided biospecimens or enough volume for all the tests to be performed. The specimen availability can also vary by age or other population characteristics. For example, in 2015-2016, approximately 79%  of children aged 1-17 years who were examined in the MEC provided a blood specimen through phlebotomy, while 95% of examined adults age 18 and older provided a blood specimen. Analysts should evaluate the extent of missing data in the dataset related to the outcome of interest as well as any predictor variables used in the analyses to determine whether additional re-weighting for item non-response is necessary. </p>
+<p>Please refer to the NHANES&nbsp;<a href="https://www.cdc.gov/nchs/nhanes/survey_methods.htm">Analytic Guidelines</a>&nbsp;and the on-line NHANES&nbsp;<a href="https://www.cdc.gov/nchs/tutorials/">Tutorial</a>&nbsp;further&nbsp;details on the use of sample weights and other analytic issues.</p>
+<p><strong>Subsample Weights</strong></p>
+<p>VOC metabolites in urine were measured in a one-third subsample of participants aged 6 years and older. Special sample weights are required to analyze these data properly. Specific sample weights for this subsample are included in this data file and should be used when analyzing these data.</p>
+<p><strong>Demographic and Other Related Variables</strong></p>
+<p>
+The analysis of NHANES laboratory data must be conducted using the appropriate survey design and demographic variables. The NHANES <a href="https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Demographics&amp;CycleBeginYear=2015" target="_blank">2015-2016 Demographics File </a>contains demographic data, health indicators, and other related information collected during household interviews as well as the sample design variables. The recommended procedure for variance estimation requires use of stratum and PSU variables (SDMVSTRA and SDMVPSU, respectively) in the demographic data file.</p>
+<p>This laboratory data file can be linked to the other NHANES data files using the unique survey participant identifier (i.e., SEQN).
+<br />
+</p>
+<p>Starting in the 2015-2016 NHANES cycle, the variable URXUCR (urine creatinine) will not be reported in this file. URXUCR can be found in the data file titled &ldquo;Albumin &amp; Creatinine &ndash; Urine&rdquo;.</p>
+<p>
+<strong>Detection limits</strong></p>
+<p>The detection limits were constant for the analytes in the data set. Two variables are provided for each of these analytes. The variable named ending in &ldquo;LC&rdquo; (ex., URDAAMLC) indicates whether the result was below the limit of detection: the value &ldquo;0&rdquo; means that the result was at or above the limit of detection, &ldquo;1&rdquo; indicates that the result was below the limit of detection. For analytes with analytic results below the lower limit of detection (ex., URDAAMLC=1), an imputed fill value was placed in the analyte results field. This value is the lower limit of detection divided by the square root of 2 (LLOD/sqrt [2]). The other variable prefixed URX (ex., URXAAM) provides the analytic result for the analyte. All data are rounded to three significant figures or three decimal places, whichever is less precise.</p>
+<p>The lower limit of detection (LLOD, in ng/mL) for urinary VOC metabolites:</p>
+<table style="border: currentColor; border-image: none; border-collapse: collapse; mso-border-alt: solid black .75pt; mso-yfti-tbllook: 1184; mso-padding-alt: 1.5pt 1.5pt 1.5pt 1.5pt;" border="1" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
+            <td style="background: #f4f4e1; padding: 1.5pt; border: 1pt solid black; border-image: none; width: 58.9pt; mso-border-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><strong style="mso-bidi-font-weight: normal;">VARIABLE NAME</strong></p>
+            </td>
+            <td style="background: #f4f4e1; border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: black black black #000000; padding: 3.75pt; border-image: none; width: 256.9pt; text-align: center; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt;">
+            &nbsp; <strong>ANALYTE NAME&nbsp; </strong>         </td>
+            <td style="background: #f4f4e1; border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: black black black #000000; padding: 3.75pt; border-image: none; width: 62.6pt; text-align: center; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt;">
+            <strong>&nbsp; LLOD&nbsp; </strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="mso-yfti-irow: 1;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXAAM</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(2-carbamoylethyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">2.20</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 2;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXAMC</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(N-methylcarbamoyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">6.26</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 3;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXATC</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">2-Aminothiazoline-4-carboxylic
+            acid (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">15.0</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 4;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXBMA</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(benzyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">0.500</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 5;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXBPM</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(n-propyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">1.20</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 6;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXCEM</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(2-carboxyethyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">6.96</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 7;">
+            <td valign="top" style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXCYHA</p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(1-cyano-2-hydroxyethyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td valign="top" style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">2.60</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 8;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXCYM</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(2-cyanoethyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">0.500</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 9;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URX1DC</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(1,2-dichlorovinyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">12.6</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 10;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URX2DC</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(2,2-dichlorovinyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">13.9</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 11;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXDHB</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(3,4-dihydroxybutyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">5.25</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 12;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXDPM</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(dimethylphenyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">0.500</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 13;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXGAM</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(2-carbamoyl-2-hydroxyethyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">9.40</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 14;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXHEM</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(2-hydroxyethyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">0.791</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 15;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXHPM</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(3-hydroxypropyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">13.0</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 16;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXHP2</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(2-hydroxypropyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">5.30</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 17;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXIPM1</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(2-hydroxy-3-methyl-3-butenyl)-L-cysteine
+            +</p>
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(2-hydroxy-2-methyl-3-butenyl)-L-cysteine</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">1.43</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 18;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXIPM3</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl- S- (4-
+            hydroxy- 2- methyl- 2- butenyl)- L- cysteine (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">1.20</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 19;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXMAD</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">Mandelic acid (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">12.0</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 20;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URX2MH</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">2-Methylhippuric
+            acid (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">5.00</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 21;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URX34M</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">3- and
+            4-Methylhippuric acid (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">8.00</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 22;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXMB1</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(1-hydroxymethyl-2-propenyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">0.700</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 23;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXMB2</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(2-hydroxy-3-butenyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">0.700</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 24;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black windowtext; padding: 1.5pt; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXMB3</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black windowtext #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(4-hydroxy-2-butenyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black windowtext #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">0.600</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 25;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 windowtext windowtext; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXPHE</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-acetyl-S-(1-phenyl-2-hydroxyethyl)-L-cysteine + N-acetyl-S-(2-phenyl-2-hydroxyethyl)-L-cysteine (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 windowtext windowtext #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">0.700</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 26;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXPHG</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">Phenylglyoxylic acid
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">12.0</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 27;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXPMA</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(phenyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">0.600</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 28;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXPMM</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(3-hydroxypropyl-1-methyl)-L-cysteine
+            (ng/mL)</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">1.70</p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 29; mso-yfti-lastrow: yes;">
+            <td style="border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 1.5pt; border-image: none; width: 58.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">URXTCV</p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 256.9pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">N-Acetyl-S-(trichlorovinyl)-L-cysteine
+            (ng/mL) </p>
+            </td>
+            <td style="border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 3.75pt; width: 62.6pt; background-color: transparent; mso-border-alt: solid black .75pt; mso-border-left-alt: solid black .75pt; mso-border-top-alt: solid black .75pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;">3.00</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<p><strong>Bias adjustments Applied to N-Acetyl-S-(3-Hydroxypropyl-1-Methyl)-L-Cysteine (URXPMM)</strong></p>
+<p>A systematic bias was discovered for the measurement of urinary VOC metabolite N-Acetyl-S-(3-hydroxypropyl-1-methyl)-L-cysteine (URXPMM) in the NHANES  2005 &ndash; 2006, 2011 &ndash; 2012, 2013 &ndash; 2014, and 2015 &ndash; 2016 cycles. The systematic nature of these biases permitted retrospective adjustment through an algebraic correction factor of 0.565. The measurement values in variable URXPMM were adjusted as below and released in the present file:</p>
+<p style="text-align: center;"><strong>URXPMM = URXPMM<sub>Original</sub> x 0.565</strong></p>
+<p>In the 2005-2006 and 2011-2016 NHANES cycles, calibrators used in these tests were externally prepared from a multi-analyte stock solution formulated from neat materials by a vendor. Recently in 2021, accuracy solutions from a new vendor indicated a systematic bias. Validations conducted by the CDC testing lab confirmed that the large mass fraction of salt in the neat materials was not accounted for during formulation of the externally prepared calibration materials from previous vendor. This discrepancy between the calculated concentration of the calibrators and the actual concentration led to a systematic bias in results for URXPMM.</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Alwis KU, Blount BC, Britt AS, Patel D, Ashley DL. 2012. Simultaneous analysis of 28 urinary VOC metabolites using ultra high performance liquid chromatography coupled with electrospray ionization tandem mass spectrometry (UPLC-ESI/MSMS). Anal Chim Acta 750:152-160.</li>
+          <li>Caudill SP, Schleicher RL, Pirkle JL. Multi-rule quality control for the age-related eye disease study. Stat Med 2008;27:4094-106.</li>
+          <li>Westgard J.O., Barry P.L., Hunt M.R., Groth T. A multi-rule Shewhart chart for quality control in clinical chemistry. Clin Chem (1981) 27:493-501.<br /></li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent Sequence Number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent Sequence Number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent Sequence Number</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTSA2YR">WTSA2YR - Subsample A Weights</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTSA2YR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Subsample A Weights</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Subsample A Weights</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">6552.119284 to 708844.24678</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3231</td>
+                <td class="values" align="right">3231</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">Participants 6+ years with no lab specimen</td>
+                <td class="values" align="right">48</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URX1DC">URX1DC - N-acel-S-(1,2-dichlorovinl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URX1DC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acel-S-(1,2-dichlorovinl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(1,2-dichlorovinyl)-L-cysteine (ng/mL)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">8.9</td>
+                <td class="values">8.9</td>
+                <td class="values" align="right">2886</td>
+                <td class="values" align="right">2886</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">393</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URD1DCLC">URD1DCLC - N-acel-S-(1,2-dichlorovinl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URD1DCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acel-S-(1,2-dichlorovinl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(1,2-dichlorovinyl)-L-cysteine comment code
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2886</td>
+                <td class="values" align="right">2886</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">393</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URX2DC">URX2DC - N-acel-S-(2,2-dichlorvinyl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URX2DC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acel-S-(2,2-dichlorvinyl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(2,2-dichlorovinyl)-L-cysteine (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">9.8</td>
+                <td class="values">9.8</td>
+                <td class="values" align="right">2831</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">448</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URD2DCLC">URD2DCLC - N-acel-S-(2,2-dichlorvinyl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URD2DCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acel-S-(2,2-dichlorvinyl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(2,2-dichlorovinyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2831</td>
+                <td class="values" align="right">2831</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">448</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URX2MH">URX2MH - 2-methylhippuric acid (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URX2MH</dd>
+            <dt>SAS Label: </dt>
+            <dd>2-methylhippuric acid (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2-methylhippuric acid (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.54 to 2330</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URD2MHLC">URD2MHLC - 2-methylhippuric acid comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URD2MHLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2-methylhippuric acid comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2-methylhippuric acid comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2727</td>
+                <td class="values" align="right">2727</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">288</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URX34M">URX34M - 3-methipurc acd &amp; 4-methipurc acd(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URX34M</dd>
+            <dt>SAS Label: </dt>
+            <dd>3-methipurc acd &amp; 4-methipurc acd(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3-methylhippuric acid &amp; 4-methylhippuric acid(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">5.66 to 30700</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3014</td>
+                <td class="values" align="right">3014</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">265</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URD34MLC">URD34MLC - 3-methipurc acd &amp; 4-methipurc acid comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URD34MLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>3-methipurc acd &amp; 4-methipurc acid comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3-methylhippuric acid &amp; 4-methylhippuric acid comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">3001</td>
+                <td class="values" align="right">3001</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">13</td>
+                <td class="values" align="right">3014</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">265</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXAAM">URXAAM - N-ace-S-(2-carbamoylethyl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXAAM</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(2-carbamoylethyl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(2-carbamoylethyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.56 to 1640</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDAAMLC">URDAAMLC - N-ace-S-(2-carbamoylethyl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDAAMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(2-carbamoylethyl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(2-carbamoylethyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">3012</td>
+                <td class="values" align="right">3012</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXAMC">URXAMC - N-ace-S-(N-methlcarbamoyl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXAMC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(N-methlcarbamoyl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(N-methylcarbamoyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">4.43 to 3350</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2965</td>
+                <td class="values" align="right">2965</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">314</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDAMCLC">URDAMCLC - N-ace-S-(N-methlcarbamoyl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDAMCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(N-methlcarbamoyl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(N-methylcarbamoyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2949</td>
+                <td class="values" align="right">2949</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">2965</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">314</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXATC">URXATC - 2-amnothiazolne-4-carbxylic acid(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXATC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2-amnothiazolne-4-carbxylic acid(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2-aminothiazoline-4-carboxylic acid(ng/mL)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">10.6 to 2390</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDATCLC">URDATCLC - 2-amnothiazolne-4-carbxylic acid comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDATCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2-amnothiazolne-4-carbxylic acid comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2-amnothiazolne-4-carbxylic acid comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2938</td>
+                <td class="values" align="right">2938</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">77</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXBMA">URXBMA - N-acetyl-S-(benzyl)-L-cysteine(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXBMA</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acetyl-S-(benzyl)-L-cysteine(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(benzyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.354 to 1330</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3014</td>
+                <td class="values" align="right">3014</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">265</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDBMALC">URDBMALC - N-acetyl-S-(benzyl)-L-cysteine comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDBMALC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acetyl-S-(benzyl)-L-cysteine comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(benzyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">3003</td>
+                <td class="values" align="right">3003</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">3014</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">265</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXBPM">URXBPM - N-acetyl-S-(n-propyl)-L-cysteine(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXBPM</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acetyl-S-(n-propyl)-L-cysteine(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(n-propyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.85 to 707</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2952</td>
+                <td class="values" align="right">2952</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">327</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDBPMLC">URDBPMLC - N-acetyl-S-(n-propyl)-L-cysteine comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDBPMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acetyl-S-(n-propyl)-L-cysteine comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(n-propyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2220</td>
+                <td class="values" align="right">2220</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">732</td>
+                <td class="values" align="right">2952</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">327</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXCEM">URXCEM - N-acetyl-S-(2-carbxyethyl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXCEM</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acetyl-S-(2-carbxyethyl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(2-carboxyethyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">4.92 to 3570</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDCEMLC">URDCEMLC - N-acetyl-S-(2-carbxyethyl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDCEMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acetyl-S-(2-carbxyethyl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S- (2-carboxyethyl)-L-cysteine comment code
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">3003</td>
+                <td class="values" align="right">3003</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXCYHA">URXCYHA - CYHA cysteine (ng/mL) </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXCYHA</dd>
+            <dt>SAS Label: </dt>
+            <dd>CYHA cysteine (ng/mL) </dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-Acetyl-S-(1-cyano-2-hydroxyethyl)-L-cysteine (CYHA) (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.84 to 452</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDCYALC">URDCYALC - CYHA cysteine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDCYALC</dd>
+            <dt>SAS Label: </dt>
+            <dd>CYHA cysteine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-Acetyl-S-(1-cyano-2-hydroxyethyl)-L-cysteine (CYHA) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">440</td>
+                <td class="values" align="right">440</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2575</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXCYM">URXCYM - N-acetyl-S-(2-cyanoethyl)-L-cyst(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXCYM</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acetyl-S-(2-cyanoethyl)-L-cyst(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(2-cyanoethyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.354 to 1480</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDCYMLC">URDCYMLC - N-acetyl-S-(2-cyanoethyl)-L-cyst comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDCYMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acetyl-S-(2-cyanoethyl)-L-cyst comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(2-cyanoethyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2369</td>
+                <td class="values" align="right">2369</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">646</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXDHB">URXDHB - N-ace-S-(3,4-dihidxybutl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXDHB</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(3,4-dihidxybutl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(3,4-dihidroxybutyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">16.1 to 3140</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2691</td>
+                <td class="values" align="right">2691</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">588</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDDHBLC">URDDHBLC - N-ace-S-(3,4-dihidxybutl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDDHBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(3,4-dihidxybutl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(3,4-dihidroxybutyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2691</td>
+                <td class="values" align="right">2691</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2691</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">588</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXDPM">URXDPM - N-ace-S-(dimethylphenyl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXDPM</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(dimethylphenyl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(dimethylphenyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.354 to 6.38</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDDPMLC">URDDPMLC - N-ace-S-(dimethylphenyl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDDPMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(dimethylphenyl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(dimethylphenyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">5</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3010</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXGAM">URXGAM - N-ac-S-(2-carbmo-2-hydxel)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXGAM</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ac-S-(2-carbmo-2-hydxel)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(2-carbamoyl-2-hydroxyethyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">6.65 to 114</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDGAMLC">URDGAMLC - N-ac-S-(2-carbmo-2-hydxel)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDGAMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ac-S-(2-carbmo-2-hydxel)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(2-carbamoyl-2-hydroxyethyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1197</td>
+                <td class="values" align="right">1197</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1818</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXHEM">URXHEM - N-ace-S-(2-hydroxyethyl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXHEM</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(2-hydroxyethyl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(2-hydroxyethyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.559 to 49.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDHEMLC">URDHEMLC - N-ace-S-(2-hydroxyethyl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDHEMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(2-hydroxyethyl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(2-hydroxyethyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1546</td>
+                <td class="values" align="right">1546</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1469</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXHP2">URXHP2 - N-ace-S-(2-hydroxypropyl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXHP2</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(2-hydroxypropyl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S- (2-hydroxypropyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.75 to 9830</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3014</td>
+                <td class="values" align="right">3014</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">265</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDHP2LC">URDHP2LC - N-ace-S-(2-hydroxypropyl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDHP2LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(2-hydroxypropyl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S- (2-hydroxypropyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2862</td>
+                <td class="values" align="right">2862</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">152</td>
+                <td class="values" align="right">3014</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">265</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXHPM">URXHPM - N-ace-S-(3-hydroxypropyl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXHPM</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(3-hydroxypropyl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S- (3-hydroxypropyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">9.2 to 11900</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2821</td>
+                <td class="values" align="right">2821</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">458</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDHPMLC">URDHPMLC - N-ace-S-(3-hydroxypropyl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDHPMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(3-hydroxypropyl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S- (3-hydroxypropyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2816</td>
+                <td class="values" align="right">2816</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">2821</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">458</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXIPM1">URXIPM1 - IPM1 cysteine (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXIPM1</dd>
+            <dt>SAS Label: </dt>
+            <dd>IPM1 cysteine (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-Acetyl-S-(2-hydroxy-3-methyl-3-buten-1-yl)-L-cysteine + N-Acetyl-S-(2-hydroxy-2-methyl-3-buten-1-yl)-L-cysteine (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.01 to 80.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDPM1LC">URDPM1LC - IPM1 cysteine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDPM1LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>IPM1 cysteine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-Acetyl-S-(2-hydroxy-3-methyl-3-buten-1-yl)-L-cysteine +
+N-Acetyl-S-(2-hydroxy-2-methyl-3-buten-1-yl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2225</td>
+                <td class="values" align="right">2225</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">790</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXIPM3">URXIPM3 - IPM3 cysteine (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXIPM3</dd>
+            <dt>SAS Label: </dt>
+            <dd>IPM3 cysteine (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-Acetyl-S-(4-hydroxy-2-methyl-2-buten-1-yl)-L-cysteine (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.85 to 492</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDPM3LC">URDPM3LC - IPM3 cysteine comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDPM3LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>IPM3 cysteine comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-Acetyl-S-(4-hydroxy-2-methyl-2-buten-1-yl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2419</td>
+                <td class="values" align="right">2419</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">596</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMAD">URXMAD - Mandelic acid(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMAD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mandelic acid(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mandelic acid(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">8.5 to 4330</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3008</td>
+                <td class="values" align="right">3008</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">271</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMADLC">URDMADLC - Mandelic acid comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMADLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mandelic acid comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mandelic acid comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2971</td>
+                <td class="values" align="right">2971</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">37</td>
+                <td class="values" align="right">3008</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">271</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMB1">URXMB1 - N-A-S-(1-hydrxmet)-2-Prpn)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMB1</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-A-S-(1-hydrxmet)-2-Prpn)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(1-hydroxymethyl)-2-propenyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.495 to 1.54</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2987</td>
+                <td class="values" align="right">2987</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">292</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMB1LC">URDMB1LC - N-A-S-(1-hydrxmet)-2-Prpn)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMB1LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-A-S-(1-hydrxmet)-2-Prpn)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(1-hydroxymethyl)-2-Propenyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">14</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2973</td>
+                <td class="values" align="right">2987</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">292</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMB2">URXMB2 - N-Ac-S-(2-hydrxy-3-butenyl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMB2</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-Ac-S-(2-hydrxy-3-butenyl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(2-hydroxy-3-butenyl)-L-cysteine (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.495 to 94.9</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMB2LC">URDMB2LC - N-Ac-S-(2-hydrxy-3-butenyl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMB2LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-Ac-S-(2-hydrxy-3-butenyl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(2-hydroxy-3-butenyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">279</td>
+                <td class="values" align="right">279</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2736</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMB3">URXMB3 - N-A-S-(4-hydrxy-2-butenyl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMB3</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-A-S-(4-hydrxy-2-butenyl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S- (4-hydroxy-2-butenyl)-L-cysteine (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.424 to 407</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMB3LC">URDMB3LC - N-A-S-(4-hydrxy-2-butenyl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMB3LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-A-S-(4-hydrxy-2-butenyl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S- (4-hydroxy-2-butenyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2843</td>
+                <td class="values" align="right">2843</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">172</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXPHE">URXPHE - N-ace-S-(phenl-2-hydxyetl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXPHE</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(phenl-2-hydxyetl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(phenyl-2-hydroxyethyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.495 to 48.6</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2947</td>
+                <td class="values" align="right">2947</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">332</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDPHELC">URDPHELC - N-ace-S-(phenl-2-hydxyetl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDPHELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-ace-S-(phenl-2-hydxyetl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(phenyl-2-hydroxyethyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1480</td>
+                <td class="values" align="right">1480</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1467</td>
+                <td class="values" align="right">2947</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">332</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXPHG">URXPHG - Phenylglyoxylic acid(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXPHG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Phenylglyoxylic acid(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Phenylglyoxylic acid(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">8.5 to 5320</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3013</td>
+                <td class="values" align="right">3013</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">266</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDPHGLC">URDPHGLC - Phenylglyoxylic acid comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDPHGLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Phenylglyoxylic acid comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Phenylglyoxylic acid comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2991</td>
+                <td class="values" align="right">2991</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">22</td>
+                <td class="values" align="right">3013</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">266</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXPMA">URXPMA - N-acetyl-S-(phenyl)-L-cysteine(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXPMA</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acetyl-S-(phenyl)-L-cysteine(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(phenyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.424 to 28</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDPMALC">URDPMALC - N-acetyl-S-(phenyl)-L-cysteine comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDPMALC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acetyl-S-(phenyl)-L-cysteine comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(phenyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1426</td>
+                <td class="values" align="right">1426</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1589</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXPMM">URXPMM - N-A-S-(3-hydrxprpl-1-metl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXPMM</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-A-S-(3-hydrxprpl-1-metl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(3-hydroxypropyl-1-methyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">7.97 to 14200</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDPMMLC">URDPMMLC - N-A-S-(3-hydrxprpl-1-metl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDPMMLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-A-S-(3-hydrxprpl-1-metl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(3-hydroxypropyl-1-methyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXTCV">URXTCV - N-acetyl-S-(trichlorovinyl)-L-cys(ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXTCV</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acetyl-S-(trichlorovinyl)-L-cys(ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(trichlorovinyl)-L-cysteine(ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.12</td>
+                <td class="values">2.12</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDTCVLC">URDTCVLC - N-acetyl-S-(trichlorovinyl)-L-cys comt</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDTCVLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>N-acetyl-S-(trichlorovinyl)-L-cys comt</dd>
+            <dt>English Text: </dt>
+            <dd class="info">N-acetyl-S-(trichlorovinyl)-L-cysteine comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 3 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3015</td>
+                <td class="values" align="right">3015</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">264</td>
+                <td class="values" align="right">3279</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

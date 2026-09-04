@@ -1,0 +1,2088 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>L28OCP_C</title>
+    <meta name="title" content="NHANES 2003-2004: Pesticides - Organochlorine Metabolites - Serum (Surplus) Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#WTSB2YR">WTSB2YR - Two-year MEC weights of subsample B</a>
+              </li>
+              <li>
+                <a href="#LBXHCB">LBXHCB - Hexachlorobenzene (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBXHCBLA">LBXHCBLA - Hexachlorobenzene Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDHCBLC">LBDHCBLC - Hexachlorobenzene Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXBHC">LBXBHC - Beta-hexachlorocyclohexane (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBXBHCLA">LBXBHCLA - B-hexachlorocyclohexane Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDBHCLC">LBDBHCLC - Beta-hexachlorocyclohexane Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXGHC">LBXGHC - Gamma-hexachlorocyclohexane (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBXGHCLA">LBXGHCLA - G-hexachlorocyclohexane Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDGHCLC">LBDGHCLC - Gamma-hexachlorocyclohexane Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXPDE">LBXPDE - p,p'-DDE (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBXPDELA">LBXPDELA - ppDDE Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDPDELC">LBDPDELC - ppDDE Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXPDT">LBXPDT - p,p'-DDT (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBXPDTLA">LBXPDTLA - ppDDT Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDPDTLC">LBDPDTLC - ppDDT Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXODT">LBXODT - o,p'-DDT (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBXODTLA">LBXODTLA - opDDT Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDODTLC">LBDODTLC - opDDT Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXOXY">LBXOXY - Oxychlordane (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBXOXYLA">LBXOXYLA - Oxychlordane Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDOXYLC">LBDOXYLC - Oxychlordane Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXTNA">LBXTNA - Trans-nonachlor (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBXTNALA">LBXTNALA - Trans-nonachlor Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDTNALC">LBDTNALC - Trans-nonachlor Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXHPE">LBXHPE - Heptachlor Epoxide (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBXHPELA">LBXHPELA - Heptachlor Epoxide Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDHPELC">LBDHPELC - Heptachlor Epoxide Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXMIR">LBXMIR - Mirex (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBXMIRLA">LBXMIRLA - Mirex Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDMIRLC">LBDMIRLC - Mirex Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXALD">LBXALD - Aldrin (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBXALDLA">LBXALDLA - Aldrin Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDALDLC">LBDALDLC - Aldrin Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXDIE">LBXDIE - Dieldrin (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBXDIELA">LBXDIELA - Dieldrin Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDDIELC">LBDDIELC - Dieldrin Comment Code</a>
+              </li>
+              <li>
+                <a href="#LBXEND">LBXEND - Endrin (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBXENDLA">LBXENDLA - Endrin Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDENDLC">LBDENDLC - Endrin Comment Code</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2003-2004 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Pesticides - Organochlorine Metabolites - Serum (Surplus) (L28OCP_C)</h3>
+        <h4> Data File: L28OCP_C.xpt</h4>
+        <h5 class="left">First Published: April 2008</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Organochlorine pesticides, an older class of pesticides, are effective against a variety of insects. These chemicals were introduced in the 1940s, and many of their uses have been cancelled or restricted by the U.S. EPA because of their environmental persistence and potential adverse effects on wildlife and human health. Many organochlorines are no longer used widely in the U.S., but other countries continue to use them. Hexachlorobenzene has been used primarily as a fungicide or biocide.</p>
+<p>Organochlorine pesticides are generally persistent in the environment and tend to bioaccumulate. Because these chemicals are fat soluble, they are found at higher concentrations in fatty foods. In the general population, diet is the main source of exposure, primarily through the ingestion of fatty foods such as dairy products and fish. </p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Participants aged 12 years and older who met the subsample requirements.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>Thirty-eight ortho-substituted polychlorinated biphenyls (PCBs), 13 persistent chlorinated pesticides, and selected pesticide metabolites are measured in serum by high-resolution gas chromatography/isotope-dilution high-resolution mass spectrometry (HRGC/ID-HRMS). All serum specimens are handled using Universal Precautions. </p>
+<p>Serum specimens (1&ndash;1.5 mL) to be analyzed for PCBs and persistent pesticides are spiked with <sup>13</sup>C<sub>12</sub>-labeled internal standards and the analytes of interest are isolated in hexane using a C18 solid phase extraction (SPE) procedure followed by extraction through neutral silica and Florosil SPE columns. PCBs and pesticides are eluted from the Florosil column with hexane and 1:1 dichloromethane /hexane. For PCBs and pesticides, each analytical run consists of nine unknown specimens, one method blank, and two quality control samples. Before quantification, the vials are reconstituted with 10&mu;L <sup>13</sup>C-labeled external standard. Sample extracts are then analyzed simultaneously for PCBs and pesticides by HRGC/ID-HRMS where 1 &mu;L is injected, using a GC Pal (Leap Technology) auto sampler, into a Hewlett-Packard 6890 gas chromatograph operated in the splitless injection mode with a flow of 1 mL/min helium through a DB-5ms capillary column (30 m x 0.25 mm x 0.25 &mu;m film thickness) where analytes are separated prior to entering a Thermo Finnigan MAT95 XP (5 kV) magnetic sector mass spectrometer operated in EI mode at 40 eV, using selected ion monitoring (SIM) at 10,000 resolving power (10% valley). Two ion current responses corresponding to two masses are monitored for each native (<sup>12</sup>C) compound and it corresponding <sup>13</sup>C-internal standard. The instrumental response factor for each analyte is calculated as the sum of the two <sup>12</sup>C isomers divided by the sum of two <sup>13</sup>C- isomers.</p>
+<p>Calibration of mass spectrometer response factor vs. concentration is performed using calibration standards containing known concentrations of each <sup>12</sup>C compound and its corresponding <sup>13</sup>C internal standard. The concentration of each analyte is derived by interpolation from individual linear calibration curves and is adjusted for sample weight. The validity of all mass spectrometry data are evaluated using a variety of established criteria, such as signal-to-noise ratio &ge; 3 for the smallest native ion mass, instrument resolving power &ge; 10,000, chromatographic isomer specificity index with 95% limits, relative retention time ratio of native to isotopically labeled analyte within 3 parts-per-thousand compared to a standard, response ratios of the two <sup>12</sup>C and <sup>13</sup>C ions must be within &plusmn; 20 % of their theoretical values and analyte recovery &ge;10 % and &le; 120%. In addition, the calculated mean and range of each analyte in the quality control sample must be within their respective confidence intervals. The method detection limit (MDL) for each analyte is calculated correcting for sample weight and recovery. The total lipid content of each specimen is estimated from its total cholesterol and triglycerides values using a &ldquo;summation&rdquo; method. Analytical results for PCBs and pesticides are reported on a whole-weight [ng/g or parts-per-billion (ppb)] and lipid-adjusted basis [ng/g or ppb]. International toxicity equivalents (I-TEQs) are also reported for PCDDs, PCDFs, cPCBs and other &ldquo;dioxin-like&rdquo; PCBs, based on the WHO-TEF system. Prior to reporting results, all quality control (QC) data undergo a final review by a Division of Laboratory Science quality control officer.</p><h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Serum specimens are processed, stored, and shipped to the Division ofLaboratory Sciences, National Center for Environmental Health, Centers for Disease Control and Prevention for analysis. </p>
+<p>Detailed specimen collection and processing instructions are discussed in the NHANES Laboratory/Medical Technologists Procedures Manual (LPM). Vials are stored under appropriate frozen (&ndash;20&deg;C) conditions until they are shipped to National Center for Environmental Health for testing. </p>
+<p><strong>Mobile Examination Centers (MECs)</strong> </p>
+<p>Laboratory team performance is monitored using several techniques. NCHS and contract consultants use a structured quality assurance evaluation during unscheduled visits to evaluate both the quality of the laboratory work and the quality-control procedures. Each laboratory staff person is observed for equipment operation, specimen collection and preparation; testing procedures and constructive feedback are given to each staff. Formal retraining sessions are conducted annually to ensure that required skill levels were maintained. </p>
+<p>The NHANES QA/QC protocols meet the 1988 Clinical Laboratory Improvement Amendments mandates. Detailed QA/QC instructions are discussed in the NHANES LPM. </p>
+<p><strong>Analytical Laboratories</strong> </p>
+<p>NHANES uses several methods to monitor the quality of the analyses performed by the laboratories. In the MEC, these methods include performing blind split samples collected on &ldquo;dry run&rdquo; sessions. In addition, contract laboratories randomly perform repeat testing on 2.0%of all specimens. </p>
+<p>NCEH developed and distributed a quality control protocolfor all the laboratories which outlined the Westgard rules used when running NHANES specimens. Any problems encountered during shipping or receipt of specimens, instrument calibration, reagents, and any special considerations are submitted to NCHS and Westat. Summary statistics for each control pool, QC graphs, are reviewed by NCHS for trends or shifts in the data. The laboratories are required to explain any identifiedareas of concern. </p>
+<p>All QC procedures recommended by the manufacturers were followed.Reported results for all assays meet the Division of Laboratory Sciences&rsquo; quality control and quality assurance performance criteria for accuracy and precision (similar to specifications outlined by Westgard(1981).</p><h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Serum specimens are processed, stored, and shipped to the Division ofLaboratory Sciences, National Center for Environmental Health, Centers for Disease Control and Prevention for analysis. </p>
+<p>Detailed specimen collection and processing instructions are discussed in the NHANES Laboratory/Medical Technologists Procedures Manual (LPM). Vials are stored under appropriate frozen (&ndash;20&deg;C) conditions until they are shipped to National Center for Environmental Health for testing.</p>
+<p><strong>Mobile Examination Centers (MECs)</strong> </p>
+<p>Laboratory team performance is monitored using several techniques. NCHS and contract consultants use a structured quality assurance evaluation during unscheduled visits to evaluate both the quality of the laboratory work and the quality-control procedures. Each laboratory staff person is observed for equipment operation, specimen collection and preparation; testing procedures and constructive feedback are given to each staff. Formal retraining sessions are conducted annually to ensure that required skill levels were maintained. </p>
+<p>The NHANES QA/QC protocols meet the 1988 Clinical Laboratory Improvement Amendments mandates. Detailed QA/QC instructions are discussed in the NHANES LPM. </p>
+<p><strong>Analytical Laboratories</strong> </p>
+<p>NHANES uses several methods to monitor the quality of the analyses performed by the laboratories. In the MEC, these methods include performing blind split samples collected on &ldquo;dry run&rdquo; sessions. In addition, contract laboratories randomly perform repeat testing on 2.0% of all specimens. </p>
+<p>NCEH developed and distributed a quality control protocolfor all the laboratories which outlined the Westgard rules used when running NHANES specimens. Any problems encountered during shipping or receipt of specimens, instrument calibration, reagents, and any special considerations are submitted to NCHS and Westat. Summary statistics for each control pool, QC graphs, are reviewed by NCHS for trends or shifts in the data. The laboratories are required to explain any identified areas of concern. </p>
+<p>All QC procedures recommended by the manufacturers were followed. Reported results for all assays meet the Division of Laboratory Sciences&rsquo; quality control and quality assurance performance criteria for accuracy and precision (similar to specifications outlined by Westgard(1981).</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Measures of organochlorines are assessed in participants aged 12 years and older on a one-third subsample. </p>
+<p>Use the special weights included in this data file when analyzing data. Read the &ldquo;Special Sample Weights for this Dataset&rdquo; information provided before beginning analysis.</p>
+<p><strong>Subsample weights</strong> </p>
+<p>Measures of organochlorines were measured in a one third subsample of persons 12 years and over. Special sample weights are required to analyze these data properly. Specific sample weights for this subsample are included in this data file and should be used when analyzing these data.</p>
+<p><strong>Variance estimation</strong> </p>
+<p>The analysis of NHANES 2003-2004 laboratory data must be conducted with the key survey design and basic demographic variables. The NHANES 2003-2004 Demographic Data File contains demographic and sample design variables. The recommended procedure for variance estimation requires use of stratum and PSU variables (SDMVSTRA and SDMVPSU, respectively) in the demographic data file. </p>
+<p><strong>Links to NHANES Data Files</strong> </p>
+<p>This laboratory data file can be linked to the other NHANES 2003-2004data files using the unique survey participant identifier SEQN. </p>
+<p><strong>Detection Limits</strong> </p>
+<p>The detection limits were variable for all of the analytes. The variable named LBD___LC indicates whether the result was below the limit of detection. There are two values: &ldquo;0&rdquo; and &ldquo;1&rdquo;. &ldquo;0&rdquo; means that the result was at or above the limit of detection. &ldquo;1&rdquo; indicates that the result was below the limit of detection.&nbsp;</p>
+<p>The other variable named LBX___ provides the analytic result for that analyte.&nbsp;&nbsp;</p>
+<p>Please refer to the Analytic Guidelines for further details on the use of sample weights and other analytic issues.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Measures of polychlorinated dibenzo-p-dioxins (PCDDs), dibenzofurans (PCDFs), non-ortho substituted or coplanar polychlorinated biphenyls (cPCBs) are assessed in participants aged 12 years and older on a one-third subsample. </p>
+<p>Use the special weights included in this data file when analyzing data. Read the &ldquo;Special Sample Weights for this Dataset&rdquo;information provided before beginning analysis. </p>
+<p><strong>Subsample weights</strong> </p>
+<p>Measures ofpolychlorinated dibenzo-p-dioxins (PCDDs), dibenzofurans (PCDFs), non-ortho substituted or coplanar polychlorinated biphenyls (cPCBs) were measured in a one third subsample of persons 12 years and over. Special sample weights are required to analyze these data properly. Specific sample weights for this subsample are included in this data file and should be used when analyzing these data. </p>
+<p><strong>Variance estimation</strong> </p>
+<p>The analysis of NHANES 2003-2004 laboratory data must be conducted with the key survey design and basic demographic variables. The NHANES 2003-2004 Demographic Data File contains demographic and sample design variables. The recommended procedure for variance estimation requires use of stratum and PSU variables (SDMVSTRA and SDMVPSU, respectively) in the demographic data file. </p>
+<p><strong>Links to NHANES Data Files</strong> </p>
+<p>This laboratory data file can be linked to the other NHANES 2003-2004data files using the unique survey participant identifier SEQN. </p>
+<p><strong>Detection Limits</strong> </p>
+<p>The detection limits were variable for all of the analytes except for PCB 052(LBX052), PCB099(LBX099), PCB138(LBX138), and PCB153(LBX153), . The variable named LBD___LC indicates whetherthe result was below the limit of detection. There are two values: &ldquo;0&rdquo; and &ldquo;1&rdquo;. &ldquo;0&rdquo; means that the result was at or above the limit of detection. &ldquo;1&rdquo; indicates that the result was below the limit of detection. </p>
+<p>The other variable named LBX___ provides the analytic result for thatanalyte. </p>
+<p>The detection limit divided by the square root of 2 is the value that is provided for results that are below the limit of detection. </p>
+<p>Please refer to the Analytic Guidelines for further details on the use of sample weights and other analytic issues.</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Akins J.R., Waldrep K., and Bernert J.T. Jr. The Estimation of Total Serum Lipids by a Completely Enzymatic 'Summation' Method. Clin. Chim. Acta. 184: 219-226 (1989).</li>
+          <li>Barr J.B., Maggio V.L., Barr D.B., Turner W.E., Sjodin A., Sandau C.D., Pirkle J.L., Needham L.L., and Patterson D.G. Jr. New High-Resolution Mass Spectrometric Approach for the Measurement of Polychlorinated Biphenyls and Organochlorine Pesticides in Human Serum. J. Chromatography B. 2003:794;137&ndash;148.</li>
+          <li>Burse V.B., Patterson D.G. Jr., Brock J.W., and Needham L.L. Selected Analytical Methods Used at the Centers for Disease Control and Prevention for Measuring Environmental Pollutants in Serum. Toxicology and Industrial Health 1996:12(3/4);481&ndash;498.</li>
+          <li>Keith H.K., Crummett W., Deegan J. Jr., et al. Principles of Environmental Analysis. Anal. Chem. 55: 2210-2218 (1983).</li>
+          <li>Keith L.H . Report Results Right, Part I. Chemtech June: 352-356 (1991).</li>
+          <li>Keith L.H . Report Results Right, Part II. Chemtech August: 486-489 (1991).</li>
+          <li>Lapeza C.R. Jr., Patterson D.G. Jr., Liddle J.A.. An Automated Apparatus for the Extraction andEnrichment of 2,3,7,8-TCDD in Human Adipose. Anal. Chem. 1986:58;713&ndash;716.</li>
+          <li>Patterson D.G. Jr., Alexander L.R., Turner W.E., Isaacs S.G., and Needham L.L. (1990). The Development and Application of a High Resolution Mass Spectrometry Method for Measuring Polychlorinated Dibenzo-p-dioxins and Dibenzofurans in Serum. Chapter 9 In: Instrumentation for Trace Organic Monitoring. Clement R.E., Sui K.M., and Hill H.H. Jr., eds, Lewis Publishers.</li>
+          <li>Patterson D.G. Jr., F&uuml;rst P., Henderson L.O., Isaacs S.G., Alexander L.R., Turner W.E., Needham L.L., and Hannon H. Partitioning of In Vivo Bound PCDDs/PCDFs among Various Compartments in Whole Blood. Chemosphere 1989:19/1-6;135&ndash;142.</li>
+          <li>Patterson D.G. Jr., Hampton L., Lapeza C.R. Jr., et al. High-Resolution Gas Chromatographic/High-Resolution Mass Spectrometric Analysis of Human Serum on a Whole-Weight and Lipid Basis for 2,3,7,8-TCDD. Anal. Chem. 1987:59;2000&ndash;2005.</li>
+          <li>Patterson D.G. Jr., Holler J.S., Belser W.T., Boozer E.L., Lapeza C.R. Jr., Needham L.L. Determination of 2,3,7,8-TCDD in Human Adipose Tissue on Whole Weight and Lipid Bases. Chemosphere 1987:16;935&ndash;936.</li>
+          <li>Patterson D.G. Jr., Holler J.S., Lapeza C.R., et al. High-Resolution Gas Chromatographic/High-Resolution Mass Spectroscopic Analysis of Human Adipose Tissue for 2,3,7,8-TCDD. Anal. Chem. 1986:58;705&ndash;713.</li>
+          <li>Patterson D.G. Jr., Isaacs S.G., Alexander L.R., Turner W.E., Hampton L., Bernert J.T., Needham L.L. (1990). Determination of Specific Polychlorinated Dibenzo-p-dioxins and Dibenzofurans . . . Volume 11 - Polychlorinated Dibenzo-p-dioxins, Dibenzofurans, and Biphenyls," C. Rappe and H.R. Buser, Eds., WHO, International Association for Research on Cancer, Lyon, France.</li>
+          <li>Patterson D.G. Jr., Turner W.E., Alexander L.R., Isaacs S.G., and Needham L.L. The Analytical Methodology and Method Performance for the Determination of 2,3,7,8-TCDD in Serum for the Vietnam Veteran Agent Orange Validation Study, The Ranch Hand Validation and Half-Life Studies, and SelectedNIOSH Workers Studies. Chemosphere 1989:18/1-6;875&ndash;882.</li>
+          <li>Phillips, D.L., Pirkle, J.L., Burse V.W., Bernert, J.T., Henderson, L.O., and Needham, L.L. Chlorinated Hydrocarbon Levels in Humans Serum: Effects of Fasting and Feeding.Arch. Environ. Contam. Toxicol. 18: 495-500 (1989).</li>
+          <li>Taylor J.K. Quality Assurance of Chemical Measurements. Anal. Chem. 53: 1588A-1592A, 1596A (1981).</li>
+          <li>Turner W., DiPietro E., Cash T.P., McClure P.C., Patterson, D.G Jr., and Shirkhan An Improved SPE Extraction and Automated Sample Cleanup Method for Serum PCDDs, PCDFs, and Coplanar PCBs. Organohalogen Compounds 1994:19;31&ndash;35.</li>
+          <li>Turner W., DiPietro E., Lapeza C., Green V., Gill J., Patterson, D.G. , Jr. A Fast Universal Automated Cleanup System for the Isotope-Dilution High-Resolution Mass Spectrometric Analysis of PCDDs, PCDFs, Coplanar PCBs, PCB Congeners, andPersistent Pesticides from the Same Serum Sample. Organohalogen Compounds 1997:31;26&ndash;31.</li>
+          <li>Van den Berg M, Birnbaum L, Bosveld ATC et al. Toxic Equivalency Factors (TEFs) for PCBs, PCDDs, and PCDFs for Humans and Wildlife. Environmental Health Perspectives 106: 775-792 (1998).</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTSB2YR">WTSB2YR - Two-year MEC weights of subsample B</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTSB2YR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Two-year MEC weights of subsample B</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Two-year MEC weights of subsample B</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 435025.30254</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2337</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXHCB">LBXHCB - Hexachlorobenzene (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXHCB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Hexachlorobenzene (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Hexachlorobenzene (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0116 to 1.1847</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1961</td>
+                <td class="values" align="right">1961</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">376</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXHCBLA">LBXHCBLA - Hexachlorobenzene Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXHCBLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Hexachlorobenzene Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Hexachlorobenzene Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.5556 to 174</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1961</td>
+                <td class="values" align="right">1961</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">376</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDHCBLC">LBDHCBLC - Hexachlorobenzene Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDHCBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Hexachlorobenzene Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Hexachlorobenzene Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1959</td>
+                <td class="values" align="right">1959</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">1961</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">376</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXBHC">LBXBHC - Beta-hexachlorocyclohexane (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXBHC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Beta-hexachlorocyclohexane (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Beta-hexachloro-cyclohexane (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0065 to 22.9709</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1959</td>
+                <td class="values" align="right">1959</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">378</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXBHCLA">LBXBHCLA - B-hexachlorocyclohexane Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXBHCLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>B-hexachlorocyclohexane Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Beta-hexachlorocyclohexane Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.9 to 2850</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1959</td>
+                <td class="values" align="right">1959</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">378</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBHCLC">LBDBHCLC - Beta-hexachlorocyclohexane Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBHCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Beta-hexachlorocyclohexane Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Beta-hexachlorocyclohexane Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1252</td>
+                <td class="values" align="right">1252</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">707</td>
+                <td class="values" align="right">1959</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">378</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXGHC">LBXGHC - Gamma-hexachlorocyclohexane (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXGHC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Gamma-hexachlorocyclohexane (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Gamma-hexachloro-cyclohexane (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0062 to 1.7438</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1960</td>
+                <td class="values" align="right">1960</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">377</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXGHCLA">LBXGHCLA - G-hexachlorocyclohexane Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXGHCLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>G-hexachlorocyclohexane Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Gamma-hexachlorocyclohexane Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.3536 to 304</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1960</td>
+                <td class="values" align="right">1960</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">377</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDGHCLC">LBDGHCLC - Gamma-hexachlorocyclohexane Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDGHCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Gamma-hexachlorocyclohexane Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Gamma-hexachlorocyclohexane Comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">18</td>
+                <td class="values" align="right">18</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1942</td>
+                <td class="values" align="right">1960</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">377</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXPDE">LBXPDE - p,p'-DDE (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXPDE</dd>
+            <dt>SAS Label: </dt>
+            <dd>p,p'-DDE (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">ppDDE (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.011 to 160.5999</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1956</td>
+                <td class="values" align="right">1956</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">381</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXPDELA">LBXPDELA - ppDDE Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXPDELA</dd>
+            <dt>SAS Label: </dt>
+            <dd>ppDDE Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">ppDDE Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.556 to 22900</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1956</td>
+                <td class="values" align="right">1956</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">381</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDPDELC">LBDPDELC - ppDDE Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDPDELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>ppDDE Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">ppDDE Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1951</td>
+                <td class="values" align="right">1951</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">1956</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">381</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXPDT">LBXPDT - p,p'-DDT (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXPDT</dd>
+            <dt>SAS Label: </dt>
+            <dd>p,p'-DDT (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">ppDDT (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0071 to 7.4432</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1965</td>
+                <td class="values" align="right">1965</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">372</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXPDTLA">LBXPDTLA - ppDDT Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXPDTLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>ppDDT Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">ppDDT Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.9 to 1040</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1965</td>
+                <td class="values" align="right">1965</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">372</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDPDTLC">LBDPDTLC - ppDDT Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDPDTLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>ppDDT Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">ppDDT Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1400</td>
+                <td class="values" align="right">1400</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">565</td>
+                <td class="values" align="right">1965</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">372</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXODT">LBXODT - o,p'-DDT (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXODT</dd>
+            <dt>SAS Label: </dt>
+            <dd>o,p'-DDT (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">opDDT (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0063 to 1.7937</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1946</td>
+                <td class="values" align="right">1946</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">391</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXODTLA">LBXODTLA - opDDT Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXODTLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>opDDT Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">opDDT Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.495 to 223</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1946</td>
+                <td class="values" align="right">1946</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">391</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDODTLC">LBDODTLC - opDDT Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDODTLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>opDDT Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">opDDT Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">115</td>
+                <td class="values" align="right">115</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1831</td>
+                <td class="values" align="right">1946</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">391</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXOXY">LBXOXY - Oxychlordane (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXOXY</dd>
+            <dt>SAS Label: </dt>
+            <dd>Oxychlordane (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Oxychlordane (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0067 to 2.0588</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1978</td>
+                <td class="values" align="right">1978</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">359</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXOXYLA">LBXOXYLA - Oxychlordane Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXOXYLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Oxychlordane Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Oxychlordane Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.0607 to 159</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1978</td>
+                <td class="values" align="right">1978</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">359</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDOXYLC">LBDOXYLC - Oxychlordane Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDOXYLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Oxychlordane Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Oxychlordane Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1453</td>
+                <td class="values" align="right">1453</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">525</td>
+                <td class="values" align="right">1978</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">359</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXTNA">LBXTNA - Trans-nonachlor (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXTNA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Trans-nonachlor (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Trans-nonachlor (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0071 to 3.1553</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1955</td>
+                <td class="values" align="right">1955</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">382</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXTNALA">LBXTNALA - Trans-nonachlor Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXTNALA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Trans-nonachlor Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Trans-nonachlor Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.2728 to 355</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1955</td>
+                <td class="values" align="right">1955</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">382</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDTNALC">LBDTNALC - Trans-nonachlor Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDTNALC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Trans-nonachlor Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Trans-nonachlor Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1701</td>
+                <td class="values" align="right">1701</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">254</td>
+                <td class="values" align="right">1955</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">382</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXHPE">LBXHPE - Heptachlor Epoxide (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXHPE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Heptachlor Epoxide (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Heptachlor Epoxide (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0065 to 1.2601</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1963</td>
+                <td class="values" align="right">1963</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">374</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXHPELA">LBXHPELA - Heptachlor Epoxide Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXHPELA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Heptachlor Epoxide Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Heptachlor Epoxide Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.1 to 154</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1963</td>
+                <td class="values" align="right">1963</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">374</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDHPELC">LBDHPELC - Heptachlor Epoxide Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDHPELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Heptachlor Epoxide Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Heptachlor Epoxide Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1019</td>
+                <td class="values" align="right">1019</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">944</td>
+                <td class="values" align="right">1963</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">374</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMIR">LBXMIR - Mirex (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMIR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mirex (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mirex (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0065 to 1.1989</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1951</td>
+                <td class="values" align="right">1951</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">386</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXMIRLA">LBXMIRLA - Mirex Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXMIRLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mirex Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mirex Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.495 to 166</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1951</td>
+                <td class="values" align="right">1951</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">386</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDMIRLC">LBDMIRLC - Mirex Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDMIRLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mirex Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mirex Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">695</td>
+                <td class="values" align="right">695</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1256</td>
+                <td class="values" align="right">1951</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">386</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXALD">LBXALD - Aldrin (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXALD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Aldrin (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Aldrin (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0062 to 0.3567</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1946</td>
+                <td class="values" align="right">1946</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">391</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXALDLA">LBXALDLA - Aldrin Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXALDLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Aldrin Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Aldrin Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.3536 to 58.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1946</td>
+                <td class="values" align="right">1946</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">391</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDALDLC">LBDALDLC - Aldrin Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDALDLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Aldrin Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Aldrin Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1944</td>
+                <td class="values" align="right">1946</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">391</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXDIE">LBXDIE - Dieldrin (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXDIE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dieldrin (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Dieldrin (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.007 to 3.1761</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1952</td>
+                <td class="values" align="right">1952</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">385</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXDIELA">LBXDIELA - Dieldrin Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXDIELA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dieldrin Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Dieldrin Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.2 to 448</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1952</td>
+                <td class="values" align="right">1952</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">385</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDDIELC">LBDDIELC - Dieldrin Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDDIELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dieldrin Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Dieldrin Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1597</td>
+                <td class="values" align="right">1597</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">355</td>
+                <td class="values" align="right">1952</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">385</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXEND">LBXEND - Endrin (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXEND</dd>
+            <dt>SAS Label: </dt>
+            <dd>Endrin (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Endrin (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0062 to 0.0383</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1825</td>
+                <td class="values" align="right">1825</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">512</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXENDLA">LBXENDLA - Endrin Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXENDLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Endrin Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Endrin Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.3536 to 6.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1825</td>
+                <td class="values" align="right">1825</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">512</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDENDLC">LBDENDLC - Endrin Comment Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDENDLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Endrin Comment Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Endrin Comment Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1823</td>
+                <td class="values" align="right">1825</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">512</td>
+                <td class="values" align="right">2337</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

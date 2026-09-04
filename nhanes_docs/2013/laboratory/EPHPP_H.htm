@@ -1,0 +1,1522 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>EPHPP_H</title>
+    <meta name="title" content="NHANES 2013-2014: Personal Care and Consumer Product Chemicals and Metabolites  Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Method_Files">Laboratory Method Files</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#WTSB2YR">WTSB2YR - Subsample B weights</a>
+              </li>
+              <li>
+                <a href="#URXBP3">URXBP3 - Urinary Benzophenone-3 (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDBP3LC">URDBP3LC - Urinary Benzophenone-3 comment </a>
+              </li>
+              <li>
+                <a href="#URXBPH">URXBPH - Urinary Bisphenol A (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDBPHLC">URDBPHLC - Urinary Bisphenol A comment  </a>
+              </li>
+              <li>
+                <a href="#URXBPF">URXBPF - Urinary Bisphenol F (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDBPFLC">URDBPFLC - Urinary Bisphenol F comment</a>
+              </li>
+              <li>
+                <a href="#URXBPS">URXBPS - Urinary Bisphenol S (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDBPSLC">URDBPSLC - Urinary Bisphenol S comment</a>
+              </li>
+              <li>
+                <a href="#URXTLC">URXTLC - Urinary Triclocarban (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDTLCLC">URDTLCLC - Urinary Triclocarban comment</a>
+              </li>
+              <li>
+                <a href="#URXTRS">URXTRS - Urinary Triclosan (ng/mL)</a>
+              </li>
+              <li>
+                <a href="#URDTRSLC">URDTRSLC - Urinary Triclosan comment</a>
+              </li>
+              <li>
+                <a href="#URXBUP">URXBUP - Butyl paraben (ng/ml)</a>
+              </li>
+              <li>
+                <a href="#URDBUPLC">URDBUPLC - Butyl paraben comment</a>
+              </li>
+              <li>
+                <a href="#URXEPB">URXEPB - Ethyl paraben (ng/ml)</a>
+              </li>
+              <li>
+                <a href="#URDEPBLC">URDEPBLC - Ethyl paraben comment</a>
+              </li>
+              <li>
+                <a href="#URXMPB">URXMPB - Methyl paraben (ng/ml)</a>
+              </li>
+              <li>
+                <a href="#URDMPBLC">URDMPBLC - Methyl paraben comment </a>
+              </li>
+              <li>
+                <a href="#URXPPB">URXPPB - Propyl paraben (ng/ml) </a>
+              </li>
+              <li>
+                <a href="#URDPPBLC">URDPPBLC - Propyl paraben comment</a>
+              </li>
+              <li>
+                <a href="#URX14D">URX14D - 2,5-dichlorophenol (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URD14DLC">URD14DLC - 2,5-dichlorophenol comment </a>
+              </li>
+              <li>
+                <a href="#URXDCB">URXDCB - 2,4-dichlorophenol (ug/L)</a>
+              </li>
+              <li>
+                <a href="#URDDCBLC">URDDCBLC - 2,4-dichlorophenol comment              </a>
+              </li>
+              <li>
+                <a href="#URXUCR">URXUCR - Urinary creatinine</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2013-2014 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Personal Care and Consumer Product Chemicals and Metabolites  (EPHPP_H)</h3>
+        <h4> Data File: EPHPP_H.xpt</h4>
+        <h5 class="left">First Published: July 2016</h5>
+        <h5 class="right">Last Revised: September 2016</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Beginning in NHANES 2013-2014, the Environmental Phenols and Parabens dataset (formerly EPH) was combined with the Pesticides - Environmental - Urine dataset (formerly PP) and renamed Personal Care and Consumer Product Chemicals and Metabolites (EPHPP_H).</p>
+<p>Biomonitoring of environmental phenols, parabens, and triclocarban is used to assess prevalence and relevance of exposure in public health. The routes of human exposure to these compounds include industrial pollution, pesticide use, food consumption, and use of personal care products.</p>
+<p>Bisphenol A (BPA) is used in the manufacture of polycarbonate plastics and epoxy resins, which can be used in protective coatings on food containers and as composites and sealants in dentistry. Concerns over potential health risks of BPA have led to restrictions on the use of BPA in certain baby and children products (U.S. Food and Drug Administration 2014).  BPA alternatives, such as bisphenol S (BPS, 4,4'-sulfonyldiphenol) and bisphenol F (BPF, 4,4&prime;-dihydroxydiphenylmethane), have been introduced in the market to replace BPA (Liao et al. 2012).  Some phenols are used as sunscreen agents for skin protection, and as UV filters in cosmetic products and plastics to improve stability (e.g., benzophenone-3). Phenols are also used as bactericides (e.g., triclosan) in soap and are found in other personal care products. Other chlorophenols have been used in the wood preservation industry as intermediates in the production of pesticides, and as disinfectants or fungicides for industrial and indoor home use. The manufacture of certain chlorinated aromatic compounds can also produce chlorophenols as byproducts.</p>
+<p>Parabens, a group of alkyl (e.g., methyl, ethyl, propyl, butyl) esters of p-hydroxybenzoic acid, are widely used as antimicrobial preservatives in personal care products, and can also be used in pharmaceuticals, as well as in food and beverage processing. </p>
+<p>Triclocarban (3,4,4&rsquo;-trichlorocarbanilide) can be used as an antimicrobial agent in consumer and personal care products (e.g., bar soap), as well as in cleansing preparations in hospitals and other medical settings.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Examined participants aged 6 years and older from a one-third sample were eligible.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>A sensitive method for measuring BPA, benzophenone-3, triclosan, four parabens, two dichlorophenols, and triclocarban was developed based on a previously published approach (Zhou et al, 2014). The method uses on-line solid phase extraction coupled to high performance liquid chromatography and tandem mass spectrometry. With the use of isotopically labeled internal standards, the detection limits in 100 &mu;L of urine are 0.1 &ndash; 1.7 micrograms per liter (&mu;g/L), sufficient for measuring urinary levels of phenols, parabens, and triclocarban in non-occupationally exposed subjects.</p>
+<p>Refer to the Laboratory Method Files section for
+detailed laboratory procedure manual(s) of the methods used.</p>
+<p>There were no changes to the lab method, lab equipment, or lab site for this component in the NHANES 2013-2014 cycle.<br style="mso-special-character: line-break;" />
+</p><h2 id="Laboratory_Method_Files">Laboratory Method Files</h2>
+        <p>
+          <a target="_blank" href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2013/labmethods/EPHPP_H_MET.pdf">Personal Care and Consumer Product Chemicals and Metabolites </a>
+          <span> (Updated September 2016)</span>
+        </p>
+        <h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Urine specimens are processed, stored, and shipped to the Division of Laboratory Sciences, National Center for Environmental Health, Centers for Disease Control and Prevention for analysis.
+<br />
+<br />
+Detailed specimen collection and processing instructions are discussed in the NHANES&nbsp;<a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2013/manuals/2013_MEC_Laboratory_Procedures_Manual.pdf">Laboratory Procedures Manual (LPM)</a>. Vials are stored under appropriate frozen (&ndash;20&deg;C) conditions until they are shipped to National Center for Environmental Health for testing.
+</p>
+<p>The NHANES quality assurance and quality control (QA/QC) protocols meet the 1988 Clinical Laboratory Improvement Amendments mandates. Detailed QA/QC instructions are discussed in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2013/manuals/2013_MEC_Laboratory_Procedures_Manual.pdf">NHANES LPM</a>.
+<br />
+<br />
+<strong>Mobile Examination Centers (MECs)</strong>
+<br />
+<br />
+Laboratory team performance is monitored using several techniques. NCHS and contract consultants use a structured quality assurance evaluation during unscheduled visits to evaluate both the quality of the laboratory work and the quality-control procedures. Each laboratory staff person is observed for equipment operation, specimen collection and preparation; testing procedures and constructive feedback are given to each staff. Formal retraining sessions are conducted annually to ensure that required skill levels were maintained.
+<br />
+<br />
+<strong>Analytical Laboratories</strong>
+<br />
+<br />
+NHANES uses several methods to monitor the quality of the analyses performed by the contract laboratories. In the MEC, these methods include performing blind split samples collected on &ldquo;dry run&rdquo; sessions. In addition, contract laboratories randomly perform repeat testing on 2.0% of all specimens.
+<br />
+<br />
+NCHS developed and distributed a quality control protocol for all the contract laboratories which outlined the Westgard rules (Westgard et al, 1981) used when running NHANES specimens. Progress reports containing any problems encountered during shipping or receipt of specimens, summary statistics for each control pool, QC graphs, instrument calibration, reagents, and any special considerations are submitted to NCHS. The reports are reviewed for trends or shifts in the data. The laboratories are required to explain any identified areas of concern.
+<br />
+<br />
+All QC procedures recommended by the manufacturers were followed. Reported results for all assays meet the Division of Laboratory Sciences&rsquo; quality control and quality assurance performance criteria for accuracy and precision, similar to the Westgard rules (Caudill et al, 2008)).
+</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>The data were reviewed. Incomplete data or improbable values were sent to the performing laboratory for confirmation.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Refer to the 2013-2014 <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overviewlab.aspx?BeginYear=2013">Laboratory Data Overview</a> for general information on NHANES laboratory data.</p>
+<p><strong>Subsample weights</strong></p>
+<p>Urinary environmental phenols, parabens and triclocarban were measured in a one third subsample of persons 6 years and older.&nbsp;Special sample weights are required to analyze these data properly. Specific sample weights for this subsample are included in this data file and should be used when analyzing these data.</p>
+<p><strong>Demographic and Other Related Variables
+</strong><br />
+<br />
+The analysis of NHANES laboratory data must be conducted with the key survey design and basic demographic variables. The <a href="https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Demographics&amp;CycleBeginYear=2013">NHANES 2013-2014 Demographic Data File</a> contains demographic data, health indicators, and other related information collected during household interviews as well as the sample design variables. The recommended procedure for variance estimation requires use of stratum and PSU variables (SDMVSTRA and SDMVPSU, respectively) in the demographic data file.
+<br />
+<br />
+This laboratory data file can be linked to the other NHANES data files using the unique survey participant identifier (i.e., SEQN).
+<br />
+<br />
+<strong>Detection Limits
+</strong><br />
+<br />
+The detection limits were constant for all of the analytes in the data set. Two variables are provided for each of these analytes. The variable name ending in &ldquo;LC&rdquo; (ex., URDBPHLC) indicates whether the result was below the limit of detection: the value &ldquo;0&rdquo; means that the result was at or above the limit of detection, &ldquo;1&rdquo; indicates that the result was below the limit of detection. For analytes with analytic results below the lower limit of detection (ex., URDBPHLC=1), an imputed fill value was placed in the analyte results field. This value is the lower limit of detection divided by square root of 2 (LLOD/sqrt[2]). The other variable prefixed URX (ex., URXBPH) provides the analytic result for that analyte.
+<br />
+<br />
+The lower limits of detection (LLOD, in &mu;g/L) for the environmental phenols, parabens, and triclocarban are:
+</p>
+<p>
+</p>
+<table bordercolor="#000000" border="1">
+    <thead>
+        <tr>
+            <th>Variable Name</th>
+            <th>SAS Label</th>
+            <th>LLOD</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>URXBP3</td>
+            <td>Urinary Benzophenone-3 (&micro;g/L)</td>
+            <td>0.4</td>
+        </tr>
+        <tr>
+            <td>URXBPH</td>
+            <td>Urinary Bisphenol A (&micro;g/L)</td>
+            <td>0.2</td>
+        </tr>
+        <tr>
+            <td>URXBPF</td>
+            <td>Urinary Bisphenol F (ug/L)</td>
+            <td>0.2</td>
+        </tr>
+        <tr>
+            <td>URXBPS</td>
+            <td>Urinary Bisphenol S (ug/L)</td>
+            <td>0.1</td>
+        </tr>
+        <tr>
+            <td>URXTLC</td>
+            <td>Urinary Triclocarban (&micro;g/L)</td>
+            <td>0.1</td>
+        </tr>
+        <tr>
+            <td>URXTRS</td>
+            <td>Urinary Triclosan (&micro;g/L)</td>
+            <td>1.7</td>
+        </tr>
+        <tr>
+            <td>URXBUP</td>
+            <td>Butyl paraben (&micro;g/L)</td>
+            <td>0.1</td>
+        </tr>
+        <tr>
+            <td>URXEPB</td>
+            <td>Ethyl paraben (&micro;g/L)</td>
+            <td>1.0</td>
+        </tr>
+        <tr>
+            <td>URXMPB</td>
+            <td>Methyl paraben (&micro;g/L)</td>
+            <td>1.0</td>
+        </tr>
+        <tr>
+            <td>URXPPB</td>
+            <td>Propyl paraben (&micro;g/L)</td>
+            <td>0.1</td>
+        </tr>
+        <tr>
+            <td>URXDCB</td>
+            <td>Urinary 2,4-dichlorophenol (&micro;g/L)</td>
+            <td>0.1</td>
+        </tr>
+        <tr>
+            <td>URX14D</td>
+            <td>Urinary 2,5-dichlorophenol (&micro;g/L)</td>
+            <td>0.1</td>
+        </tr>
+    </tbody>
+</table>
+<p>Please refer to the NHANES <a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx" target="_blank">Analytic Guidelines</a> and the on-line NHANES <a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/" target="_blank">Tutorial</a> for further details on the use of sample weights and other analytic issues.</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Caudill SP, Schleicher RL, Pirkle JL. Multi-rule quality control for the age-related eye disease study. Statist Med 2008;27:4094-4106.</li>
+          <li>Liao CY, Liu F, Moon HB, Yamashita N, Yun SH, Kannan K. 2012. Bisphenol Analogues in Sediments from Industrialized Areas in the United States, Japan, and Korea: Spatial and Temporal Distributions. Environ Sci Technol 46: 11558-11565.</li>
+          <li>National Toxicology Program. 2008. NTP Brief on Bisphenol A [CAS NO. 80 &ndash; 05 &ndash; 07]. <a href="http://ntp.niehs.nih.gov/ntp/ohat/bisphenol/bisphenol.pdf">http://ntp.niehs.nih.gov/ntp/ohat/bisphenol/bisphenol.pdf</a>
+          </li>
+          <li>U.S.Food and Drug Administration. 2014. Bisphenol A (BPA): Use in Food Contact Application. In: U.S. Food and Drug Administration.</li>
+          <li>Westgard JO, Barry PL, Hunt MR, Groth T. A multi-rule Shewhart chart for quality control in clinical chemistry. Clin Chem. 1981 Mar;27(3):493-501.</li>
+          <li>Zhou X, Ye X, Calafat AM. Automated on-line column-switching HPLC-MS/MS method for the quantification of triclocarban and its oxidative metabolites in human urine and serum. J Chromatogr B Analyt Technol Biomed Life Sci. 2012 Jan; 881-882:27-33.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTSB2YR">WTSB2YR - Subsample B weights</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTSB2YR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Subsample B weights</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Subsample B weights</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">14988.396826 to 482310.7883</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2727</td>
+                <td class="values" align="right">2727</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">No Lab Result</td>
+                <td class="values" align="right">50</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXBP3">URXBP3 - Urinary Benzophenone-3 (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXBP3</dd>
+            <dt>SAS Label: </dt>
+            <dd>Urinary Benzophenone-3 (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Urinary 2-Hydroxy-4-metoxybenzophenone (Benzophenone-3)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.28 to 28259</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2686</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDBP3LC">URDBP3LC - Urinary Benzophenone-3 comment </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDBP3LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Urinary Benzophenone-3 comment </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Urinary 2-Hydroxy-4-metoxybenzophenone (Benzophenone-3) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2599</td>
+                <td class="values" align="right">2599</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">87</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXBPH">URXBPH - Urinary Bisphenol A (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXBPH</dd>
+            <dt>SAS Label: </dt>
+            <dd>Urinary Bisphenol A (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Urinary Bisphenol A (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.14 to 792</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2686</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDBPHLC">URDBPHLC - Urinary Bisphenol A comment  </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDBPHLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Urinary Bisphenol A comment  </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Urinary Bisphenol A comment  </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2578</td>
+                <td class="values" align="right">2578</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">108</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXBPF">URXBPF - Urinary Bisphenol F (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXBPF</dd>
+            <dt>SAS Label: </dt>
+            <dd>Urinary Bisphenol F (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Urinary 4,4' dihydroxydiphenylmethane</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.14 to 298.7</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2682</td>
+                <td class="values" align="right">2682</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">95</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDBPFLC">URDBPFLC - Urinary Bisphenol F comment</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDBPFLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Urinary Bisphenol F comment</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Urinary 4,4' dihydroxydiphenylmethane comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1733</td>
+                <td class="values" align="right">1733</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">949</td>
+                <td class="values" align="right">2682</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">95</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXBPS">URXBPS - Urinary Bisphenol S (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXBPS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Urinary Bisphenol S (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Urinary 4,4'sulfonyldiphenol</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 211.9</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2682</td>
+                <td class="values" align="right">2682</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">95</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDBPSLC">URDBPSLC - Urinary Bisphenol S comment</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDBPSLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Urinary Bisphenol S comment</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Urinary 4,4' sulfonyldiphenol comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2414</td>
+                <td class="values" align="right">2414</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">268</td>
+                <td class="values" align="right">2682</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">95</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXTLC">URXTLC - Urinary Triclocarban (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXTLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Urinary Triclocarban (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Urinary Triclocarban (ng/mL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 588</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2686</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDTLCLC">URDTLCLC - Urinary Triclocarban comment</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDTLCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Urinary Triclocarban comment</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Urinary Triclocarban comment</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1046</td>
+                <td class="values" align="right">1046</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1640</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXTRS">URXTRS - Urinary Triclosan (ng/mL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXTRS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Urinary Triclosan (ng/mL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Urinary  2,4,4'-Trichloro-2'-hydroxyphenyl ether (Triclosan)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.2 to 9572</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2686</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDTRSLC">URDTRSLC - Urinary Triclosan comment</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDTRSLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Urinary Triclosan comment</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Urinary  2,4,4'-Trichloro-2'-hydroxyphenyl ether (Triclosan) comment code
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2047</td>
+                <td class="values" align="right">2047</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">639</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXBUP">URXBUP - Butyl paraben (ng/ml)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXBUP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Butyl paraben (ng/ml)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Butyl paraben (ng/ml)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 352.6</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2686</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDBUPLC">URDBUPLC - Butyl paraben comment</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDBUPLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Butyl paraben comment</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Butyl paraben comment  </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">840</td>
+                <td class="values" align="right">840</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1846</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXEPB">URXEPB - Ethyl paraben (ng/ml)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXEPB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ethyl paraben (ng/ml)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Ethyl paraben (ng/ml)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.71 to 1980.6</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2686</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDEPBLC">URDEPBLC - Ethyl paraben comment</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDEPBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ethyl paraben comment</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Ethyl paraben comment  </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1262</td>
+                <td class="values" align="right">1262</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1424</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXMPB">URXMPB - Methyl paraben (ng/ml)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXMPB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Methyl paraben (ng/ml)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Methyl paraben (ng/ml)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.71 to 7369</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2686</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDMPBLC">URDMPBLC - Methyl paraben comment </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDMPBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Methyl paraben comment </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Methyl paraben comment</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2671</td>
+                <td class="values" align="right">2671</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXPPB">URXPPB - Propyl paraben (ng/ml) </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXPPB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Propyl paraben (ng/ml) </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Propyl paraben (ng/ml)  </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 2188.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2686</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDPPBLC">URDPPBLC - Propyl paraben comment</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDPPBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Propyl paraben comment</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Propyl paraben comment  </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2655</td>
+                <td class="values" align="right">2655</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">31</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URX14D">URX14D - 2,5-dichlorophenol (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URX14D</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,5-dichlorophenol (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,5-dichlorophenol (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 30426.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2686</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URD14DLC">URD14DLC - 2,5-dichlorophenol comment </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URD14DLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,5-dichlorophenol comment </dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,5-dichlorophenol comment </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2644</td>
+                <td class="values" align="right">2644</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">42</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXDCB">URXDCB - 2,4-dichlorophenol (ug/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXDCB</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,4-dichlorophenol (ug/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,4-dichlorophenol (ug/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.07 to 430.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2686</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URDDCBLC">URDDCBLC - 2,4-dichlorophenol comment              </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URDDCBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,4-dichlorophenol comment              </dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,4-dichlorophenol comment                                        </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2561</td>
+                <td class="values" align="right">2561</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">125</td>
+                <td class="values" align="right">2686</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">91</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="URXUCR">URXUCR - Urinary creatinine</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">URXUCR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Urinary creatinine</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Urinary creatinine</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">8 to 659</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2690</td>
+                <td class="values" align="right">2690</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">87</td>
+                <td class="values" align="right">2777</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

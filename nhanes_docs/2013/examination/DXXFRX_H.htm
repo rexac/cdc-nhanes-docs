@@ -1,0 +1,407 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>DXXFRX_H</title>
+    <meta name="title" content="NHANES 2013-2014: Dual-Energy X-ray Absorptiometry - FRAX Score Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Protocol_and_Procedure">Protocol and Procedure</a>
+          </li>
+          <li>
+            <a href="#Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#DXXPRVFX">DXXPRVFX - Self-reported fracture age 20+</a>
+              </li>
+              <li>
+                <a href="#DXXFRAX1">DXXFRAX1 - Hip FRAX, previous fracture  </a>
+              </li>
+              <li>
+                <a href="#DXXFRAX2">DXXFRAX2 - Major FRAX, previous fracture</a>
+              </li>
+              <li>
+                <a href="#DXXFRAX3">DXXFRAX3 - Hip FRAX, no previous fracture</a>
+              </li>
+              <li>
+                <a href="#DXXFRAX4">DXXFRAX4 - Major FRAX, no previous fracture</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2013-2014 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Dual-Energy X-ray Absorptiometry - FRAX Score (DXXFRX_H)</h3>
+        <h4> Data File: DXXFRX_H.xpt</h4>
+        <h5 class="left">First Published: October 2015</h5>
+        <h5 class="right">Last Revised: January 2016</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p><strong>IMPORTANT NOTE: Users of the 2013-2014 FRAX score file (DXXFRX_H) are strongly encouraged to read the analytic notes below to understand how to correctly use these FRAX score data.</strong></p>
+<p>FRAX&reg; scores are estimates of 10-year risk for hip fracture and major osteoporotic fractures (hip, clinical (symptomatic) spine, wrist, humerus). FRAX scores are based on several risk factors for fracture, including age, gender, weight, height, previous fracture, parental history of hip fracture, current smoking, glucocorticoid use, rheumatoid arthritis, secondary osteoporosis, alcohol use, and femoral neck bone mineral density (FRAX&reg;). </p>
+<p>This data file contains two versions of FRAX scores for hip fracture and major osteoporotic fracture, in order to allow flexibility for data users regarding the definition of previous fracture used to calculate the FRAX scores. The difference between the two versions is described in detail in the analytic notes below.<strong> Data users will need to create appropriate programming code to assign the correct FRAX score version to each participant, depending on their study objectives, as described in the analytic notes below. </strong></p><h2 id="Eligible_Sample">Eligible Sample</h2><p>FRAX score was calculated for participants 40 years and older who had valid femur neck, height, and weight data. </p><h2 id="Protocol_and_Procedure">Protocol and Procedure</h2><p>Risk factors for fracture were derived from NHANES questionnaire data and FRAX scores were batch calculated using Hologic version 3.05 FRAX. To follow recommnedations on FRAX website, all missing values for risk factors were coded as &ldquo;no.&rdquo; <a href="http://www.shef.ac.uk/FRAX">http://www.shef.ac.uk/FRAX</a>.</p><h2 id="Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</h2><p>Quality control procedures for the risk factors used to calculate FRAX scores are described in their respective file documentations (ALQ_H, SMQ_H, BMX_H, DEMO_H, DXXFEM_H, MCQ_H, and OSQ_H). </p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>During the editing process, data were reviewed for completeness, consistency, and outliers. Edits of the data were performed when errors were identified. Age (RIDAGEYR) and gender (RIAGENDR) were obtained from demographic file. Weight (BMXWT) and height (BMXHT) were obtained from the body measures file. Previous fracture (OSQ010a OSQ010b OSQ010c), parental history of fractured hip (OSQ170 OSQ200), current smoking (SMQ040), glucocorticoids (OSQ130 OSQ140U OSQ140Q), rheumatoid arthritis (MCQ195), and alcohol use (ALQ120 ALQ120U ALQ130) were obtained from NHANES questionnaire data. Femoral neck bone mineral density was obtained from DXA femur file.</p>
+<p>All participants were assigned &ldquo;&lsquo;no&rdquo;&rsquo; for secondary osteoporosis risk factor because this risk factor does not affect FRAX scores when femur neck BMD has been included in the calculation (Kanis, J 2007). </p><h2 id="Analytic_Notes">Analytic Notes</h2><p><strong>This data file contains two versions of FRAX scores for hip fracture and major osteoporotic fracture. Data users will need to create appropriate programming code to assign the correct FRAX score version to each participant, depending on how they wish to define previous fracture. </strong></p>
+<p>The following table summarizes how the four FRAX score variables differ in terms of previous fracture: </p>
+<p>
+<table bordercolor="#000000" border="1">
+    <caption valign="top" align="left"></caption>
+    <thead>
+        <tr>
+            <th>FRAX score</th>
+            <th>NHANES variable name</th>
+            <th>Assumes previous fracture</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>10-year hip fracture risk score</td>
+            <td>DXXFRAX1</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>10-year major osteoporotic fracture risk score</td>
+            <td>DXXFRAX2</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>10-year hip fracture risk score</td>
+            <td>DXXFRAX3</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>10-year major osteoporotic fracture risk score</td>
+            <td>DXXFRAX4</td>
+            <td>No</td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<p>Information on previous fracture in NHANES 2013-2014 is available from two sources: the osteoporosis questionnaire (OSQ_H) and the vertebral fracture assessment examination files. <strong>Users can choose to assign FRAX scores that reflect previous fracture defined only by self-reported fracture data, or they can assign FRAX scores that reflect both self-reported fracture data and morphometric vertebral fracture obtained from a lateral spine scan.</strong> </p>
+<p><strong>Participants who answered &ldquo;yes&rdquo; to any of the self-reported fracture items (DXXPRVFX=1) should be considered to have a previous fracture for purposes of FRAX score calculation. As a result, these participants will have missing values for DXXFRAX3 and DXXFRAX4. DXXFRAX1 and DXXFRAX2 should always be selected for these participants. </strong></p>
+<p>The osteoporosis questionnaire includes items on self-reported physician&rsquo;s diagnosis of hip fracture (OSQ010a), wrist fracture (OSQ010b), spine fracture (OSQ010c) and any other fracture (OSQ080). For data user convenience, this FRAX file contains a variable (DXXPRVFX) that summarizes responses to the four OSQ fracture items into a single &ldquo;previous self-reported fracture&rdquo; item (1=yes, 2=no). </p>
+<p>Information on vertebral fracture from a lateral dual-energy x-ray absorptiometry (DXA) scan is available in the vertebral fracture assessment examination file (DXXVFA_H) and can also be defined using vertebral dimensions provided in the vertebral morphometry files. DXXVFA_H provides Genant semi-quantitative fracture scores for individual vertebrae between T4-L4 (DXXT4FX&mdash;DXXL4FX) and a summary variable for vertebral fracture (DXXVFAST) that indicates presence of a fracture (defined as mild, moderate or severe deformity) in any vertebrae between T4-L4, based on an approach recommended by the NHANES Expert VFA working group (see DXXVFA_H file documentation for more information about the DXXVFAST variable). </p>
+<p>The following SAS programming code illustrates an approach to assign the appropriate FRAX scores to participants based whether previous fracture reflects self-reported fracture only, or reflects both self-reported fracture and VFA vertebral fracture. </p>
+<p>In this approach, the user creates FRAX variables (HIPFRAX, MAJORFRAX) to assign the appropriate FRAX score.<strong> If the user wishes to include VFA vertebral fracture information, they will also need to create a variable for VFA vertebral fracture based on the vertebral fracture definition of their choice. Alternatively, they can use the DXXVFAST summary variable from the DXXVFA_H file if that definition meets their study needs.</strong> </p>
+<p><ins>Previous fracture based on self-reported fracture information only.</ins> </p>
+<ul style="list-style-type: none;">
+    <li>a. Respondent has previous self-reported fracture:
+    <div>&nbsp;</div>
+    </li>
+    <li>IF DXXPRVFX = 1 THEN HIPFRAX = DXXFRAX1; </li>
+    <li>IF DXXPRVFX = 1 THEN MAJORFRAX=DXXFRAX2;
+    <div>&nbsp;</div>
+    </li>
+    <li>b. Respondent has no previous self-reported fracture:
+    <div>&nbsp;</div>
+    </li>
+    <li>IF DXXPRVFX = 2 THEN HIPFRAX= DXXFRAX3; </li>
+    <li>IF DXXPRVFX = 2 THEN MAJORFRAX=DXXFRAX4; </li>
+</ul>
+<p><ins>Previous fracture based on self-reported fracture information and vertebral fracture information from VFA files </ins></p>
+<p><strong>**Data Users need to create a variable for VFA vertebral fracture (yes, no) per their chosen definition. For purposes of this example, the variable will be named VFA_FX (1=yes, 2=no). </strong></p>
+<ul style="list-style-type: none;">
+    <li>a.Respondent has previous self-reported fracture (no need to include VFA fracture status):
+    <div>&nbsp;</div>
+    </li>
+    <li>IF DXXPRVFX = 1 THEN HIPFRAX = DXXFRAX1; </li>
+    <li>IF DXXPRVFX = 1 THEN MAJORFRAX=DXXFRAX2;
+    <div>&nbsp;</div>
+    </li>
+    <li>b.Respondent has no previous self-reported fracture, but has VFA vertebral fracture:
+    <div>&nbsp;</div>
+    </li>
+    <li>IF DXXPRVFX = 2 AND VFA_FX = 1 THEN HIPFRAX=DXXFRAX1 </li>
+    <li>IF DXXPRVFX = 2 AND VFA_FX = 1 THEN MAJORFRAX=DXXFRAX2
+    <div>&nbsp;</div>
+    </li>
+    <li>c.Respondent has no previous self-reported fracture and no VFA vertebral fracture:
+    <div>&nbsp;</div>
+    </li>
+    <li>IF DXXPRVFX = 2 AND VFA_FX = 2 THEN HIPFRAX=DXXFRAX3 </li>
+    <li>IF DXXPRVFX = 2 AND VFA_FX = 2 THEN MAJORFRAX=DXXFRAX4 </li>
+</ul>
+<p>The NHANES examination sample weights should be used for any analyses using the DXXFRX_H data. Please refer to the Analytic Guidelines on the NHANES website for further details on the use of sample weights and other analytic issues. <a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx">https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx</a></p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>FRAX&reg;&nbsp;&nbsp; <a href="http://www.shef.ac.uk/FRAX">http://www.shef.ac.uk/FRAX</a>
+          </li>
+          <li>Hologic Product Support: Discovery. <a href="http://www.hologic.com ">http://www.hologic.com </a>
+          </li>
+          <li>Kanis J &nbsp;on behalf of the World Health Organization Scientific Group (2007) Assessment of osteoporosis at the primary health-care level. Technical Report.&nbsp; WHO Collaborating Centre on Metabolic Bone Disease, University of Sheffield. Pg 197.&nbsp; Available at:&nbsp; <a href="http://www.shef.ac.uk/FRAX/pdfs/WHO_Technical_Report.pdf">http://www.shef.ac.uk/FRAX/pdfs/WHO_Technical_Report.pdf</a>
+          </li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DXXPRVFX">DXXPRVFX - Self-reported fracture age 20+</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DXXPRVFX</dd>
+            <dt>SAS Label: </dt>
+            <dd>Self-reported fracture age 20+</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Previous self-reported fracture after age 20</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">1070</td>
+                <td class="values" align="right">1070</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2623</td>
+                <td class="values" align="right">3693</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DXXFRAX1">DXXFRAX1 - Hip FRAX, previous fracture  </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DXXFRAX1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Hip FRAX, previous fracture  </dd>
+            <dt>English Text: </dt>
+            <dd class="info">10-year hip fracture risk score assuming previous fracture</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 53.08</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3127</td>
+                <td class="values" align="right">3127</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">581</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DXXFRAX2">DXXFRAX2 - Major FRAX, previous fracture</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DXXFRAX2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Major FRAX, previous fracture</dd>
+            <dt>English Text: </dt>
+            <dd class="info">10-year major osteoporotic  fracture risk score assuming previous fracture</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.32 to 64.78</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3127</td>
+                <td class="values" align="right">3127</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">581</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DXXFRAX3">DXXFRAX3 - Hip FRAX, no previous fracture</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DXXFRAX3</dd>
+            <dt>SAS Label: </dt>
+            <dd>Hip FRAX, no previous fracture</dd>
+            <dt>English Text: </dt>
+            <dd class="info">10-year hip fracture risk score assuming no previous fracture</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 29.03</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2258</td>
+                <td class="values" align="right">2258</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1450</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DXXFRAX4">DXXFRAX4 - Major FRAX, no previous fracture</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DXXFRAX4</dd>
+            <dt>SAS Label: </dt>
+            <dd>Major FRAX, no previous fracture</dd>
+            <dt>English Text: </dt>
+            <dd class="info">10-year major osteoporotic  fracture risk score assuming no previous fracture</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.67 to 39.82</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2258</td>
+                <td class="values" align="right">2258</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1450</td>
+                <td class="values" align="right">3708</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

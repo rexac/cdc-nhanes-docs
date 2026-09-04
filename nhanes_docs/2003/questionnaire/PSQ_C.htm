@@ -1,0 +1,4266 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>PSQ_C</title>
+    <meta name="title" content="NHANES 2003-2004: Prostate Specific Antigen Follow-up Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Interview_Setting_and_Mode_of_Administration">Interview Setting and Mode of Administration</a>
+          </li>
+          <li>
+            <a href="#Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#PSASCST1">PSASCST1 - Interview Status Code</a>
+              </li>
+              <li>
+                <a href="#PSASCCT1">PSASCCT1 - Reasons for Not Done</a>
+              </li>
+              <li>
+                <a href="#PSQ020">PSQ020 - Heard of PSA test somewhere else?</a>
+              </li>
+              <li>
+                <a href="#PSQ030A">PSQ030A - Heard PSA test from friend or relative?</a>
+              </li>
+              <li>
+                <a href="#PSQ030B">PSQ030B - Heard PSA test from a doctor?</a>
+              </li>
+              <li>
+                <a href="#PSQ030C">PSQ030C - Heard PSA test from health brochure?</a>
+              </li>
+              <li>
+                <a href="#PSQ030D">PSQ030D - Heard PSA test from television?</a>
+              </li>
+              <li>
+                <a href="#PSQ030E">PSQ030E - Heard PSA test from radio?</a>
+              </li>
+              <li>
+                <a href="#PSQ030F">PSQ030F - Heard PSA test from other?</a>
+              </li>
+              <li>
+                <a href="#PSQ040">PSQ040 - Ever have PSA test before the survey?</a>
+              </li>
+              <li>
+                <a href="#PSQ050">PSQ050 - How long ago was your first PSA test?</a>
+              </li>
+              <li>
+                <a href="#PSQ060">PSQ060 - First time being told to have high PSA?</a>
+              </li>
+              <li>
+                <a href="#PSQ070">PSQ070 - How long have you known your high PSA?</a>
+              </li>
+              <li>
+                <a href="#PSQ080">PSQ080 - Did you request your first PSA test?</a>
+              </li>
+              <li>
+                <a href="#PSQ090A">PSQ090A - Test PSA because of prostate problems</a>
+              </li>
+              <li>
+                <a href="#PSQ090B">PSQ090B - Test PSA because of wife or partner</a>
+              </li>
+              <li>
+                <a href="#PSQ090C">PSQ090C - Test PSA because of a health event</a>
+              </li>
+              <li>
+                <a href="#PSQ090D">PSQ090D - Test PSA because of family cancer</a>
+              </li>
+              <li>
+                <a href="#PSQ090E">PSQ090E - Test PSA because of race or ethnicity</a>
+              </li>
+              <li>
+                <a href="#PSQ090F">PSQ090F - Test PSA because of another reason</a>
+              </li>
+              <li>
+                <a href="#PSQ100A">PSQ100A - Provider PSA test: As routine screening</a>
+              </li>
+              <li>
+                <a href="#PSQ100B">PSQ100B - Provider PSA test: Due to family cancer</a>
+              </li>
+              <li>
+                <a href="#PSQ100C">PSQ100C - Provider PSA test: Due to frequent urina</a>
+              </li>
+              <li>
+                <a href="#PSQ100D">PSQ100D - Provider PSA test: Due to enlarged prost</a>
+              </li>
+              <li>
+                <a href="#PSQ100E">PSQ100E - Provider PSA test: Due to race/ethnicity</a>
+              </li>
+              <li>
+                <a href="#PSQ100F">PSQ100F - Provider PSA test: Wife/partner asked</a>
+              </li>
+              <li>
+                <a href="#PSQ110">PSQ110 - Saw a health professional for high PSA?</a>
+              </li>
+              <li>
+                <a href="#PSQ120">PSQ120 - Have doctor appointment for high PSA?</a>
+              </li>
+              <li>
+                <a href="#PSQ130A">PSQ130A - High PSA could mean: Inflamed prostate</a>
+              </li>
+              <li>
+                <a href="#PSQ130B">PSQ130B - High PSA could mean: Enlarged prostate</a>
+              </li>
+              <li>
+                <a href="#PSQ130C">PSQ130C - High PSA could mean: Prostate cancer</a>
+              </li>
+              <li>
+                <a href="#PSQ130D">PSQ130D - High PSA could mean: Lab error</a>
+              </li>
+              <li>
+                <a href="#PSQ130E">PSQ130E - High PSA could mean: Other</a>
+              </li>
+              <li>
+                <a href="#PSQ140">PSQ140 - Did other tests to check prostate?</a>
+              </li>
+              <li>
+                <a href="#PSQ150">PSQ150 - Did you have a prostate biopsy?</a>
+              </li>
+              <li>
+                <a href="#PSQ160">PSQ160 - Know results of your prostate biopsy?</a>
+              </li>
+              <li>
+                <a href="#PSQ170A">PSQ170A - Biopsy showed: Inflammation of prostate</a>
+              </li>
+              <li>
+                <a href="#PSQ170B">PSQ170B - Biopsy showed: Normal prostate tissue</a>
+              </li>
+              <li>
+                <a href="#PSQ170C">PSQ170C - Biopsy showed: Prostate cancer</a>
+              </li>
+              <li>
+                <a href="#PSQ170D">PSQ170D - Biopsy showed: Other</a>
+              </li>
+              <li>
+                <a href="#PSQ180">PSQ180 - Need treatment for prostate condition?</a>
+              </li>
+              <li>
+                <a href="#PSQ190">PSQ190 - Received/receiving prostate treatment?</a>
+              </li>
+              <li>
+                <a href="#PSQ200A">PSQ200A - Not treated because of side effects</a>
+              </li>
+              <li>
+                <a href="#PSQ200B">PSQ200B - Not treated because result is uncertain</a>
+              </li>
+              <li>
+                <a href="#PSQ200C">PSQ200C - Not treated because it is too expensive</a>
+              </li>
+              <li>
+                <a href="#PSQ200D">PSQ200D - Not treated hoping for better treat</a>
+              </li>
+              <li>
+                <a href="#PSQ200E">PSQ200E - Not treated deciding to wait and see</a>
+              </li>
+              <li>
+                <a href="#PSQ200F">PSQ200F - Not treated because you were afraid</a>
+              </li>
+              <li>
+                <a href="#PSQ200G">PSQ200G - Not treated because of some other reason</a>
+              </li>
+              <li>
+                <a href="#PSQ210">PSQ210 - T/F:Blv high PSA may mean large prostate</a>
+              </li>
+              <li>
+                <a href="#PSQ220">PSQ220 - T/F:Blv additional tests are required</a>
+              </li>
+              <li>
+                <a href="#PSQ230">PSQ230 - T/F:Blv prostate-cancer men can live 70+</a>
+              </li>
+              <li>
+                <a href="#PSQ240">PSQ240 - T/F:Blv prost.-cancer men die in 5 yrs</a>
+              </li>
+              <li>
+                <a href="#PSQ250">PSQ250 - T/F:Blv higher risk for cancer relatives</a>
+              </li>
+              <li>
+                <a href="#PSQ260">PSQ260 - T/F:Blv higher risk African Americans</a>
+              </li>
+              <li>
+                <a href="#PSQ270">PSQ270 - T/F:Blv there are treatments available</a>
+              </li>
+              <li>
+                <a href="#PSQ280">PSQ280 - T/F:Blv all options for cancer have risk</a>
+              </li>
+              <li>
+                <a href="#PSQ290">PSQ290 - T/F:Blv there are support groups</a>
+              </li>
+              <li>
+                <a href="#PSQ300">PSQ300 - Language used for the interview?</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2003-2004 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Prostate Specific Antigen Follow-up (PSQ_C)</h3>
+        <h4> Data File: PSQ_C.xpt</h4>
+        <h5 class="left">First Published: April 2008</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Male participants age 40 years and older who have PSA test (LBXP1) levels outside the reference range (&gt;4 ng/mL) are sent a report of findings (ROF) letter informing them of their PSA test result and encouraging them to follow-up with a health care provider to determine if any other tests or procedures are needed. This follow-up phone questionnaire occurs 6 months after their examination (approximately 4-5 months after the ROF letter was mailed). The purpose of the questions is to assess how many men already knew their PSA status, what they know about the PSA test, prostate disease, including prostate cancer and what actions they took after being notified of their PSA results. </p>
+<p>The PSA follow-up questionnaire is mentioned in the informed consent and also in the reporting letter for elevated PSA results. Trained interviewers contacted those participants with high PSA results by telephone for an interview. </p>
+<p>An automated system for managing calls (i.e., setting up appointments, tracking the calls to contact the participant, and reasons for refusal) is maintained in the Field Follow up Management System (FFMS). Responses to interview questions are keyed directly into the FFMS, a web based application of the Integrated Survey Information System (ISIS) software used for other NHANES components. </p>
+<p>Male participants who live in households with no telephones were sent an additional letter asking them to call a toll free number to answer a few questions about their PSA results.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Male participants age 40 years and older with PSA levels beyond the reference range (PSA &gt;4 ng/mL). </p>
+<p>Exclusion Criteria: Circumstances when communication or cognitive difficulties make it impossible for the participant to respond to questionnaire would result in exclusion.</p><h2 id="Interview_Setting_and_Mode_of_Administration">Interview Setting and Mode of Administration</h2><p>Bilingual (English and Spanish) trained interviewers contacted participants with PSA results outside the reference range by telephone to request an interview. Call attempts were scheduled 6 months after the date of examination, approximately 4-5 months after participants receive the results notification letter. In order to determine what actions persons take with the information that their PSA is elevated, it is necessary to allow time to have initiated or implemented such actions after notification of elevated results. Therefore, the telephone interview occurs at least a few months after notification.</p><h2 id="Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</h2><p>The PSA follow-up questions were evaluated in NCHS&rsquo;s Questionnaire Design Research Laboratory before the final questionnaire was approved by the NHANES Institutional Review Board (IRB).</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Combination of these data with the 2005-2006 cycle is recommended when doing analysis. These data should not be used with sample weights to make national estimates due to small sample size and low response rates. </p>
+<p>The data should be linked to the laboratory data (Lab 11, LBXP1) by sequence number. </p>
+<p>Examples of reasons for non-response coded as &ldquo;communication problem or cognitive impairment&rdquo; may include hearing impairment, poor memory recall, and language barrier.</p></div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSASCST1">PSASCST1 - Interview Status Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSASCST1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Interview Status Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Interview Status Code</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Complete</td>
+                <td class="values" align="right">67</td>
+                <td class="values" align="right">67</td>
+                <td class="values">PSQ020</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Partial</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">69</td>
+                <td class="values">PSQ020</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Not done</td>
+                <td class="values" align="right">52</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSASCCT1">PSASCCT1 - Reasons for Not Done</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSASCCT1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Reasons for Not Done</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Reasons for Not Done</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Unable to contact SP</td>
+                <td class="values" align="right">28</td>
+                <td class="values" align="right">28</td>
+                <td class="values">End of Section</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Refusal</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">36</td>
+                <td class="values">End of Section</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Communication problem or cognitive impairment</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">46</td>
+                <td class="values">End of Section</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">SP expired</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">51</td>
+                <td class="values">End of Section</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Did not receive letter</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">52</td>
+                <td class="values">End of Section</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">52</td>
+                <td class="values">End of Section</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">69</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ020">PSQ020 - Heard of PSA test somewhere else?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ020</dd>
+            <dt>SAS Label: </dt>
+            <dd>Heard of PSA test somewhere else?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Before you participated in the NHANES survey, did you hear of the PSA test somewhere else?</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">49</td>
+                <td class="values" align="right">49</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">20</td>
+                <td class="values" align="right">69</td>
+                <td class="values">PSQ040</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Heard of PSA, but do not know what the test is for</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">69</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">69</td>
+                <td class="values">PSQ040</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">69</td>
+                <td class="values">PSQ040</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">52</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ030A">PSQ030A - Heard PSA test from friend or relative?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ030A</dd>
+            <dt>SAS Label: </dt>
+            <dd>Heard PSA test from friend or relative?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Where did you hear about the PSA test? Was it from... A friend or relative</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">read responses</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">7</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">39</td>
+                <td class="values" align="right">46</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">47</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">48</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">73</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ030B">PSQ030B - Heard PSA test from a doctor?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ030B</dd>
+            <dt>SAS Label: </dt>
+            <dd>Heard PSA test from a doctor?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Where did you hear about the PSA test? Was it from... A doctor</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">read responses</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">43</td>
+                <td class="values" align="right">43</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">47</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">47</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">48</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">73</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ030C">PSQ030C - Heard PSA test from health brochure?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ030C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Heard PSA test from health brochure?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Where did you hear about the PSA test? Was it from... A health brochure</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">read responses</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">15</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">31</td>
+                <td class="values" align="right">46</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">46</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">48</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">73</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ030D">PSQ030D - Heard PSA test from television?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ030D</dd>
+            <dt>SAS Label: </dt>
+            <dd>Heard PSA test from television?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Where did you hear about the PSA test? Was it from... Television</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">read responses</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">11</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">35</td>
+                <td class="values" align="right">46</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">46</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">48</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">73</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ030E">PSQ030E - Heard PSA test from radio?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ030E</dd>
+            <dt>SAS Label: </dt>
+            <dd>Heard PSA test from radio?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Where did you hear about the PSA test? Was it from... Radio</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">read responses</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">6</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">40</td>
+                <td class="values" align="right">46</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">46</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">48</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">73</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ030F">PSQ030F - Heard PSA test from other?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ030F</dd>
+            <dt>SAS Label: </dt>
+            <dd>Heard PSA test from other?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Where did you hear about the PSA test? Was it from... Other</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">read responses</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">9</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">39</td>
+                <td class="values" align="right">48</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">48</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">48</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">73</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ040">PSQ040 - Ever have PSA test before the survey?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ040</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ever have PSA test before the survey?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">To your knowledge, did you ever have a PSA test before you were tested in our survey?</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">43</td>
+                <td class="values" align="right">43</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">22</td>
+                <td class="values" align="right">65</td>
+                <td class="values">PSQ110</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">65</td>
+                <td class="values">PSQ110</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">69</td>
+                <td class="values">PSQ110</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">52</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ050">PSQ050 - How long ago was your first PSA test?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ050</dd>
+            <dt>SAS Label: </dt>
+            <dd>How long ago was your first PSA test?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">How long ago did you have your first PSA test?  Would you say it was....</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">One year or less</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">5</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">2 to 5 years</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">20</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">More than 5 years</td>
+                <td class="values" align="right">23</td>
+                <td class="values" align="right">43</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">43</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">43</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">78</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ060">PSQ060 - First time being told to have high PSA?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ060</dd>
+            <dt>SAS Label: </dt>
+            <dd>First time being told to have high PSA?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Was the test result in our letter the first time you were told you had a high PSA test result?</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">22</td>
+                <td class="values" align="right">22</td>
+                <td class="values">PSQ080</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">21</td>
+                <td class="values" align="right">43</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">43</td>
+                <td class="values">PSQ080</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">43</td>
+                <td class="values">PSQ080</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">78</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ070">PSQ070 - How long have you known your high PSA?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ070</dd>
+            <dt>SAS Label: </dt>
+            <dd>How long have you known your high PSA?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">For about how long have you known that your PSA was high?  Would you say...</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">One year or less</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">2 to 5 years</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">13</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">More than 5 years</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">21</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">21</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">21</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">100</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ080">PSQ080 - Did you request your first PSA test?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ080</dd>
+            <dt>SAS Label: </dt>
+            <dd>Did you request your first PSA test?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Think about your first PSA test.  Did you specifically request the test...or was the decision  made by your health care provider?</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">I specifically requested the test</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">7</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Health care provider</td>
+                <td class="values" align="right">34</td>
+                <td class="values" align="right">41</td>
+                <td class="values">PSQ100A</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">41</td>
+                <td class="values">PSQ110</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">42</td>
+                <td class="values">PSQ110</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">79</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ090A">PSQ090A - Test PSA because of prostate problems</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ090A</dd>
+            <dt>SAS Label: </dt>
+            <dd>Test PSA because of prostate problems</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Men get the PSA test for different reasons.  Please answer yes if any of the following reasons were true for you.  You requested the test because....You had prostate problems like frequent urination.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">113</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ090B">PSQ090B - Test PSA because of wife or partner</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ090B</dd>
+            <dt>SAS Label: </dt>
+            <dd>Test PSA because of wife or partner</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Men get the PSA test for different reasons.  Please answer yes if any of the following reasons were true for you.  You requested the test because....Your wife or partner convinced you to have the test.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">113</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ090C">PSQ090C - Test PSA because of a health event</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ090C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Test PSA because of a health event</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Men get the PSA test for different reasons.  Please answer yes if any of the following reasons were true for you.  You requested the test because...The PSA test was offered at a health fair or community event.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">113</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ090D">PSQ090D - Test PSA because of family cancer</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ090D</dd>
+            <dt>SAS Label: </dt>
+            <dd>Test PSA because of family cancer</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Men get the PSA test for different reasons.  Please answer yes if any of the following reasons were true for you.  You requested the test because...Men in your family had prostate cancer.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">113</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ090E">PSQ090E - Test PSA because of race or ethnicity</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ090E</dd>
+            <dt>SAS Label: </dt>
+            <dd>Test PSA because of race or ethnicity</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Men get the PSA test for different reasons.  Please answer yes if any of the following reasons were true for you.  You requested the test because...People of your race or ethnicity are more likely to develop prostate cancer.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">7</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">7</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">113</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ090F">PSQ090F - Test PSA because of another reason</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ090F</dd>
+            <dt>SAS Label: </dt>
+            <dd>Test PSA because of another reason</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Men get the PSA test for different reasons.  Please answer yes if any of the following reasons were true for you.  You requested the test because...You had another reason.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">6</td>
+                <td class="values">PSQ110</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">8</td>
+                <td class="values">PSQ110</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">PSQ110</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">PSQ110</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">113</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ100A">PSQ100A - Provider PSA test: As routine screening</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ100A</dd>
+            <dt>SAS Label: </dt>
+            <dd>Provider PSA test: As routine screening</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Health care providers order PSA tests for different reasons.  Please answer yes if any of the following reasons are true.  Your health care provider ordered a PSA test....As part of routine screening for your age</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">29</td>
+                <td class="values" align="right">29</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">33</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">33</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">33</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">88</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ100B">PSQ100B - Provider PSA test: Due to family cancer</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ100B</dd>
+            <dt>SAS Label: </dt>
+            <dd>Provider PSA test: Due to family cancer</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Health care providers order PSA tests for different reasons.  Please answer yes if any of the following reasons are true.  Your health care provider ordered a PSA test....Because men in your family had prostate cancer</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">31</td>
+                <td class="values" align="right">33</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">33</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">33</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">88</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ100C">PSQ100C - Provider PSA test: Due to frequent urina</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ100C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Provider PSA test: Due to frequent urina</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Health care providers order PSA tests for different reasons.  Please answer yes if any of the following reasons are true.  Your health care provider ordered a PSA test....You had prostate problems like frequent urination.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">14</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">18</td>
+                <td class="values" align="right">32</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">32</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">33</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">88</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ100D">PSQ100D - Provider PSA test: Due to enlarged prost</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ100D</dd>
+            <dt>SAS Label: </dt>
+            <dd>Provider PSA test: Due to enlarged prost</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Health care providers order PSA tests for different reasons.  Please answer yes if any of the following reasons are true.  Your health care provider ordered a PSA test....An enlarged prostate was detected during your physical exam.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">17</td>
+                <td class="values" align="right">17</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">31</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">31</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">33</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">88</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ100E">PSQ100E - Provider PSA test: Due to race/ethnicity</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ100E</dd>
+            <dt>SAS Label: </dt>
+            <dd>Provider PSA test: Due to race/ethnicity</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Health care providers order PSA tests for different reasons.  Please answer yes if any of the following reasons are true.  Your health care provider ordered a PSA test....Because men of your race/ethnicity are more likely to develop prostate cancer.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">14</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">30</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">30</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">33</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">88</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ100F">PSQ100F - Provider PSA test: Wife/partner asked</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ100F</dd>
+            <dt>SAS Label: </dt>
+            <dd>Provider PSA test: Wife/partner asked</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Health care providers order PSA tests for different reasons.  Please answer yes if any of the following reasons are true.  Your health care provider ordered a PSA test...Your wife or partner asked the doctor to check your PSA level.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">30</td>
+                <td class="values" align="right">33</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">33</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">33</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">88</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ110">PSQ110 - Saw a health professional for high PSA?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ110</dd>
+            <dt>SAS Label: </dt>
+            <dd>Saw a health professional for high PSA?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Did you see a doctor or other health professional about your high PSA test result?</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Now I'm going to ask you some questions about what you have done since finding out that your PSA test result was high. </dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">61</td>
+                <td class="values" align="right">61</td>
+                <td class="values">PSQ130A</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">69</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">69</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">69</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">52</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ120">PSQ120 - Have doctor appointment for high PSA?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ120</dd>
+            <dt>SAS Label: </dt>
+            <dd>Have doctor appointment for high PSA?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Do you have an appointment to see a doctor or other health care professional about your high PSA test result?</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">5</td>
+                <td class="values">PSQ210</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">8</td>
+                <td class="values">PSQ210</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">PSQ210</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">PSQ210</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">113</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ130A">PSQ130A - High PSA could mean: Inflamed prostate</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ130A</dd>
+            <dt>SAS Label: </dt>
+            <dd>High PSA could mean: Inflamed prostate</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Think back to when your doctor explained what a high PSA result means.  Answer yes if you remember hearing your doctor tell you any of the following statements.  A high PSA could mean.... You may have an inflamed prostate gland.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">37</td>
+                <td class="values" align="right">37</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">20</td>
+                <td class="values" align="right">57</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">57</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">60</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">61</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ130B">PSQ130B - High PSA could mean: Enlarged prostate</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ130B</dd>
+            <dt>SAS Label: </dt>
+            <dd>High PSA could mean: Enlarged prostate</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Think back to when your doctor explained what a high PSA result means.  Answer yes if you remember hearing your doctor tell you any of the following statements.  A high PSA could mean.... You may have an enlarged prostate gland.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">38</td>
+                <td class="values" align="right">38</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">17</td>
+                <td class="values" align="right">55</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">55</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">60</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">61</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ130C">PSQ130C - High PSA could mean: Prostate cancer</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ130C</dd>
+            <dt>SAS Label: </dt>
+            <dd>High PSA could mean: Prostate cancer</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Think back to when your doctor explained what a high PSA result means.  Answer yes if you remember hearing your doctor tell you any of the following statements.  A high PSA could mean.... You may have prostate cancer.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">32</td>
+                <td class="values" align="right">32</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">25</td>
+                <td class="values" align="right">57</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">57</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">60</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">61</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ130D">PSQ130D - High PSA could mean: Lab error</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ130D</dd>
+            <dt>SAS Label: </dt>
+            <dd>High PSA could mean: Lab error</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Think back to when your doctor explained what a high PSA result means.  Answer yes if you remember hearing your doctor tell you any of the following statements.  A high PSA could mean.... Your result was a possible laboratory error</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">11</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">41</td>
+                <td class="values" align="right">52</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">52</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">60</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">61</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ130E">PSQ130E - High PSA could mean: Other</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ130E</dd>
+            <dt>SAS Label: </dt>
+            <dd>High PSA could mean: Other</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Think back to when your doctor explained what a high PSA result means.  Answer yes if you remember hearing your doctor tell you any of the following statements.  A high PSA could mean.... Other</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">10</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">49</td>
+                <td class="values" align="right">59</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">59</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">60</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">61</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ140">PSQ140 - Did other tests to check prostate?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ140</dd>
+            <dt>SAS Label: </dt>
+            <dd>Did other tests to check prostate?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">When you saw a doctor or other health professional about your high PSA test result, did you have other tests or procedures to check your prostate for possible problems?</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">44</td>
+                <td class="values" align="right">44</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">59</td>
+                <td class="values">PSQ180</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">59</td>
+                <td class="values">PSQ180</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">61</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">60</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ150">PSQ150 - Did you have a prostate biopsy?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ150</dd>
+            <dt>SAS Label: </dt>
+            <dd>Did you have a prostate biopsy?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Did you have a prostate biopsy?</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">25</td>
+                <td class="values" align="right">25</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">20</td>
+                <td class="values" align="right">45</td>
+                <td class="values">PSQ180</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">45</td>
+                <td class="values">PSQ180</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">46</td>
+                <td class="values">PSQ180</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">75</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ160">PSQ160 - Know results of your prostate biopsy?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ160</dd>
+            <dt>SAS Label: </dt>
+            <dd>Know results of your prostate biopsy?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Do you know the results of your prostate biopsy?</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">24</td>
+                <td class="values" align="right">24</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">25</td>
+                <td class="values">PSQ180</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">25</td>
+                <td class="values">PSQ180</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">25</td>
+                <td class="values">PSQ180</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">96</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ170A">PSQ170A - Biopsy showed: Inflammation of prostate</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ170A</dd>
+            <dt>SAS Label: </dt>
+            <dd>Biopsy showed: Inflammation of prostate</dd>
+            <dt>English Text: </dt>
+            <dd class="info">What did your prostate biopsy show?  Your biopsy showed...An inflammation of your prostate gland</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">7</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">18</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">18</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">23</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">98</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ170B">PSQ170B - Biopsy showed: Normal prostate tissue</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ170B</dd>
+            <dt>SAS Label: </dt>
+            <dd>Biopsy showed: Normal prostate tissue</dd>
+            <dt>English Text: </dt>
+            <dd class="info">What did your prostate biopsy show?  Your biopsy showed...Normal prostate tissue</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">16</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">20</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">20</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">23</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">98</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ170C">PSQ170C - Biopsy showed: Prostate cancer</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ170C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Biopsy showed: Prostate cancer</dd>
+            <dt>English Text: </dt>
+            <dd class="info">What did your prostate biopsy show?  Your biopsy showed...Prostate cancer.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">17</td>
+                <td class="values" align="right">20</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">20</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">23</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">98</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ170D">PSQ170D - Biopsy showed: Other</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ170D</dd>
+            <dt>SAS Label: </dt>
+            <dd>Biopsy showed: Other</dd>
+            <dt>English Text: </dt>
+            <dd class="info">What did your prostate biopsy show?  Your biopsy showed...Other</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">19</td>
+                <td class="values" align="right">20</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">20</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">23</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">98</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ180">PSQ180 - Need treatment for prostate condition?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ180</dd>
+            <dt>SAS Label: </dt>
+            <dd>Need treatment for prostate condition?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Did your doctor or health care professional tell you that you need treatment for your prostate condition?</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">12</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">47</td>
+                <td class="values" align="right">59</td>
+                <td class="values">PSQ210</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">59</td>
+                <td class="values">PSQ210</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">60</td>
+                <td class="values">PSQ210</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">61</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ190">PSQ190 - Received/receiving prostate treatment?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ190</dd>
+            <dt>SAS Label: </dt>
+            <dd>Received/receiving prostate treatment?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Did you receive (or are you currently receiving) the treatment that your doctor recommended?</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">10</td>
+                <td class="values">PSQ210</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">12</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">12</td>
+                <td class="values">PSQ210</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">12</td>
+                <td class="values">PSQ210</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">109</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ200A">PSQ200A - Not treated because of side effects</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ200A</dd>
+            <dt>SAS Label: </dt>
+            <dd>Not treated because of side effects</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Why did you decide not to get treated?  (Chose all that apply)  Was it because ...The side effects to the treatment are unpleasant.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">119</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ200B">PSQ200B - Not treated because result is uncertain</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ200B</dd>
+            <dt>SAS Label: </dt>
+            <dd>Not treated because result is uncertain</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Why did you decide not to get treated?  (Chose all that apply)  Was it because ...The results following treatment is uncertain</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">119</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ200C">PSQ200C - Not treated because it is too expensive</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ200C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Not treated because it is too expensive</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Why did you decide not to get treated?  (Chose all that apply)  Was it because ...The treatment is too expensive.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">119</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ200D">PSQ200D - Not treated hoping for better treat</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ200D</dd>
+            <dt>SAS Label: </dt>
+            <dd>Not treated hoping for better treat</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Why did you decide not to get treated?  (Chose all that apply)  Was it because ...There is hope of better treatment in the future.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">119</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ200E">PSQ200E - Not treated deciding to wait and see</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ200E</dd>
+            <dt>SAS Label: </dt>
+            <dd>Not treated deciding to wait and see</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Why did you decide not to get treated?  (Chose all that apply)  Was it because ...You decided to wait and see how the condition progresses (Watchful waiting).</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">119</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ200F">PSQ200F - Not treated because you were afraid</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ200F</dd>
+            <dt>SAS Label: </dt>
+            <dd>Not treated because you were afraid</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Why did you decide not to get treated?  (Chose all that apply)  Was it because ...You were afraid.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">119</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ200G">PSQ200G - Not treated because of some other reason</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ200G</dd>
+            <dt>SAS Label: </dt>
+            <dd>Not treated because of some other reason</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Why did you decide not to get treated?  (Chose all that apply)  Was it because ... Or is there some other reason</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">READ EACH RESPONSE OPTION AND WAIT FOR A YES/NO ANSWER</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">119</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ210">PSQ210 - T/F:Blv high PSA may mean large prostate</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ210</dd>
+            <dt>SAS Label: </dt>
+            <dd>T/F:Blv high PSA may mean large prostate</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Although it is possible that men who have a high PSA may have prostate cancer, they probably just have a large prostate.</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">We would like to know what you have learned about the PSA test and prostate problems that may be associated with high PSA test results.  Please tell me if you believe the following statements are true, false,  or if you  don't know.</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">True</td>
+                <td class="values" align="right">42</td>
+                <td class="values" align="right">42</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">False</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">49</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">49</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">19</td>
+                <td class="values" align="right">68</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">53</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ220">PSQ220 - T/F:Blv additional tests are required</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ220</dd>
+            <dt>SAS Label: </dt>
+            <dd>T/F:Blv additional tests are required</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Additional tests are usually required for your doctor to determine if a high PSA is caused by cancer or some other condition.</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">True</td>
+                <td class="values" align="right">42</td>
+                <td class="values" align="right">42</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">False</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">46</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">46</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">22</td>
+                <td class="values" align="right">68</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">53</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ230">PSQ230 - T/F:Blv prostate-cancer men can live 70+</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ230</dd>
+            <dt>SAS Label: </dt>
+            <dd>T/F:Blv prostate-cancer men can live 70+</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Some men who develop prostate cancer live to be 70 years of age or more.</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">True</td>
+                <td class="values" align="right">46</td>
+                <td class="values" align="right">46</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">False</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">50</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">50</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">18</td>
+                <td class="values" align="right">68</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">53</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ240">PSQ240 - T/F:Blv prost.-cancer men die in 5 yrs</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ240</dd>
+            <dt>SAS Label: </dt>
+            <dd>T/F:Blv prost.-cancer men die in 5 yrs</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Some men who develop prostate cancer may have rapid disease and die within five years.</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">True</td>
+                <td class="values" align="right">33</td>
+                <td class="values" align="right">33</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">False</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">41</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">42</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">26</td>
+                <td class="values" align="right">68</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">53</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ250">PSQ250 - T/F:Blv higher risk for cancer relatives</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ250</dd>
+            <dt>SAS Label: </dt>
+            <dd>T/F:Blv higher risk for cancer relatives</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Men are at a higher risk for developing prostate cancer if they have more than one relative, their father, or a brother that have been diagnosed with prostate cancer.</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">True</td>
+                <td class="values" align="right">27</td>
+                <td class="values" align="right">27</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">False</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">39</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">39</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">29</td>
+                <td class="values" align="right">68</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">53</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ260">PSQ260 - T/F:Blv higher risk African Americans</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ260</dd>
+            <dt>SAS Label: </dt>
+            <dd>T/F:Blv higher risk African Americans</dd>
+            <dt>English Text: </dt>
+            <dd class="info">African American men have a higher risk of developing prostate cancer compared to other racial/ethnic groups.</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">True</td>
+                <td class="values" align="right">34</td>
+                <td class="values" align="right">34</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">False</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">42</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">42</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">26</td>
+                <td class="values" align="right">68</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">53</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ270">PSQ270 - T/F:Blv there are treatments available</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ270</dd>
+            <dt>SAS Label: </dt>
+            <dd>T/F:Blv there are treatments available</dd>
+            <dt>English Text: </dt>
+            <dd class="info">There are several different types of treatment available to men diagnosed with prostate cancer.</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">True</td>
+                <td class="values" align="right">53</td>
+                <td class="values" align="right">53</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">False</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">55</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">55</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">67</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">54</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ280">PSQ280 - T/F:Blv all options for cancer have risk</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ280</dd>
+            <dt>SAS Label: </dt>
+            <dd>T/F:Blv all options for cancer have risk</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Almost all options for treating and managing prostate cancer have some risk of side effects, including, loss of bladder control and problems with sexual performance.</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">True</td>
+                <td class="values" align="right">52</td>
+                <td class="values" align="right">52</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">False</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">56</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">56</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">67</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">54</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ290">PSQ290 - T/F:Blv there are support groups</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ290</dd>
+            <dt>SAS Label: </dt>
+            <dd>T/F:Blv there are support groups</dd>
+            <dt>English Text: </dt>
+            <dd class="info">There are support groups for men with prostate cancer.</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">True</td>
+                <td class="values" align="right">40</td>
+                <td class="values" align="right">40</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">False</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">44</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">44</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">23</td>
+                <td class="values" align="right">67</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">54</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="PSQ300">PSQ300 - Language used for the interview?</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">PSQ300</dd>
+            <dt>SAS Label: </dt>
+            <dd>Language used for the interview?</dd>
+            <dt>English Text: </dt>
+            <dd class="info">What language was used for the interview?</dd>
+            <dt>Target: </dt>
+            <dd> Males only 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">English</td>
+                <td class="values" align="right">61</td>
+                <td class="values" align="right">61</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Spanish</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">68</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">English and Spanish</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">69</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">69</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">52</td>
+                <td class="values" align="right">121</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2050 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>PSTPOL_H</title>
+    <meta name="title" content="NHANES 2013-2014: Pesticides - Organochlorine Pesticides - Pooled Samples Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Method_Files">Laboratory Method Files</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SAMPLEID">SAMPLEID - Pool identification number </a>
+              </li>
+              <li>
+                <a href="#RIDRETH3">RIDRETH3 - Race/Hispanic Origin</a>
+              </li>
+              <li>
+                <a href="#RIDAGGRP">RIDAGGRP - Age group</a>
+              </li>
+              <li>
+                <a href="#RIAGENDR">RIAGENDR - Gender</a>
+              </li>
+              <li>
+                <a href="#RIANSMP">RIANSMP - Number of samples in a pool</a>
+              </li>
+              <li>
+                <a href="#WTBSMSMA">WTBSMSMA - Sum of adjusted subsample B weights</a>
+              </li>
+              <li>
+                <a href="#LBCBHC">LBCBHC - Beta-hexachlorocyclohexane (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCBHCLA">LBCBHCLA - B-hexachlorocyclohexane Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDBHCLC">LBDBHCLC - Beta-hexachlorocyclohexane comment code</a>
+              </li>
+              <li>
+                <a href="#LBCHCB">LBCHCB - Hexachlorobenzene (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCHCBLA">LBCHCBLA - Hexachlorobenzene Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDHCBLC">LBDHCBLC - Hexachlorobenzene comment code</a>
+              </li>
+              <li>
+                <a href="#LBCMIR">LBCMIR - Mirex (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCMIRLA">LBCMIRLA - Mirex Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDMIRLC">LBDMIRLC - Mirex comment code</a>
+              </li>
+              <li>
+                <a href="#LBCOXY">LBCOXY - Oxychlordane (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCOXYLA">LBCOXYLA - Oxychlordane Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDOXYLC">LBDOXYLC - Oxychlordane comment code</a>
+              </li>
+              <li>
+                <a href="#LBCPDE">LBCPDE - p,p'-DDE (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCPDELA">LBCPDELA - p,p'-DDE Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDPDELC">LBDPDELC - p,p'-DDE comment code</a>
+              </li>
+              <li>
+                <a href="#LBCPDT">LBCPDT - p,p'-DDT (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCPDTLA">LBCPDTLA - p,p'-DDT Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDPDTLC">LBDPDTLC - p,p'-DDT comment code</a>
+              </li>
+              <li>
+                <a href="#LBCTNA">LBCTNA - trans-Nonachlor (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCTNALA">LBCTNALA - trans-Nonachlor Lipid Adj (ng/g)</a>
+              </li>
+              <li>
+                <a href="#LBDTNALC">LBDTNALC - trans-Nonachlor comment code</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2013-2014 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Pesticides - Organochlorine Pesticides - Pooled Samples (PSTPOL_H)</h3>
+        <h4> Data File: PSTPOL_H.xpt</h4>
+        <h5 class="left">First Published: May 2018</h5>
+        <h5 class="right">Last Revised: December 2019</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Organochlorine pesticides are a diverse group of synthetic chemicals that persist in the environment and tend to bioaccumulate. Most of these chemicals have been banned from use in the U.S. Assessment of exposure to persistent organochlorine pesticides in a representative sample of the U.S. population is needed to determine current prevalence and level of exposure and the potential for human health effects from exposure to these chemicals.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Examined participants aged 12 years and older from a one-third sample were eligible.  </p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>Serum samples from NHANES 2013-2014 were stored frozen before analysis. Eight organochlorine pesticides and metabolites were measured in serum using automated liquid/liquid extraction and subsequent sample clean-up. Final determination of target analytes was performed by isotope dilution gas chromatography high-resolution mass spectrometry GC/IDHRMS. The analytical method is described in Jones et al., 2012, which is a modification of the method described by Sjodin et al., 2004.
+</p>
+<p>
+Refer to the Laboratory Methods File for a detailed description of the laboratory methods used.
+</p>
+<p>
+There were no changes to the lab method, lab equipment, or lab site for this component in the NHANES 2013-2014 cycle.
+<br />
+</p><h2 id="Laboratory_Method_Files">Laboratory Method Files</h2>
+        <p>
+          <a target="_blank" href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2013/labmethods/PSTPOL_H_MET.pdf">Pesticides - Organochlorine Pesticides</a>
+          <span> (May 2018)</span>
+        </p>
+        <h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Serum samples were processed, stored, and shipped to the Division of Laboratory Sciences, National Center for Environmental Health, Centers for Disease Control and Prevention, Atlanta, GA for analysis.
+</p>
+<p>Detailed instructions on specimen collection and processing are discussed in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2013/manuals/2013_MEC_Laboratory_Procedures_Manual.pdf">NHANES Laboratory Procedures Manual (LPM)</a>.  Vials are stored under appropriate frozen (-30oC) conditions until they are shipped to the National Center for Environmental Health for testing. </p>
+<p>The NHANES quality assurance and quality control (QA/QC) protocols meet the 1988 Clinical Laboratory Improvement Amendments mandates. Detailed QA/QC instructions are discussed in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2013/manuals/2013_MEC_Laboratory_Procedures_Manual.pdf">NHANES LPM</a>. </p>
+<p><strong>Mobile Examination Centers (MECs)
+</strong></p>
+<p>Laboratory team performance is monitored using several techniques. NCHS and contract consultants use a structured competency assessment evaluation during visits to evaluate both the quality of the laboratory work and the quality-control procedures. Each laboratory staff member is observed for equipment operation, specimen collection and preparation; testing procedures and constructive feedback are given to each staff member. Formal retraining sessions are conducted annually to ensure that required skill levels were maintained.
+</p>
+<p><strong>Analytical Laboratories
+</strong></p>
+<p>NHANES uses several methods to monitor the quality of the analyses performed by the contract laboratories. In the MEC, these methods include performing blind split samples collected during &ldquo;dry run&rdquo; sessions. In addition, contract laboratories randomly perform repeat testing on 2% of all specimens.
+</p>
+<p>NCHS developed and distributed a quality control protocol for all CDC and contract laboratories, which outlined the use of Westgard rules (Westgard, et al., 1981) when running NHANES specimens. Progress reports containing any problems encountered during shipping or receipt of specimens, summary statistics for each control pool, QC graphs, instrument calibration, reagents, and any special considerations are submitted to NCHS quarterly. The reports are reviewed for trends or shifts in the data. The laboratories are required to explain any identified areas of concern.
+</p>
+<p>All QC procedures recommended by the manufacturers were followed. Reported results for all assays meet the Division of Environmental Health Laboratory Sciences&rsquo; quality control and quality assurance performance criteria for accuracy and precision, similar to the Westgard rules (Caudill, et al., 2008).
+<br />
+</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>The data were reviewed. Incomplete data or improbable values were sent to the performing laboratory for confirmation.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Refer to the <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overviewlab.aspx?BeginYear=2013">2013-2014 Laboratory Data Overview</a> for general information on NHANES laboratory data. </p>
+<p><strong>Subsample Weights
+</strong></p>
+<p>Organochlorine pesticides were measured in a one-third subsample of participants 12 years and older. Special sample weights are required to analyze these data properly. Specific sample weights for this subsample are included in this data file and should be used when analyzing these data.
+</p>
+<p>Samples were pooled in groups of 8 samples per pool within 48 demographic groups. The analysis of NHANES 2013-2014 pooled-sample data must be conducted with the basic demographic variables provided in this data file. This pooled-sample data file cannot be linked to other NHANES 2013-2014 data. Because each sample person does not have an equal probability of selection, sample weighting is needed to produce correct population estimates of means, percentiles, and other descriptive statistics. </p>
+<p>The pooled-sample weights required to produce estimates from these data are included in this data file. The analysis of pooled-samples from survey data is a relatively new field of study, and there is currently no established method to produce design effect adjusted variance estimates for these pooled results. These data cannot be analyzed using software designed for complex surveys because design features are not available. </p>
+<p><strong>Rationale and Methods Used to Create Pooled Results
+</strong></p>
+<p>The Centers for Disease Control and Prevention (CDC) provides an ongoing assessment of the U.S. population's exposure to environmental chemicals by using biomonitoring in conjunction with CDC's National Health and Nutrition Examination Survey (NHANES). Characterizing the distributions of concentrations of environmental compounds or their metabolites in the U.S. population is a primary objective of CDC's biomonitoring program. Historically, this characterization has been based on individual measurements of these compounds in body fluid or tissue from representative samples of the population. Pooling samples allows for larger sample volumes, which can result in lower limits of detection and reduces the number of measurements and costs. In NHANES 2013-2014, a weighted pooled-sample design was implemented to facilitate pooling samples before making analytical measurements. Table 1 lists the International Union of Pure and Applied Chemistry (IUPAC) names, common abbreviation, and NHANES variable name for the analytes included in this data file.
+</p>
+<p>Pools were prepared from serum collected from a random one-third subsample of the NHANES 2013-2014 participants aged 12 years and older. Samples were pooled based on gender, race and Hispanic origin, and age. To implement the pooled-sample design, each participant sample was identified as belonging to one of 48 demographic groups based on race and Hispanic origin (Mexican American: MA, Other Hispanic: OH, non-Hispanic white: NHW, non-Hispanic black: NHB, non-Hispanic Asian: NHA, Other race including multiracial: OTHER), gender (Male, Female), and age group (12-19, 20-39, 40-59, and 60+ years of age and older). Eight (8) samples were included in each pool. The number of pools created for each of the 48 demographic groups varied depending on the total number of individual samples available in a demographic group. The one-third subsample of NHANES 2013-2014 represents 2,318 individual samples, but because the pooled-sample design requires that all samples be of sufficient volume and that there be the same number of samples in each pool, 2,179 samples were available to create 284 pools with 8 samples per pool.  For NHANES 2013-2014, due to limited sample size, no pooled sample was formed for males 60 years and older in the &ldquo;OTHER&rdquo; race/Hispanic origin group. Data user needs to be cautious when making national inference including this population subgroup.  See more details on pool sample formation and exceptions in Table 2. The variable SAMPLEID denotes the identification number for each pool and ranges from 1 through 284. Please refer to the Pooled-Sample Technical Support file (POOLTF_H) for detailed information on individual participants included in each pool.
+</p>
+<p>In order to incorporate sample weighting into the pooled-sample design it was necessary to use a different volume of material from each sample contributing to a pool. The volume chosen for each sample in a pool was based on the ratio of its sampling weight to the sum of the sampling weights of all samples in the pool. To physically accomplish the pooling in the laboratory required that the ratio of the largest to the smallest sampling weight of samples in the same pool be no larger than 10. The individual samples were sorted/stratified by sampling weight within each of the 48 demographic groups and pools were formed using samples with sampling weights adjacent to one another in the sorted list. The number of samples in the one-third subsample, number of samples available, the number of these samples that were usable, and the number of pools formed in each demographic group are presented in Table 2. Once the pools were created, summed sampling weights were further adjusted to account for the unused samples. These adjusted summed sampling weights are represented by the variable named WTBSMSMA.
+</p>
+<p><strong>Demographic and Other Related Variables
+</strong></p>
+<p>The analysis of NHANES laboratory data must be conducted using the appropriate survey design and demographic variables. The <a href="https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Demographics&amp;CycleBeginYear=2013">NHANES 2013-2014 Demographics File</a>&nbsp;contains demographic data, health indicators, and other related information collected during household interviews as well as the sample design variables. The recommended procedure for variance estimation requires use of stratum and PSU variables (SDMVSTRA and SDMVPSU, respectively) in the demographic data file.
+</p>
+<p>The <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2013/datafiles/fastqx_h.htm">Fasting Questionnaire File</a>&nbsp;includes auxiliary information, such as fasting status, length of fast, and the time of venipuncture. </p>
+<p>This laboratory data file can be linked to the other NHANES data files using the unique survey participant identifier (i.e., SEQN).
+</p>
+<p><strong>Detection Limits
+</strong></p>
+<p>In the dataset, the whole-weight detection limit (pg/g serum) is a variable and dependent on the available sample size; however, the variation in sample size was low. Lipid adjusted detection limits are variable (ng/g lipid) due to differences of the lipid levels measured in individual pools/specimens. In cases where the result was below the limit of detection, the value for that variable is the detection limit divided by the square root of 2.</p>
+<p><strong>Table 1.</strong> NHANES Variable name, common abbreviation and International Union of Pure and Applied Chemistry (IUPAC) name for each analyte reported and maximum limit of detection (MLOD).&nbsp;&nbsp;</p>
+<table width="0" style="margin: auto auto auto 30pt; width: 414.65pt; border-collapse: collapse; mso-yfti-tbllook: 1184; mso-padding-alt: 0in 5.4pt 0in 5.4pt;" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr style="height: 15pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
+            <td style="border-width: 1pt 0px 0px; border-style: solid none none; border-color: windowtext #000000 #000000; padding: 0in 5.4pt; border-image: none; width: 48.95pt; height: 15pt; white-space: nowrap; background-color: transparent; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">Variable</span></b></p>
+            </td>
+            <td style="border-width: 1pt 0px 0px; border-style: solid none none; border-color: windowtext #000000 #000000; padding: 0in 5.4pt; border-image: none; width: 59.8pt; height: 15pt; white-space: nowrap; background-color: transparent; mso-border-top-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">Common</span></b></p>
+            </td>
+            <td style="border-width: 1pt 0px; border-style: solid none; border-color: windowtext #000000 black; padding: 0in 5.4pt; width: 206.25pt; height: 15pt; background-color: transparent; mso-border-top-alt: solid windowtext .5pt; mso-border-bottom-alt: solid black .5pt;" rowspan="2">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">IUPAC Name</span></b></p>
+            </td>
+            <td style="border-width: 1pt 0px; border-style: solid none; border-color: windowtext #000000; padding: 0in 5.4pt; width: 122pt; height: 15pt; white-space: nowrap; background-color: transparent; mso-border-top-alt: solid windowtext .5pt; mso-border-bottom-alt: solid windowtext .5pt;" colspan="2">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MLOD<sup>a </sup></span></b></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 1;">
+            <td style="border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; width: 48.95pt; height: 15pt; white-space: nowrap; background-color: transparent; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">Name</span></b></p>
+            </td>
+            <td style="border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; width: 59.8pt; height: 15pt; white-space: nowrap; background-color: transparent; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">Abbrev.</span></b></p>
+            </td>
+            <td style="border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; width: 65.75pt; height: 15pt; white-space: nowrap; background-color: transparent; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">(pg/g serum)</span></b></p>
+            </td>
+            <td style="border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; width: 56.25pt; height: 15pt; white-space: nowrap; background-color: transparent; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><b><span style="font-family: Calibri;">(ng/g lipid)</span></b></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 2;">
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 48.95pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCHCB</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 59.8pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">HCB</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 206.25pt; height: 15pt; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">Hexachlorobenzene</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 65.75pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">3.5</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 56.25pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">0.92</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 3;">
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 48.95pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCBHC</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 59.8pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">B-HCCH</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 206.25pt; height: 15pt; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">BETA-Hexachlorocyclohexane</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 65.75pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">3.5</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 56.25pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">0.92</span></p>
+            </td>
+        </tr>
+        <tr style="height: 20.25pt; mso-yfti-irow: 4;">
+            <td style="border: #000000; border-image: none; width: 48.95pt; height: 20.25pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">&nbsp; LBCOXY</span></p>
+            </td>
+            <td style="border: #000000; border-image: none; width: 59.8pt; height: 20.25pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">OXYCHLOR</span></p>
+            </td>
+            <td style="border: #000000; border-image: none; width: 206.25pt; height: 20.25pt; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">Oxychlordane</span></p>
+            </td>
+            <td style="border: #000000; border-image: none; width: 65.75pt; height: 20.25pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">3.5</span></p>
+            </td>
+            <td style="border: #000000; border-image: none; width: 56.25pt; height: 20.25pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">0.92</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 5;">
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 48.95pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCTNA</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 59.8pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">T-NONA</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 206.25pt; height: 15pt; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">Trans-Nonachlor</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 65.75pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">3.5</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 56.25pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">0.92</span></p>
+            </td>
+        </tr>
+        <tr style="height: 30pt; mso-yfti-irow: 6;">
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 48.95pt; height: 30pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCPDE</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 59.8pt; height: 30pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">PP-DDE</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 206.25pt; height: 30pt; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">2,2-Bis(4-chlorophenyl)-1,1-dichloroethene</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 65.75pt; height: 30pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">4.9</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 56.25pt; height: 30pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">1.3</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 7;">
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 48.95pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCPDT</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 59.8pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">PP-DDT</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 206.25pt; height: 15pt; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">2,2-Bis(4-chlorophenyl-1,1,1-trichloroethan</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 65.75pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">3.5</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; border: #000000; border-image: none; width: 56.25pt; height: 15pt; white-space: nowrap; background-color: transparent;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">0.92</span></p>
+            </td>
+        </tr>
+        <tr style="height: 15pt; mso-yfti-irow: 8; mso-yfti-lastrow: yes;">
+            <td style="border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; width: 48.95pt; height: 15pt; white-space: nowrap; background-color: transparent; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">LBCMIR</span></p>
+            </td>
+            <td style="border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; width: 59.8pt; height: 15pt; white-space: nowrap; background-color: transparent; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">MIREX</span></p>
+            </td>
+            <td style="border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; width: 206.25pt; height: 15pt; background-color: transparent; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; line-height: normal;"><span style="font-family: Calibri;">Mirex</span></p>
+            </td>
+            <td style="border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; width: 65.75pt; height: 15pt; white-space: nowrap; background-color: transparent; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">3.5</span></p>
+            </td>
+            <td style="border-width: 0px 0px 1pt; border-style: none none solid; border-color: #000000 #000000 windowtext; padding: 0in 5.4pt; border-image: none; width: 56.25pt; height: 15pt; white-space: nowrap; background-color: transparent; mso-border-bottom-alt: solid windowtext .5pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">0.92</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p style="margin-top: 0in; margin-right: 0in; margin-bottom: 10pt;"><b><sup>a</sup></b>The
+values given in the tables are the maximum limit of detection (MLOD) divided by
+the square root of 2 and are expressed as pg/g serum and ng/g lipid.</p>
+<p style="margin-top: 0in; margin-right: 0in; margin-bottom: 10pt;"><b>Table 2.</b>&nbsp;
+Number of subjects in the one-third subsample,<b> </b>number of individual serum samples available, number of usable
+samples, and number of pools formed from NHANES 2013-2014 participants per
+demographic group.<span style="font-family: Calibri;"></span></p>
+<div style="text-align: center;">
+<table width="659" style="margin: auto auto auto 30pt; mso-padding-alt: 0in .5pt 0in .5pt; mso-table-layout-alt: fixed;" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr style="height: 0.05pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
+            <td style="background: white; padding: 0in 5.4pt; border: 1pt solid black; border-image: none; width: 80.5pt; height: 0.05pt;" rowspan="2">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Race/Ethnicity</span></b></p>
+            </td>
+            <td style="background: white; border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: black black black #000000; padding: 0in 5.4pt; border-image: none; width: 85.5pt; height: 0.05pt; mso-border-left-alt: solid black .25pt;" rowspan="2">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Gender</span></b></p>
+            </td>
+            <td style="background: white; border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: black black black #000000; padding: 0in 5.4pt; border-image: none; width: 328.5pt; height: 0.05pt; mso-border-left-alt: solid black .25pt;" colspan="4">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Number of
+            subjects in the one-third subsample/</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Number of Samples
+            Available/Number of Usable Samples</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(Number of Pools)</span></b></p>
+            </td>
+        </tr>
+        <tr style="height: 0.05pt; mso-yfti-irow: 1;">
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">12&ndash;19 years</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">(RIDAGEYR=1)<sup><span style="font-size: 13px;">1</span></sup></span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">20&ndash;39 years</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">(RIDAGEYR=2)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">40&ndash;59 years</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">(RIDAGEYR=3)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">60+ years</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><span style="font-family: Calibri;">(RIDAGEYR=4)</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 2;">
+            <td style="background: white; border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 0in 5.4pt; border-image: none; width: 80.5pt; mso-border-top-alt: solid black .25pt;" rowspan="2">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Mexican</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">American</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIDRETH3=1)<sup><span style="font-size: 13px;">
+            1</span></sup></span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Male</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIAGENDR=1)<sup><span style="font-size: 13px;">
+            1</span></sup></span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">56/51/50<sup><span style="font-size: 13px;">2</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(7)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">40/39/39<sup><span style="font-size: 13px;">3</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(5)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">42/41/40</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(5)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">34/34/32</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(4)</span></b></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 3;">
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Female</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIAGENDR=2)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">54/50/50<sup><span style="font-size: 13px;">4</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(7)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">39/38/38<sup><span style="font-size: 13px;">5</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(5)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">43/43/43<sup><span style="font-size: 13px;">6</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(6)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">42/38/38<sup><span style="font-size: 13px;">5</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(5)</span></b></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 4;">
+            <td style="background: white; border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 0in 5.4pt; border-image: none; width: 80.5pt; mso-border-top-alt: solid black .25pt;" rowspan="2">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Other Hispanics</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIDRETH3=2)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Male</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIAGENDR=1)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">21/19/19<sup><span style="font-size: 13px;">7</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(3)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">19/19/19<sup><span style="font-size: 13px;">7</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(3)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">28/28/28<sup><span style="font-size: 13px;">8</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(4)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">24/23/23<sup><span style="font-size: 13px;">9</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(3)</span></b></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 5;">
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Female</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIAGENDR=2)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">22/22/22<sup><span style="font-size: 13px;">10</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(3)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">30/29/29<sup><span style="font-size: 13px;">11</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(4)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">33/32/32</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(4)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">34/33/32</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(4)</span></b></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow: 6;">
+            <td style="background: white; border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 0in 5.4pt; border-image: none; width: 80.5pt; mso-border-top-alt: solid black .25pt;" rowspan="2">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Non-Hispanic
+            White</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIDRETH3=3)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Male</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIAGENDR=1)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">67/63/63<sup><span style="font-size: 13px;">12</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(8)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">117/112/111<sup><span style="font-size: 13px;">13</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(14)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">111/106/104<sup><span style="font-size: 13px;">14</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(14)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">132/130/130<sup><span style="font-size: 13px;">15</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(17)</span></b></p>
+            </td>
+        </tr>
+        <tr style="height: 0.05pt; mso-yfti-irow: 7;">
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Female</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIAGENDR=2)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">56/49/48</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(6)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">122/121/120</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(15)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">131/125/125<sup><span style="font-size: 13px;">16</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(16)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">165/160/158<sup><span style="font-size: 13px;">17</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(20)</span></b></p>
+            </td>
+        </tr>
+        <tr style="height: 0.05pt; mso-yfti-irow: 8;">
+            <td style="background: white; border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 0in 5.4pt; border-image: none; width: 80.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt;" rowspan="2">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Non-Hispanic
+            Black</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIDRETH3=4)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Male</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIAGENDR=1)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">61/48/48</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(6)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">65/57/56</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(7)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">57/53/53<sup><span style="font-size: 13px;">18</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(7)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">74/67/67<sup><span style="font-size: 13px;">19</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(9)</span></b></p>
+            </td>
+        </tr>
+        <tr style="height: 0.05pt; mso-yfti-irow: 9;">
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Female</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIAGENDR=2)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">57/47/45<sup><span style="font-size: 13px;">20</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(6)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">69/64/64</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(8)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">66/62/62<sup><span style="font-size: 13px;">21</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(8)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">65/61/60<sup><span style="font-size: 13px;">22</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(8)</span></b></p>
+            </td>
+        </tr>
+        <tr style="height: 0.05pt; mso-yfti-irow: 10;">
+            <td valign="top" style="background: white; border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 0in 5.4pt; border-image: none; width: 80.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt;" rowspan="2">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Non-Hispanic
+            Asian</span></b></p>
+            <p style="margin: 0in 0in 10pt;"><span style="font-family: Calibri;">&nbsp;&nbsp;&nbsp; (RIDRETH3=6)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Male</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIAGENDR=1)<sup><span style="font-size: 13px;">
+            </span></sup></span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">23/18/18<sup><span style="font-size: 13px;">23</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(3)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">32/30/30<sup><span style="font-size: 13px;">24</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(4)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">34/31/31<sup><span style="font-size: 13px;">25</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(4)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">27/25/24</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(3)</span></b></p>
+            </td>
+        </tr>
+        <tr style="height: 0.05pt; mso-yfti-irow: 11;">
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Female</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIAGENDR=2)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">29/19/19<sup><span style="font-size: 13px;">7</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(3)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">40/39/39<sup><span style="font-size: 13px;">3</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(6)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">53/52/52<sup><span style="font-size: 13px;">26</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(7)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">23/23/23<sup><span style="font-size: 13px;">9</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(3)</span></b></p>
+            </td>
+        </tr>
+        <tr style="height: 0.05pt; mso-yfti-irow: 12;">
+            <td style="background: white; border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 black black; padding: 0in 5.4pt; border-image: none; width: 80.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt;" rowspan="2">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Other Race&nbsp; including&nbsp;
+            Multiracial</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIDRETH3=7)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Male</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIAGENDR=1)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">9/9/8</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(1)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">18/17/16</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(2)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">12/11/11<sup><span style="font-size: 13px;">27</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(2)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">2/2/0<sup><span style="font-size: 13px;">28</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(0)</span></b></p>
+            </td>
+        </tr>
+        <tr style="height: 0.05pt; mso-yfti-irow: 13; mso-yfti-lastrow: yes;">
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">Female</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center;"><span style="font-family: Calibri;">(RIAGENDR=2)</span></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">12/11/11<sup><span style="font-size: 13px;">29</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(2)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">16/16/16</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(2)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 81pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">9/9/8</span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(1)</span></b></p>
+            </td>
+            <td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 black black #000000; padding: 0in 5.4pt; width: 85.5pt; height: 0.05pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt;">
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">3/3/3<sup><span style="font-size: 13px;">30</span></sup></span></b></p>
+            <p style="margin: 0in 0in 0pt; text-align: center; line-height: normal;"><b style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri;">(1)</span></b></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<p style="margin: 12pt 0in 0pt 0.4in; line-height: normal;"><span style="font-family: Calibri; font-size: 10px;"><sup>1</sup> Value of this categorical variable in
+the data set; <sup>2</sup> 50 Usable samples: five 8 sample, one 7 sample and
+one 3 sample pool were created; </span></p>
+<span style="font-size: 10px;">
+</span>
+<p style="margin: 0in 0in 0pt 0.4in; line-height: normal;"><span style="font-family: Calibri; font-size: 10px;"><sup>3</sup> 39 Usable: four 8 sample and one 7
+sample pool; <sup>4</sup> 50 Usable: six 8 sample and one 2 sample pool; <sup>5</sup>
+38 Usable: four 8 sample and one 6 sample pools; <sup>6</sup> 43 Usable: five 8
+sample and one 3 sample pool; <sup>7</sup> 19 Usable: two 8 sample and one 3
+sample pool; <sup>8</sup> 28 Usable: three 8 sample and one 4 sample pool; <sup>9</sup>
+23 Usable: two 8 sample and one 7 sample pool; <sup>10 </sup>22 Usable: two 8
+sample and one 6 sample pool; <sup>11</sup> 29 Usable: three 8 sample and one 5
+sample pool; <sup>12</sup> 63 Usable: seven 8 sample and one 7 sample pool; <sup>13</sup>
+111 Usable: thirteen 8 sample and one 7sample pool; <sup>14</sup> 104 Usable:
+eleven 8 sample, two 7 sample and one 2 sample pool; <sup>15</sup> 130 Usable:
+fifteen 8 sample, one 7 sample and one 3 sample pool; <sup>16</sup> 125 Usable:
+fifteen 8 sample and one 5 sample pool; <sup>17</sup> 158 Usable: nineteen 8
+sample and one 6 sample pool; <sup>18</sup> 53 Usable: six 8 sample and one 5
+sample pool; <sup>19</sup> 67 Usable: eight 8 sample and one 3 sample pool; <sup>20</sup>
+45 Usable: five 8 sample and one 5 sample pool; <sup>21</sup> 62 Usable: seven
+8 sample and one 6 sample pool; <sup>22</sup> 60 Usable: seven 8 sample and one
+4 sample pool;<sup> 23 </sup>18 Usable: two 8 sample and one 2 sample pool; <sup>24
+</sup>30 Usable: three 8 sample and one 6 sample pool; <sup>25</sup> 31 Usable:
+three 8 sample and one 7 sample pool; <sup>26</sup> 52 Usable: six 8 sample and
+one 4 sample pool; <sup>27</sup> 11 Usable: one 7 sample and one 4 sample pool;
+<sup>28</sup> 0 Usable: no pool formed; <sup>29</sup> 11 Usable: one 8 sample
+and one 3 sample pool; <sup>30</sup> 3 Usable: one 3 sample pool.</span></p>
+<p><b>&nbsp;</b></p>
+<p><b>Methodological approaches
+for analysis </b></p>
+<p>There are a few
+pooled-sample methodological publications, which address approaches related to
+the following topics:</p>
+<ul>
+    <li>
+    Variance estimation and bias correction
+    when pooling samples from log-normally distributed populations (Caudill, 2010a;
+    Caudill, 2010b; Caudill et al., 2007; Li et al., 2014; Mary-Huard, 2007);
+    </li>
+    <li>
+    Models that incorporate measurement
+    error when analyzing pooled-samples from normally or log-normally distributed
+    populations (Caudill, 2010a; Caudill, 2015);
+    </li>
+    <li>
+    Incorporation of sample weighting into
+    a pooled-sample design (Caudill, 2012; Caudill, 2010a); and
+    </li>
+    <li>
+    Estimation of standard errors and
+    confidence limits for point estimates from pooled-samples (Caudill, 2012;
+    Caudill, 2010a).&nbsp;
+    </li>
+</ul></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Caudill SP, Characterizing populations of individuals using pooled samples. J Expo Sci Environ Epidemiol 2010a;20(1):29-37.</li>
+          <li>Caudill SP, Confidence interval estimation for pooled-sample biomonitoring from a complex survey design. Environ Int 2015;85:40-45.</li>
+          <li>Caudill SP, Important issues related to using pooled samples for environmental chemical biomonitoring. Stat Med 2010b;30(5):515-21.</li>
+          <li>Caudill SP, Schleicher RL, Pirkle JL, Multi-rule quality control for the age-related eye disease study. Stat Med 2008;27:4094-4106.</li>
+          <li>Caudill SP, Turner WE, and Patterson Jr. DG. Geometric mean estimation from pooled samples. Chemosphere 2007;69:371-80.</li>
+          <li>Caudill SP, Use of pooled samples from the National Health and Nutrition Examination Survey. Stat Med 2012;31(27):3269-77.</li>
+          <li>Jones R, Edenfield E, Anderson S, Zhang Y, Sj&ouml;din A. Semi-automated extraction and cleanup method for measuring persistent organic pollutants in human serum. Organohalogen Compounds 2012;A3:103.</li>
+          <li>Li X, Kuk AYC, Xu J, Empirical Bayes Gaussian likelihood estimation of exposure distributions from pooled samples in human biomonitoring. Stat Med 2014;33(28):4999-5014.</li>
+          <li>Mary-Huard T, Daudin J, Baccini M, Biggeri A, Bar-Hen A. Biases induced by pooling samples in microarray experiments. Bioinformatics 2007; 23(13):i313-8.</li>
+          <li>Sjodin A, Jones RS, Lapeza CR, Focant J-F, McGahee EE III, Patterson DG Jr. Semiautomated high-throughput extraction and cleanup method for the measurement of polybrominated diphenyl ethers, polybrominated biphenyls, and polychlorinated biphenyls in human serum. Anal. Chem. 2004; 76:1921-7.</li>
+          <li>Westgard JO, Barry PL, Hunt MR, Groth T. A multi-rule Shewhart chart for quality control in clinical chemistry. Clin Chem 1981;27(3):493-501.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SAMPLEID">SAMPLEID - Pool identification number </h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SAMPLEID</dd>
+            <dt>SAS Label: </dt>
+            <dd>Pool identification number </dd>
+            <dt>English Text: </dt>
+            <dd class="info">Pool identification number </dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 284</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RIDRETH3">RIDRETH3 - Race/Hispanic Origin</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RIDRETH3</dd>
+            <dt>SAS Label: </dt>
+            <dd>Race/Hispanic Origin</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Recode of reported race and Hispanic origin information</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Mexican American</td>
+                <td class="values" align="right">44</td>
+                <td class="values" align="right">44</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Other Hispanic</td>
+                <td class="values" align="right">28</td>
+                <td class="values" align="right">72</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Non-Hispanic White</td>
+                <td class="values" align="right">110</td>
+                <td class="values" align="right">182</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Non-Hispanic Black</td>
+                <td class="values" align="right">59</td>
+                <td class="values" align="right">241</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Non-Hispanic Asian</td>
+                <td class="values" align="right">32</td>
+                <td class="values" align="right">273</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Other Race, Including Multiracial</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RIDAGGRP">RIDAGGRP - Age group</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RIDAGGRP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Age group</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Age group</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">12-19 years</td>
+                <td class="values" align="right">55</td>
+                <td class="values" align="right">55</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">20-39 years</td>
+                <td class="values" align="right">74</td>
+                <td class="values" align="right">129</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">40-59 years</td>
+                <td class="values" align="right">78</td>
+                <td class="values" align="right">207</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">60+ years</td>
+                <td class="values" align="right">77</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RIAGENDR">RIAGENDR - Gender</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RIAGENDR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Gender</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Gender</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Male</td>
+                <td class="values" align="right">135</td>
+                <td class="values" align="right">135</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Female</td>
+                <td class="values" align="right">149</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RIANSMP">RIANSMP - Number of samples in a pool</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RIANSMP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Number of samples in a pool</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Number of samples in a pool</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2 to 8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTBSMSMA">WTBSMSMA - Sum of adjusted subsample B weights</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTBSMSMA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Sum of adjusted subsample B weights</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Adjust sum sampling weights in same pool</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">63628.672969 to 3656105.4719</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBHC">LBCBHC - Beta-hexachlorocyclohexane (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBHC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Beta-hexachlorocyclohexane (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Beta-hexachlorocyclohexane (pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.536 to 5648</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">281</td>
+                <td class="values" align="right">281</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCBHCLA">LBCBHCLA - B-hexachlorocyclohexane Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCBHCLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>B-hexachlorocyclohexane Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Beta-hexachlorocyclohexane Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.5162 to 853.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">281</td>
+                <td class="values" align="right">281</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBHCLC">LBDBHCLC - Beta-hexachlorocyclohexane comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBHCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Beta-hexachlorocyclohexane comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Beta-hexachlorocyclohexane comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">216</td>
+                <td class="values" align="right">216</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">65</td>
+                <td class="values" align="right">281</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCHCB">LBCHCB - Hexachlorobenzene (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCHCB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Hexachlorobenzene (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Hexachlorobenzene (pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">23.57 to 160.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCHCBLA">LBCHCBLA - Hexachlorobenzene Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCHCBLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Hexachlorobenzene Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Hexachlorobenzene Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">5.058 to 27.83</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDHCBLC">LBDHCBLC - Hexachlorobenzene comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDHCBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Hexachlorobenzene comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Hexachlorobenzene comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCMIR">LBCMIR - Mirex (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCMIR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mirex (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mirex (pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.536 to 633.5</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCMIRLA">LBCMIRLA - Mirex Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCMIRLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mirex Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mirex Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.4313 to 118.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDMIRLC">LBDMIRLC - Mirex comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDMIRLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Mirex comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mirex comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">182</td>
+                <td class="values" align="right">182</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">102</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCOXY">LBCOXY - Oxychlordane (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCOXY</dd>
+            <dt>SAS Label: </dt>
+            <dd>Oxychlordane (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Oxychlordane (pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.536 to 335.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCOXYLA">LBCOXYLA - Oxychlordane Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCOXYLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Oxychlordane Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Oxychlordane Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.7071 to 64.58</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDOXYLC">LBDOXYLC - Oxychlordane comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDOXYLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Oxychlordane comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Oxychlordane comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">281</td>
+                <td class="values" align="right">281</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCPDE">LBCPDE - p,p'-DDE (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCPDE</dd>
+            <dt>SAS Label: </dt>
+            <dd>p,p'-DDE (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">p,p'-dichlorodiphenyltrichloroethene (pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">147.9 to 18720</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCPDELA">LBCPDELA - p,p'-DDE Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCPDELA</dd>
+            <dt>SAS Label: </dt>
+            <dd>p,p'-DDE Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">p,p'-dichlorodiphenyltrichloroethene Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">32.3 to 2809</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDPDELC">LBDPDELC - p,p'-DDE comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDPDELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>p,p'-DDE comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">p,p'-dichlorodiphenyltrichloroethene comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCPDT">LBCPDT - p,p'-DDT (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCPDT</dd>
+            <dt>SAS Label: </dt>
+            <dd>p,p'-DDT (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">p,p'-dichlorodiphenyltrichlorethane (pg/g)
+
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.536 to 1030</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">283</td>
+                <td class="values" align="right">283</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCPDTLA">LBCPDTLA - p,p'-DDT Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCPDTLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>p,p'-DDT Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">p,p'-dichlorodiphenyltrichlorethane Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.601 to 188.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">283</td>
+                <td class="values" align="right">283</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDPDTLC">LBDPDTLC - p,p'-DDT comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDPDTLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>p,p'-DDT comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">p,p'-dichlorodiphenyltrichlorethane comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">263</td>
+                <td class="values" align="right">263</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">20</td>
+                <td class="values" align="right">283</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCTNA">LBCTNA - trans-Nonachlor (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCTNA</dd>
+            <dt>SAS Label: </dt>
+            <dd>trans-Nonachlor (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">trans-Nonachlor (pg/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.536 to 586.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCTNALA">LBCTNALA - trans-Nonachlor Lipid Adj (ng/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCTNALA</dd>
+            <dt>SAS Label: </dt>
+            <dd>trans-Nonachlor Lipid Adj (ng/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">trans-Nonachlor Lipid Adjusted (ng/g)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.7778 to 105.7</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDTNALC">LBDTNALC - trans-Nonachlor comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDTNALC</dd>
+            <dt>SAS Label: </dt>
+            <dd>trans-Nonachlor comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">trans-Nonachlor comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">283</td>
+                <td class="values" align="right">283</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

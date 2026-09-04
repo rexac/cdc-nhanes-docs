@@ -1,0 +1,618 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>SPXRAW_G</title>
+    <meta name="title" content="NHANES 2011-2012: Spirometry - Raw Curve Data Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Protocol_and_Procedure">Protocol and Procedure</a>
+          </li>
+          <li>
+            <a href="#Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#SPATTYPE">SPATTYPE - Pre or Post Bronchodilator Test</a>
+              </li>
+              <li>
+                <a href="#SPAMANU">SPAMANU - Spirometry Curve Number</a>
+              </li>
+              <li>
+                <a href="#SPAFACT">SPAFACT - BTPS Factor</a>
+              </li>
+              <li>
+                <a href="#SPAPOS">SPAPOS - Testing Position (Standing/Sitting)</a>
+              </li>
+              <li>
+                <a href="#SPAPLAT">SPAPLAT - Plateau Achieved</a>
+              </li>
+              <li>
+                <a href="#SPAACC">SPAACC - Acceptable Maneuver</a>
+              </li>
+              <li>
+                <a href="#SPAQEFF">SPAQEFF - Examinee Effort</a>
+              </li>
+              <li>
+                <a href="#SPXPTS">SPXPTS - Number of Data Points in Raw Curve</a>
+              </li>
+              <li>
+                <a href="#SPXRAW">SPXRAW - Raw Spirometry Curve Data</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2011-2012 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Spirometry - Raw Curve Data (SPXRAW_G)</h3>
+        <h4> Data File: SPXRAW_G.xpt</h4>
+        <h5 class="left">First Published: December 2014</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>For NHANES 2011-12 Spirometry data, the overall summary best test results for the most frequently used spirometric parameters are provided in the dataset SPX_G. This data should be sufficient for most analytic purposes. Advanced data analysts, however, may wish to use the raw, unedited spirometry curve data for modeling the NHANES 2011-12 Spirometry data. The dataset SPX_G_RAW provides this raw spirometry curve data. <br />
+<br />
+Participants eligible for spirometry performed an initial or "baseline" 1st test spirometry examination. If certain criteria were met, a subset of participants then performed a repeat 2nd test spirometry exam after inhaling a &beta;2-adrenergic bronchodilator. Multiple individual spirometry curves were typically obtained during both the 1st and 2nd test spirometry examinations. SPX_G_RAW contains the raw data for all of these individual spirometry curves. <br />
+<br />
+For each individual curve that was performed, the SPX_G_RAW dataset contains the administrative variables listed below plus the variable SPXRAW which contains the data points needed to plot each curve. Since this is a release of raw curve data, no editing was performed for the public release dataset. <br />
+<br />
+</p>
+<p>
+<table>
+    <tbody>
+        <tr>
+            <td>SEQN</td>
+            <td>Respondent Sequence Number</td>
+        </tr>
+        <tr>
+            <td>SPATTYPE</td>
+            <td>Type of Test: Pre- or Post-Bronchodilator Test</td>
+        </tr>
+        <tr>
+            <td>SPAMANU</td>
+            <td>Spirometry Curve Number</td>
+        </tr>
+        <tr>
+            <td>SPAFACT</td>
+            <td>BPTS Correction Factor</td>
+        </tr>
+        <tr>
+            <td>SPAPOS</td>
+            <td>Testing Position (Standing/Sitting)</td>
+        </tr>
+        <tr>
+            <td>SPAPLAT</td>
+            <td>Plateau Achieved (Individual Raw Curve)</td>
+        </tr>
+        <tr>
+            <td>SPAACC</td>
+            <td>Acceptable Maneuver (Individual Raw Curve)</td>
+        </tr>
+        <tr>
+            <td>SPAQEFF</td>
+            <td>Examinee Effort (Individual Raw Curve)</td>
+        </tr>
+        <tr>
+            <td>SPXPTS</td>
+            <td>Number of data points in raw spirometry curve</td>
+        </tr>
+        <tr>
+            <td>SPXRAW</td>
+            <td>Comma-delimited raw spirometry curve data</td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<br />
+<br /><h2 id="Eligible_Sample">Eligible Sample</h2><p>Survey participants aged 6 to 79 years were eligible for Spirometry. Specific exclusion criteria are described in the Data Documentation for the spirometry summary best test dataset SPX_G.</p>
+<p>&nbsp;</p><h2 id="Protocol_and_Procedure">Protocol and Procedure</h2><p>This is described in the Data Documentation for the SPX_G dataset. Spirometric testing procedures met the recommendations of the American Thoracic Society and the protocol was similar to that previously used in NHANES III (1998-1994). In addition, the same spirometers that were employed in NHANES III were used in the NHANES 2007-2012 data collection.</p>
+<p>&nbsp;</p><h2 id="Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</h2><p>This is described in detail in the Data Documentation for the SPX_G dataset and in the Respiratory Health Spirometry Procedures Manual. While the great majority of spirometry studies collected in NHANES 2011-12 were of high quality, because SPX_G_Raw is a release of raw unedited data, some spirometry curves listed may be of poor quality. For example, individual raw curves may show defects such as extra breaths, a cough, a large extrapolated volume or a false start to the expiratory maneuver. The variable SPAACC provided with the data file indicates whether a particular curve met ATS standards for acceptability.</p>
+<p>&nbsp;</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>Please see the SPX_G Data Documentation and the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2011/manuals/spirometry_procedures_manual.pdf" target="_blank">Respiratory Health Spirometry Procedures Manual</a>.</p>
+<p>&nbsp;</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>It is important to note that all spirometry curves collected in NHANES 2011-12 are provided in the SPX_G_Raw dataset, including those that may be unacceptable in quality and therefore either not suitable for or questionable to use in a particular data analysis. The data for the raw spirometry curves in the variable SPXRAW is the original spirometry data collected at ATPS (Ambient Temperature Pressure Saturated) and should therefore be converted to BTPS (Body Temperature Ambient Pressure Saturated) using the correction factor provided in the variable SPAFACT (Hankinson and Viola, 1983; NIOSH, 2003). <br />
+<br />
+The raw curve data contained in the SPX_G_Raw variable SPXRAW is provided as a comma-delimited string of data points, each of which consists of one to three characters. Each set of characters has a numeric value between -64 and 192. These numeric values represent the change in flow volume in milliliters over a 0.01 second time interval. To obtain a volume-time estimate, sequential volume-change values are summed over the time period desired. For example, to calculate the Forced Expiratory Volume in the 1st Second (FEV1), consecutive volume-change values would be summed from the start of expiration up to and including the measured value at one second. The total number of data points in a specific comma-delimited string may vary significantly from one spirometry curve to the next depending on the duration of a particular expiratory maneuver. The variable SPXPTS provides the total number of data points in a particular data curve. <br />
+<br />
+For each individual curve, a number of administrative variables are provided to assist data analysts. These include SPAPOS, the spirometry testing position (standing or seated); SPAPLAT, whether a plateau was achieved in the individual spirometry curve; SPAACC, whether the individual curve was acceptable by ATS criteria; SPAQEFF, an examinee effort rating for the individual curve; and SPXPTS, the number of data points in the individual curve. <br />
+<br />
+The NHANES examination sample weights, i.e., the full sample 2-Year MEC Exam Weight (WTMEC2YR) should be used to analyze the 2011-12 spirometry data. Please refer to the <a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx" target="_blank">NHANES Analytic Guidelines</a> and the on-line <a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/" target="_blank">NHANES Tutorial</a> for further details on the use of sample weights and other analytic issues.</p>
+<p>&nbsp;</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li><p>Hankinson JL, Viola JO. Dynamic BTPS correction factors for spirometric data. J Appl Physiol. 1983 Oct;55(4):1354-60. </p></li>
+          <li><p>National Institute for Occupational Safety and Health (NIOSH). NIOSH Spirometry Training Guide. Unit Five: Basic Spirometric Calculations. NIOSH Division of Respiratory Disease Studies. Morgantown WV. 2003.</p> <a href="http://www.cdc.gov/niosh/docs/2004-154c/pdfs/2004-154c.pdf ">http://www.cdc.gov/niosh/docs/2004-154c/pdfs/2004-154c.pdf </a>
+          </li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPATTYPE">SPATTYPE - Pre or Post Bronchodilator Test</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPATTYPE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Pre or Post Bronchodilator Test</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Pre (1st test) or Post Bronchodilator (2nd test)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">Pre</td>
+                <td class="values">Pre-Bronchodilator Test</td>
+                <td class="values" align="right">35642</td>
+                <td class="values" align="right">35642</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">Bron</td>
+                <td class="values">Post-Bronchodilator Test</td>
+                <td class="values" align="right">2019</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPAMANU">SPAMANU - Spirometry Curve Number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPAMANU</dd>
+            <dt>SAS Label: </dt>
+            <dd>Spirometry Curve Number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Sequence identification number for an individual spirometry curve</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 12</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">37661</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPAFACT">SPAFACT - BTPS Factor</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPAFACT</dd>
+            <dt>SAS Label: </dt>
+            <dd>BTPS Factor</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Body Temperature, Ambient Pressure Saturated with Water Vapor (BTPS) Correction Factor</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.039 to 1.129</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">37661</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPAPOS">SPAPOS - Testing Position (Standing/Sitting)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPAPOS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Testing Position (Standing/Sitting)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Testing Position (Standing/Sitting)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">Sitting</td>
+                <td class="values">Sitting</td>
+                <td class="values" align="right">197</td>
+                <td class="values" align="right">197</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">Standing</td>
+                <td class="values">Standing</td>
+                <td class="values" align="right">37464</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPAPLAT">SPAPLAT - Plateau Achieved</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPAPLAT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Plateau Achieved</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Plateau achieved in spirometry curve</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">Y</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">27602</td>
+                <td class="values" align="right">27602</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">N</td>
+                <td class="values">No</td>
+                <td class="values" align="right">10059</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPAACC">SPAACC - Acceptable Maneuver</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPAACC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Acceptable Maneuver</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Acceptable Maneuver</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">Y</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">34910</td>
+                <td class="values" align="right">34910</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">N</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2751</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPAQEFF">SPAQEFF - Examinee Effort</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPAQEFF</dd>
+            <dt>SAS Label: </dt>
+            <dd>Examinee Effort</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Examinee effort rating for the individual curve</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">A</td>
+                <td class="values">The curve quality attributes were acceptable</td>
+                <td class="values" align="right">19840</td>
+                <td class="values" align="right">19840</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">B</td>
+                <td class="values">The curve had a large time to peak flow or a non-repeatable peak flow</td>
+                <td class="values" align="right">6056</td>
+                <td class="values" align="right">25896</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">C</td>
+                <td class="values">The curve had either &lt; 6 seconds of exhalation or no plateau</td>
+                <td class="values" align="right">9014</td>
+                <td class="values" align="right">34910</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">D</td>
+                <td class="values">The curve had either a cough or large extrapolated volume</td>
+                <td class="values" align="right">2751</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXPTS">SPXPTS - Number of Data Points in Raw Curve</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXPTS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Number of Data Points in Raw Curve</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Number of Data Points in Raw Curve</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 2044</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">37661</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SPXRAW">SPXRAW - Raw Spirometry Curve Data</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SPXRAW</dd>
+            <dt>SAS Label: </dt>
+            <dd>Raw Spirometry Curve Data</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Comma delimited raw spirometry curve data</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			79 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">Raw Spirometry Curve Data</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">37661</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">37661</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

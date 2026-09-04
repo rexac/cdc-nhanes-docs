@@ -1,0 +1,4246 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>DOXPOL_H</title>
+    <meta name="title" content="NHANES 2013-2014: Polychlorinated dibenzo-p-dioxins (PCDDs), Dibenzofurans (PCDFs) &amp; Coplanar Polychlorinated Biphenyls (cPCBs) - Pooled Samples  Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Method_Files">Laboratory Method Files</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SAMPLEID">SAMPLEID - Pool identification number</a>
+              </li>
+              <li>
+                <a href="#RIAGENDR">RIAGENDR - Gender</a>
+              </li>
+              <li>
+                <a href="#RIDRETH3">RIDRETH3 - Ethnicity - Recode</a>
+              </li>
+              <li>
+                <a href="#RIDAGGRP">RIDAGGRP - Age at Screening Adjudicated - Recode</a>
+              </li>
+              <li>
+                <a href="#RIANSMP">RIANSMP - Number of samples in a pool</a>
+              </li>
+              <li>
+                <a href="#WTBSMSMA">WTBSMSMA - Sum of adjusted subsample B weights</a>
+              </li>
+              <li>
+                <a href="#LBCD01">LBCD01 - 1,2,3,7,8-pncdd (fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCD02">LBCD02 - 1,2,3,4,7,8-hxcdd (fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCD03">LBCD03 - 1,2,3,6,7,8-hxcdd (fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCD04">LBCD04 - 1,2,3,7,8,9-hxcdd (fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCD05">LBCD05 - 1,2,3,4,6,7,8-hpcdd (fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCD07">LBCD07 - Octachlorodibenzo-p-dioxin (fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCF01">LBCF01 - 2,3,7,8-Tetrachlorofuran (fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCF02">LBCF02 - 1,2,3,7,8-Pentachlorofuran (fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCF03">LBCF03 - 2,3,4,7,8-Pentachlorofuran (fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCF04">LBCF04 - 1,2,3,4,7,8-hcxdf (fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCF05">LBCF05 - 1,2,3,6,7,8-hxcdf (fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCF06">LBCF06 - 1,2,3,7,8,9-Hexachlorodifuran (fg/g ser)</a>
+              </li>
+              <li>
+                <a href="#LBCF07">LBCF07 - 2,3,4,6,7,8-Hexchlorofuran (fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCF08">LBCF08 - 1,2,3,4,6,7,8-Heptachlorodifuran(fg/g s)</a>
+              </li>
+              <li>
+                <a href="#LBCF09">LBCF09 - 1,2,3,4,7,8,9-Heptachlorodifuran(fg/g s)</a>
+              </li>
+              <li>
+                <a href="#LBCF10">LBCF10 - Octachlorodibenzofuran (fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCHXC">LBCHXC - 3,3',4,4',5,5'-hexachlorobiphenyl(fg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCPCB">LBCPCB - 3,3',4,4',5-Pentachlorobiphenyl (fg/g s)</a>
+              </li>
+              <li>
+                <a href="#LBCTC2">LBCTC2 - 3,4,4',5-Tetrachlorobiphenyl(fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCTCD">LBCTCD - 2,3,7,8-Tetrachloro-p-dioxn (fg/g serum)</a>
+              </li>
+              <li>
+                <a href="#LBCD01LA">LBCD01LA - 1,2,3,7,8-pncdd lipid adjusted (pg/g s)</a>
+              </li>
+              <li>
+                <a href="#LBCD02LA">LBCD02LA - 1,2,3,4,7,8-hxcdd lipid adjusted (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCD03LA">LBCD03LA - 1,2,3,6,7,8-hxcdd lipid adjusted (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCD04LA">LBCD04LA - 1,2,3,7,8,9-hxcdd lipid adjusted (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCD05LA">LBCD05LA - 1,2,3,4,6,7,8-hpcdd lipid adjusted(pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCD07LA">LBCD07LA - Octachlorodibenzo-p-dioxin Lpd Ad (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCF01LA">LBCF01LA - 2,3,7,8-tcdf lipid adjusted(pg/g sm lip)</a>
+              </li>
+              <li>
+                <a href="#LBCF02LA">LBCF02LA - 1,2,3,7,8-pncdf lipid adjusted(pg/g s)</a>
+              </li>
+              <li>
+                <a href="#LBCF03LA">LBCF03LA - 2,3,4,7,8-pncdf lipid adjust (pg/g s lp)</a>
+              </li>
+              <li>
+                <a href="#LBCF04LA">LBCF04LA - 1,2,3,4,7,8-hcxdf lipid adjusted (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCF05LA">LBCF05LA - 1,2,3,6,7,8-hxcdf lipid adjusted (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCF06LA">LBCF06LA - 1,2,3,7,8,9-hxcdf lipid adjusted (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCF07LA">LBCF07LA - 2,3,4,6,7,8-hxcdf lipid adjusted (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCF08LA">LBCF08LA - 1,2,3,4,6,7,8-hpcdf lipid adjusted(pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCF09LA">LBCF09LA - 1,2,3,4,7,8,9-hpcdf lipid adjusted(pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCF10LA">LBCF10LA - Octachlorodibenzofuran Lipid Adj (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCHXCLA">LBCHXCLA - 3,3',4,4',5,5'-hxcb Lipid adjusted(pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCPCBLA">LBCPCBLA - 3,3',4,4',5-pncb lipid adjusted (pg/g)</a>
+              </li>
+              <li>
+                <a href="#LBCTC2LA">LBCTC2LA - 3,4,4',5-tcb lipid adjusted (pg/g s lpd)</a>
+              </li>
+              <li>
+                <a href="#LBCTCDLA">LBCTCDLA - 2,3,7,8-tcdd lipid adjusted (pg/g s lpd)</a>
+              </li>
+              <li>
+                <a href="#LBDD01LC">LBDD01LC - 1,2,3,7,8-pncdd comment code</a>
+              </li>
+              <li>
+                <a href="#LBDD02LC">LBDD02LC - 1,2,3,4,7,8-hxcdd comment code</a>
+              </li>
+              <li>
+                <a href="#LBDD03LC">LBDD03LC - 1,2,3,6,7,8-hxcdd comment code</a>
+              </li>
+              <li>
+                <a href="#LBDD04LC">LBDD04LC - 1,2,3,7,8,9-hxcdd comment code</a>
+              </li>
+              <li>
+                <a href="#LBDD05LC">LBDD05LC - 1,2,3,4,6,7,8-hpcdd comment code</a>
+              </li>
+              <li>
+                <a href="#LBDD07LC">LBDD07LC - 1,2,3,4,6,7,8,9-ocdd comment code</a>
+              </li>
+              <li>
+                <a href="#LBDF01LC">LBDF01LC - 2,3,7,8-tcdf comment code</a>
+              </li>
+              <li>
+                <a href="#LBDF02LC">LBDF02LC - 1,2,3,7,8-pncdf comment code</a>
+              </li>
+              <li>
+                <a href="#LBDF03LC">LBDF03LC - 2,3,4,7,8-pncdf comment code</a>
+              </li>
+              <li>
+                <a href="#LBDF04LC">LBDF04LC - 1,2,3,4,7,8-hcxdf comment code</a>
+              </li>
+              <li>
+                <a href="#LBDF05LC">LBDF05LC - 1,2,3,6,7,8-hxcdf comment code</a>
+              </li>
+              <li>
+                <a href="#LBDF06LC">LBDF06LC - 1,2,3,7,8,9-hxcdf comment code</a>
+              </li>
+              <li>
+                <a href="#LBDF07LC">LBDF07LC - Octachlorodibenzo-p-dioxin comment code</a>
+              </li>
+              <li>
+                <a href="#LBDF08LC">LBDF08LC - 1,2,3,4,6,7,8-hpcdf comment code</a>
+              </li>
+              <li>
+                <a href="#LBDF09LC">LBDF09LC - 1,2,3,4,7,8,9-hpcdf comment code</a>
+              </li>
+              <li>
+                <a href="#LBDF10LC">LBDF10LC - Octachlorodibenzofuran comment code</a>
+              </li>
+              <li>
+                <a href="#LBDHXCLC">LBDHXCLC - 3,3',4,4',5,5'-hxcb comment code</a>
+              </li>
+              <li>
+                <a href="#LBDPCBLC">LBDPCBLC - 3,3',4,4',5-pncb comment code</a>
+              </li>
+              <li>
+                <a href="#LBDTC2LC">LBDTC2LC - 3,4,4',5-tcb comment code</a>
+              </li>
+              <li>
+                <a href="#LBDTCDLC">LBDTCDLC - 2,3,7,8-tcdd comment code</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2013-2014 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Polychlorinated dibenzo-p-dioxins (PCDDs), Dibenzofurans (PCDFs) &amp; Coplanar Polychlorinated Biphenyls (cPCBs) - Pooled Samples  (DOXPOL_H)</h3>
+        <h4> Data File: DOXPOL_H.xpt</h4>
+        <h5 class="left">First Published: September 2025</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Polychlorinated
+dibenzo-p-dioxins (PCDDs), polychlorinated dibenzofurans (PCDFs), and
+dioxin-like polychlorinated biphenyls (cPCBs) [coplanar] are similar classes of
+chlorinated aromatic chemicals that are produced as contaminants or byproducts.
+They have no known commercial or natural use. PCDDs and PCDFs, referred to as dioxins,
+are produced primarily during the incineration or burning of waste; the
+bleaching processes used in pulp and paper mills; and the chemical syntheses of
+trichlorophenoxyacetic acid, hexachlorophene, vinyl chloride, trichlorophenol,
+and pentachlorophenol. Both the synthesis and heat-related degradation of PCBs
+will produce PCDF by-products. PCBs are chlorinated aromatic hydrocarbon
+chemicals that were once synthesized for use as heat-exchanger, transformer,
+and hydraulic fluids, and also used as additives to paints, oils, window
+caulking, and floor tiles.</p>
+<p>Production of PCBs
+peaked in the early 1970s and was banned in the United States after 1979.
+Together with the PCDDs and PCDFs, cPCBs are often referred to as &ldquo;dioxin-like&rdquo;
+chemicals because they act in the body through a similar mechanism. </p>
+<p>In the
+environment, these dioxin-like chemicals are persistent and usually occur as a
+mixture of congeners (i.e., compounds that differ by the numbers and positions
+of chlorine atoms attached to the dibenzo-p-dioxin, dibenzofuran, or biphenyl
+structures). The general population is exposed to low levels of these
+dioxin-like chemicals primarily through ingestion of high-fat foods, such as
+dairy products, eggs, and animal fats, and some fish and wildlife. </p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Examined
+participants aged 12 years and older from a one-third sample were eligible.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>The seventeen
+PCDDs/PCDFs, and three cPCBs were measured in serum by gas
+chromatography/isotope-dilution high-resolution mass spectrometry (GC/ID-HRMS).
+The analytical method for PCDDs/PCDFs/cPCB is described in Patterson et. al.,
+1992 and Turner et. al., 1994. </p>
+<p>Refer to the
+Laboratory Method Files for a detailed description of the laboratory methods
+used.</p>
+<p>There were no
+changes to the lab method, lab equipment, or lab site for this component in the
+NHANES 2013-2014 cycle.</p><h2 id="Laboratory_Method_Files">Laboratory Method Files</h2>
+        <p>
+          <a target="_blank" href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2013/labmethods/DOXPOL-H-MET-508.pdf">Polychlorinated dibenzo-p-dioxins and furans (PCDD/F) and co-planar polychlorinated biphenyls (cPCB).</a>
+          <span> (September 2025)</span>
+        </p>
+        <h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Serum samples were
+processed, stored, and shipped to the Division of Laboratory Sciences, National
+Center for Environmental Health, Centers for Disease Control and Prevention,
+Atlanta, GA for analysis.</p>
+<p>Detailed
+instructions on specimen collection and processing are discussed in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2013/manuals/2013_MEC_Laboratory_Procedures_Manual.pdf">NHANES
+Laboratory Procedure Manual (LPM).</a> Vials are stored under appropriate frozen (-30&ordm;C) conditions
+until they are shipped to the National Center for Environmental Health for
+testing.</p>
+<p>The NHANES quality
+assurance and quality control (QA/QC) protocols meet the 1988 Clinical
+Laboratory Improvement Amendments mandates. Detailed QA/QC instructions are
+discussed in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2013/manuals/2013_MEC_Laboratory_Procedures_Manual.pdf">NHANES LPM.</a></p>
+<p><strong>Mobile Examination
+Centers (MECs) </strong></p>
+<p>Laboratory team
+performance is monitored using several techniques. NCHS and contract
+consultants use a structured competency assessment evaluation during visits to
+evaluate both the quality of the laboratory work and the QC procedures. Each
+laboratory staff member is observed for equipment operation, specimen
+collection and preparation; testing procedures and constructive feedback are
+given to each staff member. Formal retraining sessions are conducted annually
+to ensure that required skill levels were maintained.</p>
+<p><strong>Analytical
+Laboratories </strong></p>
+<p>NHANES uses
+several methods to monitor the quality of the analyses performed by the
+contract laboratories. In the MEC, these methods include performing blind split
+samples collected during &ldquo;dry run&rdquo; sessions. In addition, contract laboratories
+randomly perform repeat testing on 2% of all specimens.</p>
+<p>NCHS developed and
+distributed a QC protocol for all CDC and contract laboratories, which outlined
+the use of Westgard rules (Westgard, et. al., 1981) when testing NHANES
+specimens. Progress reports containing any problems encountered during shipping
+or receipt of specimens, summary statistics for each control pool, QC graphs,
+instrument calibration, reagents, and any special considerations are submitted
+to NCHS quarterly. The reports are reviewed for trends or shifts in the data.
+The laboratories are required to explain any identified areas of concern.</p>
+<p>All QC procedures
+recommended by the manufacturers were followed. Reported results for all assays
+meet the Division of Environmental Health Laboratory Sciences&rsquo; quality control
+and quality assurance performance criteria for accuracy and precision, similar
+to the Westgard rules (Caudill, et. al., 2008).</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>The data were
+reviewed. Incomplete data or improbable values were sent to the performing
+laboratory for confirmation.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Refer to the <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overviewlab.aspx?BeginYear=2013">2013-2014
+Laboratory Data Overview</a> for
+general information on NHANES laboratory data.</p>
+<p>Other data set:
+Additional PCB congeners are reported under data file name PCBPOL_H. Among
+these PCB congeners PCB 105, 114, 118, 156, 157, 167 and 189 has a toxic
+equivalence factor (TEF) and may be used with this data set for calculating a
+total TCDD equivalence.</p>
+<p><strong>Subsample Weights</strong></p>
+<p>PCDDs, PCDFs, and
+cPCBs were measured in a one-third subsample of participants 12 years and
+older. Special sample weights are required to analyze these data properly.
+Specific sample weights for this subsample are included in this data file and
+should be used when analyzing these data.</p>
+<p>Samples were
+pooled in groups of 8 samples per pool within 48 demographic groups. The
+analysis of NHANES 2013-2014 pooled-sample data must be conducted with the
+basic demographic variables provided in this data file. This pooled-sample data
+file cannot be linked to other NHANES 2013-2014 data. Because each sample
+person does not have an equal probability of selection, sample weighting is
+needed to produce correct population estimates of means, percentiles, and other
+descriptive statistics. </p>
+<p>The pooled-sample
+weights required to produce estimates from these data are included in this data
+file. The analysis of pooled-samples from survey data is a relatively new field
+of study, and there is currently no established method to produce design effect
+adjusted variance estimates for these pooled results. These data cannot be
+analyzed using software designed for complex surveys because design features
+are not available. </p>
+<p><strong>Rationale and Methods Used to Create Pooled Results</strong></p>
+<p>The Centers for Disease Control and Prevention (CDC) provides an ongoing
+assessment of the US population&rsquo;s exposure to environmental chemicals by using biomonitoring
+in conjunction with CDC&rsquo;s National Health and Nutrition Examination Survey
+(NHANES). Characterizing the distributions of concentrations of environmental
+compounds or their metabolites in the US population is a primary objective of
+CDC&rsquo;s biomonitoring program. Historically, this characterization has been based
+on individual measurements of these compounds in body fluid or tissue from
+representative samples of the population. Pooling samples allows for larger
+sample volumes which can result in lower limits of detection and reduces the
+number of measurements and costs. Table 1 lists the International Union of Pure
+and Applied Chemistry (IUPAC) names, common abbreviation, and NHANES variable
+name for the analytes included in this data file.</p>
+<p>Pools were
+prepared using serum collected from the eligible sample. Samples were pooled
+based on gender, race and Hispanic origin, and age. To implement the
+pooled-sample design, each participant sample was identified as belonging to one
+of 48 demographic groups based on race and Hispanic origin (Mexican American:
+MA, Other Hispanic: OH, non-Hispanic white: NHW, non-Hispanic black: NHB,
+non-Hispanic Asian: NHA, Other race including multiracial: OTHER), gender
+(Male, Female), and age group (12-19, 20-39, 40-59, and 60+ years of age and
+older). Eight (8) samples were included in each pool. The number of pools
+created for each of the 48 demographic groups varied depending on the total
+number of individual samples available in a demographic group. The one-third subset of NHANES 2013-2014 represents 2,318
+individual samples, but because the pooled-sample design requires that all
+samples be of sufficient volume and that there be the same number of samples in
+each pool, 2,179samples were available to create 284 pools with 8 samples per
+pool (Exceptions
+are in Table 2). For NHANES 2013-2014, due to limited sample
+size, no pooled sample was formed for females 60 years and older in the &ldquo;OTHER&rdquo;
+race/Hispanic origin group. Data user needs to be cautious when making national
+inference including this population subgroup. See more details on pool sample
+formation and exceptions in Table 2. The variable SAMPLEID denotes the
+identification number for each pool and ranges from 1 through 284. Please refer to the Pooled-Sample Technical
+Support file (POOLTF_H) for detailed information on individual participants
+included in each pool.</p>
+<p>In order
+to incorporate sample weighting into the pooled-sample design it was necessary
+to use a different volume of material from each sample contributing to a pool.
+The volume chosen for each sample in a pool was based on the ratio of its
+sampling weight to the sum of the sampling weights of all samples in the pool.
+To physically accomplish the pooling in the laboratory required that the ratio
+of the largest to the smallest sampling weight of samples in the same pool be
+no larger than about 4 or 5. The individual samples were sorted/stratified by
+sampling weight within each of the 48 demographic groups and pools were formed
+using samples with sampling weights adjacent to one another in the sorted list.
+The number of samples in the one-third subset, number of samples available, the
+number of these samples that were usable, and the number of pools formed in
+each demographic group are presented in Table 2. Once the pools were created,
+summed sampling weights were further adjusted to account for the unused samples.
+These adjusted summed sampling weights are represented by the variable named WTBSMSMA.</p>
+<p><strong>Detection Limits</strong></p>
+<p>In the dataset, the whole-weight detection limit (fg/g serum) is a variable
+and dependent on the available sample size; however, the variation in sample
+size was low. Lipid adjusted detection limits are variable (pg/g lipid) due to
+differences of the lipid levels measured in individual pools/specimens. In
+cases where the result was below the limit of detection, the value for that
+variable is the detection limit divided by the square root of 2. </p>
+<p><strong>Table 1.</strong> NHANES Variable name, common
+abbreviation and International Union of Pure and Applied Chemistry (IUPAC) name
+for each analyte reported. Maximum limit of detection divided with square root
+of 2 (MLOD) expressed as fg/serum and pg/g lipid).</p>
+<table border="1" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;"><strong>Variable Name</strong><strong></strong></p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;"><strong>Common Abbrev.</strong><strong></strong></p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;"><strong>IUPAC Name</strong><strong></strong></p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;"><strong>Max LOD<sup>a</sup> (fg/g serum)</strong><strong></strong></p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;"><strong>Max LOD<sup>a</sup> (pg/g lipid)</strong><strong></strong></p>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top">
+            <p>LBCTCD</p>
+            </td>
+            <td valign="top">
+            <p>2378-TeCDD</p>
+            </td>
+            <td valign="top">
+            <p>2,3,7,8-Tetrachlorodibenzo-p-dioxin (TCDD)</p>
+            </td>
+            <td valign="top">
+            <p>3.0</p>
+            </td>
+            <td valign="top">
+            <p>0.65</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCD01</p>
+            </td>
+            <td valign="top">
+            <p>12378-PeCDD</p>
+            </td>
+            <td valign="top">
+            <p>1,2,3,7,8-Pentachlorodibenzo-p-dioxin</p>
+            </td>
+            <td valign="top">
+            <p>2.8</p>
+            </td>
+            <td valign="top">
+            <p>0.59</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCD02</p>
+            </td>
+            <td valign="top">
+            <p>123478-HxCDD</p>
+            </td>
+            <td valign="top">
+            <p>1,2,3,4,7,8-Hexachlorodibenzo-p-dioxin</p>
+            </td>
+            <td valign="top">
+            <p>3.1</p>
+            </td>
+            <td valign="top">
+            <p>0.66</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCD03</p>
+            </td>
+            <td valign="top">
+            <p>123678-HxCDD</p>
+            </td>
+            <td valign="top">
+            <p>1,2,3,6,7,8-Hexachlorodibenzo-p-dioxin</p>
+            </td>
+            <td valign="top">
+            <p>28</p>
+            </td>
+            <td valign="top">
+            <p>6.2</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCD04</p>
+            </td>
+            <td valign="top">
+            <p>123789-HxCDD</p>
+            </td>
+            <td valign="top">
+            <p>1,2,3,7,8,9-Hexachlorodibenzo-p-dioxin</p>
+            </td>
+            <td valign="top">
+            <p>4.2</p>
+            </td>
+            <td valign="top">
+            <p>0.92</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCD05</p>
+            </td>
+            <td valign="top">
+            <p>1234678-HpCDD</p>
+            </td>
+            <td valign="top">
+            <p>1,2,3,4,6,7,8-Heptachlorodibenzo-p-dioxin</p>
+            </td>
+            <td valign="top">
+            <p>33</p>
+            </td>
+            <td valign="top">
+            <p>7.1</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCD07</p>
+            </td>
+            <td valign="top">
+            <p>OCDD</p>
+            </td>
+            <td valign="top">
+            <p>Octachlorodibenzo-p-dioxin</p>
+            </td>
+            <td valign="top">
+            <p>325</p>
+            </td>
+            <td valign="top">
+            <p>70</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCF01</p>
+            </td>
+            <td valign="top">
+            <p>2378-TeCDF</p>
+            </td>
+            <td valign="top">
+            <p>2,3,7,8-Tetrachlorodibenzofuran</p>
+            </td>
+            <td valign="top">
+            <p>5.3</p>
+            </td>
+            <td valign="top">
+            <p>1.1</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCF02</p>
+            </td>
+            <td valign="top">
+            <p>12378-PeCDF</p>
+            </td>
+            <td valign="top">
+            <p>1,2,3,7,8-Pentachlorodibenzofuran</p>
+            </td>
+            <td valign="top">
+            <p>4.0</p>
+            </td>
+            <td valign="top">
+            <p>0.85</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCF03</p>
+            </td>
+            <td valign="top">
+            <p>23478-PeCDF</p>
+            </td>
+            <td valign="top">
+            <p>2,3,4,7,8-Pentachlorodibenzofuran</p>
+            </td>
+            <td valign="top">
+            <p>3.5</p>
+            </td>
+            <td valign="top">
+            <p>0.78</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCF04</p>
+            </td>
+            <td valign="top">
+            <p>123478-HxCDF</p>
+            </td>
+            <td valign="top">
+            <p>1,2,3,4,7,8-Hexachlorodibenzofuran</p>
+            </td>
+            <td valign="top">
+            <p>18</p>
+            </td>
+            <td valign="top">
+            <p>4.1</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCF05</p>
+            </td>
+            <td valign="top">
+            <p>123678-HxCDF</p>
+            </td>
+            <td valign="top">
+            <p>1,2,3,6,7,8-Hexachlorodibenzofuran</p>
+            </td>
+            <td valign="top">
+            <p>16</p>
+            </td>
+            <td valign="top">
+            <p>3.5</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCF06</p>
+            </td>
+            <td valign="top">
+            <p>123789-HxCDF</p>
+            </td>
+            <td valign="top">
+            <p>1,2,3,7,8,9-Hexachlorodibenzofuran</p>
+            </td>
+            <td valign="top">
+            <p>2.8</p>
+            </td>
+            <td valign="top">
+            <p>0.61</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCF07</p>
+            </td>
+            <td valign="top">
+            <p>234678-HxCDF</p>
+            </td>
+            <td valign="top">
+            <p>2,3,4,6,7,8-Hexchlorodibenzofuran</p>
+            </td>
+            <td valign="top">
+            <p>3.4</p>
+            </td>
+            <td valign="top">
+            <p>0.71</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCF08</p>
+            </td>
+            <td valign="top">
+            <p>1234678-HpCDF</p>
+            </td>
+            <td valign="top">
+            <p>1,2,3,4,6,7,8-Heptachlorodibenzofuran</p>
+            </td>
+            <td valign="top">
+            <p>30</p>
+            </td>
+            <td valign="top">
+            <p>6.6</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCF09</p>
+            </td>
+            <td valign="top">
+            <p>1234789-HpCDF</p>
+            </td>
+            <td valign="top">
+            <p>1,2,3,4,7,8,9-Heptachlorodibenzofuran</p>
+            </td>
+            <td valign="top">
+            <p>3.7</p>
+            </td>
+            <td valign="top">
+            <p>0.85</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCF10</p>
+            </td>
+            <td valign="top">
+            <p>OCDF</p>
+            </td>
+            <td valign="top">
+            <p>Octachlorodibenzofuran</p>
+            </td>
+            <td valign="top">
+            <p>6.1</p>
+            </td>
+            <td valign="top">
+            <p>1.3</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCTC2</p>
+            </td>
+            <td valign="top">
+            <p>PCB81</p>
+            </td>
+            <td valign="top">
+            <p>3,4,4&acute;,5-Tetrachlorobiphenyl</p>
+            </td>
+            <td valign="top">
+            <p>30</p>
+            </td>
+            <td valign="top">
+            <p>6.6</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCPCB</p>
+            </td>
+            <td valign="top">
+            <p>PCB126</p>
+            </td>
+            <td valign="top">
+            <p>3,3&acute;,4,4&acute;,5-Pentachlorobiphenyl</p>
+            </td>
+            <td valign="top">
+            <p>30</p>
+            </td>
+            <td valign="top">
+            <p>6.9</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p>LBCHXC</p>
+            </td>
+            <td valign="top">
+            <p>PCB169</p>
+            </td>
+            <td valign="top">
+            <p>3,3&acute;,4,4&acute;,5,5&acute;-Hexachlorobiphenyl</p>
+            </td>
+            <td valign="top">
+            <p>30</p>
+            </td>
+            <td valign="top">
+            <p>7.0</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p><strong><sup>a</sup></strong>The values given in the tables are the maximum limit of
+detection (MLOD) divided by the square root of 2 and are expressed as fg/g
+serum and pg/g lipid.</p>
+<p><strong>Table 2. </strong>Number of subjects in the one-third subsample, number of individual serum
+samples available, number of usable samples, and number of pools formed from
+NHANES 2013-2014 participants per demographic group.<strong></strong></p>
+<table border="1" cellspacing="0" cellpadding="0" width="623">
+    <tbody>
+        <tr>
+            <td rowspan="2" valign="top" style="width: 113px;">
+            <p><strong>Race/Ethnicity</strong><strong></strong></p>
+            </td>
+            <td rowspan="2" valign="top" style="width: 132px;">
+            <p><strong>Sex</strong><strong></strong></p>
+            </td>
+            <td colspan="4" valign="top" style="width: 377px;">
+            <p><strong>Number of subjects in the one-third subsample/</strong><strong></strong></p>
+            <p><strong>Number of Samples Available/Number of Usable
+            Samples</strong><strong></strong></p>
+            <p><strong>(Number of Pools)</strong><strong></strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" style="width: 96px;">
+            <p><strong>12&ndash;19 years</strong><strong></strong></p>
+            <p>(RIDAGEYR=1)<sup>1</sup></p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p><strong>20&ndash;39 years</strong><strong></strong></p>
+            <p>(RIDAGEYR=2)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p><strong>40&ndash;59 years</strong><strong></strong></p>
+            <p>(RIDAGEYR=3)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p><strong>60+ years</strong><strong></strong></p>
+            <p>(RIDAGEYR=4)</p>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" valign="top" style="width: 113px;">
+            <p><strong>Mexican</strong><strong></strong></p>
+            <p><strong>American</strong><strong></strong></p>
+            <p>(RIDRETH3=1)<sup>&nbsp;1</sup></p>
+            </td>
+            <td valign="top" style="width: 132px;">
+            <p><strong>Male</strong>(RIAGENDR=1)<sup>&nbsp;1</sup></p>
+            </td>
+            <td valign="top" style="width: 96px;">
+            <p>56/51/50<sup>2</sup>(7)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p>40/39/39<sup>3</sup>(5)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>42/41/40(5)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>34/34/32(4)</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" style="width: 132px;">
+            <p><strong>Female</strong><strong></strong></p>
+            <p>(RIAGENDR=2)</p>
+            </td>
+            <td valign="top" style="width: 96px;">
+            <p>54/50/50<sup>4</sup></p>
+            <p>(7)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p>39/38/38<sup>5</sup></p>
+            <p>(5)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>43/43/43<sup>6</sup></p>
+            <p>(6)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>42/38/38<sup>5</sup></p>
+            <p>(5)</p>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" valign="top" style="width: 113px;">
+            <p><strong>Other Hispanics</strong><strong></strong></p>
+            <p>(RIDRETH3=2)</p>
+            </td>
+            <td valign="top" style="width: 132px;">
+            <p><strong>Male</strong><strong></strong></p>
+            <p>(RIAGENDR=1)</p>
+            </td>
+            <td valign="top" style="width: 96px;">
+            <p>21/19/19<sup>7</sup></p>
+            <p>(3)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p>19/19/19<sup>7</sup></p>
+            <p>(3)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>28/28/28<sup>8</sup></p>
+            <p>(4)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>24/23/23<sup>9</sup></p>
+            <p>(3)</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" style="width: 132px;">
+            <p><strong>Female</strong><strong></strong></p>
+            <p>(RIAGENDR=2)</p>
+            </td>
+            <td valign="top" style="width: 96px;">
+            <p>22/22/22<sup>10</sup></p>
+            <p>(3)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p>30/29/29<sup>11</sup></p>
+            <p>(4)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>33/32/32</p>
+            <p>(4)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>34/33/32</p>
+            <p>(4)</p>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" valign="top" style="width: 113px;">
+            <p><strong>Non-Hispanic White</strong><strong></strong></p>
+            <p>(RIDRETH3=3)</p>
+            </td>
+            <td valign="top" style="width: 132px;">
+            <p><strong>Male</strong><strong></strong></p>
+            <p>(RIAGENDR=1)</p>
+            </td>
+            <td valign="top" style="width: 96px;">
+            <p>67/63/63<sup>12</sup></p>
+            <p>(8)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p>117/112/111<sup>13</sup></p>
+            <p>(14)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>111/106/104<sup>14</sup></p>
+            <p>(14)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>132/130/130<sup>15</sup></p>
+            <p>(17)</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" style="width: 132px;">
+            <p><strong>Female</strong><strong></strong></p>
+            <p>(RIAGENDR=2)</p>
+            </td>
+            <td valign="top" style="width: 96px;">
+            <p>56/49/48</p>
+            <p>(6)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p>122/121/120</p>
+            <p>(15)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>131/125/125<sup>16</sup></p>
+            <p>(16)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>165/160/158<sup>17</sup></p>
+            <p>(20)</p>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" valign="top" style="width: 113px;">
+            <p><strong>Non-Hispanic Black</strong><strong></strong></p>
+            <p>(RIDRETH3=4)</p>
+            </td>
+            <td valign="top" style="width: 132px;">
+            <p><strong>Male</strong><strong></strong></p>
+            <p>(RIAGENDR=1)</p>
+            </td>
+            <td valign="top" style="width: 96px;">
+            <p>61/48/48</p>
+            <p>(6)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p>65/57/56</p>
+            <p>(7)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>57/53/53<sup>18</sup></p>
+            <p>(7)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>74/67/67<sup>19</sup></p>
+            <p>(9)</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" style="width: 132px;">
+            <p><strong>Female</strong><strong></strong></p>
+            <p>(RIAGENDR=2)</p>
+            </td>
+            <td valign="top" style="width: 96px;">
+            <p>57/47/45<sup>20</sup></p>
+            <p>(6)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p>69/64/64</p>
+            <p>(8)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>66/62/62<sup>21</sup></p>
+            <p>(8)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>65/61/60<sup>22</sup></p>
+            <p>(8)</p>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" valign="top" style="width: 113px;">
+            <p><strong>Non-Hispanic Asian</strong><strong></strong></p>
+            <p>(RIDRETH3=6)</p>
+            </td>
+            <td valign="top" style="width: 132px;">
+            <p><strong>Male</strong><strong></strong></p>
+            <p>(RIAGENDR=1)</p>
+            </td>
+            <td valign="top" style="width: 96px;">
+            <p>23/18/18<sup>23</sup></p>
+            <p>(3)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p>32/30/30<sup>24</sup></p>
+            <p>(4)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>34/31/31<sup>25</sup></p>
+            <p>(4)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>27/25/24</p>
+            <p>(3)</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" style="width: 132px;">
+            <p><strong>Female</strong><strong></strong></p>
+            <p>(RIAGENDR=2)</p>
+            </td>
+            <td valign="top" style="width: 96px;">
+            <p>29/19/19<sup>7</sup></p>
+            <p>(3)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p>40/39/39<sup>3</sup></p>
+            <p>(6)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>53/52/52<sup>26</sup></p>
+            <p>(7)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>23/23/23<sup>9</sup></p>
+            <p>(3)</p>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" valign="top" style="width: 113px;">
+            <p><strong>Other Race including Multiracial</strong><strong></strong></p>
+            <p>(RIDRETH3=7)</p>
+            </td>
+            <td valign="top" style="width: 132px;">
+            <p><strong>Male</strong><strong></strong></p>
+            <p>(RIAGENDR=1)</p>
+            </td>
+            <td valign="top" style="width: 96px;">
+            <p>9/9/8</p>
+            <p>(1)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p>18/17/16</p>
+            <p>(2)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>12/11/11<sup>27</sup></p>
+            <p>(2)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>2/2/0<sup>28</sup>(0)</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" style="width: 132px;">
+            <p><strong>Female</strong>(RIAGENDR=2)</p>
+            </td>
+            <td valign="top" style="width: 96px;">
+            <p>12/11/11<sup>29</sup></p>
+            <p>(2)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p>16/16/16</p>
+            <p>(2)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>9/9/8</p>
+            <p>(1)</p>
+            </td>
+            <td valign="top" style="width: 100px;">
+            <p>3/3/3<sup>30</sup></p>
+            <p>(1)</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p><sup>1</sup>&nbsp;Value of this categorical variable in the data
+set;&nbsp;<sup>2</sup>&nbsp;50 Usable samples: five 8 sample, one 7 sample and
+one 3 sample pool were created;</p>
+<p><sup>3</sup>&nbsp;39 Usable: four 8 sample and one 7 sample pool;&nbsp;<sup>4</sup>&nbsp;50
+Usable: six 8 sample and one 2 sample pool;&nbsp;<sup>5</sup>&nbsp;38 Usable:
+four 8 sample and one 6 sample pools;&nbsp;<sup>6</sup>&nbsp;43 Usable: five 8
+sample and one 3 sample pool;&nbsp;<sup>7</sup>&nbsp;19 Usable: two 8 sample
+and one 3 sample pool;&nbsp;<sup>8</sup>&nbsp;28 Usable: three 8 sample and one
+4 sample pool;&nbsp;<sup>9</sup>&nbsp;23 Usable: two 8 sample and one 7 sample
+pool;&nbsp;<sup>10&nbsp;</sup>22 Usable: two 8 sample and one 6 sample
+pool;&nbsp;<sup>11</sup>&nbsp;29 Usable: three 8 sample and one 5 sample
+pool;&nbsp;<sup>12</sup>&nbsp;63 Usable: seven 8 sample and one 7 sample
+pool;&nbsp;<sup>13</sup>&nbsp;111 Usable: thirteen 8 sample and one 7sample
+pool;&nbsp;<sup>14</sup>&nbsp;104 Usable: eleven 8 sample, two 7 sample and one
+2 sample pool;&nbsp;<sup>15</sup>&nbsp;130 Usable: fifteen 8 sample, one 7
+sample and one 3 sample pool;&nbsp;<sup>16</sup>&nbsp;125 Usable: fifteen 8
+sample and one 5 sample pool;&nbsp;<sup>17</sup>&nbsp;158 Usable: nineteen 8
+sample and one 6 sample pool;&nbsp;<sup>18</sup>&nbsp;53 Usable: six 8 sample
+and one 5 sample pool;&nbsp;<sup>19</sup>&nbsp;67 Usable: eight 8 sample and
+one 3 sample pool;&nbsp;<sup>20</sup>&nbsp;45 Usable: five 8 sample and one 5
+sample pool;&nbsp;<sup>21</sup>&nbsp;62 Usable: seven 8 sample and one 6 sample
+pool;&nbsp;<sup>22</sup>&nbsp;60 Usable: seven 8 sample and one 4 sample pool;<sup>&nbsp;23&nbsp;</sup>18
+Usable: two 8 sample and one 2 sample pool;&nbsp;<sup>24&nbsp;</sup>30 Usable:
+three 8 sample and one 6 sample pool;&nbsp;<sup>25</sup>&nbsp;31 Usable: three
+8 sample and one 7 sample pool;&nbsp;<sup>26</sup>&nbsp;52 Usable: six 8 sample
+and one 4 sample pool;&nbsp;<sup>27</sup>&nbsp;11 Usable: one 7 sample and one
+4 sample pool;&nbsp;<sup>28</sup>&nbsp;0 Usable: no pool formed;&nbsp;<sup>29</sup>&nbsp;11
+Usable: one 8 sample and one 3 sample pool;&nbsp;<sup>30</sup>&nbsp;3 Usable:
+one 3 sample pool.</p>
+<p><strong></strong></p>
+<p><strong>Methodological approaches for analysis</strong></p>
+<p>There are a few pooled-sample methodological publications which address
+approaches related to the following topics: </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&bull;
+Variance estimation and bias correction when pooling samples from log-normally
+distributed populations (Caudill, 2010a; Caudill, 2010b; Caudill et. al., 2007;
+Li et. al., 2014); </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&bull;
+Models that incorporate measurement error when analyzing pooled-samples from
+normally or log-normally distributed populations (Caudill, 2010a; Caudill, 2015);
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&bull;
+Incorporation of sample weighting into a pooled-sample design (Caudill, 2012;
+Caudill, 2010a); </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&bull;
+Estimation of standard errors and confidence limits for point estimates from
+pooled-samples (Caudill, 2012; Caudill, 2010a). </p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Caudill SP, Characterizing populations of individuals using pooled samples. J Expo Sci Environ Epidemiol 2010a;20(1):29-37.</li>
+          <li>Caudill SP, Confidence interval estimation for pooled-sample biomonitoring from a complex survey design. Environ Int 2015;85:40-45.</li>
+          <li>Caudill SP, Important issues related to using pooled samples for environmental chemical biomonitoring. Stat Med 2010b;30(5):515-21.</li>
+          <li>Caudill SP, Turner WE, and Patterson Jr. DG. Geometric mean estimation from pooled samples. Chemosphere 2007;69:371-80.</li>
+          <li>Caudill SP, Use of pooled samples from the National Health and Nutrition Examination Survey. Stat Med 2012;31(27):3269-77.</li>
+          <li>Caudill, S.P., Schleicher, R.L., Pirkle, J.L. Multi-rule quality control for the age-related eye disease study. Statist. Med. (2008) 27(20):4094-40106.</li>
+          <li>Patterson DG Jr, Alexander LR, Turner WE, Isaacs SG, Needham LL. The development and application of a high resolution mass spectrometry method for measuring polychlorinated dibenzo p dioxins and dibenzofurans in serum. Chapter 6. In: Clement RE, Sui KM, Hill HH Jr, eds, Instrumentation for Trace Organic Monitoring. Chelsea, MI: Lewis Publishers, Inc. 1992:119-54.</li>
+          <li>Turner WE, DiPietro ES, Cash TP, McClure PC, Patterson, DG Jr, Shirkhan H. An improved SPE extraction and automated sample cleanup method for serum PCDDs, PCDFs, and coplanar PCBs. Organohalogen Compounds 1994;19:31-5. <a href="http://www.dioxin20xx.org/pdfs/1994/94-213.pdf">http://www.dioxin20xx.org/pdfs/1994/94-213.pdf</a>
+          </li>
+          <li>Westgard JO, Barry PL, Hunt MR, Groth T. A multi-rule Shewhart chart for quality control in clinical chemistry. Clin Chem 1981;27(3):493-501.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SAMPLEID">SAMPLEID - Pool identification number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SAMPLEID</dd>
+            <dt>SAS Label: </dt>
+            <dd>Pool identification number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Pool identification number</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 284</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RIAGENDR">RIAGENDR - Gender</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RIAGENDR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Gender</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Gender</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Male</td>
+                <td class="values" align="right">135</td>
+                <td class="values" align="right">135</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Female</td>
+                <td class="values" align="right">149</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RIDRETH3">RIDRETH3 - Ethnicity - Recode</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RIDRETH3</dd>
+            <dt>SAS Label: </dt>
+            <dd>Ethnicity - Recode</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Ethnicity - Recode</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">6 to 7</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">43</td>
+                <td class="values" align="right">43</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Non-Hispanic White</td>
+                <td class="values" align="right">44</td>
+                <td class="values" align="right">87</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Non-Hispanic Black</td>
+                <td class="values" align="right">28</td>
+                <td class="values" align="right">115</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Mexican American</td>
+                <td class="values" align="right">110</td>
+                <td class="values" align="right">225</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Other Hispanic &amp; Non-Hispanic Multi-Racial</td>
+                <td class="values" align="right">59</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RIDAGGRP">RIDAGGRP - Age at Screening Adjudicated - Recode</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RIDAGGRP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Age at Screening Adjudicated - Recode</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Age at Screening Adjudicated - Recode</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">12-19</td>
+                <td class="values" align="right">55</td>
+                <td class="values" align="right">55</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">20-39</td>
+                <td class="values" align="right">74</td>
+                <td class="values" align="right">129</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">40-59</td>
+                <td class="values" align="right">78</td>
+                <td class="values" align="right">207</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">60+</td>
+                <td class="values" align="right">77</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RIANSMP">RIANSMP - Number of samples in a pool</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RIANSMP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Number of samples in a pool</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Number of samples in a  pool</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2 to 8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTBSMSMA">WTBSMSMA - Sum of adjusted subsample B weights</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTBSMSMA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Sum of adjusted subsample B weights</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Sum of adjusted subsample B weights</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">63628.672969 to 3656105.4719</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">284</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCD01">LBCD01 - 1,2,3,7,8-pncdd (fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCD01</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,7,8-pncdd (fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,7,8-Pentachlorodibenzo-p-dioxin (pncdd) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.333 to 82.74</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">242</td>
+                <td class="values" align="right">242</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">42</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCD02">LBCD02 - 1,2,3,4,7,8-hxcdd (fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCD02</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,7,8-hxcdd (fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,7,8-Hexachlorodibenzo-p-dioxin (hxcdd) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.475 to 77.29</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">269</td>
+                <td class="values" align="right">269</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCD03">LBCD03 - 1,2,3,6,7,8-hxcdd (fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCD03</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,6,7,8-hxcdd (fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,6,7,8-Hexachlorodibenzo-p-dioxin (hxcdd) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">22.63 to 411.9</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">274</td>
+                <td class="values" align="right">274</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCD04">LBCD04 - 1,2,3,7,8,9-hxcdd (fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCD04</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,7,8,9-hxcdd (fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,7,8,9-Hexachlorodibenzo-p-dioxin (hxcdd) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.606 to 57.75</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">272</td>
+                <td class="values" align="right">272</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCD05">LBCD05 - 1,2,3,4,6,7,8-hpcdd (fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCD05</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,6,7,8-hpcdd (fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,6,7,8-Heptachlororodibenzo-p-dioxin (hpcdd) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">26.16 to 513</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">270</td>
+                <td class="values" align="right">270</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCD07">LBCD07 - Octachlorodibenzo-p-dioxin (fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCD07</dd>
+            <dt>SAS Label: </dt>
+            <dd>Octachlorodibenzo-p-dioxin (fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Octachlorodibenzo-p-dioxin (ocdd) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">275.8 to 3818</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">271</td>
+                <td class="values" align="right">271</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">13</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF01">LBCF01 - 2,3,7,8-Tetrachlorofuran (fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF01</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,3,7,8-Tetrachlorofuran (fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3,7,8-Tetrachlorodibenzofuran (tcdf) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">4.243 to 10.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">275</td>
+                <td class="values" align="right">275</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF02">LBCF02 - 1,2,3,7,8-Pentachlorofuran (fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF02</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,7,8-Pentachlorofuran (fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,7,8-Pentachlorodibenzofuran (pncdf) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.182 to 11.19</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">272</td>
+                <td class="values" align="right">272</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF03">LBCF03 - 2,3,4,7,8-Pentachlorofuran (fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF03</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,3,4,7,8-Pentachlorofuran (fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3,4,7,8-Pentachlorodibenzofuran (pncdf) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.97 to 76.7</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">268</td>
+                <td class="values" align="right">268</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF04">LBCF04 - 1,2,3,4,7,8-hcxdf (fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF04</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,7,8-hcxdf (fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,7,8-Hexachlorodibenzofuran (hcxdf) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">14.85 to 71.36</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">256</td>
+                <td class="values" align="right">256</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">28</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF05">LBCF05 - 1,2,3,6,7,8-hxcdf (fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF05</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,6,7,8-hxcdf (fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,6,7,8-Hexachlorodibenzofuran (hxcdf) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">12.73 to 67.78</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">237</td>
+                <td class="values" align="right">237</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">47</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF06">LBCF06 - 1,2,3,7,8,9-Hexachlorodifuran (fg/g ser)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF06</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,7,8,9-Hexachlorodifuran (fg/g ser)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,7,8,9-Hexachlorodibenzofuran (hxcdf) (fg/g serum)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.192 to 8.613</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">269</td>
+                <td class="values" align="right">269</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF07">LBCF07 - 2,3,4,6,7,8-Hexchlorofuran (fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF07</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,3,4,6,7,8-Hexchlorofuran (fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3,4,6,7,8-Hexchlorodibenzofuran (hxcdf) (fg/g serum)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.687 to 19.03</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">272</td>
+                <td class="values" align="right">272</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF08">LBCF08 - 1,2,3,4,6,7,8-Heptachlorodifuran(fg/g s)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF08</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,6,7,8-Heptachlorodifuran(fg/g s)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,6,7,8-Heptachlorodibenzofuran (hpcdf) (fg/g serum)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">24.04 to 125.9</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">270</td>
+                <td class="values" align="right">270</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF09">LBCF09 - 1,2,3,4,7,8,9-Heptachlorodifuran(fg/g s)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF09</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,7,8,9-Heptachlorodifuran(fg/g s)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,7,8,9-Heptachlorodibenzofuran  (hpcdf) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.97 to 9.144</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">266</td>
+                <td class="values" align="right">266</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">18</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF10">LBCF10 - Octachlorodibenzofuran (fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF10</dd>
+            <dt>SAS Label: </dt>
+            <dd>Octachlorodibenzofuran (fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Octachlorodibenzofuran (ocdf) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">4.879 to 29.34</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">269</td>
+                <td class="values" align="right">269</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCHXC">LBCHXC - 3,3',4,4',5,5'-hexachlorobiphenyl(fg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCHXC</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,3',4,4',5,5'-hexachlorobiphenyl(fg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,3',4,4',5,5'-hexachlorobiphenyl (hxcb) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">25.46 to 334.7</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">254</td>
+                <td class="values" align="right">254</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">30</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCPCB">LBCPCB - 3,3',4,4',5-Pentachlorobiphenyl (fg/g s)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCPCB</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,3',4,4',5-Pentachlorobiphenyl (fg/g s)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,3',4,4',5-Pentachlorobiphenyl (pncb) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">25.46 to 925.5</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">246</td>
+                <td class="values" align="right">246</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">38</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCTC2">LBCTC2 - 3,4,4',5-Tetrachlorobiphenyl(fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCTC2</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,4,4',5-Tetrachlorobiphenyl(fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,4,4',5-Tetrachlorobiphenyl (tcb) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">24.04 to 108.7</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">261</td>
+                <td class="values" align="right">261</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">23</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCTCD">LBCTCD - 2,3,7,8-Tetrachloro-p-dioxn (fg/g serum)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCTCD</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,3,7,8-Tetrachloro-p-dioxn (fg/g serum)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3,7,8-Tetrachlorodienzo-p-dioxin (tcdd) (fg/g serum)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.404 to 50.79</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">263</td>
+                <td class="values" align="right">263</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">21</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCD01LA">LBCD01LA - 1,2,3,7,8-pncdd lipid adjusted (pg/g s)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCD01LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,7,8-pncdd lipid adjusted (pg/g s)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,7,8-Pentachlorodibenzo-p-dioxin (pncdd) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.3323 to 16.75</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">242</td>
+                <td class="values" align="right">242</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">42</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCD02LA">LBCD02LA - 1,2,3,4,7,8-hxcdd lipid adjusted (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCD02LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,7,8-hxcdd lipid adjusted (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,7,8-Hexachlorodibenzo-p-dioxin (hxcdd) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.4525 to 15.64</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">269</td>
+                <td class="values" align="right">269</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCD03LA">LBCD03LA - 1,2,3,6,7,8-hxcdd lipid adjusted (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCD03LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,6,7,8-hxcdd lipid adjusted (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,6,7,8-Hexachlorodibenzo-p-dioxin (hxcdd) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.97 to 83.38</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">274</td>
+                <td class="values" align="right">274</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCD04LA">LBCD04LA - 1,2,3,7,8,9-hxcdd lipid adjusted (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCD04LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,7,8,9-hxcdd lipid adjusted (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,7,8,9-Hexachlorodibenzo-p-dioxin (hxcdd) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.594 to 10.38</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">272</td>
+                <td class="values" align="right">272</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCD05LA">LBCD05LA - 1,2,3,4,6,7,8-hpcdd lipid adjusted(pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCD05LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,6,7,8-hpcdd lipid adjusted(pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,6,7,8-Heptachlororodibenzo-p-dioxin (hpcdd) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">5.233 to 77.51</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">270</td>
+                <td class="values" align="right">270</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCD07LA">LBCD07LA - Octachlorodibenzo-p-dioxin Lpd Ad (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCD07LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Octachlorodibenzo-p-dioxin Lpd Ad (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Octachlorodibenzo-p-dioxin (ocdd) Lipid Adjusted (pg/g) (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">41.01 to 674.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">271</td>
+                <td class="values" align="right">271</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">13</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF01LA">LBCF01LA - 2,3,7,8-tcdf lipid adjusted(pg/g sm lip)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF01LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,3,7,8-tcdf lipid adjusted(pg/g sm lip)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3,7,8-Tetrachlorodibenzofuran (tcdf) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.5515 to 1.838</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">275</td>
+                <td class="values" align="right">275</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF02LA">LBCF02LA - 1,2,3,7,8-pncdf lipid adjusted(pg/g s)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF02LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,7,8-pncdf lipid adjusted(pg/g s)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,7,8-Pentachlorodibenzofuran (pncdf) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.4172 to 1.999</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">272</td>
+                <td class="values" align="right">272</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF03LA">LBCF03LA - 2,3,4,7,8-pncdf lipid adjust (pg/g s lp)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF03LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,3,4,7,8-pncdf lipid adjust (pg/g s lp)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3,4,7,8-Pentachlorodibenzofuran (pncdf) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.495 to 13.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">268</td>
+                <td class="values" align="right">268</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF04LA">LBCF04LA - 1,2,3,4,7,8-hcxdf lipid adjusted (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF04LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,7,8-hcxdf lipid adjusted (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,7,8-Hexachlorodibenzofuran (hcxdf) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.98 to 10.98</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">256</td>
+                <td class="values" align="right">256</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">28</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF05LA">LBCF05LA - 1,2,3,6,7,8-hxcdf lipid adjusted (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF05LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,6,7,8-hxcdf lipid adjusted (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,6,7,8-Hexachlorodibenzofuran (hxcdf) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.697 to 11.57</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">237</td>
+                <td class="values" align="right">237</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">47</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF06LA">LBCF06LA - 1,2,3,7,8,9-hxcdf lipid adjusted (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF06LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,7,8,9-hxcdf lipid adjusted (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,7,8,9-Hexachlorodibenzofuran (hxcdf) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.2899 to 1.423</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">269</td>
+                <td class="values" align="right">269</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF07LA">LBCF07LA - 2,3,4,6,7,8-hxcdf lipid adjusted (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF07LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,3,4,6,7,8-hxcdf lipid adjusted (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3,4,6,7,8-Hexchlorodibenzofuran (hxcdf) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.4031 to 3.728</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">272</td>
+                <td class="values" align="right">272</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF08LA">LBCF08LA - 1,2,3,4,6,7,8-hpcdf lipid adjusted(pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF08LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,6,7,8-hpcdf lipid adjusted(pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,6,7,8-Heptachlorodibenzofuran (hpcdf) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.111 to 22.63</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">270</td>
+                <td class="values" align="right">270</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF09LA">LBCF09LA - 1,2,3,4,7,8,9-hpcdf lipid adjusted(pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF09LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,7,8,9-hpcdf lipid adjusted(pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,7,8,9-Heptachlorodibenzofuran  (Hpcdf) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.3889 to 1.784</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">266</td>
+                <td class="values" align="right">266</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">18</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCF10LA">LBCF10LA - Octachlorodibenzofuran Lipid Adj (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCF10LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Octachlorodibenzofuran Lipid Adj (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Octachlorodibenzofuran (ocdf) Lipid Adjusted (pg/g) (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.6364 to 5.512</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">269</td>
+                <td class="values" align="right">269</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCHXCLA">LBCHXCLA - 3,3',4,4',5,5'-hxcb Lipid adjusted(pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCHXCLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,3',4,4',5,5'-hxcb Lipid adjusted(pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,3',4,4',5,5'-hexachlorobiphenyl (hxcb) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.323 to 60.76</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">254</td>
+                <td class="values" align="right">254</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">30</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCPCBLA">LBCPCBLA - 3,3',4,4',5-pncb lipid adjusted (pg/g)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCPCBLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,3',4,4',5-pncb lipid adjusted (pg/g)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,3',4,4',5-Pentachlorobiphenyl (pncb) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.96 to 168.7</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">246</td>
+                <td class="values" align="right">246</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">38</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCTC2LA">LBCTC2LA - 3,4,4',5-tcb lipid adjusted (pg/g s lpd)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCTC2LA</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,4,4',5-tcb lipid adjusted (pg/g s lpd)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,4,4',5-Tetrachlorobiphenyl (tcb) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.111 to 19.53</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">261</td>
+                <td class="values" align="right">261</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">23</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBCTCDLA">LBCTCDLA - 2,3,7,8-tcdd lipid adjusted (pg/g s lpd)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBCTCDLA</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,3,7,8-tcdd lipid adjusted (pg/g s lpd)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3,7,8-Tetrachlorodienzo-p-dioxin (tcdd) Lipid Adjusted (pg/g serum lipid)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.3111 to 8.123</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">263</td>
+                <td class="values" align="right">263</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">21</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDD01LC">LBDD01LC - 1,2,3,7,8-pncdd comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDD01LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,7,8-pncdd comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,7,8-Pentachlorodibenzo-p-dioxin (pncdd) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">175</td>
+                <td class="values" align="right">175</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">67</td>
+                <td class="values" align="right">242</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">42</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDD02LC">LBDD02LC - 1,2,3,4,7,8-hxcdd comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDD02LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,7,8-hxcdd comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,7,8-Hexachlorodibenzo-p-dioxin (hxcdd) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">237</td>
+                <td class="values" align="right">237</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">32</td>
+                <td class="values" align="right">269</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDD03LC">LBDD03LC - 1,2,3,6,7,8-hxcdd comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDD03LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,6,7,8-hxcdd comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,6,7,8-Hexachlorodibenzo-p-dioxin (hxcdd) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">213</td>
+                <td class="values" align="right">213</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">61</td>
+                <td class="values" align="right">274</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDD04LC">LBDD04LC - 1,2,3,7,8,9-hxcdd comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDD04LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,7,8,9-hxcdd comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,7,8,9-Hexachlorodibenzo-p-dioxin (hxcdd) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">252</td>
+                <td class="values" align="right">252</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">20</td>
+                <td class="values" align="right">272</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDD05LC">LBDD05LC - 1,2,3,4,6,7,8-hpcdd comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDD05LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,6,7,8-hpcdd comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,6,7,8-Heptachlororodibenzo-p-dioxin (hpcdd) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">242</td>
+                <td class="values" align="right">242</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">28</td>
+                <td class="values" align="right">270</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDD07LC">LBDD07LC - 1,2,3,4,6,7,8,9-ocdd comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDD07LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,6,7,8,9-ocdd comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,6,7,8,9-Octachlorodibenzo-p-dioxin (ocdd) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">244</td>
+                <td class="values" align="right">244</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">27</td>
+                <td class="values" align="right">271</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">13</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDF01LC">LBDF01LC - 2,3,7,8-tcdf comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDF01LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,3,7,8-tcdf comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3,7,8-Tetrachlorodibenzofuran (tcdf) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">9</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">266</td>
+                <td class="values" align="right">275</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDF02LC">LBDF02LC - 1,2,3,7,8-pncdf comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDF02LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,7,8-pncdf comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,7,8-Pentachlorodibenzofuran (pncdf) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">16</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">256</td>
+                <td class="values" align="right">272</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDF03LC">LBDF03LC - 2,3,4,7,8-pncdf comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDF03LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,3,4,7,8-pncdf comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3,4,7,8-Pentachlorodibenzofuran (pncdf) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">252</td>
+                <td class="values" align="right">252</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">268</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">16</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDF04LC">LBDF04LC - 1,2,3,4,7,8-hcxdf comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDF04LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,7,8-hcxdf comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,7,8-Hexachlorodibenzofuran (hcxdf) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">59</td>
+                <td class="values" align="right">59</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">197</td>
+                <td class="values" align="right">256</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">28</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDF05LC">LBDF05LC - 1,2,3,6,7,8-hxcdf comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDF05LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,6,7,8-hxcdf comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,6,7,8-Hexachlorodibenzofuran (hxcdf) specimen code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">90</td>
+                <td class="values" align="right">90</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">147</td>
+                <td class="values" align="right">237</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">47</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDF06LC">LBDF06LC - 1,2,3,7,8,9-hxcdf comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDF06LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,7,8,9-hxcdf comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,7,8,9-Hexachlorodibenzofuran (hxcdf) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">4</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">265</td>
+                <td class="values" align="right">269</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDF07LC">LBDF07LC - Octachlorodibenzo-p-dioxin comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDF07LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Octachlorodibenzo-p-dioxin comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3,4,6,7,8-Hexchlorodibenzofuran (hxcdf) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">149</td>
+                <td class="values" align="right">149</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">123</td>
+                <td class="values" align="right">272</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDF08LC">LBDF08LC - 1,2,3,4,6,7,8-hpcdf comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDF08LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,6,7,8-hpcdf comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,6,7,8-Heptachlorodibenzofuran (hpcdf) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">43</td>
+                <td class="values" align="right">43</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">227</td>
+                <td class="values" align="right">270</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDF09LC">LBDF09LC - 1,2,3,4,7,8,9-hpcdf comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDF09LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>1,2,3,4,7,8,9-hpcdf comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">1,2,3,4,7,8,9-Heptachlorodibenzofuran  (hpcdf) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">6</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">260</td>
+                <td class="values" align="right">266</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">18</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDF10LC">LBDF10LC - Octachlorodibenzofuran comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDF10LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Octachlorodibenzofuran comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Octachlorodibenzofuran (ocdf) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">268</td>
+                <td class="values" align="right">269</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDHXCLC">LBDHXCLC - 3,3',4,4',5,5'-hxcb comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDHXCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,3',4,4',5,5'-hxcb comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,3',4,4',5,5'-hexachlorobiphenyl (hxcb) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">156</td>
+                <td class="values" align="right">156</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">98</td>
+                <td class="values" align="right">254</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">30</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDPCBLC">LBDPCBLC - 3,3',4,4',5-pncb comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDPCBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,3',4,4',5-pncb comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,3',4,4',5-Pentachlorobiphenyl (pncb) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">169</td>
+                <td class="values" align="right">169</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">77</td>
+                <td class="values" align="right">246</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">38</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDTC2LC">LBDTC2LC - 3,4,4',5-tcb comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDTC2LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>3,4,4',5-tcb comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">3,4,4',5-Tetrachlorobiphenyl (tcb) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">4</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">257</td>
+                <td class="values" align="right">261</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">23</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDTCDLC">LBDTCDLC - 2,3,7,8-tcdd comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDTCDLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>2,3,7,8-tcdd comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">2,3,7,8-Tetrachlorodienzo-p-dioxin (tcdd) comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 12 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">140</td>
+                <td class="values" align="right">140</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">123</td>
+                <td class="values" align="right">263</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">21</td>
+                <td class="values" align="right">284</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

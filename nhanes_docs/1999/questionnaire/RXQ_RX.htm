@@ -1,0 +1,4407 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>RXQ_RX</title>
+    <meta name="title" content="NHANES 1999-2000: Prescription Medications Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Interview_Setting_and_Mode_of_Administration">Interview Setting and Mode of Administration</a>
+          </li>
+          <li>
+            <a href="#Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#RXD030">RXD030 - Taken prescription medicine/past month</a>
+              </li>
+              <li>
+                <a href="#RXD240B">RXD240B - Standard generic ingredient name</a>
+              </li>
+              <li>
+                <a href="#NHCODE">NHCODE - Standard generic ingredient code</a>
+              </li>
+              <li>
+                <a href="#RXQ250">RXQ250 - Medicine container seen by interviewer</a>
+              </li>
+              <li>
+                <a href="#RXD260">RXD260 - Number of days taken medicine</a>
+              </li>
+              <li>
+                <a href="#FDACODE1">FDACODE1 - FDA/NDC drug class code 1</a>
+              </li>
+              <li>
+                <a href="#FDACODE2">FDACODE2 - FDA/NDC drug class code 2</a>
+              </li>
+              <li>
+                <a href="#FDACODE3">FDACODE3 - FDA/NDC drug class code 3</a>
+              </li>
+              <li>
+                <a href="#FDACODE4">FDACODE4 - FDA/NDC drug class code 4</a>
+              </li>
+              <li>
+                <a href="#FDACODE5">FDACODE5 - FDA/NDC drug class code 5</a>
+              </li>
+              <li>
+                <a href="#FDACODE6">FDACODE6 - FDA/NDC drug class code 6</a>
+              </li>
+              <li>
+                <a href="#RXD295">RXD295 - Number of prescription medicines taken</a>
+              </li>
+              <li>
+                <a href="#RXQ280">RXQ280 - # of Beta-agonist canisters, past month</a>
+              </li>
+              <li>
+                <a href="#RXDDRGID">RXDDRGID - Generic drug code</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#Appendix_1:_U.S._Food_and_Drug_Administration_National_Drug_Code_Directory">Appendix 1: U.S. Food and Drug Administration National Drug Code Directory</a>
+          </li>
+          <li>
+            <a href="#Appendix_2:_Generic_Ingredient_Names">Appendix 2: Generic Ingredient Names</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>1999-2000 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Prescription Medications (RXQ_RX)</h3>
+        <h4> Data File: RXQ_RX.xpt</h4>
+        <h5 class="left">First Published: September 2003</h5>
+        <h5 class="right">Last Revised: June 2009</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>The Dietary Supplements and Prescription Medication Section (DSQ) of the Sample Person (SP) Questionnaire collects information on 1) dietary supplement and minerals, 2) nonprescription antacids, 3) pain relievers, and 4) prescription medications.</p>
+<p>The Prescription Medication subsection provides personal interview data on use of prescription medications during a one-month period prior to the survey date. The NHANES 1999-2000 prescription medication questions are similar to the NHANES III, 1988-1994 questions.</p>
+<h2 id="Eligible_Sample">Eligible Sample</h2><p>All survey participants are eligible for the prescription medication questions. Participants over 16 years of age answer for themselves; proxy respondents answer for participants 16 years of age or younger and for individuals who could not self-report.</p>
+<h2 id="Interview_Setting_and_Mode_of_Administration">Interview Setting and Mode of Administration</h2><p>A trained survey interviewer administrated the survey participant questionnaire.</p>
+<h2 id="Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</h2><p>Data were routinely examined for discrepancies and erroneous entries. The medication name entered by the interviewer was compared to the medication name selected from the database. About 92% of all reported medications were matched during the interview to a drug product in the database. Review of these matches found that the interviewer selected the wrong drug product (e.g., Triam/hctz entered, Triamterene selected) in less than 1% of the cases. Editing of the remaining 8% of reported medications, which were not matched to the products in the drug database, was performed after data collection at NCHS.</p>
+<h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p><strong>Data Collection Methods</strong></p>
+<p>During the household interview survey participants are asked if they have taken a medication in the past month for which they needed a prescription. Those who answer “yes” are asked to show the interviewer the medication containers of all the products used. For each medication reported, the interviewer enters the product’s complete name from the container into a computer. If no container is available, the interviewer asks the participant to verbally report the name of the medication.</p>
+<p>When the interviewer enters the medication name into the computer, the name is automatically matched to a prescription drug database on the computer to identify an exact match or similar text matches (refer below for details on the prescription medication database). The interviewer then selects the best match from a list of possible matches. The original entry of the interviewer and the product selected from the computer list are saved under separate variables for quality control purposes. If an exact match of the medication cannot be found, the interviewer is instructed to select “drug not found on list” from the list. Interviewers can record up to 20 prescription medications.</p>
+<p>Participants are also asked how long they had been taking the medication and the main reason for use.</p>
+<p>The NHANES 1999-2000 prescription medication questions can be accessed in the Dietary Supplements and Prescription Medications Section of the Sample Person Questionnaire.</p>
+<p><strong>Prescription Medication Questions Included in this Data Release</strong></p>
+<p>Was any prescription medication taken in the past month </p>
+<ul>
+    <li>Medication name </li>
+    <li>Was medication container seen by interviewer </li>
+    <li>How long was medication taken </li>
+    <li>Number of prescription medications taken </li>
+    <li>Number of canisters of Beta-agonists used in the past month </li>
+</ul>
+<p><strong>Prescription Medication Database</strong></p>
+<p>NCHS used the Master Drug Database (MDDB<sup>®</sup>), a proprietary database of Facts and Comparison (Indianapolis, Indiana), to assist in data collection. MDDB is a comprehensive database of all prescription and some nonprescription drug products available in the U.S. drug market. For NHANES, the MDDB files were modified and uploaded to a laptop computer and incorporated into a search engine for use by interviewers in the field. The computer file is updated at the beginning of each survey year to incorporate changes to the MDDB and include products approved and available to the U.S. public in the prior year. During 1999 and 2000, the modified MDDB file on the computer contained ~15,000 prescription and some over-the-counter drug products.</p>
+<p><strong>Data Editing</strong></p>
+<p><strong>General editing of data:</strong></p>
+<p>If changes were made to the original data, a derived variable was created. The derived variable is essentially the final version of the variable after editing and recoding was performed. The derived variable includes the letter “D” in the third position of the variable name in place of the letter “Q” for the questionnaire item that is customarily used in NHANES data release files. The survey questionnaire codebooks include the names and description of the derived variables.</p>
+<p><strong>Prescription medications incorrectly reported in subsections of questionnaire:</strong></p>
+<p>Prescription antacids that were incorrectly reported in the nonprescription antacid section of the questionnaire were removed from the antacid file and added to the prescription medication file. Prescription medications that were incorrectly reported in the dietary supplement section were removed from that file and added to the prescription medication file.</p>
+<p>Any prescription dietary supplements and vitamin that was incorrectly reported in the prescription medication section was removed from the prescription medication section and moved to the dietary supplement section. These products are not included in any counts of prescription medications. Products reported in the prescription medication section that were only available as over-the-counter products during 1999-2000 were removed from the prescription medication file.</p>
+<p>The variables that record overall prescription drug use (RXD030) and number of prescription drugs taken (RXD295) were adjusted for products moved into or out of the prescription medication file.</p>
+<p><strong>Specific variable editing:</strong></p>
+<p><strong>RXD030: Have you taken or used any prescription medicines in the past month?</strong></p>
+<p>This variable was the lead-in question to the series of questions on prescription medication use. It accounts for all prescription medications except prescription dietary supplements and minerals that are included in the dietary supplements and mineral file (DSQ). A small number of persons refused to answer this question (coded 7) or did not know whether they used a prescription medication in the past month (coded 9). This variable was edited and takes into account prescription medications reported in this section as well as prescription medications moved from the supplements or nonprescription antacid sections of the questionnaire.</p>
+<p><strong>RXD295: The number of prescription medicines reported</strong></p>
+<p>This variable was computed at NCHS and represents the total number of different prescription medications reported by the respondent. The count has been adjusted for all prescription medications moved into and those moved out of the prescription medication section. However, the count is not a comprehensive count of all prescription medications used by a participant because prescription vitamins are part of the supplements section and prescription analgesics that were taken chronically are part of the pain reliever section. There were also participants who reported the use of prescription medication in the past month (RXD030=1) but did not know the name of the medication (RXD240B=99999) or refused to report the name of the medication (RXD240B=77777). Each product reported as refused or don’t know is still included in the total count of prescription medications used under RXD295.</p>
+<p><strong>RXD260: For how long have you been taking this medicine?</strong></p>
+<p>This variable was created from a two-part (number and unit) question and indicates how long the respondent reported taking each prescription medication. Responses were recorded in days, weeks, months, and years. To facilitate analysis, all answers were converted to days using conversion factors of 7 days per week, 30.4 days per month, and 365 days per year. There were persons who reported the use of a prescription medication but did not know how long they had been using the medication. RXD260 is coded as 999999 (don’t know) for these persons. There were also persons who reported the use of a prescription medication but did not report the length of use. RXD260 is missing for these persons.</p>
+<p><strong>Creation of additional data release variables:</strong></p>
+<p><strong>RXD240B: Standard generic ingredient name</strong></p>
+<p>As in NHANES III, all reported medication names were converted to their standard generic ingredient name for data release. For multi-ingredient products, the ingredients are listed in alphabetical order (i.e., Acetaminophen; Codeine).</p>
+<p>There were participants who reported the use of a prescription medication but did not know the name of the medication or refused to report the name of the medication. These entries were coded as 99999, don’t know and 77777, refused, respectively. There were also medications reported with insufficient detail to accurately identify the exact product but there was some information about the drug. These products have been released with the reported name followed by “-unspecified” (e.g., cardiac drug-unspecified, estrogen-unspecified). The names of a limited number of reported medications could not be identified by NCHS as a known prescription product. These entries are counted as prescription medications, since there is no evidence that they are not, and have been coded as 55555, unknown drug.</p>
+<p><strong>NHCODE: Standard generic ingredient code</strong></p>
+<p>To assist in data analysis, NCHS assigned a 5-digit generic ingredient drug code to each generic ingredient name. Codes were assigned based on the alphabetical listing of generic ingredient names starting with 00100. Unspecified products were assigned codes of 70000 and greater. Refer to Appendix 2 for a list of standard generic ingredient names and their associated generic codes. NHCODE is missing for unknown (55555), refused (77777), or don’t know (99999) RXD240B entries.</p>
+<p><strong>FDACODE1--FDACODE6:</strong></p>
+<p>Similar to NHANES III, therapeutic drug class codes were assigned based on FDA’s National Drug Code Directory. Specifically, FDA/NDC’s Formulation Data File and Drug Class Data File were used to assign up to a maximum of six drug class codes for each generic ingredient name.</p>
+<p>As stated on FDA’s website, “The major drug class is a general therapeutic or pharmacological classification scheme for drug products reported to the FDA under the provisions of the Drug Listing Act. The classification scheme used was based on the AMA DRUG EVALUATIONS SUBSCRIPTION and generally follows the organization of material in that publication. The drug class for each product was determined by the labeled indication. The major (ending with "00") and minor drug class codes and their definitions are listed in FDA’s NDC directory”. NCHS used this classification system because the files are nonproprietary and can be released to the public.</p>
+<p>If a product has more than one drug class code the codes were recorded in numerical order, with a maximum of 6 codes, and were not recorded based on primary, secondary, or tertiary drug action or response. There were some products that were not identified in the FDA/NDC Directory and therefore, do not have an FDA/NDC drug class code. NCHS assigned a code of 99999 to these products. Some products were assigned codes by NCHS (e.g., Latanoprost=1566; Cerivastatin Sodium=0912; Allergy Pills-Unspecified=1900). “Unspecified” drugs were assigned to a drug class code if there was enough information to identify a drug class. “Unknown” drugs were not assigned a drug class code. See Appendix 1 for a listing of the drug class codes and descriptions.</p>
+<p>A small number of medications matched to more than 6 FDA/NDC drug class codes (n=10, listed below). For these products NCHS made a decision about which 6 codes to retain.</p>
+<ul>
+    <li>ASPIRIN; BUTALBITAL; CAFFEINE </li>
+    <li>EPINEPHRINE HYDROCHLORIDE </li>
+    <li>ERYTHROMYCIN </li>
+    <li>HEPARIN SODIUM </li>
+    <li>HYDROCORTISONE </li>
+    <li>HYDROXYZINE </li>
+    <li>HYDROCHLORIDE </li>
+    <li>METHOTREXATE SODIUM </li>
+    <li>METRONIDAZOLE </li>
+    <li>SODIUM CHLORIDE </li>
+    <li>TRIAMCINOLONE ACETONIDE </li>
+</ul>
+<p>Note that the FDA/NDC Directory files are updated several times during the year. The files used for the NHANES prescription medication data release file were from July 2002.</p>
+<p><strong>Drug Database for Data Update:</strong></p>
+<p>Since the 2003-2004 survey, NCHS has used the Lexicon Plus<sup>®</sup>, a proprietary database of Cerner Multum, Inc. to assist in data editing and release. To facilitate data analysis, NCHS decided to update the NHANES 1999-2000 prescription medication file with the Multum Lexicon therapeutic classification system. For additional information refer to the RXQ_DRUG documentation.</p>
+<p>In accordance with the license agreement, NCHS publications, tabulations, and software applications should cite the Multum Lexicon as the source and basis for the coding and classification of the NHANES drug data.</p>
+<p><strong>Variable added to this updated prescription medication file:</strong></p>
+<p><strong>RXDDRGID: Generic drug code</strong></p>
+<p>All standard generic ingredient names (RXD240B) were linked to generic drug names from Multum’s Lexicon Drug Database through exact or similar name matches. A unique generic drug code (RXDDRGID) associated with each generic drug name from Multum’s Lexicon Drug Database was added to the NHANES 1999-2000 prescription medication file. In some cases, one standard generic ingredient name may be linked to more than one Lexicon generic drug codes. These products have been reviewed and assigned appropriate Lexicon generic drug codes based on entered or selected product names recorded by survey interviewers, and/or reasons of taking the medications reported by survey participants. For example, a drug “BETAXOLOL HYDROCHLORIDE” was initially linked to a Lexicon generic drug code “d00176” (“BETAXOLOL”). However a Lexicon generic drug code “d04038” (“BETAXOLOL OPHTHMATIC”) was assigned if participants reported using the topical form of this product for glaucoma. In other cases, more than one standard generic ingredient names may be linked to the same Lexicon generic drug code. For example, RXD240B entries “PENICILLIN G PROCAINE”, “PENICILLIN V”, “PENICILLIN V POTASSIUM”, “PENICILIN-UNSPECIFIED” were linked to a generic drug code, “d00116” (i.e., “PENICILLIN” in the Lexicon Drug Database). In addition, there were some drug names reported by NHANES’ participants that were not found in the Lexicon Drug Database. These have been assigned unique drug codes beginning with an “a” or “h”. Unspecified products with known therapeutic action were coded beginning with a “c” and followed by their respective Multum therapeutic category code. RXDDRGID is missing for unknown drugs (55555), refused (77777), or don’t know (99999) RXD240B entries.</p>
+<p>Therapeutic class codes associated with a generic drug code are found in a separate data release file, RXQ_DRUG.</p>
+<p>RXDDRGID is not equal to the variable NHCODE.</p>
+<p><strong>Data File Structure</strong></p>
+<p><span id="UniqueID1243366884707">There are two files related to the prescription drug data. The contents of each file are described below. The files can be linked by RXDDRGID.</span></p>
+<p><span>The prescription medication file named RXQ_RX is a product level file. Therefore, participants who reported the use of multiple prescription medications will have multiple records, that is, a record for each product.</span></p>
+<p><span>The drug information file named RXQ_DRUG contains therapeutic drug class information on all drugs reported by NHANES participants. It contains drug (up to 4) and ingredient (up to 6) therapeutic category codes for each drug. It also has a variable that identifies if the drug is made up of a single or multiple ingredients</span></p>
+<p>
+<table bordercolor="#000000" border="1">
+    <caption valign="top" align="left">RXQ_RX: Participant’s Use of Prescription Drug(s)</caption>
+    <thead>
+        <tr>
+            <th><strong>Variable Name </strong></th>
+            <th><strong>Label</strong> </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>SEQN </td>
+            <td>Respondent sequence number </td>
+        </tr>
+        <tr>
+            <td>RXD030 </td>
+            <td>Taken prescription medicine, past month </td>
+        </tr>
+        <tr>
+            <td>RXD240B </td>
+            <td>Standard generic ingredient name(Appendix 2) </td>
+        </tr>
+        <tr>
+            <td>NHCODE </td>
+            <td>Standard generic ingredient code(Appendix 2) </td>
+        </tr>
+        <tr>
+            <td>RXQ250 </td>
+            <td>Medicine container seen by interviewer </td>
+        </tr>
+        <tr>
+            <td>RXD260 </td>
+            <td>Number of days taken medicine </td>
+        </tr>
+        <tr>
+            <td>FDACODE1-6 </td>
+            <td>FDA/NDC drug class code<span style="font-size: 9pt;">1-6 (Appendix 1) </span></td>
+        </tr>
+        <tr>
+            <td>RXD295 </td>
+            <td>Number of prescription medicines taken </td>
+        </tr>
+        <tr>
+            <td>RXQ280 </td>
+            <td># of Beta-agonist canisters, past month </td>
+        </tr>
+        <tr>
+            <td>RXDDRGID </td>
+            <td>Generic drug code </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<p> <table bordercolor="#000000" border="1">
+    <caption valign="top" align="left">RXQ_DRUG: Drug Information </caption>
+    <thead>
+        <tr>
+            <th><strong>Variable Name</strong></th>
+            <th><strong>Label</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>RXDDRGID </td>
+            <td>GENERIC DRUG CODE </td>
+        </tr>
+        <tr>
+            <td>RXDDRUG </td>
+            <td>GENERIC DRUG NAME </td>
+        </tr>
+        <tr>
+            <td>RXDINGFL </td>
+            <td>SINGLE/MULTIPLE INGREDIENT DRUG </td>
+        </tr>
+        <tr>
+            <td>RXDDCI1A </td>
+            <td>DRUG CATEGORY ID - CATEGORY 1, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDDCI1B </td>
+            <td>DRUG CATEGORY ID - CATEGORY 1, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDDCI1C </td>
+            <td>DRUG CATEGORY ID - CATEGORY 1, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDDCI2A </td>
+            <td>DRUG CATEGORY ID - CATEGORY 2, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDDCI2B </td>
+            <td>DRUG CATEGORY ID - CATEGORY 2, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDDCI2C </td>
+            <td>DRUG CATEGORY ID - CATEGORY 2, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDDCI3A </td>
+            <td>DRUG CATEGORY ID - CATEGORY 3, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDDCI3B </td>
+            <td>DRUG CATEGORY ID - CATEGORY 3, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDDCI3C </td>
+            <td>DRUG CATEGORY ID - CATEGORY 3, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDDCI4A </td>
+            <td>DRUG CATEGORY ID - CATEGORY 4, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDDCI4B </td>
+            <td>DRUG CATEGORY ID - CATEGORY 4, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDDCI4C </td>
+            <td>DRUG CATEGORY ID - CATEGORY 4, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDDCN1A </td>
+            <td>DRUG CATEGORY NAME - CATEGORY 1, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDDCN1B </td>
+            <td>DRUG CATEGORY NAME - CATEGORY 1, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDDCN1C </td>
+            <td>DRUG CATEGORY NAME - CATEGORY 1, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDDCN2A </td>
+            <td>DRUG CATEGORY NAME - CATEGORY 2, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDDCN2B </td>
+            <td>DRUG CATEGORY NAME - CATEGORY 2, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDDCN2C </td>
+            <td>DRUG CATEGORY NAME - CATEGORY 2, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDDCN3A </td>
+            <td>DRUG CATEGORY NAME - CATEGORY 3, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDDCN3B </td>
+            <td>DRUG CATEGORY NAME - CATEGORY 3, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDDCN3C </td>
+            <td>DRUG CATEGORY NAME - CATEGORY 3, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDDCN4A </td>
+            <td>DRUG CATEGORY NAME - CATEGORY 4, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDDCN4B </td>
+            <td>DRUG CATEGORY NAME - CATEGORY 4, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDDCN4C </td>
+            <td>DRUG CATEGORY NAME - CATEGORY 4, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDICI1A </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 1, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDICI1B </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 1, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDICI1C </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 1, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDICI2A </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 2, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDICI2B </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 2, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDICI2C </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 2, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDICI3A </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 3, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDICI3B </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 3, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDICI3C </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 3, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDICI4A </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 4, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDICI4B </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 4, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDICI4C </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 4, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDICI5A </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 5, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDICI5B </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 5, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDICI5C </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 5, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDICI6A </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 6, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDICI6B </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 6, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDICI6C </td>
+            <td>INGREDIENT CATEGORY ID - CATEGORY 6, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDICN1A </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 1, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDICN1B </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 1, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDICN1C </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 1, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDICN2A </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 2, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDICN2B </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 2, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDICN2C </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 2, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDICN3A </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 3, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDICN3B </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 3, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDICN3C </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 3, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDICN4A </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 4, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDICN4B </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 4, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDICN4C </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 4, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDICN5A </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 5, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDICN5B </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 5, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDICN5C </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 5, LEVEL 3 </td>
+        </tr>
+        <tr>
+            <td>RXDICN6A </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 6, LEVEL 1 </td>
+        </tr>
+        <tr>
+            <td>RXDICN6B </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 6, LEVEL 2 </td>
+        </tr>
+        <tr>
+            <td>RXDICN6C </td>
+            <td>INGREDIENT CATEGORY NAME - CATEGORY 6, LEVEL 3 </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+</div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RXD030">RXD030 - Taken prescription medicine/past month</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RXD030</dd>
+            <dt>SAS Label: </dt>
+            <dd>Taken prescription medicine/past month</dd>
+            <dt>English Text: </dt>
+            <dd class="info">In the past month, {have you/has SP} used or taken medication for which a prescription is needed?  Do not include prescription vitamins or minerals you may have already told me about.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">9257</td>
+                <td class="values" align="right">9257</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">6363</td>
+                <td class="values" align="right">15620</td>
+                <td class="values">End of Section</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">15634</td>
+                <td class="values">End of Section</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">15636</td>
+                <td class="values">End of Section</td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">15643</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RXD240B">RXD240B - Standard generic ingredient name</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RXD240B</dd>
+            <dt>SAS Label: </dt>
+            <dd>Standard generic ingredient name</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Standard generic ingredient name</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">Standard generic ingredient name</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">9138</td>
+                <td class="values" align="right">9138</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">55555</td>
+                <td class="values">Unknown</td>
+                <td class="values" align="right">43</td>
+                <td class="values" align="right">9181</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">77777</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">9193</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">99999</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">64</td>
+                <td class="values" align="right">9257</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6386</td>
+                <td class="values" align="right">15643</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="NHCODE">NHCODE - Standard generic ingredient code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">NHCODE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Standard generic ingredient code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Generic ingredient code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">Standard generic ingredient code</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">9138</td>
+                <td class="values" align="right">9138</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6505</td>
+                <td class="values" align="right">15643</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RXQ250">RXQ250 - Medicine container seen by interviewer</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RXQ250</dd>
+            <dt>SAS Label: </dt>
+            <dd>Medicine container seen by interviewer</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Prescription container seen by interviewer</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">7650</td>
+                <td class="values" align="right">7650</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">1538</td>
+                <td class="values" align="right">9188</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6455</td>
+                <td class="values" align="right">15643</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RXD260">RXD260 - Number of days taken medicine</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RXD260</dd>
+            <dt>SAS Label: </dt>
+            <dd>Number of days taken medicine</dd>
+            <dt>English Text: </dt>
+            <dd class="info">For how long {have/has} {you/SP} been using or taking {PRODUCT NAME}? (days)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+            <dt>Hard Edits: </dt>
+            <dd class="info">0 to 366</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 25550</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">9006</td>
+                <td class="values" align="right">9006</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">77777</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">9006</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">99999</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">173</td>
+                <td class="values" align="right">9179</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6464</td>
+                <td class="values" align="right">15643</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="FDACODE1">FDACODE1 - FDA/NDC drug class code 1</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">FDACODE1</dd>
+            <dt>SAS Label: </dt>
+            <dd>FDA/NDC drug class code 1</dd>
+            <dt>English Text: </dt>
+            <dd class="info">FDA/NDC therapeutic drug class codes</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">FDA/NDC drug class code 1</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">9096</td>
+                <td class="values" align="right">9096</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">99999</td>
+                <td class="values">Unknown drug-no code</td>
+                <td class="values" align="right">42</td>
+                <td class="values" align="right">9138</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6505</td>
+                <td class="values" align="right">15643</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="FDACODE2">FDACODE2 - FDA/NDC drug class code 2</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">FDACODE2</dd>
+            <dt>SAS Label: </dt>
+            <dd>FDA/NDC drug class code 2</dd>
+            <dt>English Text: </dt>
+            <dd class="info">FDA/NDC therapeutic drug class codes</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">FDA/NDC drug class code 2</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">5017</td>
+                <td class="values" align="right">5017</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">10626</td>
+                <td class="values" align="right">15643</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="FDACODE3">FDACODE3 - FDA/NDC drug class code 3</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">FDACODE3</dd>
+            <dt>SAS Label: </dt>
+            <dd>FDA/NDC drug class code 3</dd>
+            <dt>English Text: </dt>
+            <dd class="info">FDA/NDC therapeutic drug class codes</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">FDA/NDC drug class code 3</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">2662</td>
+                <td class="values" align="right">2662</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">12981</td>
+                <td class="values" align="right">15643</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="FDACODE4">FDACODE4 - FDA/NDC drug class code 4</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">FDACODE4</dd>
+            <dt>SAS Label: </dt>
+            <dd>FDA/NDC drug class code 4</dd>
+            <dt>English Text: </dt>
+            <dd class="info">FDA/NDC therapeutic drug class codes</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">FDA/NDC drug class code 4</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">1547</td>
+                <td class="values" align="right">1547</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">14096</td>
+                <td class="values" align="right">15643</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="FDACODE5">FDACODE5 - FDA/NDC drug class code 5</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">FDACODE5</dd>
+            <dt>SAS Label: </dt>
+            <dd>FDA/NDC drug class code 5</dd>
+            <dt>English Text: </dt>
+            <dd class="info">FDA/NDC therapeutic drug class codes</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">FDA/NDC drug class code 5</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">868</td>
+                <td class="values" align="right">868</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">14775</td>
+                <td class="values" align="right">15643</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="FDACODE6">FDACODE6 - FDA/NDC drug class code 6</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">FDACODE6</dd>
+            <dt>SAS Label: </dt>
+            <dd>FDA/NDC drug class code 6</dd>
+            <dt>English Text: </dt>
+            <dd class="info">FDA/NDC therapeutic drug class codes</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">FDA/NDC drug class code 6</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">507</td>
+                <td class="values" align="right">507</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">15136</td>
+                <td class="values" align="right">15643</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RXD295">RXD295 - Number of prescription medicines taken</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RXD295</dd>
+            <dt>SAS Label: </dt>
+            <dd>Number of prescription medicines taken</dd>
+            <dt>English Text: </dt>
+            <dd class="info">The number of prescription medicines reported</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 18</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">9257</td>
+                <td class="values" align="right">9257</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6386</td>
+                <td class="values" align="right">15643</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RXQ280">RXQ280 - # of Beta-agonist canisters, past month</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RXQ280</dd>
+            <dt>SAS Label: </dt>
+            <dd># of Beta-agonist canisters, past month</dd>
+            <dt>English Text: </dt>
+            <dd class="info">How many canisters of {PRODUCT NAME} {have you/has SP} used in the past month?  Would you say . . .</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">Less than 1 canister,</td>
+                <td class="values" align="right">176</td>
+                <td class="values" align="right">176</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">179</td>
+                <td class="values" align="right">355</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">51</td>
+                <td class="values" align="right">406</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Maybe</td>
+                <td class="values" align="right">70</td>
+                <td class="values" align="right">476</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Does not use this form of medication</td>
+                <td class="values" align="right">103</td>
+                <td class="values" align="right">579</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">579</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">582</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">15061</td>
+                <td class="values" align="right">15643</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="RXDDRGID">RXDDRGID - Generic drug code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">RXDDRGID</dd>
+            <dt>SAS Label: </dt>
+            <dd>Generic drug code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Generic drug code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">Generic drug code</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">9138</td>
+                <td class="values" align="right">9138</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6505</td>
+                <td class="values" align="right">15643</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="Appendices">
+        <div id="Appendix">
+          <h2 id="Appendix_1:_U.S._Food_and_Drug_Administration_National_Drug_Code_Directory">Appendix 1: U.S. Food and Drug Administration National Drug Code Directory</h2><p>
+<table bordercolor="#000000" border="1">
+    <caption valign="top" align="left">Drug Class Codes</caption>
+    <thead>
+        <tr>
+            <th>
+            <p><strong>Code</strong></p>
+            </th>
+            <th><strong>Long Name</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>100</td>
+            <td>ANESTHETICS/ ADJUNCTS</td>
+        </tr>
+        <tr>
+            <td>117</td>
+            <td>ANESTHETICS, LOCAL</td>
+        </tr>
+        <tr>
+            <td>118</td>
+            <td>ANESTHETICS, GENERAL</td>
+        </tr>
+        <tr>
+            <td>119</td>
+            <td>ANESTHESIA, ADJUNCTS TO/ANALEPTICS</td>
+        </tr>
+        <tr>
+            <td>120</td>
+            <td>MEDICINAL GASES</td>
+        </tr>
+        <tr>
+            <td>121</td>
+            <td>ANESTHETICS, TOPICAL</td>
+        </tr>
+        <tr>
+            <td>122</td>
+            <td>ANESTHETICS, OPHTHALMIC</td>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>ANESTHETICS, RECTAL</td>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td>ANTIDOTES</td>
+        </tr>
+        <tr>
+            <td>281</td>
+            <td>ANTIDOTES, SPECIFIC</td>
+        </tr>
+        <tr>
+            <td>283</td>
+            <td>ANTIDOTES, GENERAL</td>
+        </tr>
+        <tr>
+            <td>285</td>
+            <td>ANTITOXINS/ANTIVENINS</td>
+        </tr>
+        <tr>
+            <td>286</td>
+            <td>ANAPHYLAXIS TREATMENT KIT</td>
+        </tr>
+        <tr>
+            <td>300</td>
+            <td>ANTIMICROBIALS</td>
+        </tr>
+        <tr>
+            <td>346</td>
+            <td>PENICILLINS</td>
+        </tr>
+        <tr>
+            <td>347</td>
+            <td>CEPHALOSPORINS</td>
+        </tr>
+        <tr>
+            <td>348</td>
+            <td>LINCOSAMIDES/MACROLIDES</td>
+        </tr>
+        <tr>
+            <td>349</td>
+            <td>POLYMYXINS</td>
+        </tr>
+        <tr>
+            <td>350</td>
+            <td>TETRACYCLINES</td>
+        </tr>
+        <tr>
+            <td>351</td>
+            <td>CHLORAMPHENICOL/DERIVATIVES</td>
+        </tr>
+        <tr>
+            <td>352</td>
+            <td>AMINOGLYCOSIDES</td>
+        </tr>
+        <tr>
+            <td>353</td>
+            <td>SULFONAMIDES/RELATED COMPOUNDS</td>
+        </tr>
+        <tr>
+            <td>354</td>
+            <td>ANTISEPTICS, URINARY TRACT</td>
+        </tr>
+        <tr>
+            <td>355</td>
+            <td>ANTIBACTERIALS, MISCELLANEOUS</td>
+        </tr>
+        <tr>
+            <td>356</td>
+            <td>ANTIMYCOBACTERIALS (INCL ANTI LEPROSY)</td>
+        </tr>
+        <tr>
+            <td>357</td>
+            <td>QUINOLONES/DERIVATIVES</td>
+        </tr>
+        <tr>
+            <td>358</td>
+            <td>ANTIFUNGALS</td>
+        </tr>
+        <tr>
+            <td>388</td>
+            <td>ANTIVIRALS</td>
+        </tr>
+        <tr>
+            <td>400</td>
+            <td>HEMATOLOGICS</td>
+        </tr>
+        <tr>
+            <td>408</td>
+            <td>DEFICIENCY ANEMIAS</td>
+        </tr>
+        <tr>
+            <td>409</td>
+            <td>ANTICOAGULANTS/THROMBOLYTICS</td>
+        </tr>
+        <tr>
+            <td>410</td>
+            <td>BLOOD COMPONENTS/SUBSTITUTES</td>
+        </tr>
+        <tr>
+            <td>411</td>
+            <td>HEMOSTATICS</td>
+        </tr>
+        <tr>
+            <td>500</td>
+            <td>CARDIOVASCULAR-RENAL</td>
+        </tr>
+        <tr>
+            <td>501</td>
+            <td>CARDIAC GLYCOSIDES</td>
+        </tr>
+        <tr>
+            <td>502</td>
+            <td>ANTIARRHYTHMICS</td>
+        </tr>
+        <tr>
+            <td>503</td>
+            <td>ANTIANGINALS</td>
+        </tr>
+        <tr>
+            <td>504</td>
+            <td>VASCULAR DISORDERS, CEREBRAL/PERIPHERAL</td>
+        </tr>
+        <tr>
+            <td>505</td>
+            <td>HYPOTENSION/SHOCK</td>
+        </tr>
+        <tr>
+            <td>506</td>
+            <td>ANTIHYPERTENSIVES</td>
+        </tr>
+        <tr>
+            <td>507</td>
+            <td>DIURETICS</td>
+        </tr>
+        <tr>
+            <td>508</td>
+            <td>CORONARY VASODILATORS</td>
+        </tr>
+        <tr>
+            <td>509</td>
+            <td>RELAXANTS/STIMULANTS, URINARY TRACT</td>
+        </tr>
+        <tr>
+            <td>510</td>
+            <td>CALCIUM CHANNEL BLOCKERS</td>
+        </tr>
+        <tr>
+            <td>511</td>
+            <td>CARBONIC ANHYDRASE INHIBITORS</td>
+        </tr>
+        <tr>
+            <td>512</td>
+            <td>BETA BLOCKERS</td>
+        </tr>
+        <tr>
+            <td>513</td>
+            <td>ALPHA AGONISTS/ALPHA BLOCKERS</td>
+        </tr>
+        <tr>
+            <td>514</td>
+            <td>ACE INHIBITORS</td>
+        </tr>
+        <tr>
+            <td>600</td>
+            <td>CENTRAL NERVOUS SYSTEM</td>
+        </tr>
+        <tr>
+            <td>626</td>
+            <td>SEDATIVES/HYPNOTICS</td>
+        </tr>
+        <tr>
+            <td>627</td>
+            <td>ANTIANXIETY</td>
+        </tr>
+        <tr>
+            <td>628</td>
+            <td>ANTIPSYCHOTICS/ANTIMANICS</td>
+        </tr>
+        <tr>
+            <td>630</td>
+            <td>ANTIDEPRESSANTS</td>
+        </tr>
+        <tr>
+            <td>631</td>
+            <td>ANOREXIANTS/CNS STIMULANTS</td>
+        </tr>
+        <tr>
+            <td>632</td>
+            <td>CNS, MISCELLANEOUS</td>
+        </tr>
+        <tr>
+            <td>633</td>
+            <td>ALZHEIMER-TYPE DEMENTIA</td>
+        </tr>
+        <tr>
+            <td>634</td>
+            <td>SLEEP AID PRODUCTS (OTC)</td>
+        </tr>
+        <tr>
+            <td>635</td>
+            <td>ANTIEMETICS</td>
+        </tr>
+        <tr>
+            <td>700</td>
+            <td>CONTRAST MEDIA/ RADIOPHARMACEUTICALS</td>
+        </tr>
+        <tr>
+            <td>789</td>
+            <td>DIAGNOSTICS, RADIOPAQUE &amp; NONRADIOACTIVE</td>
+        </tr>
+        <tr>
+            <td>790</td>
+            <td>DIAGNOSTICS - RADIOPHARMACEUTICALS</td>
+        </tr>
+        <tr>
+            <td>791</td>
+            <td>THERAPEUTICS - RADIOPHARMACEUTICALS</td>
+        </tr>
+        <tr>
+            <td>792</td>
+            <td>DIAGNOSTICS, MISCELLANEOUS</td>
+        </tr>
+        <tr>
+            <td>800</td>
+            <td>GASTROINTESTINALS</td>
+        </tr>
+        <tr>
+            <td>874</td>
+            <td>DISORDERS, ACID/PEPTIC</td>
+        </tr>
+        <tr>
+            <td>875</td>
+            <td>ANTIDIARRHEALS</td>
+        </tr>
+        <tr>
+            <td>876</td>
+            <td>LAXATIVES</td>
+        </tr>
+        <tr>
+            <td>877</td>
+            <td>GASTROINTESTINAL, MISCELLANEOUS</td>
+        </tr>
+        <tr>
+            <td>878</td>
+            <td>ANTISPASMODICS/ANTICHOLINERGICS</td>
+        </tr>
+        <tr>
+            <td>879</td>
+            <td>ANTACIDS</td>
+        </tr>
+        <tr>
+            <td>900</td>
+            <td>METABOLICS/NUTRIENTS</td>
+        </tr>
+        <tr>
+            <td>912</td>
+            <td>HYPERLIPIDEMIA</td>
+        </tr>
+        <tr>
+            <td>913</td>
+            <td>VITAMINS/MINERALS</td>
+        </tr>
+        <tr>
+            <td>914</td>
+            <td>NUTRITION, ENTERAL/PARENTERAL</td>
+        </tr>
+        <tr>
+            <td>915</td>
+            <td>REPL/REGS OF ELECTROLYTES/WATER BALANCE</td>
+        </tr>
+        <tr>
+            <td>916</td>
+            <td>CALCIUM METABOLISM</td>
+        </tr>
+        <tr>
+            <td>917</td>
+            <td>HEMATOPOIETIC GROWTH FACTORS</td>
+        </tr>
+        <tr>
+            <td>1000</td>
+            <td>HORMONES/HORMONAL MECHANISMS</td>
+        </tr>
+        <tr>
+            <td>1032</td>
+            <td>ADRENAL CORTICOSTEROIDS</td>
+        </tr>
+        <tr>
+            <td>1033</td>
+            <td>ANDROGENS/ANABOLIC STEROIDS</td>
+        </tr>
+        <tr>
+            <td>1034</td>
+            <td>ESTROGENS/PROGESTINS</td>
+        </tr>
+        <tr>
+            <td>1035</td>
+            <td>ANTERIOR PITUITARY/HYPOTHALMIC FUNCTION</td>
+        </tr>
+        <tr>
+            <td>1036</td>
+            <td>BLOOD GLUCOSE REGULATORS</td>
+        </tr>
+        <tr>
+            <td>1037</td>
+            <td>THYROID/ANTITHYROID</td>
+        </tr>
+        <tr>
+            <td>1038</td>
+            <td>ANTIDIURETICS</td>
+        </tr>
+        <tr>
+            <td>1039</td>
+            <td>RELAXANTS/STIMULANTS,UTERINE</td>
+        </tr>
+        <tr>
+            <td>1040</td>
+            <td>CONTRACEPTIVES</td>
+        </tr>
+        <tr>
+            <td>1041</td>
+            <td>INFERTILITY</td>
+        </tr>
+        <tr>
+            <td>1042</td>
+            <td>DRUGS USED IN DISORDERS OF GROWTH HORMONE SECRETION</td>
+        </tr>
+        <tr>
+            <td>1100</td>
+            <td>IMMUNOLOGICS</td>
+        </tr>
+        <tr>
+            <td>1180</td>
+            <td>VACCINES/ANTISERA</td>
+        </tr>
+        <tr>
+            <td>1181</td>
+            <td>IMMUNOMODULATORS</td>
+        </tr>
+        <tr>
+            <td>1182</td>
+            <td>ALLERGENIC EXTRACTS</td>
+        </tr>
+        <tr>
+            <td>1183</td>
+            <td>IMMUNE SERUMS</td>
+        </tr>
+        <tr>
+            <td>1200</td>
+            <td>SKIN/MUCOUS MEMBRANES</td>
+        </tr>
+        <tr>
+            <td>1264</td>
+            <td>ANTISEPTICS/DISINFECTANTS</td>
+        </tr>
+        <tr>
+            <td>1265</td>
+            <td>DERMATOLOGICS</td>
+        </tr>
+        <tr>
+            <td>1266</td>
+            <td>KERATOLYTICS</td>
+        </tr>
+        <tr>
+            <td>1267</td>
+            <td>ANTIPERSPIRANTS</td>
+        </tr>
+        <tr>
+            <td>1268</td>
+            <td>TOPICAL STEROIDS</td>
+        </tr>
+        <tr>
+            <td>1269</td>
+            <td>BURN/SUNBURN, SUNSCREEN/SUNTAN PRODUCTS</td>
+        </tr>
+        <tr>
+            <td>1270</td>
+            <td>ACNE PRODUCTS</td>
+        </tr>
+        <tr>
+            <td>1271</td>
+            <td>TOPICAL ANTI-INFECTIVES</td>
+        </tr>
+        <tr>
+            <td>1272</td>
+            <td>ANORECTAL PRODUCTS</td>
+        </tr>
+        <tr>
+            <td>1273</td>
+            <td>PERSONAL CARE PRODUCTS (VAGINAL)</td>
+        </tr>
+        <tr>
+            <td>1274</td>
+            <td>DERMATITIS/ANTIPURETICS</td>
+        </tr>
+        <tr>
+            <td>1275</td>
+            <td>TOPICAL ANALGESICS</td>
+        </tr>
+        <tr>
+            <td>1300</td>
+            <td>NEUROLOGICS</td>
+        </tr>
+        <tr>
+            <td>1371</td>
+            <td>EXTRAPYRAMIDAL MOVEMENT DISORDERS</td>
+        </tr>
+        <tr>
+            <td>1372</td>
+            <td>MYASTHENIA GRAVIS</td>
+        </tr>
+        <tr>
+            <td>1373</td>
+            <td>SKELETAL MUSCLE HYPERACTIVITY</td>
+        </tr>
+        <tr>
+            <td>1374</td>
+            <td>ANTICONVULSANTS</td>
+        </tr>
+        <tr>
+            <td>1400</td>
+            <td>ONCOLYTICS</td>
+        </tr>
+        <tr>
+            <td>1479</td>
+            <td>ANTINEOPLASTICS</td>
+        </tr>
+        <tr>
+            <td>1480</td>
+            <td>HORMONAL/BIOLOGICAL RESPONSE MODIFIERS</td>
+        </tr>
+        <tr>
+            <td>1481</td>
+            <td>ANTIMETABOLITES</td>
+        </tr>
+        <tr>
+            <td>1482</td>
+            <td>ANTIBIOTICS, ALKALOIDS, AND ENZYMES</td>
+        </tr>
+        <tr>
+            <td>1483</td>
+            <td>DNA DAMAGING DRUGS</td>
+        </tr>
+        <tr>
+            <td>1500</td>
+            <td>OPHTHALMICS</td>
+        </tr>
+        <tr>
+            <td>1566</td>
+            <td>GLAUCOMA</td>
+        </tr>
+        <tr>
+            <td>1567</td>
+            <td>CYCLOPLEGICS/MYDRIATICS</td>
+        </tr>
+        <tr>
+            <td>1568</td>
+            <td>OCULAR ANTI-INFECTIVE/ANTI-INFLAMMATORY</td>
+        </tr>
+        <tr>
+            <td>1569</td>
+            <td>OPHTHALMICS, MISCELLANEOUS</td>
+        </tr>
+        <tr>
+            <td>1570</td>
+            <td>OPHTHALMICS-DECONGESTANTS/ANTIALLERGY AGENTS</td>
+        </tr>
+        <tr>
+            <td>1571</td>
+            <td>CONTACT LENS PRODUCTS</td>
+        </tr>
+        <tr>
+            <td>1600</td>
+            <td>OTICS</td>
+        </tr>
+        <tr>
+            <td>1670</td>
+            <td>OTICS, TOPICAL</td>
+        </tr>
+        <tr>
+            <td>1671</td>
+            <td>VERTIGO/MOTION SICKNESS/VOMITING</td>
+        </tr>
+        <tr>
+            <td>1700</td>
+            <td>RELIEF OF PAIN</td>
+        </tr>
+        <tr>
+            <td>1720</td>
+            <td>ANALGESICS, GENERAL</td>
+        </tr>
+        <tr>
+            <td>1721</td>
+            <td>ANALGESICS-NARCOTIC</td>
+        </tr>
+        <tr>
+            <td>1722</td>
+            <td>ANALGESICS-NON-NARCOTIC</td>
+        </tr>
+        <tr>
+            <td>1723</td>
+            <td>ANTIMIGRAINE/OTHER HEADACHES</td>
+        </tr>
+        <tr>
+            <td>1724</td>
+            <td>ANTIARTHRITICS</td>
+        </tr>
+        <tr>
+            <td>1725</td>
+            <td>ANTIGOUT</td>
+        </tr>
+        <tr>
+            <td>1726</td>
+            <td>CENTRAL PAIN SYNDROMES</td>
+        </tr>
+        <tr>
+            <td>1727</td>
+            <td>NSAID</td>
+        </tr>
+        <tr>
+            <td>1728</td>
+            <td>ANTIPYRETICS</td>
+        </tr>
+        <tr>
+            <td>1729</td>
+            <td>MENSTRUAL PRODUCTS</td>
+        </tr>
+        <tr>
+            <td>1800</td>
+            <td>ANTIPARASITICS</td>
+        </tr>
+        <tr>
+            <td>1860</td>
+            <td>ANTIPROTOZOALS</td>
+        </tr>
+        <tr>
+            <td>1862</td>
+            <td>ANTHELMINTICS</td>
+        </tr>
+        <tr>
+            <td>1863</td>
+            <td>SCABICIDES/PEDICULICIDES</td>
+        </tr>
+        <tr>
+            <td>1864</td>
+            <td>ANTIMALARIALS</td>
+        </tr>
+        <tr>
+            <td>1900</td>
+            <td>RESPIRATORY TRACT</td>
+        </tr>
+        <tr>
+            <td>1940</td>
+            <td>ANTIASTHMATICS/BRONCODILATORS</td>
+        </tr>
+        <tr>
+            <td>1941</td>
+            <td>NASAL DECONGESTANTS</td>
+        </tr>
+        <tr>
+            <td>1943</td>
+            <td>ANTITUSSIVES/EXPECTORANTS/MUCOLYTICS</td>
+        </tr>
+        <tr>
+            <td>1944</td>
+            <td>ANTIHISTAMINES</td>
+        </tr>
+        <tr>
+            <td>1945</td>
+            <td>COLD REMEDIES</td>
+        </tr>
+        <tr>
+            <td>1946</td>
+            <td>LOZENGE PRODUCTS</td>
+        </tr>
+        <tr>
+            <td>1947</td>
+            <td>CORTICOSTEROIDS-INHALATION/NASAL</td>
+        </tr>
+        <tr>
+            <td>2000</td>
+            <td>UNCLASSIFIED/MISCELLANEOUS</td>
+        </tr>
+        <tr>
+            <td>2087</td>
+            <td>UNCLASSIFIED</td>
+        </tr>
+        <tr>
+            <td>2095</td>
+            <td>PHARMACEUTICAL AIDS</td>
+        </tr>
+        <tr>
+            <td>2096</td>
+            <td>SURGICAL AIDS</td>
+        </tr>
+        <tr>
+            <td>2097</td>
+            <td>DENTAL PREPARATIONS</td>
+        </tr>
+        <tr>
+            <td>2098</td>
+            <td>DENTRIFICE/DENTURE PRODUCTS</td>
+        </tr>
+        <tr>
+            <td>2099</td>
+            <td>MOUTH PAIN, COLD SORE, CANKER SORE PRODUCTS</td>
+        </tr>
+        <tr>
+            <td>2100</td>
+            <td>HOMEOPATHIC PRODUCTS</td>
+        </tr>
+    </tbody>
+</table>
+</p></div>
+        <div id="Appendix">
+          <h2 id="Appendix_2:_Generic_Ingredient_Names">Appendix 2: Generic Ingredient Names</h2><p>
+<table bordercolor="#000000" border="1">
+    <caption valign="top" align="left">Generic Ingredient Names</caption>
+    <thead>
+        <tr>
+            <th>NHCODE</th>
+            <th>RXD240B (Generic Ingredient Name)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>100</td>
+            <td>ABACAVIR SULFATE</td>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td>ACARBOSE</td>
+        </tr>
+        <tr>
+            <td>300</td>
+            <td>ACEBUTOLOL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>500</td>
+            <td>ACETAMINOPHEN; BUTALBITAL</td>
+        </tr>
+        <tr>
+            <td>600</td>
+            <td>ACETAMINOPHEN; BUTALBITAL; CAFFEINE</td>
+        </tr>
+        <tr>
+            <td>700</td>
+            <td>ACETAMINOPHEN; BUTALBITAL; CAFFEINE; CODEINE PHOSPHATE</td>
+        </tr>
+        <tr>
+            <td>800</td>
+            <td>ACETAMINOPHEN; CODEINE PHOSPHATE</td>
+        </tr>
+        <tr>
+            <td>900</td>
+            <td>ACETAMINOPHEN; DICHLORALANTIPYRINE; ISOMETHEPTENE MUCATE (1:1)</td>
+        </tr>
+        <tr>
+            <td>1000</td>
+            <td>ACETAMINOPHEN; HYDROCODONE BITARTRATE</td>
+        </tr>
+        <tr>
+            <td>1100</td>
+            <td>ACETAMINOPHEN; OXYCODONE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>1200</td>
+            <td>ACETAMINOPHEN; PROPOXYPHENE NAPSYLATE</td>
+        </tr>
+        <tr>
+            <td>1300</td>
+            <td>ACRIVASTINE; PSEUDOEPHEDRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>1400</td>
+            <td>ACYCLOVIR</td>
+        </tr>
+        <tr>
+            <td>1500</td>
+            <td>ADAPALENE</td>
+        </tr>
+        <tr>
+            <td>1600</td>
+            <td>ALBUTEROL</td>
+        </tr>
+        <tr>
+            <td>1700</td>
+            <td>ALBUTEROL SULFATE; IPRATROPIUM BROMIDE</td>
+        </tr>
+        <tr>
+            <td>1800</td>
+            <td>ALCLOMETASONE DIPROPIONATE</td>
+        </tr>
+        <tr>
+            <td>1900</td>
+            <td>ALENDRONATE SODIUM</td>
+        </tr>
+        <tr>
+            <td>70000</td>
+            <td>ALLERGY PILLS-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>2000</td>
+            <td>ALLOPURINOL</td>
+        </tr>
+        <tr>
+            <td>2100</td>
+            <td>ALPRAZOLAM</td>
+        </tr>
+        <tr>
+            <td>2200</td>
+            <td>ALPROSTADIL</td>
+        </tr>
+        <tr>
+            <td>2300</td>
+            <td>AMANTADINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>2400</td>
+            <td>AMBROXOL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>2500</td>
+            <td>AMBROXOL HYDROCHLORIDE; AMOXICILLIN</td>
+        </tr>
+        <tr>
+            <td>2600</td>
+            <td>AMILORIDE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>2700</td>
+            <td>AMILORIDE HYDROCHLORIDE; HYDROCHLOROTHIAZIDE</td>
+        </tr>
+        <tr>
+            <td>2800</td>
+            <td>AMINOPHYLLINE</td>
+        </tr>
+        <tr>
+            <td>2900</td>
+            <td>AMIODARONE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>3000</td>
+            <td>AMITRIPTYLINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>3100</td>
+            <td>AMITRIPTYLINE HYDROCHLORIDE; CHLORDIAZEPOXIDE</td>
+        </tr>
+        <tr>
+            <td>3200</td>
+            <td>AMITRIPTYLINE HYDROCHLORIDE; PERPHENAZINE</td>
+        </tr>
+        <tr>
+            <td>3300</td>
+            <td>AMLODIPINE BESYLATE</td>
+        </tr>
+        <tr>
+            <td>3400</td>
+            <td>AMLODIPINE BESYLATE; BENAZEPRIL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>3500</td>
+            <td>AMOXICILLIN</td>
+        </tr>
+        <tr>
+            <td>3600</td>
+            <td>AMOXICILLIN TRIHYDRATE; CLAVULANATE POTASSIUM</td>
+        </tr>
+        <tr>
+            <td>3700</td>
+            <td>AMPHETAMINE ASPARTATE; AMPHETAMINE SULFATE; DEXTROAMPHETAMINE SACCHARATE; DEXTROAMPHETAMINE SULFATE</td>
+        </tr>
+        <tr>
+            <td>3800</td>
+            <td>AMPICILLIN</td>
+        </tr>
+        <tr>
+            <td>3900</td>
+            <td>AMRINONE LACTATE</td>
+        </tr>
+        <tr>
+            <td>4000</td>
+            <td>AMYLASE; LIPASE; PROTEASE</td>
+        </tr>
+        <tr>
+            <td>4100</td>
+            <td>ANASTROZOLE</td>
+        </tr>
+        <tr>
+            <td>70100</td>
+            <td>ANTIBIOTIC-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>70200</td>
+            <td>ANTIINFLAMMATORY DRUG-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>4200</td>
+            <td>ANTIPYRINE; BENZOCAINE; PHENYLEPHRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>4300</td>
+            <td>APRACLONIDINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>70300</td>
+            <td>ARTHRITIS MEDICINE-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>4400</td>
+            <td>ASPIRIN</td>
+        </tr>
+        <tr>
+            <td>4500</td>
+            <td>ASPIRIN; BUTALBITAL; CAFFEINE</td>
+        </tr>
+        <tr>
+            <td>4600</td>
+            <td>ASPIRIN; HYDROCODONE BITARTRATE</td>
+        </tr>
+        <tr>
+            <td>4700</td>
+            <td>ASPIRIN; OXYCODONE HYDROCHLORIDE; OXYCODONE TEREPHTHALATE</td>
+        </tr>
+        <tr>
+            <td>4800</td>
+            <td>ASTEMIZOLE</td>
+        </tr>
+        <tr>
+            <td>70400</td>
+            <td>ASTHMA SPRAY-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>4900</td>
+            <td>ATENOLOL</td>
+        </tr>
+        <tr>
+            <td>5000</td>
+            <td>ATENOLOL; CHLORTHALIDONE</td>
+        </tr>
+        <tr>
+            <td>5100</td>
+            <td>ATORVASTATIN CALCIUM</td>
+        </tr>
+        <tr>
+            <td>5200</td>
+            <td>ATROPINE SULFATE; BENZOIC ACID; HYOSCYAMINE; METHENAMINE; METHYLENE BLUE; PHENYL SALICYLATE</td>
+        </tr>
+        <tr>
+            <td>5300</td>
+            <td>ATROPINE SULFATE; DIPHENOXYLATE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>5400</td>
+            <td>ATROPINE SULFATE; HYOSCYAMINE SULFATE; PHENOBARBITAL; SCOPOLAMINE HYDROBROMIDE</td>
+        </tr>
+        <tr>
+            <td>5500</td>
+            <td>AURANOFIN</td>
+        </tr>
+        <tr>
+            <td>5600</td>
+            <td>AZATADINE MALEATE</td>
+        </tr>
+        <tr>
+            <td>5700</td>
+            <td>AZATHIOPRINE</td>
+        </tr>
+        <tr>
+            <td>5800</td>
+            <td>AZELASTINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>5900</td>
+            <td>AZITHROMYCIN DIHYDRATE</td>
+        </tr>
+        <tr>
+            <td>6000</td>
+            <td>BACITRACIN</td>
+        </tr>
+        <tr>
+            <td>6100</td>
+            <td>BACLOFEN</td>
+        </tr>
+        <tr>
+            <td>6200</td>
+            <td>BECLOMETHASONE DIPROPIONATE</td>
+        </tr>
+        <tr>
+            <td>6300</td>
+            <td>BENAZEPRIL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>6400</td>
+            <td>BENAZEPRIL HYDROCHLORIDE; HYDROCHLOROTHIAZIDE</td>
+        </tr>
+        <tr>
+            <td>6500</td>
+            <td>BENDROFLUMETHIAZIDE</td>
+        </tr>
+        <tr>
+            <td>6600</td>
+            <td>BENZONATATE</td>
+        </tr>
+        <tr>
+            <td>6700</td>
+            <td>BENZOYL PEROXIDE</td>
+        </tr>
+        <tr>
+            <td>6800</td>
+            <td>BENZOYL PEROXIDE; ERYTHROMYCIN</td>
+        </tr>
+        <tr>
+            <td>6900</td>
+            <td>BENZTROPINE MESYLATE</td>
+        </tr>
+        <tr>
+            <td>7000</td>
+            <td>BETAMETHASONE</td>
+        </tr>
+        <tr>
+            <td>7100</td>
+            <td>BETAMETHASONE DIPROPIONATE</td>
+        </tr>
+        <tr>
+            <td>7200</td>
+            <td>BETAMETHASONE DIPROPIONATE; CLOTRIMAZOLE</td>
+        </tr>
+        <tr>
+            <td>7300</td>
+            <td>BETAMETHASONE VALERATE</td>
+        </tr>
+        <tr>
+            <td>7400</td>
+            <td>BETAMETHASONE; INDOMETHASONE; METHOCARBAMOL</td>
+        </tr>
+        <tr>
+            <td>7500</td>
+            <td>BETAXOLOL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>7600</td>
+            <td>BETHANECHOL CHLORIDE</td>
+        </tr>
+        <tr>
+            <td>7700</td>
+            <td>BICALUTAMIDE</td>
+        </tr>
+        <tr>
+            <td>7800</td>
+            <td>BISOPROLOL FUMARATE</td>
+        </tr>
+        <tr>
+            <td>7900</td>
+            <td>BISOPROLOL FUMARATE; HYDROCHLOROTHIAZIDE</td>
+        </tr>
+        <tr>
+            <td>8000</td>
+            <td>BRIMONIDINE TARTRATE</td>
+        </tr>
+        <tr>
+            <td>8100</td>
+            <td>BRINZOLAMIDE</td>
+        </tr>
+        <tr>
+            <td>8200</td>
+            <td>BROMOCRIPTINE MESYLATE</td>
+        </tr>
+        <tr>
+            <td>8300</td>
+            <td>BROMPHENIRAMINE MALEATE</td>
+        </tr>
+        <tr>
+            <td>8400</td>
+            <td>BROMPHENIRAMINE MALEATE; CODEINE PHOSPHATE; PHENYLPROPANOLAMINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>8500</td>
+            <td>BROMPHENIRAMINE MALEATE; DEXTROMETHORPHAN HYDROBROMIDE; PSEUDOEPHEDRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>8600</td>
+            <td>BROMPHENIRAMINE MALEATE; PHENYLPROPANOLAMINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>8700</td>
+            <td>BROMPHENIRAMINE MALEATE; PSEUDOEPHEDRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>8800</td>
+            <td>BUDESONIDE</td>
+        </tr>
+        <tr>
+            <td>8900</td>
+            <td>BUMETANIDE</td>
+        </tr>
+        <tr>
+            <td>9000</td>
+            <td>BUPROPION HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>83100</td>
+            <td>BUSPIRONE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>9100</td>
+            <td>BUTABARBITAL SODIUM</td>
+        </tr>
+        <tr>
+            <td>9200</td>
+            <td>BUTABARBITAL; HYOSCYAMINE HYDROBROMIDE; PHENAZOPYRIDINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>9300</td>
+            <td>CALCIPOTRIENE</td>
+        </tr>
+        <tr>
+            <td>9400</td>
+            <td>CALCITONIN, SALMON</td>
+        </tr>
+        <tr>
+            <td>9500</td>
+            <td>CALCIUM ACETATE</td>
+        </tr>
+        <tr>
+            <td>9600</td>
+            <td>CALCIUM GLUCONATE</td>
+        </tr>
+        <tr>
+            <td>9700</td>
+            <td>CANDESARTAN CILEXETIL</td>
+        </tr>
+        <tr>
+            <td>9800</td>
+            <td>CAPTOPRIL</td>
+        </tr>
+        <tr>
+            <td>9900</td>
+            <td>CAPTOPRIL; HYDROCHLOROTHIAZIDE</td>
+        </tr>
+        <tr>
+            <td>10000</td>
+            <td>CARBAMAZEPINE</td>
+        </tr>
+        <tr>
+            <td>10100</td>
+            <td>CARBIDOPA; LEVODOPA</td>
+        </tr>
+        <tr>
+            <td>10200</td>
+            <td>CARBINOXAMINE MALEATE; DEXTROMETHORPHAN HYDROBROMIDE; PSEUDOEPHEDRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>10300</td>
+            <td>CARBINOXAMINE MALEATE; PSEUDOEPHEDRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>70500</td>
+            <td>CARDIAC DRUG-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>10400</td>
+            <td>CARISOPRODOL</td>
+        </tr>
+        <tr>
+            <td>10500</td>
+            <td>CARTEOLOL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>10600</td>
+            <td>CARVEDILOL</td>
+        </tr>
+        <tr>
+            <td>10700</td>
+            <td>CEFACLOR</td>
+        </tr>
+        <tr>
+            <td>10800</td>
+            <td>CEFADROXIL</td>
+        </tr>
+        <tr>
+            <td>10900</td>
+            <td>CEFDINIR</td>
+        </tr>
+        <tr>
+            <td>11000</td>
+            <td>CEFIXIME</td>
+        </tr>
+        <tr>
+            <td>11100</td>
+            <td>CEFPODOXIME PROXETIL</td>
+        </tr>
+        <tr>
+            <td>11200</td>
+            <td>CEFPROZIL</td>
+        </tr>
+        <tr>
+            <td>11300</td>
+            <td>CEFTIBUTEN</td>
+        </tr>
+        <tr>
+            <td>11400</td>
+            <td>CEFUROXIME AXETIL</td>
+        </tr>
+        <tr>
+            <td>11500</td>
+            <td>CELECOXIB</td>
+        </tr>
+        <tr>
+            <td>11600</td>
+            <td>CEPHALEXIN</td>
+        </tr>
+        <tr>
+            <td>11700</td>
+            <td>CERIVASTATIN SODIUM</td>
+        </tr>
+        <tr>
+            <td>11800</td>
+            <td>CETIRIZINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>11900</td>
+            <td>CHLORAMBUCIL</td>
+        </tr>
+        <tr>
+            <td>12000</td>
+            <td>CHLORDIAZEPOXIDE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>12100</td>
+            <td>CHLORDIAZEPOXIDE HYDROCHLORIDE; CLIDINIUM BROMIDE</td>
+        </tr>
+        <tr>
+            <td>12200</td>
+            <td>CHLORHEXIDINE GLUCONATE</td>
+        </tr>
+        <tr>
+            <td>12300</td>
+            <td>CHLOROQUINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>12400</td>
+            <td>CHLOROTHIAZIDE</td>
+        </tr>
+        <tr>
+            <td>12500</td>
+            <td>CHLOROXINE</td>
+        </tr>
+        <tr>
+            <td>12600</td>
+            <td>CHLORPHENIRAMINE MALEATE; CODEINE PHOSPHATE; PSEUDOEPHEDRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>12700</td>
+            <td>CHLORPHENIRAMINE MALEATE; DEXTROMETHORPHAN HYDROBROMIDE; PHENYLEPHRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>12800</td>
+            <td>CHLORPHENIRAMINE MALEATE; DEXTROMETHORPHAN; GUAIFENESIN; PHENYLEPHRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>12900</td>
+            <td>CHLORPHENIRAMINE MALEATE; HYDROCODONE BITARTRATE; PHENYLEPHRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>13000</td>
+            <td>CHLORPHENIRAMINE MALEATE; HYDROCODONE BITARTRATE; PSEUDOEPHEDRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>13100</td>
+            <td>CHLORPHENIRAMINE MALEATE; METHSCOPOLAMINE NITRATE; PHENYLEPHRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>13200</td>
+            <td>CHLORPHENIRAMINE MALEATE; PHENYLEPHRINE HYDROCHLORIDE; PHENYLPROPANOLAMINE HYDROCHLORIDE; PHENYLTOLOXAMINE CITRATE</td>
+        </tr>
+        <tr>
+            <td>13300</td>
+            <td>CHLORPHENIRAMINE POLISTIREX; HYDROCODONE POLISTIREX</td>
+        </tr>
+        <tr>
+            <td>13400</td>
+            <td>CHLORPHENIRAMINE TANNATE; PHENYLEPHRINE TANNATE; PYRILAMINE TANNATE</td>
+        </tr>
+        <tr>
+            <td>13500</td>
+            <td>CHLORPHENIRAMINE TANNATE; PSEUDOEPHEDRINE TANNATE</td>
+        </tr>
+        <tr>
+            <td>13600</td>
+            <td>CHLORPROMAZINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>13700</td>
+            <td>CHLORPROPAMIDE</td>
+        </tr>
+        <tr>
+            <td>13800</td>
+            <td>CHLORTHALIDONE</td>
+        </tr>
+        <tr>
+            <td>13900</td>
+            <td>CHLORTHALIDONE; CLONIDINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>14000</td>
+            <td>CHLORZOXAZONE</td>
+        </tr>
+        <tr>
+            <td>70600</td>
+            <td>CHOLESTEROL LOWERING DRUG-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>14100</td>
+            <td>CHOLESTYRAMINE</td>
+        </tr>
+        <tr>
+            <td>14200</td>
+            <td>CIMETIDINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>14300</td>
+            <td>CIPROFLOXACIN HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>14400</td>
+            <td>CIPROFLOXACIN HYDROCHLORIDE; HYDROCORTISONE</td>
+        </tr>
+        <tr>
+            <td>14500</td>
+            <td>CISAPRIDE</td>
+        </tr>
+        <tr>
+            <td>14600</td>
+            <td>CITALOPRAM HYDROBROMIDE</td>
+        </tr>
+        <tr>
+            <td>14700</td>
+            <td>CLARITHROMYCIN</td>
+        </tr>
+        <tr>
+            <td>14800</td>
+            <td>CLINDAMYCIN HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>14900</td>
+            <td>CLINDAMYCIN PHOSPHATE</td>
+        </tr>
+        <tr>
+            <td>15000</td>
+            <td>CLOBETASOL PROPIONATE</td>
+        </tr>
+        <tr>
+            <td>15100</td>
+            <td>CLOMIPHENE CITRATE</td>
+        </tr>
+        <tr>
+            <td>15200</td>
+            <td>CLONAZEPAM</td>
+        </tr>
+        <tr>
+            <td>15300</td>
+            <td>CLONIDINE</td>
+        </tr>
+        <tr>
+            <td>15400</td>
+            <td>CLOPIDOGREL BISULFATE</td>
+        </tr>
+        <tr>
+            <td>15500</td>
+            <td>CLORAZEPATE DIPOTASSIUM</td>
+        </tr>
+        <tr>
+            <td>15600</td>
+            <td>CLOTRIMAZOLE</td>
+        </tr>
+        <tr>
+            <td>15700</td>
+            <td>CODEINE PHOSPHATE; GUAIFENESIN</td>
+        </tr>
+        <tr>
+            <td>15800</td>
+            <td>CODEINE PHOSPHATE; GUAIFENESIN; PSEUDOEPHEDRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>15900</td>
+            <td>CODEINE PHOSPHATE; PHENYLEPHRINE HYDROCHLORIDE; PROMETHAZINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>16000</td>
+            <td>CODEINE PHOSPHATE; PROMETHAZINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>16100</td>
+            <td>COLCHICINE</td>
+        </tr>
+        <tr>
+            <td>16200</td>
+            <td>COLCHICINE; PROBENECID</td>
+        </tr>
+        <tr>
+            <td>16300</td>
+            <td>COLESTIPOL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>16400</td>
+            <td>CORTISONE ACETATE</td>
+        </tr>
+        <tr>
+            <td>16500</td>
+            <td>CROMOLYN SODIUM</td>
+        </tr>
+        <tr>
+            <td>16600</td>
+            <td>CYCLOBENZAPRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>16700</td>
+            <td>CYCLOSPORINE</td>
+        </tr>
+        <tr>
+            <td>16800</td>
+            <td>CYPROHEPTADINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>16900</td>
+            <td>DEMECLOCYLCINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>70700</td>
+            <td>DERMATOLOGY SKIN CREAM-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>17000</td>
+            <td>DESIPRAMINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>17100</td>
+            <td>DESMOPRESSIN ACETATE</td>
+        </tr>
+        <tr>
+            <td>17200</td>
+            <td>DESOGESTREL; ETHINYL ESTRADIOL</td>
+        </tr>
+        <tr>
+            <td>17300</td>
+            <td>DESONIDE</td>
+        </tr>
+        <tr>
+            <td>17400</td>
+            <td>DESOXIMETASONE</td>
+        </tr>
+        <tr>
+            <td>17500</td>
+            <td>DEXAMETHASONE</td>
+        </tr>
+        <tr>
+            <td>17600</td>
+            <td>DEXAMETHASONE SODIUM PHOSPHATE; NEOMYCIN SULFATE</td>
+        </tr>
+        <tr>
+            <td>17700</td>
+            <td>DEXAMETHASONE; NEOMYCIN SULFATE; POLYMYXIN B SULFATE</td>
+        </tr>
+        <tr>
+            <td>17800</td>
+            <td>DEXAMETHASONE; TOBRAMYCIN</td>
+        </tr>
+        <tr>
+            <td>17900</td>
+            <td>DEXTROAMPHETAMINE SULFATE</td>
+        </tr>
+        <tr>
+            <td>18000</td>
+            <td>DEXTROMETHORPHAN HYDROBROMIDE</td>
+        </tr>
+        <tr>
+            <td>18100</td>
+            <td>DEXTROMETHORPHAN HYDROBROMIDE; GUAIFENESIN</td>
+        </tr>
+        <tr>
+            <td>18200</td>
+            <td>DEXTROMETHORPHAN HYDROBROMIDE; GUAIFENESIN; PSEUDOEPHEDRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>18300</td>
+            <td>DEXTROMETHORPHAN HYDROBROMIDE; POTASSIUM GUAIACOLSULFONATE</td>
+        </tr>
+        <tr>
+            <td>18400</td>
+            <td>DEXTROMETHORPHAN HYDROBROMIDE; PROMETHAZINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>18500</td>
+            <td>DIAZEPAM</td>
+        </tr>
+        <tr>
+            <td>18600</td>
+            <td>DIAZOXIDE</td>
+        </tr>
+        <tr>
+            <td>18700</td>
+            <td>DICLOFENAC POTASSIUM</td>
+        </tr>
+        <tr>
+            <td>18800</td>
+            <td>DICLOFENAC SODIUM</td>
+        </tr>
+        <tr>
+            <td>18900</td>
+            <td>DICLOFENAC SODIUM; MISOPROSTOL</td>
+        </tr>
+        <tr>
+            <td>70800</td>
+            <td>DICLOFENAC-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>19000</td>
+            <td>DICLOXACILLIN SODIUM</td>
+        </tr>
+        <tr>
+            <td>19100</td>
+            <td>DICYCLOMINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>19200</td>
+            <td>DIDANOSINE</td>
+        </tr>
+        <tr>
+            <td>19300</td>
+            <td>DIFLORASONE DIACETATE</td>
+        </tr>
+        <tr>
+            <td>19400</td>
+            <td>DIGOXIN</td>
+        </tr>
+        <tr>
+            <td>19500</td>
+            <td>DIHYDROERGOTAMINE MESYLATE</td>
+        </tr>
+        <tr>
+            <td>19600</td>
+            <td>DILTIAZEM HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>19700</td>
+            <td>DIOXYBENZONE; HYDROQUINONE; PADIMATE O</td>
+        </tr>
+        <tr>
+            <td>19800</td>
+            <td>DIPHENHYDRAMINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>19900</td>
+            <td>DIPHENIDOL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>20000</td>
+            <td>DIPIVEFRIN HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>20100</td>
+            <td>DIPYRIDAMOLE</td>
+        </tr>
+        <tr>
+            <td>20200</td>
+            <td>DIRITHROMYCIN</td>
+        </tr>
+        <tr>
+            <td>20300</td>
+            <td>DISULFIRAM</td>
+        </tr>
+        <tr>
+            <td>20400</td>
+            <td>DIVALPROEX SODIUM</td>
+        </tr>
+        <tr>
+            <td>20500</td>
+            <td>DOCUSATE SODIUM</td>
+        </tr>
+        <tr>
+            <td>20600</td>
+            <td>DONEPEZIL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>20700</td>
+            <td>DORZOLAMIDE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>20800</td>
+            <td>DORZOLAMIDE; TIMOLOL</td>
+        </tr>
+        <tr>
+            <td>20900</td>
+            <td>DOXAZOSIN MESYLATE</td>
+        </tr>
+        <tr>
+            <td>21000</td>
+            <td>DOXEPIN HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>21100</td>
+            <td>DOXYCYCLINE</td>
+        </tr>
+        <tr>
+            <td>21200</td>
+            <td>DOXYCYCLINE HYCLATE</td>
+        </tr>
+        <tr>
+            <td>21300</td>
+            <td>DOXYCYCLINE MONOHYDRATE</td>
+        </tr>
+        <tr>
+            <td>70900</td>
+            <td>EAR MEDICATION-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>21400</td>
+            <td>ECONAZOLE NITRATE</td>
+        </tr>
+        <tr>
+            <td>21500</td>
+            <td>EFAVIRENZ</td>
+        </tr>
+        <tr>
+            <td>21600</td>
+            <td>ENALAPRIL MALEATE</td>
+        </tr>
+        <tr>
+            <td>21700</td>
+            <td>ENALAPRIL MALEATE; HYDROCHLOROTHIAZIDE</td>
+        </tr>
+        <tr>
+            <td>21800</td>
+            <td>EPINEPHRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>21900</td>
+            <td>EPOETIN ALFA</td>
+        </tr>
+        <tr>
+            <td>22000</td>
+            <td>ERGOLOID MESYLATES</td>
+        </tr>
+        <tr>
+            <td>71000</td>
+            <td>ERGOTAMINE-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>22100</td>
+            <td>ERYTHROMYCIN</td>
+        </tr>
+        <tr>
+            <td>22200</td>
+            <td>ERYTHROMYCIN ETHYLSUCCINATE</td>
+        </tr>
+        <tr>
+            <td>22300</td>
+            <td>ERYTHROMYCIN ETHYLSUCCINATE; SULFISOXAZOLE ACETYL</td>
+        </tr>
+        <tr>
+            <td>22400</td>
+            <td>ESTRADIOL</td>
+        </tr>
+        <tr>
+            <td>22500</td>
+            <td>ESTRADIOL CYPIONATE; TESTOSTERONE CYPIONATE</td>
+        </tr>
+        <tr>
+            <td>22600</td>
+            <td>ESTRADIOL VALERATE</td>
+        </tr>
+        <tr>
+            <td>22700</td>
+            <td>ESTROGENS, CONJUGATED</td>
+        </tr>
+        <tr>
+            <td>22800</td>
+            <td>ESTROGENS, CONJUGATED; MEDROXYPROGESTERONE ACETATE</td>
+        </tr>
+        <tr>
+            <td>22900</td>
+            <td>ESTROGENS, ESTERIFIED</td>
+        </tr>
+        <tr>
+            <td>23000</td>
+            <td>ESTROGENS, ESTERIFIED; METHYLTESTOSTERONE</td>
+        </tr>
+        <tr>
+            <td>71100</td>
+            <td>ESTROGEN-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>23100</td>
+            <td>ESTROPIPATE</td>
+        </tr>
+        <tr>
+            <td>23200</td>
+            <td>ETHAMBUTOL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>23300</td>
+            <td>ETHINYL ESTRADIOL; ETHYNODIOL DIACETATE</td>
+        </tr>
+        <tr>
+            <td>23400</td>
+            <td>ETHINYL ESTRADIOL; LEVONORGESTREL</td>
+        </tr>
+        <tr>
+            <td>23500</td>
+            <td>ETHINYL ESTRADIOL; NORETHINDRONE</td>
+        </tr>
+        <tr>
+            <td>23600</td>
+            <td>ETHINYL ESTRADIOL; NORETHINDRONE ACETATE</td>
+        </tr>
+        <tr>
+            <td>23700</td>
+            <td>ETHINYL ESTRADIOL; NORGESTIMATE</td>
+        </tr>
+        <tr>
+            <td>23800</td>
+            <td>ETHINYL ESTRADIOL; NORGESTREL</td>
+        </tr>
+        <tr>
+            <td>23900</td>
+            <td>ETODOLAC</td>
+        </tr>
+        <tr>
+            <td>24000</td>
+            <td>FAMCICLOVIR</td>
+        </tr>
+        <tr>
+            <td>24100</td>
+            <td>FAMOTIDINE</td>
+        </tr>
+        <tr>
+            <td>24200</td>
+            <td>FELODIPINE</td>
+        </tr>
+        <tr>
+            <td>24300</td>
+            <td>FENFLURAMINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>24400</td>
+            <td>FENOFIBRATE</td>
+        </tr>
+        <tr>
+            <td>24500</td>
+            <td>FENOPROFEN CALCIUM</td>
+        </tr>
+        <tr>
+            <td>24600</td>
+            <td>FENOTEROL; IPRATROPIUM BROMIDE</td>
+        </tr>
+        <tr>
+            <td>24700</td>
+            <td>FENTANYL</td>
+        </tr>
+        <tr>
+            <td>24800</td>
+            <td>FEXOFENADINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>24900</td>
+            <td>FEXOFENADINE HYDROCHLORIDE; PSEUDOEPHEDRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>25000</td>
+            <td>FINASTERIDE</td>
+        </tr>
+        <tr>
+            <td>25100</td>
+            <td>FLAVOXATE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>25200</td>
+            <td>FLUCONAZOLE</td>
+        </tr>
+        <tr>
+            <td>25300</td>
+            <td>FLUDROCORTISONE ACETATE</td>
+        </tr>
+        <tr>
+            <td>25400</td>
+            <td>FLUNISOLIDE</td>
+        </tr>
+        <tr>
+            <td>25500</td>
+            <td>FLUOCINOLONE ACETONIDE</td>
+        </tr>
+        <tr>
+            <td>25600</td>
+            <td>FLUOCINONIDE</td>
+        </tr>
+        <tr>
+            <td>25700</td>
+            <td>FLUOROMETHOLONE</td>
+        </tr>
+        <tr>
+            <td>25800</td>
+            <td>FLUOROURACIL</td>
+        </tr>
+        <tr>
+            <td>25900</td>
+            <td>FLUOXETINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>26000</td>
+            <td>FLUPHENAZINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>26100</td>
+            <td>FLURAZEPAM HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>26200</td>
+            <td>FLURBIPROFEN</td>
+        </tr>
+        <tr>
+            <td>26300</td>
+            <td>FLUTAMIDE</td>
+        </tr>
+        <tr>
+            <td>26400</td>
+            <td>FLUTICASONE PROPIONATE</td>
+        </tr>
+        <tr>
+            <td>26500</td>
+            <td>FLUVASTATIN SODIUM</td>
+        </tr>
+        <tr>
+            <td>26600</td>
+            <td>FLUVOXAMINE MALEATE</td>
+        </tr>
+        <tr>
+            <td>26700</td>
+            <td>FOSINOPRIL SODIUM</td>
+        </tr>
+        <tr>
+            <td>26800</td>
+            <td>FUROSEMIDE</td>
+        </tr>
+        <tr>
+            <td>26900</td>
+            <td>GABAPENTIN</td>
+        </tr>
+        <tr>
+            <td>27000</td>
+            <td>GEMFIBROZIL</td>
+        </tr>
+        <tr>
+            <td>27100</td>
+            <td>GENTAMICIN SULFATE</td>
+        </tr>
+        <tr>
+            <td>27200</td>
+            <td>GLATIRAMER ACETATE</td>
+        </tr>
+        <tr>
+            <td>27300</td>
+            <td>GLIMEPIRIDE</td>
+        </tr>
+        <tr>
+            <td>27400</td>
+            <td>GLIPIZIDE</td>
+        </tr>
+        <tr>
+            <td>27500</td>
+            <td>GLUCAGON HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>27600</td>
+            <td>GLYBURIDE</td>
+        </tr>
+        <tr>
+            <td>27700</td>
+            <td>GLYCOPYRROLATE</td>
+        </tr>
+        <tr>
+            <td>27800</td>
+            <td>GRISEOFULVIN, MICROCRYSTALLINE</td>
+        </tr>
+        <tr>
+            <td>27900</td>
+            <td>GUAIFENESIN</td>
+        </tr>
+        <tr>
+            <td>28000</td>
+            <td>GUAIFENESIN; HYDROCODONE BITARTRATE</td>
+        </tr>
+        <tr>
+            <td>28100</td>
+            <td>GUAIFENESIN; PHENYLEPHRINE HYDROCHLORIDE; PHENYLPROPANOLAMINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>28200</td>
+            <td>GUAIFENESIN; PHENYLPROPANOLAMINE</td>
+        </tr>
+        <tr>
+            <td>28300</td>
+            <td>GUAIFENESIN; PSEUDOEPHEDRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>28400</td>
+            <td>GUAIFENESIN; THEOPHYLLINE</td>
+        </tr>
+        <tr>
+            <td>28500</td>
+            <td>GUANABENZ ACETATE</td>
+        </tr>
+        <tr>
+            <td>28600</td>
+            <td>GUANADREL SULFATE</td>
+        </tr>
+        <tr>
+            <td>28700</td>
+            <td>GUANFACINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>28800</td>
+            <td>HALOPERIDOL</td>
+        </tr>
+        <tr>
+            <td>28900</td>
+            <td>HALOPERIDOL DECANOATE</td>
+        </tr>
+        <tr>
+            <td>29000</td>
+            <td>HALOPERIDOL LACTATE</td>
+        </tr>
+        <tr>
+            <td>71200</td>
+            <td>HEART MEDICINE-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>29100</td>
+            <td>HEPARIN SODIUM</td>
+        </tr>
+        <tr>
+            <td>71400</td>
+            <td>HIGH BLOOD PRESSURE MEDICINE-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>29200</td>
+            <td>HOMATROPINE HYDROBROMIDE</td>
+        </tr>
+        <tr>
+            <td>71500</td>
+            <td>HORMONES-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>29300</td>
+            <td>HYDRALAZINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>29400</td>
+            <td>HYDRALAZINE HYDROCHLORIDE; HYDROCHLOROTHIAZIDE</td>
+        </tr>
+        <tr>
+            <td>29500</td>
+            <td>HYDRALAZINE HYDROCHLORIDE; HYDROCHLOROTHIAZIDE; RESERPINE</td>
+        </tr>
+        <tr>
+            <td>29600</td>
+            <td>HYDROCHLOROTHIAZIDE</td>
+        </tr>
+        <tr>
+            <td>29700</td>
+            <td>HYDROCHLOROTHIAZIDE; IRBESARTAN</td>
+        </tr>
+        <tr>
+            <td>29800</td>
+            <td>HYDROCHLOROTHIAZIDE; LISINOPRIL</td>
+        </tr>
+        <tr>
+            <td>29900</td>
+            <td>HYDROCHLOROTHIAZIDE; LOSARTAN POTASSIUM</td>
+        </tr>
+        <tr>
+            <td>30000</td>
+            <td>HYDROCHLOROTHIAZIDE; METHYLDOPA</td>
+        </tr>
+        <tr>
+            <td>30100</td>
+            <td>HYDROCHLOROTHIAZIDE; METOPROLOL TARTRATE</td>
+        </tr>
+        <tr>
+            <td>30200</td>
+            <td>HYDROCHLOROTHIAZIDE; SPIRONOLACTONE</td>
+        </tr>
+        <tr>
+            <td>30300</td>
+            <td>HYDROCHLOROTHIAZIDE; TRIAMTERENE</td>
+        </tr>
+        <tr>
+            <td>30400</td>
+            <td>HYDROCHLOROTHIAZIDE; VALSARTAN</td>
+        </tr>
+        <tr>
+            <td>30500</td>
+            <td>HYDROCODONE BITARTRATE</td>
+        </tr>
+        <tr>
+            <td>30600</td>
+            <td>HYDROCODONE BITARTRATE; IBUPROFEN</td>
+        </tr>
+        <tr>
+            <td>30700</td>
+            <td>HYDROCODONE BITARTRATE; PHENYLEPHRINE HYDROCHLORIDE; PYRILAMINE MALEATE</td>
+        </tr>
+        <tr>
+            <td>30800</td>
+            <td>HYDROCODONE BITARTRATE; POTASSIUM GUAIACOLSULFONATE</td>
+        </tr>
+        <tr>
+            <td>30900</td>
+            <td>HYDROCODONE BITARTRATE; PSEUDOEPHEDRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>71600</td>
+            <td>HYDROCODONE-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>31000</td>
+            <td>HYDROCORTISONE</td>
+        </tr>
+        <tr>
+            <td>31100</td>
+            <td>HYDROCORTISONE ACETATE; PRAMOXINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>31200</td>
+            <td>HYDROCORTISONE VALERATE</td>
+        </tr>
+        <tr>
+            <td>31300</td>
+            <td>HYDROCORTISONE; NEOMYCIN SULFATE; POLYMYXIN B SULFATE</td>
+        </tr>
+        <tr>
+            <td>31400</td>
+            <td>HYDROFLUMETHIAZIDE; RESERPINE</td>
+        </tr>
+        <tr>
+            <td>31500</td>
+            <td>HYDROMORPHONE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>31600</td>
+            <td>HYDROQUINONE</td>
+        </tr>
+        <tr>
+            <td>31700</td>
+            <td>HYDROXYCHLOROQUINE SULFATE</td>
+        </tr>
+        <tr>
+            <td>31800</td>
+            <td>HYDROXYPROPYL CELLULOSE</td>
+        </tr>
+        <tr>
+            <td>31900</td>
+            <td>HYDROXYZINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>32000</td>
+            <td>HYDROXYZINE PAMOATE</td>
+        </tr>
+        <tr>
+            <td>32100</td>
+            <td>HYOSCYAMINE</td>
+        </tr>
+        <tr>
+            <td>32200</td>
+            <td>HYOSCYAMINE SULFATE</td>
+        </tr>
+        <tr>
+            <td>32300</td>
+            <td>IBUPROFEN</td>
+        </tr>
+        <tr>
+            <td>32400</td>
+            <td>IMIPRAMINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>32500</td>
+            <td>INDAPAMIDE</td>
+        </tr>
+        <tr>
+            <td>32600</td>
+            <td>INDINAVIR SULFATE</td>
+        </tr>
+        <tr>
+            <td>32700</td>
+            <td>INDOMETHACIN</td>
+        </tr>
+        <tr>
+            <td>71700</td>
+            <td>INHALER-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>71800</td>
+            <td>INJECTIONS-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>32800</td>
+            <td>INSULIN</td>
+        </tr>
+        <tr>
+            <td>32900</td>
+            <td>INTERFERON ALFA-2B; RIBAVIRIN</td>
+        </tr>
+        <tr>
+            <td>33000</td>
+            <td>IPRATROPIUM BROMIDE</td>
+        </tr>
+        <tr>
+            <td>33100</td>
+            <td>IRBESARTAN</td>
+        </tr>
+        <tr>
+            <td>33200</td>
+            <td>IRINOTECAN HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>33300</td>
+            <td>ISONIAZID</td>
+        </tr>
+        <tr>
+            <td>33400</td>
+            <td>ISONIAZID; RIFAMPIN</td>
+        </tr>
+        <tr>
+            <td>33500</td>
+            <td>ISOSORBIDE DINITRATE</td>
+        </tr>
+        <tr>
+            <td>33600</td>
+            <td>ISOSORBIDE MONONITRATE</td>
+        </tr>
+        <tr>
+            <td>71900</td>
+            <td>ISOSORBIDE-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>33700</td>
+            <td>ISOTRETINOIN</td>
+        </tr>
+        <tr>
+            <td>33800</td>
+            <td>ISOXSUPRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>33900</td>
+            <td>ISRADIPINE</td>
+        </tr>
+        <tr>
+            <td>34000</td>
+            <td>ITRACONAZOLE</td>
+        </tr>
+        <tr>
+            <td>34100</td>
+            <td>KETOCONAZOLE</td>
+        </tr>
+        <tr>
+            <td>34200</td>
+            <td>KETOPROFEN</td>
+        </tr>
+        <tr>
+            <td>34300</td>
+            <td>KETOROLAC TROMETHAMINE</td>
+        </tr>
+        <tr>
+            <td>34400</td>
+            <td>KETOTIFEN FUMARATE</td>
+        </tr>
+        <tr>
+            <td>34500</td>
+            <td>LABETALOL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>34600</td>
+            <td>LACTIC ACID</td>
+        </tr>
+        <tr>
+            <td>34700</td>
+            <td>LACTULOSE</td>
+        </tr>
+        <tr>
+            <td>34800</td>
+            <td>LAMIVUDINE</td>
+        </tr>
+        <tr>
+            <td>34900</td>
+            <td>LAMIVUDINE; ZIDOVUDINE</td>
+        </tr>
+        <tr>
+            <td>35000</td>
+            <td>LANSOPRAZOLE</td>
+        </tr>
+        <tr>
+            <td>35100</td>
+            <td>LATANOPROST</td>
+        </tr>
+        <tr>
+            <td>35200</td>
+            <td>LEFLUNOMIDE</td>
+        </tr>
+        <tr>
+            <td>35300</td>
+            <td>LETROZOLE</td>
+        </tr>
+        <tr>
+            <td>35400</td>
+            <td>LEUCOVORIN CALCIUM</td>
+        </tr>
+        <tr>
+            <td>35500</td>
+            <td>LEUPROLIDE ACETATE</td>
+        </tr>
+        <tr>
+            <td>35600</td>
+            <td>LEVALBUTEROL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>35700</td>
+            <td>LEVOBUNOLOL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>35800</td>
+            <td>LEVOCABASTINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>35900</td>
+            <td>LEVOFLOXACIN</td>
+        </tr>
+        <tr>
+            <td>36000</td>
+            <td>LEVONORGESTREL</td>
+        </tr>
+        <tr>
+            <td>36100</td>
+            <td>LEVOTHYROXINE SODIUM</td>
+        </tr>
+        <tr>
+            <td>36200</td>
+            <td>LEVOTHYROXINE; LIOTHYRONINE</td>
+        </tr>
+        <tr>
+            <td>36300</td>
+            <td>LISINOPRIL</td>
+        </tr>
+        <tr>
+            <td>36400</td>
+            <td>LITHIUM CARBONATE</td>
+        </tr>
+        <tr>
+            <td>72000</td>
+            <td>LITHIUM-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>36500</td>
+            <td>LOPERAMIDE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>36600</td>
+            <td>LORACARBEF</td>
+        </tr>
+        <tr>
+            <td>36700</td>
+            <td>LORATADINE</td>
+        </tr>
+        <tr>
+            <td>36800</td>
+            <td>LORATADINE; PSEUDOEPHEDRINE SULFATE</td>
+        </tr>
+        <tr>
+            <td>36900</td>
+            <td>LORAZEPAM</td>
+        </tr>
+        <tr>
+            <td>37000</td>
+            <td>LOSARTAN POTASSIUM</td>
+        </tr>
+        <tr>
+            <td>37100</td>
+            <td>LOTEPREDNOL ETABONATE</td>
+        </tr>
+        <tr>
+            <td>37200</td>
+            <td>LOVASTATIN</td>
+        </tr>
+        <tr>
+            <td>37300</td>
+            <td>LOXAPINE SUCCINATE</td>
+        </tr>
+        <tr>
+            <td>37400</td>
+            <td>MECLIZINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>37500</td>
+            <td>MECLOFENAMATE SODIUM</td>
+        </tr>
+        <tr>
+            <td>37600</td>
+            <td>MEDROXYPROGESTERONE ACETATE</td>
+        </tr>
+        <tr>
+            <td>37700</td>
+            <td>MEGESTROL ACETATE</td>
+        </tr>
+        <tr>
+            <td>37800</td>
+            <td>MELOXICAM</td>
+        </tr>
+        <tr>
+            <td>37900</td>
+            <td>MEPERIDINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>38000</td>
+            <td>MEPROBAMATE</td>
+        </tr>
+        <tr>
+            <td>38100</td>
+            <td>MESALAMINE</td>
+        </tr>
+        <tr>
+            <td>38200</td>
+            <td>MESTRANOL; NORETHINDRONE</td>
+        </tr>
+        <tr>
+            <td>38300</td>
+            <td>METAPROTERENOL SULFATE</td>
+        </tr>
+        <tr>
+            <td>38400</td>
+            <td>METAXALONE</td>
+        </tr>
+        <tr>
+            <td>38500</td>
+            <td>METFORMIN HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>38600</td>
+            <td>METHADONE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>38700</td>
+            <td>METHIMAZOLE</td>
+        </tr>
+        <tr>
+            <td>38800</td>
+            <td>METHOCARBAMOL</td>
+        </tr>
+        <tr>
+            <td>38900</td>
+            <td>METHOTREXATE SODIUM</td>
+        </tr>
+        <tr>
+            <td>39000</td>
+            <td>METHOXAMINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>39100</td>
+            <td>METHSCOPOLAMINE BROMIDE</td>
+        </tr>
+        <tr>
+            <td>39200</td>
+            <td>METHYCLOTHIAZIDE</td>
+        </tr>
+        <tr>
+            <td>39300</td>
+            <td>METHYCLOTHIAZIDE; RESERPINE</td>
+        </tr>
+        <tr>
+            <td>39400</td>
+            <td>METHYLDOPA</td>
+        </tr>
+        <tr>
+            <td>39500</td>
+            <td>METHYLPHENIDATE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>39600</td>
+            <td>METHYLPREDNISOLONE</td>
+        </tr>
+        <tr>
+            <td>39700</td>
+            <td>METHYLPREDNISOLONE ACETATE</td>
+        </tr>
+        <tr>
+            <td>39800</td>
+            <td>METIPRANOLOL</td>
+        </tr>
+        <tr>
+            <td>39900</td>
+            <td>METOCLOPRAMIDE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>40000</td>
+            <td>METOLAZONE</td>
+        </tr>
+        <tr>
+            <td>40100</td>
+            <td>METOPROLOL SUCCINATE</td>
+        </tr>
+        <tr>
+            <td>40200</td>
+            <td>METOPROLOL TARTRATE</td>
+        </tr>
+        <tr>
+            <td>40300</td>
+            <td>METRONIDAZOLE</td>
+        </tr>
+        <tr>
+            <td>40400</td>
+            <td>METRONIDAZOLE; TETRACYCLINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>40500</td>
+            <td>MEXILETINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>40600</td>
+            <td>MIDODRINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>40700</td>
+            <td>MINOCYCLINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>40800</td>
+            <td>MINOXIDIL</td>
+        </tr>
+        <tr>
+            <td>40900</td>
+            <td>MIRTAZAPINE</td>
+        </tr>
+        <tr>
+            <td>41000</td>
+            <td>MOEXIPRIL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>41100</td>
+            <td>MOMETASONE FUROATE</td>
+        </tr>
+        <tr>
+            <td>41200</td>
+            <td>MOMETASONE FUROATE MONOHYDRATE</td>
+        </tr>
+        <tr>
+            <td>41300</td>
+            <td>MONTELUKAST SODIUM</td>
+        </tr>
+        <tr>
+            <td>41400</td>
+            <td>MORPHINE SULFATE</td>
+        </tr>
+        <tr>
+            <td>41500</td>
+            <td>MOXIFLOXACIN HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>41600</td>
+            <td>MUPIROCIN CALCIUM</td>
+        </tr>
+        <tr>
+            <td>41700</td>
+            <td>MYCOPHENOLATE MOFETIL</td>
+        </tr>
+        <tr>
+            <td>41800</td>
+            <td>NABUMETONE</td>
+        </tr>
+        <tr>
+            <td>41900</td>
+            <td>NADOLOL</td>
+        </tr>
+        <tr>
+            <td>42000</td>
+            <td>NAFTIFINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>42100</td>
+            <td>NALOXONE HYDROCHLORIDE; PENTAZOCINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>42200</td>
+            <td>NAPROXEN</td>
+        </tr>
+        <tr>
+            <td>42300</td>
+            <td>NAPROXEN SODIUM</td>
+        </tr>
+        <tr>
+            <td>42400</td>
+            <td>NEFAZODONE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>42500</td>
+            <td>NELFINAVIR MESYLATE</td>
+        </tr>
+        <tr>
+            <td>42600</td>
+            <td>NEOMYCIN SULFATE; POLYMYXIN B SULFATE</td>
+        </tr>
+        <tr>
+            <td>72100</td>
+            <td>NERVE MEDICINE-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>42700</td>
+            <td>NIACIN</td>
+        </tr>
+        <tr>
+            <td>42800</td>
+            <td>NICARDIPINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>42900</td>
+            <td>NIFEDIPINE</td>
+        </tr>
+        <tr>
+            <td>43000</td>
+            <td>NILUTAMIDE</td>
+        </tr>
+        <tr>
+            <td>43100</td>
+            <td>NISOLDIPINE</td>
+        </tr>
+        <tr>
+            <td>43200</td>
+            <td>NITROFURANTOIN</td>
+        </tr>
+        <tr>
+            <td>43300</td>
+            <td>NITROFURANTOIN, MACROCRYSTALLINE</td>
+        </tr>
+        <tr>
+            <td>43400</td>
+            <td>NITROGLYCERIN</td>
+        </tr>
+        <tr>
+            <td>43500</td>
+            <td>NIZATIDINE</td>
+        </tr>
+        <tr>
+            <td>43600</td>
+            <td>NORETHINDRONE</td>
+        </tr>
+        <tr>
+            <td>43700</td>
+            <td>NORETHINDRONE ACETATE</td>
+        </tr>
+        <tr>
+            <td>43800</td>
+            <td>NORFLOXACIN</td>
+        </tr>
+        <tr>
+            <td>43900</td>
+            <td>NORTRIPTYLINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>44000</td>
+            <td>NYSTATIN</td>
+        </tr>
+        <tr>
+            <td>44100</td>
+            <td>NYSTATIN; TRIAMCINOLONE ACETONIDE</td>
+        </tr>
+        <tr>
+            <td>44200</td>
+            <td>OFLOXACIN</td>
+        </tr>
+        <tr>
+            <td>44300</td>
+            <td>OLANZAPINE</td>
+        </tr>
+        <tr>
+            <td>44400</td>
+            <td>OMEPRAZOLE</td>
+        </tr>
+        <tr>
+            <td>44500</td>
+            <td>ONDANSETRON HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>44600</td>
+            <td>ORLISTAT</td>
+        </tr>
+        <tr>
+            <td>44700</td>
+            <td>ORPHENADRINE CITRATE</td>
+        </tr>
+        <tr>
+            <td>44800</td>
+            <td>OXACILLIN SODIUM</td>
+        </tr>
+        <tr>
+            <td>44900</td>
+            <td>OXANDROLONE</td>
+        </tr>
+        <tr>
+            <td>45000</td>
+            <td>OXAPROZIN</td>
+        </tr>
+        <tr>
+            <td>45100</td>
+            <td>OXAZEPAM</td>
+        </tr>
+        <tr>
+            <td>45200</td>
+            <td>OXICONAZOLE NITRATE</td>
+        </tr>
+        <tr>
+            <td>45300</td>
+            <td>OXYBUTYNIN CHLORIDE</td>
+        </tr>
+        <tr>
+            <td>45400</td>
+            <td>OXYCODONE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>72200</td>
+            <td>PAINKILLER-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>45500</td>
+            <td>PANTOPRAZOLE SODIUM</td>
+        </tr>
+        <tr>
+            <td>45600</td>
+            <td>PAROXETINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>45700</td>
+            <td>PEMOLINE</td>
+        </tr>
+        <tr>
+            <td>45800</td>
+            <td>PENBUTOLOL SULFATE</td>
+        </tr>
+        <tr>
+            <td>45900</td>
+            <td>PENICILLIN G PROCAINE</td>
+        </tr>
+        <tr>
+            <td>46000</td>
+            <td>PENICILLIN V</td>
+        </tr>
+        <tr>
+            <td>46100</td>
+            <td>PENICILLIN V POTASSIUM</td>
+        </tr>
+        <tr>
+            <td>72300</td>
+            <td>PENICILLIN-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>46200</td>
+            <td>PENTOSAN POLYSULFATE SODIUM</td>
+        </tr>
+        <tr>
+            <td>46300</td>
+            <td>PENTOXIFYLLINE</td>
+        </tr>
+        <tr>
+            <td>46400</td>
+            <td>PEPSIN</td>
+        </tr>
+        <tr>
+            <td>46500</td>
+            <td>PERMETHRIN</td>
+        </tr>
+        <tr>
+            <td>46600</td>
+            <td>PERPHENAZINE</td>
+        </tr>
+        <tr>
+            <td>46700</td>
+            <td>PHENAZOPYRIDINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>46800</td>
+            <td>PHENIRAMINE MALEATE; PHENYLPROPANOLAMINE HYDROCHLORIDE; PHENYLTOLOXAMINE CITRATE; PYRILAMINE MALEATE</td>
+        </tr>
+        <tr>
+            <td>46900</td>
+            <td>PHENOBARBITAL</td>
+        </tr>
+        <tr>
+            <td>47000</td>
+            <td>PHENTERMINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>47100</td>
+            <td>PHENYLEPHRINE HYDROCHLORIDE; PROMETHAZINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>47200</td>
+            <td>PHENYLEPHRINE TANNATE; PYRILAMINE TANNATE</td>
+        </tr>
+        <tr>
+            <td>47300</td>
+            <td>PHENYTOIN SODIUM</td>
+        </tr>
+        <tr>
+            <td>47400</td>
+            <td>PILOCARPINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>47500</td>
+            <td>PINDOLOL</td>
+        </tr>
+        <tr>
+            <td>47600</td>
+            <td>PIOGLITAZONE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>47700</td>
+            <td>PIRBUTEROL ACETATE</td>
+        </tr>
+        <tr>
+            <td>47800</td>
+            <td>PIROXICAM</td>
+        </tr>
+        <tr>
+            <td>47900</td>
+            <td>POLYETHYLENE GLYCOL 3350</td>
+        </tr>
+        <tr>
+            <td>48000</td>
+            <td>POTASSIUM</td>
+        </tr>
+        <tr>
+            <td>48100</td>
+            <td>POTASSIUM BICARBONATE</td>
+        </tr>
+        <tr>
+            <td>48200</td>
+            <td>POTASSIUM CHLORIDE</td>
+        </tr>
+        <tr>
+            <td>48300</td>
+            <td>PRAMIPEXOLE DIHYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>48400</td>
+            <td>PRAVASTATIN SODIUM</td>
+        </tr>
+        <tr>
+            <td>48500</td>
+            <td>PRAZOSIN HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>48600</td>
+            <td>PREDNISOLONE</td>
+        </tr>
+        <tr>
+            <td>48700</td>
+            <td>PREDNISOLONE ACETATE</td>
+        </tr>
+        <tr>
+            <td>48800</td>
+            <td>PREDNISOLONE ACETATE; SULFACETAMIDE SODIUM</td>
+        </tr>
+        <tr>
+            <td>48900</td>
+            <td>PREDNISOLONE SODIUM PHOSPHATE</td>
+        </tr>
+        <tr>
+            <td>49000</td>
+            <td>PREDNISONE</td>
+        </tr>
+        <tr>
+            <td>49100</td>
+            <td>PRIMIDONE</td>
+        </tr>
+        <tr>
+            <td>49200</td>
+            <td>PROBENECID</td>
+        </tr>
+        <tr>
+            <td>49300</td>
+            <td>PROCHLORPERAZINE</td>
+        </tr>
+        <tr>
+            <td>49400</td>
+            <td>PROCHLORPERAZINE MALEATE</td>
+        </tr>
+        <tr>
+            <td>49500</td>
+            <td>PROGESTERONE</td>
+        </tr>
+        <tr>
+            <td>49600</td>
+            <td>PROMETHAZINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>49700</td>
+            <td>PROPAFENONE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>49800</td>
+            <td>PROPOXYPHENE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>49900</td>
+            <td>PROPOXYPHENE NAPSYLATE</td>
+        </tr>
+        <tr>
+            <td>50000</td>
+            <td>PROPRANOLOL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>50100</td>
+            <td>PROPYLTHIOURACIL</td>
+        </tr>
+        <tr>
+            <td>50200</td>
+            <td>PYRAZINAMIDE</td>
+        </tr>
+        <tr>
+            <td>50300</td>
+            <td>PYRIDOSTIGMINE BROMIDE</td>
+        </tr>
+        <tr>
+            <td>50400</td>
+            <td>QUETIAPINE FUMARATE</td>
+        </tr>
+        <tr>
+            <td>50500</td>
+            <td>QUINAPRIL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>50600</td>
+            <td>QUINIDINE GLUCONATE</td>
+        </tr>
+        <tr>
+            <td>50700</td>
+            <td>QUININE SULFATE</td>
+        </tr>
+        <tr>
+            <td>50800</td>
+            <td>RABEPRAZOLE SODIUM</td>
+        </tr>
+        <tr>
+            <td>50900</td>
+            <td>RALOXIFENE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>51000</td>
+            <td>RAMIPRIL</td>
+        </tr>
+        <tr>
+            <td>51100</td>
+            <td>RANITIDINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>51200</td>
+            <td>REPAGLINIDE</td>
+        </tr>
+        <tr>
+            <td>51300</td>
+            <td>RESERPINE</td>
+        </tr>
+        <tr>
+            <td>51400</td>
+            <td>RIFABUTIN</td>
+        </tr>
+        <tr>
+            <td>51500</td>
+            <td>RISEDRONATE SODIUM</td>
+        </tr>
+        <tr>
+            <td>51600</td>
+            <td>RISPERIDONE</td>
+        </tr>
+        <tr>
+            <td>51700</td>
+            <td>RITONAVIR</td>
+        </tr>
+        <tr>
+            <td>51800</td>
+            <td>RIVASTIGMINE TARTRATE</td>
+        </tr>
+        <tr>
+            <td>51900</td>
+            <td>RIZATRIPTAN BENZOATE</td>
+        </tr>
+        <tr>
+            <td>52000</td>
+            <td>ROFECOXIB</td>
+        </tr>
+        <tr>
+            <td>52100</td>
+            <td>ROPINIROLE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>52200</td>
+            <td>ROSIGLITAZONE MALEATE</td>
+        </tr>
+        <tr>
+            <td>52300</td>
+            <td>SALMETEROL XINAFOATE</td>
+        </tr>
+        <tr>
+            <td>52400</td>
+            <td>SALSALATE</td>
+        </tr>
+        <tr>
+            <td>52500</td>
+            <td>SAQUINAVIR</td>
+        </tr>
+        <tr>
+            <td>52600</td>
+            <td>SELEGILINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>52700</td>
+            <td>SERTRALINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>52800</td>
+            <td>SEVELAMER HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>52900</td>
+            <td>SIBUTRAMINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>53000</td>
+            <td>SILDENAFIL CITRATE</td>
+        </tr>
+        <tr>
+            <td>53100</td>
+            <td>SIMETHICONE</td>
+        </tr>
+        <tr>
+            <td>53200</td>
+            <td>SIMVASTATIN</td>
+        </tr>
+        <tr>
+            <td>72400</td>
+            <td>SLEEPING PILLS-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>53300</td>
+            <td>SODIUM BICARBONATE</td>
+        </tr>
+        <tr>
+            <td>53400</td>
+            <td>SODIUM CHLORIDE</td>
+        </tr>
+        <tr>
+            <td>53600</td>
+            <td>SOMATROPIN</td>
+        </tr>
+        <tr>
+            <td>53700</td>
+            <td>SOTALOL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>53800</td>
+            <td>SPIRONOLACTONE</td>
+        </tr>
+        <tr>
+            <td>53900</td>
+            <td>STANNOUS FLUORIDE</td>
+        </tr>
+        <tr>
+            <td>54000</td>
+            <td>STAVUDINE</td>
+        </tr>
+        <tr>
+            <td>72500</td>
+            <td>STEROIDS-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>54100</td>
+            <td>SUCRALFATE</td>
+        </tr>
+        <tr>
+            <td>54200</td>
+            <td>SULFACETAMIDE SODIUM</td>
+        </tr>
+        <tr>
+            <td>54300</td>
+            <td>SULFAMETHOXAZOLE</td>
+        </tr>
+        <tr>
+            <td>54400</td>
+            <td>SULFAMETHOXAZOLE; TRIMETHOPRIM</td>
+        </tr>
+        <tr>
+            <td>54500</td>
+            <td>SULFASALAZINE</td>
+        </tr>
+        <tr>
+            <td>54600</td>
+            <td>SULFISOXAZOLE ACETYL</td>
+        </tr>
+        <tr>
+            <td>54700</td>
+            <td>SULINDAC</td>
+        </tr>
+        <tr>
+            <td>54800</td>
+            <td>SUMATRIPTAN SUCCINATE</td>
+        </tr>
+        <tr>
+            <td>54900</td>
+            <td>TACROLIMUS</td>
+        </tr>
+        <tr>
+            <td>55000</td>
+            <td>TAMOXIFEN CITRATE</td>
+        </tr>
+        <tr>
+            <td>55100</td>
+            <td>TAMSULOSIN HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>55200</td>
+            <td>TAZAROTENE</td>
+        </tr>
+        <tr>
+            <td>55300</td>
+            <td>TEGAFUR; URACIL</td>
+        </tr>
+        <tr>
+            <td>55400</td>
+            <td>TEMAZEPAM</td>
+        </tr>
+        <tr>
+            <td>55500</td>
+            <td>TERAZOSIN HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>55600</td>
+            <td>TERBINAFINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>55700</td>
+            <td>TERBUTALINE SULFATE</td>
+        </tr>
+        <tr>
+            <td>55800</td>
+            <td>TESTOSTERONE</td>
+        </tr>
+        <tr>
+            <td>55900</td>
+            <td>TETRACYCLINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>56000</td>
+            <td>THEOPHYLLINE</td>
+        </tr>
+        <tr>
+            <td>56100</td>
+            <td>THIORIDAZINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>56200</td>
+            <td>THIOTHIXENE</td>
+        </tr>
+        <tr>
+            <td>56300</td>
+            <td>THYROID</td>
+        </tr>
+        <tr>
+            <td>56400</td>
+            <td>TIAGABINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>56500</td>
+            <td>TICLOPIDINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>56600</td>
+            <td>TIMOLOL</td>
+        </tr>
+        <tr>
+            <td>56700</td>
+            <td>TIMOLOL MALEATE</td>
+        </tr>
+        <tr>
+            <td>56800</td>
+            <td>TIZANIDINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>56900</td>
+            <td>TOBRAMYCIN</td>
+        </tr>
+        <tr>
+            <td>57000</td>
+            <td>TOBRAMYCIN SULFATE</td>
+        </tr>
+        <tr>
+            <td>57100</td>
+            <td>TOLAZAMIDE</td>
+        </tr>
+        <tr>
+            <td>57200</td>
+            <td>TOLMETIN SODIUM</td>
+        </tr>
+        <tr>
+            <td>57300</td>
+            <td>TOLTERODINE TARTRATE</td>
+        </tr>
+        <tr>
+            <td>57400</td>
+            <td>TOPIRAMATE</td>
+        </tr>
+        <tr>
+            <td>57500</td>
+            <td>TORSEMIDE</td>
+        </tr>
+        <tr>
+            <td>57600</td>
+            <td>TRAMADOL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>57700</td>
+            <td>TRANDOLAPRIL</td>
+        </tr>
+        <tr>
+            <td>57800</td>
+            <td>TRANDOLAPRIL; VERAPAMIL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>57900</td>
+            <td>TRAZODONE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>58000</td>
+            <td>TRETINOIN</td>
+        </tr>
+        <tr>
+            <td>58100</td>
+            <td>TRIAMCINOLONE</td>
+        </tr>
+        <tr>
+            <td>58200</td>
+            <td>TRIAMCINOLONE ACETONIDE</td>
+        </tr>
+        <tr>
+            <td>58300</td>
+            <td>TRIAMCINOLONE DIACETATE</td>
+        </tr>
+        <tr>
+            <td>58400</td>
+            <td>TRIAMTERENE</td>
+        </tr>
+        <tr>
+            <td>58500</td>
+            <td>TRIAZOLAM</td>
+        </tr>
+        <tr>
+            <td>58600</td>
+            <td>TRIFLUOPERAZINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>58700</td>
+            <td>TRIHEXYPHENIDYL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>58800</td>
+            <td>TRIMETHOPRIM</td>
+        </tr>
+        <tr>
+            <td>58900</td>
+            <td>TRIMIPRAMINE MALEATE</td>
+        </tr>
+        <tr>
+            <td>59000</td>
+            <td>TROGLITAZONE</td>
+        </tr>
+        <tr>
+            <td>72600</td>
+            <td>ULCER MEDICATION-UNSPECIFIED</td>
+        </tr>
+        <tr>
+            <td>59100</td>
+            <td>VALACYCLOVIR HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>59200</td>
+            <td>VALPROIC ACID</td>
+        </tr>
+        <tr>
+            <td>59300</td>
+            <td>VALSARTAN</td>
+        </tr>
+        <tr>
+            <td>59400</td>
+            <td>VENLAFAXINE HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>59500</td>
+            <td>VERAPAMIL HYDROCHLORIDE</td>
+        </tr>
+        <tr>
+            <td>59600</td>
+            <td>WARFARIN SODIUM</td>
+        </tr>
+        <tr>
+            <td>59700</td>
+            <td>ZAFIRLUKAST</td>
+        </tr>
+        <tr>
+            <td>59800</td>
+            <td>ZALEPLON</td>
+        </tr>
+        <tr>
+            <td>59900</td>
+            <td>ZOLMITRIPTAN</td>
+        </tr>
+        <tr>
+            <td>60000</td>
+            <td>ZOLPIDEM TARTRATE</td>
+        </tr>
+    </tbody>
+</table>
+</p></div>
+      </div>
+    </div>
+  </body>
+</html>

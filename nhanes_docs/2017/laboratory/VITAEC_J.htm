@@ -1,0 +1,2323 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>VITAEC_J</title>
+    <meta name="title" content="NHANES 2017-2018: Vitamin A, Vitamin E &amp; Carotenoids  Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Method_Files">Laboratory Method Files</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#LBXALC">LBXALC - alpha-carotene (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDALCSI">LBDALCSI - alpha-carotene (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDALCLC">LBDALCLC - alpha-carotene comment code</a>
+              </li>
+              <li>
+                <a href="#LBXARY">LBXARY - alpha-crypotoxanthin (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDARYSI">LBDARYSI - alpha-crypotoxanthin (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDARYLC">LBDARYLC - alpha-crypotoxanthin comment code</a>
+              </li>
+              <li>
+                <a href="#LBXBEC">LBXBEC - trans-beta-carotene (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDBECSI">LBDBECSI - trans-beta-carotene (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDBECLC">LBDBECLC - trans-beta-carotene comment code</a>
+              </li>
+              <li>
+                <a href="#LBXCBC">LBXCBC - cis-beta-carotene (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDCBCSI">LBDCBCSI - cis-beta-carotene (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDCBCLC">LBDCBCLC - cis-beta-carotene comment code</a>
+              </li>
+              <li>
+                <a href="#LBXCRY">LBXCRY - beta-cryptoxanthin (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDCRYSI">LBDCRYSI - beta-cryptoxanthin (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDCRYLC">LBDCRYLC - beta-cryptoxanthin comment code</a>
+              </li>
+              <li>
+                <a href="#LBXGTC">LBXGTC - gamma-tocopherol (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDGTCSI">LBDGTCSI - gamma-tocopherol (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDGTCLC">LBDGTCLC - gamma-tocopherol comment code</a>
+              </li>
+              <li>
+                <a href="#LBXLUZ">LBXLUZ - Lutein and zeaxanthin (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDLUZSI">LBDLUZSI - Lutein and zeaxanthin (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDLUZLC">LBDLUZLC - Lutein and zeaxanthin comment code</a>
+              </li>
+              <li>
+                <a href="#LBXLYC">LBXLYC - trans-lycopene (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDLYCSI">LBDLYCSI - trans-lycopene (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDLYCLC">LBDLYCLC - trans-lycopene comment code</a>
+              </li>
+              <li>
+                <a href="#LBXRPL">LBXRPL - Retinyl palmitate (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDRPLSI">LBDRPLSI - Retinyl palmitate (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDRPLLC">LBDRPLLC - Retinyl palmitate comment code</a>
+              </li>
+              <li>
+                <a href="#LBXRST">LBXRST - Retinyl stearate (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDRSTSI">LBDRSTSI - Retinyl stearate (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDRSTLC">LBDRSTLC - Retinyl stearate comment code</a>
+              </li>
+              <li>
+                <a href="#LBXLCC">LBXLCC - Total Lycopene (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDLCCSI">LBDLCCSI - Total Lycopene (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDLCCLC">LBDLCCLC - Total Lycopene comment code</a>
+              </li>
+              <li>
+                <a href="#LBXVIA">LBXVIA - Retinol (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDVIASI">LBDVIASI - Retinol (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDVIALC">LBDVIALC - Retinol comment code</a>
+              </li>
+              <li>
+                <a href="#LBXVIE">LBXVIE - alpha-tocopherol (ug/dL)</a>
+              </li>
+              <li>
+                <a href="#LBDVIESI">LBDVIESI - alpha-tocopherol (umol/L)</a>
+              </li>
+              <li>
+                <a href="#LBDVIELC">LBDVIELC - alpha-tocopherol comment code</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2017-2018 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Vitamin A, Vitamin E &amp; Carotenoids  (VITAEC_J)</h3>
+        <h4> Data File: VITAEC_J.xpt</h4>
+        <h5 class="left">First Published: May 2022</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p><strong>Vitamin A</strong></p>
+<p>Worldwide, vitamin A
+deficiency is the leading cause of preventable blindness. Although vitamin A
+deficiency is uncommon in the U.S., it is associated with excess morbidity and
+mortality from infectious disease in developing countries. Toxicity related to
+excess consumption of vitamin A can lead to permanent liver damage and death.
+Serum retinyl esters are of interest generally only in fasting specimens and
+are used to indicate potential hepatotoxicity in subjects with elevated serum retinol
+concentrations.<strong></strong></p>
+<p><strong>Vitamin E</strong><br />
+</p>
+<p>Vitamin E has low potential for toxicity. Elevated serum vitamin E concentrations are only of concern in people receiving anticoagulant therapy. Low serum concentrations are rarely observed, except in those with malabsorption syndromes. Gamma-tocopherol is the most common dietary form of vitamin E, found in high concentrations in seed oils and nuts, but its serum concentration is substantially lower than that of alpha-tocopherol. For example, the geometric mean ratio of alpha- to gamma-tocopherol in NHANES 2005-2006 was 1090 to 188 ug/dL, which is a 6-fold difference. While alpha-tocopherol is preferentially retained in the liver, gamma-tocopherol is actively metabolized and excreted. Only alpha-tocopherol sets the standard for vitamin E deficiency.</p>
+<p><strong>Carotenoids</strong><br />
+</p>
+<p>A physiological need for the
+carotenoids, except as vitamin A precursors, has not been established. Excess
+consumption of carotenoids may cause red or orange discoloration of the skin as
+a result of carotenoid deposits in subcutaneous fat. Several xanthophylls are
+found in the macular pigment in the eye where they may protect against macular
+degeneration.</p>
+<p>While there are some common characteristics, each class of analytes has distinct chemical properties and physiological functions. The following five analytes: retinol, alpha-tocopherol, lutein/zeaxanthin, lycopene, and beta-carotene are generally present in measurable amounts in most sera. These analytes are either required nutrients or have been associated with health effects in epidemiological studies. Less is known about health effects associated with the other analytes (lycopene, alpha-cryptoxanthin, beta-cryptoxanthin, cis-beta-carotene, and gamma-tocopherol).<br />
+</p>
+<p>The objectives of
+this component are to provide data for monitoring secular trends in measures of
+nutritional status in the U.S. population; to evaluate the effect of people's
+habits and behaviors such as physical activity and the use of alcohol, tobacco,
+and dietary supplements on people's nutritional status; and to evaluate the
+effect of changes in nutrition and public health policies including welfare
+reform legislation, food fortification policy, and child nutrition programs on
+the nutritional status of the U.S. population. </p>
+<p>These data will be
+used to estimate deficiencies and toxicities of specific nutrients in the
+population and subgroups, to provide population reference data, and to estimate
+the contribution of diet, supplements, and other factors to serum levels of
+nutrients. Data will be used for research to further define nutrient
+requirements as well as optimal levels for disease prevention and health
+promotion.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Examined participants
+aged 6 years and older were eligible.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>Serum concentrations of retinol and vitamin E (alpha- and gamma-tocopherol), two retinyl esters, and seven carotenoids are measured using a modification of a high-performance liquid chromatography with photodiode array detection method. A small volume (100 mL) of serum is mixed with an ethanol solution containing two internal standards&mdash;retinyl butyrate and nonapreno-beta-carotene (C45). The micronutrients are extracted from the aqueous phase into hexane and dried under vacuum. The extract is re-dissolved in ethanol and acetonitrile, and it is filtered to remove any insoluble material. An aliquot of the filtrate is injected onto a C18 reversed phase column and isocratically eluted with a mobile phase consisting of equal parts of ethanol and acetonitrile. Absorbance of these substances in solution is linearly proportional to concentration (within limits), thus spectrophotometric methods are used for quantitative analysis. Three wavelengths, approximately corresponding to absorption maxima, namely, 300, 325, and 450 nm, are simultaneously monitored and chromatograms are recorded. Quantitation is accomplished by comparing the peak height or peak area of the analyte in the unknown with the peak height or peak area of a known amount of the same analyte in a calibrator solution. Calculations are corrected based on the peak height or peak area of the internal standard in the unknown compared with the peak height or peak area of the internal standard in the calibrator solution. Retinol and the retinyl esters are compared with retinyl butyrate at 325 nm, alpha- and gamma-tocopherol are compared with retinyl butyrate at 300 nm, and the carotenoids are compared with C45 at 450 nm.</p>
+<p>Refer
+to the Laboratory Method Files section for a detailed description of the
+laboratory methods used.<br />
+</p>
+<p>This
+is a new component in the 2017-2018 survey cycle.</p><h2 id="Laboratory_Method_Files">Laboratory Method Files</h2>
+        <p>
+          <a target="_blank" href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2017/labmethods/VITAEC-J-MET-508.pdf">Vitamin A, Vitamin E &amp; Carotenoids </a>
+          <span> (May 2022)</span>
+        </p>
+        <h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>Serum specimens
+were processed, stored, and shipped to the Division of Laboratory Sciences,
+National Center for Environmental Health, Centers for Disease Control and
+Prevention, Atlanta, GA for analysis. </p>
+<p>Detailed instructions on specimen collection and processing are discussed
+in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2017/manuals/2017_MEC_Laboratory_Procedures_Manual.pdf">NHANES Laboratory
+Procedures Manual (LPM)</a>. Vials are stored under appropriate frozen (&ndash;30&deg;C)
+conditions until they are shipped to National Center for Environmental Health
+for testing. </p>
+<p>The NHANES quality
+assurance and quality control (QA/QC) protocols meet the 1988 Clinical Laboratory
+Improvement Amendments mandates. Detailed QA/QC instructions are discussed in the <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2017/manuals/2017_MEC_Laboratory_Procedures_Manual.pdf">NHANES LPM.</a> </p>
+<p><strong>Mobile Examination Centers (MECs) </strong></p>
+<p>Laboratory team
+performance is monitored using several techniques. NCHS and contract
+consultants use a structured competency assessment evaluation during visits to
+evaluate both the quality of the laboratory work and the QC procedures. Each
+laboratory staff member is observed for equipment operation, specimen
+collection and preparation; testing procedures and constructive feedback are
+given to each staff member. Formal retraining sessions are conducted annually
+to ensure that required skill levels were maintained. <br />
+<br />
+<strong>Analytical Laboratories </strong></p>
+<p>NHANES uses
+several methods to monitor the quality of the analyses performed by the
+contract laboratories. In the MEC, these methods include performing blind split
+samples collected on &ldquo;dry run&rdquo; sessions. In addition, contract laboratories
+randomly perform repeat testing on 2% of all specimens. <br />
+<br />
+NCHS developed and distributed a QC protocol for all the contract laboratories,
+which outlined the use of Westgard rules (Westgard et al., 1981) when testing
+NHANES specimens. Progress reports containing any problems encountered during
+shipping or receipt of specimens, summary statistics for each control pool, QC
+graphs, instrument calibration, reagents, and any special considerations are
+submitted to NCHS quarterly. The reports are reviewed for trends or shifts in
+the data. The laboratories are required to explain any identified areas of concern.
+<br />
+<br />
+All QC procedures recommended by the manufacturers were followed. Reported
+results for all assays meet the Division of Laboratory Sciences&rsquo; QA/QC performance
+criteria for accuracy and precision, similar to the Westgard rules (Caudill, et
+al., 2008).&nbsp; </p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>The data were
+reviewed. Incomplete data or improbable values were sent to the performing
+laboratory for confirmation. </p>
+<p>Thirteen calculated
+variables were created in this data file. The variables were created using the
+following formulas: </p>
+<p style="margin-left: 40px;"><strong>LBDALCSI: </strong>The alpha-carotene value in &mu;g/dL (LBXALC) was converted into umol/L by
+multiplying LBXALC by 0.01863 (Round to 3 decimal points). </p>
+<p style="margin-left: 40px;"><strong>LBXARYSI: </strong>The alpha-crytoxanthin value in &mu;g/dL (LBXARY) was converted into umol/L by
+multiplying LBXARY by 0.01810 (Round to 3 decimal
+points).</p>
+<p style="margin-left: 40px;"><strong>LBDBECSI: </strong>The trans-beta-carotene value in &mu;g/dL (LBXBEC) was converted into umol/L by
+multiplying LBXBEC by 0.01863&nbsp; (Round to
+3 decimal points).</p>
+<p style="margin-left: 40px;"><strong>LBDCBCSI: </strong>The cis-beta-carotene value in &mu;g/dL (LBXCBC) was converted into umol/L by
+multiplying LBXCBC by 0.01863&nbsp; (Round to
+3 decimal points).</p>
+<p style="margin-left: 40px;"><strong>LBDCRYSI: </strong>The beta-cryptoxanthin value in &mu;g/dL (LBXCRY) was converted into umol/L by
+multiplying LBXCRY by 0.01810. (Round to 3 decimal points).</p>
+<p style="margin-left: 40px;"><strong>LBDGTCSI: </strong>The gamma-tocopherol value in &mu;g/dL (LBXGTC) was converted into umol/L by
+multiplying LBXGTC by 0.02402. (Round to 3 decimal points).</p>
+<p style="margin-left: 40px;"><strong>LBDLUZSI:</strong> The combined lutein/zeaxanthin value in &mu;g/dL (LBXLUZ) was converted into
+umol/L by multiplying LBXLUZ by 0.01758. (Round to 3 decimal points).</p>
+<p style="margin-left: 40px;"><strong>LBDLYCSI: </strong>The trans-lycopene value in &mu;g/dL (LBXLYC) was converted into umol/L by
+multiplying LBXLYC by 0.01863. (Round to 3 decimal points).</p>
+<p style="margin-left: 40px;"><strong>LBDRPLSI: </strong>The retinyl palmitate value in &mu;g/dL (LBXRPL) was converted into umol/L by
+multiplying LBXRPL by 0.03491. (Round to 3 decimal points). </p>
+<p style="margin-left: 40px;"><strong>LBDRSTSI:</strong> The retinyl stearate value in &mu;g/dL (LBXRST) was converted into umol/L by
+multiplying LBXRST by 0.03491. (Round to 3 decimal points).<br />
+</p>
+<p style="margin-left: 40px;"><strong>LBDLCCSI:</strong> The total lycopene value in &mu;g/dL (LBXLCC) was converted into umol/L by
+multiplying (LBXLCC) by 0.01863. (Round to 3 decimal points).</p>
+<p style="margin-left: 40px;"><strong>LBDVIASI:</strong> The vitamin A (retinol) value in &mu;g/dL (LBXVIA) was converted into umol/L
+by multiplying LBXVIA by 0.03491. (Round to 3 decimal points).</p>
+<p style="margin-left: 40px;"><strong>LBDVIESI:</strong> The vitamin E (alpha-tocopherol) value in &mu;g/dL (LBXVIE) was converted into
+umol/L by multiplying LBXVIE by 0.02322. (Round to 3 decimal points).</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Refer to the <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overviewlab.aspx?BeginYear=2017">2017-2018 Laboratory Data Overview</a>
+for general information on NHANES laboratory data. </p>
+<p>Please refer to
+the <a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx#analytic-guidelines">NHANES Analytic Guidelines</a>
+and the on-line <a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/">NHANES Tutorial</a>
+for further details on the use of sample weights and other analytic issues.</p>
+<p><strong>Demographic and Other Related Variables</strong></p>
+<p>The analysis of
+NHANES laboratory data must be conducted using the appropriate survey design
+and demographic variables. The <a href="https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Demographics&amp;CycleBeginYear=2017">NHANES
+2017-2018 Demographics File</a> contains demographic data, health
+indicators, and other related information collected during household interviews
+as well as the sample design variables. The recommended procedure for variance
+estimation requires use of stratum and PSU variables (SDDMVSTRA and SDMVPSU,
+respectively) in the demographic data file.</p>
+<p>The <a href="https://wwwn.cdc.gov/nchs/data/nhanes/public/2017/datafiles/fastqx_j.htm">Fasting Questionnaire File</a>&nbsp;includes
+auxiliary information, such as fasting status, length of fast and the time of
+venipuncture.&nbsp; </p>
+<p>This laboratory
+data file can be linked to the other NHANES data files using the unique survey
+participant identifier (i.e., SEQN). </p>
+<p><strong>Detection Limits</strong></p>
+<p>The
+detection limits were constant for all of the analytes in the data set. Two
+variables are provided for each of these analytes. The variable name ending &ldquo;LC&rdquo;
+(ex., LBDALCLC) indicates whether the result was below the limit of detection:
+the value &ldquo;0&rdquo; means that the result was at or above the limit of detection, &ldquo;1&rdquo;
+indicates that the result was below the limit of detection. The other variable prefixed
+LBX (ex., LBXIHG) provides the analytic result for that analyte. For
+analytes with analytic results below the lower limit of detection (ex., LBDALCLC=1),
+an imputed fill value was placed in the analyte results field. This value is
+the lower limit of detection divided by the square root of 2 (LLOD/sqrt[2]). </p>
+<p>The
+lower limit of detection (LLOD, in &micro;g/dL) for Vitamin A, E and carotenoids: </p>
+<table border="1" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;"><strong>Variable
+            Name</strong></p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;"><strong>Analyte
+            Description</strong></p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p style="text-align: center;"><strong>LLOD</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;">LBXALC</p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;">alpha-carotene (&micro;g/dL)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p style="text-align: center;">0.7</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;">LBXARY</p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;">alpha-crypotoxanthin (&micro;g/dL)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p style="text-align: center;">0.2</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;">LBXBEC</p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;">trans-beta-carotene (&micro;g/dL)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p style="text-align: center;">0.8</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;">LBXCBC</p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;">cis-beta-carotene (&micro;g/dL)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p style="text-align: center;">0.7</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;">LBXCRY</p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;">beta-cryptoxanthin (&micro;g/dL)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p style="text-align: center;">0.9</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;">LBXGTC</p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;">gamma-tocopherol (&micro;g/dL)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p style="text-align: center;">11.0</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;">LBXLUZ</p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;">Lutein and zeaxanthin (&micro;g/dL)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p style="text-align: center;">2.4</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;">LBXLYC</p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;">trans-lycopene (&micro;g/dL)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p style="text-align: center;">0.8</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;">LBXRPL</p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;">Retinyl palmitate (&micro;g/dL)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p style="text-align: center;">1.3</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;">LBXRST</p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;">Retinyl stearate (&micro;g/dL)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p style="text-align: center;">0.7</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;">LBXLCC</p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;">Total Lycopene (&micro;g/dL)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p style="text-align: center;">1.0</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;">LBXVIA</p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;">Retinol (&micro;g/dL)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p style="text-align: center;">1.0</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <p style="text-align: center;">LBXVIE</p>
+            </td>
+            <td valign="top">
+            <p style="text-align: center;">alpha-tocopherol (&micro;g/dL)</p>
+            </td>
+            <td valign="top" style="width: 81px;">
+            <p style="text-align: center;">40.0</p>
+            </td>
+        </tr>
+    </thead>
+</table>
+<p><strong>2017-2018 Gamma-Tocopherol Measures Were Corrected for Spillover
+from High Beta-Cryptoxanthin Concentrations Channel</strong></p>
+<p>A portion of the 2017-2018 gamma-tocopherol data were re-measured
+to correct for spillover from beta-cryptoxanthin and included in the present
+dataset. The data for re-measurement were selected based on high concentration
+of beta-cryptoxanthin (&gt;16 ug/dL).</p>
+<p>As mentioned in the above Description of Laboratory Methodology
+section, carotenoid beta-cryptoxanthin was measured at its visible absorbance
+maximum of 450 nm; however, the CDC&rsquo;s testing laboratory discovered that it
+also showed some spillover on the UV 300 nm channel for gamma-tocopherol at
+exactly the same retention time. The spillover causes an artificial increase in
+gamma-tocopherol. A HPLC column that separated beta-cryptoxanthin from gamma-tocopherol
+was identified. Based on evidence that the concentrations of beta-cryptoxanthin
+and gamma-tocopherol were positively related, all samples with
+beta-cryptoxanthin &gt;16 ug/dL (n=1,160) were re-measured. The average drop in
+gamma-tocopherol once the spillover was removed was 9.9 &plusmn; 15.4 ug/dL. Of the
+1,160 re-measured samples, only 142 had spillover more than 20 ug/dL
+gamma-tocopherol, which is about 12% of the re-measured gamma-tocopherol
+results. The data released in the present file reflect the 1,160 re-measured
+values with spillover removed. To verify the selection criteria, a small subset
+of samples (n=32) with beta-cryptoxanthin &lt;16 ug/dL were also re-measured,
+and a smaller spillover effect (6.8 &plusmn; 11.7 ug/dL) was observed. </p>
+<p>To our knowledge, the observed spillover from high beta-cryptoxanthin concentrations has never been documented in the literature. Gamma-tocopherol was last measured in NHANES 2005-2006, and those measurements also contained similar spillover. The geometric means of gamma-tocopherol in the NHANES 2017-2018 data set are about 30-50 ug/dL lower than those reported in NHANES 2005-2006, across various gender, age, and race-Hispanic origin groups. Given the magnitude of the spillover effect observed among 2017-2018 samples, it seems unlikely that the observed differences between the two cycles can be solely explained by the spillover. However, data users should be aware of this when interpretating the results. </p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>Caudill, S.P., Schleicher, R.L., Pirkle, J.L. Multi-rule quality control for the age-related eye disease study. Statist. Med. (2008) 27(20):4094-40106.</li>
+          <li>Westgard J.O., Barry P.L., Hunt M.R., Groth T. A multi-rule Shewhart chart for quality control in clinical chemistry. Clin Chem. 1981 Mar; 27(3):493-501.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXALC">LBXALC - alpha-carotene (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXALC</dd>
+            <dt>SAS Label: </dt>
+            <dd>alpha-carotene (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">alpha-carotene (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.5 to 229</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6282</td>
+                <td class="values" align="right">6282</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1153</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDALCSI">LBDALCSI - alpha-carotene (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDALCSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>alpha-carotene (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">alpha-carotene (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.009 to 4.266</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6282</td>
+                <td class="values" align="right">6282</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1153</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDALCLC">LBDALCLC - alpha-carotene comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDALCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>alpha-carotene comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">alpha-carotene comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">5796</td>
+                <td class="values" align="right">5796</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">486</td>
+                <td class="values" align="right">6282</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1153</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXARY">LBXARY - alpha-crypotoxanthin (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXARY</dd>
+            <dt>SAS Label: </dt>
+            <dd>alpha-crypotoxanthin (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">alpha-crypotoxanthin (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.1 to 34</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6482</td>
+                <td class="values" align="right">6482</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">953</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDARYSI">LBDARYSI - alpha-crypotoxanthin (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDARYSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>alpha-crypotoxanthin (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">alpha-crypotoxanthin (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.002 to 0.615</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6482</td>
+                <td class="values" align="right">6482</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">953</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDARYLC">LBDARYLC - alpha-crypotoxanthin comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDARYLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>alpha-crypotoxanthin comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">alpha-crypotoxanthin comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">6471</td>
+                <td class="values" align="right">6471</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">6482</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">953</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXBEC">LBXBEC - trans-beta-carotene (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXBEC</dd>
+            <dt>SAS Label: </dt>
+            <dd>trans-beta-carotene (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">trans-beta-carotene (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.6 to 416</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6582</td>
+                <td class="values" align="right">6582</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">853</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBECSI">LBDBECSI - trans-beta-carotene (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBECSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>trans-beta-carotene (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">trans-beta-carotene (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.011 to 7.75</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6582</td>
+                <td class="values" align="right">6582</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">853</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDBECLC">LBDBECLC - trans-beta-carotene comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDBECLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>trans-beta-carotene comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">trans-beta-carotene comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">6568</td>
+                <td class="values" align="right">6568</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">6582</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">853</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXCBC">LBXCBC - cis-beta-carotene (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXCBC</dd>
+            <dt>SAS Label: </dt>
+            <dd>cis-beta-carotene (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cis-beta-carotene (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.495 to 23.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6224</td>
+                <td class="values" align="right">6224</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1211</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDCBCSI">LBDCBCSI - cis-beta-carotene (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDCBCSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>cis-beta-carotene (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cis-beta-carotene (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.009 to 0.43</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6224</td>
+                <td class="values" align="right">6224</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1211</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDCBCLC">LBDCBCLC - cis-beta-carotene comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDCBCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>cis-beta-carotene comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">cis-beta-carotene comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">3063</td>
+                <td class="values" align="right">3063</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3161</td>
+                <td class="values" align="right">6224</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1211</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXCRY">LBXCRY - beta-cryptoxanthin (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXCRY</dd>
+            <dt>SAS Label: </dt>
+            <dd>beta-cryptoxanthin (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">beta-cryptoxanthin (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.6 to 483</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6488</td>
+                <td class="values" align="right">6488</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">947</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDCRYSI">LBDCRYSI - beta-cryptoxanthin (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDCRYSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>beta-cryptoxanthin (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">beta-cryptoxanthin (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.011 to 8.742</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6488</td>
+                <td class="values" align="right">6488</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">947</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDCRYLC">LBDCRYLC - beta-cryptoxanthin comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDCRYLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>beta-cryptoxanthin comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">beta-cryptoxanthin comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">6459</td>
+                <td class="values" align="right">6459</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">29</td>
+                <td class="values" align="right">6488</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">947</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXGTC">LBXGTC - gamma-tocopherol (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXGTC</dd>
+            <dt>SAS Label: </dt>
+            <dd>gamma-tocopherol (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">gamma-tocopherol (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">16.4 to 1200</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6731</td>
+                <td class="values" align="right">6731</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">704</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDGTCSI">LBDGTCSI - gamma-tocopherol (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDGTCSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>gamma-tocopherol (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">gamma-tocopherol (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.394 to 28.824</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6731</td>
+                <td class="values" align="right">6731</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">704</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDGTCLC">LBDGTCLC - gamma-tocopherol comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDGTCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>gamma-tocopherol comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">gamma-tocopherol comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">6731</td>
+                <td class="values" align="right">6731</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6731</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">704</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXLUZ">LBXLUZ - Lutein and zeaxanthin (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXLUZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Lutein and zeaxanthin (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Lutein and zeaxanthin (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.7 to 351</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6500</td>
+                <td class="values" align="right">6500</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">935</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDLUZSI">LBDLUZSI - Lutein and zeaxanthin (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDLUZSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Lutein and zeaxanthin (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Lutein and zeaxanthin (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.03 to 6.171</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6500</td>
+                <td class="values" align="right">6500</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">935</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDLUZLC">LBDLUZLC - Lutein and zeaxanthin comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDLUZLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Lutein and zeaxanthin comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Lutein and zeaxanthin comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">6492</td>
+                <td class="values" align="right">6492</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">6500</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">935</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXLYC">LBXLYC - trans-lycopene (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXLYC</dd>
+            <dt>SAS Label: </dt>
+            <dd>trans-lycopene (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">trans-lycopene (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.6 to 80.6</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6463</td>
+                <td class="values" align="right">6463</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">972</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDLYCSI">LBDLYCSI - trans-lycopene (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDLYCSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>trans-lycopene (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">trans-lycopene (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.011 to 1.502</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6463</td>
+                <td class="values" align="right">6463</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">972</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDLYCLC">LBDLYCLC - trans-lycopene comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDLYCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>trans-lycopene comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">trans-lycopene comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">6454</td>
+                <td class="values" align="right">6454</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">6463</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">972</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXRPL">LBXRPL - Retinyl palmitate (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXRPL</dd>
+            <dt>SAS Label: </dt>
+            <dd>Retinyl palmitate (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Retinyl palmitate (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.9 to 58.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6281</td>
+                <td class="values" align="right">6281</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1154</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDRPLSI">LBDRPLSI - Retinyl palmitate (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDRPLSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Retinyl palmitate (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Retinyl palmitate (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.031 to 2.028</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6281</td>
+                <td class="values" align="right">6281</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1154</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDRPLLC">LBDRPLLC - Retinyl palmitate comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDRPLLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Retinyl palmitate comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Retinyl palmitate comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">2526</td>
+                <td class="values" align="right">2526</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">3755</td>
+                <td class="values" align="right">6281</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1154</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXRST">LBXRST - Retinyl stearate (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXRST</dd>
+            <dt>SAS Label: </dt>
+            <dd>Retinyl stearate (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Retinyl stearate (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.495 to 25.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6123</td>
+                <td class="values" align="right">6123</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1312</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDRSTSI">LBDRSTSI - Retinyl stearate (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDRSTSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Retinyl stearate (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Retinyl stearate (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.017 to 0.887</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6123</td>
+                <td class="values" align="right">6123</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1312</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDRSTLC">LBDRSTLC - Retinyl stearate comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDRSTLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Retinyl stearate comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Retinyl stearate comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">632</td>
+                <td class="values" align="right">632</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">5491</td>
+                <td class="values" align="right">6123</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1312</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXLCC">LBXLCC - Total Lycopene (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXLCC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total Lycopene (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total Lycopene (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.7 to 158</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6392</td>
+                <td class="values" align="right">6392</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1043</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDLCCSI">LBDLCCSI - Total Lycopene (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDLCCSI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total Lycopene (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total Lycopene (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.013 to 2.944</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6392</td>
+                <td class="values" align="right">6392</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1043</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDLCCLC">LBDLCCLC - Total Lycopene comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDLCCLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total Lycopene comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total Lycopene comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">6388</td>
+                <td class="values" align="right">6388</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">6392</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1043</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVIA">LBXVIA - Retinol (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVIA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Retinol (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Retinol (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.5 to 211</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6812</td>
+                <td class="values" align="right">6812</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">623</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVIASI">LBDVIASI - Retinol (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVIASI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Retinol (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Retinol (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.122 to 7.366</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6812</td>
+                <td class="values" align="right">6812</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">623</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVIALC">LBDVIALC - Retinol comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVIALC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Retinol comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Retinol comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">6812</td>
+                <td class="values" align="right">6812</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6812</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">623</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBXVIE">LBXVIE - alpha-tocopherol (ug/dL)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBXVIE</dd>
+            <dt>SAS Label: </dt>
+            <dd>alpha-tocopherol (ug/dL)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">alpha-tocopherol (ug/dL)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">325 to 5120</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6665</td>
+                <td class="values" align="right">6665</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">770</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVIESI">LBDVIESI - alpha-tocopherol (umol/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVIESI</dd>
+            <dt>SAS Label: </dt>
+            <dd>alpha-tocopherol (umol/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">alpha-tocopherol (umol/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">7.547 to 118.886</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">6665</td>
+                <td class="values" align="right">6665</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">770</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="LBDVIELC">LBDVIELC - alpha-tocopherol comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">LBDVIELC</dd>
+            <dt>SAS Label: </dt>
+            <dd>alpha-tocopherol comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">alpha-tocopherol comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 6 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">At or above the detection limit</td>
+                <td class="values" align="right">6665</td>
+                <td class="values" align="right">6665</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower detection limit</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6665</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">770</td>
+                <td class="values" align="right">7435</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

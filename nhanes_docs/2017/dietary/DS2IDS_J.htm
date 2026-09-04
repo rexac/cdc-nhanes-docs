@@ -1,0 +1,4332 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>DS2IDS_J</title>
+    <meta name="title" content="NHANES 2017-2018: Dietary Supplement Use 24-Hour - Individual Dietary Supplements, Second Day Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Protocol_and_Procedure">Protocol and Procedure</a>
+          </li>
+          <li>
+            <a href="#Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#WTDRD1">WTDRD1 - Dietary day one sample weight</a>
+              </li>
+              <li>
+                <a href="#WTDR2D">WTDR2D - Dietary two-day sample weight</a>
+              </li>
+              <li>
+                <a href="#DR2DRSTZ">DR2DRSTZ - Dietary recall status</a>
+              </li>
+              <li>
+                <a href="#DR2EXMER">DR2EXMER - Interviewer ID code</a>
+              </li>
+              <li>
+                <a href="#DRDINT">DRDINT - Number of days of intake</a>
+              </li>
+              <li>
+                <a href="#DR2DBIH">DR2DBIH - # of days b/w intake and HH interview</a>
+              </li>
+              <li>
+                <a href="#DR2DAY">DR2DAY - Intake day of the week</a>
+              </li>
+              <li>
+                <a href="#DR2LANG">DR2LANG - Language respondent used mostly</a>
+              </li>
+              <li>
+                <a href="#DS2LOC">DS2LOC - Location supplement originally recorded</a>
+              </li>
+              <li>
+                <a href="#DSDPID">DSDPID - NCHS Supplement ID</a>
+              </li>
+              <li>
+                <a href="#DSDSUPP">DSDSUPP - Supplement Name</a>
+              </li>
+              <li>
+                <a href="#DS2MTCH">DS2MTCH - Matching code</a>
+              </li>
+              <li>
+                <a href="#DS2ANTA">DS2ANTA - Antacid containing calcium/magnesium</a>
+              </li>
+              <li>
+                <a href="#DS2ACTSS">DS2ACTSS - Reported serving size/label serving size</a>
+              </li>
+              <li>
+                <a href="#DS2IKCAL">DS2IKCAL - Energy (kcal)</a>
+              </li>
+              <li>
+                <a href="#DS2IPROT">DS2IPROT - Protein (gm)</a>
+              </li>
+              <li>
+                <a href="#DS2ICARB">DS2ICARB - Carbohydrate (gm)</a>
+              </li>
+              <li>
+                <a href="#DS2ISUGR">DS2ISUGR - Total sugars (gm)</a>
+              </li>
+              <li>
+                <a href="#DS2IFIBE">DS2IFIBE - Dietary fiber (gm)</a>
+              </li>
+              <li>
+                <a href="#DS2ITFAT">DS2ITFAT - Total fat (gm)</a>
+              </li>
+              <li>
+                <a href="#DS2ISFAT">DS2ISFAT - Total saturated fatty acids (gm)</a>
+              </li>
+              <li>
+                <a href="#DS2IMFAT">DS2IMFAT - Total monounsaturated fatty acids (gm)</a>
+              </li>
+              <li>
+                <a href="#DS2IPFAT">DS2IPFAT - Total polyunsaturated fatty acids (gm)</a>
+              </li>
+              <li>
+                <a href="#DS2ICHOL">DS2ICHOL - Cholesterol (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2ILYCO">DS2ILYCO - Lycopene (mcg)</a>
+              </li>
+              <li>
+                <a href="#DS2ILZ">DS2ILZ - Lutein + zeaxanthin (mcg)</a>
+              </li>
+              <li>
+                <a href="#DS2IVB1">DS2IVB1 - Thiamin (Vitamin B1) (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2IVB2">DS2IVB2 - Riboflavin (Vitamin B2) (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2INIAC">DS2INIAC - Niacin (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2IVB6">DS2IVB6 - Vitamin B6 (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2IFA">DS2IFA - Folic acid (mcg)</a>
+              </li>
+              <li>
+                <a href="#DS2IFDFE">DS2IFDFE - Folate, DFE (mcg)</a>
+              </li>
+              <li>
+                <a href="#DS2ICHL">DS2ICHL - Total choline (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2IVB12">DS2IVB12 - Vitamin B12 (mcg)</a>
+              </li>
+              <li>
+                <a href="#DS2IVC">DS2IVC - Vitamin C (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2IVK">DS2IVK - Vitamin K (mcg)</a>
+              </li>
+              <li>
+                <a href="#DS2IVD">DS2IVD - Vitamin D (D2 + D3) (mcg)</a>
+              </li>
+              <li>
+                <a href="#DS2ICALC">DS2ICALC - Calcium (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2IPHOS">DS2IPHOS - Phosphorus (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2IMAGN">DS2IMAGN - Magnesium (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2IIRON">DS2IIRON - Iron (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2IZINC">DS2IZINC - Zinc (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2ICOPP">DS2ICOPP - Copper (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2ISODI">DS2ISODI - Sodium (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2IPOTA">DS2IPOTA - Potassium (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2ISELE">DS2ISELE - Selenium (mcg)</a>
+              </li>
+              <li>
+                <a href="#DS2ICAFF">DS2ICAFF - Caffeine (mg)</a>
+              </li>
+              <li>
+                <a href="#DS2IIODI">DS2IIODI - Iodine (mcg)</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#Appendix_1._Variables_in_the_Individual_Dietary_Supplements_Files_(DS1IDS_J_and_DS2IDS_J)_by_Position">Appendix 1. Variables in the Individual Dietary Supplements Files (DS1IDS_J and DS2IDS_J) by Position</a>
+          </li>
+          <li>
+            <a href="#Appendix_2._List_of_Nutrients/Food_Components_(Unit)">Appendix 2. List of Nutrients/Food Components (Unit)</a>
+          </li>
+          <li>
+            <a href="#Appendix_3._Variables_in_the_Total_Dietary_Supplements_Files_(DS1TOT_J_and_DS2TOT_J)_by_Position">Appendix 3. Variables in the Total Dietary Supplements Files (DS1TOT_J and DS2TOT_J) by Position</a>
+          </li>
+          <li>
+            <a href="#Appendix_4:_Dietary_Supplement_Handcard_">Appendix 4: Dietary Supplement Handcard </a>
+          </li>
+          <li>
+            <a href="#Appendix_5:_Created_Default_Supplements_and_Antacids">Appendix 5: Created Default Supplements and Antacids</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2017-2018 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Dietary Supplement Use 24-Hour - Individual Dietary Supplements, Second Day (DS2IDS_J)</h3>
+        <h4> Data File: DS2IDS_J.xpt</h4>
+        <h5 class="left">First Published: August 2020</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>The objective of the dietary interview component is to obtain detailed dietary intake information from NHANES participants. This documentation describes the data files associated only with the collection of dietary supplements and non-prescription antacid use. </p>
+<p>The objective of the 24-hour dietary supplement use component is to obtain information from NHANES participants on the types and amounts of dietary supplements (DS) consumed during the 24-hour period prior to the interview (midnight to midnight); and to estimate the intake of nutrients from those dietary supplements. From 1999-2006, the 24-hour dietary recall interviews, or dietary interviews, only asked about food and beverages consumed. Since 2007, data has been collected on the usage of all vitamins, minerals, herbals and other dietary supplements as well as non-prescription antacids, as part of the dietary interview, directly following the collection of dietary intakes from foods and beverages. </p>
+<p>Since 1999, NHANES has been collecting data on participants&rsquo; use of dietary supplements, in the past 30 days, during the Dietary Supplements Use Section (DSQ) in the household interview. However, prior to the 2007-2008 data release, estimating total nutrient intake from all sources (foods, beverages and DS), was difficult because of the different data collection methods, referent time frames, and data formats. These data are now collected using similar methods over the same period; therefore, nutrients from all sources can be easily combined. This allows researchers to improve the total nutrient intake estimations as well as examine associations by nutrient source, such as from foods versus supplements. The improved nutrient estimates increase researchers&rsquo; ability to examine nutrient-disease or nutrient-health associations and to estimate percentages of the population with intakes over or under various nutrient standards.</p>
+<p>All NHANES participants are eligible for two 24-hour dietary recall interviews. The first dietary recall interview is collected in-person in the Mobile Examination Center (MEC) and the second interview is collected by telephone 3 to 10 days later. </p>
+<p>Similar to the format of food and beverage intake files, two types of dietary supplement intake data are available from the two dietary interviews for the 2017-2018 survey cycle: Individual Dietary Supplements files and Total Dietary Supplements files. Each dietary supplement data file is accompanied by codebook and frequencies. This documentation applies to all files.</p>
+<p><strong>Distinguishing Between Foods/Beverages and Dietary Supplements in NHANES </strong></p>
+<p>Distinguishing between foods/beverages and dietary supplements can be challenging. In order to make sure that the food and beverage intake files and DS intake files do not contain any overlapping products, trained nutritionists at the National Center for Health Statistics (NCHS) and U.S. Department of Agriculture (USDA) Food Surveys Research Group (FSRG) review questionable items reported in the dietary interviews. Products that are labeled as a dietary supplement, have a supplement facts panel on the label, and are in forms, such as tablets, capsules, softgels, or gelcaps. Items that are powders or liquids can be hard to distinguish. General guidelines used state that if powders and liquid concentrates have product directions stating that they be added to a liquid, they are classified as beverages. Examples are teas and protein powders. An exception is made for fiber products, which are classified as dietary supplements. Along this same guideline, energy drinks are considered beverages, but &ldquo;energy shot&rdquo; products are considered dietary supplements. </p>
+<p>It is best to refer to the two databases that detail every food/beverage and dietary supplement reported in NHANES to identify the exact determination used. </p>
+<p>The databases are: </p>
+<p><a href="https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/food-surveys-research-group/docs/fndds-download-databases/" target="_blank">USDA's Food and Nutrient Database for Dietary Studies (FNDDS) 2017-2018</a> </p>
+<p><a href="https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Dietary&amp;CycleBeginYear=2017" target="_blank">NHANES Dietary Supplement Database 1999-2018</a></p>
+<p>24-hour Dietary Supplements Data Files: Four data files were produced from the dietary supplement use component of the dietary interviews: two Individual Dietary Supplements files and two Total Dietary Supplements files. Each file includes one day of intake data. The number &ldquo;1&rdquo; or &ldquo;2&rdquo; in the file name identifies the day (and mode) of the interview: 1 = first day (MEC), 2 = second day (phone). File names are as follows: </p>
+<table bordercolor="#000000" border="1">
+    <caption align="center" valign="top">File Names for 24-hour Dietary Supplements Data</caption>
+    <thead>
+        <tr>
+            <th id="ms__id781_heading_0">File</th>
+            <th id="ms__id781_heading_1">Day 1</th>
+            <th id="ms__id781_heading_2">Day 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td headers="ms__id781_heading_0">Individual Dietary Supplements </td>
+            <td headers="ms__id781_heading_1">DS1IDS_J</td>
+            <td headers="ms__id781_heading_2">DS2IDS_J</td>
+        </tr>
+        <tr>
+            <td headers="ms__id781_heading_0">Total Dietary Supplements</td>
+            <td headers="ms__id781_heading_1">DS1TOT_J</td>
+            <td headers="ms__id781_heading_2">DS2TOT_J</td>
+        </tr>
+    </tbody>
+</table>
+<p>The nutrient amounts in these files reflect only nutrients obtained from non-prescription and prescription dietary supplements as well as non-prescription antacids that contain calcium and/or magnesium. Throughout the documentation, &ldquo;antacid&rdquo; will specifically refer to non-prescription antacids that contain calcium and/or magnesium. They do not include nutrients obtained from foods, beverages, and water. Data on intake of foods, beverages, and water are available on the <a href="https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Dietary&amp;CycleBeginYear=2017" target="_blank">NHANES 2017-2018 Dietary Data page</a><a href="https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Dietary&amp;CycleBeginYear=2017" target="_self">.</a> </p>
+<p><strong>Individual Dietary Supplements File (DS1IDS_J and DS2IDS_J):</strong> Contain detailed information about the types and amounts of individual dietary supplements and non-prescription antacids (that contain calcium and/or magnesium) reported by each participant. The names for both Day 1 and Day 2 variables are listed in <strong>Appendix 1</strong>. </p>
+<p>The Individual Dietary Supplements Files include, for each interview day, one record for each dietary supplement or antacid consumed by a survey participant. Only participants&rsquo; that had reported taking a dietary supplement or&nbsp;antacid are included in these files. Each dietary supplement or antacid&nbsp;is identified by a supplement ID number (DSDPID) and each record contains the information listed below:&nbsp;</p>
+<ul>
+    <li>Number of days of complete intake obtained from participant&nbsp; </li>
+    <li>Day of the week of the intake&nbsp; </li>
+    <li>Name and ID number of the supplement&nbsp; </li>
+    <li>Amount of dietary supplement consumed in serving size, which is calculated as the reported amount consumed divided by the serving size from the product label </li>
+    <li>Amounts of 34 nutrients/dietary components (listed in <strong>Appendix 2</strong>) from each dietary supplement and antacid, as calculated using the NHANES Dietary Supplement Database (NHANES-DSD). </li>
+</ul>
+<p>This file only includes intake for a select group of nutrients. These records can be linked to the NHANES-DSD, using DSDPID, to obtain more detailed information on reported products. The NHANES-DSD datasets provide information on nutrients in the dietary supplement as reported on the product label. Botanical ingredients is an example of nutrients not released in the Individual Dietary Supplements files but can be obtained from the NHANES-DSD files.</p>
+<p><strong>Total Dietary Supplements Files</strong> (<strong>DS1TOT_J and DS2TOT_J</strong>): Contain, for each participant, daily total nutrient intakes from dietary supplements and&nbsp;antacids. The names for both Day 1 and Day 2 variables are listed in <strong>Appendix 3</strong>. </p>
+<p>The Total Dietary Supplements Files provide a summary record of total nutrient intakes from dietary supplements and antacids for each individual. All participants that had a complete dietary interview for foods and beverages are included in this file. This includes users and non-users of supplements and antacids. Each total intake record contains the following information:&nbsp;</p>
+<ul>
+    <li>Number of days of complete intake obtained from participant&nbsp; </li>
+    <li>Whether a dietary supplement or an antacid was consumed in the past 24 hours&nbsp; </li>
+    <li>Total number of supplements and antacids reported for that participant&nbsp; </li>
+    <li>Daily aggregates of 34 nutrients/dietary components (listed in <strong>Appendix 2</strong>) from all supplements and antacids, as calculated using the NHANES-DSD.&nbsp; </li>
+</ul>
+<p>The food and beverage dietary intake are released in separate files available on the NHANES website. They can be linked to the dietary supplement files by the respondent sequence number (SEQN).</p>
+<p>Starting from the 2015-2016 survey cycle, in the 24-hour&nbsp;Total Dietary Supplement files, the variables DR1MNRSP, DR2MNRSP, which indicate the main respondent, and the variables DR1HELPD and DR2HELPD, which indicate the person whom helped with the interview, were deleted. The new variables DR1MRESP, DR2MRESP, DR1HELP, and DR2HELP were added to indicate the main respondent and the person whom helped with the interview.</p>
+<p>Starting from the 2017-2018 survey cycle, the new variable DSDPID, which indicates supplement ID was added. The variable DSDSUPID now indicates the old version for supplement ID. </p><h2 id="Eligible_Sample">Eligible Sample</h2><p>All NHANES participants were eligible for the dietary supplement use component of the dietary interview component.</p><h2 id="Protocol_and_Procedure">Protocol and Procedure</h2><p>The examination protocol and data collection methods are fully documented in the <a href="https://wwwn.cdc.gov/nchs/nhanes/ContinuousNhanes/Manuals.aspx?BeginYear=2017" target="_blank">NHANES dietary interviewer procedures manuals (In-person and Phone Follow-up)</a>.</p>
+<p>The 24-hour dietary supplement use component was administered after the 24-hour dietary interview for food and beverage. Information was obtained on all vitamins, minerals, herbals, and other dietary supplements and non-prescription antacids that were consumed during a 24-hour time period (midnight to midnight), including the name and the amount of supplement or antacid taken. Non-prescription antacids were collected since a high percentage of these products contain calcium and/or magnesium. Participants&rsquo; were shown a hand card that lists examples of supplements (<strong>Appendix 4</strong>) and another for antacids. For participants who reported taking a supplement or antacid in the last 30 days during the household interview, the supplements or antacids were imported from the household questionnaire. The Interviewer verified that each dietary supplement and non-prescription antacid reported during the household interview was consumed the day before the interview (midnight to midnight). Participants were also asked how much was taken. Then the interviewers collected any additional supplement or antacid that was taken that previous day that were not reported during the household interview. </p>
+<p>Interviews were conducted for survey participants less than six years of age with a proxy, whom was generally the person most knowledgeable about the survey participant&rsquo;s intake. Interviews of children aged 6 to 8, were conducted with a proxy and with the child present to assist in reporting intake information. Interviews of children aged 9 to 11, were conducted with the child and with the assistance of an adult familiar with the child&rsquo;s intake. Dietary interviewers conducted interviews in English and Spanish. Translators were used to conduct interviews in other languages.</p>
+<p>The in-person dietary interview was conducted in a private room in the NHANES MEC. Telephone dietary interviews were collected 3 to 10 days following the MEC dietary interview but not on the same day of the week as the MEC interview. Any participant who did not have a telephone was given a toll-free number to call so that the interview could be conducted. </p><h2 id="Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</h2><p>All dietary interviewers were required to complete an intensive one-week training course and to conduct supervised practice interviews before working independently in the field. Retraining sessions were conducted annually to reinforce the proper protocols and technique. </p>
+<p>Interviewers were monitored throughout the data collection period. Interviews were checked for completeness of the recalls, missing information, inconsistent reports, and unclear notes. Written notification and feedback were provided to the interviewers. </p>
+<p>Trained nutritionists at NCHS reviewed incoming data and matched reported dietary supplement entries to known supplements from the in-house NCHS Product Label Database (PLD) where possible; sought additional product labels if feasible; assigned generic or default supplements as appropriate; transferred or removed products that were not considered dietary supplement (i.e., prescription medication, foods, beverages); and assigned matching codes/confidence codes to indicate the degree of matching certainty. All coding was reviewed by NCHS.</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p><strong>Matching reported dietary supplements to known products </strong></p>
+<p>Trained nutritionists, at NCHS, matched the product names entered by the interviewer (including prescription dietary supplement, non-prescription dietary supplement, and non-prescription antacid) to a known product when possible. NCHS nutritionists first determined if the product was in our in-house PLD. If it was, then the nutritionist verified whether the product label was entered into the system within the 2-year cycle of data collection. If the product label was not entered into PLD, or the product label was entered before the beginning of the 2-year data collection cycle, NCHS nutritionists attempted to obtain a new product label. NCHS obtained labels for each dietary supplement or non-prescription antacid reported by participants from sources such as the manufacturer, distributor or retailer, the Internet, company catalogs, and the Physician&rsquo;s Desk Reference (PDR). Recently, label information was also obtained from <a href="https://www.dsld.nlm.nih.gov/dsld/index.jsp" target="_blank">The Dietary Supplement Label Database (DSLD)</a>, which is a joint project of the National Institutes of Health (NIH) Office of Dietary Supplements (ODS) and National Library of Medicine (NLM). The DSLD contains the full label contents from a sample of dietary supplement products marketed in the U.S. Nutritionists determined during processing whether or not the non-prescription antacids collected contained calcium and/or magnesium. Only non-prescription antacids containing calcium or magnesium were included in the present data files.</p>
+<p>NCHS communicated with many major manufacturing company representatives to determine when various product re-formulations became available. Based upon manufacturer advice, we  used a lag time of 5 months after the new re-formulated product had hit the market and matched products to participants&rsquo; accordingly. Despite these precautions, there was no guarantee that the products taken by participants were matched to the correct formulation in our release files. </p>
+<p>NCHS nutritionists attempted to find the exact product(s) reported by participants; however, this was done with varying degrees of precision. A &ldquo;confidence code&rdquo; (DS1MTCH and DS2MTCH, located in files DS1IDS_J and DS2IDS_J, respectively) accompanied each record to indicate the degree of matching certainty. The matches were: 1) Exact or near exact match; 2) Probable match; 3) Generic match; 4) Reasonable match; or 5) Default match. In some cases no match could be made with any certainty. These products were coded as &ldquo;6, No match&rdquo;. Products whose names were reported as &ldquo;Refused&rdquo; (DSDSUPP=7777) or &ldquo;Don&rsquo;t know&rdquo; (DSDSUPP=9999) have matching codes of 7 and 9, respectively.</p>
+<p>NCHS created generic and default dietary supplements and non-prescription antacids, which were also maintained in the PLD database. Generics were created in the database when we had information about a reported supplement, such as strength of all ingredients, i.e., one which had no brand name. These were generally single ingredient supplements, which included a strength (e.g., vitamin C 500 mg) or multiple vitamins and/or mineral supplements made by a private label manufacturer that was known to NCHS and for which we had a label with identical ingredients and strengths (e.g., brand X all-purpose multivitamin was reported, and we had a label for brand Y, made by the same manufacturer). When all ingredient strengths were not known, a default supplement was created in the database. Defaults were created for single ingredient and multiple ingredient supplements based on our own data of most frequently reported supplements of that type, based on the survey cycle in which the data was collected. Created default products and the actual products or strengths that were assigned to these defaults are listed in <strong>Appendix 5</strong>.</p>
+<p>After the dietary supplement data was coded and matched to a product in our in-house database, various types of reviews were conducted to ensure the quality of the data. Interviewers&rsquo; comments were reviewed to ensure that they have been accounted for in coding. Decisions were made about how to code new or unusual dietary supplement products or unusual quantities or units reported by participants. Dietary supplements that could not be matched to items in the database were resolved by NCHS nutritionists. </p>
+<p>Product information is released from the in-house PLD as the NHANES Dietary Supplement Database (NHANES-DSD) which contains detailed information on the dietary supplements and antacids reported by survey participants since NHANES 1999. The NHANES-DSD release consists of three datasets, which contain information on products: </p>
+<p>Dietary Supplement Product Information (DSPI)
+<br />
+Dietary Supplement Ingredient Information (DSII)
+<br />
+Dietary Supplement Blend Information (DSBI)
+</p>
+<p>
+The supplement ID numbers (DSDPID) located in files DS1IDS_J and DS2IDS_J of this release can be used to merge with the NHANES-DSD files. For more information on the NHANES-DSD, please refer to the documentation and release files located on the <a href="https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Dietary&amp;CycleBeginYear=2017" target="_blank">NHANES website</a>.<br />
+<strong></strong></p>
+<p><strong>Specific variables and edits</strong></p>
+<p><span style="text-decoration: underline;"><strong>DSDPID:</strong> Supplement ID Number</span>
+<br />
+New Supplement ID is a unique number assigned to each product entered in the inhouse PLD.
+<br />
+</p>
+<p><span style="text-decoration: underline;"><strong>DSDSUPP: </strong>Name of Supplement</span></p>
+<p>This is the name from the front of the product label. The brand name is generally entered first (i.e., Nature&rsquo;s Way) and then the actual product name (i.e., lutein). Information such as the strength (i.e., 60 mg extract) of the product and other qualifiers that help distinguish a product from a similar product (i.e., mega, super, high potency, time release, chewable, extract) are also listed if they are on the front of the product label. Words like &ldquo;dietary supplement&rdquo; and health claims are not entered as part of the name. </p>
+<p><span style="text-decoration: underline;"><strong>DS1ANTA (DS1IDS_J) and DS2ANTA (DS2IDS_J):</strong> variable indicates whether a product was a dietary supplement or non-prescription antacid </span></p>
+<p>This variable indicates whether the product reported was a non-prescription antacid (code=1) or a dietary supplement (code=0). </p>
+<p><span style="text-decoration: underline;"><strong>DS1MTCH (DS1IDS_J and DS2MTCH (DS2IDS_J):</strong> Match code/confidence code </span></p>
+<p>Supplements are recorded during the dietary interview with varying degrees of accuracy and completeness. NCHS has created a system to specify how certain we are with matching a supplement recorded during the interview with the actual product label. Below describe how matches are made: </p>
+<p>Exact or near exact match (DSDMTCH=1) indicates that this is the only product that could match this entry. </p>
+<p>Probable match (DSDMTCH=2) indicates that the match is not exact, but knowledge of the company&rsquo;s products strongly suggests that this is the only possible match choice. For example, the entry may not specify strength or include words such as timed release, but no other options are available for this brand according to manufacturer or retailer information.</p>
+<p>Generic match (DSDMTCH=3) indicates we had information on the strength for all ingredients, either a) as part of name (e.g., vitamin C 500 mg) or b) because the manufacturer is known and NCHS has an identical product made by this manufacturer for a different distributor or retailer. Thus, the ingredients and amounts are considered to be accurate despite an exact brand match. </p>
+<p>Reasonable match (DSDMTCH=4) indicates that the product name may be incomplete or could be complete but other products of this brand also start with these same words so this cannot be assured. In these cases, the entered name is matched to either: a) the most frequently reported of these products in the NHANES 2017-2018&nbsp;data, if this could be determined; b) the best-selling product by this company that matches the entered name; or c) the most basic product by this company, as assessed by label wording. </p>
+<p>Default match (DSDMTCH=5) indicates that the exact product could not be obtained because the name was imprecise, or the exact brand product could not be located and no generic could be assigned. In these cases, the entered product was matched to a created default product based upon: a) the most commonly reported strengths for single ingredients; b) the most commonly reported brands for major multiple ingredient products such as multivitamins and multivitamin/multiminerals for children, seniors, or adults, if available; or c) products manufactured by a large, private-label manufacturer. </p>
+<p>Finally, a match codes of No match (DSDMTCH=6) indicates that no product could be found and there was not enough detail in the name to assign a generic or default match with any confidence. The words &ldquo;no product information available&rdquo; are listed as the product name (DSDSUPP). </p>
+<p>Analysts should be aware that for default matches and matches that chose between several similarly named supplements, there is less certainty that the ingredients and ingredients amount&nbsp;in the supplement assigned exactly match those in the supplement actually taken. Additionally, NCHS cannot guarantee in any case that the matched product was the exact product taken or even that any product actually was taken, as these data are self-reported. </p>
+<p><span style="text-decoration: underline;"><strong>DS1ACTSS (DS1IDS_J) and DS2ACTSS (DS2IDS_J):</strong> Reported serving size/label serving size </span></p>
+<p>This variable was derived using the information from the Supplement Information file (DSPI) of the NHANES-DSD and the participants&rsquo; reported amount taken. File DSPI provides information on the serving size from the product label&rsquo;s supplement facts panel for which the nutrient amounts were based on. The participant was asked to report the amount taken during the dietary interview. The reported amount taken was divided by the serving size amount from DSPI (variable DSDSERVQ). Prior to calculating, the data needed to be edited to standardize the unit the participant used to report the amount taken and the unit used in the product serving size label. For example, if a participant reported taking 1 tablespoon of a supplement and the label serving size was 3 teaspoons, then the reported amount taken was edited as 3 teaspoons (1 tablespoon = 3 teaspoons). There were about 138 records in which data was edited. In most of the cases, using the alternative serving size (information available on some product labels), using simple conversions (i.e., teaspoons to tablespoons) or contacting the manufacturer for information on label serving size (i.e., actual amount for a &ldquo;capful&rdquo;) provided enough information to make clear edits. However, in some cases the reported amount taken was very different from the product label serving size (n=4). For example, the participant may have reported 1 tablet, but the label serving size is 1 tablespoon. This was assumed to be an error in reporting or an interviewer data entry error. In these cases, the serving size was assumed to be the label serving size. Additionally, all records that were assigned as a default product were edited and the label serving size was assigned.</p>
+<p><strong><span style="text-decoration: underline;">Nutrient variables from Individual Dietary Supplements files, DS1IDS_J and DS2IDS_J </span></strong></p>
+<p>These variables are created by using files from the NHANES_DSD that contain information on the serving size and the quantity of each nutrient from the product label&rsquo;s supplement facts panel. The participant&rsquo;s reported amount taken is divided by the serving size from the label in order to determine the actual amount of nutrient consumed. For example, a participant may report taking one tablet, but the serving size amount is 2 tablets. Therefore, only half of the nutrients on the label are being consumed. The variables DS1ACTSS (Day 1) and DS2ACTSS (Day 2) indicate the actual amount of product that was consumed. The actual amount of product consumed is then multiplied by the ingredient amount for each dietary supplement or antacid. In the example above, 0.5 would be multiplied by each ingredient/nutrient, to estimate the nutrient intake. </p>
+<p><strong><span style="text-decoration: underline;">DS1IFDFE (DS1IDS_J) and DS1IFDFE (DS2IDS_J):</span></strong><span style="text-decoration: underline;"> Folate, DFE (mcg) </span></p>
+<p>Dietary Folate Equivalents (DFE) were calculated by using a conversion factor of 1.7. This conversion is based on recommendations set by the Institute of Medicines Dietary Reference Intakes (1). </p>
+<p><strong><span style="text-decoration: underline;">Nutrient variables from Total Dietary Supplements files, DS1TOT_J and DS2TOT_J </span></strong></p>
+<p>These variables are created by adding up each nutrient for each participant from the Individual Dietary Supplements Files (<strong>DS1IDS_J</strong> and <strong>DS2IDS_J</strong>).</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>In some cases, it may appear as though a participant reported the same dietary supplement more than once. There are a several reasons for these duplications. Participants&rsquo; may have reported different brand name dietary supplements which when collected had the same generic ingredient (i.e., 2 different brands of calcium, but calcium is collected generically with only the strength recorded) or the dietary supplement may have been different forms or dosages of the same product. There were a few cases where the participant did report the exact same dietary supplement, with the same length of use, frequency of use or amount used. In these cases, since the interviewer recorded the dietary supplement separately, both mentions were retained in the file. </p>
+<p>During the data editing process, outlier values were examined. When there was insufficient information to conclude that values were invalid, they were left in the dataset. Analysts should examine the distribution of the data and consider whether or not it is appropriate to include or exclude extreme values in a given analysis.</p>
+<p>Each Individual Dietary Supplements File (DS1IDS_J and DS2IDS_J) is comprised of dietary supplement and non-prescription antacid records. Only participants who reported taking a dietary supplement or non-prescription antacid are included in these files. For many survey participants, there are multiple records in each file. For each Total Dietary Supplements File (DS1TOT_J and DS2TOT_J), there is one record for each participant and includes the entire dietary interview sample. These files can be linked with other NHANES files by the respondent sequence number (SEQN). </p>
+<p><strong>Variable names:</strong> For data collected on both Day 1 and Day 2, variable names are differentiated by having the number &ldquo;1&rdquo; or &ldquo;2&rdquo; in the third position of the variable name to identify the collection day. For example, the calcium variable in the Individual Dietary Supplements File, which identifies the amount of calcium in each supplement reported by the participant, is named DS1ICALC in the Day 1 file and DS2ICALC in the Day 2 file. <strong>Appendices 1 and 3</strong> list the Day 1 and Day 2 variable names for the Individual Dietary Supplements files and the Total Dietary Supplements files, respectively. </p>
+<p>Names for the following variables are the same for both days in the Individual Dietary Supplements files and the Total Dietary Supplements files:</p>
+<table bordercolor="#000000" border="1">
+    <caption align="center" valign="top"><strong>Variables with the Same Name for Both Days in the Dietary Supplements Files</strong></caption>
+    <thead>
+        <tr>
+            <th id="ms__id1109_heading_0"><strong>Day 1 and Day 2 variable name</strong></th>
+            <th id="ms__id1109_heading_1"><strong>Label</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td headers="ms__id1109_heading_0">SEQN</td>
+            <td headers="ms__id1109_heading_1">Respondent sequence number</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1109_heading_0">WTDRD1</td>
+            <td headers="ms__id1109_heading_1">Dietary day one sample weight</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1109_heading_0">WTDR2D</td>
+            <td headers="ms__id1109_heading_1">Dietary two-day sample weight</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1109_heading_0">DSDPID</td>
+            <td headers="ms__id1109_heading_1">Supplement ID</td>
+        </tr>
+        <tr>
+            <td headers="ms__id1109_heading_0">DRDINT</td>
+            <td headers="ms__id1109_heading_1">Number of days of intake</td>
+        </tr>
+    </tbody>
+</table>
+<p><strong>Number of days of intake: </strong>Because two days of data are included in the 2017-2018 release, a variable has been included to indicate the number of days of intake available for each participant. The variable name is DRDINT. In 2017-2018, 7,641   participants provided complete dietary intakes for Day 1. Of those providing the Day 1 data, 6,639   provided complete dietary intakes for Day 2.</p>
+<p><strong>Dietary recall status code:</strong> A status code (DR1DRSTZ or DR2DRSTZ) is used in both the Individual Dietary Supplements and Total Dietary Supplements files to indicate the quality and completeness of a survey participant's response to the dietary recall section. These codes are based on the food 24-hour dietary recall interview data. The codes are the following: 1. reliable and met the minimum criteria, 2. Not reliable or did not meet the minimum criteria, 4. Reported consuming breast milk, and 5. Not done. Although there are four possible values, only codes 1 and 4 appear in the Individual Dietary Supplements Files. For more information on this variable, refer to the documentations accompanying the 24-hour dietary interview datasets for food and beverage intake on the NHANES website.</p>
+<p><strong>Sample weights for dietary intake data:</strong> The NHANES participants were selected on the basis of a national probability design. In order to increase the number of participants for specific demographic groups, a multi-stage, unequal probability of selection design was implemented.  Beginning with the 2011-2012 data collection the NHANES sample design includes an oversample of Asian Americans. </p>
+<p>Sample weights are constructed that encompass the unequal probabilities of selection, as well as adjustments for non-participation by selected sample persons. In order to produce national, representative estimates, the <strong>appropriate sample weights must be used</strong>.</p>
+<p>For NHANES 2017-2018, there were 16,211 persons selected; of these 8,704  were considered participants to the MEC examination and data collection. A total of 7,641 MEC participants provided complete dietary intakes for Day 1, and of those providing the Day 1 data, 6,639  provided complete dietary intakes for Day 2. </p>
+<p>Most analyses of NHANES data use data collected in the MEC and the variable WTMEC2YR should be used for the sample weights. However, for the WWEIA dietary data, different sample weights are recommended for analysis. Although attempts are made to schedule MEC exams uniformly throughout the week, proportionally more exams occur on weekend days than on weekdays. Because food intake can vary by weekdays and weekends, use of the MEC weights disproportionately represents intakes on weekends. </p>
+<p>A set of weights (WTDRD1) is provided that should be used when an analysis uses the Day 1 dietary recall data (either alone or when Day 1 nutrient data are used in conjunction with MEC data). The set of weights (WTDRD1) is applicable to the 7,641&nbsp;participants with Day 1 data. Day 1 weights were constructed by taking the MEC sample weights (WTMEC2YR) and further adjusting for (a) the additional non-response and (b) the differential allocation by weekdays (Monday through Thursday), Fridays, Saturdays and Sundays for the dietary intake data collection. These Day 1 weights are more variable than the MEC weights, and the sample size is smaller, so estimated standard errors using Day 1 data and Day 1 weights are larger than standard errors for similar estimates based on MEC weights. </p>
+<p>When analysis is based on both days of dietary intake, only 6,639 sample participants have complete data. The NHANES protocol requires an attempt to collect the second day of dietary data at least 3 days after the first day, but the actual number of days between the two interviews is variable. A set of adjusted weights, WTDR2D, is to be used when an analysis uses the smaller sample with completed Day 2 dietary data. This two-day weight was constructed for the 6,639 participants by taking the Day 1 weights (WTDRD1) and further adjusting for (a) the additional non-response for the second recall and (b) for the proportion of weekend (Friday through Sunday) and weekday (Monday through Thursday) combinations of Day 1 and Day 2 recalls. </p>
+<p>Note that all sample weights are person-level weights and each set of dietary weights should sum to the same population control total as the MEC weights (WTMEC2YR). Additional explanation of sample overall weights and appropriate uses are included in the <a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx" target="_blank">NHANES Analytic Guidelines</a>. Please also refer to the on-line <a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/" target="_blank">NHANES Tutorial</a>   for further details on other analytic issues.</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>1. Institute of Medicine. Dietary Reference Intakes: The Essential Guide to Nutrient Requirements. Washington, DC. National Academies Press, 2006</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTDRD1">WTDRD1 - Dietary day one sample weight</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTDRD1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dietary day one sample weight</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Dietary day one sample weight</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2952.234449 to 499155.88357</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5776</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">Day 1 dietary recall not done/incomplete</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="WTDR2D">WTDR2D - Dietary two-day sample weight</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">WTDR2D</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dietary two-day sample weight</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Dietary two-day sample weight</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2365.807373 to 665354.30156</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5776</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">Day 2 dietary recall not done/incomplete</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DR2DRSTZ">DR2DRSTZ - Dietary recall status</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DR2DRSTZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dietary recall status</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Dietary recall status</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Reliable and met the minimum criteria</td>
+                <td class="values" align="right">5741</td>
+                <td class="values" align="right">5741</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Not reliable or not met the minimum criteria</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5741</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Reported consuming breast-milk</td>
+                <td class="values" align="right">35</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Not done</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DR2EXMER">DR2EXMER - Interviewer ID code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DR2EXMER</dd>
+            <dt>SAS Label: </dt>
+            <dd>Interviewer ID code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Interviewer ID code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">32 to 91</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5776</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DRDINT">DRDINT - Number of days of intake</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DRDINT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Number of days of intake</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Indicates whether the sample person has intake data for one or two days.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Day 1 only</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Day 1 and day 2</td>
+                <td class="values" align="right">5776</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DR2DBIH">DR2DBIH - # of days b/w intake and HH interview</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DR2DBIH</dd>
+            <dt>SAS Label: </dt>
+            <dd># of days b/w intake and HH interview</dd>
+            <dt>English Text: </dt>
+            <dd class="info"># of days b/w intake and HH interview</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">-24 to 130</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5585</td>
+                <td class="values" align="right">5585</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">191</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DR2DAY">DR2DAY - Intake day of the week</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DR2DAY</dd>
+            <dt>SAS Label: </dt>
+            <dd>Intake day of the week</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Intake day of the week</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Sunday</td>
+                <td class="values" align="right">908</td>
+                <td class="values" align="right">908</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Monday</td>
+                <td class="values" align="right">1077</td>
+                <td class="values" align="right">1985</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Tuesday</td>
+                <td class="values" align="right">1160</td>
+                <td class="values" align="right">3145</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Wednesday</td>
+                <td class="values" align="right">1027</td>
+                <td class="values" align="right">4172</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Thursday</td>
+                <td class="values" align="right">754</td>
+                <td class="values" align="right">4926</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Friday</td>
+                <td class="values" align="right">629</td>
+                <td class="values" align="right">5555</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Saturday</td>
+                <td class="values" align="right">221</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DR2LANG">DR2LANG - Language respondent used mostly</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DR2LANG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Language respondent used mostly</dd>
+            <dt>English Text: </dt>
+            <dd class="info">The respondent spoke mostly:</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">English</td>
+                <td class="values" align="right">5419</td>
+                <td class="values" align="right">5419</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Spanish</td>
+                <td class="values" align="right">291</td>
+                <td class="values" align="right">5710</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">English and Spanish</td>
+                <td class="values" align="right">26</td>
+                <td class="values" align="right">5736</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Other</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5736</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Asian Languages</td>
+                <td class="values" align="right">40</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">Asian Languages and English</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2LOC">DS2LOC - Location supplement originally recorded</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2LOC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Location supplement originally recorded</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Location supplement originally recorded</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">HouseHold Interview</td>
+                <td class="values" align="right">5011</td>
+                <td class="values" align="right">5011</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">MEC Interview</td>
+                <td class="values" align="right">469</td>
+                <td class="values" align="right">5480</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Phone Interview</td>
+                <td class="values" align="right">296</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DSDPID">DSDPID - NCHS Supplement ID</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DSDPID</dd>
+            <dt>SAS Label: </dt>
+            <dd>NCHS Supplement ID</dd>
+            <dt>English Text: </dt>
+            <dd class="info">NCHS Supplement ID</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">275 to 6666667074</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5776</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DSDSUPP">DSDSUPP - Supplement Name</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DSDSUPP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Supplement Name</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Supplement Name</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">Supplement Name</td>
+                <td class="values">Value was recorded</td>
+                <td class="values" align="right">5776</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">&lt; blank &gt;</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2MTCH">DS2MTCH - Matching code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2MTCH</dd>
+            <dt>SAS Label: </dt>
+            <dd>Matching code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Matching code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Exact or near exact match</td>
+                <td class="values" align="right">2140</td>
+                <td class="values" align="right">2140</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Probable match</td>
+                <td class="values" align="right">314</td>
+                <td class="values" align="right">2454</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Generic match</td>
+                <td class="values" align="right">1522</td>
+                <td class="values" align="right">3976</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Reasonable match</td>
+                <td class="values" align="right">787</td>
+                <td class="values" align="right">4763</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">Default match</td>
+                <td class="values" align="right">908</td>
+                <td class="values" align="right">5671</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">No match</td>
+                <td class="values" align="right">93</td>
+                <td class="values" align="right">5764</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">Refused</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5764</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ANTA">DS2ANTA - Antacid containing calcium/magnesium</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ANTA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Antacid containing calcium/magnesium</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Antacid containing calcium/magnesium</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0</td>
+                <td class="values">Non-antacid supplement</td>
+                <td class="values" align="right">5668</td>
+                <td class="values" align="right">5668</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Antacid containing calcium and/or magnesium</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5668</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Antacids reported with antacids</td>
+                <td class="values" align="right">108</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ACTSS">DS2ACTSS - Reported serving size/label serving size</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ACTSS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Reported serving size/label serving size</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Reported serving size/label serving size</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.1 to 10</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5668</td>
+                <td class="values" align="right">5668</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">999</td>
+                <td class="values">Don't know</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">5668</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">108</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IKCAL">DS2IKCAL - Energy (kcal)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IKCAL</dd>
+            <dt>SAS Label: </dt>
+            <dd>Energy (kcal)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Energy (kcal)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.5 to 420</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1317</td>
+                <td class="values" align="right">1317</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4459</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IPROT">DS2IPROT - Protein (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IPROT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Protein (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Protein (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.05 to 60</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">145</td>
+                <td class="values" align="right">145</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5631</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ICARB">DS2ICARB - Carbohydrate (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ICARB</dd>
+            <dt>SAS Label: </dt>
+            <dd>Carbohydrate (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Carbohydrate (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.0003 to 63</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">946</td>
+                <td class="values" align="right">946</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4830</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ISUGR">DS2ISUGR - Total sugars (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ISUGR</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total sugars (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total sugars (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.15 to 36</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">554</td>
+                <td class="values" align="right">554</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5222</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IFIBE">DS2IFIBE - Dietary fiber (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IFIBE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Dietary fiber (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Dietary fiber (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.06 to 27</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">102</td>
+                <td class="values" align="right">102</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5674</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ITFAT">DS2ITFAT - Total fat (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ITFAT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total fat (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total fat (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.02 to 30</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">546</td>
+                <td class="values" align="right">546</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5230</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ISFAT">DS2ISFAT - Total saturated fatty acids (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ISFAT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total saturated fatty acids (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total saturated fatty acids (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.05 to 15</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">92</td>
+                <td class="values" align="right">92</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5684</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IMFAT">DS2IMFAT - Total monounsaturated fatty acids (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IMFAT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total monounsaturated fatty acids (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total monounsaturated fatty acids (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.17 to 6</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">54</td>
+                <td class="values" align="right">54</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5722</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IPFAT">DS2IPFAT - Total polyunsaturated fatty acids (gm)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IPFAT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total polyunsaturated fatty acids (gm)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total polyunsaturated fatty acids (gm)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.25 to 12</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">148</td>
+                <td class="values" align="right">148</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5628</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ICHOL">DS2ICHOL - Cholesterol (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ICHOL</dd>
+            <dt>SAS Label: </dt>
+            <dd>Cholesterol (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Cholesterol (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.5 to 250</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">289</td>
+                <td class="values" align="right">289</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5487</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ILYCO">DS2ILYCO - Lycopene (mcg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ILYCO</dd>
+            <dt>SAS Label: </dt>
+            <dd>Lycopene (mcg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Lycopene (mcg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">100 to 60000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">400</td>
+                <td class="values" align="right">400</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5376</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ILZ">DS2ILZ - Lutein + zeaxanthin (mcg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ILZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Lutein + zeaxanthin (mcg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Lutein + zeaxanthin (mcg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">50 to 48000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">475</td>
+                <td class="values" align="right">475</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5301</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IVB1">DS2IVB1 - Thiamin (Vitamin B1) (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IVB1</dd>
+            <dt>SAS Label: </dt>
+            <dd>Thiamin (Vitamin B1) (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Thiamin (Vitamin B1) (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.02 to 250</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1131</td>
+                <td class="values" align="right">1131</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4645</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IVB2">DS2IVB2 - Riboflavin (Vitamin B2) (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IVB2</dd>
+            <dt>SAS Label: </dt>
+            <dd>Riboflavin (Vitamin B2) (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Riboflavin (Vitamin B2) (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.06 to 400</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1118</td>
+                <td class="values" align="right">1118</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4658</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2INIAC">DS2INIAC - Niacin (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2INIAC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Niacin (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Niacin (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.3 to 1515</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1257</td>
+                <td class="values" align="right">1257</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4519</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IVB6">DS2IVB6 - Vitamin B6 (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IVB6</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin B6 (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vitamin B6 (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.03 to 200</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1581</td>
+                <td class="values" align="right">1581</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4195</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IFA">DS2IFA - Folic acid (mcg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IFA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Folic acid (mcg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Folic acid (mcg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">4 to 10000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1539</td>
+                <td class="values" align="right">1539</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4237</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IFDFE">DS2IFDFE - Folate, DFE (mcg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IFDFE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Folate, DFE (mcg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Folate, DFE (mcg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">7 to 17000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1539</td>
+                <td class="values" align="right">1539</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4237</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ICHL">DS2ICHL - Total choline (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ICHL</dd>
+            <dt>SAS Label: </dt>
+            <dd>Total choline (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Total choline (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.005 to 1000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">351</td>
+                <td class="values" align="right">351</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5425</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IVB12">DS2IVB12 - Vitamin B12 (mcg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IVB12</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin B12 (mcg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vitamin B12 (mcg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.5 to 20000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1772</td>
+                <td class="values" align="right">1772</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4004</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IVC">DS2IVC - Vitamin C (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IVC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin C (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vitamin C (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1.98 to 10000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1952</td>
+                <td class="values" align="right">1952</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3824</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IVK">DS2IVK - Vitamin K (mcg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IVK</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin K (mcg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vitamin K (mcg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">5 to 5000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">798</td>
+                <td class="values" align="right">798</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4978</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IVD">DS2IVD - Vitamin D (D2 + D3) (mcg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IVD</dd>
+            <dt>SAS Label: </dt>
+            <dd>Vitamin D (D2 + D3) (mcg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Vitamin D (D2 + D3) (mcg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.01 to 2500</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2249</td>
+                <td class="values" align="right">2249</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3527</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ICALC">DS2ICALC - Calcium (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ICALC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Calcium (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Calcium (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.3 to 3000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1567</td>
+                <td class="values" align="right">1567</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4209</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IPHOS">DS2IPHOS - Phosphorus (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IPHOS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Phosphorus (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Phosphorus (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">6 to 420</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">515</td>
+                <td class="values" align="right">515</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5261</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IMAGN">DS2IMAGN - Magnesium (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IMAGN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Magnesium (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Magnesium (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.1 to 2000</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1007</td>
+                <td class="values" align="right">1007</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4769</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IIRON">DS2IIRON - Iron (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IIRON</dd>
+            <dt>SAS Label: </dt>
+            <dd>Iron (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Iron (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.08 to 195</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">702</td>
+                <td class="values" align="right">702</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5074</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IZINC">DS2IZINC - Zinc (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IZINC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Zinc (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Zinc (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.02 to 120</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1395</td>
+                <td class="values" align="right">1395</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4381</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ICOPP">DS2ICOPP - Copper (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ICOPP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Copper (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Copper (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.004 to 8.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">921</td>
+                <td class="values" align="right">921</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4855</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ISODI">DS2ISODI - Sodium (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ISODI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Sodium (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Sodium (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 625</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">409</td>
+                <td class="values" align="right">409</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5367</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IPOTA">DS2IPOTA - Potassium (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IPOTA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Potassium (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Potassium (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.01 to 2340</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">684</td>
+                <td class="values" align="right">684</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5092</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ISELE">DS2ISELE - Selenium (mcg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ISELE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Selenium (mcg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Selenium (mcg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1 to 400</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">864</td>
+                <td class="values" align="right">864</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4912</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2ICAFF">DS2ICAFF - Caffeine (mg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2ICAFF</dd>
+            <dt>SAS Label: </dt>
+            <dd>Caffeine (mg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Caffeine (mg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">20 to 1200</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">15</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">5761</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="DS2IIODI">DS2IIODI - Iodine (mcg)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">DS2IIODI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Iodine (mcg)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Iodine (mcg)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 0 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">6.25 to 12500</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1093</td>
+                <td class="values" align="right">1093</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">4683</td>
+                <td class="values" align="right">5776</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="Appendices">
+        <div id="Appendix">
+          <h2 id="Appendix_1._Variables_in_the_Individual_Dietary_Supplements_Files_(DS1IDS_J_and_DS2IDS_J)_by_Position">Appendix 1. Variables in the Individual Dietary Supplements Files (DS1IDS_J and DS2IDS_J) by Position</h2><table bordercolor="#000000" border="1">
+    <caption align="left" valign="top"></caption>
+    <thead>
+        <tr>
+            <th>Day 1 Name</th>
+            <th>Day 2 Name</th>
+            <th>Variable Label</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>(DS1IDS_J)</strong></td>
+            <td><strong>(DS2IDS_J)</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>SEQN</td>
+            <td>SEQN</td>
+            <td>Respondent sequence number</td>
+        </tr>
+        <tr>
+            <td>WTDRD1</td>
+            <td>WTDRD1</td>
+            <td>Dietary day one sample weight</td>
+        </tr>
+        <tr>
+            <td>WTDR2D</td>
+            <td>WTDR2D</td>
+            <td>Dietary two-day sample weight</td>
+        </tr>
+        <tr>
+            <td>DR1DRSTZ</td>
+            <td>DR2DRSTZ</td>
+            <td>Dietary recall status</td>
+        </tr>
+        <tr>
+            <td>DR1EXMER</td>
+            <td>DR2EXMER</td>
+            <td>Interviewer ID code</td>
+        </tr>
+        <tr>
+            <td>DRDINT</td>
+            <td>DRDINT</td>
+            <td>Number of days of intake</td>
+        </tr>
+        <tr>
+            <td>DS1DAY</td>
+            <td>DS2DAY</td>
+            <td>Intake day of the week</td>
+        </tr>
+        <tr>
+            <td>DS1LOC</td>
+            <td>DS2LOC</td>
+            <td>Location supplement originally recorded</td>
+        </tr>
+        <tr>
+            <td>DR1LANG</td>
+            <td>DR2LANG</td>
+            <td>Language respondent used mostly</td>
+        </tr>
+        <tr>
+            <td>DSDPID</td>
+            <td>DSDPID</td>
+            <td>NCHS Supplement ID</td>
+        </tr>
+        <tr>
+            <td>DS1ANTA</td>
+            <td>DS2ANTA</td>
+            <td>Antacid containing calcium/magnesium</td>
+        </tr>
+        <tr>
+            <td>DS1MTCH&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>DS2MTCH&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>Match code/confidence code</td>
+        </tr>
+        <tr>
+            <td>DS1ACTSS</td>
+            <td>DS2ACTSS</td>
+            <td>Reported serving size/label serving size</td>
+        </tr>
+        <tr>
+            <td>DS1IKCAL</td>
+            <td>DS2IKCAL</td>
+            <td>Energy (kcal)</td>
+        </tr>
+        <tr>
+            <td>DS1IPROT</td>
+            <td>DS2IPROT</td>
+            <td>Protein (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1ICARB</td>
+            <td>DS2ICARB</td>
+            <td>Carbohydrate (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1ISUGR</td>
+            <td>DS2ISUGR</td>
+            <td>Total sugars (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1IFIBE</td>
+            <td>DS2IFIBE</td>
+            <td>Dietary fiber (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1ITFAT</td>
+            <td>DS2ITFAT</td>
+            <td>Total fat (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1ISFAT</td>
+            <td>DS2ISFAT</td>
+            <td>Total saturated fatty acids (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1IMFAT</td>
+            <td>DS2IMFAT</td>
+            <td>Total monounsaturated fatty acids (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1IPFAT</td>
+            <td>DS2IPFAT</td>
+            <td>Total polyunsaturated fatty acids (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1ICHOL</td>
+            <td>DS2ICHOL</td>
+            <td>Cholesterol (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1ILYCO</td>
+            <td>DS2ILYCO</td>
+            <td>Lycopene (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1ILZ</td>
+            <td>DS2ILZ</td>
+            <td>Lutein + zeaxanthin (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1IVB1</td>
+            <td>DS2IVB1</td>
+            <td>Thiamin (Vitamin B1) (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1IVB2</td>
+            <td>DS2IVB2</td>
+            <td>Riboflavin (Vitamin B2) (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1INIAC</td>
+            <td>DS2INIAC</td>
+            <td>Niacin (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1IVB6</td>
+            <td>DS2IVB6</td>
+            <td>Vitamin B6 (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1IFA</td>
+            <td>DS2IFA</td>
+            <td>Folic acid (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1IFDFE</td>
+            <td>DS2IFDFE</td>
+            <td>Folate, DFE (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1ICHL</td>
+            <td>DS2ICHL</td>
+            <td>Total choline (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1IVB12</td>
+            <td>DS2IVB12</td>
+            <td>Vitamin B12 (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1IVC</td>
+            <td>DS2IVC</td>
+            <td>Vitamin C (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1IVK</td>
+            <td>DS2IVK</td>
+            <td>Vitamin K (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1IVD</td>
+            <td>DS2IVD</td>
+            <td>Vitamin D (D2 + D3) (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1ICALC</td>
+            <td>DS2ICALC</td>
+            <td>Calcium (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1IPHOS</td>
+            <td>DS2IPHOS</td>
+            <td>Phosphorus (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1IMAGN</td>
+            <td>DS2IMAGN</td>
+            <td>Magnesium (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1IIRON</td>
+            <td>DS2IIRON</td>
+            <td>Iron (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1IZINC</td>
+            <td>DS2IZINC</td>
+            <td>Zinc (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1ICOPP</td>
+            <td>DS2ICOPP</td>
+            <td>Copper (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1ISODI</td>
+            <td>DS2ISODI</td>
+            <td>Sodium (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1IPOTA</td>
+            <td>DS2IPOTA</td>
+            <td>Potassium (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1ISELE</td>
+            <td>DS2ISELE</td>
+            <td>Selenium (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1ICAFF</td>
+            <td>DS2ICAFF</td>
+            <td>Caffeine (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1IIODI</td>
+            <td>DS2IIODI</td>
+            <td>Iodine (mcg)</td>
+        </tr>
+    </tbody>
+</table></div>
+        <div id="Appendix">
+          <h2 id="Appendix_2._List_of_Nutrients/Food_Components_(Unit)">Appendix 2. List of Nutrients/Food Components (Unit)</h2><p><strong>Energy and Macronutrients</strong> <br />
+Food energy (kcal) &euro; <br />
+Protein (g) &euro; <br />
+Carbohydrate (g) &euro; <br />
+Fat, total (g) &euro; <br />
+Alcohol (g) </p>
+<p>Sugars, total (g) &euro; <br />
+Dietary fiber, total (g) &euro; <br />
+Water (moisture) (g)* </p>
+<p>Saturated fatty acids, total (g) &euro; <br />
+Monounsaturated fatty acids, total (g) &euro; <br />
+Polyunsaturated fatty acids, total (g) &euro; <br />
+Cholesterol (mg) &euro; </p>
+<p>Individual fatty acids: <br />
+4:0 (g) <br />
+6:0 (g) <br />
+8:0 (g) <br />
+10:0 (g) <br />
+12:0 (g) <br />
+14:0 (g) <br />
+16:0 (g) <br />
+18:0 (g) <br />
+16:1 (g) <br />
+18:1 (g) <br />
+20:1 (g) <br />
+22:1 (g) <br />
+18:2 (g) <br />
+18:3 (g) <br />
+18:4 (g) <br />
+20:4 (g) <br />
+20:5 n-3 (g) <br />
+22:5 n-3 (g) <br />
+22:6 n-3 (g) </p>
+<p><strong>Vitamins, Minerals, and Other Components Vitamin A as retinol activity equivalents (&micro;g) &yen; <br />
+</strong>Retinol (&micro;g) &yen; <br />
+Carotenoids: <br />
+Carotene, alpha (&micro;g) &yen; <br />
+Carotene, beta (&micro;g) &yen; <br />
+Cryptoxanthin, beta (&micro;g) &yen; <br />
+Lycopene (&micro;g) &euro; <br />
+Lutein + zeaxanthin (&micro;g) &euro; <br />
+Vitamin E as alpha-tocopherol (mg) &yen; <br />
+Added vitamin E as alpha-tocopherol (mg) <br />
+Vitamin D (D2 + D3) (&micro;g) &euro; <br />
+Vitamin K as phylloquinone (&micro;g) &euro; <br />
+Vitamin C (mg) &euro; <br />
+Thiamin (mg) &euro; <br />
+Riboflavin (mg) &euro; <br />
+Niacin (mg) &euro; <br />
+Vitamin B-6 (mg) &euro; <br />
+Folate, total (&micro;g) <br />
+Folate as dietary folate equivalents (&micro;g) &euro;<br />
+Folic acid (&micro;g) &euro; <br />
+Food folate (&micro;g) <br />
+Choline, total (mg) &euro; <br />
+Vitamin B-12 (&micro;g) &euro; <br />
+Added vitamin B-12 (&micro;g) </p>
+<p>Calcium (mg) &euro; <br />
+Iron (mg) &euro; <br />
+Magnesium (mg) &euro; <br />
+Phosphorus (mg) &euro; <br />
+Potassium (mg) &euro; <br />
+Sodium (mg) &euro; <br />
+Zinc (mg) &euro; <br />
+Copper (mg) &euro; <br />
+Selenium (&micro;g) &euro; <br />
+Caffeine (mg) &euro; <br />
+Theobromine (mg)<br />
+Iodine (mcg)&dagger;<br />
+<br />
+* Value reflects moisture present in all foods, beverages, and water consumed as a beverage (variables DR1IMOIS, DR2IMOIS, DR1TMOIS, DR2TMOIS) <br />
+&euro; Indicates nutrients in which data is available for dietary supplements and non-prescription antacids containing calcium and/or magnesium <br />
+&yen; Indicates that data will be available in a later release cycle  <br />
+&dagger; Only available in the dietary supplement files</p></div>
+        <div id="Appendix">
+          <h2 id="Appendix_3._Variables_in_the_Total_Dietary_Supplements_Files_(DS1TOT_J_and_DS2TOT_J)_by_Position">Appendix 3. Variables in the Total Dietary Supplements Files (DS1TOT_J and DS2TOT_J) by Position</h2><table bordercolor="#000000" border="1">
+    <caption align="left" valign="top"></caption>
+    <thead>
+        <tr>
+            <th><strong>Day 1 Name</strong></th>
+            <th><strong>Day 2 Name</strong></th>
+            <th><strong>Variable Label</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>(DS1TOT_ J)</strong></td>
+            <td><strong>(DS2TOT_J)</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>SEQN</td>
+            <td>SEQN</td>
+            <td>Respondent sequence number</td>
+        </tr>
+        <tr>
+            <td>WTDRD1</td>
+            <td>WTDRD1</td>
+            <td>Dietary day one sample weight</td>
+        </tr>
+        <tr>
+            <td>WTDR2D</td>
+            <td>WTDR2D</td>
+            <td>Dietary two-day sample weight</td>
+        </tr>
+        <tr>
+            <td>DR1DRSTZ</td>
+            <td>DR2DRSTZ</td>
+            <td>Dietary recall status</td>
+        </tr>
+        <tr>
+            <td>DR1EXMER</td>
+            <td>DR2EXMER</td>
+            <td>Interviewer ID code</td>
+        </tr>
+        <tr>
+            <td>DRDINT</td>
+            <td>DRDINT</td>
+            <td>Number of days of intake</td>
+        </tr>
+        <tr>
+            <td>DS1DAY</td>
+            <td>DS2DAY</td>
+            <td>Intake day of the week</td>
+        </tr>
+        <tr>
+            <td>DR1LANG</td>
+            <td>DR2LANG</td>
+            <td>Language respondent used mostly</td>
+        </tr>
+        <tr>
+            <td>DR1MNRSP</td>
+            <td>DR2MNRSP</td>
+            <td>Main respondent for this interview</td>
+        </tr>
+        <tr>
+            <td>DR1HELPD</td>
+            <td>DR2HELPD</td>
+            <td>Helped in responding for this interview</td>
+        </tr>
+        <tr>
+            <td>DS1DS</td>
+            <td>DS2DS</td>
+            <td>Any Dietary Supplements taken in the past 24 hour?</td>
+        </tr>
+        <tr>
+            <td>DS1DSCNT</td>
+            <td>DS2DSCNT</td>
+            <td>Number of dietary supplements reported</td>
+        </tr>
+        <tr>
+            <td>DS1AN</td>
+            <td>DS2AN</td>
+            <td>Any Antacids Taken?</td>
+        </tr>
+        <tr>
+            <td>DS1ANCNT</td>
+            <td>DS2ANCNT</td>
+            <td>Number of Antacids Reported</td>
+        </tr>
+        <tr>
+            <td>DS1TKCAL</td>
+            <td>DS2TKCAL</td>
+            <td>Energy (kcal)</td>
+        </tr>
+        <tr>
+            <td>DS1TPROT</td>
+            <td>DS2TPROT</td>
+            <td>Protein (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1TCARB</td>
+            <td>DS2TCARB</td>
+            <td>Carbohydrate (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1TSUGR</td>
+            <td>DS2TSUGR</td>
+            <td>Total sugars (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1TFIBE</td>
+            <td>DS2TFIBE</td>
+            <td>Dietary fiber (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1TTFAT</td>
+            <td>DS2TTFAT</td>
+            <td>Total fat (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1TSFAT</td>
+            <td>DS2TSFAT</td>
+            <td>Total saturated fatty acids (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1TMFAT</td>
+            <td>DS2TMFAT</td>
+            <td>Total monounsaturated fatty acids (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1TPFAT</td>
+            <td>DS2TPFAT</td>
+            <td>Total polyunsaturated fatty acids (gm)</td>
+        </tr>
+        <tr>
+            <td>DS1TCHOL</td>
+            <td>DS2TCHOL</td>
+            <td>Cholesterol (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TLYCO</td>
+            <td>DS2TLYCO</td>
+            <td>Lycopene (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1TLZ</td>
+            <td>DS2TLZ</td>
+            <td>Lutein + zeaxanthin (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1TVB1</td>
+            <td>DS2TVB1</td>
+            <td>Thiamin (Vitamin B1) (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TVB2</td>
+            <td>DS2TVB2</td>
+            <td>Riboflavin (Vitamin B2) (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TNIAC</td>
+            <td>DS2TNIAC</td>
+            <td>Niacin (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TVB6</td>
+            <td>DS2TVB6</td>
+            <td>Vitamin B6 (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TFA</td>
+            <td>DS2TFA</td>
+            <td>Folic acid (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1TFDFE</td>
+            <td>DS2TFDFE</td>
+            <td>Folate, DFE (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1TVB12&nbsp;</td>
+            <td>DS2TVB12</td>
+            <td>Vitamin B12 (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1TCHL</td>
+            <td>DS2TCHL</td>
+            <td>Total choline (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TVC</td>
+            <td>DS2TVC</td>
+            <td>Vitamin C (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TVK</td>
+            <td>DS2TVK</td>
+            <td>Vitamin K (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1TVD</td>
+            <td>DS2TVD</td>
+            <td>Vitamin D (D2 + D3) (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1TCALC</td>
+            <td>DS2TCALC</td>
+            <td>Calcium (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TPHOS</td>
+            <td>DS2TPHOS</td>
+            <td>Phosphorus (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TMAGN</td>
+            <td>DS2TMAGN</td>
+            <td>Magnesium (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TIRON</td>
+            <td>DS2TIRON</td>
+            <td>Iron (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TZINC</td>
+            <td>DS2TZINC</td>
+            <td>Zinc (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TCOPP</td>
+            <td>DS2TCOPP</td>
+            <td>Copper (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TSODI</td>
+            <td>DS2TSODI</td>
+            <td>Sodium (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TPOTA</td>
+            <td>DS2TPOTA</td>
+            <td>Potassium (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TSELE</td>
+            <td>DS2TSELE</td>
+            <td>Selenium (mcg)</td>
+        </tr>
+        <tr>
+            <td>DS1TCAFF</td>
+            <td>DS2TCAFF</td>
+            <td>Caffeine (mg)</td>
+        </tr>
+        <tr>
+            <td>DS1TIODI</td>
+            <td>DS2TIODI</td>
+            <td>Iodine (mcg)</td>
+        </tr>
+    </tbody>
+</table></div>
+        <div id="Appendix">
+          <h2 id="Appendix_4:_Dietary_Supplement_Handcard_">Appendix 4: Dietary Supplement Handcard </h2><p>
+</p>
+<table bordercolor="#000000" border="1">
+    <caption align="left" valign="top"></caption>
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;"><strong>VITAMINS<br />
+            MINERALS</strong></td>
+            <td>Calcium, Vitamin C, Calcium and Iron, Vitamin E, Magnesium, Zinc, Calcium plus Vitamin D</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><strong>MULTI-VITAMIN--MULTI-MINERALS</strong></td>
+            <td>Flintstones, One a Day, Prenatals, Tri-Vi-Flor, B-Complex, Centrum</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><strong>HERBALS AND BOTANICLAS</strong></td>
+            <td>Echinacea, Garlic, Saw Palmetto, Ginkgo, Ginseng</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><strong>FIBER</strong></td>
+            <td>Metamucil, Fibercon, Benefiber</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><strong>AMINO ACIDS</strong></td>
+            <td>Lysine, Methionine, Tryptophan</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><strong>OTHERS</strong></td>
+            <td>Fish Oil, Chondrotin, Glucosamine</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p></div>
+        <div id="Appendix">
+          <h2 id="Appendix_5:_Created_Default_Supplements_and_Antacids">Appendix 5: Created Default Supplements and Antacids</h2><p>
+</p>
+<table bordercolor="#000000" border="1">
+    <caption align="left" valign="top"></caption>
+    <thead>
+        <tr>
+            <th>Default Supplement</th>
+            <th>Assigned Strength or Supplement</th>
+            <th>Selection of Assigned Strength or Supplement Based On:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>5-HTP (5-Hydroxytryptophan)</td>
+            <td>100 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>African Mango</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Aloe Vera Gel</td>
+            <td>25 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Aloe Vera Liquid</td>
+            <td>15 ml</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Alpha Lipoic Acid</td>
+            <td>200 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Amino Acid</td>
+            <td>ON Superior Amino 2222 Tabs</td>
+            <td>Commonly Available  Product</td>
+        </tr>
+        <tr>
+            <td>Amino Acid Liquid</td>
+            <td>Twinlab Amino Fuel Anabolic Liquid</td>
+            <td>Commonly Available  Product</td>
+        </tr>
+        <tr>
+            <td>Amino Acid Powder</td>
+            <td>GNC Pro Performance Ultra Amino Complex 10000 mg Amino Acid Complex</td>
+            <td>Commonly Available  Product</td>
+        </tr>
+        <tr>
+            <td>Apple Cider Vinegar Tablets</td>
+            <td>Nature's Bounty Apple Cider Vinegar 480 mg Per Serving</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Arginine Powder</td>
+            <td>3000 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Artichoke</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Ashwagandha</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Astaxanthin</td>
+            <td>4 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Balanced B 100 B-Complex</td>
+            <td>Perrigo Balanced B 100 B-Complex</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Bamboo Extract</td>
+            <td>300 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Barley Grass Capsules</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>B-Complex With Vitamin C</td>
+            <td>Nature Made B-Complex with Vitamin C</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Beet</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Biotin</td>
+            <td>1000 mcg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Black Seed Oil (Black Cumin Seed Oil)</td>
+            <td>Amazing Herbs Black Seed 100% Pure Cold-Pressed Black Cumin Seed Oil</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Black Seed Oil Softgels (Black Cumin Seed Oil)</td>
+            <td>Amazing Herbs Black Seed 100% Pure Cold-Pressed Black Cumin Seed Oil 500 Mg</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Blue Green Algae</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Boron</td>
+            <td>3 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Boswellia</td>
+            <td>400 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Calcium</td>
+            <td>600 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Calcium &amp; Magnesium</td>
+            <td>Calcium 500 mg, Magnesium 250 mg</td>
+            <td>Most Commonly Reported Strengths</td>
+        </tr>
+        <tr>
+            <td>Calcium + Magnesium Liquid</td>
+            <td>Calcium 1000 mg, Magnesium 500 mg</td>
+            <td>Commonly Available Strengths</td>
+        </tr>
+        <tr>
+            <td>Calcium 1200 mg With Vitamin D</td>
+            <td>Calcium 1200 mg, Vitamin D 1600 IU</td>
+            <td>Most Commonly Reported Strengths</td>
+        </tr>
+        <tr>
+            <td>Calcium 600 mg With Vitamin D</td>
+            <td>Calcium 600 mg, Vitamin D 800 IU</td>
+            <td>Most Commonly Reported Strengths</td>
+        </tr>
+        <tr>
+            <td>Calcium Magnesium &amp; Zinc</td>
+            <td>Calcium 333 mg, Magnesium 133 mg &amp; Zinc 5 mg</td>
+            <td>Commonly Available Strengths</td>
+        </tr>
+        <tr>
+            <td>Calcium With Vitamin D</td>
+            <td>Calcium 600 mg, Vitamin D 800 IU</td>
+            <td>Most Commonly Reported Strengths</td>
+        </tr>
+        <tr>
+            <td>Cat&rsquo;s Claw (Una De Gato)</td>
+            <td>400 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Charcoal</td>
+            <td>260 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Cherry Extract</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Chewable Multivitamin With Fluoride</td>
+            <td>Multi-Vitamin With Fluoride Chewable Tablets 0.25 mg Multivitamin And Fluoride Qualitest</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Children&rsquo;s Multivitamin/Multimineral</td>
+            <td>Flintstones Complete Children&rsquo;s Multivitamin</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Children's Multivitamins Plus Iron</td>
+            <td>Flintstones With Iron Children's Multivitamin</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Children's Probiotic</td>
+            <td>Culturelle Kids Chewables Daily Probiotic Formula</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Children's Probiotic Packet</td>
+            <td>Culturelle Kids Packets Daily Probiotic Formula 5 Billion Active Cultures</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Chromium</td>
+            <td>200 mcg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Cinnamon</td>
+            <td>500 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>CLA</td>
+            <td>1000 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Cod Liver Oil Softgels</td>
+            <td>Finest Nutrition Cod Liver Oil 415 mg</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Coenzyme Q-10</td>
+            <td>100 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Collagen</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Collagen Powder</td>
+            <td>Neocell Super Collagen 6,000 Mg Collagen Type 1&amp;3 Powder</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Colloidal Silver</td>
+            <td>10 ppm</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Copper</td>
+            <td>2 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Cranberry</td>
+            <td>300 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Cranberry Plus Vitamin C</td>
+            <td>Nature's Bounty Cranberry Fruit 4200 Mg Equivalent Per Softgel With Vitamin C</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Creatine Monohydrate</td>
+            <td>5000 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Dandelion Root</td>
+            <td>520 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>DHA</td>
+            <td>200 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Echinacea</td>
+            <td>380 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Echinacea &amp; Goldenseal</td>
+            <td>250 mg &amp; 250 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Elderberry</td>
+            <td>575 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Evening Primrose Oil</td>
+            <td>1000 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Eye Multi-Vitamin And Mineral</td>
+            <td>Bausch + Lomb Preservision Eye Vitamin &amp; Mineral AREDS Soft Gels</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Fenugreek</td>
+            <td>610 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Fiber Capsules</td>
+            <td>Metamucil 100% Natural Psyllium Husk Daily Fiber 3 In 1 MultiHealth Fiber! Psyllium Fiber Capsules</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Fiber Powder</td>
+            <td>Metamucil 100% Natural Psyllium Husk Daily Fiber 4 In 1 MultiHealth Fiber! Made With Real Sugar Original Coarse Fiber Powder</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Fish Oil</td>
+            <td>1000 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Fish Oil &amp; Vitamin D</td>
+            <td>Nature Made Fish Oil 1200 mg + Vitamin D 1000 IU</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Fish, Flax And Borage Oils</td>
+            <td>Puritan's Pride Maximum Strength Triple Omega 3-6-9 Fish, Flax &amp; Borage Oils</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Flax Seed Oil</td>
+            <td>1000 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Flaxseed and Fish Oil</td>
+            <td>Twinlab Flax/Fish Combo Oil</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Fluoride Tabs</td>
+            <td>0.5 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Folic Acid</td>
+            <td>800 mcg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Folic Acid, Vitamin B-6, And Vitamin B-12</td>
+            <td>Foltabs 800</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>GABA</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Garcinia Cambogia</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Garlic</td>
+            <td>1000 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Garlic &amp; Cayenne</td>
+            <td>Nature's Way Cayenne Garlic 40,000 SHU/g</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Garlic and Parsley</td>
+            <td>500 mg &amp; 100 mg</td>
+            <td>Most Commonly Reported Strengths</td>
+        </tr>
+        <tr>
+            <td>Ginkgo Biloba</td>
+            <td>60 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Ginseng</td>
+            <td>250 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Glucosamine</td>
+            <td>1000 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Glucosamine &amp; MSM</td>
+            <td>750 mg &amp; 750 mg</td>
+            <td>Most Commonly Reported Strengths</td>
+        </tr>
+        <tr>
+            <td>Glucosamine Chondroitin</td>
+            <td>750 mg &amp; 600 mg</td>
+            <td>Most Commonly Reported Strengths</td>
+        </tr>
+        <tr>
+            <td>Green Tea</td>
+            <td>500 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Green Tea Extract Liquid</td>
+            <td>The Vitamin Shoppe Green Tea Extract Organic Alcohol Free 1000 mg</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Gummy Adult Biotin</td>
+            <td>Vitafusion Extra Strength Biotin 5000 mcg Gummies High Potency Biotin</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Gummy Adult Calcium + Vitamin D</td>
+            <td>Vitafusion Calcium 500 mg Adult Vitamins With Vitamin D3</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Gummy Adult Fiber</td>
+            <td>Vitafusion Fiber Well Sugar Free Gummies</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Gummy Adult Hair, Skin &amp; Nails</td>
+            <td>Nature's Bounty Optimal Solutions Hair, Skin &amp; Nails Gummies With Biotin 2500 mcg Per Serving</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Gummy Adult Multivitamin / Multimineral</td>
+            <td>Vitafusion Multivites Gummy Vitamins Complete Multivitamin Essential Daily Formula</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Gummy Adult Prenatal Multivitamin</td>
+            <td>Vitafusion Prenatal Adult Vitamins DHA, Folic Acid &amp; Multivitamin Gummy</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Gummy Adult Probiotic</td>
+            <td>Schiff Digestive Advantage Probiotic Gummies Powered By Ganeden BC30 Probiotic</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Gummy Adult Vitamin C</td>
+            <td>Vitafusion Power C Gummy Vitamins High Potency Vitamin C 240 mg Vit C Per Serving</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Gummy Adult Women's Multivitamin / Multimineral</td>
+            <td>Vitafusion Women's Adult Vitamins Complete Multivitamin</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Gummy Bear Fiber</td>
+            <td>L'il Critters Fiber Powered By Vitafusion</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Gummy Bear Multivitamin</td>
+            <td>L'il Critters Gummy Vites Complete Multivitamin Improved Formula!</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Gummy Bear Probiotic</td>
+            <td>Schiff Digestive Advantage Kids Daily Probiotic Gummies</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Hair, Skin And Nails</td>
+            <td>Nature's Bounty Optimal Solutions Hair, Skin &amp; Nails With Biotin 3000 mcg Per Serving</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Holy Basil</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Hops Extract Liquid</td>
+            <td>970 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Iron</td>
+            <td>65 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Krill Oil</td>
+            <td>Schiff MegaRed Superior Omega-3 Krill Oil 350 mg</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Lactobacillus Acidophilus</td>
+            <td>0.5 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>L-Arginine</td>
+            <td>1000 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>L-Carnitine</td>
+            <td>500 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Lemon Balm</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Liquid Calcium</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Liquid Calcium &amp; Vitamin D</td>
+            <td>1000 mg &amp; 400 IU</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Liquid Carnitine</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Liquid Coenzyme Q-10</td>
+            <td>100 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Liquid Fish Oil</td>
+            <td>Carlson Norwegian The Very Finest Fish Oil 1,600 mg Omega-3s</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Liquid Flaxseed Oil</td>
+            <td>Barlean's Fresh Flax Oil Organic Pure &amp; Unrefined Fresh Cold Pressed</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Liquid Glucosamine</td>
+            <td>1000 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Liquid Iron</td>
+            <td>44 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Liquid Vitamin A</td>
+            <td>5000 IU</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Liquid Vitamin B-12</td>
+            <td>1000 mcg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Liquid Vitamin B-6</td>
+            <td>10 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Liquid Vitamin C</td>
+            <td>1000 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>L-Methylfolate Calcium</td>
+            <td>7.5 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>L-Taurine</td>
+            <td>1000 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>L-Tyrosine</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Lutein</td>
+            <td>20 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Lysine</td>
+            <td>500 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Maca</td>
+            <td>500 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Maca Root</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Magnesium</td>
+            <td>400 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Magnesium &amp; Vitamin B-6</td>
+            <td>400 mg &amp; 25 mg</td>
+            <td>Commonly Available Strengths</td>
+        </tr>
+        <tr>
+            <td>Magnesium Liquid</td>
+            <td>250 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Manganese</td>
+            <td>10 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>MCT Oil</td>
+            <td>Viva Naturals MCT Oil</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Melatonin</td>
+            <td>1 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Men&rsquo;s 50+ Multivitamin / Multimineral</td>
+            <td>One A Day Men's 50+ Healthy Advantage Multivitamin / Multimineral Bayer</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Men&rsquo;s Multivitamin/Multimineral</td>
+            <td>One A Day Men's Health Formula Multivitamin / Multimineral Bayer</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Milk Thistle</td>
+            <td>175 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Motherwort</td>
+            <td>400 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>MSM</td>
+            <td>1000 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Multivitamin / Multimineral</td>
+            <td>Centrum Adults Multivitamin / Multimineral</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Multivitamin And Fluoride Drops</td>
+            <td>SCI Sancilio &amp; Company, Inc. Multivitamin Drops With Fluoride 0.25 mg/ml</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>N-Acetyl Cysteine (NAC)</td>
+            <td>600 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Nettle</td>
+            <td>435 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Niacin (Vitamin B-3)</td>
+            <td>500 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Oil of Oregano Liquid</td>
+            <td>Vitamin World Oil Of Oregano Traditional Herb Concentrated Extract</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Omega 3</td>
+            <td>Carlson Super Omega-3 Gems Fish Oil Concentrate 500 mg EPA &amp; DHA 1000 mg</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Oregano</td>
+            <td>450 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Pantothenic Acid (Vitamin B-5)</td>
+            <td>250 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Papaya Enzyme</td>
+            <td>Nature's Bounty Original Chewable Papaya Enzyme</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Pediatric Iron Drops</td>
+            <td>Enfamil Fer-In-Sol Essential Iron For Infants &amp; Toddlers Iron Drops</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Pediatric Vitamin D Drops</td>
+            <td>Enfamil D-Vi-Sol For Breastfed Infants Liquid Vitamin D</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Phosphorus</td>
+            <td>250 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Polyvitamin And Fluoride Chewable Tablets</td>
+            <td>Enfamil Poly-Vi-Flor 0.25 mg Multivitamin And Fluoride Chewable Tablets</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Potassium</td>
+            <td>99 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Prenatal Vitamin &amp; DHA</td>
+            <td>Prenate DHA RX Prenatal Vitamin &amp; DHA</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Prenatal Vitamins</td>
+            <td>Spring Valley Prenatal Multivitamin / Multimineral With Folic Acid For Use Before, During &amp; After Pregnancy</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Probiotic</td>
+            <td>Shaklee Bifidus &amp; Acidophilus Optiflora Probiotic Complex</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Protein Powder</td>
+            <td>Body Fortress Super Advanced Whey Protein</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Psyllium Fiber</td>
+            <td>Metamucil 100% Natural Psyllium Husk Daily Fiber 4 In 1 MultiHealth Fiber! Made With Real Sugar Original Coarse Fiber Powder</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Quercetin</td>
+            <td>500 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Raspberry Ketone</td>
+            <td>100 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Red Yeast Rice</td>
+            <td>600 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Resveratrol</td>
+            <td>100 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Saw Palmetto</td>
+            <td>450 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Selenium</td>
+            <td>100 mcg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Senior Multivitamin / Multimineral</td>
+            <td>Centrum Silver Adults 50+ Multivitamin / Multimineral</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Shark Cartilage</td>
+            <td>750 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Sodium Fluoride Drops</td>
+            <td>0.5 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>St. John's Wort</td>
+            <td>300 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Super B-Complex</td>
+            <td>Nature Made Super B-Complex Key B Vitamins + Vitamin C</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Tribulus Terrestris Powder</td>
+            <td>1000 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Tri-Vitamin Drops</td>
+            <td>Enfamil Tri-Vi-Sol A Multivitamin For Breastfed Infants Liquid Vitamins A, C &amp; D</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Tri-Vitamin With Fluoride Drops</td>
+            <td>Enfamil Tri-Vi-Flor 0.25 Mg Vitamins A, D, C, And Fluoride Drops</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Tryptophan</td>
+            <td>500 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Turmeric</td>
+            <td>500 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Valerian Root</td>
+            <td>500 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Vinpocetine</td>
+            <td>10 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Vitamin A</td>
+            <td>8000 IU</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Vitamin B-1 (Thiamin)</td>
+            <td>100 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Vitamin B-12</td>
+            <td>1000 mcg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Vitamin B-12 (Cobalamin) Spray</td>
+            <td>500 mcg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Vitamin B-2 (Riboflavin)</td>
+            <td>100 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Vitamin B-6</td>
+            <td>100 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Vitamin B-Complex</td>
+            <td>GNC B-Complex 50 mg</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Vitamin C</td>
+            <td>500 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Vitamin C Packet</td>
+            <td>Emergen-C 1,000 mg Vitamin C Fizzy Drink Mix</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Vitamin C Powder</td>
+            <td>1000 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Vitamin D</td>
+            <td>2000 IU</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Vitamin D Liquid</td>
+            <td>1000 IU</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Vitamin E</td>
+            <td>400 IU</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Vitamin K</td>
+            <td>100 mcg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+        <tr>
+            <td>Vitamins C &amp; E</td>
+            <td>500 mg &amp; 400 IU</td>
+            <td>Commonly Available Strengths</td>
+        </tr>
+        <tr>
+            <td>Vitamins D &amp; K</td>
+            <td>1000 IU &amp; 120 mcg</td>
+            <td>Commonly Available Strengths</td>
+        </tr>
+        <tr>
+            <td>Whey Protein</td>
+            <td>Body Fortress Super Advanced Whey Protein</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Women's 50+ Multivitamin / Multimineral</td>
+            <td>One A Day Women's 50+ Healthy Advantage Multivitamin / Multimineral Bayer</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Women's Multivitamin / Multimineral</td>
+            <td>One A Day Women's Formula Women's Multivitamin / Multimineral Bayer</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Yarrow Liquid</td>
+            <td>970 mg</td>
+            <td>Commonly Available Strength</td>
+        </tr>
+        <tr>
+            <td>Zinc</td>
+            <td>50 mg</td>
+            <td>Most Commonly Reported Strength</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+&nbsp;
+<p>&nbsp;</p>
+&nbsp;
+<p>&nbsp;</p>
+&nbsp;
+<p>&nbsp;</p>
+<p>
+</p>
+<table bordercolor="#000000" border="1">
+    <caption align="left" valign="top"></caption>
+    <thead>
+        <tr>
+            <th>Default Antacid</th>
+            <th>Antacid Assigned</th>
+            <th>Selection of Assigned Antacid Based On:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Default Antacid Liquid</td>
+            <td>Maalox Advanced Regular Strength Antacid Liquid</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Default Antacid Plus Tablets</td>
+            <td>Rolaids Advanced Antacid Plus Anti-Gas Multi-Symptom</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Default Antacid Soft Chews</td>
+            <td>Tums Antacid Chewy Delights Ultra Strength Calcium Carbonate</td>
+            <td>Commonly Available Product</td>
+        </tr>
+        <tr>
+            <td>Default Calcium Antacid</td>
+            <td>Tums Calcium Carbonate Antacid Regular Strength 500 GSK</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Default Extra Strength Antacid Tablets</td>
+            <td>Tums Calcium Carbonate Antacid Extra Strength 750</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+        <tr>
+            <td>Default Ultra Strength Antacid Tablets</td>
+            <td>Tums Calcium Carbonate Antacid Ultra Strength 1000</td>
+            <td>Most Commonly Reported Product</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+&nbsp;
+<p>&nbsp;</p>
+&nbsp;
+<p>&nbsp;</p></div>
+      </div>
+    </div>
+  </body>
+</html>
