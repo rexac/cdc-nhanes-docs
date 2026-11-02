@@ -1,0 +1,3730 @@
+﻿<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>SSMGMS_C</title>
+    <meta name="title" content="NHANES 2003-2004: Monoclonal Gammopathy of Undetermined Significance Mass Spectrometry - Serum (Surplus) Data Documentation, Codebook, and Frequencies" />
+    <link rel="stylesheet" href="https://wwwn.cdc.gov/nchs/nhanes/css/documentation.css" onerror="this.onerror=null; this.href='../css/documentation.css';" />
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Description_of_Laboratory_Methodology">Description of Laboratory Methodology</a>
+          </li>
+          <li>
+            <a href="#Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#References">References</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#SSMSDIAG">SSMSDIAG - Monoclonal gammopathy classification</a>
+              </li>
+              <li>
+                <a href="#SSMSMAX">SSMSMAX - Max concentration of any peak</a>
+              </li>
+              <li>
+                <a href="#SSMSPN">SSMSPN - Number of detected peaks</a>
+              </li>
+              <li>
+                <a href="#SSMSP1T">SSMSP1T - Peak #1 isotype</a>
+              </li>
+              <li>
+                <a href="#SSMSP1MZ">SSMSP1MZ - Peak #1 mass-to-charge ratio</a>
+              </li>
+              <li>
+                <a href="#SSMSP1C">SSMSP1C - Peak #1 concentration (g/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSP1LC">SSMSP1LC - Peak #1 comment code</a>
+              </li>
+              <li>
+                <a href="#SSMSP2T">SSMSP2T - Peak #2 isotype</a>
+              </li>
+              <li>
+                <a href="#SSMSP2MZ">SSMSP2MZ - Peak #2 mass-to-charge ratio</a>
+              </li>
+              <li>
+                <a href="#SSMSP2C">SSMSP2C - Peak #2 concentration (g/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSP2LC">SSMSP2LC - Peak #2 comment code</a>
+              </li>
+              <li>
+                <a href="#SSMSP3T">SSMSP3T - Peak #3 isotype</a>
+              </li>
+              <li>
+                <a href="#SSMSP3MZ">SSMSP3MZ - Peak #3 mass-to-charge ratio</a>
+              </li>
+              <li>
+                <a href="#SSMSP3C">SSMSP3C - Peak #3 concentration (g/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSP3LC">SSMSP3LC - Peak #3 comment code</a>
+              </li>
+              <li>
+                <a href="#SSMSP4T">SSMSP4T - Peak #4 isotype</a>
+              </li>
+              <li>
+                <a href="#SSMSP4MZ">SSMSP4MZ - Peak #4 mass-to-charge ratio</a>
+              </li>
+              <li>
+                <a href="#SSMSP4C">SSMSP4C - Peak #4 concentration (g/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSP4LC">SSMSP4LC - Peak #4 comment code</a>
+              </li>
+              <li>
+                <a href="#SSMSP5T">SSMSP5T - Peak #5 isotype</a>
+              </li>
+              <li>
+                <a href="#SSMSP5MZ">SSMSP5MZ - Peak #5 mass-to-charge ratio</a>
+              </li>
+              <li>
+                <a href="#SSMSP5C">SSMSP5C - Peak #5 concentration (g/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSP5LC">SSMSP5LC - Peak #5 comment code</a>
+              </li>
+              <li>
+                <a href="#SSMSP6T">SSMSP6T - Peak #6 isotype</a>
+              </li>
+              <li>
+                <a href="#SSMSP6MZ">SSMSP6MZ - Peak #6 mass-to-charge ratio</a>
+              </li>
+              <li>
+                <a href="#SSMSP6C">SSMSP6C - Peak #6 concentration (g/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSP6LC">SSMSP6LC - Peak #6 comment code</a>
+              </li>
+              <li>
+                <a href="#SSMSP7T">SSMSP7T - Peak #7 isotype</a>
+              </li>
+              <li>
+                <a href="#SSMSP7MZ">SSMSP7MZ - Peak #7 mass-to-charge ratio</a>
+              </li>
+              <li>
+                <a href="#SSMSP7C">SSMSP7C - Peak #7 concentration (g/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSP7LC">SSMSP7LC - Peak #7 comment code</a>
+              </li>
+              <li>
+                <a href="#SSMSP8T">SSMSP8T - Peak #8 isotype</a>
+              </li>
+              <li>
+                <a href="#SSMSP8MZ">SSMSP8MZ - Peak #8 mass-to-charge ratio</a>
+              </li>
+              <li>
+                <a href="#SSMSP8C">SSMSP8C - Peak #8 concentration (g/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSP8LC">SSMSP8LC - Peak #8 comment code</a>
+              </li>
+              <li>
+                <a href="#SSMSP9T">SSMSP9T - Peak #9 isotype</a>
+              </li>
+              <li>
+                <a href="#SSMSP9MZ">SSMSP9MZ - Peak #9 mass-to-charge ratio</a>
+              </li>
+              <li>
+                <a href="#SSMSP9C">SSMSP9C - Peak #9 concentration (g/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSP9LC">SSMSP9LC - Peak #9 comment code</a>
+              </li>
+              <li>
+                <a href="#SSMSPAT">SSMSPAT - Peak #10 isotype</a>
+              </li>
+              <li>
+                <a href="#SSMSPAMZ">SSMSPAMZ - Peak #10 mass-to-charge ratio</a>
+              </li>
+              <li>
+                <a href="#SSMSPAC">SSMSPAC - Peak #10 concentration (g/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSPALC">SSMSPALC - Peak #10 comment code</a>
+              </li>
+              <li>
+                <a href="#SSMSPBT">SSMSPBT - Peak #11 isotype</a>
+              </li>
+              <li>
+                <a href="#SSMSPBMZ">SSMSPBMZ - Peak #11 mass-to-charge ratio</a>
+              </li>
+              <li>
+                <a href="#SSMSPBC">SSMSPBC - Peak #11 concentration (g/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSPBLC">SSMSPBLC - Peak #11 comment code</a>
+              </li>
+              <li>
+                <a href="#SSMSIGA">SSMSIGA - Serum immunoglobulin A (g/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSIGG">SSMSIGG - Serum immunoglobulin G (g/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSIGM">SSMSIGM - Serum immunoglobulin M (g/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSK">SSMSK - Serum free kappa light chain (mg/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSL">SSMSL - Serum free lambda light chain (mg/L)</a>
+              </li>
+              <li>
+                <a href="#SSMSFLC">SSMSFLC - Free light chain ratio</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2003-2004 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Monoclonal Gammopathy of Undetermined Significance Mass Spectrometry - Serum (Surplus) (SSMGMS_C)</h3>
+        <h4> Data File: SSMGMS_C.xpt</h4>
+        <h5 class="left">First Published: October 2026</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>Monoclonal gammopathy of
+undetermined significance (MGUS) is a precursor condition to multiple myeloma
+and related plasma cell disorders. Prior research using samples from the
+National Health and Nutrition Examination Survey (NHANES) has demonstrated the
+prevalence of MGUS in the U.S. population and its variation by age, race, and
+sex (Landgren, et. al., 2014; Landgren, et. al., 2017).</p>
+<p>Mass spectrometry-based assays
+have been proposed and applied as high-sensitivity methods for the detection of
+monoclonal gammopathies (El-Khoury, et. al., 2022). Serum samples were analyzed
+using a high-resolution mass spectrometry platform capable of detecting
+multiple immunoglobulin protein peaks within a single sample.</p><h2 id="Eligible_Sample">Eligible Sample</h2><p>Examined participants aged 40 years and over were eligible.</p><h2 id="Description_of_Laboratory_Methodology">Description of Laboratory Methodology</h2><p>M-protein
+(monoclonal protein) studies with matrix-assisted laser desorption-ionization
+time of flight mass spectrometry (MALDI-TOF MS) were carried out using the
+automated EXENT system (The Binding Site Group Ltd. Birmingham, UK) and
+immunoglobulin isotype assay. The immunoglobulin assay uses sheep polyclonal
+antibodies (specific for anti-human IgG, IgA, IgM, total &kappa;, and total &lambda; light
+chains) separately immobilized onto paramagnetic microparticles. Immunoglobulin
+purification was performed on the system&rsquo;s automated liquid handler. Briefly,
+participant samples were equally divided into 5 aliquots, each individually
+incubated with isotype-specific beads. The beads were then washed using
+magnetic precipitation and buffer exchanges and treated with 20mM Tris [2-carboxyethyl]
+phosphine (TCEP) in 5% (v/v) ac/etic acid to reduce immunoglobulin heavy and
+light chain disulfide bonds. Eluates were subsequently mixed with
+&alpha;-cyano-4-hydroxycinnamic acid (HCCA) matrix, spotted onto MALDI plates, and
+allowed to co-crystallize on the plate surface. Sample spots were analyzed on a
+MALDI-TOF SirusⓇ (Bruker, CA, U.S.). LC mass spectra were
+acquired in positive ion mode covering the m/z range of 5,000 to 32,000, which
+includes the singly charged (+1, m/z 23,330 to 24,650) and doubly charged (+2,
+m/z 11,168 to 12,401) ions. LC m/z distributions from each reaction (IgG, IgA,
+IgM, total &kappa;, and total &lambda;) were simultaneously interrogated using the EXENT
+software. Monoclonal peak picking was achieved following a proprietary
+algorithm trained against clinical data developed by Indigo Bioautomation.
+Briefly, after finding the local y-maxima a spline model was used to assess the
+goodness of fit. A spline model is necessary for MALDI-TOF data obtained using
+HCCA matrix to accommodate the matrix adduct peak present at a regularly defined
+distance from the monoclonal peak. Polyclonal peak modeling was achieved using
+a Gaussian fit. The area under the curve for the +2 charge state was calculated
+using the trapezoidal rule to account for the area above the baseline.
+Quantification of total immunoglobulin levels was determined by turbidimetry on
+an Optilite&reg; instrument (The Binding Site Group Ltd.).</p><h2 id="Laboratory_Quality_Assurance_and_Monitoring">Laboratory Quality Assurance and Monitoring</h2><p>The
+analytical performance of the EXENT system has previously been verified for
+linearity, precision, reference interval, interference, and stability. EXENT&rsquo;s
+limit of quantification (LoQ) is 15 mg/L for all specificities, with a limit of
+detection (LoD) of &lt;5 mg/L dependent on the polyclonal background. Published
+Hevylite&reg; (The Binding Site Group Ltd.) reference intervals have been verified
+for each specificity. The assay demonstrates acceptable 20-day total precision
+values for polyclonal samples (&lt;7%) and for two monoclonal samples (~1 g/L
+and 10 g/L; &lt;15% and &lt;10%, respectively), with between laboratory
+precision &lt;8% for all samples. The assay is linear for all three major
+isotypes (IgG, IgA, or IgM) across a 0.015 to 100 g/L dynamic range. The Thermo
+Fisher Scientific&rsquo;s EXENT System received clearance from the U.S. Food and Drug
+Administration (FDA) to aid in the diagnosis of multiple myeloma and other
+conditions.</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>Data were received after all
+analyses were complete. The data were reviewed. Incomplete data or improbable
+values were sent to the performing laboratory for confirmation.</p>
+<p>Specific variables
+and edits:</p>
+<p><strong>SSMSDIAG</strong></p>
+<p>Monoclonal
+gammopathy classification (SSMSDIAG) was coded as 1 (MGUS) when max
+concentration of any peak (SSMSMAX) &ge;0.2 g/L, coded as 2 (MGIP; monoclonal
+gammopathy of indeterminate potential) when SSMSMAX &ge;0.015 g/L and SSMSMAX &lt;
+0.2 g/L, coded as 3 (negative) when number of detected peaks (SSMSPN) = 0 or when
+all detected peaks were below the lower limit of quantification (&lt;0.015 g/L)
+or appeared only as light chains (i.e. kappa or lambda) with no matched heavy
+chain, and coded as Missing when no specimen was available for testing.</p>
+<p><strong>SSMSMAX</strong></p>
+<p>Max concentration
+of any peak (SSMSMAX) is reported as concentration of the peak with the highest
+measured concentration. If there were no detected peaks, or if all detected peaks
+were below the LLoQ (&lt;0.015 g/L), or if all peaks appeared only as light
+chains (i.e. kappa or lambda) with no matched heavy chain, SSMSMAX is coded as
+Missing.</p>
+<p><strong>SSMSPN</strong></p>
+<p>Number of detected
+peaks (SSMSPN) is reported as the total number of detected monoclonal protein (M-protein)
+peaks. Any detected peak, regardless of concentration, is included in this
+count.</p>
+<p><strong>SSMSP1T-SSMSPBLC: </strong>Information for up to 11 M-protein peaks is included. Each detected peak is characterized by its mass-to-charge ratio (m/z), immunoglobulin isotype, and, when quantifiable, its concentration. Multiple peaks may be observed per participant, reflecting the presence of one or more immunoglobulin clones. Four variables are provided for each M-protein peak, including: peak immunoglobulin isotype (SSMSP_T), mass-to-charge ratio of peak (SSMSP_MZ), concentration of peak in g/L (SSMSP_C), and comment code (SSMSP_LC). For each variable, the peak is denoted by a corresponding letter or number (ex., SSMSP1T = peak isotype for peak #1). Peak numbers are assigned in descending order of concentration, when quantifiable. Peaks are assigned the following letters or numbers: Peak #1 = 1; Peak #2 = 2; Peak #3 = 3; Peak #4 = 4; Peak #5 = 5; Peak #6 = 6; Peak #7 = 7; Peak #8 = 8; Peak #9 = 9; Peak #10 = A; Peak #11 = B. In all cases of a detected peak, a peak immunoglobulin isotype is provided (SSMSP_T). Concentrations (SSMSP_C) are rounded to three significant figures and reported to a maximum of 3 decimal places. The assay allows detection of M-protein peaks below the LLoQ. In such cases, the presence of a peak is recorded, but concentration values are listed as Missing rather than imputed or set to a fixed value; instead, a comment code is provided indicating the concentration is below the LLoQ.  For peaks with light chains only (i.e. kappa or lambda) with no matched heavy chain, no concentration is provided. The mass-to-charge ratio for each peak is listed (SSMSP_MZ). In cases where the mass-to-charge ratio has a suspected shift due to post-translational glycosylation, the mass-to-charge ratio may be missing if it is unable to be estimated. A comment code indicates cases of suspected shift in mass-to-charge ratio due to post-translational glycosylation. The comment code (SSMSP_LC) for each peak is assigned as &ldquo;1&rdquo; (Below LLoQ) when the concentration of the peak is &lt;0.015 g/L, assigned as &ldquo;2&rdquo; (MSL) when post-translation glycosylation results in an altered mass-to-charge ratio, assigned as &ldquo;3&rdquo; (Below LLoQ + MSL) when both conditions exist, or not assigned any comment code when neither condition exists.</p>
+<p><strong>SSMSIGA, SSMSIGG,
+SSMSIGM, SSMSK, SSMSL</strong></p>
+<p>These variables
+were rounded to two decimal places.</p>
+<p><strong>SSMSFLC</strong></p>
+<p>Free light chain
+ratio (SSMSFLC) was calculated as SSMSK (prior to rounding) divided by SSMSL
+(prior to rounding) and rounded to two decimal places. </p><h2 id="Analytic_Notes">Analytic Notes</h2><p>Refer to the <a href="https://wwwn.cdc.gov/nchs/NHANES/continuousnhanes/overviewlab.aspx?BeginYear=2003">2003-2004 Laboratory Data Overview</a>&nbsp;for
+general information on NHANES laboratory data.</p>
+<p>There are over 800 laboratory
+tests performed on NHANES participants. However, not all participants provided
+biospecimens or enough volume for all the tests to be performed. Additionally,
+availability of specimens for surplus projects is lower than for other
+laboratory tests performed on NHANES participants. The specimen availability
+can also vary by age or other population characteristics. Analysts should
+evaluate the extent of missing data in the dataset related to the outcome of
+interest as well as any predictor variables used in the analyses to determine
+whether additional re-weighting for item non-response is necessary.</p>
+<p>Please refer to the <a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx">NHANES&nbsp;</a><a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx">Analytic Guidelines</a>&nbsp;and
+the on-line <a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/default.Aspx">NHANES&nbsp;Tutorial</a>&nbsp;for details on the use of sample weights and analytic issues.</p>
+<p><strong>Demographic,
+Sample Weights, and Other Related Variables</strong></p>
+<p>The analysis of NHANES laboratory
+data must be conducted using the appropriate survey design and demographic
+variables. The&nbsp;<a href="https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Demographics&amp;Cycle=2003-2004">NHANES 2003-2004 Demographics File</a>&nbsp;contains
+demographic data, health indicators, and other related information collected
+during household interviews as well as the sample design variables and
+examination weights (WTMEC2YR). The recommended procedure for
+variance estimation requires use of stratum and PSU variables (SDMVSTRA and
+SDMVPSU, respectively) in the demographic data file. </p>
+<p>This laboratory data file can be
+linked to the other NHANES data files using the unique survey participant
+identifier (i.e., SEQN).</p>
+<p><strong>Quantification Limits and
+Comment Codes</strong></p>
+<p>Please refer to the above Data
+Processing and Editing section for more information on variable definitions and
+coding relevant to analyses.</p></div>
+      <div id="References">
+        <h2>References</h2>
+        <ul>
+          <li>El-Khoury H., Lee D.J., Alberge J.B., Redd R., Cea-Curry C.J., Perry J., et. al. Prevalence of monoclonal gammopathies and clinical outcomes in a high-risk US population screened by mass spectrometry: a multicentre cohort study. Lancet Haematol. (2022) 9(5):e340-9.</li>
+          <li>Landgren O., Graubard B.I., Katzmann J.A., Kyle R.A., Ahmadizadeh I., Clark R., et. al. Racial disparities in the prevalence of monoclonal gammopathies: a population-based study of 12,482 persons from the National Health and Nutritional Examination Survey. Leukemia. (2014) 28(7): 1537-42.</li>
+          <li>Landgren O., Graubard B.I., Kumar S., Kyle R.A., Katzmann J.A., Murata K., et. al. Prevalence of myeloma precursor state monoclonal gammopathy of undetermined significance in 12,372 individuals 10&ndash;49 years old: a population-based study from the National Health and Nutrition Examination Survey. Blood Cancer J. (2017) 7(10): e618-e618.</li>
+        </ul>
+      </div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSDIAG">SSMSDIAG - Monoclonal gammopathy classification</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSDIAG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Monoclonal gammopathy classification</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Mass spectrometry-based monoclonal gammopathy classification</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">MGUS</td>
+                <td class="values" align="right">400</td>
+                <td class="values" align="right">400</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">MGIP</td>
+                <td class="values" align="right">945</td>
+                <td class="values" align="right">1345</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Negative</td>
+                <td class="values" align="right">1424</td>
+                <td class="values" align="right">2769</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">317</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSMAX">SSMSMAX - Max concentration of any peak</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSMAX</dd>
+            <dt>SAS Label: </dt>
+            <dd>Max concentration of any peak</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Max concentration of any detected immunoglobulin peak</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.015 to 34.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1345</td>
+                <td class="values" align="right">1345</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1741</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSPN">SSMSPN - Number of detected peaks</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSPN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Number of detected peaks</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Number of detected immunoglobulin peaks reported</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 11</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2769</td>
+                <td class="values" align="right">2769</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">317</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP1T">SSMSP1T - Peak #1 isotype</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP1T</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #1 isotype</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #1 immunoglobulin isotype</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">IgA</td>
+                <td class="values" align="right">175</td>
+                <td class="values" align="right">175</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">IgG</td>
+                <td class="values" align="right">127</td>
+                <td class="values" align="right">302</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">IgM</td>
+                <td class="values" align="right">819</td>
+                <td class="values" align="right">1121</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">IgA_Kappa</td>
+                <td class="values" align="right">23</td>
+                <td class="values" align="right">1144</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">IgA_Lambda</td>
+                <td class="values" align="right">25</td>
+                <td class="values" align="right">1169</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">IgG_Kappa</td>
+                <td class="values" align="right">110</td>
+                <td class="values" align="right">1279</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">IgG_Lambda</td>
+                <td class="values" align="right">171</td>
+                <td class="values" align="right">1450</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">IgM_Kappa</td>
+                <td class="values" align="right">36</td>
+                <td class="values" align="right">1486</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">IgM_Lambda</td>
+                <td class="values" align="right">17</td>
+                <td class="values" align="right">1503</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">10</td>
+                <td class="values">Kappa</td>
+                <td class="values" align="right">29</td>
+                <td class="values" align="right">1532</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">Lambda</td>
+                <td class="values" align="right">77</td>
+                <td class="values" align="right">1609</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1477</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP1MZ">SSMSP1MZ - Peak #1 mass-to-charge ratio</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP1MZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #1 mass-to-charge ratio</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #1 mass-to-charge ratio</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11167 to 12285.5</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1595</td>
+                <td class="values" align="right">1595</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1491</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP1C">SSMSP1C - Peak #1 concentration (g/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP1C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #1 concentration (g/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #1 concentration (g/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.015 to 34.4</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">1345</td>
+                <td class="values" align="right">1345</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">1741</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP1LC">SSMSP1LC - Peak #1 comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP1LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #1 comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #1 comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower limit of quantification</td>
+                <td class="values" align="right">158</td>
+                <td class="values" align="right">158</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">MSL</td>
+                <td class="values" align="right">14</td>
+                <td class="values" align="right">172</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Below lower limit of quantification + MSL</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">172</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2914</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP2T">SSMSP2T - Peak #2 isotype</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP2T</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #2 isotype</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #2 immunoglobulin isotype</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">IgA</td>
+                <td class="values" align="right">105</td>
+                <td class="values" align="right">105</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">IgG</td>
+                <td class="values" align="right">29</td>
+                <td class="values" align="right">134</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">IgM</td>
+                <td class="values" align="right">500</td>
+                <td class="values" align="right">634</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">IgA_Kappa</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">637</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">IgA_Lambda</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">643</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">IgG_Kappa</td>
+                <td class="values" align="right">19</td>
+                <td class="values" align="right">662</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">IgG_Lambda</td>
+                <td class="values" align="right">36</td>
+                <td class="values" align="right">698</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">IgM_Kappa</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">705</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">IgM_Lambda</td>
+                <td class="values" align="right">13</td>
+                <td class="values" align="right">718</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">10</td>
+                <td class="values">Kappa</td>
+                <td class="values" align="right">30</td>
+                <td class="values" align="right">748</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">Lambda</td>
+                <td class="values" align="right">71</td>
+                <td class="values" align="right">819</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2267</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP2MZ">SSMSP2MZ - Peak #2 mass-to-charge ratio</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP2MZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #2 mass-to-charge ratio</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #2 mass-to-charge ratio</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11167.8 to 12646.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">813</td>
+                <td class="values" align="right">813</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2273</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP2C">SSMSP2C - Peak #2 concentration (g/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP2C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #2 concentration (g/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #2 concentration (g/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.015 to 6.83</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">583</td>
+                <td class="values" align="right">583</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2503</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP2LC">SSMSP2LC - Peak #2 comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP2LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #2 comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #2 comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower limit of quantification</td>
+                <td class="values" align="right">135</td>
+                <td class="values" align="right">135</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">MSL</td>
+                <td class="values" align="right">10</td>
+                <td class="values" align="right">145</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Below lower limit of quantification + MSL</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">145</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2941</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP3T">SSMSP3T - Peak #3 isotype</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP3T</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #3 isotype</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #3 immunoglobulin isotype</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">IgA</td>
+                <td class="values" align="right">44</td>
+                <td class="values" align="right">44</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">IgG</td>
+                <td class="values" align="right">18</td>
+                <td class="values" align="right">62</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">IgM</td>
+                <td class="values" align="right">238</td>
+                <td class="values" align="right">300</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">IgA_Kappa</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">301</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">IgA_Lambda</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">303</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">IgG_Kappa</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">308</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">IgG_Lambda</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">314</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">IgM_Kappa</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">321</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">IgM_Lambda</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">325</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">10</td>
+                <td class="values">Kappa</td>
+                <td class="values" align="right">23</td>
+                <td class="values" align="right">348</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">Lambda</td>
+                <td class="values" align="right">45</td>
+                <td class="values" align="right">393</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2693</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP3MZ">SSMSP3MZ - Peak #3 mass-to-charge ratio</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP3MZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #3 mass-to-charge ratio</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #3 mass-to-charge ratio</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11005.7 to 12677.9</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">389</td>
+                <td class="values" align="right">389</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2697</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP3C">SSMSP3C - Peak #3 concentration (g/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP3C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #3 concentration (g/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #3 concentration (g/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.015 to 3.08</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">250</td>
+                <td class="values" align="right">250</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2836</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP3LC">SSMSP3LC - Peak #3 comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP3LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #3 comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #3 comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower limit of quantification</td>
+                <td class="values" align="right">74</td>
+                <td class="values" align="right">74</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">MSL</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">81</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Below lower limit of quantification + MSL</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">81</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3005</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP4T">SSMSP4T - Peak #4 isotype</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP4T</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #4 isotype</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #4 immunoglobulin isotype</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">IgA</td>
+                <td class="values" align="right">18</td>
+                <td class="values" align="right">18</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">IgG</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">26</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">IgM</td>
+                <td class="values" align="right">115</td>
+                <td class="values" align="right">141</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">IgA_Kappa</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">142</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">IgA_Lambda</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">143</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">IgG_Kappa</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">146</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">IgG_Lambda</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">148</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">IgM_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">148</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">IgM_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">148</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">10</td>
+                <td class="values">Kappa</td>
+                <td class="values" align="right">11</td>
+                <td class="values" align="right">159</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">Lambda</td>
+                <td class="values" align="right">30</td>
+                <td class="values" align="right">189</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2897</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP4MZ">SSMSP4MZ - Peak #4 mass-to-charge ratio</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP4MZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #4 mass-to-charge ratio</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #4 mass-to-charge ratio</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11077.7 to 12695.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">189</td>
+                <td class="values" align="right">189</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2897</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP4C">SSMSP4C - Peak #4 concentration (g/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP4C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #4 concentration (g/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #4 concentration (g/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.016 to 2.94</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">107</td>
+                <td class="values" align="right">107</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2979</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP4LC">SSMSP4LC - Peak #4 comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP4LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #4 comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #4 comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower limit of quantification</td>
+                <td class="values" align="right">41</td>
+                <td class="values" align="right">41</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">MSL</td>
+                <td class="values" align="right">4</td>
+                <td class="values" align="right">45</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Below lower limit of quantification + MSL</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">45</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3041</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP5T">SSMSP5T - Peak #5 isotype</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP5T</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #5 isotype</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #5 immunoglobulin isotype</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">IgA</td>
+                <td class="values" align="right">13</td>
+                <td class="values" align="right">13</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">IgG</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">14</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">IgM</td>
+                <td class="values" align="right">53</td>
+                <td class="values" align="right">67</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">IgA_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">67</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">IgA_Lambda</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">70</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">IgG_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">70</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">IgG_Lambda</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">71</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">IgM_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">71</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">IgM_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">71</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">10</td>
+                <td class="values">Kappa</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">80</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">Lambda</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">95</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2991</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP5MZ">SSMSP5MZ - Peak #5 mass-to-charge ratio</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP5MZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #5 mass-to-charge ratio</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #5 mass-to-charge ratio</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11161.5 to 12239.3</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">94</td>
+                <td class="values" align="right">94</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2992</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP5C">SSMSP5C - Peak #5 concentration (g/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP5C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #5 concentration (g/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #5 concentration (g/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.016 to 0.369</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">58</td>
+                <td class="values" align="right">58</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3028</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP5LC">SSMSP5LC - Peak #5 comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP5LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #5 comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #5 comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower limit of quantification</td>
+                <td class="values" align="right">13</td>
+                <td class="values" align="right">13</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">MSL</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">15</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Below lower limit of quantification + MSL</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">15</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3071</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP6T">SSMSP6T - Peak #6 isotype</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP6T</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #6 isotype</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #6 immunoglobulin isotype</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">IgA</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">6</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">IgG</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">6</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">IgM</td>
+                <td class="values" align="right">20</td>
+                <td class="values" align="right">26</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">IgA_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">26</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">IgA_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">26</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">IgG_Kappa</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">27</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">IgG_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">27</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">IgM_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">27</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">IgM_Lambda</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">29</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">10</td>
+                <td class="values">Kappa</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">31</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">Lambda</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">37</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3049</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP6MZ">SSMSP6MZ - Peak #6 mass-to-charge ratio</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP6MZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #6 mass-to-charge ratio</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #6 mass-to-charge ratio</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11261.6 to 12687.2</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">36</td>
+                <td class="values" align="right">36</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3050</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP6C">SSMSP6C - Peak #6 concentration (g/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP6C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #6 concentration (g/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #6 concentration (g/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.016 to 0.354</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">20</td>
+                <td class="values" align="right">20</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3066</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP6LC">SSMSP6LC - Peak #6 comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP6LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #6 comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #6 comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower limit of quantification</td>
+                <td class="values" align="right">9</td>
+                <td class="values" align="right">9</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">MSL</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">11</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Below lower limit of quantification + MSL</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">11</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3075</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP7T">SSMSP7T - Peak #7 isotype</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP7T</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #7 isotype</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #7 immunoglobulin isotype</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">IgA</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">IgG</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">IgM</td>
+                <td class="values" align="right">8</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">IgA_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">IgA_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">IgG_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">8</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">IgG_Lambda</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">9</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">IgM_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">9</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">IgM_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">9</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">10</td>
+                <td class="values">Kappa</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">14</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">Lambda</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">15</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3071</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP7MZ">SSMSP7MZ - Peak #7 mass-to-charge ratio</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP7MZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #7 mass-to-charge ratio</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #7 mass-to-charge ratio</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11239.5 to 12689.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">15</td>
+                <td class="values" align="right">15</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3071</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP7C">SSMSP7C - Peak #7 concentration (g/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP7C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #7 concentration (g/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #7 concentration (g/L)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.016 to 0.233</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">7</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3079</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP7LC">SSMSP7LC - Peak #7 comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP7LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #7 comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #7 comment code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower limit of quantification</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">MSL</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Below lower limit of quantification + MSL</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3083</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP8T">SSMSP8T - Peak #8 isotype</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP8T</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #8 isotype</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #8 immunoglobulin isotype</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">IgA</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">IgG</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">IgM</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">IgA_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">IgA_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">IgG_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">IgG_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">IgM_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">IgM_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">10</td>
+                <td class="values">Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">Lambda</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">6</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3080</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP8MZ">SSMSP8MZ - Peak #8 mass-to-charge ratio</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP8MZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #8 mass-to-charge ratio</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #8 mass-to-charge ratio
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11347.6 to 12192.1</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">5</td>
+                <td class="values" align="right">5</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3081</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP8C">SSMSP8C - Peak #8 concentration (g/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP8C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #8 concentration (g/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #8 concentration (g/L)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.034 to 0.043</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3084</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP8LC">SSMSP8LC - Peak #8 comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP8LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #8 comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #8 comment code
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower limit of quantification</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">MSL</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Below lower limit of quantification + MSL</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3083</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP9T">SSMSP9T - Peak #9 isotype</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP9T</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #9 isotype</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #9 immunoglobulin isotype</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">IgA</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">IgG</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">IgM</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">IgA_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">IgA_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">IgG_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">IgG_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">IgM_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">IgM_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">10</td>
+                <td class="values">Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">Lambda</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3083</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP9MZ">SSMSP9MZ - Peak #9 mass-to-charge ratio</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP9MZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #9 mass-to-charge ratio</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #9 mass-to-charge ratio
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11378.4 to 12161.8</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">3</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3083</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP9C">SSMSP9C - Peak #9 concentration (g/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP9C</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #9 concentration (g/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #9 concentration (g/L)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.036</td>
+                <td class="values">0.036</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3085</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSP9LC">SSMSP9LC - Peak #9 comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSP9LC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #9 comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #9 comment code
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower limit of quantification</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">MSL</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Below lower limit of quantification + MSL</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3084</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSPAT">SSMSPAT - Peak #10 isotype</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSPAT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #10 isotype</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #10 immunoglobulin isotype
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">IgA</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">IgG</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">IgM</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">IgA_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">IgA_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">IgG_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">IgG_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">IgM_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">IgM_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">10</td>
+                <td class="values">Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3084</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSPAMZ">SSMSPAMZ - Peak #10 mass-to-charge ratio</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSPAMZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #10 mass-to-charge ratio</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #10 mass-to-charge ratio
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11383.9 to 11684.7</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3084</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSPAC">SSMSPAC - Peak #10 concentration (g/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSPAC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #10 concentration (g/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #10 concentration (g/L)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.031</td>
+                <td class="values">0.031</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3085</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSPALC">SSMSPALC - Peak #10 comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSPALC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #10 comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #10 comment code
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower limit of quantification</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">MSL</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Below lower limit of quantification + MSL</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3085</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSPBT">SSMSPBT - Peak #11 isotype</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSPBT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #11 isotype</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #11 immunoglobulin isotype
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">IgA</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">IgG</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">IgM</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">IgA_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">5</td>
+                <td class="values">IgA_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">6</td>
+                <td class="values">IgG_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">7</td>
+                <td class="values">IgG_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">8</td>
+                <td class="values">IgM_Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">9</td>
+                <td class="values">IgM_Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">10</td>
+                <td class="values">Kappa</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">11</td>
+                <td class="values">Lambda</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3085</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSPBMZ">SSMSPBMZ - Peak #11 mass-to-charge ratio</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSPBMZ</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #11 mass-to-charge ratio</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #11 mass-to-charge ratio
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">11936.2</td>
+                <td class="values">11936.2</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3085</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSPBC">SSMSPBC - Peak #11 concentration (g/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSPBC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #11 concentration (g/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #11 concentration (g/L)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.022</td>
+                <td class="values">0.022</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">1</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3085</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSPBLC">SSMSPBLC - Peak #11 comment code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSPBLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Peak #11 comment code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Immunoglobulin peak #11 comment code
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Below lower limit of quantification</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">MSL</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Below lower limit of quantification + MSL</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">0</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">3086</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSIGA">SSMSIGA - Serum immunoglobulin A (g/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSIGA</dd>
+            <dt>SAS Label: </dt>
+            <dd>Serum immunoglobulin A (g/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum immunoglobulin A concentration (g/L)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.02 to 34.43</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2769</td>
+                <td class="values" align="right">2769</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">317</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSIGG">SSMSIGG - Serum immunoglobulin G (g/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSIGG</dd>
+            <dt>SAS Label: </dt>
+            <dd>Serum immunoglobulin G (g/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum immunoglobulin G concentration (g/L)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">2.64 to 41.51</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2769</td>
+                <td class="values" align="right">2769</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">317</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSIGM">SSMSIGM - Serum immunoglobulin M (g/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSIGM</dd>
+            <dt>SAS Label: </dt>
+            <dd>Serum immunoglobulin M (g/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum immunoglobulin M concentration (g/L)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0.1 to 32.88</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2769</td>
+                <td class="values" align="right">2769</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">317</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSK">SSMSK - Serum free kappa light chain (mg/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSK</dd>
+            <dt>SAS Label: </dt>
+            <dd>Serum free kappa light chain (mg/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum free kappa light chain concentration (mg/L)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">4.46 to 772.68</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2769</td>
+                <td class="values" align="right">2769</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">317</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSL">SSMSL - Serum free lambda light chain (mg/L)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSL</dd>
+            <dt>SAS Label: </dt>
+            <dd>Serum free lambda light chain (mg/L)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Serum free lambda light chain concentration (mg/L)
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">3.02 to 1259.5</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2769</td>
+                <td class="values" align="right">2769</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">317</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SSMSFLC">SSMSFLC - Free light chain ratio</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SSMSFLC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Free light chain ratio</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Free light chain ratio
+
+</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 40 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">0 to 186.36</td>
+                <td class="values">Range of Values</td>
+                <td class="values" align="right">2769</td>
+                <td class="values" align="right">2769</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">317</td>
+                <td class="values" align="right">3086</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
